@@ -1,0 +1,313 @@
+{
+  "id": "alj-nilai-mutlak",
+  "track": "menengah",
+  "title": "Persamaan & Pertidaksamaan Nilai Mutlak",
+  "order": 1,
+  "prerequisites": [],
+  "estimatedMinutes": 25,
+  "summary": "Nilai mutlak sebagai jarak; menyelesaikan persamaan dan pertidaksamaan tanpa menghafal rumus.",
+  "tags": [
+    "aljabar",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "alj-nilai-mutlak-c1",
+      "type": "konsep",
+      "title": "Nilai mutlak adalah jarak",
+      "body": "Kebanyakan orang menghafal $|x|$ sebagai \"membuat positif\". Definisi itu benar tapi tidak berguna. Yang berguna: $|x - a|$ adalah **jarak** antara $x$ dan $a$ pada garis bilangan.\n\nKenapa ini penting? Karena begitu kamu membaca soal sebagai jarak, jawabannya sering terlihat tanpa hitungan. Contoh: $|x - 5| = 3$ berarti \"cari titik yang jaraknya 3 dari 5\". Ada dua titik seperti itu, satu di kiri dan satu di kanan: $2$ dan $8$. Selesai, tanpa memindah ruas.\n\nCara pandang ini juga menjelaskan kenapa $|x| \\ge 0$ selalu benar: jarak tidak pernah negatif. Dan kenapa $|x - a| = |a - x|$: jarak dari kamu ke sekolah sama dengan jarak dari sekolah ke kamu.",
+      "keyPoints": [
+        "$|x-a|$ = jarak $x$ dari $a$",
+        "$|x| = \\sqrt{x^2}$",
+        "$|x| \\ge 0$ untuk setiap $x$",
+        "$|x-a| = |a-x|$"
+      ],
+      "pitfall": "Menulis $|x| = x$ tanpa memeriksa tanda $x$. Kalau $x$ negatif, $|x| = -x$.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $|3 - 7|$ adalah ...",
+          "options": [
+            "$-4$",
+            "$4$",
+            "$10$",
+            "$-10$"
+          ],
+          "answerIndex": 1,
+          "solution": "Hitung isi tanda mutlak dulu: $3 - 7 = -4$.\nLalu ambil nilai mutlaknya: $|-4| = 4$.\n\nCara jarak: $|3-7|$ adalah jarak antara 3 dan 7, yaitu 4.",
+          "hint": "Selesaikan yang di dalam tanda mutlak lebih dulu.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $|x - 5| = 3$ adalah ...",
+          "options": [
+            "$\\{2\\}$",
+            "$\\{8\\}$",
+            "$\\{2, 8\\}$",
+            "$\\{-2, 8\\}$"
+          ],
+          "answerIndex": 2,
+          "solution": "Baca sebagai jarak: cari $x$ yang jaraknya 3 dari 5.\nTitik di kiri: $5 - 3 = 2$.\nTitik di kanan: $5 + 3 = 8$.\n\nCara aljabar memberi hasil sama:\n$x - 5 = 3 \\Rightarrow x = 8$\n$x - 5 = -3 \\Rightarrow x = 2$",
+          "hint": "Ada dua titik yang jaraknya sama dari sebuah titik.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alj-nilai-mutlak-c2",
+      "type": "rumus",
+      "title": "Sifat-sifat yang dipakai terus",
+      "body": "Empat sifat ini muncul di hampir semua soal. Hafalkan bentuknya, tapi ingat juga alasannya supaya tidak tertukar.\n\nPerkalian dan pembagian aman: $|ab| = |a||b|$ dan $\\left|\\frac{a}{b}\\right| = \\frac{|a|}{|b|}$ untuk $b \\neq 0$. Tanda mutlak boleh dibagikan ke tiap faktor.\n\nPenjumlahan **tidak** aman. Yang berlaku cuma ketaksamaan segitiga: $|a + b| \\le |a| + |b|$. Sama dengan hanya kalau $a$ dan $b$ setanda. Coba $a = 3$, $b = -3$: ruas kiri $0$, ruas kanan $6$.\n\nTerakhir, $|a|^2 = a^2$. Sifat ini yang membuat pengkuadratan kadang berguna — tapi hati-hati, lihat kartu jebakan.",
+      "keyPoints": [
+        "$|ab| = |a| \\cdot |b|$",
+        "$\\left|\\dfrac{a}{b}\\right| = \\dfrac{|a|}{|b|}$, $b \\neq 0$",
+        "$|a+b| \\le |a| + |b|$ (ketaksamaan segitiga)",
+        "$|a|^2 = a^2$"
+      ],
+      "pitfall": "Menganggap $|a+b| = |a| + |b|$. Itu salah kecuali $a$ dan $b$ setanda.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $a = -2$ dan $b = 5$, nilai $|a + b| - (|a| + |b|)$ adalah ...",
+          "options": [
+            "$0$",
+            "$-4$",
+            "$4$",
+            "$-10$"
+          ],
+          "answerIndex": 1,
+          "solution": "Ruas pertama: $|a+b| = |-2+5| = |3| = 3$.\nRuas kedua: $|a| + |b| = 2 + 5 = 7$.\nSelisih: $3 - 7 = -4$.\n\nHasilnya negatif — itu memang yang dijamin ketaksamaan segitiga: $|a+b| \\le |a|+|b|$.",
+          "hint": "Hitung kedua ruas terpisah, jangan digabung.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q4",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Untuk setiap bilangan real $a$ dan $b$, berlaku $|a - b| = |a| - |b|$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Cukup satu contoh penyangkal.\nAmbil $a = 1$, $b = 5$:\nRuas kiri: $|1-5| = 4$\nRuas kanan: $|1| - |5| = 1 - 5 = -4$\n\n$4 \\neq -4$. Lagipula ruas kiri tidak pernah negatif, sedangkan ruas kanan bisa negatif — jadi keduanya tidak mungkin selalu sama.",
+          "hint": "Coba cari satu pasang angka yang membantahnya."
+        }
+      ]
+    },
+    {
+      "id": "alj-nilai-mutlak-c3",
+      "type": "prosedur",
+      "title": "Menyelesaikan $|f(x)| = c$",
+      "body": "Langkah baku untuk persamaan berbentuk $|f(x)| = c$:\n\n1. Periksa tanda $c$ lebih dulu. Kalau $c < 0$, langsung tulis himpunan kosong — jarak tidak pernah negatif, jadi tidak ada yang perlu dihitung. Kalau $c = 0$, cukup selesaikan $f(x) = 0$ karena hanya nol yang jaraknya nol dari nol.\n2. Kalau $c > 0$, barulah pecah jadi dua persamaan: $f(x) = c$ atau $f(x) = -c$.\n3. Selesaikan keduanya seperti persamaan biasa.\n4. Gabungkan hasilnya jadi satu himpunan penyelesaian.\n\nContoh: $|2x - 1| = 7$. Ruas kanan positif, jadi lanjut ke langkah 2.\n$2x - 1 = 7$ memberi $x = 4$.\n$2x - 1 = -7$ memberi $x = -3$.\nHimpunan penyelesaiannya $\\{-3, 4\\}$.\n\nLangkah pertama paling sering dilewati, dan itu sumber kesalahan tersering di ujian.",
+      "keyPoints": [
+        "$c < 0$: tidak ada penyelesaian",
+        "$c = 0$: selesaikan $f(x) = 0$ saja",
+        "$c > 0$: $f(x) = c$ atau $f(x) = -c$"
+      ],
+      "pitfall": "Langsung memecah jadi dua kasus tanpa memeriksa apakah ruas kanan negatif.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q5",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya penyelesaian $|3x + 2| = -5$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "$2$",
+            "Tak hingga"
+          ],
+          "answerIndex": 0,
+          "solution": "Ruas kiri adalah nilai mutlak, jadi nilainya selalu $\\ge 0$.\nRuas kanan bernilai $-5$, yang negatif.\n\nTidak ada $x$ yang membuat sesuatu yang tak-negatif sama dengan $-5$. Himpunan penyelesaiannya kosong, jadi banyaknya penyelesaian adalah $0$.",
+          "hint": "Periksa tanda ruas kanan sebelum mengerjakan apa pun.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q6",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan himpunan penyelesaian dari $|2x - 1| = 7$.",
+          "answer": "{-3, 4}",
+          "acceptedAnswers": [
+            "{4, -3}",
+            "-3 dan 4",
+            "x = -3 atau x = 4",
+            "{-3,4}"
+          ],
+          "solution": "Ruas kanan positif, jadi pecah jadi dua kasus.\n\nKasus 1: $2x - 1 = 7$\n$2x = 8$\n$x = 4$\n\nKasus 2: $2x - 1 = -7$\n$2x = -6$\n$x = -3$\n\nHimpunan penyelesaian: $\\{-3, 4\\}$.",
+          "hint": "Dua kasus: isi tanda mutlak sama dengan $7$, atau sama dengan $-7$.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alj-nilai-mutlak-c4",
+      "type": "konsep",
+      "title": "Terkurung atau terpisah",
+      "body": "Ini bagian yang paling sering tertukar. Padahal kalau kamu berpikir jarak, arah tandanya tidak mungkin salah.\n\n$|x| < a$ berarti \"jarak $x$ dari nol kurang dari $a$\". Titik-titik seperti itu semuanya berkumpul **di tengah**, jadi hasilnya satu potong: $-a < x < a$.\n\n$|x| > a$ berarti \"jaraknya lebih dari $a$\". Titik-titik itu justru menjauh ke kedua sisi, jadi hasilnya **dua potong terpisah**: $x < -a$ atau $x > a$.\n\nIngat pola ini: tanda kurang dari menghasilkan satu selang di tengah dan dirangkai dengan \"dan\"; tanda lebih dari menghasilkan dua selang di pinggir dan dirangkai dengan \"atau\". Untuk $a$ negatif, $|x| < a$ tidak punya penyelesaian, sedangkan $|x| > a$ dipenuhi semua bilangan real.",
+      "keyPoints": [
+        "$|x| < a \\iff -a < x < a$ (terkurung, satu potong)",
+        "$|x| > a \\iff x < -a$ atau $x > a$ (terpisah, dua potong)",
+        "Kurang dari memakai \"dan\", lebih dari memakai \"atau\""
+      ],
+      "pitfall": "Menulis penyelesaian $|x| > a$ sebagai $-a > x > a$. Bentuk itu mustahil — tidak ada bilangan yang sekaligus lebih kecil dari $-a$ dan lebih besar dari $a$.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q7",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $|2x-3| \\le 5$ adalah ...",
+          "options": [
+            "$\\{x \\mid x \\le 4\\}$",
+            "$\\{x \\mid -1 \\le x \\le 4\\}$",
+            "$\\{x \\mid -4 \\le x \\le 1\\}$",
+            "$\\{x \\mid x \\ge -1\\}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Bentuk \"kurang dari\" berarti terkurung, jadi jadikan satu rangkaian:\n$-5 \\le 2x-3 \\le 5$\n\nTambah 3 di semua ruas:\n$-2 \\le 2x \\le 8$\n\nBagi 2 di semua ruas:\n$-1 \\le x \\le 4$",
+          "hint": "Tanda $\\le$ menghasilkan satu potong di tengah, bukan dua potong di pinggir.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $|x + 1| > 4$ adalah ...",
+          "options": [
+            "$\\{x \\mid -5 < x < 3\\}$",
+            "$\\{x \\mid x < -5 \\text{ atau } x > 3\\}$",
+            "$\\{x \\mid x > 3\\}$",
+            "$\\{x \\mid -3 < x < 5\\}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Bentuk \"lebih dari\" berarti terpisah, jadi pecah jadi dua:\n\n$x + 1 > 4 \\Rightarrow x > 3$\n$x + 1 < -4 \\Rightarrow x < -5$\n\nKeduanya dirangkai dengan \"atau\":\n$x < -5$ atau $x > 3$",
+          "hint": "Tanda lebih dari memberi dua selang di pinggir, dihubungkan dengan \"atau\".",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alj-nilai-mutlak-c5",
+      "type": "contoh",
+      "title": "Satu soal dikerjakan penuh",
+      "body": "Soal: tentukan himpunan penyelesaian $|x - 2| \\ge 3x$.\n\nRuas kanan memuat $x$, jadi tandanya belum tentu positif. Pengkuadratan berisiko. Pakai definisi saja, pecah menurut tanda isi tanda mutlak.\n\n**Kasus 1: $x - 2 \\ge 0$**, yaitu $x \\ge 2$.\nDi sini $|x-2| = x-2$, jadi $x - 2 \\ge 3x$, lalu $-2 \\ge 2x$, jadi $x \\le -1$. Syaratnya $x \\ge 2$ tapi hasilnya $x \\le -1$ — bentrok. Kasus ini kosong.\n\n**Kasus 2: $x - 2 < 0$**, yaitu $x < 2$.\nDi sini $|x-2| = 2-x$, jadi $2 - x \\ge 3x$, lalu $2 \\ge 4x$, jadi $x \\le \\frac{1}{2}$. Digabung dengan syarat $x < 2$, hasilnya $x \\le \\frac{1}{2}$.\n\nJawaban akhir: $\\left\\{x \\mid x \\le \\frac{1}{2}\\right\\}$.",
+      "keyPoints": [
+        "Ruas kanan memuat variabel $\\Rightarrow$ pecah menurut tanda, jangan kuadratkan",
+        "Setiap kasus wajib dicek lagi terhadap syaratnya",
+        "Kasus yang bentrok dengan syaratnya dibuang"
+      ],
+      "pitfall": "Lupa mengecek hasil tiap kasus terhadap syarat kasus itu, lalu memasukkan jawaban yang sebenarnya bentrok.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $|x - 1| \\le 2x$ adalah ...",
+          "options": [
+            "$\\left\\{x \\mid x \\ge \\frac{1}{3}\\right\\}$",
+            "$\\left\\{x \\mid x \\le \\frac{1}{3}\\right\\}$",
+            "$\\{x \\mid x \\ge 1\\}$",
+            "$\\left\\{x \\mid \\frac{1}{3} \\le x \\le 1\\right\\}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pecah menurut tanda isi tanda mutlak.\n\nKasus 1: $x \\ge 1$, maka $|x-1| = x-1$.\n$x - 1 \\le 2x \\Rightarrow -1 \\le x$. Digabung syarat $x \\ge 1$, hasilnya $x \\ge 1$.\n\nKasus 2: $x < 1$, maka $|x-1| = 1-x$.\n$1 - x \\le 2x \\Rightarrow 1 \\le 3x \\Rightarrow x \\ge \\frac{1}{3}$. Digabung syarat $x < 1$, hasilnya $\\frac{1}{3} \\le x < 1$.\n\nGabungan kedua kasus: $x \\ge \\frac{1}{3}$.",
+          "hint": "Ruas kanan memuat $x$ — pecah dua kasus, lalu cek tiap hasil terhadap syaratnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q10",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Berapa banyak bilangan bulat yang memenuhi $|x - 4| < 3$?",
+          "answer": "5",
+          "acceptedAnswers": [
+            "lima",
+            "5 bilangan"
+          ],
+          "solution": "Bentuk kurang dari berarti terkurung:\n$-3 < x - 4 < 3$\n\nTambah 4 di semua ruas:\n$1 < x < 7$\n\nBilangan bulat yang memenuhi: $2, 3, 4, 5, 6$.\nBanyaknya ada $5$.\n\nPerhatikan tandanya tegas ($<$), jadi $1$ dan $7$ tidak ikut.",
+          "hint": "Cari selangnya dulu, baru hitung bilangan bulat di dalamnya. Perhatikan tanda tegas.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alj-nilai-mutlak-c6",
+      "type": "jebakan",
+      "title": "Tiga kesalahan yang paling mahal",
+      "body": "**Mengkuadratkan tanpa syarat.** Dari $|A| = B$ orang langsung menulis $A^2 = B^2$. Itu hanya sah kalau $B \\ge 0$. Kalau tidak dicek, kamu akan mendapat akar palsu. Contoh: $|x| = x - 3$ dikuadratkan memberi $x = \\frac{9}{6}$, padahal aslinya tidak punya penyelesaian sama sekali.\n\n**Membalik arah pada pertidaksamaan.** Saat membagi dengan bilangan negatif, arah tanda harus dibalik. Ini sering terlewat di tengah pengerjaan yang panjang.\n\n**Menulis dua potong sebagai satu rangkaian.** Penyelesaian $|x| > 3$ tidak boleh ditulis $-3 > x > 3$. Rangkaian itu berarti $x$ sekaligus di dua tempat yang mustahil. Tulis $x < -3$ atau $x > 3$.\n\nSelalu uji jawabanmu dengan memasukkan satu angka ke soal asli.",
+      "keyPoints": [
+        "Kuadratkan hanya bila ruas kanan dijamin tak-negatif",
+        "Bagi dengan bilangan negatif $\\Rightarrow$ balik arah tanda",
+        "Dua selang terpisah ditulis dengan \"atau\", bukan dirangkai",
+        "Uji jawaban dengan satu angka sebelum menutup soal"
+      ],
+      "pitfall": "Mengkuadratkan $|A| = B$ padahal $B$ bisa negatif, lalu menerima akar palsu tanpa memeriksanya kembali.",
+      "questions": [
+        {
+          "id": "alj-nilai-mutlak-q11",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya penyelesaian $|x| = x - 3$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "$2$",
+            "Tak hingga"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan ruas kanan harus tak-negatif, jadi $x - 3 \\ge 0$, artinya $x \\ge 3$.\n\nUntuk $x \\ge 3$ pasti $x$ positif, sehingga $|x| = x$.\nPersamaannya jadi $x = x - 3$, yaitu $0 = -3$. Mustahil.\n\nJadi tidak ada penyelesaian. Banyaknya $0$.\n\nKalau langsung dikuadratkan, kamu akan dapat $x = \\frac{9}{6}$ — akar palsu, karena nilai itu melanggar syarat $x \\ge 3$.",
+          "hint": "Periksa syarat ruas kanan lebih dulu, jangan langsung dikuadratkan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-nilai-mutlak-q12",
+          "difficulty": 5,
+          "format": "isian",
+          "prompt": "Tentukan himpunan penyelesaian dari $|x - 1| + |x - 4| = 3$.",
+          "answer": "1 <= x <= 4",
+          "acceptedAnswers": [
+            "{x | 1 <= x <= 4}",
+            "[1, 4]",
+            "1 ≤ x ≤ 4",
+            "semua x antara 1 dan 4"
+          ],
+          "solution": "Baca sebagai jarak: $|x-1|$ jarak $x$ ke 1, dan $|x-4|$ jarak $x$ ke 4.\nSoalnya meminta jumlah kedua jarak itu sama dengan 3.\n\nJarak antara titik 1 dan 4 sendiri adalah 3.\n\nKalau $x$ berada di antara 1 dan 4, kedua jarak itu menjumlah tepat 3.\nKalau $x$ di luar selang tersebut, kamu harus bolak-balik sehingga jumlahnya lebih dari 3.\n\nJadi penyelesaiannya seluruh selang $1 \\le x \\le 4$ — bukan hanya dua titik.",
+          "hint": "Gambarkan titik 1 dan 4 di garis bilangan, lalu pikirkan jumlah dua jarak.",
+          "tags": [
+            "olimpiade"
+          ]
+        }
+      ]
+    }
+  ]
+}

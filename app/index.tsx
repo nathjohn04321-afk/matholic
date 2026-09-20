@@ -14,6 +14,7 @@ import { Header } from '@/components/Header';
 import { Screen } from '@/components/Screen';
 import { Text } from '@/components/Text';
 import { useTheme } from '@/components/ThemeProvider';
+import { getContentStats } from '@/lib/content';
 import { TRACKS } from '@/lib/types';
 import { spacing } from '@/lib/theme';
 
@@ -58,6 +59,7 @@ const NAMA_JALUR: Record<(typeof TRACKS)[number], string> = {
 export default function Beranda() {
   const theme = useTheme();
   const today = new Date();
+  const stats = getContentStats();
 
   return (
     <Screen>
@@ -77,6 +79,8 @@ export default function Beranda() {
           </Text>
           <Text muted style={styles.reviewNote}>
             Jadwal pengulangan mulai terisi setelah kamu membaca kartu pertama.
+            Saat ini tersedia {stats.topics} topik, {stats.cards} kartu, dan{' '}
+            {stats.questions} soal.
           </Text>
           <Link href="/review" asChild>
             <Button label="Buka review" icon="play" block style={styles.cta} />
