@@ -1,0 +1,110 @@
+# DECISIONS.md
+
+Catatan keputusan teknis yang ambigu di SPEC.md, beserta alasannya.
+Aturan yang dipakai: **pilih yang paling sederhana** (SPEC.md bagian 15).
+
+---
+
+## M1 — Fondasi
+
+### Expo SDK 57
+
+SPEC.md bagian 3 meminta "SDK stabil terbaru" dan melarang menebak versi dari
+ingatan. Versi diambil dari dist-tag `latest` di registry npm saat proyek
+dibuat: **Expo SDK 57.0.24**, React Native 0.86.3, React 19.2.3.
+
+`docs.expo.dev` diblokir oleh proxy jaringan lingkungan kerja ini, jadi versi
+paket native tidak diambil dari dokumentasi melainkan dari
+`node_modules/expo/bundledNativeModules.json` — daftar versi yang dipasangkan
+Expo sendiri untuk SDK ini. Ini penting: `npm view <paket> version` memberi
+versi `latest` yang **tidak** cocok dengan SDK 57.
+
+| Paket | `latest` di npm | Dipakai (sesuai SDK 57) |
+|---|---|---|
+| `react-native-webview` | 14.0.1 | **13.16.1** |
+| `@react-native-async-storage/async-storage` | 3.1.1 | **2.2.0** |
+
+### Proyek diletakkan di akar repositori
+
+SPEC.md bagian 4 menggambarkan folder `mathdeck/` sebagai akar. Repositori ini
+sendiri bernama `matholic`, jadi isi `mathdeck/` ditaruh langsung di akar repo
+supaya tidak ada folder bersarang tanpa guna. Nama aplikasi tetap **MathDeck**.
+
+### Template Expo dirampingkan
+
+`create-expo-app` template bawaan memasang `@expo/ui`, `expo-glass-effect`,
+`expo-symbols`, `expo-image`, `expo-web-browser`, dan `expo-device`. Semuanya
+dilepas: SPEC.md bagian 3 melarang library UI berat dan meminta komponen dibuat
+sendiri. Template juga memakai folder `src/`; diubah ke tata letak SPEC.md
+bagian 4 (`app/`, `components/`, `lib/`, `content/`), dan alias `@/*` diarahkan
+ke akar repo.
+
+### Token tema di `lib/theme.ts`
+
+SPEC.md bagian 4 tidak menyebut berkas tema. Token (palet, tipografi, jarak)
+ditaruh di `lib/theme.ts` karena isinya data murni, sedangkan Context-nya di
+`components/ThemeProvider.tsx` karena itu komponen React.
+
+### Palet terang diturunkan sendiri
+
+SPEC.md bagian 10 hanya memberi palet gelap dan menyebut terang sebagai opsi.
+Palet terang diturunkan dengan mempertahankan peran tiap warna dan menggelapkan
+aksen (`#4A9EFF` → `#1B6FD6`) supaya kontras teks di atas latar terang tetap
+memadai.
+
+### Migrasi SQLite bernomor
+
+Migrasi 1 menyalin SQL di SPEC.md bagian 5.5 **apa adanya** supaya gampang
+diaudit terhadap spesifikasi. Perubahan sesudahnya jadi migrasi terpisah:
+
+- **Migrasi 2** menambah kolom `error_log.resolved_at` — dibutuhkan tombol
+  "sudah dipahami" di Buku Kesalahan (SPEC.md 7.7), yang tidak punya tempat di
+  skema asli — plus indeks untuk query jatuh tempo, status, dan riwayat.
+
+Versi dilacak lewat `PRAGMA user_version`.
+
+### Satu koneksi database bersama
+
+`lib/db.ts` menyimpan satu promise koneksi. Kalau pembukaan gagal, promise-nya
+dibuang supaya percobaan berikutnya tidak tersangkut di kegagalan lama — layar
+akar menyediakan tombol "Coba lagi".
+
+### `ProgressRing` ditunda
+
+SPEC.md bagian 4 menyebut `components/ProgressRing.tsx`, tapi M1 menyebut
+komponen dasar secara spesifik: tombol, kartu, header. Cincin progres baru
+berguna ketika ada angka progres nyata, jadi dibuat bersama layar Belajar dan
+Beranda (M3/M5) agar tidak dibuat dua kali.
+
+### Layar Pengaturan sebagian aktif di M1
+
+Pengaturan ada di M5, tapi tema dan ukuran font adalah hasil kerja M1. Dua
+pengatur itu dibuat berfungsi sekarang supaya sistem tema benar-benar teruji;
+sisanya (jumlah kartu baru, ekspor, reset) menyusul di M5.
+
+### `eas.json` ditunda ke M7
+
+Ada di daftar folder SPEC.md bagian 4, tapi M7 yang bertugas mengonfigurasi
+build. Menuliskannya sekarang hanya akan jadi berkas yang belum pernah diuji.
+
+### Tema react-navigation ikut disetel
+
+`components/Screen.tsx` sudah mewarnai latar sesuai palet, tapi navigator
+punya temanya sendiri untuk permukaan di luar layar — termasuk celah yang
+terlihat saat transisi geser. Bawaannya tema terang (`#F2F2F2`), yang
+berkedip abu-abu di balik aplikasi gelap. Ketahuan saat menelusuri tata letak
+render: ada lapisan `rgb(242, 242, 242)` menutupi `#0F1419` milik kita.
+
+Perbaikannya: palet aplikasi disuntikkan ke `ThemeProvider` milik expo-router
+di `app/_layout.tsx`. Di SDK 57 expo-router memuat react-navigation di dalam
+dirinya, jadi `ThemeProvider`, `DarkTheme`, dan `DefaultTheme` diimpor dari
+`expo-router`, **bukan** dari `@react-navigation/native` — paket itu tidak
+ada di `node_modules`.
+
+### `metro.config.js` mendaftarkan `.wasm`
+
+Target proyek ini Android. Target web dipakai untuk memeriksa tampilan dan
+navigasi dengan cepat selama pengembangan — di lingkungan tanpa emulator,
+itu satu-satunya cara menjalankan aplikasi sungguhan. `expo-sqlite` di web
+memuat wa-sqlite sebagai `.wasm`, dan Metro menolaknya sampai ekstensi itu
+didaftarkan sebagai aset. Tidak berpengaruh pada bundel Android.
