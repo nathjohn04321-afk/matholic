@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.scripts.json",
     "validate-content": "node --experimental-strip-types scripts/validate-content.ts",
     "build-index": "tsx scripts/build-index.ts",
-    "test": "node --test --experimental-strip-types",
+    "test": "node scripts/run-tests.mjs",
     "android:native": "expo run:android",
     "build-content-index": "node scripts/build-content-index.mjs",
     "build-katex": "node scripts/build-katex.mjs"

@@ -21,13 +21,34 @@ import { Text } from '@/components/Text';
 import { useTheme } from '@/components/ThemeProvider';
 import { getCardContext } from '@/lib/content';
 import { isBookmarked, toggleBookmark } from '@/lib/db';
+import { gradeCard, markCardSeen } from '@/lib/progress';
 import { CARD_TYPE_ICON, CARD_TYPE_LABEL, spacing } from '@/lib/theme';
+import type { GradeLabel } from '@/lib/types';
+
+/** Penilaian diri yang menyuapi algoritma pengulangan (SPEC.md 7.4). */
+const PENILAIAN: { grade: GradeLabel; label: string; icon: string }[] = [
+  { grade: 'lupa', label: 'Lupa', icon: 'close-circle-outline' },
+  { grade: 'sulit', label: 'Sulit', icon: 'alert-circle-outline' },
+  { grade: 'bisa', label: 'Bisa', icon: 'checkmark-circle-outline' },
+  { grade: 'mudah', label: 'Mudah', icon: 'flash-outline' },
+];
 
 export default function KartuLayar() {
   const { cardId } = useLocalSearchParams<{ cardId: string }>();
   const theme = useTheme();
   const context = useMemo(() => getCardContext(cardId ?? ''), [cardId]);
   const [bookmarked, setBookmarked] = useState(false);
+  const [graded, setGraded] = useState<GradeLabel | null>(null);
+
+  useEffect(() => {
+    setGraded(null);
+    if (cardId) {
+      // Kartu yang dibuka berhenti dihitung sebagai kartu baru.
+      void markCardSeen(cardId).catch(() => {
+        // tidak fatal untuk membaca materi
+      });
+    }
+  }, [cardId]);
 
   useEffect(() => {
     let active = true;
@@ -182,6 +203,42 @@ export default function KartuLayar() {
             }
           />
 
+          {/* 6. Penilaian diri — masuk ke jadwal pengulangan */}
+          <Card raised>
+            <Text variant="label" muted weight="600">
+              {graded ? 'PENILAIAN TERSIMPAN' : 'SEBERAPA PAHAM KAMU?'}
+            </Text>
+            {graded ? (
+              <Text muted variant="label" style={styles.gradeNote}>
+                Tercatat &quot;{graded}&quot;. Jadwal pengulangan kartu ini sudah
+                disesuaikan.
+              </Text>
+            ) : (
+              <>
+                <Text muted variant="label" style={styles.gradeNote}>
+                  Jawabanmu menentukan kapan kartu ini muncul lagi.
+                </Text>
+                <View style={styles.gradeRow}>
+                  {PENILAIAN.map((p) => (
+                    <Button
+                      key={p.grade}
+                      label={p.label}
+                      icon={p.icon as never}
+                      variant="sekunder"
+                      style={styles.gradeButton}
+                      onPress={() => {
+                        setGraded(p.grade);
+                        void gradeCard(card.id, p.grade).catch(() => {
+                          // tidak fatal; bisa dinilai ulang nanti
+                        });
+                      }}
+                    />
+                  ))}
+                </View>
+              </>
+            )}
+          </Card>
+
           {/* Navigasi antar kartu */}
           <View style={styles.navRow}>
             <Button
@@ -257,5 +314,18 @@ const styles = StyleSheet.create({
   },
   navButton: {
     flex: 1,
+  },
+  gradeNote: {
+    marginTop: spacing.xs,
+  },
+  gradeRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: spacing.sm,
+    marginTop: spacing.md,
+  },
+  gradeButton: {
+    flexGrow: 1,
+    flexBasis: '45%',
   },
 });

@@ -20,6 +20,7 @@
     "node_modules",
     "dist",
     ".expo",
-    "scripts/**/*"
+    "scripts/**/*",
+    "lib/__tests__/**/*"
   ]
 }
