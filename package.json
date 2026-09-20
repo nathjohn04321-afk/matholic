@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "validate-content": "tsx scripts/validate-content.ts",
     "build-index": "tsx scripts/build-index.ts",
-    "test": "node --test --experimental-strip-types"
+    "test": "node --test --experimental-strip-types",
+    "android:native": "expo run:android"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",

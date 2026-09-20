@@ -1,0 +1,77 @@
+# Membangun APK MathDeck di runner GitHub.
+#
+# Kenapa di sini, bukan di mesin sendiri: build Android butuh Android SDK dari
+# dl.google.com. Runner ubuntu GitHub sudah membawanya, jadi tidak perlu
+# memasang apa pun di komputer sendiri.
+#
+# Hasilnya diunggah sebagai artifact bernama "mathdeck-apk" — unduh dari
+# halaman Actions, tab "Summary", bagian "Artifacts".
+
+name: Build APK
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Rakit APK rilis
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Ambil kode
+        uses: actions/checkout@v4
+
+      - name: Siapkan Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Siapkan JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Periksa tipe
+        run: npx tsc --noEmit
+
+      - name: Bangun proyek native Android
+        run: npx expo prebuild --platform android --no-install
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties', 'package-lock.json') }}
+          restore-keys: gradle-${{ runner.os }}-
+
+      - name: Rakit APK rilis
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Laporkan ukuran APK
+        run: |
+          echo "### APK" >> "$GITHUB_STEP_SUMMARY"
+          for f in android/app/build/outputs/apk/release/*.apk; do
+            size=$(du -h "$f" | cut -f1)
+            echo "- \`$(basename "$f")\` — $size" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      - name: Unggah APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: mathdeck-apk
+          path: android/app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 30
