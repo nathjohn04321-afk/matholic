@@ -5,8 +5,10 @@
  * diuji langsung. Ekspor progres dan reset progres diisi milestone 5.
  */
 
+import { router } from 'expo-router';
 import { ScrollView, StyleSheet, View } from 'react-native';
 
+import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { Header } from '@/components/Header';
 import { Screen } from '@/components/Screen';
@@ -60,6 +62,22 @@ export default function Pengaturan() {
           <Text muted style={styles.sample}>
             Contoh: turunan fungsi naik ketika gradien garis singgungnya positif.
           </Text>
+        </Card>
+
+        <Card>
+          <Text weight="600">Alat pengembang</Text>
+          <Text muted variant="label" style={styles.sample}>
+            Layar uji untuk memeriksa render rumus dan kemulusan scroll.
+          </Text>
+          <View style={styles.control}>
+            <Button
+              label="Uji render matematika"
+              icon="flask-outline"
+              variant="sekunder"
+              block
+              onPress={() => router.push('/uji-matematika')}
+            />
+          </View>
         </Card>
 
         <Card>

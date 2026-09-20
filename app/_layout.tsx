@@ -24,6 +24,7 @@ import { Screen } from '@/components/Screen';
 import { Text } from '@/components/Text';
 import { ThemeProvider, useTheme, usePreferences } from '@/components/ThemeProvider';
 import { getDatabase } from '@/lib/db';
+import { prepareKatex } from '@/lib/katex';
 import { spacing, type Theme } from '@/lib/theme';
 
 void SplashScreen.preventAutoHideAsync();
@@ -75,6 +76,9 @@ function AppShell() {
     setDb({ status: 'memuat' });
     getDatabase()
       .then(() => {
+        // Tulis CSS KaTeX ke penyimpanan sekali, sebelum kartu pertama dirender.
+        // Kegagalannya tidak fatal: lib/katex.ts jatuh ke mode sisip.
+        prepareKatex();
         if (active) setDb({ status: 'siap' });
       })
       .catch((error: unknown) => {
