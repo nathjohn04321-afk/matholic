@@ -402,6 +402,56 @@
       "snippet": "Soal: sebuah toko menaikkan harga barang [rumus] dari harga beli, lalu memberi diskon [rumus] pada harga jual. Jika harga beli Rp200.000, berapa keuntungan t..."
     },
     {
+      "cardId": "das-sigma-c1",
+      "topicId": "das-sigma",
+      "topicTitle": "Notasi Sigma & Pengantar Barisan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Sigma hanyalah perintah menjumlahkan",
+      "haystack": "sigma hanyalah perintah menjumlahkan simbol terlihat menakutkan padahal artinya sederhana: \"jumlahkan\". sisanya hanya keterangan tentang apa yang dijumlahkan dan sampai mana. bacanya begini: mulai dari 1, naik satu-satu, berhenti di 5. untuk tiap nilai , hitung bentuk di sebelah kanan sigma, lalu jumlahkan semuanya. huruf tidak punya arti khusus — ia hanya penghitung sementara. menggantinya dengan atau tidak mengubah hasil apa pun. kalau bentuk di kanan tidak memuat sama sekali, seperti , maka angka itu dijumlahkan sebanyak batasnya: . berarti jumlahkan batas bawah dan atas menentukan berapa suku untuk tetap mengira banyaknya suku adalah nilai batas atas. dari sampai ada 5 suku, bukan 7. notasi sigma & pengantar barisan",
+      "snippet": "Simbol [rumus] terlihat menakutkan padahal artinya sederhana: \"jumlahkan\". Sisanya hanya keterangan tentang apa yang dijumlahkan dan sampai mana. [rumus] Bac..."
+    },
+    {
+      "cardId": "das-sigma-c2",
+      "topicId": "das-sigma",
+      "topicTitle": "Notasi Sigma & Pengantar Barisan",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Sifat sigma yang memangkas pekerjaan",
+      "haystack": "sifat sigma yang memangkas pekerjaan tiga sifat berikut mengubah sigma yang panjang menjadi hitungan singkat, dan hampir semua soal sigma di ujian bisa diselesaikan dengan kombinasi ketiganya. faktor tetap bisa dikeluarkan dari sigma. kalau setiap suku dikalikan bilangan yang sama, bilangan itu boleh ditarik ke depan: sigma bisa dipecah pada penjumlahan. dua bentuk yang dijumlahkan boleh dihitung terpisah: dua rumus jumlah yang pantas dihafal: perhatikan sigma tidak bisa dipecah pada perkalian. bentuk tidak sama dengan , dan kamu bisa membuktikannya sendiri dengan dua suku saja. sigma tidak bisa dipecah pada perkalian menulis . sifat pemecahan hanya berlaku untuk penjumlahan. notasi sigma & pengantar barisan",
+      "snippet": "Tiga sifat berikut mengubah sigma yang panjang menjadi hitungan singkat, dan hampir semua soal sigma di ujian bisa diselesaikan dengan kombinasi ketiganya. F..."
+    },
+    {
+      "cardId": "das-sigma-c3",
+      "topicId": "das-sigma",
+      "topicTitle": "Notasi Sigma & Pengantar Barisan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Mengenali pola barisan",
+      "haystack": "mengenali pola barisan menghadapi barisan, pertanyaan pertamamu selalu sama: bagaimana cara berpindah dari satu suku ke suku berikutnya? kalau setiap suku didapat dengan menambah bilangan tetap, itu barisan aritmatika. bilangan tetapnya disebut beda, ditulis . contoh: dengan . kalau setiap suku didapat dengan mengalikan bilangan tetap, itu barisan geometri. pengalinya disebut rasio, ditulis . contoh: dengan . cara memeriksanya cepat: hitung selisih antar suku. kalau selisihnya tetap, aritmatika. kalau tidak, hitung hasil bagi antar suku. kalau hasil baginya tetap, geometri. ada juga barisan yang bukan keduanya, seperti — itu barisan kuadrat. aritmatika: selisih tetap ( ) geometri: hasil bagi tetap ( ) uji selisih dulu, baru hasil bagi menyimpulkan barisan aritmatika hanya dari dua suku pertama. pola harus diperiksa pada minimal tiga suku berturut-turut. notasi sigma & pengantar barisan",
+      "snippet": "Menghadapi barisan, pertanyaan pertamamu selalu sama: bagaimana cara berpindah dari satu suku ke suku berikutnya? Kalau setiap suku didapat dengan menambah b..."
+    },
+    {
+      "cardId": "das-sigma-c4",
+      "topicId": "das-sigma",
+      "topicTitle": "Notasi Sigma & Pengantar Barisan",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Suku ke-n dan jumlah n suku",
+      "haystack": "suku ke-n dan jumlah n suku dua jenis barisan punya rumus yang berpasangan rapi, dan mengenali pasangannya membuat hafalanmu separuh lebih ringan. aritmatika , yang tiap sukunya bertambah tetap: rumus jumlahnya juga bisa ditulis , yang jauh lebih cepat kalau suku terakhirnya sudah kamu ketahui. geometri , yang tiap sukunya dikali tetap: perhatikan keduanya memakai , bukan . alasannya sama pada keduanya: suku pertama belum mengalami penambahan atau perkalian apa pun, jadi jumlah langkahnya selalu satu lebih sedikit daripada nomor sukunya. khusus geometri dengan , jumlah tak hingganya ada dan bernilai . aritmatika: geometri: aritmatika bila memakai pangkat alih-alih pada rumus geometri, sehingga hasilnya selalu satu langkah terlalu jauh. notasi sigma & pengantar barisan",
+      "snippet": "Dua jenis barisan punya rumus yang berpasangan rapi, dan mengenali pasangannya membuat hafalanmu separuh lebih ringan. Aritmatika, yang tiap sukunya bertamba..."
+    },
+    {
+      "cardId": "das-sigma-c5",
+      "topicId": "das-sigma",
+      "topicTitle": "Notasi Sigma & Pengantar Barisan",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada sigma dan barisan",
+      "haystack": "kesalahan khas pada sigma dan barisan salah menghitung banyak suku. dari sampai ada suku. melupakan tambahan satu adalah kesalahan paling sering. memakai alih-alih . suku ke-5 barisan aritmatika adalah , bukan . uji dengan barisan sederhana kalau ragu. memecah sigma pada perkalian. hanya penjumlahan yang boleh dipecah. memakai untuk . kalau rasionya bernilai satu atau lebih, jumlahnya membesar tanpa batas dan rumus itu tidak berlaku. tertukar dan . yang satu nilai satu suku, yang lain jumlah semua suku sampai situ. baca ulang pertanyaannya sebelum menjawab. banyak suku batas atas batas bawah suku ke- memakai hanya untuk bedakan dari menjawab padahal yang ditanya , atau sebaliknya — hitungannya benar tapi menjawab pertanyaan yang berbeda. notasi sigma & pengantar barisan",
+      "snippet": "Salah menghitung banyak suku. Dari [rumus] sampai [rumus] ada [rumus] suku. Melupakan tambahan satu adalah kesalahan paling sering. Memakai [rumus] alih-alih..."
+    },
+    {
       "cardId": "das-splv-c1",
       "topicId": "das-splv",
       "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
@@ -560,6 +610,106 @@
       "title": "Yang paling sering memakan nilai",
       "haystack": "yang paling sering memakan nilai lupa syarat numerus. ini penyebab nomor satu. setiap kali ada , kamu berutang satu syarat: . utang itu ditagih di akhir, saat memeriksa akar. membalik arah pada pertidaksamaan logaritma. kalau basis , arah tanda tetap. tapi kalau , fungsinya turun, sehingga arah tanda harus dibalik . banyak orang lupa memeriksa basisnya dulu. mencoret log seperti mencoret angka. dari kamu boleh menyimpulkan . tapi dari dengan , kamu tidak boleh menyimpulkan apa-apa. kebiasaan yang menyelamatkan: tulis syarat di pojok kertas sebelum mulai menghitung. setiap menuntut basis arah pertidaksamaan dibalik numerus boleh disamakan hanya bila basisnya sama menyelesaikan seperti basis lebih dari satu, sehingga arah tandanya tidak dibalik dan jawabannya jadi kebalikan dari yang benar. eksponen & logaritma",
       "snippet": "Lupa syarat numerus. Ini penyebab nomor satu. Setiap kali ada [rumus] , kamu berutang satu syarat: [rumus] . Utang itu ditagih di akhir, saat memeriksa akar...."
+    },
+    {
+      "cardId": "alj-fungsi-c1",
+      "topicId": "alj-fungsi",
+      "topicTitle": "Fungsi: Komposisi & Invers",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Fungsi adalah mesin satu arah",
+      "haystack": "fungsi adalah mesin satu arah bayangkan fungsi sebagai mesin: kamu masukkan satu angka, keluar tepat satu angka. bagian \"tepat satu\" itulah yang membedakan fungsi dari relasi biasa. kalau satu masukan bisa menghasilkan dua keluaran berbeda, itu bukan fungsi. inilah alasan uji garis tegak bekerja: kalau ada garis tegak memotong grafik di dua titik, berarti satu nilai punya dua nilai , dan itu melanggar aturan. sebaliknya, dua masukan berbeda boleh menghasilkan keluaran sama. fungsi memetakan dan ke angka yang sama, dan itu tetap sah. notasi berarti \"masukkan 3 ke mesin \". ia bukan perkalian dengan 3, meski bentuknya mirip. satu masukan menghasilkan tepat satu keluaran uji garis tegak untuk memeriksa grafik dua masukan boleh menghasilkan keluaran sama membaca sebagai . yang di dalam kurung adalah masukannya, jadi seluruh pada rumus harus diganti dengan . fungsi: komposisi & invers",
+      "snippet": "Bayangkan fungsi sebagai mesin: kamu masukkan satu angka, keluar tepat satu angka. Bagian \"tepat satu\" itulah yang membedakan fungsi dari relasi biasa. Kalau..."
+    },
+    {
+      "cardId": "alj-fungsi-c2",
+      "topicId": "alj-fungsi",
+      "topicTitle": "Fungsi: Komposisi & Invers",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Komposisi adalah dua mesin berurutan",
+      "haystack": "komposisi adalah dua mesin berurutan komposisi berarti: jalankan dulu, lalu hasilnya masukkan ke . urutannya dibaca dari kanan ke kiri, seperti tanda kurung. membaca dari kanan terasa terbalik, tapi masuk akal kalau kamu lihat notasi : yang paling dalam dikerjakan lebih dulu, persis seperti tanda kurung biasa. urutan sangat berpengaruh. dengan dan : hasilnya berbeda, jadi pada umumnya. menukar urutan adalah kesalahan yang paling sering muncul di soal komposisi, dan soal ujian hampir selalu menyediakan pilihan jawaban untuk kedua urutan sekaligus — jadi tertukar tidak akan ketahuan dari bentuk jawabannya saja. kerjakan yang paling dalam dulu umumnya berbeda dari mengerjakan lebih dulu pada . yang dikerjakan duluan adalah , yaitu fungsi yang tertulis di kanan. fungsi: komposisi & invers",
+      "snippet": "Komposisi [rumus] berarti: jalankan [rumus] dulu, lalu hasilnya masukkan ke [rumus] . Urutannya dibaca dari kanan ke kiri, seperti tanda kurung. [rumus] Memb..."
+    },
+    {
+      "cardId": "alj-fungsi-c3",
+      "topicId": "alj-fungsi",
+      "topicTitle": "Fungsi: Komposisi & Invers",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Invers membatalkan fungsi aslinya",
+      "haystack": "invers membatalkan fungsi aslinya kalau adalah mesin, maka adalah mesin yang mengembalikan hasilnya ke keadaan semula. masukkan 3 ke , hasilnya masukkan ke , kamu dapat 3 lagi. notasi bukan berarti . pangkat di sini menandakan kebalikan operasi, bukan kebalikan bilangan. ini salah satu notasi paling menyesatkan di matematika sekolah. tidak semua fungsi punya invers. kalau dua masukan berbeda menghasilkan keluaran sama, mesin pembalik tidak tahu harus kembali ke yang mana. fungsi misalnya, tidak punya invers kecuali daerah asalnya dibatasi. grafik dan selalu saling mencerminkan terhadap garis . invers ada hanya bila tiap keluaran berasal dari satu masukan membaca sebagai . keduanya berbeda sama sekali; yang satu membalik operasi, yang lain membalik nilai. fungsi: komposisi & invers",
+      "snippet": "Kalau [rumus] adalah mesin, maka [rumus] adalah mesin yang mengembalikan hasilnya ke keadaan semula. Masukkan 3 ke [rumus] , hasilnya masukkan ke [rumus] , k..."
+    },
+    {
+      "cardId": "alj-fungsi-c4",
+      "topicId": "alj-fungsi",
+      "topicTitle": "Fungsi: Komposisi & Invers",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Mencari invers langkah demi langkah",
+      "haystack": "mencari invers langkah demi langkah langkah bakunya sama untuk hampir semua fungsi yang bisa dibalik. 1. tulis fungsinya sebagai . 2. tukar posisi dan . 3. selesaikan persamaannya untuk mendapatkan . 4. tulis hasilnya sebagai . 5. periksa dengan satu angka: masukkan ke , lalu hasilnya ke , harus kembali. contoh pada : tukar: kalikan silang: , yaitu kumpulkan suku ber- : , jadi langkah mengumpulkan suku ber- di satu ruas adalah bagian yang paling sering macet. tukar dan , lalu selesaikan untuk bentuk pecahan: kali silang dulu kumpulkan suku ber- di satu ruas lalu faktorkan lupa memfaktorkan setelah mengumpulkannya, sehingga tersangkut di bentuk tanpa bisa melanjutkan. fungsi: komposisi & invers",
+      "snippet": "Langkah bakunya sama untuk hampir semua fungsi yang bisa dibalik. 1. Tulis fungsinya sebagai [rumus] . 2. Tukar posisi [rumus] dan [rumus] . 3. Selesaikan pe..."
+    },
+    {
+      "cardId": "alj-fungsi-c5",
+      "topicId": "alj-fungsi",
+      "topicTitle": "Fungsi: Komposisi & Invers",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada fungsi",
+      "haystack": "kesalahan khas pada fungsi menukar urutan komposisi. mengerjakan dulu. membalikkannya memberi jawaban yang berbeda, dan soal ujian hampir selalu menyediakan pilihan untuk kedua urutan. membaca sebagai pecahan. pangkat pada fungsi berarti membalik operasi, bukan membalik nilai. mengganti hanya sebagian. pada , setiap kemunculan di rumus harus diganti, termasuk yang ada di dalam pangkat. lupa syarat penyebut. fungsi pecahan punya nilai terlarang, dan syarat itu ikut berpindah ke inversnya dalam bentuk yang berbeda. kebiasaan yang menolong: setelah mendapat invers, uji dengan satu angka. kalau tidak kembali ke semula, ada langkah yang salah. mengerjakan dulu bukan ganti seluruh kemunculan uji invers dengan satu angka mengganti hanya sebagian pada , misalnya menulis menjadi — kemunculan yang kedua ikut harus berubah. fungsi: komposisi & invers",
+      "snippet": "Menukar urutan komposisi. [rumus] mengerjakan [rumus] dulu. Membalikkannya memberi jawaban yang berbeda, dan soal ujian hampir selalu menyediakan pilihan unt..."
+    },
+    {
+      "cardId": "alj-matriks-c1",
+      "topicId": "alj-matriks",
+      "topicTitle": "Matriks",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Determinan adalah faktor pengali luas",
+      "haystack": "determinan adalah faktor pengali luas determinan biasanya diperkenalkan sebagai rumus yang harus dihafal. padahal ia punya arti geometris yang membuat semuanya masuk akal. matriks mengubah bidang: persegi satuan berubah menjadi jajargenjang. determinan adalah luas jajargenjang itu — berapa kali lipat luas berubah setelah transformasi. dari sini akibatnya langsung terlihat. kalau determinannya , semua luas menjadi tiga kali lipat. kalau determinannya , seluruh bidang dipipihkan menjadi satu garis — luasnya lenyap. dan yang sudah pipih tidak bisa dikembalikan. kamu tidak bisa tahu titik mana yang tadinya berada di mana. itulah sebabnya matriks berdeterminan nol tidak punya invers , bukan karena rumusnya kebetulan membagi dengan nol. determinan = faktor pengali luas berarti tidak punya invers menghitung dengan mengalikan diagonal yang salah. diagonal utama (kiri atas ke kanan bawah) dikurangi diagonal lainnya, bukan sebaliknya. matriks",
+      "snippet": "Determinan biasanya diperkenalkan sebagai rumus [rumus] yang harus dihafal. Padahal ia punya arti geometris yang membuat semuanya masuk akal. Matriks [rumus]..."
+    },
+    {
+      "cardId": "alj-matriks-c2",
+      "topicId": "alj-matriks",
+      "topicTitle": "Matriks",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Operasi dasar matriks",
+      "haystack": "operasi dasar matriks penjumlahan dilakukan elemen demi elemen, dan hanya sah untuk matriks berukuran sama. tidak ada cara menjumlahkan matriks dengan . perkalian dengan skalar mengalikan setiap elemen. perhatikan akibatnya pada determinan matriks : mengalikan seluruh matriks dengan membuat determinannya menjadi kali, bukan kali — karena kedua barisnya ikut terskala. perkalian dua matriks memakai aturan baris kali kolom. elemen baris ke- kolom ke- pada hasil didapat dari baris ke- matriks pertama dipasangkan dengan kolom ke- matriks kedua. syaratnya: banyak kolom matriks pertama harus sama dengan banyak baris matriks kedua. dan tidak seperti bilangan, umumnya berbeda dari . jumlah dan kurang: elemen demi elemen, ukuran harus sama kali matriks: baris kali kolom pada umumnya untuk matriks mengalikan matriks elemen demi elemen seperti penjumlahan. perkalian matriks memakai aturan baris kali kolom, bukan posisi yang bersesuaian. matriks",
+      "snippet": "Penjumlahan dilakukan elemen demi elemen, dan hanya sah untuk matriks berukuran sama. Tidak ada cara menjumlahkan matriks [rumus] dengan [rumus] . Perkalian ..."
+    },
+    {
+      "cardId": "alj-matriks-c3",
+      "topicId": "alj-matriks",
+      "topicTitle": "Matriks",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Mencari invers matriks 2×2",
+      "haystack": "mencari invers matriks 2×2 untuk matriks , inversnya punya rumus singkat: pola perubahannya mudah diingat: tukar kedua elemen diagonal utama, lalu balik tanda kedua elemen diagonal lainnya. setelah itu bagi semuanya dengan determinan. langkah kerjanya: 1. hitung determinannya dulu. kalau nol, berhenti — inversnya tidak ada. 2. tukar dan . 3. balik tanda dan . 4. bagi seluruh matriks dengan determinan. 5. periksa dengan mengalikan , hasilnya harus matriks identitas. langkah 5 murah dan menangkap hampir semua kesalahan tanda. tukar dan , balik tanda dan bagi dengan determinan berarti invers tidak ada periksa: membalik tanda seluruh elemen, bukan hanya dan . elemen diagonal utama hanya ditukar posisinya, tandanya tetap. matriks",
+      "snippet": "Untuk matriks [rumus] , inversnya punya rumus singkat: [rumus] Pola perubahannya mudah diingat: tukar kedua elemen diagonal utama, lalu balik tanda kedua ele..."
+    },
+    {
+      "cardId": "alj-matriks-c4",
+      "topicId": "alj-matriks",
+      "topicTitle": "Matriks",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Menyelesaikan sistem persamaan dengan matriks",
+      "haystack": "menyelesaikan sistem persamaan dengan matriks sistem persamaan linear bisa ditulis sebagai satu persamaan matriks. sistem menjadi dengan . penyelesaiannya — persis seperti membagi pada persamaan biasa, hanya saja \"membagi\" di dunia matriks berarti mengalikan dengan invers. cara lain yang sering lebih cepat adalah aturan cramer: dengan adalah yang kolom pertamanya diganti ruas kanan, dan yang kolom keduanya diganti. kalau , sistemnya tidak punya penyelesaian tunggal. ini mencakup dua kemungkinan yang berbeda: bisa jadi kedua persamaan saling bertentangan sehingga tidak ada penyelesaian sama sekali, bisa juga keduanya sebenarnya persamaan yang sama sehingga penyelesaiannya tak hingga banyaknya. determinan saja tidak membedakan keduanya. cramer: : tidak ada penyelesaian tunggal mengalikan dari sisi yang salah. karena , invers harus dikalikan dari kiri: . matriks",
+      "snippet": "Sistem persamaan linear bisa ditulis sebagai satu persamaan matriks. Sistem [rumus] menjadi [rumus] dengan [rumus] . Penyelesaiannya [rumus] — persis seperti..."
+    },
+    {
+      "cardId": "alj-matriks-c5",
+      "topicId": "alj-matriks",
+      "topicTitle": "Matriks",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada matriks",
+      "haystack": "kesalahan khas pada matriks mengira . perkalian matriks tidak komutatif. bahkan untuk matriks sederhana, menukar urutannya biasanya memberi hasil yang sama sekali berbeda. mengalikan elemen demi elemen. perkalian matriks memakai baris kali kolom. mengalikan posisi yang bersesuaian adalah operasi lain yang jarang dipakai di tingkat sma. salah tanda pada invers. yang dibalik tandanya hanya dan ; dan hanya bertukar tempat. lupa determinan bisa negatif. luas tidak pernah negatif, tapi determinan bisa — tandanya menunjukkan apakah orientasi bidang ikut terbalik. membagi dengan matriks. tidak ada operasi pembagian matriks. yang ada adalah mengalikan dengan invers, dan sisi pengalinya berpengaruh. perkalian matriks: baris kali kolom invers: hanya dan yang berubah tanda tidak ada pembagian matriks menulis untuk menyelesaikan persamaan matriks. yang benar adalah atau , dan keduanya berbeda hasil. matriks",
+      "snippet": "Mengira [rumus] . Perkalian matriks tidak komutatif. Bahkan untuk matriks sederhana, menukar urutannya biasanya memberi hasil yang sama sekali berbeda. Menga..."
     },
     {
       "cardId": "alj-nilai-mutlak-c1",
