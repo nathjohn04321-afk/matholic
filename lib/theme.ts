@@ -53,6 +53,19 @@ const light: Palette = {
   border: '#D8DFE6',
 };
 
+/**
+ * Tangga warna sekuensial untuk heatmap aktivitas (SPEC.md 7.9).
+ *
+ * Satu hue, dari terang ke gelap — bukan pelangi. Langkah untuk tema gelap
+ * dipilih sendiri terhadap latar gelap, bukan hasil membalik tangga terang:
+ * membalik menghasilkan langkah yang saling terlalu dekat di latar gelap.
+ * Indeks 0 selalu "tidak ada aktivitas".
+ */
+export const heatSteps = {
+  dark: ['#222A35', '#1E3A5F', '#2A5C96', '#357DCC', '#4A9EFF'],
+  light: ['#EDF1F5', '#C5DBF5', '#8FBCEA', '#4E8FD6', '#1B6FD6'],
+} as const;
+
 export const palettes = { dark, light } as const;
 export type ColorSchemeName = keyof typeof palettes;
 
@@ -128,6 +141,8 @@ export const duration = {
 export interface Theme {
   scheme: ColorSchemeName;
   colors: Palette;
+  /** Tangga sekuensial untuk heatmap; indeks 0 = tanpa aktivitas. */
+  heat: readonly string[];
   type: Typography;
   spacing: typeof spacing;
   radius: typeof radius;
@@ -141,6 +156,7 @@ export function buildTheme(
   return {
     scheme,
     colors: palettes[scheme],
+    heat: heatSteps[scheme],
     type: buildTypography(FONT_SCALES[fontScale]),
     spacing,
     radius,

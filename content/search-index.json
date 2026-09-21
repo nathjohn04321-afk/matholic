@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-21T09:59:08.997Z",
+  "entries": [
+    {
+      "cardId": "alj-eksponen-logaritma-c1",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Logaritma menjawab \"pangkat berapa\"",
+      "haystack": "logaritma menjawab \"pangkat berapa\" logaritma sering terasa asing karena diperkenalkan sebagai simbol, bukan sebagai pertanyaan. padahal isinya cuma satu pertanyaan sederhana. membaca: \" harus dipangkatkan berapa supaya jadi ?\" jadi karena . dan karena . setiap kali kamu bingung, ubah kembali ke bentuk pangkat: dari cara baca ini, dua hal langsung masuk akal. pertama, wajib positif — bilangan positif dipangkatkan berapa pun tidak pernah menghasilkan nol atau negatif. kedua, selalu, karena apa pun dipangkatkan nol hasilnya satu. syarat: , , dan menghitung untuk . numerus wajib positif, jadi soal seperti itu tidak punya penyelesaian. eksponen & logaritma",
+      "snippet": "Logaritma sering terasa asing karena diperkenalkan sebagai simbol, bukan sebagai pertanyaan. Padahal isinya cuma satu pertanyaan sederhana. [rumus] membaca: ..."
+    },
+    {
+      "cardId": "alj-eksponen-logaritma-c2",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Sifat logaritma dan asalnya",
+      "haystack": "sifat logaritma dan asalnya semua sifat logaritma berasal dari sifat pangkat. kalau kamu ingat asalnya, kamu tidak perlu menghafal dan tidak akan tertukar arahnya. perkalian menjadi penjumlahan. ini karena : mengalikan bilangan berarti menjumlahkan pangkatnya, dan logaritma memang membaca pangkat. pembagian menjadi pengurangan, dengan alasan yang sama dari . pangkat pada numerus turun menjadi pengali di depan, karena . kalau basisnya menyulitkan, gantilah dengan basis pilihanmu sendiri memakai . basis bebas, asal positif dan bukan satu. menulis . yang berubah jadi penjumlahan adalah perkalian, bukan penjumlahan. eksponen & logaritma",
+      "snippet": "Semua sifat logaritma berasal dari sifat pangkat. Kalau kamu ingat asalnya, kamu tidak perlu menghafal dan tidak akan tertukar arahnya. Perkalian menjadi pen..."
+    },
+    {
+      "cardId": "alj-eksponen-logaritma-c3",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Menyelesaikan persamaan eksponen",
+      "haystack": "menyelesaikan persamaan eksponen persamaan eksponen paling sering diselesaikan dengan menyamakan basis. 1. ubah kedua ruas menjadi pangkat dengan basis yang sama. 2. kalau basis sudah sama dan bukan 1, pangkatnya boleh disamakan. 3. selesaikan persamaan pangkat yang tersisa. contoh: . keduanya bisa ditulis dalam basis 3: dan . jadi , yaitu . basisnya sama, maka , sehingga . kalau basisnya tidak bisa disamakan, barulah pakai logaritma di kedua ruas. misalnya memberi . ada juga bentuk yang menyamar sebagai persamaan kuadrat — perhatikan kalau muncul dan bersamaan. samakan basis, lalu samakan pangkat basis harus positif dan bukan 1 basis tak bisa disamakan ambil logaritma kedua ruas bersama misalkan menyamakan pangkat padahal basisnya masih berbeda, misalnya dari langsung menyimpulkan tidak ada penyelesaian tanpa memeriksa . eksponen & logaritma",
+      "snippet": "Persamaan eksponen paling sering diselesaikan dengan menyamakan basis. 1. Ubah kedua ruas menjadi pangkat dengan basis yang sama. 2. Kalau basis sudah sama d..."
+    },
+    {
+      "cardId": "alj-eksponen-logaritma-c4",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Menyelesaikan persamaan logaritma",
+      "haystack": "menyelesaikan persamaan logaritma persamaan logaritma punya satu langkah tambahan yang tidak boleh dilewat: memeriksa syarat. 1. tuliskan dulu syaratnya. setiap numerus wajib positif, basis positif dan bukan 1. 2. satukan menjadi satu logaritma di tiap ruas memakai sifat-sifatnya. 3. kalau basis kedua ruas sama, samakan numerusnya. 4. selesaikan, lalu buang akar yang melanggar syarat langkah 1. contoh: . syarat: dan , jadi . satukan: , sehingga . , yaitu , jadi atau . syaratnya , jadi dibuang. jawaban: . tulis syarat numerus positif sebelum mengerjakan satukan jadi satu log per ruas basis sama numerus boleh disamakan selalu buang akar yang melanggar syarat menerima semua akar persamaan kuadrat tanpa mengembalikannya ke syarat numerus, sehingga akar palsu ikut ditulis sebagai jawaban. eksponen & logaritma",
+      "snippet": "Persamaan logaritma punya satu langkah tambahan yang tidak boleh dilewat: memeriksa syarat. 1. Tuliskan dulu syaratnya. Setiap numerus wajib positif, basis p..."
+    },
+    {
+      "cardId": "alj-eksponen-logaritma-c5",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Mengganti basis saat buntu",
+      "haystack": "mengganti basis saat buntu kalau satu soal memuat logaritma dengan basis berbeda-beda, biasanya kamu buntu bukan karena soalnya sulit, tapi karena bentuknya belum seragam. alat untuk menyeragamkan adalah rumus ganti basis: basis boleh kamu pilih sendiri. pilih yang paling memudahkan. akibat langsung yang sering dipakai: . jadi dan saling berkebalikan. sifat rantai juga sering memangkas pekerjaan: . basis dan numerus yang bertemu saling menghapus, mirip mencoret pecahan. kalau melihat rantai panjang seperti , langsung coret jadi . membalik rumus ganti basis jadi . numerus tetap di atas, basis di bawah. eksponen & logaritma",
+      "snippet": "Kalau satu soal memuat logaritma dengan basis berbeda-beda, biasanya kamu buntu bukan karena soalnya sulit, tapi karena bentuknya belum seragam. Alat untuk m..."
+    },
+    {
+      "cardId": "alj-eksponen-logaritma-c6",
+      "topicId": "alj-eksponen-logaritma",
+      "topicTitle": "Eksponen & Logaritma",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Yang paling sering memakan nilai",
+      "haystack": "yang paling sering memakan nilai lupa syarat numerus. ini penyebab nomor satu. setiap kali ada , kamu berutang satu syarat: . utang itu ditagih di akhir, saat memeriksa akar. membalik arah pada pertidaksamaan logaritma. kalau basis , arah tanda tetap. tapi kalau , fungsinya turun, sehingga arah tanda harus dibalik . banyak orang lupa memeriksa basisnya dulu. mencoret log seperti mencoret angka. dari kamu boleh menyimpulkan . tapi dari dengan , kamu tidak boleh menyimpulkan apa-apa. kebiasaan yang menyelamatkan: tulis syarat di pojok kertas sebelum mulai menghitung. setiap menuntut basis arah pertidaksamaan dibalik numerus boleh disamakan hanya bila basisnya sama menyelesaikan seperti basis lebih dari satu, sehingga arah tandanya tidak dibalik dan jawabannya jadi kebalikan dari yang benar. eksponen & logaritma",
+      "snippet": "Lupa syarat numerus. Ini penyebab nomor satu. Setiap kali ada [rumus] , kamu berutang satu syarat: [rumus] . Utang itu ditagih di akhir, saat memeriksa akar...."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c1",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Nilai mutlak adalah jarak",
+      "haystack": "nilai mutlak adalah jarak kebanyakan orang menghafal sebagai \"membuat positif\". definisi itu benar tapi tidak berguna. yang berguna: adalah jarak antara dan pada garis bilangan. kenapa ini penting? karena begitu kamu membaca soal sebagai jarak, jawabannya sering terlihat tanpa hitungan. contoh: berarti \"cari titik yang jaraknya 3 dari 5\". ada dua titik seperti itu, satu di kiri dan satu di kanan: dan . selesai, tanpa memindah ruas. cara pandang ini juga menjelaskan kenapa selalu benar: jarak tidak pernah negatif. dan kenapa : jarak dari kamu ke sekolah sama dengan jarak dari sekolah ke kamu. = jarak dari untuk setiap menulis tanpa memeriksa tanda . kalau negatif, . persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Kebanyakan orang menghafal [rumus] sebagai \"membuat positif\". Definisi itu benar tapi tidak berguna. Yang berguna: [rumus] adalah jarak antara [rumus] dan [r..."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c2",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Sifat-sifat yang dipakai terus",
+      "haystack": "sifat-sifat yang dipakai terus empat sifat ini muncul di hampir semua soal. hafalkan bentuknya, tapi ingat juga alasannya supaya tidak tertukar. perkalian dan pembagian aman: dan untuk . tanda mutlak boleh dibagikan ke tiap faktor. penjumlahan tidak aman. yang berlaku cuma ketaksamaan segitiga: . sama dengan hanya kalau dan setanda. coba , : ruas kiri , ruas kanan . terakhir, . sifat ini yang membuat pengkuadratan kadang berguna — tapi hati-hati, lihat kartu jebakan. , (ketaksamaan segitiga) menganggap . itu salah kecuali dan setanda. persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Empat sifat ini muncul di hampir semua soal. Hafalkan bentuknya, tapi ingat juga alasannya supaya tidak tertukar. Perkalian dan pembagian aman: [rumus] dan [..."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c3",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Menyelesaikan $|f(x)| = c$",
+      "haystack": "menyelesaikan langkah baku untuk persamaan berbentuk : 1. periksa tanda lebih dulu. kalau , langsung tulis himpunan kosong — jarak tidak pernah negatif, jadi tidak ada yang perlu dihitung. kalau , cukup selesaikan karena hanya nol yang jaraknya nol dari nol. 2. kalau , barulah pecah jadi dua persamaan: atau . 3. selesaikan keduanya seperti persamaan biasa. 4. gabungkan hasilnya jadi satu himpunan penyelesaian. contoh: . ruas kanan positif, jadi lanjut ke langkah 2. memberi . memberi . himpunan penyelesaiannya . langkah pertama paling sering dilewati, dan itu sumber kesalahan tersering di ujian. : tidak ada penyelesaian : selesaikan saja : atau langsung memecah jadi dua kasus tanpa memeriksa apakah ruas kanan negatif. persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Langkah baku untuk persamaan berbentuk [rumus] : 1. Periksa tanda [rumus] lebih dulu. Kalau [rumus] , langsung tulis himpunan kosong — jarak tidak pernah neg..."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c4",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Terkurung atau terpisah",
+      "haystack": "terkurung atau terpisah ini bagian yang paling sering tertukar. padahal kalau kamu berpikir jarak, arah tandanya tidak mungkin salah. berarti \"jarak dari nol kurang dari \". titik-titik seperti itu semuanya berkumpul di tengah , jadi hasilnya satu potong: . berarti \"jaraknya lebih dari \". titik-titik itu justru menjauh ke kedua sisi, jadi hasilnya dua potong terpisah : atau . ingat pola ini: tanda kurang dari menghasilkan satu selang di tengah dan dirangkai dengan \"dan\"; tanda lebih dari menghasilkan dua selang di pinggir dan dirangkai dengan \"atau\". untuk negatif, tidak punya penyelesaian, sedangkan dipenuhi semua bilangan real. (terkurung, satu potong) atau (terpisah, dua potong) kurang dari memakai \"dan\", lebih dari memakai \"atau\" menulis penyelesaian sebagai . bentuk itu mustahil — tidak ada bilangan yang sekaligus lebih kecil dari dan lebih besar dari . persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Ini bagian yang paling sering tertukar. Padahal kalau kamu berpikir jarak, arah tandanya tidak mungkin salah. [rumus] berarti \"jarak [rumus] dari nol kurang ..."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c5",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "contoh",
+      "title": "Satu soal dikerjakan penuh",
+      "haystack": "satu soal dikerjakan penuh soal: tentukan himpunan penyelesaian . ruas kanan memuat , jadi tandanya belum tentu positif. pengkuadratan berisiko. pakai definisi saja, pecah menurut tanda isi tanda mutlak. kasus 1: , yaitu . di sini , jadi , lalu , jadi . syaratnya tapi hasilnya — bentrok. kasus ini kosong. kasus 2: , yaitu . di sini , jadi , lalu , jadi . digabung dengan syarat , hasilnya . jawaban akhir: . ruas kanan memuat variabel pecah menurut tanda, jangan kuadratkan setiap kasus wajib dicek lagi terhadap syaratnya kasus yang bentrok dengan syaratnya dibuang lupa mengecek hasil tiap kasus terhadap syarat kasus itu, lalu memasukkan jawaban yang sebenarnya bentrok. persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Soal: tentukan himpunan penyelesaian [rumus] . Ruas kanan memuat [rumus] , jadi tandanya belum tentu positif. Pengkuadratan berisiko. Pakai definisi saja, pe..."
+    },
+    {
+      "cardId": "alj-nilai-mutlak-c6",
+      "topicId": "alj-nilai-mutlak",
+      "topicTitle": "Persamaan & Pertidaksamaan Nilai Mutlak",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Tiga kesalahan yang paling mahal",
+      "haystack": "tiga kesalahan yang paling mahal mengkuadratkan tanpa syarat. dari orang langsung menulis . itu hanya sah kalau . kalau tidak dicek, kamu akan mendapat akar palsu. contoh: dikuadratkan memberi , padahal aslinya tidak punya penyelesaian sama sekali. membalik arah pada pertidaksamaan. saat membagi dengan bilangan negatif, arah tanda harus dibalik. ini sering terlewat di tengah pengerjaan yang panjang. menulis dua potong sebagai satu rangkaian. penyelesaian tidak boleh ditulis . rangkaian itu berarti sekaligus di dua tempat yang mustahil. tulis atau . selalu uji jawabanmu dengan memasukkan satu angka ke soal asli. kuadratkan hanya bila ruas kanan dijamin tak-negatif bagi dengan bilangan negatif balik arah tanda dua selang terpisah ditulis dengan \"atau\", bukan dirangkai uji jawaban dengan satu angka sebelum menutup soal mengkuadratkan padahal bisa negatif, lalu menerima akar palsu tanpa memeriksanya kembali. persamaan & pertidaksamaan nilai mutlak",
+      "snippet": "Mengkuadratkan tanpa syarat. Dari [rumus] orang langsung menulis [rumus] . Itu hanya sah kalau [rumus] . Kalau tidak dicek, kamu akan mendapat akar palsu. Co..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c1",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Limit menanyakan kecenderungan, bukan nilai",
+      "haystack": "limit menanyakan kecenderungan, bukan nilai ini sumber kebingungan terbesar tentang limit: tidak menanyakan berapa . yang ditanyakan adalah: kalau mendekat ke tanpa pernah sampai, nilai mendekat ke mana? titik sendiri sengaja tidak dilihat. kenapa dibuat begitu? karena banyak fungsi penting justru tidak terdefinisi di titik yang kita minati. ambil . di fungsinya tidak punya nilai — penyebutnya nol. tapi untuk sedekat apa pun ke 1, kamu boleh mencoret dan mendapat , yang jelas mendekat ke 2. jadi , walaupun tidak ada. limit membaca arah perjalanan, bukan tujuan akhirnya. tidak peduli pada limit bisa ada walau fungsinya tak terdefinisi di titik itu limit ada bila dari kiri dan dari kanan menuju nilai sama menyimpulkan limit tidak ada hanya karena substitusi menghasilkan . bentuk itu belum menjawab apa-apa, baru tanda bahwa perlu diolah dulu. limit fungsi aljabar",
+      "snippet": "Ini sumber kebingungan terbesar tentang limit: [rumus] tidak menanyakan berapa [rumus] . Yang ditanyakan adalah: kalau [rumus] mendekat ke [rumus] tanpa pern..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c2",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Substitusi dulu, selalu",
+      "haystack": "substitusi dulu, selalu langkah pertama untuk setiap soal limit selalu sama: coba substitusi langsung. hasilnya menentukan apa yang kamu lakukan berikutnya. kalau hasilnya angka biasa , itu sudah jawabannya. selesai. kalau hasilnya , itu bentuk tak tentu. belum berarti apa-apa, tapi memberi tahu bahwa pembilang dan penyebut punya faktor yang sama. olah dulu: faktorkan, atau kalikan dengan akar sekawan. kalau hasilnya dengan , limitnya menuju tak hingga — nilainya membesar tanpa batas, jadi limitnya tidak ada sebagai bilangan. urutan ini penting. banyak orang langsung memfaktorkan padahal substitusi sudah cukup, lalu membuang waktu dan membuat kesalahan hitung. selalu coba substitusi lebih dulu hasil angka biasa itu jawabannya hasil bentuk tak tentu, perlu diolah hasil , menuju tak hingga menuliskan sebagai jawaban akhir. itu bukan bilangan, melainkan tanda bahwa pekerjaan belum selesai. limit fungsi aljabar",
+      "snippet": "Langkah pertama untuk setiap soal limit selalu sama: coba substitusi langsung. Hasilnya menentukan apa yang kamu lakukan berikutnya. Kalau hasilnya angka bia..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c3",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Memfaktorkan untuk menembus 0/0",
+      "haystack": "memfaktorkan untuk menembus 0/0 kalau substitusi memberi , ada informasi berharga di situ: pembilang dan penyebut sama-sama nol di , artinya keduanya punya faktor . itu bukan kebetulan, melainkan teorema faktor. jadi langkahnya jelas: faktorkan keduanya, coret faktor , lalu substitusi lagi. contoh: . pembilang: penyebut: coret , tersisa . substitusi : . pencoretan ini sah karena hanya mendekat 2, tidak pernah sama dengan 2 — jadi dan pembagian itu diizinkan. menjamin ada faktor di keduanya coret faktor itu, lalu substitusi ulang pencoretan sah karena , hanya mendekat mencoret suku, bukan faktor. dari kamu tidak boleh mencoret — yang boleh dicoret hanya faktor utuh setelah difaktorkan. limit fungsi aljabar",
+      "snippet": "Kalau substitusi memberi [rumus] , ada informasi berharga di situ: pembilang dan penyebut sama-sama nol di [rumus] , artinya keduanya punya faktor [rumus] . ..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c4",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Akar sekawan untuk bentuk berakar",
+      "haystack": "akar sekawan untuk bentuk berakar kalau bentuk muncul bersama tanda akar, memfaktorkan biasanya buntu karena akar tidak bisa difaktorkan seperti polinomial. alat yang tepat di sini adalah mengalikan dengan akar sekawan. sekawan dari adalah . kalau keduanya dikalikan, tanda akarnya lenyap karena . itulah gunanya: mengubah bentuk berakar menjadi bentuk biasa yang bisa dicoret. contoh: . kalikan pembilang dan penyebut dengan : sekarang muncul sebagai faktor di atas dan bawah, jadi boleh dicoret. tersisa , dan substitusi memberi . kuncinya: kalikan atas dan bawah dengan hal yang sama, supaya nilai pecahannya tidak berubah. sekawan adalah kalikan pembilang dan penyebut sekaligus mengalikan hanya pembilangnya dengan sekawan tanpa mengalikan penyebutnya, sehingga nilai pecahannya berubah. limit fungsi aljabar",
+      "snippet": "Kalau bentuk [rumus] muncul bersama tanda akar, memfaktorkan biasanya buntu karena akar tidak bisa difaktorkan seperti polinomial. Alat yang tepat di sini ad..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c5",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "contoh",
+      "title": "Satu soal dikerjakan penuh",
+      "haystack": "satu soal dikerjakan penuh soal: tentukan . langkah 1 — substitusi lebih dulu. pembilang: . penyebut: . hasilnya , bentuk tak tentu, jadi pekerjaan belum selesai. langkah 2 — faktorkan keduanya. karena keduanya nol di , menurut teorema faktor keduanya pasti memuat . pembilang adalah selisih dua kubus: . penyebut adalah selisih dua kuadrat: . langkah 3 — coret lalu substitusi ulang. substitusi memberi . rumus selisih kubus sering dibutuhkan — hafalkan bentuknya. memakai sebagai faktor . keduanya berbeda: memfaktor jadi . limit fungsi aljabar",
+      "snippet": "Soal: tentukan [rumus] . Langkah 1 — substitusi lebih dulu. Pembilang: [rumus] . Penyebut: [rumus] . Hasilnya [rumus] , bentuk tak tentu, jadi pekerjaan belu..."
+    },
+    {
+      "cardId": "kal-limit-aljabar-c6",
+      "topicId": "kal-limit-aljabar",
+      "topicTitle": "Limit Fungsi Aljabar",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada soal limit",
+      "haystack": "kesalahan khas pada soal limit menuliskan sebagai jawaban. bentuk itu bukan bilangan. ia hanya memberitahu bahwa kamu belum selesai bekerja. mencoret suku, bukan faktor. dari sebagian orang mencoret dengan . pencoretan hanya sah untuk faktor utuh setelah difaktorkan, bukan untuk suku yang sedang dijumlahkan. menganggap limit selalu sama dengan nilai fungsi. itu hanya berlaku untuk fungsi yang kontinu di titik tersebut. untuk fungsi bercabang, periksa limit kiri dan kanan secara terpisah — kalau keduanya berbeda, limitnya tidak ada. lupa bahwa berbeda dari . kalau pembilangnya bukan nol sedangkan penyebutnya nol, tidak ada yang bisa dicoret; nilainya membesar tanpa batas. bukan jawaban, hanya tanda perlu diolah coret faktor, jangan coret suku limit kiri limit kanan limit tidak ada dengan menuju tak hingga mencoret pada seolah-olah suku bisa dicoret seperti faktor. limit fungsi aljabar",
+      "snippet": "Menuliskan [rumus] sebagai jawaban. Bentuk itu bukan bilangan. Ia hanya memberitahu bahwa kamu belum selesai bekerja. Mencoret suku, bukan faktor. Dari [rumu..."
+    }
+  ]
+}
