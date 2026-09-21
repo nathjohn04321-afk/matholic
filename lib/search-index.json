@@ -2,6 +2,56 @@
   "version": 1,
   "entries": [
     {
+      "cardId": "das-bilangan-c1",
+      "topicId": "das-bilangan",
+      "topicTitle": "Bilangan Bulat & Pecahan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Kenapa negatif kali negatif jadi positif",
+      "haystack": "kenapa negatif kali negatif jadi positif aturan \"negatif kali negatif sama dengan positif\" sering dihafal tanpa alasan, lalu tertukar dengan aturan penjumlahan. padahal alasannya bisa dilihat dari pola sederhana, dan sekali kamu melihatnya, aturan itu tidak akan tertukar lagi. perhatikan deret ini, di mana pengalinya turun satu-satu: setiap turun satu baris, hasilnya naik 2. kalau pola yang sama diteruskan ke bawah: jadi hasilnya positif bukan karena aturan sewenang-wenang, melainkan supaya polanya tetap konsisten. cara lain memahaminya: mengalikan dengan bilangan negatif berarti membalik arah di garis bilangan, dan membalik arah dua kali mengembalikanmu ke arah semula. tanda sama hasil positif tanda berbeda hasil negatif aturan yang sama berlaku untuk pembagian menerapkan aturan tanda perkalian pada penjumlahan. , bukan . bilangan bulat & pecahan",
+      "snippet": "Aturan \"negatif kali negatif sama dengan positif\" sering dihafal tanpa alasan, lalu tertukar dengan aturan penjumlahan. Padahal alasannya bisa dilihat dari p..."
+    },
+    {
+      "cardId": "das-bilangan-c2",
+      "topicId": "das-bilangan",
+      "topicTitle": "Bilangan Bulat & Pecahan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Membagi pecahan adalah mengalikan kebalikannya",
+      "haystack": "membagi pecahan adalah mengalikan kebalikannya kenapa ? jawabannya jadi jelas kalau pembagian dibaca sebagai pertanyaan \"ada berapa banyak?\". menanyakan: ada berapa seperempat di dalam setengah? bayangkan setengah pizza dipotong menjadi perempatan — ada dua potong. jadi hasilnya 2. sekarang perhatikan bahwa juga. itu bukan kebetulan: membagi dengan selalu sama dengan mengalikan dengan . secara umum: membagi dengan bilangan yang lebih kecil dari satu justru memperbesar hasilnya. itu sering terasa aneh, padahal masuk akal: makin kecil potongannya, makin banyak yang muat. yang dibalik hanya pembagi, bukan yang dibagi membagi dengan pecahan kurang dari 1 memperbesar hasil membalik pecahan yang salah. yang dibalik adalah pecahan kedua (pembagi), bukan yang pertama. bilangan bulat & pecahan",
+      "snippet": "Kenapa [rumus] ? Jawabannya jadi jelas kalau pembagian dibaca sebagai pertanyaan \"ada berapa banyak?\". [rumus] menanyakan: ada berapa seperempat di dalam set..."
+    },
+    {
+      "cardId": "das-bilangan-c3",
+      "topicId": "das-bilangan",
+      "topicTitle": "Bilangan Bulat & Pecahan",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Urutan operasi dan tanda kurung",
+      "haystack": "urutan operasi dan tanda kurung kalau satu perhitungan memuat beberapa operasi, urutannya tidak boleh sembarang. urutan bakunya begini: 1. tanda kurung, dari yang paling dalam 2. pangkat dan akar 3. kali dan bagi, dari kiri ke kanan 4. tambah dan kurang, dari kiri ke kanan bagian yang paling sering salah ada di langkah 3 dan 4. kali dan bagi punya derajat sama, jadi dikerjakan sesuai urutan kemunculannya — bukan kali dulu baru bagi. contoh: . yang benar , bukan . hal yang sama berlaku untuk tambah dan kurang. bernilai , bukan . kalau ragu, bubuhkan tanda kurung sendiri untuk memperjelas maksudmu. kurung, pangkat, kali/bagi, tambah/kurang kali dan bagi sederajat — kerjakan dari kiri tambah dan kurang sederajat — kerjakan dari kiri mengerjakan semua perkalian lebih dulu sebelum pembagian, misalnya membaca sebagai . bilangan bulat & pecahan",
+      "snippet": "Kalau satu perhitungan memuat beberapa operasi, urutannya tidak boleh sembarang. Urutan bakunya begini: 1. Tanda kurung, dari yang paling dalam 2. Pangkat da..."
+    },
+    {
+      "cardId": "das-bilangan-c4",
+      "topicId": "das-bilangan",
+      "topicTitle": "Bilangan Bulat & Pecahan",
+      "track": "dasar",
+      "type": "teknik",
+      "title": "Pecahan, desimal, dan persen itu satu hal",
+      "haystack": "pecahan, desimal, dan persen itu satu hal pecahan, desimal, dan persen menyatakan hal yang sama, hanya berbeda cara menulis. bisa berpindah dengan lancar antar ketiganya menghemat banyak waktu di ujian, karena tiap bentuk punya kekuatannya sendiri. pecahan ke desimal: bagi pembilang dengan penyebut. . desimal ke persen: kalikan 100. . persen ke pecahan: persen berarti \"per seratus\", jadi . beberapa nilai pantas dihafal karena sering muncul: , , , dan . dalam soal cerita, bentuk pecahan biasanya paling mudah dihitung, sedangkan persen paling mudah dibaca dan dibandingkan. persen berarti per seratus desimal ke persen: kali 100 mengira sama dengan . yang benar , seperseribu kali lipat berbeda. bilangan bulat & pecahan",
+      "snippet": "Pecahan, desimal, dan persen menyatakan hal yang sama, hanya berbeda cara menulis. Bisa berpindah dengan lancar antar ketiganya menghemat banyak waktu di uji..."
+    },
+    {
+      "cardId": "das-bilangan-c5",
+      "topicId": "das-bilangan",
+      "topicTitle": "Bilangan Bulat & Pecahan",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan yang paling sering pada pecahan",
+      "haystack": "kesalahan yang paling sering pada pecahan menjumlahkan penyebut. bukan . penyebut harus disamakan dulu, lalu hanya pembilangnya yang dijumlahkan: . mencoret suku, bukan faktor. pada kamu tidak boleh mencoret . pencoretan hanya sah untuk faktor yang mengalikan seluruh pembilang dan penyebut. lupa menyederhanakan. dan bernilai sama, tapi ujian biasanya meminta bentuk paling sederhana. salah tanda pada pecahan negatif. , , dan semuanya bernilai sama. yang berbeda adalah . uji cepat: ganti pecahan dengan desimal kasar dan periksa apakah hasilnya masuk akal. samakan penyebut sebelum menjumlah coret faktor, jangan coret suku selalu sederhanakan jawaban akhir menulis dengan menjumlahkan pembilang dan penyebut terpisah. bilangan bulat & pecahan",
+      "snippet": "Menjumlahkan penyebut. [rumus] bukan [rumus] . Penyebut harus disamakan dulu, lalu hanya pembilangnya yang dijumlahkan: [rumus] . Mencoret suku, bukan faktor..."
+    },
+    {
       "cardId": "das-kuadrat-c1",
       "topicId": "das-kuadrat",
       "topicTitle": "Persamaan & Fungsi Kuadrat",
@@ -100,6 +150,56 @@
       "title": "Garis bilangan dan notasi selang",
       "haystack": "garis bilangan dan notasi selang jawaban pertidaksamaan berupa sekumpulan bilangan, bukan satu angka. ada tiga cara menuliskannya dan ujian bisa memakai ketiganya. notasi himpunan: , dibaca \"himpunan semua sedemikian sehingga lebih dari 3\". notasi selang: . kurung biasa berarti ujungnya tidak ikut; kurung siku berarti ikut. jadi ditulis . garis bilangan: bulatan kosong untuk ujung yang tidak ikut, bulatan penuh untuk yang ikut. tanda tak hingga selalu memakai kurung biasa, karena tak hingga bukan bilangan yang bisa dicapai. menulis selalu salah. dan kurung biasa, bulatan kosong dan kurung siku, bulatan penuh selalu memakai kurung biasa menulis dengan kurung siku di sisi tak hingga. tak hingga bukan bilangan, jadi tidak pernah termasuk. persamaan & pertidaksamaan linear",
       "snippet": "Jawaban pertidaksamaan berupa sekumpulan bilangan, bukan satu angka. Ada tiga cara menuliskannya dan ujian bisa memakai ketiganya. Notasi himpunan: [rumus] ,..."
+    },
+    {
+      "cardId": "das-rasio-c1",
+      "topicId": "das-rasio",
+      "topicTitle": "Rasio, Perbandingan & Persen",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Senilai atau berbalik nilai",
+      "haystack": "senilai atau berbalik nilai dua besaran bisa berhubungan dengan dua cara yang berlawanan, dan salah membedakannya membuat seluruh pengerjaan keliru sejak baris pertama. senilai: satu naik, yang lain ikut naik. makin banyak barang dibeli, makin besar total bayarnya. hubungannya . berbalik nilai: satu naik, yang lain turun. makin banyak pekerja, makin singkat waktu pengerjaan. hubungannya . cara membedakannya tanpa menghafal: tanyakan pada dirimu, kalau besaran pertama digandakan, apakah yang kedua ikut berlipat atau justru berkurang separuh? jawaban itu langsung menentukan rumus mana yang dipakai. hati-hati, tidak semua hubungan masuk salah satunya. umur dan tinggi badan, misalnya, tidak sebanding secara matematis. senilai: berbalik nilai: uji dengan menggandakan salah satu besaran memakai perbandingan senilai untuk soal pekerja dan waktu. makin banyak pekerja, waktunya justru berkurang — itu berbalik nilai. rasio, perbandingan & persen",
+      "snippet": "Dua besaran bisa berhubungan dengan dua cara yang berlawanan, dan salah membedakannya membuat seluruh pengerjaan keliru sejak baris pertama. Senilai: satu na..."
+    },
+    {
+      "cardId": "das-rasio-c2",
+      "topicId": "das-rasio",
+      "topicTitle": "Rasio, Perbandingan & Persen",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Naik 20% lalu turun 20% tidak kembali ke awal",
+      "haystack": "naik 20% lalu turun 20% tidak kembali ke awal ini jebakan persen yang paling sering memakan korban, dan alasannya sederhana sekali begitu dilihat. misalkan harga awal rp100.000. naik menjadi rp120.000. sekarang turun — tapi turun dari berapa ? dari rp120.000, bukan dari rp100.000. dari 120.000 adalah 24.000, jadi harganya menjadi rp96.000 — bukan kembali ke rp100.000, melainkan turun 4%. akarnya: persen selalu dihitung terhadap patokan yang berlaku saat itu , dan patokannya berubah setelah perubahan pertama. cara aman mengerjakannya adalah dengan pengali. naik berarti dikali ; turun berarti dikali . gabungannya , yaitu dari harga awal. naik berarti dikali turun berarti dikali persen selalu terhadap patokan yang berlaku saat itu menjumlahkan persen berturutan, misalnya menganggap naik 20% lalu turun 20% saling meniadakan. rasio, perbandingan & persen",
+      "snippet": "Ini jebakan persen yang paling sering memakan korban, dan alasannya sederhana sekali begitu dilihat. Misalkan harga awal Rp100.000. Naik [rumus] menjadi Rp12..."
+    },
+    {
+      "cardId": "das-rasio-c3",
+      "topicId": "das-rasio",
+      "topicTitle": "Rasio, Perbandingan & Persen",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Membagi menurut perbandingan",
+      "haystack": "membagi menurut perbandingan soal seperti \"bagi rp600.000 dengan perbandingan \" punya langkah baku yang singkat. 1. jumlahkan seluruh angka perbandingannya. di sini bagian. 2. cari nilai satu bagian: total dibagi jumlah bagian. . 3. kalikan tiap angka perbandingan dengan nilai satu bagian. , , . 4. periksa jumlahnya kembali ke total semula. langkah 4 murah dan menangkap hampir semua kesalahan hitung. kalau yang diketahui bukan totalnya melainkan selisih dua bagian, cari dulu nilai satu bagian dari selisih itu. misalnya selisih bagian pertama dan kedua adalah bagian. jumlahkan angka perbandingan untuk dapat total bagian nilai satu bagian = total dibagi jumlah bagian selalu periksa jumlah akhirnya membagi total dengan banyaknya orang, bukan dengan jumlah angka perbandingan. pada pembaginya 6, bukan 3. rasio, perbandingan & persen",
+      "snippet": "Soal seperti \"bagi Rp600.000 dengan perbandingan [rumus] \" punya langkah baku yang singkat. 1. Jumlahkan seluruh angka perbandingannya. Di sini [rumus] bagia..."
+    },
+    {
+      "cardId": "das-rasio-c4",
+      "topicId": "das-rasio",
+      "topicTitle": "Rasio, Perbandingan & Persen",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Skala dan perbandingan pada peta",
+      "haystack": "skala dan perbandingan pada peta skala adalah perbandingan antara jarak pada gambar dan jarak sebenarnya. skala berarti 1 cm di peta mewakili 50.000 cm di dunia nyata. bagian yang paling sering salah bukan rumusnya, melainkan satuannya. skala selalu dinyatakan dalam satuan yang sama di kedua sisi, dan jawaban biasanya diminta dalam kilometer. ingat . jadi skala berarti 1 cm mewakili km. untuk model dan denah, prinsipnya sama. pada bangun yang diperbesar dengan faktor , panjangnya menjadi kali, luasnya kali, dan volumenya kali. bagian pangkat ini sering terlewat. panjang , luas , volume samakan satuan sebelum menghitung mengalikan luas dengan faktor skala biasa. kalau panjang menjadi 2 kali, luasnya menjadi 4 kali, bukan 2 kali. rasio, perbandingan & persen",
+      "snippet": "Skala adalah perbandingan antara jarak pada gambar dan jarak sebenarnya. Skala [rumus] berarti 1 cm di peta mewakili 50.000 cm di dunia nyata. [rumus] Bagian..."
+    },
+    {
+      "cardId": "das-rasio-c5",
+      "topicId": "das-rasio",
+      "topicTitle": "Rasio, Perbandingan & Persen",
+      "track": "dasar",
+      "type": "contoh",
+      "title": "Soal campuran dikerjakan penuh",
+      "haystack": "soal campuran dikerjakan penuh soal: sebuah toko menaikkan harga barang dari harga beli, lalu memberi diskon pada harga jual. jika harga beli rp200.000, berapa keuntungan toko? langkah 1 — harga jual sebelum diskon. naik berarti dikali : langkah 2 — harga setelah diskon. diskon berarti dikali , dan dihitung dari harga jual, bukan harga beli: langkah 3 — keuntungan. keuntungan adalah harga akhir dikurangi harga beli: langkah 4 — periksa kewajaran. untungnya , masuk akal karena berada di antara dan nol setelah dipotong diskon. naik lalu turun persen: pakai pengali berturutan diskon dihitung dari harga jual, bukan harga beli untung = harga akhir harga beli menghitung diskon dari harga beli padahal diskon diberikan pada harga jual. rasio, perbandingan & persen",
+      "snippet": "Soal: sebuah toko menaikkan harga barang [rumus] dari harga beli, lalu memberi diskon [rumus] pada harga jual. Jika harga beli Rp200.000, berapa keuntungan t..."
     },
     {
       "cardId": "lan-integral-tentu-c1",

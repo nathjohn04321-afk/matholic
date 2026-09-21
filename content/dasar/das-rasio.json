@@ -1,0 +1,269 @@
+{
+  "id": "das-rasio",
+  "track": "dasar",
+  "title": "Rasio, Perbandingan & Persen",
+  "order": 3,
+  "prerequisites": [
+    "das-bilangan"
+  ],
+  "estimatedMinutes": 22,
+  "summary": "Perbandingan senilai dan berbalik nilai, serta kenapa naik 20% lalu turun 20% tidak kembali ke awal.",
+  "tags": [
+    "bilangan",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "das-rasio-c1",
+      "type": "konsep",
+      "title": "Senilai atau berbalik nilai",
+      "body": "Dua besaran bisa berhubungan dengan dua cara yang berlawanan, dan salah membedakannya membuat seluruh pengerjaan keliru sejak baris pertama.\n\n**Senilai:** satu naik, yang lain ikut naik. Makin banyak barang dibeli, makin besar total bayarnya. Hubungannya $\\frac{a_1}{b_1} = \\frac{a_2}{b_2}$.\n\n**Berbalik nilai:** satu naik, yang lain turun. Makin banyak pekerja, makin singkat waktu pengerjaan. Hubungannya $a_1 \\times b_1 = a_2 \\times b_2$.\n\nCara membedakannya tanpa menghafal: tanyakan pada dirimu, kalau besaran pertama digandakan, apakah yang kedua ikut berlipat atau justru berkurang separuh? Jawaban itu langsung menentukan rumus mana yang dipakai.\n\nHati-hati, tidak semua hubungan masuk salah satunya. Umur dan tinggi badan, misalnya, tidak sebanding secara matematis.",
+      "questions": [
+        {
+          "id": "das-rasio-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Enam pekerja menyelesaikan sebuah tembok dalam 12 hari. Jika dikerjakan 8 pekerja dengan kecepatan sama, waktunya menjadi ...",
+          "options": [
+            "$16$ hari",
+            "$9$ hari",
+            "$10$ hari",
+            "$6$ hari"
+          ],
+          "answerIndex": 1,
+          "solution": "Makin banyak pekerja, makin singkat waktunya — ini berbalik nilai.\n\n$$a_1 b_1 = a_2 b_2$$\n$$6 \\times 12 = 8 \\times b_2$$\n$$72 = 8 b_2$$\n$$b_2 = 9$$\n\nJawabannya $9$ hari. Periksa masuk akal: pekerjanya bertambah, jadi harinya memang harus berkurang dari 12.",
+          "hint": "Pekerja bertambah — waktunya bertambah atau berkurang?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-rasio-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Harga 4 buku adalah Rp60.000. Harga 7 buku yang sama adalah ...",
+          "options": [
+            "Rp105.000",
+            "Rp90.000",
+            "Rp120.000",
+            "Rp75.000"
+          ],
+          "answerIndex": 0,
+          "solution": "Makin banyak buku, makin besar totalnya — ini senilai.\n\n$$\\frac{4}{60000} = \\frac{7}{x}$$\n\nKali silang:\n$$4x = 7 \\times 60000 = 420000$$\n$$x = 105000$$\n\nCara lain: harga satu buku $60000 \\div 4 = 15000$, lalu $7 \\times 15000 = 105000$.",
+          "hint": "Cari harga satu buku dulu kalau lebih mudah.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Senilai: $\\dfrac{a_1}{b_1} = \\dfrac{a_2}{b_2}$",
+        "Berbalik nilai: $a_1 b_1 = a_2 b_2$",
+        "Uji dengan menggandakan salah satu besaran"
+      ],
+      "pitfall": "Memakai perbandingan senilai untuk soal pekerja dan waktu. Makin banyak pekerja, waktunya justru berkurang — itu berbalik nilai."
+    },
+    {
+      "id": "das-rasio-c2",
+      "type": "jebakan",
+      "title": "Naik 20% lalu turun 20% tidak kembali ke awal",
+      "body": "Ini jebakan persen yang paling sering memakan korban, dan alasannya sederhana sekali begitu dilihat.\n\nMisalkan harga awal Rp100.000. Naik $20\\%$ menjadi Rp120.000. Sekarang turun $20\\%$ — tapi turun $20\\%$ **dari berapa**? Dari Rp120.000, bukan dari Rp100.000.\n\n$20\\%$ dari 120.000 adalah 24.000, jadi harganya menjadi Rp96.000 — bukan kembali ke Rp100.000, melainkan turun 4%.\n\nAkarnya: persen selalu dihitung terhadap **patokan yang berlaku saat itu**, dan patokannya berubah setelah perubahan pertama.\n\nCara aman mengerjakannya adalah dengan pengali. Naik $20\\%$ berarti dikali $1{,}2$; turun $20\\%$ berarti dikali $0{,}8$. Gabungannya $1{,}2 \\times 0{,}8 = 0{,}96$, yaitu $96\\%$ dari harga awal.",
+      "questions": [
+        {
+          "id": "das-rasio-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Harga barang naik $20\\%$, lalu turun $20\\%$. Dibanding harga semula, harga akhirnya ...",
+          "options": [
+            "sama saja",
+            "lebih murah $4\\%$",
+            "lebih mahal $4\\%$",
+            "lebih murah $40\\%$"
+          ],
+          "answerIndex": 1,
+          "solution": "Pakai pengali supaya patokannya tidak tertukar.\n\nNaik $20\\%$: dikali $1{,}2$\nTurun $20\\%$: dikali $0{,}8$\n\n$$1{,}2 \\times 0{,}8 = 0{,}96$$\n\nHarga akhir $96\\%$ dari semula, jadi **lebih murah $4\\%$**.\n\nPenurunan kedua dihitung dari harga yang sudah naik, bukan dari harga awal — itu sebabnya tidak kembali sama.",
+          "hint": "Turun 20% itu dari harga yang mana?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-rasio-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Harga sebuah tas setelah diskon $25\\%$ adalah Rp180.000. Berapa harga sebelum diskon?",
+          "answer": "240000",
+          "acceptedAnswers": [
+            "Rp240.000",
+            "240.000",
+            "Rp 240000",
+            "240 ribu"
+          ],
+          "solution": "Setelah diskon $25\\%$, yang dibayar adalah $75\\%$ dari harga awal.\n\nMisalkan harga awal $x$:\n$$0{,}75x = 180000$$\n$$x = \\frac{180000}{0{,}75} = 240000$$\n\nPeriksa: $25\\%$ dari 240.000 adalah 60.000, dan $240000 - 60000 = 180000$. Cocok.\n\nKesalahan umum: menambahkan $25\\%$ ke 180.000, yang memberi 225.000 — keliru, karena persennya dihitung dari harga awal, bukan harga diskon.",
+          "hint": "180.000 itu berapa persen dari harga awal?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Naik $p\\%$ berarti dikali $(1 + \\frac{p}{100})$",
+        "Turun $p\\%$ berarti dikali $(1 - \\frac{p}{100})$",
+        "Persen selalu terhadap patokan yang berlaku saat itu"
+      ],
+      "pitfall": "Menjumlahkan persen berturutan, misalnya menganggap naik 20% lalu turun 20% saling meniadakan."
+    },
+    {
+      "id": "das-rasio-c3",
+      "type": "prosedur",
+      "title": "Membagi menurut perbandingan",
+      "body": "Soal seperti \"bagi Rp600.000 dengan perbandingan $2:3:1$\" punya langkah baku yang singkat.\n\n1. Jumlahkan seluruh angka perbandingannya. Di sini $2+3+1 = 6$ bagian.\n2. Cari nilai satu bagian: total dibagi jumlah bagian. $600000 \\div 6 = 100000$.\n3. Kalikan tiap angka perbandingan dengan nilai satu bagian.\n   $2 \\times 100000 = 200000$, $3 \\times 100000 = 300000$, $1 \\times 100000 = 100000$.\n4. Periksa jumlahnya kembali ke total semula.\n\nLangkah 4 murah dan menangkap hampir semua kesalahan hitung.\n\nKalau yang diketahui bukan totalnya melainkan selisih dua bagian, cari dulu nilai satu bagian dari selisih itu. Misalnya selisih bagian pertama dan kedua adalah $3 - 2 = 1$ bagian.",
+      "questions": [
+        {
+          "id": "das-rasio-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Uang Rp600.000 dibagi tiga orang dengan perbandingan $2:3:1$. Bagian terbesar adalah ...",
+          "options": [
+            "Rp200.000",
+            "Rp300.000",
+            "Rp100.000",
+            "Rp360.000"
+          ],
+          "answerIndex": 1,
+          "solution": "Jumlah bagian: $2+3+1 = 6$.\n\nNilai satu bagian:\n$$600000 \\div 6 = 100000$$\n\nBagian terbesar punya angka perbandingan 3:\n$$3 \\times 100000 = 300000$$\n\nPeriksa: $200000 + 300000 + 100000 = 600000$. Cocok.",
+          "hint": "Bagi dengan jumlah seluruh angka perbandingan, bukan dengan 3 orang.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-rasio-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Perbandingan kelereng Andi dan Budi adalah $5:3$. Selisihnya 14 butir. Jumlah kelereng keduanya adalah ...",
+          "options": [
+            "$56$",
+            "$42$",
+            "$112$",
+            "$28$"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang diketahui selisih, bukan total. Jadi cari nilai satu bagian dari selisihnya.\n\nSelisih bagian: $5 - 3 = 2$ bagian, dan itu setara 14 butir.\n$$1 \\text{ bagian} = 14 \\div 2 = 7$$\n\nJumlah bagian keduanya: $5 + 3 = 8$ bagian.\n$$8 \\times 7 = 56$$\n\nPeriksa: Andi $35$, Budi $21$, selisihnya $14$. Cocok.",
+          "hint": "Selisihnya setara berapa bagian?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Jumlahkan angka perbandingan untuk dapat total bagian",
+        "Nilai satu bagian = total dibagi jumlah bagian",
+        "Selalu periksa jumlah akhirnya"
+      ],
+      "pitfall": "Membagi total dengan banyaknya orang, bukan dengan jumlah angka perbandingan. Pada $2:3:1$ pembaginya 6, bukan 3."
+    },
+    {
+      "id": "das-rasio-c4",
+      "type": "rumus",
+      "title": "Skala dan perbandingan pada peta",
+      "body": "Skala adalah perbandingan antara jarak pada gambar dan jarak sebenarnya. Skala $1:50.000$ berarti 1 cm di peta mewakili 50.000 cm di dunia nyata.\n\n$$\\text{skala} = \\frac{\\text{jarak pada peta}}{\\text{jarak sebenarnya}}$$\n\nBagian yang paling sering salah bukan rumusnya, melainkan satuannya. Skala selalu dinyatakan dalam satuan yang sama di kedua sisi, dan jawaban biasanya diminta dalam kilometer. Ingat $1 \\text{ km} = 100.000 \\text{ cm}$.\n\nJadi skala $1:50.000$ berarti 1 cm mewakili $0{,}5$ km.\n\nUntuk model dan denah, prinsipnya sama. Pada bangun yang diperbesar dengan faktor $k$, panjangnya menjadi $k$ kali, luasnya $k^2$ kali, dan volumenya $k^3$ kali. Bagian pangkat ini sering terlewat.",
+      "questions": [
+        {
+          "id": "das-rasio-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada peta berskala $1:50.000$, jarak dua kota adalah 8 cm. Jarak sebenarnya adalah ...",
+          "options": [
+            "$4$ km",
+            "$40$ km",
+            "$0{,}4$ km",
+            "$400$ km"
+          ],
+          "answerIndex": 0,
+          "solution": "Jarak sebenarnya dalam cm:\n$$8 \\times 50000 = 400000 \\text{ cm}$$\n\nUbah ke kilometer, ingat $1 \\text{ km} = 100.000 \\text{ cm}$:\n$$400000 \\div 100000 = 4 \\text{ km}$$\n\nKesalahan tersering adalah berhenti di 400.000 lalu membaginya dengan 1.000, yang memberi 400 km — itu mengubah ke meter, bukan kilometer.",
+          "hint": "Ingat 1 km berapa cm.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-rasio-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah bangun diperbesar sehingga panjang sisinya menjadi 3 kali semula. Luasnya menjadi ... kali semula.",
+          "options": [
+            "$3$",
+            "$6$",
+            "$9$",
+            "$27$"
+          ],
+          "answerIndex": 2,
+          "solution": "Luas bergantung pada dua dimensi, jadi faktor skalanya dikuadratkan.\n\n$$k = 3 \\Rightarrow \\text{luas} \\times k^2 = 3^2 = 9$$\n\nPeriksa dengan contoh: persegi sisi 2 punya luas 4. Diperbesar jadi sisi 6, luasnya 36. Dan $36 \\div 4 = 9$. Cocok.\n\nPilihan $27$ adalah faktor untuk volume, yaitu $k^3$.",
+          "hint": "Luas punya dua dimensi — apa artinya untuk faktor skalanya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$1 \\text{ km} = 100.000 \\text{ cm}$",
+        "Panjang $\\times k$, luas $\\times k^2$, volume $\\times k^3$",
+        "Samakan satuan sebelum menghitung"
+      ],
+      "pitfall": "Mengalikan luas dengan faktor skala biasa. Kalau panjang menjadi 2 kali, luasnya menjadi 4 kali, bukan 2 kali."
+    },
+    {
+      "id": "das-rasio-c5",
+      "type": "contoh",
+      "title": "Soal campuran dikerjakan penuh",
+      "body": "Soal: sebuah toko menaikkan harga barang $30\\%$ dari harga beli, lalu memberi diskon $10\\%$ pada harga jual. Jika harga beli Rp200.000, berapa keuntungan toko?\n\n**Langkah 1 — harga jual sebelum diskon.**\nNaik $30\\%$ berarti dikali $1{,}3$:\n$200000 \\times 1{,}3 = 260000$\n\n**Langkah 2 — harga setelah diskon.**\nDiskon $10\\%$ berarti dikali $0{,}9$, dan dihitung dari harga jual, bukan harga beli:\n$260000 \\times 0{,}9 = 234000$\n\n**Langkah 3 — keuntungan.**\nKeuntungan adalah harga akhir dikurangi harga beli:\n$234000 - 200000 = 34000$\n\n**Langkah 4 — periksa kewajaran.** Untungnya $\\frac{34000}{200000} = 17\\%$, masuk akal karena berada di antara $30\\%$ dan nol setelah dipotong diskon.",
+      "questions": [
+        {
+          "id": "das-rasio-q9",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Harga beli Rp200.000, dinaikkan $30\\%$ lalu didiskon $10\\%$. Berapa rupiah keuntungannya?",
+          "answer": "34000",
+          "acceptedAnswers": [
+            "Rp34.000",
+            "34.000",
+            "Rp 34000",
+            "34 ribu"
+          ],
+          "solution": "Pakai pengali berturutan.\n\nHarga jual: $200000 \\times 1{,}3 = 260000$\nSetelah diskon: $260000 \\times 0{,}9 = 234000$\nKeuntungan: $234000 - 200000 = 34000$\n\nPerhatikan diskon dihitung dari 260.000, bukan dari 200.000. Menghitungnya dari harga beli memberi jawaban yang berbeda dan keliru.",
+          "hint": "Diskonnya dari harga jual, bukan harga beli.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-rasio-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Seorang pedagang membeli barang Rp150.000 dan menjualnya Rp180.000. Persentase keuntungannya adalah ...",
+          "options": [
+            "$20\\%$",
+            "$30\\%$",
+            "$16{,}7\\%$",
+            "$83{,}3\\%$"
+          ],
+          "answerIndex": 0,
+          "solution": "Keuntungan dalam rupiah:\n$$180000 - 150000 = 30000$$\n\nPersentase keuntungan selalu dihitung terhadap **harga beli**:\n$$\\frac{30000}{150000} \\times 100\\% = 20\\%$$\n\nPilihan $16{,}7\\%$ muncul dari membagi dengan harga jual — itu keliru. Patokan untung dan rugi selalu harga beli.",
+          "hint": "Persen untung dihitung terhadap harga yang mana?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Naik lalu turun persen: pakai pengali berturutan",
+        "Diskon dihitung dari harga jual, bukan harga beli",
+        "Untung = harga akhir $-$ harga beli"
+      ],
+      "pitfall": "Menghitung diskon dari harga beli padahal diskon diberikan pada harga jual."
+    }
+  ]
+}

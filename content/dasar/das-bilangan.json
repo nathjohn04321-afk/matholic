@@ -1,0 +1,263 @@
+{
+  "id": "das-bilangan",
+  "track": "dasar",
+  "title": "Bilangan Bulat & Pecahan",
+  "order": 1,
+  "prerequisites": [],
+  "estimatedMinutes": 20,
+  "summary": "Aturan tanda yang masuk akal, dan kenapa membagi pecahan berarti mengalikan kebalikannya.",
+  "tags": [
+    "bilangan",
+    "un"
+  ],
+  "cards": [
+    {
+      "id": "das-bilangan-c1",
+      "type": "konsep",
+      "title": "Kenapa negatif kali negatif jadi positif",
+      "body": "Aturan \"negatif kali negatif sama dengan positif\" sering dihafal tanpa alasan, lalu tertukar dengan aturan penjumlahan. Padahal alasannya bisa dilihat dari pola sederhana, dan sekali kamu melihatnya, aturan itu tidak akan tertukar lagi.\n\nPerhatikan deret ini, di mana pengalinya turun satu-satu:\n$3 \\times (-2) = -6$\n$2 \\times (-2) = -4$\n$1 \\times (-2) = -2$\n$0 \\times (-2) = 0$\n\nSetiap turun satu baris, hasilnya naik 2. Kalau pola yang sama diteruskan ke bawah:\n$(-1) \\times (-2) = 2$\n$(-2) \\times (-2) = 4$\n\nJadi hasilnya positif bukan karena aturan sewenang-wenang, melainkan supaya polanya tetap konsisten. Cara lain memahaminya: mengalikan dengan bilangan negatif berarti membalik arah di garis bilangan, dan membalik arah dua kali mengembalikanmu ke arah semula.",
+      "questions": [
+        {
+          "id": "das-bilangan-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(-4) \\times (-3)$ adalah ...",
+          "options": [
+            "$-12$",
+            "$12$",
+            "$-7$",
+            "$7$"
+          ],
+          "answerIndex": 1,
+          "solution": "Kedua bilangan bertanda negatif, jadi tandanya sama — hasilnya positif.\n\n$4 \\times 3 = 12$, jadi $(-4)\\times(-3) = 12$.",
+          "hint": "Tanda yang sama menghasilkan positif.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-bilangan-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(-6) + (-5) - (-3)$ adalah ...",
+          "options": [
+            "$-8$",
+            "$-14$",
+            "$-2$",
+            "$8$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kerjakan dari kiri.\n\n$(-6) + (-5) = -11$ — ini penjumlahan, bukan perkalian, jadi hasilnya makin negatif.\n\n$-11 - (-3) = -11 + 3 = -8$ — mengurangi bilangan negatif berarti menambah.\n\nHasilnya $-8$.",
+          "hint": "Mengurangi bilangan negatif sama dengan menambah.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tanda sama $\\Rightarrow$ hasil positif",
+        "Tanda berbeda $\\Rightarrow$ hasil negatif",
+        "Aturan yang sama berlaku untuk pembagian"
+      ],
+      "pitfall": "Menerapkan aturan tanda perkalian pada penjumlahan. $(-3) + (-4) = -7$, bukan $+7$."
+    },
+    {
+      "id": "das-bilangan-c2",
+      "type": "konsep",
+      "title": "Membagi pecahan adalah mengalikan kebalikannya",
+      "body": "Kenapa $\\frac{1}{2} \\div \\frac{1}{4} = 2$? Jawabannya jadi jelas kalau pembagian dibaca sebagai pertanyaan \"ada berapa banyak?\".\n\n$\\frac{1}{2} \\div \\frac{1}{4}$ menanyakan: ada berapa seperempat di dalam setengah? Bayangkan setengah pizza dipotong menjadi perempatan — ada dua potong. Jadi hasilnya 2.\n\nSekarang perhatikan bahwa $\\frac{1}{2} \\times 4 = 2$ juga. Itu bukan kebetulan: membagi dengan $\\frac{1}{4}$ selalu sama dengan mengalikan dengan $4$.\n\nSecara umum:\n$$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$$\n\nMembagi dengan bilangan yang lebih kecil dari satu justru memperbesar hasilnya. Itu sering terasa aneh, padahal masuk akal: makin kecil potongannya, makin banyak yang muat.",
+      "questions": [
+        {
+          "id": "das-bilangan-q3",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Hitung $\\frac{2}{3} \\div \\frac{4}{9}$ dalam bentuk paling sederhana.",
+          "answer": "3/2",
+          "acceptedAnswers": [
+            "1 1/2",
+            "1,5",
+            "3 per 2",
+            "1.5"
+          ],
+          "solution": "Balik pecahan kedua lalu kalikan:\n$$\\frac{2}{3} \\div \\frac{4}{9} = \\frac{2}{3} \\times \\frac{9}{4}$$\n\nSederhanakan sebelum mengali: $9$ dan $3$ sama-sama dibagi 3, $2$ dan $4$ sama-sama dibagi 2.\n$$= \\frac{1 \\times 3}{1 \\times 2} = \\frac{3}{2}$$",
+          "hint": "Balik pecahan yang kedua, lalu kalikan.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-bilangan-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\frac{3}{4} + \\frac{1}{6}$ adalah ...",
+          "options": [
+            "$\\frac{4}{10}$",
+            "$\\frac{11}{12}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{4}{24}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Penjumlahan pecahan butuh penyebut yang sama. KPK dari 4 dan 6 adalah 12.\n\n$$\\frac{3}{4} = \\frac{9}{12}, \\qquad \\frac{1}{6} = \\frac{2}{12}$$\n\nJumlahkan pembilangnya saja:\n$$\\frac{9}{12} + \\frac{2}{12} = \\frac{11}{12}$$\n\nPilihan $\\frac{4}{10}$ muncul dari menjumlahkan pembilang dan penyebut langsung — itu keliru.",
+          "hint": "Samakan penyebutnya dulu dengan KPK.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\dfrac{a}{b} \\div \\dfrac{c}{d} = \\dfrac{a}{b} \\times \\dfrac{d}{c}$",
+        "Yang dibalik hanya pembagi, bukan yang dibagi",
+        "Membagi dengan pecahan kurang dari 1 memperbesar hasil"
+      ],
+      "pitfall": "Membalik pecahan yang salah. Yang dibalik adalah pecahan kedua (pembagi), bukan yang pertama."
+    },
+    {
+      "id": "das-bilangan-c3",
+      "type": "prosedur",
+      "title": "Urutan operasi dan tanda kurung",
+      "body": "Kalau satu perhitungan memuat beberapa operasi, urutannya tidak boleh sembarang. Urutan bakunya begini:\n\n1. Tanda kurung, dari yang paling dalam\n2. Pangkat dan akar\n3. Kali dan bagi, **dari kiri ke kanan**\n4. Tambah dan kurang, **dari kiri ke kanan**\n\nBagian yang paling sering salah ada di langkah 3 dan 4. Kali dan bagi punya derajat sama, jadi dikerjakan sesuai urutan kemunculannya — bukan kali dulu baru bagi.\n\nContoh: $12 \\div 3 \\times 2$. Yang benar $4 \\times 2 = 8$, bukan $12 \\div 6 = 2$.\n\nHal yang sama berlaku untuk tambah dan kurang. $10 - 3 + 2$ bernilai $9$, bukan $5$.\n\nKalau ragu, bubuhkan tanda kurung sendiri untuk memperjelas maksudmu.",
+      "questions": [
+        {
+          "id": "das-bilangan-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $12 \\div 3 \\times 2$ adalah ...",
+          "options": [
+            "$2$",
+            "$8$",
+            "$18$",
+            "$72$"
+          ],
+          "answerIndex": 1,
+          "solution": "Bagi dan kali sederajat, jadi dikerjakan dari kiri ke kanan.\n\n$12 \\div 3 = 4$\n$4 \\times 2 = 8$\n\nMengerjakan $3 \\times 2$ lebih dulu memberi $12 \\div 6 = 2$, dan itu keliru — perkalian tidak didahulukan atas pembagian.",
+          "hint": "Keduanya sederajat — kerjakan sesuai urutan dari kiri.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-bilangan-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $20 - 4 \\times (3+2)^2 \\div 10$ adalah ...",
+          "options": [
+            "$0$",
+            "$10$",
+            "$-10$",
+            "$16$"
+          ],
+          "answerIndex": 1,
+          "solution": "Kerjakan menurut urutan operasi.\n\nKurung dulu: $3+2 = 5$\nPangkat: $5^2 = 25$\nKali dan bagi dari kiri: $4 \\times 25 = 100$, lalu $100 \\div 10 = 10$\nTerakhir kurang: $20 - 10 = 10$",
+          "hint": "Kurung dulu, lalu pangkat, baru kali/bagi.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Kurung, pangkat, kali/bagi, tambah/kurang",
+        "Kali dan bagi sederajat — kerjakan dari kiri",
+        "Tambah dan kurang sederajat — kerjakan dari kiri"
+      ],
+      "pitfall": "Mengerjakan semua perkalian lebih dulu sebelum pembagian, misalnya membaca $12 \\div 3 \\times 2$ sebagai $12 \\div 6$."
+    },
+    {
+      "id": "das-bilangan-c4",
+      "type": "teknik",
+      "title": "Pecahan, desimal, dan persen itu satu hal",
+      "body": "Pecahan, desimal, dan persen menyatakan hal yang sama, hanya berbeda cara menulis. Bisa berpindah dengan lancar antar ketiganya menghemat banyak waktu di ujian, karena tiap bentuk punya kekuatannya sendiri.\n\n**Pecahan ke desimal:** bagi pembilang dengan penyebut. $\\frac{3}{8} = 0{,}375$.\n\n**Desimal ke persen:** kalikan 100. $0{,}375 = 37{,}5\\%$.\n\n**Persen ke pecahan:** persen berarti \"per seratus\", jadi $37{,}5\\% = \\frac{37{,}5}{100} = \\frac{3}{8}$.\n\nBeberapa nilai pantas dihafal karena sering muncul: $\\frac{1}{2} = 50\\%$, $\\frac{1}{4} = 25\\%$, $\\frac{1}{3} \\approx 33\\frac{1}{3}\\%$, dan $\\frac{1}{8} = 12{,}5\\%$.\n\nDalam soal cerita, bentuk pecahan biasanya paling mudah dihitung, sedangkan persen paling mudah dibaca dan dibandingkan.",
+      "questions": [
+        {
+          "id": "das-bilangan-q7",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk persen dari $\\frac{3}{8}$ adalah ...",
+          "options": [
+            "$3{,}75\\%$",
+            "$37{,}5\\%$",
+            "$38\\%$",
+            "$0{,}375\\%$"
+          ],
+          "answerIndex": 1,
+          "solution": "Ubah ke desimal dulu:\n$$\\frac{3}{8} = 3 \\div 8 = 0{,}375$$\n\nLalu kalikan 100 untuk jadi persen:\n$$0{,}375 \\times 100 = 37{,}5\\%$$\n\nPeriksa masuk akal: $\\frac{3}{8}$ sedikit kurang dari setengah, dan $37{,}5\\%$ memang kurang dari $50\\%$.",
+          "hint": "Bagi dulu jadi desimal, baru kalikan 100.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-bilangan-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $25\\%$ dari $\\frac{4}{5}$ adalah ...",
+          "options": [
+            "$\\frac{1}{5}$",
+            "$\\frac{1}{4}$",
+            "$\\frac{4}{20}$",
+            "$\\frac{5}{4}$"
+          ],
+          "answerIndex": 0,
+          "solution": "$25\\% = \\frac{1}{4}$.\n\nKata \"dari\" berarti dikalikan:\n$$\\frac{1}{4} \\times \\frac{4}{5} = \\frac{4}{20} = \\frac{1}{5}$$\n\nPilihan $\\frac{4}{20}$ bernilai sama, tapi belum disederhanakan — soal meminta bentuk paling sederhana.",
+          "hint": "Kata \"dari\" dalam soal persen berarti dikalikan.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Persen berarti per seratus",
+        "Desimal ke persen: kali 100",
+        "$\\frac{1}{8} = 0{,}125 = 12{,}5\\%$"
+      ],
+      "pitfall": "Mengira $0{,}5\\%$ sama dengan $0{,}5$. Yang benar $0{,}5\\% = 0{,}005$, seperseribu kali lipat berbeda."
+    },
+    {
+      "id": "das-bilangan-c5",
+      "type": "jebakan",
+      "title": "Kesalahan yang paling sering pada pecahan",
+      "body": "**Menjumlahkan penyebut.** $\\frac{1}{2} + \\frac{1}{3}$ bukan $\\frac{2}{5}$. Penyebut harus disamakan dulu, lalu hanya pembilangnya yang dijumlahkan: $\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}$.\n\n**Mencoret suku, bukan faktor.** Pada $\\frac{a+b}{a}$ kamu tidak boleh mencoret $a$. Pencoretan hanya sah untuk faktor yang mengalikan seluruh pembilang dan penyebut.\n\n**Lupa menyederhanakan.** $\\frac{4}{20}$ dan $\\frac{1}{5}$ bernilai sama, tapi ujian biasanya meminta bentuk paling sederhana.\n\n**Salah tanda pada pecahan negatif.** $-\\frac{3}{4}$, $\\frac{-3}{4}$, dan $\\frac{3}{-4}$ semuanya bernilai sama. Yang berbeda adalah $-\\frac{-3}{4} = \\frac{3}{4}$.\n\nUji cepat: ganti pecahan dengan desimal kasar dan periksa apakah hasilnya masuk akal.",
+      "questions": [
+        {
+          "id": "das-bilangan-q9",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Untuk sembarang bilangan $a$ dan $b$ yang tidak nol, berlaku $\\frac{a+b}{a} = b$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Pencoretan hanya sah untuk faktor, bukan suku.\n\nUji dengan angka. Ambil $a = 2$, $b = 4$:\nRuas kiri: $\\frac{2+4}{2} = \\frac{6}{2} = 3$\nRuas kanan: $b = 4$\n\n$3 \\neq 4$, jadi pernyataannya salah.\n\nYang benar: $\\frac{a+b}{a} = \\frac{a}{a} + \\frac{b}{a} = 1 + \\frac{b}{a}$.",
+          "hint": "Coba masukkan dua angka sederhana.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-bilangan-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk paling sederhana dari $\\frac{18}{24}$ adalah ...",
+          "options": [
+            "$\\frac{9}{12}$",
+            "$\\frac{3}{4}$",
+            "$\\frac{6}{8}$",
+            "$\\frac{2}{3}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Cari FPB dari 18 dan 24.\n\n$18 = 2 \\times 3^2$\n$24 = 2^3 \\times 3$\nFPB-nya $2 \\times 3 = 6$.\n\nBagi keduanya dengan 6:\n$$\\frac{18 \\div 6}{24 \\div 6} = \\frac{3}{4}$$\n\nPilihan $\\frac{9}{12}$ dan $\\frac{6}{8}$ bernilai sama tapi belum paling sederhana.",
+          "hint": "Bagi dengan FPB pembilang dan penyebutnya.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Samakan penyebut sebelum menjumlah",
+        "Coret faktor, jangan coret suku",
+        "Selalu sederhanakan jawaban akhir"
+      ],
+      "pitfall": "Menulis $\\frac{1}{2} + \\frac{1}{3} = \\frac{2}{5}$ dengan menjumlahkan pembilang dan penyebut terpisah."
+    }
+  ]
+}
