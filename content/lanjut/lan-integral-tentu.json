@@ -1,0 +1,263 @@
+{
+  "id": "lan-integral-tentu",
+  "track": "lanjut",
+  "title": "Integral Tentu & Aplikasinya",
+  "order": 1,
+  "prerequisites": [
+    "kal-limit-aljabar"
+  ],
+  "estimatedMinutes": 32,
+  "summary": "Integral tentu sebagai luas bertanda, serta pemakaiannya untuk luas daerah dan volume benda putar.",
+  "tags": [
+    "kalkulus",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-integral-tentu-c1",
+      "type": "konsep",
+      "title": "Integral tentu adalah luas bertanda",
+      "body": "Integral tentu $\\int_a^b f(x)\\,dx$ sering dijelaskan sebagai \"luas di bawah kurva\". Penjelasan itu benar hanya sebagian, dan bagian yang hilang sering jadi sumber kesalahan.\n\nYang sebenarnya dihitung adalah luas **bertanda**. Bagian kurva di atas sumbu-$x$ dihitung positif, bagian di bawah sumbu-$x$ dihitung negatif.\n\nAkibatnya integral bisa bernilai nol meski daerahnya jelas punya luas. Contoh: $\\int_{-1}^{1} x^3\\,dx = 0$, karena bagian kiri dan kanan sama besar tapi berlawanan tanda.\n\nJadi kalau soal meminta **luas** daerah, bukan nilai integral, kamu harus memecah batas di titik potong sumbu-$x$ dan mengambil nilai mutlak tiap potongan. Membedakan keduanya adalah kunci mengerjakan soal aplikasi integral.",
+      "keyPoints": [
+        "Di atas sumbu-$x$ positif, di bawah negatif",
+        "Integral nol tidak berarti luasnya nol",
+        "Soal luas $\\Rightarrow$ pecah di titik potong, ambil nilai mutlak"
+      ],
+      "pitfall": "Menjawab soal luas dengan langsung menghitung integralnya, padahal sebagian kurva ada di bawah sumbu-$x$ sehingga hasilnya saling meniadakan.",
+      "questions": [
+        {
+          "id": "lan-integral-tentu-q1",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Hitung $\\int_{1}^{2} 3x^2\\,dx$.",
+          "answer": "7",
+          "acceptedAnswers": [
+            "tujuh",
+            "= 7"
+          ],
+          "solution": "Cari antiturunannya dulu:\n$$\\int 3x^2\\,dx = x^3 + C$$\n\nTerapkan batasnya:\n$$\\left[x^3\\right]_1^2 = 2^3 - 1^3 = 8 - 1 = 7$$",
+          "hint": "Antiturunan dari $3x^2$ adalah $x^3$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-tentu-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\int_{-1}^{1} x^3\\,dx$ adalah ...",
+          "options": [
+            "$0$",
+            "$\\frac{1}{2}$",
+            "$2$",
+            "$\\frac{1}{4}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Antiturunan dari $x^3$ adalah $\\frac{x^4}{4}$.\n\n$$\\left[\\frac{x^4}{4}\\right]_{-1}^{1} = \\frac{1}{4} - \\frac{1}{4} = 0$$\n\nHasilnya nol karena $x^3$ fungsi ganjil: bagian di bawah sumbu-$x$ (dari $-1$ ke $0$) tepat meniadakan bagian di atasnya.\n\nPerhatikan luas daerahnya sendiri **tidak** nol — yang nol adalah luas bertandanya.",
+          "hint": "Perhatikan apa yang terjadi di sebelah kiri sumbu-$y$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lan-integral-tentu-c2",
+      "type": "rumus",
+      "title": "Sifat yang memangkas pekerjaan",
+      "body": "Beberapa sifat integral tentu bisa menghemat banyak langkah kalau kamu mengenalinya lebih awal, sebelum terlanjur menghitung panjang-panjang.\n\n**Membalik batas membalik tanda:**\n$$\\int_a^b f(x)\\,dx = -\\int_b^a f(x)\\,dx$$\n\n**Batas yang sama memberi nol:** $\\int_a^a f(x)\\,dx = 0$, karena lebarnya nol — tidak ada daerah yang terbentuk.\n\n**Batas boleh dipecah di titik mana pun di antaranya:**\n$$\\int_a^c f(x)\\,dx = \\int_a^b f(x)\\,dx + \\int_b^c f(x)\\,dx$$\nSifat inilah yang dipakai saat menghitung luas daerah yang memotong sumbu-$x$.\n\n**Simetri:** kalau $f$ fungsi ganjil maka $\\int_{-a}^{a} f = 0$, dan kalau $f$ genap maka $\\int_{-a}^{a} f = 2\\int_0^a f$. Mengenali simetri sering memangkas separuh pekerjaan, kadang bahkan seluruhnya.",
+      "keyPoints": [
+        "$\\int_a^b f = -\\int_b^a f$",
+        "$\\int_a^a f = 0$",
+        "$f$ ganjil $\\Rightarrow \\int_{-a}^{a} f = 0$",
+        "$f$ genap $\\Rightarrow \\int_{-a}^{a} f = 2\\int_0^a f$"
+      ],
+      "pitfall": "Memakai sifat simetri tanpa memeriksa fungsinya benar-benar ganjil atau genap. Fungsi seperti $x^2 + x$ bukan keduanya.",
+      "questions": [
+        {
+          "id": "lan-integral-tentu-q3",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Hitung $\\int_{0}^{3} (2x+1)\\,dx$.",
+          "answer": "12",
+          "acceptedAnswers": [
+            "dua belas",
+            "= 12"
+          ],
+          "solution": "Antiturunannya:\n$$\\int (2x+1)\\,dx = x^2 + x + C$$\n\nTerapkan batasnya:\n$$\\left[x^2+x\\right]_0^3 = (9 + 3) - (0 + 0) = 12$$",
+          "hint": "Integralkan suku demi suku.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-tentu-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $\\int_0^2 f(x)\\,dx = 5$ dan $\\int_2^5 f(x)\\,dx = 3$, maka $\\int_0^5 f(x)\\,dx$ adalah ...",
+          "options": [
+            "$8$",
+            "$2$",
+            "$15$",
+            "$-2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai sifat pemecahan batas:\n$$\\int_0^5 f = \\int_0^2 f + \\int_2^5 f$$\n\nSubstitusikan:\n$$= 5 + 3 = 8$$\n\nBatas $2$ menjadi titik sambung, jadi kedua potongan tinggal dijumlahkan.",
+          "hint": "Batas tengahnya sama — potongannya bisa disambung.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lan-integral-tentu-c3",
+      "type": "prosedur",
+      "title": "Luas antara dua kurva",
+      "body": "Untuk mencari luas daerah yang terkurung di antara dua kurva, langkahnya selalu sama dan urutannya penting.\n\n1. Cari titik potong kedua kurva dengan menyamakan persamaannya. Titik-titik inilah yang menjadi batas integrasi — jangan menebaknya dari gambar.\n2. Tentukan kurva mana yang berada di **atas** pada selang itu. Cukup uji satu titik di dalam selang, tidak perlu menggambar keseluruhan.\n3. Integralkan selisihnya, selalu atas dikurangi bawah.\n\n$$L = \\int_a^b \\left[f_{\\text{atas}}(x) - f_{\\text{bawah}}(x)\\right] dx$$\n\nContoh mencari luas antara $y = x$ dan $y = x^2$.\nTitik potong: $x = x^2$ memberi $x = 0$ dan $x = 1$.\nUji $x = 0{,}5$: garis memberi $0{,}5$, parabola memberi $0{,}25$. Jadi garis di atas.\n$$L = \\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^1 = \\frac{1}{6}$$",
+      "keyPoints": [
+        "Titik potong memberi batas integrasi",
+        "Selalu atas dikurangi bawah",
+        "Uji satu titik untuk tahu mana yang di atas"
+      ],
+      "pitfall": "Menuliskan selisih dengan urutan terbalik sehingga luasnya negatif, lalu menerima hasil negatif itu sebagai jawaban. Luas tidak pernah negatif.",
+      "questions": [
+        {
+          "id": "lan-integral-tentu-q5",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan luas daerah yang dibatasi kurva $y = x$ dan $y = x^2$.",
+          "answer": "1/6",
+          "acceptedAnswers": [
+            "1/6 satuan luas",
+            "0,1667",
+            "seperenam",
+            "1 per 6"
+          ],
+          "solution": "Cari titik potongnya:\n$x = x^2 \\Rightarrow x^2 - x = 0 \\Rightarrow x(x-1) = 0$\nBatasnya $x = 0$ sampai $x = 1$.\n\nTentukan yang di atas. Uji $x = 0{,}5$:\ngaris $y = 0{,}5$, parabola $y = 0{,}25$. Garis di atas.\n\nIntegralkan selisihnya:\n$$\\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^1$$\n$$= \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}$$",
+          "hint": "Samakan kedua persamaan untuk mendapat batasnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-tentu-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk menghitung luas antara $y = f(x)$ dan $y = g(x)$ pada $[a,b]$ dengan $f(x) \\ge g(x)$, rumus yang benar adalah ...",
+          "options": [
+            "$\\int_a^b [g(x) - f(x)]\\,dx$",
+            "$\\int_a^b [f(x) - g(x)]\\,dx$",
+            "$\\int_a^b f(x)g(x)\\,dx$",
+            "$\\int_a^b [f(x) + g(x)]\\,dx$"
+          ],
+          "answerIndex": 1,
+          "solution": "Luas diukur sebagai tinggi dikali lebar, dijumlahkan.\n\nTingginya adalah jarak vertikal antara kedua kurva, yaitu kurva atas dikurangi kurva bawah.\n\nKarena $f(x) \\ge g(x)$, kurva atasnya $f$:\n$$L = \\int_a^b [f(x) - g(x)]\\,dx$$\n\nMembalik urutannya menghasilkan nilai negatif, yang tidak mungkin untuk luas.",
+          "hint": "Tinggi daerah = kurva atas dikurangi kurva bawah.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lan-integral-tentu-c4",
+      "type": "prosedur",
+      "title": "Volume benda putar",
+      "body": "Kalau daerah di bawah kurva diputar mengelilingi sumbu, terbentuk benda pejal. Volumenya bisa dihitung dengan membayangkan benda itu diiris tipis-tipis.\n\nSetiap irisan tegak lurus sumbu putar berbentuk **cakram** dengan jari-jari sama dengan tinggi kurva, yaitu $f(x)$. Luas cakram itu $\\pi [f(x)]^2$, dan tebalnya $dx$.\n\nMenjumlahkan seluruh irisan memberi:\n$$V = \\pi \\int_a^b [f(x)]^2\\,dx$$\n\nContoh: $y = x$ diputar terhadap sumbu-$x$ dari $0$ sampai $1$ membentuk kerucut.\n$$V = \\pi\\int_0^1 x^2\\,dx = \\pi \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{\\pi}{3}$$\n\nCocok dengan rumus kerucut $\\frac{1}{3}\\pi r^2 t$ dengan $r = t = 1$. Selalu sempatkan memeriksa hasil dengan bentuk yang sudah kamu kenal.",
+      "keyPoints": [
+        "$V = \\pi \\int_a^b [f(x)]^2\\,dx$ terhadap sumbu-$x$",
+        "Jangan lupa mengkuadratkan seluruh fungsi",
+        "Periksa hasilnya dengan rumus bangun yang sudah dikenal"
+      ],
+      "pitfall": "Menuliskan $\\pi\\int f(x)\\,dx$ tanpa mengkuadratkan, atau mengkuadratkan hanya sebagian sukunya.",
+      "questions": [
+        {
+          "id": "lan-integral-tentu-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Volume benda putar dari $y = x$ pada $0 \\le x \\le 1$ diputar mengelilingi sumbu-$x$ adalah ...",
+          "options": [
+            "$\\frac{\\pi}{3}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\pi$",
+            "$\\frac{2\\pi}{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus cakram:\n$$V = \\pi\\int_0^1 [f(x)]^2\\,dx = \\pi\\int_0^1 x^2\\,dx$$\n\nHitung:\n$$= \\pi\\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{\\pi}{3}$$\n\nPeriksa: bendanya kerucut dengan $r=1$, $t=1$. Rumus kerucut memberi $\\frac{1}{3}\\pi(1)^2(1) = \\frac{\\pi}{3}$. Cocok.",
+          "hint": "Kuadratkan fungsinya dulu sebelum diintegralkan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-tentu-q8",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Hitung $\\int_{1}^{2} \\frac{1}{x^2}\\,dx$.",
+          "answer": "1/2",
+          "acceptedAnswers": [
+            "0,5",
+            "setengah",
+            "1 per 2"
+          ],
+          "solution": "Tulis ulang sebagai pangkat:\n$$\\frac{1}{x^2} = x^{-2}$$\n\nAntiturunannya:\n$$\\int x^{-2}\\,dx = \\frac{x^{-1}}{-1} = -\\frac{1}{x} + C$$\n\nTerapkan batasnya:\n$$\\left[-\\frac{1}{x}\\right]_1^2 = -\\frac{1}{2} - (-1) = \\frac{1}{2}$$",
+          "hint": "Tulis $\\frac{1}{x^2}$ sebagai $x^{-2}$ lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lan-integral-tentu-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada integral tentu",
+      "body": "**Lupa mengurangi batas bawah.** Setelah mendapat antiturunan, hasilnya adalah nilai di batas atas **dikurangi** nilai di batas bawah. Banyak orang berhenti setelah menghitung batas atas saja.\n\n**Menyamakan integral dengan luas.** Kalau sebagian kurva berada di bawah sumbu-$x$, integralnya lebih kecil dari luasnya. Soal luas menuntut pemecahan batas.\n\n**Menulis $+C$ pada integral tentu.** Konstanta itu saling meniadakan saat batas dikurangkan, jadi tidak pernah muncul di jawaban akhir.\n\n**Salah tanda saat batas bawah negatif.** Mengurangi bilangan negatif berarti menambah. Bagian ini pantas dikerjakan pelan-pelan.\n\nKebiasaan yang menolong: tuliskan kurung siku dengan batasnya secara utuh sebelum mulai menghitung angka.",
+      "keyPoints": [
+        "Selalu batas atas dikurangi batas bawah",
+        "Integral $\\neq$ luas bila kurva memotong sumbu-$x$",
+        "$+C$ tidak pernah muncul pada integral tentu"
+      ],
+      "pitfall": "Menghitung $[F(x)]_a^b$ sebagai $F(a) - F(b)$ — urutannya terbalik, dan hasilnya berlawanan tanda.",
+      "questions": [
+        {
+          "id": "lan-integral-tentu-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\int_{0}^{2} (x^2 - 4)\\,dx$ adalah ...",
+          "options": [
+            "$-\\frac{16}{3}$",
+            "$\\frac{16}{3}$",
+            "$\\frac{8}{3}$",
+            "$0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Antiturunannya:\n$$\\int (x^2-4)\\,dx = \\frac{x^3}{3} - 4x + C$$\n\nTerapkan batasnya:\n$$\\left[\\frac{x^3}{3} - 4x\\right]_0^2 = \\left(\\frac{8}{3} - 8\\right) - 0$$\n$$= \\frac{8}{3} - \\frac{24}{3} = -\\frac{16}{3}$$\n\nHasilnya negatif karena pada $0 \\le x \\le 2$ kurva $y = x^2-4$ seluruhnya berada di bawah sumbu-$x$. Ini nilai integral, bukan luas.",
+          "hint": "Periksa posisi kurva terhadap sumbu-$x$ pada selang itu.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-tentu-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Manakah pernyataan yang benar tentang integral tentu?",
+          "options": [
+            "Hasilnya selalu positif",
+            "Hasilnya selalu sama dengan luas daerah",
+            "Hasilnya bisa negatif bila kurva di bawah sumbu-$x$",
+            "Hasilnya selalu memuat konstanta $C$"
+          ],
+          "answerIndex": 2,
+          "solution": "Integral tentu menghitung luas **bertanda**.\n\nBagian kurva di atas sumbu-$x$ menyumbang nilai positif, bagian di bawahnya menyumbang negatif. Jadi hasilnya bisa negatif, bahkan bisa nol.\n\nPilihan lain salah:\n- Tidak selalu positif — lihat $\\int_0^2 (x^2-4)\\,dx$ yang bernilai negatif\n- Tidak selalu sama dengan luas, justru karena tandanya\n- $+C$ hilang saat batas dikurangkan",
+          "hint": "Ingat apa yang terjadi pada bagian kurva di bawah sumbu-$x$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    }
+  ]
+}

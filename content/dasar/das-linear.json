@@ -1,0 +1,265 @@
+{
+  "id": "das-linear",
+  "track": "dasar",
+  "title": "Persamaan & Pertidaksamaan Linear",
+  "order": 1,
+  "prerequisites": [],
+  "estimatedMinutes": 22,
+  "summary": "Menjaga keseimbangan saat memindah ruas, dan satu aturan yang membedakan pertidaksamaan.",
+  "tags": [
+    "aljabar",
+    "un"
+  ],
+  "cards": [
+    {
+      "id": "das-linear-c1",
+      "type": "konsep",
+      "title": "Persamaan adalah timbangan",
+      "body": "Tanda sama dengan bukan perintah \"kerjakan ini\". Ia pernyataan bahwa dua ruas punya berat yang sama, seperti timbangan yang seimbang.\n\nKarena itu aturan mainnya cuma satu: apa pun yang kamu lakukan pada satu ruas, lakukan juga pada ruas lain. Tambah 3 di kiri, tambah 3 di kanan. Bagi 2 di kiri, bagi 2 di kanan. Timbangan tetap seimbang.\n\n\"Pindah ruas, ganti tanda\" yang sering dihafal sebenarnya jalan pintas dari aturan itu. Dari $x + 3 = 10$ kamu mengurangi 3 di kedua ruas, dan yang terlihat adalah angka 3 berpindah sambil berganti tanda.\n\nMemahami asalnya berguna ketika soalnya jadi rumit: kamu tidak perlu mengingat aturan mana yang berlaku, cukup jaga keseimbangannya.",
+      "keyPoints": [
+        "Perlakukan kedua ruas sama persis",
+        "$x + a = b \\iff x = b - a$",
+        "$ax = b \\iff x = \\dfrac{b}{a}$ untuk $a \\neq 0$"
+      ],
+      "pitfall": "Membagi kedua ruas dengan sesuatu yang bisa bernilai nol, misalnya membagi dengan $x$ padahal $x = 0$ mungkin jadi penyelesaian.",
+      "questions": [
+        {
+          "id": "das-linear-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian dari $2x + 5 = 17$ adalah ...",
+          "options": [
+            "$x = 6$",
+            "$x = 11$",
+            "$x = 22$",
+            "$x = 12$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kurangi 5 di kedua ruas:\n$2x = 12$\n\nBagi 2 di kedua ruas:\n$x = 6$\n\nPeriksa: $2(6) + 5 = 17$. Benar.",
+          "hint": "Hilangkan angka yang berdiri sendiri dulu, baru bagi.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-linear-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian dari $3(x - 2) = 2x + 1$ adalah ...",
+          "options": [
+            "$x = 5$",
+            "$x = 7$",
+            "$x = 3$",
+            "$x = -7$"
+          ],
+          "answerIndex": 1,
+          "solution": "Jabarkan ruas kiri:\n$3x - 6 = 2x + 1$\n\nKurangi $2x$ di kedua ruas:\n$x - 6 = 1$\n\nTambah 6:\n$x = 7$\n\nPeriksa: $3(7-2) = 15$ dan $2(7)+1 = 15$. Cocok.",
+          "hint": "Jabarkan dulu tanda kurungnya.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-linear-c2",
+      "type": "jebakan",
+      "title": "Satu aturan yang membalik segalanya",
+      "body": "Pertidaksamaan bekerja persis seperti persamaan, kecuali satu hal — dan hal itu memakan banyak nilai di ujian.\n\nKalau kamu mengalikan atau membagi kedua ruas dengan bilangan **negatif**, arah tandanya harus dibalik.\n\nKenapa? Lihat pernyataan yang jelas benar: $2 < 5$. Kalikan keduanya dengan $-1$: $-2$ dan $-5$. Sekarang $-2$ justru **lebih besar** dari $-5$. Mengalikan dengan bilangan negatif mencerminkan garis bilangan, jadi urutannya ikut terbalik.\n\nMenambah atau mengurangi bilangan negatif tidak membalik apa pun — hanya perkalian dan pembagian. Banyak orang membalik tanda saat memindah ruas, padahal itu keliru.",
+      "keyPoints": [
+        "Kali/bagi dengan negatif $\\Rightarrow$ balik arah tanda",
+        "Tambah/kurang tidak pernah membalik arah",
+        "$-2x < 6 \\iff x > -3$"
+      ],
+      "pitfall": "Membalik arah tanda saat sekadar memindahkan suku antar ruas. Yang membalik hanya perkalian atau pembagian dengan bilangan negatif.",
+      "questions": [
+        {
+          "id": "das-linear-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $-2x < 6$ adalah ...",
+          "options": [
+            "$\\{x \\mid x < -3\\}$",
+            "$\\{x \\mid x > -3\\}$",
+            "$\\{x \\mid x < 3\\}$",
+            "$\\{x \\mid x > 3\\}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Bagi kedua ruas dengan $-2$. Karena pembaginya negatif, arah tanda dibalik:\n$x > \\frac{6}{-2}$\n$x > -3$\n\nPeriksa dengan $x = 0$: $-2(0) = 0 < 6$. Benar, dan $0 > -3$ memang memenuhi.",
+          "hint": "Pembaginya negatif — periksa arah tandanya.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-linear-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $5 - 3x \\ge 14$ adalah ...",
+          "options": [
+            "$\\{x \\mid x \\le -3\\}$",
+            "$\\{x \\mid x \\ge -3\\}$",
+            "$\\{x \\mid x \\le 3\\}$",
+            "$\\{x \\mid x \\ge 3\\}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kurangi 5 di kedua ruas (tidak membalik apa pun):\n$-3x \\ge 9$\n\nBagi dengan $-3$ — negatif, jadi arah dibalik:\n$x \\le -3$\n\nPeriksa $x = -4$: $5 - 3(-4) = 17 \\ge 14$. Benar.",
+          "hint": "Pindahkan angka dulu, baru bagi — dan perhatikan tanda pembaginya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-linear-c3",
+      "type": "prosedur",
+      "title": "Langkah baku menyelesaikan linear",
+      "body": "Urutan ini bekerja untuk hampir semua persamaan linear, dan mengurangi kesalahan hitung karena bentuknya makin sederhana di tiap langkah.\n\n1. Hilangkan pecahan dengan mengalikan semua suku dengan KPK penyebutnya.\n2. Jabarkan semua tanda kurung.\n3. Kumpulkan suku bervariabel di satu ruas, suku angka di ruas lain.\n4. Sederhanakan kedua ruas.\n5. Bagi dengan koefisien variabel.\n6. Periksa dengan memasukkan hasilnya ke persamaan asli.\n\nContoh: $\\frac{x}{2} + 3 = \\frac{x}{3} + 5$.\nKalikan semua dengan 6: $3x + 18 = 2x + 30$.\nKumpulkan: $x = 12$.\n\nLangkah 6 paling sering dilewati padahal paling murah — hanya butuh beberapa detik.",
+      "keyPoints": [
+        "Kalikan dengan KPK penyebut untuk menghapus pecahan",
+        "Kumpulkan variabel di satu ruas",
+        "Selalu periksa jawaban di persamaan asli"
+      ],
+      "pitfall": "Saat mengalikan dengan KPK, hanya sebagian suku yang dikalikan. Setiap suku di kedua ruas harus ikut dikalikan.",
+      "questions": [
+        {
+          "id": "das-linear-q5",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan penyelesaian dari $\\frac{x}{2} + 3 = \\frac{x}{3} + 5$.",
+          "answer": "12",
+          "acceptedAnswers": [
+            "x = 12",
+            "{12}",
+            "dua belas"
+          ],
+          "solution": "KPK dari 2 dan 3 adalah 6. Kalikan **setiap** suku dengan 6:\n$3x + 18 = 2x + 30$\n\nKurangi $2x$:\n$x + 18 = 30$\n\nKurangi 18:\n$x = 12$\n\nPeriksa: $\\frac{12}{2} + 3 = 9$ dan $\\frac{12}{3} + 5 = 9$. Cocok.",
+          "hint": "Kalikan semua suku dengan KPK penyebutnya.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-linear-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian dari $\\frac{2x-1}{3} = \\frac{x+4}{2}$ adalah ...",
+          "options": [
+            "$x = 14$",
+            "$x = 7$",
+            "$x = 2$",
+            "$x = -14$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kalikan silang, atau kalikan kedua ruas dengan 6:\n$2(2x-1) = 3(x+4)$\n\nJabarkan:\n$4x - 2 = 3x + 12$\n\nKurangi $3x$ lalu tambah 2:\n$x = 14$\n\nPeriksa: $\\frac{27}{3} = 9$ dan $\\frac{18}{2} = 9$. Cocok.",
+          "hint": "Kalikan silang untuk menghilangkan kedua pecahan sekaligus.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-linear-c4",
+      "type": "contoh",
+      "title": "Soal cerita dikerjakan penuh",
+      "body": "Soal: umur ayah tiga kali umur anak. Delapan tahun lagi, umur ayah menjadi dua kali umur anak. Berapa umur anak sekarang?\n\n**Langkah 1 — beri nama.** Misalkan umur anak sekarang $x$ tahun. Maka umur ayah sekarang $3x$ tahun.\n\n**Langkah 2 — terjemahkan kalimat kedua.** Delapan tahun lagi keduanya bertambah 8: umur anak $x + 8$, umur ayah $3x + 8$. Saat itu ayah dua kali anak:\n$$3x + 8 = 2(x + 8)$$\n\n**Langkah 3 — selesaikan.**\n$3x + 8 = 2x + 16$, jadi $x = 8$.\n\n**Langkah 4 — periksa terhadap cerita.** Anak 8, ayah 24. Delapan tahun lagi: anak 16, ayah 32. Benar, $32 = 2 \\times 16$.\n\nLangkah 4 memastikan kamu menjawab pertanyaan yang benar, bukan sekadar menemukan $x$.",
+      "keyPoints": [
+        "Beri nama variabel dengan jelas sebelum menulis persamaan",
+        "Semua orang bertambah umur sama banyak",
+        "Periksa hasilnya terhadap cerita, bukan cuma terhadap persamaan"
+      ],
+      "pitfall": "Menambahkan 8 hanya pada salah satu orang. Dalam soal umur, semua pihak bertambah tua bersamaan.",
+      "questions": [
+        {
+          "id": "das-linear-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Umur ibu empat kali umur anak. Enam tahun lagi umur ibu tiga kali umur anak. Umur anak sekarang adalah ...",
+          "options": [
+            "$10$ tahun",
+            "$12$ tahun",
+            "$8$ tahun",
+            "$6$ tahun"
+          ],
+          "answerIndex": 1,
+          "solution": "Misalkan umur anak sekarang $x$, maka umur ibu $4x$.\n\nEnam tahun lagi:\nanak $x + 6$, ibu $4x + 6$.\n\nSaat itu ibu tiga kali anak:\n$4x + 6 = 3(x + 6)$\n$4x + 6 = 3x + 18$\n$x = 12$\n\nPeriksa: anak 12, ibu 48. Enam tahun lagi: 18 dan 54. Benar, $54 = 3 \\times 18$.",
+          "hint": "Keduanya bertambah 6 tahun, bukan hanya salah satu.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-linear-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jumlah dua bilangan berurutan adalah 37. Bilangan terkecilnya adalah ...",
+          "options": [
+            "$17$",
+            "$18$",
+            "$19$",
+            "$16$"
+          ],
+          "answerIndex": 1,
+          "solution": "Misalkan bilangan terkecil $x$, maka berikutnya $x + 1$.\n\n$x + (x+1) = 37$\n$2x + 1 = 37$\n$2x = 36$\n$x = 18$\n\nPeriksa: $18 + 19 = 37$. Benar. Yang ditanya terkecil, jadi $18$.",
+          "hint": "Bilangan berurutan berselisih tepat satu.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-linear-c5",
+      "type": "rumus",
+      "title": "Garis bilangan dan notasi selang",
+      "body": "Jawaban pertidaksamaan berupa sekumpulan bilangan, bukan satu angka. Ada tiga cara menuliskannya dan ujian bisa memakai ketiganya.\n\n**Notasi himpunan:** $\\{x \\mid x > 3\\}$, dibaca \"himpunan semua $x$ sedemikian sehingga $x$ lebih dari 3\".\n\n**Notasi selang:** $(3, \\infty)$. Kurung biasa berarti ujungnya **tidak** ikut; kurung siku berarti ikut. Jadi $x \\ge 3$ ditulis $[3, \\infty)$.\n\n**Garis bilangan:** bulatan kosong untuk ujung yang tidak ikut, bulatan penuh untuk yang ikut.\n\nTanda tak hingga selalu memakai kurung biasa, karena tak hingga bukan bilangan yang bisa dicapai. Menulis $[3, \\infty]$ selalu salah.",
+      "keyPoints": [
+        "$<$ dan $>$ $\\Rightarrow$ kurung biasa, bulatan kosong",
+        "$\\le$ dan $\\ge$ $\\Rightarrow$ kurung siku, bulatan penuh",
+        "$\\infty$ selalu memakai kurung biasa"
+      ],
+      "pitfall": "Menulis $[3, \\infty]$ dengan kurung siku di sisi tak hingga. Tak hingga bukan bilangan, jadi tidak pernah termasuk.",
+      "questions": [
+        {
+          "id": "das-linear-q9",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Notasi selang untuk $\\{x \\mid -2 \\le x < 5\\}$ adalah ...",
+          "options": [
+            "$(-2, 5)$",
+            "$[-2, 5)$",
+            "$(-2, 5]$",
+            "$[-2, 5]$"
+          ],
+          "answerIndex": 1,
+          "solution": "Perhatikan tiap ujung terpisah.\n\nUjung kiri: $-2 \\le x$, tandanya memuat sama dengan, jadi $-2$ ikut — kurung siku.\nUjung kanan: $x < 5$, tandanya tegas, jadi $5$ tidak ikut — kurung biasa.\n\nHasilnya $[-2, 5)$.",
+          "hint": "Periksa tiap ujung sendiri-sendiri.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-linear-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya bilangan bulat pada selang $(-3, 4]$ adalah ...",
+          "options": [
+            "$6$",
+            "$7$",
+            "$8$",
+            "$5$"
+          ],
+          "answerIndex": 1,
+          "solution": "Kurung biasa di kiri berarti $-3$ tidak ikut.\nKurung siku di kanan berarti $4$ ikut.\n\nJadi bilangan bulatnya: $-2, -1, 0, 1, 2, 3, 4$.\n\nBanyaknya $7$.",
+          "hint": "Daftarkan satu per satu, perhatikan ujung mana yang ikut.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    }
+  ]
+}

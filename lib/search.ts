@@ -5,7 +5,7 @@
  * tinggal mencocokkan — tidak ada pembacaan ulang seluruh materi.
  */
 
-import searchIndex from '@/content/search-index.json';
+import searchIndex from './search-index.json';
 
 import type { CardType, Track } from './types';
 

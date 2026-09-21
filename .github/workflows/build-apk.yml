@@ -1,11 +1,10 @@
 # Membangun APK MathDeck di runner GitHub.
 #
-# Kenapa di sini, bukan di mesin sendiri: build Android butuh Android SDK dari
-# dl.google.com. Runner ubuntu GitHub sudah membawanya, jadi tidak perlu
-# memasang apa pun di komputer sendiri.
+# Build Android butuh Android SDK dari dl.google.com. Runner ubuntu GitHub
+# sudah membawanya, jadi tidak perlu memasang apa pun di komputer sendiri.
 #
-# Hasilnya diunggah sebagai artifact bernama "mathdeck-apk" — unduh dari
-# halaman Actions, tab "Summary", bagian "Artifacts".
+# Hasilnya diunggah sebagai artifact "mathdeck-apk" — unduh dari halaman
+# Actions, bagian "Artifacts" di bawah ringkasan run.
 
 name: Build APK
 
@@ -17,32 +16,64 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Rakit APK rilis
+  periksa:
+    name: Periksa kode & konten
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 15
 
     steps:
-      - name: Ambil kode
-        uses: actions/checkout@v4
-
-      - name: Siapkan Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Siapkan JDK 17
-        uses: actions/setup-java@v4
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Periksa tipe
+        run: npm run typecheck
+
+      - name: Tes lib/srs.ts
+        run: npm test
+
+      - name: Validasi konten
+        run: npm run validate-content
+
+      # Berkas bangkitan ikut di-commit. Kalau hasil membangun ulang berbeda,
+      # berarti ada yang lupa menjalankan generatornya setelah mengubah konten.
+      - name: Pastikan berkas bangkitan tidak basi
+        run: |
+          npm run build-content-index
+          npm run build-index
+          npm run build-katex
+          if ! git diff --quiet; then
+            echo "Berkas bangkitan sudah basi. Jalankan perintah berikut lalu commit hasilnya:"
+            echo "  npm run build-content-index && npm run build-index && npm run build-katex"
+            git diff --stat
+            exit 1
+          fi
+          echo "Berkas bangkitan sudah mutakhir."
+
+  build:
+    name: Rakit APK rilis
+    needs: periksa
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
 
       - name: Pasang dependensi
         run: npm ci
-
-      - name: Periksa tipe
-        run: npx tsc --noEmit
 
       - name: Bangun proyek native Android
         run: npx expo prebuild --platform android --no-install
@@ -62,11 +93,13 @@ jobs:
 
       - name: Laporkan ukuran APK
         run: |
-          echo "### APK" >> "$GITHUB_STEP_SUMMARY"
+          echo "### APK MathDeck" >> "$GITHUB_STEP_SUMMARY"
           for f in android/app/build/outputs/apk/release/*.apk; do
             size=$(du -h "$f" | cut -f1)
             echo "- \`$(basename "$f")\` — $size" >> "$GITHUB_STEP_SUMMARY"
           done
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Unduh dari bagian **Artifacts** di bawah." >> "$GITHUB_STEP_SUMMARY"
 
       - name: Unggah APK
         uses: actions/upload-artifact@v4

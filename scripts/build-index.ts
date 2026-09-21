@@ -73,11 +73,7 @@ function walk(dir: string): string[] {
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) out.push(...walk(full));
-    else if (
-      entry.endsWith('.json') &&
-      entry !== 'manifest.json' &&
-      entry !== 'search-index.json'
-    ) {
+    else if (entry.endsWith('.json') && entry !== 'manifest.json') {
       out.push(full);
     }
   }
@@ -117,5 +113,5 @@ const index = {
   entries,
 };
 
-writeFileSync('content/search-index.json', `${JSON.stringify(index, null, 2)}\n`);
+writeFileSync('lib/search-index.json', `${JSON.stringify(index, null, 2)}\n`);
 console.log(`Indeks pencarian dibangun: ${entries.length} kartu dari ${cardCount} total`);

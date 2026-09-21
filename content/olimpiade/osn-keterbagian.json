@@ -1,0 +1,257 @@
+{
+  "id": "osn-keterbagian",
+  "track": "olimpiade",
+  "title": "Keterbagian & Kongruensi",
+  "order": 1,
+  "prerequisites": [],
+  "estimatedMinutes": 35,
+  "summary": "Modulo sebagai cara melipat garis bilangan; alat pertama teori bilangan olimpiade.",
+  "tags": [
+    "teori-bilangan",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-keterbagian-c1",
+      "type": "konsep",
+      "title": "Modulo melipat garis bilangan",
+      "body": "Notasi $a \\equiv b \\pmod{m}$ dibaca \"$a$ kongruen $b$ modulo $m$\", artinya $m$ membagi habis $a - b$.\n\nCara membayangkannya: garis bilangan dilipat menjadi lingkaran berisi $m$ titik. Semua bilangan yang mendarat di titik sama dianggap setara. Modulo 7 adalah hari dalam seminggu — hari ke-7 dan hari ke-14 jatuh di hari yang sama.\n\nKenapa cara pandang ini kuat? Karena kongruensi bisa dijumlahkan dan dikalikan seperti persamaan biasa. Kalau $a \\equiv b$ dan $c \\equiv d$ modulo $m$, maka $a+c \\equiv b+d$ dan $ac \\equiv bd$.\n\nAkibatnya menghitung $7^{100} \\bmod 5$ tidak perlu menghitung $7^{100}$ sama sekali. Ganti dulu 7 dengan sisanya, lalu bekerja dengan angka kecil.",
+      "keyPoints": [
+        "$a \\equiv b \\pmod m \\iff m \\mid (a-b)$",
+        "Kongruensi boleh dijumlah dan dikali",
+        "Ganti bilangan besar dengan sisanya sejak awal"
+      ],
+      "pitfall": "Membagi kedua ruas kongruensi seenaknya. Dari $2a \\equiv 2b \\pmod 4$ tidak boleh disimpulkan $a \\equiv b \\pmod 4$ — pembagian hanya sah bila pembaginya koprima dengan modulus.",
+      "questions": [
+        {
+          "id": "osn-keterbagian-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pernyataan yang benar untuk $17$ dibagi $5$ adalah ...",
+          "options": [
+            "$17 \\equiv 2 \\pmod 5$",
+            "$17 \\equiv 3 \\pmod 5$",
+            "$17 \\equiv 5 \\pmod 2$",
+            "$17 \\equiv 0 \\pmod 5$"
+          ],
+          "answerIndex": 0,
+          "solution": "$17 = 3 \\times 5 + 2$, jadi sisanya $2$.\n\nPeriksa lewat definisi: $17 - 2 = 15$, dan $5 \\mid 15$. Benar.\n\nJadi $17 \\equiv 2 \\pmod 5$.",
+          "hint": "Bagi 17 dengan 5, lihat sisanya.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-keterbagian-q2",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan sisa pembagian $7^{100}$ oleh $5$.",
+          "answer": "1",
+          "acceptedAnswers": [
+            "satu",
+            "= 1"
+          ],
+          "solution": "Ganti dulu 7 dengan sisanya modulo 5:\n$7 \\equiv 2 \\pmod 5$\n\nJadi $7^{100} \\equiv 2^{100} \\pmod 5$.\n\nCari pola pangkat 2:\n$2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 \\equiv 3$, $2^4 \\equiv 1 \\pmod 5$\n\nPolanya berulang tiap 4 langkah. Karena $100 = 4 \\times 25$:\n$2^{100} = (2^4)^{25} \\equiv 1^{25} = 1 \\pmod 5$\n\nSisanya $1$.",
+          "hint": "Ganti 7 dengan 2, lalu cari pola pangkatnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osn-keterbagian-c2",
+      "type": "teknik",
+      "title": "Uji keterbagian dan asal-usulnya",
+      "body": "Aturan \"habis dibagi 3 kalau jumlah angkanya habis dibagi 3\" bukan sihir. Ia akibat langsung dari modulo, dan memahami asalnya membuatmu bisa menurunkan uji lain sendiri.\n\nPerhatikan $10 \\equiv 1 \\pmod 3$. Maka $100 \\equiv 1$, $1000 \\equiv 1$, dan seterusnya. Jadi bilangan $\\overline{abc} = 100a + 10b + c$ kongruen dengan $a+b+c$ modulo 3. Jumlah angkanya menentukan segalanya.\n\nUntuk 9 alasannya persis sama, karena $10 \\equiv 1 \\pmod 9$ juga.\n\nUntuk 11 sedikit berbeda: $10 \\equiv -1 \\pmod{11}$, sehingga pangkat genap memberi $+1$ dan pangkat ganjil memberi $-1$. Itu sebabnya ujinya memakai jumlah **berselang-seling**, dihitung dari angka satuan.",
+      "keyPoints": [
+        "Habis dibagi 3 atau 9: jumlahkan angkanya",
+        "Habis dibagi 11: jumlah berselang-seling dari satuan",
+        "Asalnya $10 \\equiv 1 \\pmod 9$ dan $10 \\equiv -1 \\pmod{11}$"
+      ],
+      "pitfall": "Memakai uji jumlah angka untuk pembagi lain seperti 7. Uji itu hanya berlaku untuk pembagi yang membuat $10$ kongruen dengan $+1$ atau $-1$.",
+      "questions": [
+        {
+          "id": "osn-keterbagian-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Agar bilangan empat angka $\\overline{3a41}$ habis dibagi 9, nilai $a$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "$5$",
+            "$9$"
+          ],
+          "answerIndex": 1,
+          "solution": "Bilangan habis dibagi 9 bila jumlah angkanya habis dibagi 9.\n\nJumlah angkanya: $3 + a + 4 + 1 = 8 + a$.\n\nCari $a$ berupa satu angka yang membuat $8+a$ kelipatan 9:\n$8 + a = 9 \\Rightarrow a = 1$\n$8 + a = 18 \\Rightarrow a = 10$, bukan satu angka\n\nJadi $a = 1$, dan bilangannya $3141$.\n\nPeriksa: $3+1+4+1 = 9$, habis dibagi 9. Benar.",
+          "hint": "Jumlahkan semua angkanya, lalu cari kelipatan 9 terdekat.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-keterbagian-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan sisa pembagian $7219$ oleh $11$.",
+          "answer": "3",
+          "acceptedAnswers": [
+            "tiga",
+            "= 3"
+          ],
+          "solution": "Pakai jumlah berselang-seling, dihitung dari angka satuan.\n\nAngka $7219$ dari kanan: $9, 1, 2, 7$.\n$9 - 1 + 2 - 7 = 3$\n\nHasilnya $3$, dan $3$ bukan kelipatan 11 — jadi bilangannya tidak habis dibagi 11, dan sisanya adalah $3$.\n\nPeriksa langsung: $7219 = 11 \\times 656 + 3$. Cocok.",
+          "hint": "Jumlahkan berselang-seling mulai dari angka satuan.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osn-keterbagian-c3",
+      "type": "teknik",
+      "title": "Mencari angka satuan lewat pola",
+      "body": "Pertanyaan \"berapa angka satuan dari $3^{2025}$\" terlihat mustahil tanpa kalkulator. Padahal angka satuan tidak lain adalah nilai modulo 10, dan pangkat modulo 10 selalu berulang.\n\nDaftarkan beberapa pangkat pertama:\n$3^1 = 3$, $3^2 = 9$, $3^3 = 27$, $3^4 = 81$, $3^5 = 243$\n\nAngka satuannya: $3, 9, 7, 1$, lalu kembali ke $3$. Siklusnya panjang 4.\n\nTinggal cari posisi $2025$ di dalam siklus: $2025 = 4 \\times 506 + 1$, jadi sisanya 1 — posisi pertama dalam siklus, yaitu $3$.\n\nHati-hati saat sisanya nol: itu berarti posisi **terakhir** siklus, bukan yang pertama. Misalnya $3^{8}$ punya satuan $1$, bukan $3$.",
+      "keyPoints": [
+        "Angka satuan = nilai modulo 10",
+        "Pangkat modulo 10 selalu berulang dalam siklus pendek",
+        "Sisa nol berarti posisi terakhir siklus, bukan pertama"
+      ],
+      "pitfall": "Saat sisa pembagian pangkat oleh panjang siklus bernilai nol, mengambil suku pertama siklus. Yang benar suku terakhir.",
+      "questions": [
+        {
+          "id": "osn-keterbagian-q5",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan angka satuan dari $3^{2025}$.",
+          "answer": "3",
+          "acceptedAnswers": [
+            "tiga",
+            "= 3"
+          ],
+          "solution": "Angka satuan sama dengan nilai modulo 10.\n\nDaftarkan polanya:\n$3^1 \\equiv 3$, $3^2 \\equiv 9$, $3^3 \\equiv 7$, $3^4 \\equiv 1 \\pmod{10}$\n\nSiklusnya panjang 4: $3, 9, 7, 1$.\n\nCari posisi 2025:\n$2025 = 4 \\times 506 + 1$\n\nSisa 1 berarti posisi pertama siklus, yaitu $3$.",
+          "hint": "Daftarkan pangkat 3 sampai polanya berulang.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-keterbagian-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Angka satuan dari $7^{2024}$ adalah ...",
+          "options": [
+            "$1$",
+            "$3$",
+            "$7$",
+            "$9$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari siklus pangkat 7 modulo 10:\n$7^1 \\equiv 7$, $7^2 \\equiv 9$, $7^3 \\equiv 3$, $7^4 \\equiv 1 \\pmod{10}$\n\nSiklusnya panjang 4: $7, 9, 3, 1$.\n\nCari posisi 2024:\n$2024 = 4 \\times 506 + 0$\n\nSisanya **nol**, yang berarti posisi terakhir siklus — bukan yang pertama. Suku terakhir adalah $1$.\n\nJadi angka satuannya $1$.",
+          "hint": "Sisa nol menunjuk ke suku terakhir siklus.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osn-keterbagian-c4",
+      "type": "teknik",
+      "title": "Modulo kecil membuktikan kemustahilan",
+      "body": "Salah satu kegunaan terkuat modulo di olimpiade: membuktikan sesuatu **tidak mungkin** terjadi, tanpa memeriksa satu per satu.\n\nCaranya, lihat soal dari modulus yang tepat. Contoh klasik: bilangan kuadrat sempurna modulo 4 hanya bisa bernilai $0$ atau $1$ — tidak pernah $2$ atau $3$.\n\nBuktinya singkat. Setiap bilangan bulat genap atau ganjil.\nKalau $n = 2k$, maka $n^2 = 4k^2 \\equiv 0 \\pmod 4$.\nKalau $n = 2k+1$, maka $n^2 = 4k^2+4k+1 \\equiv 1 \\pmod 4$.\n\nJadi kalau sebuah soal meminta kuadrat sempurna yang bersisa 3 saat dibagi 4, kamu boleh langsung menjawab tidak ada — tanpa mencoba satu bilangan pun.\n\nModulus yang sering berguna: 3, 4, 8, dan 9.",
+      "keyPoints": [
+        "Kuadrat sempurna modulo 4 hanya $0$ atau $1$",
+        "Modulo bisa membuktikan ketiadaan penyelesaian",
+        "Modulus yang sering berguna: 3, 4, 8, 9"
+      ],
+      "pitfall": "Menyimpulkan sesuatu pasti ada hanya karena tidak ada pertentangan modulo. Modulo bisa membuktikan kemustahilan, tapi tidak membuktikan keberadaan.",
+      "questions": [
+        {
+          "id": "osn-keterbagian-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Manakah yang TIDAK mungkin menjadi kuadrat sempurna?",
+          "options": [
+            "$n$ dengan $n \\equiv 0 \\pmod 4$",
+            "$n$ dengan $n \\equiv 1 \\pmod 4$",
+            "$n$ dengan $n \\equiv 3 \\pmod 4$",
+            "Semua mungkin"
+          ],
+          "answerIndex": 2,
+          "solution": "Periksa semua kemungkinan bilangan bulat.\n\nKalau $n$ genap, $n = 2k$:\n$n^2 = 4k^2 \\equiv 0 \\pmod 4$\n\nKalau $n$ ganjil, $n = 2k+1$:\n$n^2 = 4k^2 + 4k + 1 \\equiv 1 \\pmod 4$\n\nJadi kuadrat sempurna hanya bisa bersisa $0$ atau $1$ modulo 4.\n\nBersisa $3$ mustahil.",
+          "hint": "Pecah menurut genap dan ganjil, lalu kuadratkan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-keterbagian-q8",
+          "difficulty": 5,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil kali dua bilangan bulat berurutan $n(n+1)$ selalu ...",
+          "options": [
+            "ganjil",
+            "genap",
+            "kelipatan 3",
+            "kuadrat sempurna"
+          ],
+          "answerIndex": 1,
+          "solution": "Dari dua bilangan berurutan, salah satunya pasti genap — tidak ada dua ganjil yang berurutan.\n\nHasil kali yang memuat faktor genap pasti genap.\n\nJadi $n(n+1)$ selalu genap.\n\nPeriksa pilihan lain:\n$2 \\times 3 = 6$ kelipatan 3, tapi $3 \\times 4 = 12$... juga kelipatan 3. Namun $1 \\times 2 = 2$ bukan kelipatan 3, jadi pilihan itu gugur.\n$1 \\times 2 = 2$ bukan kuadrat sempurna, jadi pilihan terakhir juga gugur.",
+          "hint": "Di antara dua bilangan berurutan, ada berapa yang genap?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osn-keterbagian-c5",
+      "type": "rumus",
+      "title": "FPB, KPK, dan algoritma Euclid",
+      "body": "FPB dua bilangan bisa dicari tanpa memfaktorkan keduanya. Ini berguna sekali ketika bilangannya besar dan faktorisasinya sendiri sulit — persis situasi yang sering muncul di soal olimpiade.\n\nAlgoritma Euclid bertumpu pada satu kenyataan sederhana: $\\gcd(a,b) = \\gcd(b, a \\bmod b)$. Ganti bilangan yang besar dengan sisanya, lalu ulangi sampai salah satunya menjadi nol. Bilangan yang tersisa itulah FPB-nya.\n\nContoh mencari $\\gcd(48, 18)$:\n$48 \\bmod 18 = 12$, jadi $\\gcd(48,18) = \\gcd(18,12)$\n$18 \\bmod 12 = 6$, jadi $= \\gcd(12,6)$\n$12 \\bmod 6 = 0$, jadi hasilnya $6$\n\nHubungannya dengan KPK juga rapi dan sering dipakai untuk dua bilangan:\n$$\\gcd(a,b) \\times \\text{KPK}(a,b) = a \\times b$$\n\nDua bilangan disebut koprima bila FPB-nya sama dengan satu.",
+      "keyPoints": [
+        "$\\gcd(a,b) = \\gcd(b, a \\bmod b)$",
+        "$\\gcd(a,b) \\times \\text{KPK}(a,b) = ab$",
+        "Koprima berarti FPB-nya $1$"
+      ],
+      "pitfall": "Memakai rumus $\\gcd \\times \\text{KPK} = ab$ untuk tiga bilangan atau lebih. Rumus itu hanya berlaku untuk tepat dua bilangan.",
+      "questions": [
+        {
+          "id": "osn-keterbagian-q9",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Tentukan $\\gcd(48, 18)$ dengan algoritma Euclid.",
+          "answer": "6",
+          "acceptedAnswers": [
+            "enam",
+            "= 6"
+          ],
+          "solution": "Ganti bilangan besar dengan sisanya berulang kali.\n\n$48 \\bmod 18 = 12 \\Rightarrow \\gcd(48,18) = \\gcd(18,12)$\n$18 \\bmod 12 = 6 \\Rightarrow = \\gcd(12,6)$\n$12 \\bmod 6 = 0 \\Rightarrow = 6$\n\nJadi FPB-nya $6$.",
+          "hint": "Terus ganti dengan sisanya sampai bersisa nol.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-keterbagian-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $\\gcd(a,b) = 6$ dan $a \\times b = 216$, maka KPK$(a,b)$ adalah ...",
+          "options": [
+            "$36$",
+            "$6$",
+            "$216$",
+            "$1296$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai hubungan untuk dua bilangan:\n$$\\gcd(a,b) \\times \\text{KPK}(a,b) = a \\times b$$\n\nSubstitusikan yang diketahui:\n$6 \\times \\text{KPK} = 216$\n$\\text{KPK} = 36$\n\nPeriksa masuk akal: KPK harus kelipatan FPB, dan $36 = 6 \\times 6$. Cocok.",
+          "hint": "Ada satu rumus yang menghubungkan FPB, KPK, dan hasil kali.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ]
+    }
+  ]
+}

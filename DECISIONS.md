@@ -108,3 +108,74 @@ navigasi dengan cepat selama pengembangan — di lingkungan tanpa emulator,
 itu satu-satunya cara menjalankan aplikasi sungguhan. `expo-sqlite` di web
 memuat wa-sqlite sebagai `.wasm`, dan Metro menolaknya sampai ekstensi itu
 didaftarkan sebagai aset. Tidak berpengaruh pada bundel Android.
+
+---
+
+## M6 — Cakupan konten
+
+SPEC.md bagian 6 mendaftar sekitar 68 topik. Yang tertulis sejauh ini **7 topik,
+38 kartu, 76 soal**, tersebar di keempat jalur supaya tidak ada jalur yang kosong.
+
+Ini kekurangan yang disengaja dan dilaporkan apa adanya, bukan dianggap selesai.
+Menulis 68 topik yang memenuhi bagian 12 — badan 80–200 kata, kartu konsep yang
+menjawab "mengapa", jebakan yang spesifik, solusi berlangkah — adalah pekerjaan
+menulis berkelanjutan, bukan pekerjaan kode. Menambal sisanya dengan topik tipis
+justru melanggar aturan yang sama.
+
+Yang sudah siap supaya sisanya tinggal menulis:
+- validator menolak kartu yang melanggar aturan bagian 12
+- `npm run build-content-index` mendaftarkan topik baru tanpa menyentuh kode
+- indeks pencarian ikut terbangun ulang
+- CI menolak perubahan yang lupa menjalankan generatornya
+
+### Jawaban soal diverifikasi dengan program, bukan dikira-kira
+
+Saat menulis topik teori bilangan, dua kunci jawaban ternyata salah: `3a41`
+habis dibagi 9 pada $a=1$ (bukan $0$), dan $7219 \bmod 11 = 3$ (bukan $0$).
+Keduanya ketahuan karena aritmetikanya dihitung ulang dengan Python sebelum
+kontennya ditulis. Sejak itu setiap jawaban numerik diperiksa lebih dulu —
+integral diperiksa dengan sympy, modulo dengan `pow(a, b, m)`.
+
+Kesalahan kunci jawaban adalah jenis bug terburuk untuk aplikasi belajar:
+diam-diam mengajarkan yang keliru.
+
+---
+
+## M7 — Build APK
+
+### Build dipindahkan ke GitHub Actions
+
+Lingkungan tempat kode ini ditulis memblokir `dl.google.com` (proxy menjawab 403
+untuk CONNECT), padahal di situlah Android SDK, Android Gradle Plugin, dan
+seluruh pustaka AndroidX berada. `maven.google.com` hanya mengalihkan ke sana.
+`api.expo.dev` juga diblokir, jadi EAS Build pun tidak bisa dipakai dari sini.
+
+Runner ubuntu GitHub sudah membawa Android SDK, jadi build dipindahkan ke sana.
+Berkas APK-nya sendiri juga tidak bisa diunduh dari lingkungan ini — penyimpanan
+artifact GitHub ada di blob Azure, yang diblokir oleh kebijakan yang sama.
+
+### Penandatanganan memakai kunci debug
+
+Template Expo menyetel `buildTypes.release` memakai `signingConfigs.debug`,
+jadi APK-nya langsung bisa dipasang tanpa menyiapkan keystore. Ini sama dengan
+yang dihasilkan `eas build --profile preview` untuk distribusi internal.
+
+Untuk rilis sungguhan ke Play Store, keystore sendiri wajib dibuat — caranya
+ada di README. Keystore tidak dibuat di sini karena kuncinya harus dipegang
+pemilik aplikasi, bukan dibangkitkan lalu ditinggal di dalam repositori.
+
+### Ikon dibuat sendiri
+
+Ikon bawaan template adalah logo Expo. Diganti dengan dua tumpuk kartu dan
+tanda akar, memakai palet SPEC.md bagian 10. Ikon adaptif Android dipisah jadi
+foreground, background, dan monochrome (untuk themed icon Android 13+), dengan
+ruang aman lebih lebar pada foreground supaya tidak terpotong saat dipangkas
+bulat.
+
+### CI menolak berkas bangkitan yang basi
+
+`lib/content-index.ts`, `lib/search-index.json`, dan `lib/katex-css.ts` ikut
+di-commit supaya `npm ci && npm start` langsung jalan. Risikonya, seseorang bisa
+menambah topik tapi lupa menjalankan generatornya — topiknya lalu tidak muncul
+di aplikasi tanpa pesan error apa pun. CI membangun ulang ketiganya dan gagal
+bila hasilnya berbeda dari yang di-commit.

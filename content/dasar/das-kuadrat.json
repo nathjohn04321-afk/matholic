@@ -1,0 +1,270 @@
+{
+  "id": "das-kuadrat",
+  "track": "dasar",
+  "title": "Persamaan & Fungsi Kuadrat",
+  "order": 2,
+  "prerequisites": [
+    "das-linear"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Diskriminan sebagai peramal banyak akar, dan cara membaca parabola dari rumusnya.",
+  "tags": [
+    "aljabar",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "das-kuadrat-c1",
+      "type": "konsep",
+      "title": "Diskriminan meramal tanpa menghitung",
+      "body": "Sebelum mencari akar, kamu bisa tahu dulu ada berapa akarnya — cukup dengan melihat satu bilangan.\n\nPada rumus $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$, bagian di dalam akar itulah yang menentukan segalanya. Namanya diskriminan, $D = b^2 - 4ac$.\n\nKalau $D > 0$, akarnya dua yang berbeda — parabola memotong sumbu-$x$ di dua titik.\nKalau $D = 0$, akarnya satu (kembar) — parabola menyinggung sumbu-$x$.\nKalau $D < 0$, tidak ada akar real — akar dari bilangan negatif tidak ada di bilangan real, dan parabolanya melayang tanpa menyentuh sumbu-$x$.\n\nGunanya besar: soal yang bertanya \"berapa banyak penyelesaian\" bisa dijawab tanpa menghitung akarnya sama sekali.",
+      "keyPoints": [
+        "$D = b^2 - 4ac$",
+        "$D > 0$: dua akar berbeda",
+        "$D = 0$: satu akar kembar",
+        "$D < 0$: tidak ada akar real"
+      ],
+      "pitfall": "Menghitung $D$ sebagai $b^2 - 4ac$ tapi lupa bahwa $a$ atau $c$ bisa negatif, sehingga $-4ac$ justru menambah, bukan mengurangi.",
+      "questions": [
+        {
+          "id": "das-kuadrat-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya akar real dari $x^2 - 4x + 7 = 0$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "$2$",
+            "Tak hingga"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung diskriminannya dengan $a=1$, $b=-4$, $c=7$:\n$D = (-4)^2 - 4(1)(7) = 16 - 28 = -12$\n\nKarena $D < 0$, tidak ada akar real. Jawabannya $0$.",
+          "hint": "Hitung $D$ saja, tidak perlu mencari akarnya.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-kuadrat-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Agar $x^2 + px + 9 = 0$ punya akar kembar, nilai $p$ yang memenuhi adalah ...",
+          "options": [
+            "$p = 3$ saja",
+            "$p = \\pm 6$",
+            "$p = 6$ saja",
+            "$p = \\pm 3$"
+          ],
+          "answerIndex": 1,
+          "solution": "Akar kembar berarti $D = 0$.\n\n$D = p^2 - 4(1)(9) = p^2 - 36$\n\nSet $D = 0$:\n$p^2 = 36$\n$p = 6$ atau $p = -6$\n\nKeduanya memenuhi, jadi $p = \\pm 6$. Banyak orang lupa akar negatifnya.",
+          "hint": "$p^2 = 36$ punya dua penyelesaian, bukan satu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-kuadrat-c2",
+      "type": "rumus",
+      "title": "Vieta: jumlah dan hasil kali akar",
+      "body": "Sering kali soal tidak menanyakan akarnya, melainkan sesuatu tentang akarnya — jumlahnya, hasil kalinya, atau jumlah kuadratnya. Untuk semua itu kamu tidak perlu mencari akarnya sama sekali, dan itu penghematan besar ketika akarnya tidak bulat.\n\nKalau $x_1$ dan $x_2$ akar dari $ax^2+bx+c=0$, maka berlaku hubungan Vieta:\n$$x_1 + x_2 = -\\frac{b}{a}, \\qquad x_1 \\cdot x_2 = \\frac{c}{a}$$\n\nDari dua hubungan itu banyak bentuk lain bisa diturunkan tanpa tambahan hafalan. Yang paling sering muncul di ujian adalah jumlah kuadrat:\n$$x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1x_2$$\ndan jumlah kebalikan:\n$$\\frac{1}{x_1} + \\frac{1}{x_2} = \\frac{x_1+x_2}{x_1x_2}$$\n\nPerhatikan tanda minus pada rumus jumlah akar. Itu satu-satunya tempat yang benar-benar sering keliru, apalagi kalau $b$ sendiri sudah bernilai negatif.",
+      "keyPoints": [
+        "$x_1 + x_2 = -\\dfrac{b}{a}$",
+        "$x_1 x_2 = \\dfrac{c}{a}$",
+        "$x_1^2+x_2^2 = (x_1+x_2)^2 - 2x_1x_2$"
+      ],
+      "pitfall": "Menulis jumlah akar sebagai $\\frac{b}{a}$ tanpa tanda minus. Tandanya selalu berlawanan dengan $b$.",
+      "questions": [
+        {
+          "id": "das-kuadrat-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $x_1$ dan $x_2$ akar dari $2x^2 - 6x + 4 = 0$, maka $x_1 + x_2$ adalah ...",
+          "options": [
+            "$-3$",
+            "$3$",
+            "$2$",
+            "$-2$"
+          ],
+          "answerIndex": 1,
+          "solution": "Dengan $a=2$, $b=-6$:\n$$x_1 + x_2 = -\\frac{b}{a} = -\\frac{-6}{2} = 3$$\n\nDua tanda minus saling meniadakan, hasilnya positif 3.",
+          "hint": "Perhatikan $b$ sendiri sudah negatif.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-kuadrat-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Jika $x_1$ dan $x_2$ akar dari $x^2 - 5x + 3 = 0$, tentukan nilai $x_1^2 + x_2^2$.",
+          "answer": "19",
+          "acceptedAnswers": [
+            "sembilan belas",
+            "= 19"
+          ],
+          "solution": "Dari Vieta: $x_1+x_2 = 5$ dan $x_1x_2 = 3$.\n\nPakai identitas:\n$$x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1x_2$$\n\nSubstitusikan:\n$$= 5^2 - 2(3) = 25 - 6 = 19$$\n\nTidak perlu mencari akarnya, yang bentuknya tidak bulat.",
+          "hint": "Jangan cari akarnya — pakai identitas jumlah kuadrat.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-kuadrat-c3",
+      "type": "prosedur",
+      "title": "Memfaktorkan: cari dua bilangan",
+      "body": "Untuk $x^2 + bx + c$ dengan koefisien depan 1, memfaktorkan turun jadi satu pertanyaan: cari dua bilangan yang **hasil kalinya** $c$ dan **jumlahnya** $b$.\n\nContoh $x^2 - 7x + 12$: cari dua bilangan yang dikali jadi 12 dan dijumlah jadi $-7$. Karena hasil kalinya positif tapi jumlahnya negatif, keduanya pasti negatif. Pasangannya $-3$ dan $-4$. Jadi $(x-3)(x-4)$.\n\nMembaca tandanya menghemat waktu:\n- $c$ positif $\\Rightarrow$ kedua bilangan setanda, mengikuti tanda $b$\n- $c$ negatif $\\Rightarrow$ kedua bilangan berlawanan tanda\n\nKalau koefisien depan bukan 1, atau tidak ada pasangan bulat yang cocok, langsung pakai rumus kuadrat — jangan buang waktu menebak.",
+      "keyPoints": [
+        "Cari dua bilangan: dikali $= c$, dijumlah $= b$",
+        "$c > 0$: setanda; $c < 0$: berlawanan tanda",
+        "Tidak ketemu cepat $\\Rightarrow$ pakai rumus kuadrat"
+      ],
+      "pitfall": "Memaksakan faktorisasi pada soal yang akarnya tidak bulat, lalu menghabiskan waktu menebak-nebak pasangan bilangan yang memang tidak ada.",
+      "questions": [
+        {
+          "id": "das-kuadrat-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk faktor dari $x^2 - 7x + 12$ adalah ...",
+          "options": [
+            "$(x-3)(x-4)$",
+            "$(x+3)(x+4)$",
+            "$(x-2)(x-6)$",
+            "$(x-1)(x-12)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari dua bilangan yang dikali jadi 12 dan dijumlah jadi $-7$.\n\nKarena hasil kali positif dan jumlah negatif, keduanya negatif.\nPasangan: $-3$ dan $-4$, karena $(-3)(-4)=12$ dan $-3-4=-7$.\n\nJadi $(x-3)(x-4)$.\n\nPilihan $(x-2)(x-6)$ memberi jumlah $-8$, bukan $-7$.",
+          "hint": "Hasil kalinya 12 — daftarkan pasangannya, lalu cek jumlahnya.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-kuadrat-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $x^2 + 2x - 15 = 0$ adalah ...",
+          "options": [
+            "$\\{3, 5\\}$",
+            "$\\{-3, 5\\}$",
+            "$\\{3, -5\\}$",
+            "$\\{-3, -5\\}$"
+          ],
+          "answerIndex": 2,
+          "solution": "Cari dua bilangan yang dikali jadi $-15$ dan dijumlah jadi $2$.\n\nKarena hasil kalinya negatif, keduanya berlawanan tanda.\nPasangan: $5$ dan $-3$, karena $5 \\times (-3) = -15$ dan $5 + (-3) = 2$.\n\n$(x+5)(x-3) = 0$\n\nAkarnya $x = -5$ dan $x = 3$.\n\nPerhatikan tandanya berkebalikan dengan angka di dalam kurung.",
+          "hint": "Faktornya $(x+5)(x-3)$ — sekarang baca akarnya hati-hati.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-kuadrat-c4",
+      "type": "konsep",
+      "title": "Membaca parabola dari rumusnya",
+      "body": "Grafik $y = ax^2 + bx + c$ bisa kamu bayangkan sebelum menggambar, hanya dari angka-angkanya.\n\n**Tanda $a$ menentukan arah.** Kalau $a > 0$ parabola membuka ke atas dan punya titik terendah. Kalau $a < 0$ membuka ke bawah dan punya titik tertinggi. Ingat lewat huruf: $a$ positif seperti senyum.\n\n**Sumbu simetri** ada di $x = -\\frac{b}{2a}$. Ini masuk akal: parabola simetris, jadi puncaknya tepat di tengah kedua akar — dan tengah dari $\\frac{-b \\pm \\sqrt{D}}{2a}$ adalah $\\frac{-b}{2a}$.\n\n**Nilai $c$** adalah titik potong sumbu-$y$, karena saat $x = 0$ semua suku lain hilang.\n\nNilai ekstrem didapat dengan memasukkan $x = -\\frac{b}{2a}$ ke fungsinya.",
+      "keyPoints": [
+        "$a > 0$ membuka ke atas, $a < 0$ ke bawah",
+        "Sumbu simetri $x = -\\dfrac{b}{2a}$",
+        "Titik potong sumbu-$y$ adalah $c$"
+      ],
+      "pitfall": "Menganggap $-\\frac{b}{2a}$ sebagai nilai maksimum atau minimumnya. Itu baru letak $x$-nya; nilainya didapat setelah disubstitusikan.",
+      "questions": [
+        {
+          "id": "das-kuadrat-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai minimum dari $f(x) = x^2 - 6x + 5$ adalah ...",
+          "options": [
+            "$3$",
+            "$-4$",
+            "$5$",
+            "$-3$"
+          ],
+          "answerIndex": 1,
+          "solution": "Karena $a = 1 > 0$, parabola membuka ke atas dan punya nilai minimum.\n\nLetak minimumnya:\n$$x = -\\frac{b}{2a} = -\\frac{-6}{2} = 3$$\n\nSubstitusikan ke fungsinya:\n$f(3) = 9 - 18 + 5 = -4$\n\nJadi nilai minimumnya $-4$, terjadi di $x = 3$. Pilihan $3$ adalah letaknya, bukan nilainya.",
+          "hint": "Cari dulu letak $x$-nya, lalu substitusikan.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-kuadrat-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Grafik $y = -2x^2 + 4x + 1$ memotong sumbu-$y$ di titik ...",
+          "options": [
+            "$(0, 1)$",
+            "$(1, 0)$",
+            "$(0, -2)$",
+            "$(0, 4)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Titik potong sumbu-$y$ terjadi saat $x = 0$.\n\nSubstitusikan:\n$y = -2(0)^2 + 4(0) + 1 = 1$\n\nJadi titiknya $(0, 1)$ — yaitu nilai $c$.",
+          "hint": "Sumbu-$y$ berarti $x = 0$.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "das-kuadrat-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada kuadrat",
+      "body": "**Membagi dengan variabel.** Dari $x^2 = 5x$ orang membagi kedua ruas dengan $x$ dan mendapat $x = 5$. Satu akar hilang: $x = 0$ juga memenuhi. Pindahkan semuanya ke satu ruas dan faktorkan: $x(x-5) = 0$.\n\n**Salah membaca tanda akar.** Dari $(x+3)(x-2) = 0$ akarnya $x = -3$ dan $x = 2$ — berkebalikan dengan angka di dalam kurung.\n\n**Lupa $\\pm$.** Dari $x^2 = 16$ jawabannya $x = \\pm 4$, bukan hanya $4$.\n\n**Mengira $D$ adalah akarnya.** Diskriminan hanya bilangan penentu banyak akar, bukan akar itu sendiri.\n\nKebiasaan yang menyelamatkan: setelah dapat akar, masukkan kembali ke persamaan asli.",
+      "keyPoints": [
+        "Jangan pernah membagi dengan variabel — faktorkan",
+        "$(x+a)(x+b)=0 \\Rightarrow x=-a$ atau $x=-b$",
+        "$x^2 = k \\Rightarrow x = \\pm\\sqrt{k}$"
+      ],
+      "pitfall": "Membagi $x^2 = 5x$ dengan $x$ sehingga akar $x = 0$ hilang tanpa disadari.",
+      "questions": [
+        {
+          "id": "das-kuadrat-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Himpunan penyelesaian $x^2 = 5x$ adalah ...",
+          "options": [
+            "$\\{5\\}$",
+            "$\\{0, 5\\}$",
+            "$\\{0\\}$",
+            "$\\{-5, 5\\}$"
+          ],
+          "answerIndex": 1,
+          "solution": "Jangan bagi dengan $x$ — itu membuang akar.\n\nPindahkan semua ke satu ruas:\n$x^2 - 5x = 0$\n\nFaktorkan:\n$x(x - 5) = 0$\n\nHasil kali nol berarti salah satu faktornya nol:\n$x = 0$ atau $x = 5$\n\nKeduanya benar. Membagi dengan $x$ akan menghilangkan $x=0$.",
+          "hint": "Pindahkan semuanya ke satu ruas dulu, jangan dibagi.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-kuadrat-q10",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Tentukan semua nilai $x$ yang memenuhi $x^2 = 49$.",
+          "answer": "±7",
+          "acceptedAnswers": [
+            "7 dan -7",
+            "-7, 7",
+            "{-7, 7}",
+            "+-7",
+            "x = 7 atau x = -7"
+          ],
+          "solution": "Akar kuadrat punya dua nilai yang berlawanan tanda:\n$x = \\pm\\sqrt{49} = \\pm 7$\n\nPeriksa keduanya:\n$7^2 = 49$ dan $(-7)^2 = 49$. Dua-duanya benar.\n\nMenjawab hanya $7$ berarti kehilangan separuh jawaban.",
+          "hint": "Bilangan negatif dikuadratkan juga menghasilkan positif.",
+          "tags": [
+            "un"
+          ]
+        }
+      ]
+    }
+  ]
+}

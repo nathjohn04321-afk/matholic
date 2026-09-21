@@ -7,8 +7,15 @@ kartu dimunculkan lagi lewat jadwal pengulangan supaya materi melekat.
 Seluruh isi aplikasi dibundel di dalam APK. Aplikasi tidak pernah menghubungi
 internet.
 
-> Status: **Milestone 1 selesai** — fondasi (navigasi, tema, database).
-> Materi dan soal belum ada; itu milestone 3 dan 6. Lihat SPEC.md bagian 11.
+> **Status: milestone 1–5 dan 7 selesai. Milestone 6 sebagian.**
+>
+> Semua layar berfungsi: membaca materi, latihan soal, pengulangan terjadwal,
+> Buku Kesalahan, pencarian, statistik, dan pengaturan. APK bisa dibangun.
+>
+> Yang belum: **isi kurikulum masih 7 topik** dari sekitar 68 yang
+> didaftar SPEC.md bagian 6 — 38 kartu dan 76 soal.
+> Menambah topik tidak perlu mengubah kode sama sekali; lihat bagian
+> "Menambah materi baru" di bawah.
 
 ---
 
@@ -42,11 +49,13 @@ Kalau ada yang berubah di kode, aplikasi di HP ikut berubah sendiri.
 ## Memeriksa kode sebelum menyimpan pekerjaan
 
 ```bash
-npm run typecheck   # memastikan tidak ada kesalahan tipe TypeScript
+npm run typecheck          # memeriksa kesalahan tipe TypeScript
+npm test                   # menguji algoritma pengulangan (lib/srs.ts)
+npm run validate-content   # memeriksa seluruh materi terhadap aturan penulisan
 ```
 
-Harus tidak mengeluarkan pesan apa pun. Kalau keluar daftar kesalahan, itu
-perlu diperbaiki dulu.
+Ketiganya harus lolos tanpa pesan error. Perintah yang sama dijalankan otomatis
+di GitHub setiap kali ada perubahan dikirim.
 
 ---
 
@@ -101,14 +110,21 @@ Aturan menulis yang wajib diikuti:
 
 Panduan lengkap ada di SPEC.md bagian 12.
 
-Setelah menambah atau mengubah berkas, jalankan pemeriksa:
+Setelah menambah atau mengubah berkas, jalankan tiga perintah ini:
 
 ```bash
-npm run validate-content
+npm run validate-content    # periksa aturan penulisan
+npm run build-content-index # daftarkan topik baru ke aplikasi
+npm run build-index         # perbarui indeks pencarian
 ```
 
-> Pemeriksa dan pemuat konten dibuat pada milestone 3; perintah di atas belum
-> berfungsi sampai milestone itu selesai.
+Perintah kedua penting: aplikasi memuat topik lewat daftar yang dibangkitkan,
+jadi topik baru tidak akan muncul sampai perintah itu dijalankan. GitHub akan
+menolak perubahan yang lupa menjalankannya.
+
+Pemeriksa menolak kartu yang badan materinya di luar 80–200 kata, kartu dengan
+kurang dari dua soal, tanda `$` yang tidak berpasangan, kunci jawaban di luar
+jangkauan pilihan, dan id yang kembar.
 
 ---
 
@@ -174,8 +190,16 @@ MATHDECK_UPLOAD_STORE_PASSWORD=<kata sandi>
 MATHDECK_UPLOAD_KEY_PASSWORD=<kata sandi>
 ```
 
-> Konfigurasi build (`eas.json`, ikon, splash, penandatanganan) dirapikan pada
-> milestone 7.
+### Jalur C — lewat GitHub (paling mudah, tanpa memasang apa pun)
+
+Setiap kali perubahan dikirim ke GitHub, APK dibangun otomatis di sana.
+
+1. Buka halaman **Actions** pada repositori ini
+2. Klik run paling atas, tunggu tanda centang hijau
+3. Gulir ke bawah ke bagian **Artifacts**
+4. Unduh **mathdeck-apk**, lalu buka berkas zip-nya
+
+Alur ini ada di `.github/workflows/build-apk.yml`.
 
 ---
 
