@@ -107,9 +107,12 @@ for (const file of walk('content').sort()) {
   }
 }
 
+// Tanpa stempel waktu: keluarannya harus fungsi murni dari isi content/,
+// supaya membangun ulang di mesin mana pun menghasilkan berkas yang sama
+// persis. CI membandingkan hasil bangun ulang dengan yang di-commit, dan
+// stempel waktu membuat perbandingan itu selalu gagal.
 const index = {
   version: 1,
-  generatedAt: new Date().toISOString(),
   entries,
 };
 
