@@ -1,0 +1,266 @@
+{
+  "id": "das-aljabar",
+  "track": "dasar",
+  "title": "Bentuk Aljabar & Faktorisasi",
+  "order": 4,
+  "prerequisites": [
+    "das-bilangan"
+  ],
+  "estimatedMinutes": 24,
+  "summary": "Suku sejenis, penjabaran, dan tiga pola faktorisasi yang menutup hampir semua soal.",
+  "tags": [
+    "aljabar",
+    "un"
+  ],
+  "cards": [
+    {
+      "id": "das-aljabar-c1",
+      "type": "konsep",
+      "title": "Hanya suku sejenis yang bisa digabung",
+      "body": "Bentuk aljabar sering terasa asing karena hurufnya. Padahal hurufnya hanya penanda jenis, persis seperti satuan.\n\nKamu bisa menjumlahkan 3 apel dan 2 apel menjadi 5 apel. Tapi 3 apel dan 2 jeruk tidak bisa digabung menjadi 5 apel-jeruk — jenisnya berbeda.\n\nBegitu pula $3x + 2x = 5x$, sedangkan $3x + 2y$ berhenti di situ. Tidak ada yang bisa dikerjakan lagi.\n\nDua suku disebut sejenis kalau bagian hurufnya sama persis, termasuk pangkatnya. Jadi $3x^2$ dan $5x^2$ sejenis, tapi $3x^2$ dan $5x$ tidak — sama seperti meter persegi berbeda jenis dari meter.\n\nSaat menggabung, yang dijumlahkan hanya angka di depannya. Hurufnya ikut apa adanya, tidak ikut dijumlahkan.",
+      "questions": [
+        {
+          "id": "das-aljabar-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk sederhana dari $5x + 3y - 2x + y$ adalah ...",
+          "options": [
+            "$3x + 4y$",
+            "$7x + 4y$",
+            "$3x + 2y$",
+            "$7xy$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kumpulkan suku sejenis.\n\nSuku $x$: $5x - 2x = 3x$\nSuku $y$: $3y + y = 4y$\n\nHasilnya $3x + 4y$. Keduanya tidak bisa digabung lagi karena jenisnya berbeda.",
+          "hint": "Kelompokkan huruf yang sama dulu.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-aljabar-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk sederhana dari $4a^2 + 3a - a^2 + 5a$ adalah ...",
+          "options": [
+            "$11a^2$",
+            "$3a^2 + 8a$",
+            "$3a^3 + 8a$",
+            "$11a^3$"
+          ],
+          "answerIndex": 1,
+          "solution": "Perhatikan $a^2$ dan $a$ adalah jenis yang berbeda.\n\nSuku $a^2$: $4a^2 - a^2 = 3a^2$\nSuku $a$: $3a + 5a = 8a$\n\nHasilnya $3a^2 + 8a$, dan berhenti di situ.\n\nMenggabung keduanya menjadi $11a^2$ salah — sama seperti menjumlahkan luas dengan panjang.",
+          "hint": "Pangkat berbeda berarti jenis berbeda.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sejenis = bagian huruf dan pangkatnya sama persis",
+        "Jumlahkan koefisiennya saja",
+        "$3x^2$ dan $3x$ bukan suku sejenis"
+      ],
+      "pitfall": "Menjumlahkan $3x^2 + 2x$ menjadi $5x^3$ atau $5x^2$. Pangkat berbeda berarti jenis berbeda, jadi tidak bisa digabung sama sekali."
+    },
+    {
+      "id": "das-aljabar-c2",
+      "type": "prosedur",
+      "title": "Menjabarkan dengan aman",
+      "body": "Menjabarkan $(a+b)(c+d)$ berarti setiap suku di kurung pertama harus bertemu setiap suku di kurung kedua. Tidak boleh ada yang terlewat.\n\n$$(a+b)(c+d) = ac + ad + bc + bd$$\n\nEmpat perkalian, karena dua suku dikali dua suku. Kalau hasil jabaranmu kurang dari empat suku sebelum disederhanakan, berarti ada yang terlewat.\n\nBagian yang paling sering salah adalah tanda. $(x-3)(x-5)$ memberi $x^2 - 5x - 3x + 15$, dan suku terakhirnya positif karena negatif kali negatif.\n\nUntuk kurung dikali suku tunggal, aturannya sama: $3(x+4) = 3x + 12$, bukan $3x + 4$. Angka di luar harus mengenai semua yang di dalam.\n\nSetelah menjabarkan, baru gabungkan suku sejenis.",
+      "questions": [
+        {
+          "id": "das-aljabar-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil penjabaran $(x-3)(x-5)$ adalah ...",
+          "options": [
+            "$x^2 - 8x + 15$",
+            "$x^2 + 8x + 15$",
+            "$x^2 - 8x - 15$",
+            "$x^2 - 15$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kalikan setiap pasangan:\n$x \\cdot x = x^2$\n$x \\cdot (-5) = -5x$\n$(-3) \\cdot x = -3x$\n$(-3)(-5) = +15$\n\nGabungkan suku sejenis:\n$$x^2 - 5x - 3x + 15 = x^2 - 8x + 15$$\n\nSuku terakhir positif karena negatif kali negatif.",
+          "hint": "Ada empat perkalian — jangan ada yang terlewat.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-aljabar-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $2x(3x - 4) - (x^2 - 5x)$ adalah ...",
+          "options": [
+            "$5x^2 - 3x$",
+            "$5x^2 - 13x$",
+            "$7x^2 - 13x$",
+            "$5x^2 + 3x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jabarkan bagian pertama:\n$2x(3x-4) = 6x^2 - 8x$\n\nTanda minus di depan kurung kedua membalik semua tandanya:\n$-(x^2 - 5x) = -x^2 + 5x$\n\nGabungkan:\n$6x^2 - x^2 = 5x^2$\n$-8x + 5x = -3x$\n\nHasilnya $5x^2 - 3x$.\n\nLupa membalik tanda $-5x$ adalah kesalahan tersering di soal seperti ini.",
+          "hint": "Tanda minus di depan kurung mengenai semua isinya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Dua suku kali dua suku menghasilkan empat perkalian",
+        "Bawa tandanya ikut serta",
+        "$a(b+c) = ab + ac$, semua kena"
+      ],
+      "pitfall": "Mengalikan angka di luar kurung hanya ke suku pertama, misalnya menulis $3(x+4) = 3x + 4$."
+    },
+    {
+      "id": "das-aljabar-c3",
+      "type": "rumus",
+      "title": "Tiga pola faktorisasi yang wajib dikenali",
+      "body": "Sebagian besar soal faktorisasi jatuh ke salah satu dari tiga pola ini. Mengenalinya menghemat banyak waktu dibanding mencoba-coba.\n\n**Selisih dua kuadrat:**\n$$a^2 - b^2 = (a-b)(a+b)$$\nBerlaku hanya untuk selisih. $a^2 + b^2$ tidak bisa difaktorkan dalam bilangan real.\n\n**Kuadrat sempurna:**\n$$a^2 + 2ab + b^2 = (a+b)^2, \\qquad a^2 - 2ab + b^2 = (a-b)^2$$\nCirinya suku tengah tepat dua kali hasil kali akar suku pertama dan terakhir.\n\n**Faktor persekutuan:** selalu periksa ini lebih dulu. $2x^2 + 6x = 2x(x+3)$.\n\nUrutan kerjanya penting: keluarkan faktor persekutuan lebih dulu, baru lihat pola apa yang tersisa di dalam kurung. Sering kali setelah faktor persekutuan keluar, pola yang tadinya tersembunyi jadi terlihat jelas dan soal selesai dalam satu langkah lagi.",
+      "questions": [
+        {
+          "id": "das-aljabar-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Faktor dari $x^2 - 49$ adalah ...",
+          "options": [
+            "$(x-7)^2$",
+            "$(x-7)(x+7)$",
+            "$(x-49)(x+1)$",
+            "tidak dapat difaktorkan"
+          ],
+          "answerIndex": 1,
+          "solution": "Ini selisih dua kuadrat, karena $49 = 7^2$.\n\n$$x^2 - 49 = x^2 - 7^2 = (x-7)(x+7)$$\n\nPeriksa dengan menjabarkan kembali:\n$(x-7)(x+7) = x^2 + 7x - 7x - 49 = x^2 - 49$. Cocok.",
+          "hint": "49 adalah kuadrat dari berapa?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-aljabar-q6",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Faktorkan $2x^2 - 18$ selengkap-lengkapnya.",
+          "answer": "2(x-3)(x+3)",
+          "acceptedAnswers": [
+            "2(x+3)(x-3)",
+            "2 (x-3)(x+3)"
+          ],
+          "solution": "Keluarkan faktor persekutuan lebih dulu:\n$$2x^2 - 18 = 2(x^2 - 9)$$\n\nSekarang polanya terlihat — $x^2 - 9$ adalah selisih dua kuadrat:\n$$= 2(x-3)(x+3)$$\n\nBerhenti di $2(x^2-9)$ berarti belum selesai. Selalu periksa apakah sisa di dalam kurung masih bisa difaktorkan.",
+          "hint": "Ada faktor persekutuan yang bisa dikeluarkan dulu.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$a^2 - b^2 = (a-b)(a+b)$",
+        "$a^2 \\pm 2ab + b^2 = (a \\pm b)^2$",
+        "Keluarkan faktor persekutuan lebih dulu",
+        "$a^2 + b^2$ tidak terfaktorkan di bilangan real"
+      ],
+      "pitfall": "Menulis $x^2 + 9 = (x+3)(x+3)$. Selisih dua kuadrat butuh tanda minus; jumlah dua kuadrat tidak bisa difaktorkan."
+    },
+    {
+      "id": "das-aljabar-c4",
+      "type": "teknik",
+      "title": "Pecahan aljabar",
+      "body": "Pecahan aljabar bekerja persis seperti pecahan biasa. Bedanya hanya pada satu hal: kamu harus memfaktorkan dulu sebelum bisa mencoret.\n\nUntuk menyederhanakan $\\frac{x^2-9}{x+3}$, faktorkan pembilangnya:\n$$\\frac{(x-3)(x+3)}{x+3} = x-3$$\n\nPencoretan itu sah karena $(x+3)$ adalah faktor utuh di atas dan di bawah. Tanpa memfaktorkan dulu, tidak ada yang boleh dicoret.\n\nSatu syarat yang sering terlupa: hasilnya berlaku untuk $x \\neq -3$, karena di situ penyebut aslinya nol. Nilai itu tetap terlarang walaupun sudah lenyap dari bentuk akhir.\n\nUntuk menjumlahkan pecahan aljabar, sama seperti pecahan biasa — samakan penyebut lebih dulu, biasanya dengan mengalikan silang atau mencari KPK bentuknya.",
+      "questions": [
+        {
+          "id": "das-aljabar-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk sederhana dari $\\frac{x^2-16}{x-4}$ untuk $x \\neq 4$ adalah ...",
+          "options": [
+            "$x+4$",
+            "$x-4$",
+            "$x^2-4$",
+            "$-4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Faktorkan pembilangnya sebagai selisih dua kuadrat:\n$$\\frac{(x-4)(x+4)}{x-4}$$\n\nCoret faktor $(x-4)$ yang ada di atas dan bawah:\n$$= x+4$$\n\nPencoretan sah karena $x \\neq 4$, sehingga $x - 4 \\neq 0$.",
+          "hint": "Pembilangnya selisih dua kuadrat.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-aljabar-q8",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Bentuk $\\frac{x+5}{x}$ dapat disederhanakan menjadi $5$ dengan mencoret $x$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Yang boleh dicoret hanya faktor, bukan suku yang sedang dijumlahkan.\n\nUji dengan angka. Ambil $x = 5$:\nRuas kiri: $\\frac{5+5}{5} = \\frac{10}{5} = 2$\nRuas kanan: $5$\n\n$2 \\neq 5$, jadi pencoretan itu keliru.\n\nYang benar: $\\frac{x+5}{x} = 1 + \\frac{5}{x}$.",
+          "hint": "Masukkan satu angka dan periksa sendiri.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Faktorkan dulu, baru coret",
+        "Hanya faktor utuh yang boleh dicoret",
+        "Nilai yang membuat penyebut nol tetap terlarang"
+      ],
+      "pitfall": "Mencoret $x$ pada $\\frac{x+2}{x}$. Yang boleh dicoret hanya faktor, dan $x$ di sini adalah suku yang sedang dijumlahkan."
+    },
+    {
+      "id": "das-aljabar-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada bentuk aljabar",
+      "body": "**Mengkuadratkan suku demi suku.** $(a+b)^2$ bukan $a^2 + b^2$. Yang benar $a^2 + 2ab + b^2$ — ada suku tengah yang sering hilang. Uji dengan $a=b=1$: ruas kiri 4, sedangkan $a^2+b^2$ hanya 2.\n\n**Lupa tanda di depan kurung.** $-(x-3)$ sama dengan $-x+3$, bukan $-x-3$. Tanda minus mengenai setiap suku di dalamnya.\n\n**Mencoret suku, bukan faktor.** Sudah dibahas, tapi pantas diulang karena ini yang paling sering muncul.\n\n**Berhenti terlalu cepat saat memfaktorkan.** Setelah mengeluarkan faktor persekutuan, periksa lagi apakah sisanya masih bisa difaktorkan.\n\nKebiasaan yang menolong: masukkan satu angka sederhana ke bentuk awal dan bentuk akhirmu. Kalau hasilnya berbeda, ada yang salah.",
+      "questions": [
+        {
+          "id": "das-aljabar-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(2x+3)^2$ adalah ...",
+          "options": [
+            "$4x^2 + 9$",
+            "$4x^2 + 12x + 9$",
+            "$4x^2 + 6x + 9$",
+            "$2x^2 + 12x + 9$"
+          ],
+          "answerIndex": 1,
+          "solution": "Pakai pola kuadrat sempurna $(a+b)^2 = a^2 + 2ab + b^2$ dengan $a = 2x$, $b = 3$.\n\n$a^2 = 4x^2$\n$2ab = 2 \\cdot 2x \\cdot 3 = 12x$\n$b^2 = 9$\n\nHasilnya $4x^2 + 12x + 9$.\n\nPilihan $4x^2+9$ adalah kesalahan mengkuadratkan suku demi suku — suku tengahnya hilang.",
+          "hint": "Jangan lupa suku tengah $2ab$.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-aljabar-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk $-(3x - 2y + 5)$ sama dengan ...",
+          "options": [
+            "$-3x + 2y - 5$",
+            "$-3x - 2y - 5$",
+            "$-3x + 2y + 5$",
+            "$3x - 2y + 5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tanda minus di depan kurung membalik tanda **setiap** suku di dalamnya.\n\n$3x \\to -3x$\n$-2y \\to +2y$\n$+5 \\to -5$\n\nHasilnya $-3x + 2y - 5$.\n\nKesalahan tersering adalah hanya membalik suku pertama lalu menyalin sisanya apa adanya.",
+          "hint": "Setiap suku ikut berubah tanda, tanpa kecuali.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$(a+b)^2 = a^2 + 2ab + b^2$",
+        "Tanda minus mengenai seluruh isi kurung",
+        "Uji hasilmu dengan memasukkan satu angka"
+      ],
+      "pitfall": "Menulis $(a+b)^2 = a^2 + b^2$ sehingga suku tengah $2ab$ hilang."
+    }
+  ]
+}

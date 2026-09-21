@@ -1,0 +1,265 @@
+{
+  "id": "das-geometri",
+  "track": "dasar",
+  "title": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+  "order": 7,
+  "prerequisites": [],
+  "estimatedMinutes": 25,
+  "summary": "Rumus luas yang saling berhubungan, dan kenapa tinggi selalu tegak lurus alas.",
+  "tags": [
+    "geometri",
+    "un"
+  ],
+  "cards": [
+    {
+      "id": "das-geometri-c1",
+      "type": "konsep",
+      "title": "Semua rumus luas berasal dari persegi panjang",
+      "body": "Rumus luas terasa banyak kalau dihafal satu per satu. Padahal semuanya turunan dari satu bentuk: persegi panjang, yang luasnya $p \\times l$.\n\n**Segitiga** adalah setengah persegi panjang. Potong persegi panjang menurut diagonalnya dan kamu dapat dua segitiga sama besar. Karena itu $L = \\frac{1}{2} a t$.\n\n**Jajargenjang** bisa dipotong dan digeser menjadi persegi panjang dengan alas dan tinggi yang sama. Karena itu $L = a t$, tanpa faktor setengah.\n\n**Trapesium** adalah rata-rata dua sisi sejajar dikali tinggi: $L = \\frac{(a+b)}{2} t$. Kalau $a = b$, rumusnya kembali menjadi jajargenjang.\n\nMelihat hubungannya berarti kamu hanya perlu mengingat satu rumus dan menurunkan sisanya.",
+      "questions": [
+        {
+          "id": "das-geometri-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Luas segitiga dengan alas 12 cm dan tinggi 5 cm adalah ...",
+          "options": [
+            "$60$ cm$^2$",
+            "$30$ cm$^2$",
+            "$17$ cm$^2$",
+            "$34$ cm$^2$"
+          ],
+          "answerIndex": 1,
+          "solution": "Pakai rumus segitiga:\n$$L = \\tfrac{1}{2} \\times a \\times t = \\tfrac{1}{2} \\times 12 \\times 5 = 30$$\n\nJawabannya $30$ cm$^2$.\n\nPilihan $60$ adalah luas persegi panjang dengan ukuran sama — segitiga hanya separuhnya.",
+          "hint": "Segitiga adalah separuh persegi panjang.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-geometri-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Trapesium punya sisi sejajar 8 cm dan 14 cm, dengan tinggi 6 cm. Luasnya adalah ...",
+          "options": [
+            "$66$ cm$^2$",
+            "$132$ cm$^2$",
+            "$84$ cm$^2$",
+            "$48$ cm$^2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus trapesium:\n$$L = \\frac{a+b}{2} \\times t = \\frac{8+14}{2} \\times 6$$\n$$= \\frac{22}{2} \\times 6 = 11 \\times 6 = 66$$\n\nJawabannya $66$ cm$^2$.\n\nPilihan $132$ muncul dari lupa membagi dua.",
+          "hint": "Rata-ratakan kedua sisi sejajar dulu.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Segitiga: $L = \\frac{1}{2}at$",
+        "Jajargenjang: $L = at$",
+        "Trapesium: $L = \\frac{(a+b)}{2}t$"
+      ],
+      "pitfall": "Memakai sisi miring sebagai tinggi segitiga. Tinggi harus tegak lurus terhadap alas, bukan sekadar sisi yang terlihat menjulang."
+    },
+    {
+      "id": "das-geometri-c2",
+      "type": "rumus",
+      "title": "Lingkaran: keliling dan luas",
+      "body": "Lingkaran punya dua rumus yang sering tertukar, padahal bisa dibedakan dari satuannya.\n\n$$K = 2\\pi r = \\pi d, \\qquad L = \\pi r^2$$\n\nKeliling adalah panjang, jadi satuannya cm — dan rumusnya memuat $r$ pangkat satu. Luas adalah daerah, satuannya cm$^2$ — dan rumusnya memuat $r^2$. Kalau ragu, lihat pangkatnya: pangkat dua berarti luas.\n\nUntuk juring dengan sudut pusat $\\alpha$, ambil bagiannya dari lingkaran penuh:\n$$L_{\\text{juring}} = \\frac{\\alpha}{360^\\circ} \\times \\pi r^2$$\n\nPakai $\\pi = \\frac{22}{7}$ kalau jari-jarinya kelipatan 7, dan $3{,}14$ untuk yang lain. Pemilihan ini bukan aturan baku, hanya kebiasaan yang membuat hitungannya berakhir bulat sehingga kamu punya petunjuk tambahan bahwa jawabanmu kemungkinan besar benar.",
+      "questions": [
+        {
+          "id": "das-geometri-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Luas lingkaran berjari-jari 7 cm, dengan $\\pi = \\frac{22}{7}$, adalah ...",
+          "options": [
+            "$154$ cm$^2$",
+            "$44$ cm$^2$",
+            "$22$ cm$^2$",
+            "$308$ cm$^2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai $L = \\pi r^2$:\n$$L = \\frac{22}{7} \\times 7^2 = \\frac{22}{7} \\times 49$$\n\nSederhanakan: $49 \\div 7 = 7$.\n$$= 22 \\times 7 = 154$$\n\nJawabannya $154$ cm$^2$.\n\nPilihan $44$ adalah kelilingnya, bukan luasnya.",
+          "hint": "Jangan tertukar dengan rumus keliling.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-geometri-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah lingkaran berdiameter 20 cm. Kelilingnya dengan $\\pi = 3{,}14$ adalah ...",
+          "options": [
+            "$62{,}8$ cm",
+            "$31{,}4$ cm",
+            "$314$ cm",
+            "$125{,}6$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang diketahui diameter, jadi bisa langsung pakai $K = \\pi d$:\n$$K = 3{,}14 \\times 20 = 62{,}8$$\n\nAtau lewat jari-jari: $r = 10$, lalu $K = 2 \\times 3{,}14 \\times 10 = 62{,}8$. Sama saja.\n\nPilihan $31{,}4$ muncul dari memakai $\\pi r$ tanpa faktor 2.",
+          "hint": "Diameter dua kali jari-jari — pilih rumus yang cocok.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$K = 2\\pi r$",
+        "$L = \\pi r^2$",
+        "Juring: ambil $\\frac{\\alpha}{360^\\circ}$ bagiannya",
+        "Pangkat dua $\\Rightarrow$ luas"
+      ],
+      "pitfall": "Memakai diameter sebagai $r$ dalam rumus luas. Kalau yang diketahui diameter, bagi dua lebih dulu."
+    },
+    {
+      "id": "das-geometri-c3",
+      "type": "prosedur",
+      "title": "Menghitung luas bangun gabungan",
+      "body": "Soal luas jarang memberi bangun tunggal yang rapi. Biasanya berupa gabungan, dan strateginya selalu sama.\n\n1. Pecah bangunnya menjadi bentuk-bentuk yang rumusnya kamu tahu.\n2. Kalau ada bagian yang berlubang, hitung bangun luarnya lalu **kurangi** lubangnya.\n3. Hitung tiap bagian secara terpisah, tuliskan hasilnya.\n4. Jumlahkan atau kurangkan sesuai bentuknya.\n\nCara memecahnya tidak tunggal. Daerah berbentuk L bisa dipecah jadi dua persegi panjang dengan dua cara berbeda, atau dihitung sebagai persegi panjang besar dikurangi satu sudut. Ketiganya memberi jawaban sama — pilih yang ukurannya paling mudah kamu baca dari gambar.\n\nTulis ukuran tiap potongan di gambar sebelum menghitung. Kebanyakan kesalahan lahir dari salah membaca ukuran, bukan salah rumus.",
+      "questions": [
+        {
+          "id": "das-geometri-q5",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Sebuah persegi panjang 10 cm × 8 cm dilubangi lingkaran berjari-jari 2 cm. Berapa luas sisanya? Pakai $\\pi = 3{,}14$.",
+          "answer": "67,44",
+          "acceptedAnswers": [
+            "67.44",
+            "67,44 cm2",
+            "67,44 cm^2"
+          ],
+          "solution": "Hitung luas persegi panjang:\n$$10 \\times 8 = 80 \\text{ cm}^2$$\n\nHitung luas lubangnya:\n$$\\pi r^2 = 3{,}14 \\times 2^2 = 3{,}14 \\times 4 = 12{,}56 \\text{ cm}^2$$\n\nKurangkan:\n$$80 - 12{,}56 = 67{,}44 \\text{ cm}^2$$",
+          "hint": "Luas luar dikurangi luas lubang.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-geometri-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Keliling persegi dengan luas 64 cm$^2$ adalah ...",
+          "options": [
+            "$32$ cm",
+            "$16$ cm",
+            "$64$ cm",
+            "$8$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari sisinya dulu dari luasnya:\n$$s^2 = 64 \\Rightarrow s = 8 \\text{ cm}$$\n\nKeliling persegi adalah empat kali sisinya:\n$$K = 4 \\times 8 = 32 \\text{ cm}$$\n\nPilihan $8$ adalah panjang sisinya, bukan kelilingnya — soal bertanya keliling.",
+          "hint": "Cari panjang sisinya lebih dulu.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pecah jadi bangun yang rumusnya dikenal",
+        "Bagian berlubang dikurangkan",
+        "Tandai ukuran tiap potongan sebelum menghitung"
+      ],
+      "pitfall": "Mengurangi luas lubang dari bangun yang salah, misalnya mengurangi dari salah satu potongan padahal lubangnya ada di potongan lain."
+    },
+    {
+      "id": "das-geometri-c4",
+      "type": "konsep",
+      "title": "Sudut pada segitiga dan segiempat",
+      "body": "Jumlah sudut dalam segitiga selalu $180^\\circ$. Ini bukan kebetulan, dan buktinya bisa dibayangkan: robek ketiga sudut segitiga kertas lalu rapatkan ujung-ujungnya — ketiganya membentuk garis lurus.\n\nDari situ semua yang lain mengikuti. Segiempat bisa dipotong jadi dua segitiga, jadi jumlah sudutnya $2 \\times 180^\\circ = 360^\\circ$. Segi lima jadi tiga segitiga, yaitu $540^\\circ$. Polanya:\n$$\\text{jumlah sudut segi-}n = (n-2) \\times 180^\\circ$$\n\nUntuk segi banyak beraturan, tiap sudutnya sama besar, jadi tinggal dibagi $n$.\n\nSudut luar segitiga sama dengan jumlah dua sudut dalam yang tidak bersebelahan dengannya — sering memangkas satu langkah perhitungan.",
+      "questions": [
+        {
+          "id": "das-geometri-q7",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Dua sudut segitiga berukuran $55^\\circ$ dan $65^\\circ$. Sudut ketiganya adalah ...",
+          "options": [
+            "$60^\\circ$",
+            "$70^\\circ$",
+            "$50^\\circ$",
+            "$120^\\circ$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlah sudut segitiga adalah $180^\\circ$.\n\n$$180^\\circ - 55^\\circ - 65^\\circ = 60^\\circ$$\n\nPeriksa: $55 + 65 + 60 = 180$. Cocok.",
+          "hint": "Ketiganya berjumlah 180 derajat.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-geometri-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Besar satu sudut dalam segi enam beraturan adalah ...",
+          "options": [
+            "$120^\\circ$",
+            "$720^\\circ$",
+            "$60^\\circ$",
+            "$108^\\circ$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlah seluruh sudut dalam segi enam:\n$$(n-2) \\times 180^\\circ = (6-2) \\times 180^\\circ = 720^\\circ$$\n\nKarena beraturan, keenam sudutnya sama besar:\n$$720^\\circ \\div 6 = 120^\\circ$$\n\nPilihan $720^\\circ$ adalah jumlah seluruhnya, bukan satu sudut.",
+          "hint": "Hitung jumlahnya dulu, baru bagi dengan banyak sudutnya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Segitiga: $180^\\circ$",
+        "Segi-$n$: $(n-2) \\times 180^\\circ$",
+        "Sudut luar = jumlah dua sudut dalam jauh"
+      ],
+      "pitfall": "Memakai rumus $(n-2) \\times 180^\\circ$ lalu langsung menjawab tanpa membagi $n$, padahal yang ditanya besar satu sudut pada segi banyak beraturan."
+    },
+    {
+      "id": "das-geometri-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada geometri bidang",
+      "body": "**Memakai sisi miring sebagai tinggi.** Tinggi selalu tegak lurus alas. Pada segitiga tumpul, tingginya bahkan bisa jatuh di luar segitiga itu sendiri.\n\n**Tertukar jari-jari dan diameter.** Kalau soal memberi diameter, bagi dua sebelum masuk ke rumus yang memakai $r$.\n\n**Satuan tidak seragam.** Panjang dalam meter dicampur sentimeter menghasilkan angka yang jauh meleset. Samakan satuan sebelum menghitung, bukan sesudah.\n\n**Menjawab pertanyaan yang salah.** Soal meminta keliling, kamu menghitung luas. Ini kesalahan yang paling disesali karena hitungannya sendiri benar.\n\nPeriksa kewajaran hasil: luas harus punya satuan persegi, dan tidak mungkin lebih kecil dari bagian-bagiannya.",
+      "questions": [
+        {
+          "id": "das-geometri-q9",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Jika diameter lingkaran 14 cm, maka luasnya adalah $\\pi \\times 14^2$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Rumus $L = \\pi r^2$ memakai **jari-jari**, bukan diameter.\n\nDiameter 14 cm berarti $r = 7$ cm.\n$$L = \\pi \\times 7^2 = 49\\pi$$\n\nMemakai 14 memberi $196\\pi$, yaitu empat kali lipat dari yang benar — karena jari-jarinya jadi dua kali, dan luas bergantung pada kuadratnya.",
+          "hint": "Apa bedanya jari-jari dan diameter di rumus itu?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-geometri-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah persegi panjang berukuran 2 m × 50 cm. Luasnya adalah ...",
+          "options": [
+            "$1$ m$^2$",
+            "$100$ m$^2$",
+            "$2{,}5$ m$^2$",
+            "$100$ cm$^2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Satuannya berbeda, jadi samakan dulu. Ubah 50 cm menjadi meter:\n$$50 \\text{ cm} = 0{,}5 \\text{ m}$$\n\nSekarang hitung:\n$$L = 2 \\times 0{,}5 = 1 \\text{ m}^2$$\n\nMengalikan $2 \\times 50$ langsung memberi 100 dengan satuan campur yang tidak bermakna.",
+          "hint": "Ubah ke satuan yang sama lebih dulu.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tinggi selalu tegak lurus alas",
+        "Diameter dibagi dua sebelum dipakai sebagai $r$",
+        "Samakan satuan sebelum menghitung",
+        "Baca ulang: keliling atau luas?"
+      ],
+      "pitfall": "Memasukkan diameter ke rumus $\\pi r^2$ sehingga luasnya menjadi empat kali lipat dari seharusnya."
+    }
+  ]
+}

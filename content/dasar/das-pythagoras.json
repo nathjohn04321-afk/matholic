@@ -1,0 +1,266 @@
+{
+  "id": "das-pythagoras",
+  "track": "dasar",
+  "title": "Teorema Pythagoras & Kesebangunan",
+  "order": 8,
+  "prerequisites": [
+    "das-geometri"
+  ],
+  "estimatedMinutes": 24,
+  "summary": "Sisi miring selalu terpanjang, dan kenapa bangun sebangun punya perbandingan sisi tetap.",
+  "tags": [
+    "geometri",
+    "un"
+  ],
+  "cards": [
+    {
+      "id": "das-pythagoras-c1",
+      "type": "konsep",
+      "title": "Pythagoras adalah hubungan luas",
+      "body": "Rumus $a^2 + b^2 = c^2$ biasanya dihafal sebagai hubungan panjang. Padahal namanya sendiri memberi petunjuk: yang dijumlahkan adalah **luas persegi**.\n\nBayangkan persegi dibangun pada tiap sisi segitiga siku-siku. Teoremanya menyatakan: luas dua persegi kecil, dijumlahkan, tepat sama dengan luas persegi besar pada sisi miring.\n\nDari cara pandang ini, dua hal langsung jelas. Pertama, $c$ selalu sisi terpanjang — luasnya sama dengan dua luas lain digabung, jadi tidak mungkin lebih kecil. Kedua, teoremanya hanya berlaku untuk segitiga **siku-siku**; tanpa sudut $90^\\circ$ hubungan luas itu tidak ada.\n\nBeberapa tripel bulat sering muncul dan pantas dikenali: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, serta kelipatannya.",
+      "questions": [
+        {
+          "id": "das-pythagoras-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Segitiga siku-siku punya sisi tegak 6 cm dan 8 cm. Sisi miringnya adalah ...",
+          "options": [
+            "$10$ cm",
+            "$14$ cm",
+            "$48$ cm",
+            "$7$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai $a^2 + b^2 = c^2$:\n$$6^2 + 8^2 = 36 + 64 = 100$$\n$$c = \\sqrt{100} = 10$$\n\nIni tripel $(3,4,5)$ dikali 2, jadi bisa dikenali langsung tanpa menghitung.",
+          "hint": "Kuadratkan keduanya, jumlahkan, lalu akarkan.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-pythagoras-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Segitiga siku-siku punya sisi miring 13 cm dan satu sisi tegak 5 cm. Sisi tegak lainnya adalah ...",
+          "options": [
+            "$12$ cm",
+            "$18$ cm",
+            "$8$ cm",
+            "$\\sqrt{194}$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang diketahui sisi miring, jadi rumusnya dibalik — bukan dijumlahkan, melainkan dikurangkan.\n\n$$a^2 = c^2 - b^2 = 13^2 - 5^2 = 169 - 25 = 144$$\n$$a = \\sqrt{144} = 12$$\n\nPilihan $\\sqrt{194}$ muncul dari menjumlahkan $169 + 25$, yaitu memperlakukan 13 sebagai sisi tegak.",
+          "hint": "13 adalah sisi miring — jadi dikurangkan, bukan dijumlahkan.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$a^2 + b^2 = c^2$ dengan $c$ sisi miring",
+        "Hanya berlaku pada segitiga siku-siku",
+        "Tripel sering: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$"
+      ],
+      "pitfall": "Menempatkan sisi miring sebagai $a$ atau $b$. Sisi miring selalu yang berseberangan dengan sudut siku-siku, dan selalu yang terpanjang."
+    },
+    {
+      "id": "das-pythagoras-c2",
+      "type": "prosedur",
+      "title": "Memeriksa jenis segitiga dari sisinya",
+      "body": "Teorema Pythagoras bisa dibalik menjadi alat penguji. Ambil tiga panjang sisi, kuadratkan yang terpanjang, lalu bandingkan dengan jumlah kuadrat dua lainnya.\n\n- Kalau $c^2 = a^2 + b^2$: siku-siku\n- Kalau $c^2 > a^2 + b^2$: tumpul\n- Kalau $c^2 < a^2 + b^2$: lancip\n\nArahnya masuk akal. Kalau sudut terbesar melebar melewati $90^\\circ$, sisi di hadapannya ikut memanjang, sehingga $c^2$ menjadi lebih besar.\n\nSatu syarat sering terlewat: ketiga panjang itu harus bisa membentuk segitiga lebih dulu. Jumlah dua sisi terpendek wajib melebihi sisi terpanjang. Tanpa syarat itu, segitiganya tidak ada sama sekali dan pertanyaan jenisnya tidak berlaku.",
+      "questions": [
+        {
+          "id": "das-pythagoras-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Segitiga dengan sisi 7 cm, 8 cm, dan 12 cm berjenis ...",
+          "options": [
+            "tumpul",
+            "siku-siku",
+            "lancip",
+            "tidak ada"
+          ],
+          "answerIndex": 0,
+          "solution": "Sisi terpanjang adalah 12, jadi itulah $c$.\n\n$$c^2 = 144$$\n$$a^2 + b^2 = 49 + 64 = 113$$\n\nKarena $144 > 113$, segitiganya **tumpul**.\n\nPeriksa dulu apakah segitiganya ada: $7 + 8 = 15 > 12$. Ada.",
+          "hint": "Kuadratkan yang terpanjang, bandingkan dengan jumlah dua lainnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-pythagoras-q4",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Tiga batang sepanjang 3 cm, 4 cm, dan 9 cm dapat membentuk sebuah segitiga.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Periksa syarat segitiga dulu.\n\nJumlah dua sisi terpendek:\n$$3 + 4 = 7$$\n\nSisi terpanjang adalah 9, dan $7 < 9$.\n\nKedua batang pendek itu terlalu pendek untuk bertemu — segitiganya tidak bisa terbentuk. Pertanyaan tentang jenisnya jadi tidak berlaku.",
+          "hint": "Apakah dua sisi pendek cukup panjang untuk bertemu?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$c^2 = a^2+b^2$ siku-siku",
+        "$c^2 > a^2+b^2$ tumpul",
+        "$c^2 < a^2+b^2$ lancip",
+        "Syarat segitiga: jumlah dua sisi terpendek $>$ sisi terpanjang"
+      ],
+      "pitfall": "Menguji dengan sisi yang bukan terpanjang sebagai $c$, sehingga kesimpulan jenis segitiganya terbalik."
+    },
+    {
+      "id": "das-pythagoras-c3",
+      "type": "konsep",
+      "title": "Sebangun berarti perbandingan sisi tetap",
+      "body": "Dua bangun disebut sebangun kalau bentuknya sama persis tapi ukurannya boleh berbeda — seperti foto yang diperbesar tanpa berubah proporsi.\n\nSyaratnya dua: sudut-sudut yang bersesuaian sama besar, dan sisi-sisi yang bersesuaian punya perbandingan yang tetap.\n\nPerbandingan tetap itulah yang membuat kesebangunan berguna. Kalau kamu tahu satu pasang sisi yang bersesuaian, kamu tahu faktor pengalinya, dan semua sisi lain bisa dihitung.\n\n$$\\frac{a'}{a} = \\frac{b'}{b} = \\frac{c'}{c} = k$$\n\nUntuk segitiga, cukup dua sudut sama untuk menjamin sebangun — sudut ketiganya otomatis sama karena jumlahnya selalu $180^\\circ$.\n\nIngat akibat pada luas: kalau sisinya berbanding $k$, luasnya berbanding $k^2$.",
+      "questions": [
+        {
+          "id": "das-pythagoras-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dua segitiga sebangun. Sisi-sisi segitiga kecil 3, 4, 5 cm, dan sisi terpanjang segitiga besar 15 cm. Keliling segitiga besar adalah ...",
+          "options": [
+            "$36$ cm",
+            "$24$ cm",
+            "$45$ cm",
+            "$12$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari faktor pengalinya dari pasangan sisi terpanjang:\n$$k = \\frac{15}{5} = 3$$\n\nSisi-sisi segitiga besar:\n$3 \\times 3 = 9$, $4 \\times 3 = 12$, $5 \\times 3 = 15$\n\nKelilingnya:\n$$9 + 12 + 15 = 36 \\text{ cm}$$\n\nCara singkat: keliling juga berbanding $k$, jadi $(3+4+5) \\times 3 = 36$.",
+          "hint": "Cari faktor pengalinya dari sisi yang bersesuaian.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-pythagoras-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Dua bangun sebangun punya perbandingan sisi $2:5$. Perbandingan luasnya adalah ...",
+          "options": [
+            "$4:25$",
+            "$2:5$",
+            "$8:125$",
+            "$5:2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Luas bergantung pada dua dimensi, jadi perbandingannya dikuadratkan.\n\n$$\\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}$$\n\nJadi perbandingan luasnya $4:25$.\n\nPilihan $8:125$ adalah perbandingan volume, yaitu pangkat tiga.",
+          "hint": "Luas punya dua dimensi.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sudut bersesuaian sama, sisi bersesuaian berbanding tetap",
+        "Dua sudut sama sudah cukup untuk segitiga",
+        "Sisi $\\times k$ berarti luas $\\times k^2$"
+      ],
+      "pitfall": "Memasangkan sisi yang tidak bersesuaian. Sisi terpanjang satu bangun harus dipasangkan dengan sisi terpanjang bangun lainnya."
+    },
+    {
+      "id": "das-pythagoras-c4",
+      "type": "teknik",
+      "title": "Segitiga siku-siku bertingkat",
+      "body": "Kalau dari sudut siku-siku ditarik garis tinggi ke sisi miring, terbentuk tiga segitiga yang semuanya sebangun — segitiga besar dan dua segitiga kecil di dalamnya.\n\nDari kesebangunan itu lahir tiga hubungan yang sering muncul di soal. Dengan $p$ dan $q$ sebagai potongan sisi miring dan $t$ sebagai garis tinggi:\n$$t^2 = p \\times q$$\n$$a^2 = p \\times c, \\qquad b^2 = q \\times c$$\n\nPola ketiganya sama: tiap panjang dikuadratkan sama dengan hasil kali dua potongan yang \"menopang\"-nya.\n\nMenghafal ketiganya tidak wajib. Kalau kamu ingat bahwa ketiga segitiga itu sebangun, kamu bisa menurunkannya sendiri dengan menyusun perbandingan sisi yang bersesuaian.",
+      "questions": [
+        {
+          "id": "das-pythagoras-q7",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Pada segitiga siku-siku, garis tinggi ke sisi miring membagi sisi itu menjadi 4 cm dan 9 cm. Berapa panjang garis tingginya?",
+          "answer": "6",
+          "acceptedAnswers": [
+            "6 cm",
+            "enam"
+          ],
+          "solution": "Pakai hubungan $t^2 = p \\times q$ dengan $p = 4$ dan $q = 9$:\n$$t^2 = 4 \\times 9 = 36$$\n$$t = 6 \\text{ cm}$$\n\nPeriksa kewajaran: sisi miringnya $4 + 9 = 13$, dan garis tinggi 6 memang lebih pendek dari itu. Masuk akal.",
+          "hint": "Garis tinggi kuadrat sama dengan hasil kali kedua potongan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-pythagoras-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah tiang setinggi 6 m punya bayangan 8 m. Pada saat yang sama, gedung punya bayangan 40 m. Tinggi gedung adalah ...",
+          "options": [
+            "$30$ m",
+            "$53{,}3$ m",
+            "$48$ m",
+            "$20$ m"
+          ],
+          "answerIndex": 0,
+          "solution": "Sinar matahari membuat sudut sama, jadi kedua segitiga sebangun.\n\nSusun perbandingan tinggi terhadap bayangan:\n$$\\frac{6}{8} = \\frac{t}{40}$$\n\nKali silang:\n$$8t = 240 \\Rightarrow t = 30$$\n\nTinggi gedungnya 30 m.\n\nPastikan perbandingannya konsisten: tinggi di atas, bayangan di bawah, pada kedua ruas.",
+          "hint": "Tinggi berbanding bayangan, pada kedua bangun.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$t^2 = pq$",
+        "$a^2 = pc$ dan $b^2 = qc$",
+        "Ketiga segitiga yang terbentuk saling sebangun"
+      ],
+      "pitfall": "Memasangkan potongan sisi miring dengan sisi tegak yang salah, misalnya memakai $a^2 = qc$ padahal $q$ berada di seberang $a$."
+    },
+    {
+      "id": "das-pythagoras-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada Pythagoras",
+      "body": "**Memakai Pythagoras pada segitiga bukan siku-siku.** Rumus ini punya syarat, dan tanpa sudut $90^\\circ$ hasilnya tidak bermakna apa-apa.\n\n**Menempatkan sisi miring di tempat yang salah.** Kalau yang dicari sisi tegak, rumusnya menjadi pengurangan: $a^2 = c^2 - b^2$. Menjumlahkan justru memberi angka yang terlalu besar.\n\n**Lupa mengakarkan.** Setelah dapat $c^2 = 100$, jawabannya 10, bukan 100. Kesalahan ini mudah tertangkap kalau kamu memeriksa kewajaran panjangnya.\n\n**Memakai faktor skala biasa untuk luas.** Sisi berbanding $k$ berarti luas berbanding $k^2$.\n\nUji cepat: sisi miring harus lebih panjang dari kedua sisi tegak, tapi lebih pendek dari jumlah keduanya.",
+      "questions": [
+        {
+          "id": "das-pythagoras-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $c^2 = 169$ pada segitiga siku-siku. Panjang sisi miringnya adalah ...",
+          "options": [
+            "$13$",
+            "$169$",
+            "$84{,}5$",
+            "$\\sqrt{169^2}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang diketahui adalah $c^2$, sedangkan yang ditanya $c$. Jadi akarkan:\n$$c = \\sqrt{169} = 13$$\n\nMenjawab 169 berarti berhenti satu langkah sebelum selesai — kesalahan yang mudah terjadi kalau hasil antara terlihat seperti angka bulat yang rapi.",
+          "hint": "Yang ditanya $c$, bukan $c^2$.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-pythagoras-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah tangga sepanjang 5 m bersandar di dinding, dengan kaki tangga 3 m dari dinding. Tinggi ujung tangga pada dinding adalah ...",
+          "options": [
+            "$4$ m",
+            "$8$ m",
+            "$\\sqrt{34}$ m",
+            "$2$ m"
+          ],
+          "answerIndex": 0,
+          "solution": "Tangga adalah sisi miring karena ia yang bersandar miring; dinding dan lantai membentuk sudut siku-siku.\n\n$$t^2 = 5^2 - 3^2 = 25 - 9 = 16$$\n$$t = 4 \\text{ m}$$\n\nIni tripel $(3,4,5)$.\n\nPilihan $\\sqrt{34}$ muncul dari menjumlahkan $25 + 9$, yaitu keliru menempatkan tangga sebagai sisi tegak.",
+          "hint": "Mana yang jadi sisi miring — tangga atau dinding?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Syaratnya segitiga siku-siku",
+        "Mencari sisi tegak berarti mengurangkan",
+        "Jangan lupa mengakarkan di akhir"
+      ],
+      "pitfall": "Berhenti di $c^2 = 100$ lalu menjawab 100, padahal yang ditanya $c$ yaitu 10."
+    }
+  ]
+}

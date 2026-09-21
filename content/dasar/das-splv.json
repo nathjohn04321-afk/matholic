@@ -1,0 +1,265 @@
+{
+  "id": "das-splv",
+  "track": "dasar",
+  "title": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+  "order": 6,
+  "prerequisites": [
+    "das-linear"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Dua persamaan sebagai dua garis; eliminasi dan substitusi, serta arti garis sejajar.",
+  "tags": [
+    "aljabar",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "das-splv-c1",
+      "type": "konsep",
+      "title": "Penyelesaian adalah titik potong",
+      "body": "Satu persamaan linear dua variabel seperti $x + y = 5$ punya tak hingga penyelesaian — $(0,5)$, $(1,4)$, $(2,3)$, dan seterusnya. Kalau digambar, semuanya membentuk sebuah garis.\n\nDua persamaan berarti dua garis. Penyelesaian sistemnya adalah titik yang memenuhi keduanya sekaligus, yaitu **titik potong** kedua garis.\n\nDari cara pandang ini, tiga kemungkinan langsung masuk akal:\n- Kedua garis berpotongan di satu titik: tepat satu penyelesaian\n- Kedua garis sejajar dan berbeda: tidak ada penyelesaian\n- Kedua garis berimpit: tak hingga penyelesaian\n\nJadi kalau saat mengerjakan kamu mendapat pernyataan mustahil seperti $0 = 5$, itu bukan kesalahan hitung — itu tandanya garisnya sejajar dan sistemnya memang tidak punya penyelesaian.",
+      "questions": [
+        {
+          "id": "das-splv-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Saat menyelesaikan suatu sistem, kamu sampai pada $0 = 7$. Artinya sistem itu ...",
+          "options": [
+            "tidak punya penyelesaian",
+            "punya satu penyelesaian",
+            "punya tak hingga penyelesaian",
+            "salah hitung"
+          ],
+          "answerIndex": 0,
+          "solution": "Pernyataan $0 = 7$ tidak mungkin benar untuk nilai $x$ dan $y$ mana pun.\n\nSecara grafik, ini berarti kedua garisnya sejajar dan tidak pernah berpotongan.\n\nJadi sistemnya tidak punya penyelesaian. Ini hasil yang sah, bukan tanda kesalahan hitung.",
+          "hint": "Adakah nilai yang membuat $0 = 7$ benar?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-splv-q2",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian dari $x + y = 7$ dan $x - y = 1$ adalah ...",
+          "options": [
+            "$(4, 3)$",
+            "$(3, 4)$",
+            "$(5, 2)$",
+            "$(6, 1)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlahkan kedua persamaan supaya $y$ hilang:\n$(x+y) + (x-y) = 7 + 1$\n$2x = 8$\n$x = 4$\n\nSubstitusikan ke persamaan pertama:\n$4 + y = 7$\n$y = 3$\n\nPeriksa di persamaan kedua: $4 - 3 = 1$. Cocok.\n\nJadi $(4,3)$.",
+          "hint": "Jumlahkan keduanya dan lihat apa yang lenyap.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Penyelesaian = titik potong kedua garis",
+        "$0 = c$ dengan $c \\neq 0$ berarti tidak ada penyelesaian",
+        "$0 = 0$ berarti tak hingga penyelesaian"
+      ],
+      "pitfall": "Menganggap hasil $0 = 5$ sebagai kesalahan hitung lalu mengulang dari awal, padahal itu justru jawabannya: sistemnya tidak punya penyelesaian."
+    },
+    {
+      "id": "das-splv-c2",
+      "type": "prosedur",
+      "title": "Eliminasi: buat satu variabel lenyap",
+      "body": "Eliminasi bekerja dengan menyamakan koefisien satu variabel, lalu menjumlahkan atau mengurangkan kedua persamaan sehingga variabel itu hilang.\n\n1. Pilih variabel yang paling mudah disamakan koefisiennya.\n2. Kalikan salah satu atau kedua persamaan sampai koefisiennya sama besar.\n3. Jumlahkan kalau tandanya berlawanan, kurangkan kalau tandanya sama.\n4. Selesaikan persamaan satu variabel yang tersisa.\n5. Substitusikan kembali untuk mendapat variabel yang satunya.\n6. Periksa di **kedua** persamaan asli.\n\nContoh: $2x + 3y = 12$ dan $x - y = 1$.\nKalikan persamaan kedua dengan 3: $3x - 3y = 3$.\nJumlahkan dengan yang pertama: $5x = 15$, jadi $x = 3$, lalu $y = 2$.\n\nLangkah 6 penting: memeriksa di satu persamaan saja tidak menangkap semua kesalahan.",
+      "questions": [
+        {
+          "id": "das-splv-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian dari $2x + 3y = 12$ dan $x - y = 1$ adalah ...",
+          "options": [
+            "$(3, 2)$",
+            "$(2, 3)$",
+            "$(4, 3)$",
+            "$(1, 0)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kalikan persamaan kedua dengan 3 supaya koefisien $y$ menjadi $3$:\n$3(x - y) = 3(1) \\Rightarrow 3x - 3y = 3$\n\nJumlahkan dengan persamaan pertama — $+3y$ dan $-3y$ saling lenyap:\n$2x + 3x = 12 + 3$\n$5x = 15$\n$x = 3$\n\nSubstitusikan ke $x - y = 1$:\n$3 - y = 1 \\Rightarrow y = 2$\n\nPeriksa di persamaan pertama: $2(3) + 3(2) = 12$. Cocok.",
+          "hint": "Kalikan persamaan kedua sampai koefisien $y$-nya cocok.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-splv-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan nilai $x + y$ jika $3x + 2y = 16$ dan $x + 2y = 8$.",
+          "answer": "6",
+          "acceptedAnswers": [
+            "enam",
+            "= 6"
+          ],
+          "solution": "Kurangkan persamaan kedua dari yang pertama — koefisien $y$ sudah sama, jadi langsung lenyap:\n$(3x + 2y) - (x + 2y) = 16 - 8$\n$2x = 8$\n$x = 4$\n\nSubstitusikan ke $x + 2y = 8$:\n$4 + 2y = 8 \\Rightarrow y = 2$\n\nYang ditanya $x + y = 4 + 2 = 6$.\n\nPerhatikan pertanyaannya meminta jumlahnya, bukan nilai $x$ saja.",
+          "hint": "Koefisien $y$ sudah sama — apa yang terjadi kalau dikurangkan?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Samakan koefisien salah satu variabel",
+        "Tanda berlawanan dijumlah, tanda sama dikurang",
+        "Periksa di kedua persamaan asli"
+      ],
+      "pitfall": "Mengalikan hanya sebagian suku saat menyamakan koefisien. Seluruh persamaan, termasuk ruas kanan, harus ikut dikalikan."
+    },
+    {
+      "id": "das-splv-c3",
+      "type": "prosedur",
+      "title": "Substitusi: ganti satu dengan yang lain",
+      "body": "Substitusi lebih cepat dari eliminasi ketika salah satu persamaan sudah menyatakan satu variabel secara langsung, atau mudah diubah ke bentuk itu.\n\n1. Dari salah satu persamaan, nyatakan satu variabel dalam variabel lainnya.\n2. Masukkan bentuk itu ke persamaan **yang lain** — bukan ke persamaan asalnya.\n3. Selesaikan persamaan satu variabel yang dihasilkan.\n4. Substitusikan balik untuk mendapat variabel kedua.\n\nContoh: $y = 2x - 1$ dan $3x + y = 9$.\nMasukkan $y$ ke persamaan kedua: $3x + (2x-1) = 9$, jadi $5x = 10$ dan $x = 2$.\nLalu $y = 2(2) - 1 = 3$.\n\nLangkah 2 punya jebakan: memasukkan kembali ke persamaan asalnya akan memberi $0 = 0$, yang benar tapi tidak memberitahu apa-apa.",
+      "questions": [
+        {
+          "id": "das-splv-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $y = 2x - 1$ dan $3x + y = 9$, maka nilai $x$ adalah ...",
+          "options": [
+            "$2$",
+            "$3$",
+            "$1$",
+            "$4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Masukkan $y = 2x-1$ ke persamaan kedua:\n$3x + (2x - 1) = 9$\n$5x - 1 = 9$\n$5x = 10$\n$x = 2$\n\nPeriksa: $y = 2(2)-1 = 3$, dan $3(2) + 3 = 9$. Cocok.",
+          "hint": "Ganti $y$ pada persamaan kedua dengan bentuknya.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-splv-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Harga 2 pensil dan 3 buku Rp31.000. Harga 1 pensil dan 2 buku Rp19.000. Harga satu buku adalah ...",
+          "options": [
+            "Rp7.000",
+            "Rp5.000",
+            "Rp9.000",
+            "Rp6.000"
+          ],
+          "answerIndex": 0,
+          "solution": "Misalkan pensil $p$ dan buku $b$.\n$2p + 3b = 31000$\n$p + 2b = 19000$\n\nDari persamaan kedua: $p = 19000 - 2b$.\n\nSubstitusikan ke persamaan pertama:\n$2(19000 - 2b) + 3b = 31000$\n$38000 - 4b + 3b = 31000$\n$38000 - b = 31000$\n$b = 7000$\n\nPeriksa: $p = 19000 - 14000 = 5000$, dan $2(5000) + 3(7000) = 31000$. Cocok.",
+          "hint": "Nyatakan harga pensil dari persamaan kedua.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Nyatakan satu variabel, masukkan ke persamaan LAIN",
+        "Paling cepat bila satu persamaan sudah berbentuk $y = \\ldots$",
+        "Substitusi balik untuk variabel kedua"
+      ],
+      "pitfall": "Memasukkan bentuk yang sudah diubah kembali ke persamaan asalnya, sehingga hasilnya $0=0$ dan tidak ada kemajuan."
+    },
+    {
+      "id": "das-splv-c4",
+      "type": "teknik",
+      "title": "Tiga variabel: kurangi jadi dua",
+      "body": "Sistem tiga variabel terlihat menakutkan, padahal strateginya cuma satu: **kurangi menjadi sistem dua variabel** yang sudah kamu kuasai.\n\n1. Pilih satu variabel untuk dilenyapkan, misalnya $z$.\n2. Eliminasi $z$ dari pasangan persamaan pertama dan kedua. Hasilnya satu persamaan dua variabel.\n3. Eliminasi $z$ juga dari pasangan kedua dan ketiga. Hasilnya persamaan dua variabel yang kedua.\n4. Sekarang kamu punya sistem dua variabel — selesaikan seperti biasa.\n5. Substitusikan balik ke salah satu persamaan awal untuk mendapat variabel ketiga.\n\nYang sering salah di langkah 3: memakai kembali pasangan persamaan yang sama seperti langkah 2. Pasangannya harus berbeda, supaya informasi dari persamaan ketiga benar-benar terpakai.\n\nPilih variabel yang koefisiennya paling sederhana untuk dilenyapkan lebih dulu.",
+      "questions": [
+        {
+          "id": "das-splv-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $x+y+z = 6$, $x - y + z = 2$, dan $x + y - z = 0$. Nilai $y$ adalah ...",
+          "options": [
+            "$2$",
+            "$3$",
+            "$1$",
+            "$4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kurangkan persamaan kedua dari persamaan pertama — $x$ dan $z$ lenyap:\n$(x+y+z) - (x-y+z) = 6 - 2$\n$2y = 4$\n$y = 2$\n\nPeriksa dengan persamaan lain. Dari persamaan pertama dan ketiga:\n$(x+y+z) - (x+y-z) = 6 - 0 \\Rightarrow 2z = 6 \\Rightarrow z = 3$\nLalu $x = 6 - 2 - 3 = 1$.\n\nPeriksa di persamaan kedua: $1 - 2 + 3 = 2$. Cocok.",
+          "hint": "Kurangkan dua persamaan pertama dan lihat apa yang lenyap.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "das-splv-q8",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Jika $a + b = 10$ dan $b + c = 14$ dan $a + c = 12$, tentukan $a + b + c$.",
+          "answer": "18",
+          "acceptedAnswers": [
+            "delapan belas",
+            "= 18"
+          ],
+          "solution": "Jumlahkan ketiga persamaan sekaligus:\n$(a+b) + (b+c) + (a+c) = 10 + 14 + 12$\n$2a + 2b + 2c = 36$\n$2(a+b+c) = 36$\n$a+b+c = 18$\n\nCara ini jauh lebih singkat daripada mencari $a$, $b$, dan $c$ satu per satu.\n\nPeriksa: dari $a+b=10$ dan total 18, berarti $c = 8$. Lalu $b = 14-8 = 6$ dan $a = 10-6 = 4$. Cek $a+c = 4+8 = 12$. Cocok.",
+          "hint": "Coba jumlahkan ketiganya sekaligus.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Lenyapkan satu variabel dari dua pasangan berbeda",
+        "Hasilnya sistem dua variabel yang biasa",
+        "Substitusi balik untuk variabel ketiga"
+      ],
+      "pitfall": "Memakai pasangan persamaan yang sama dua kali saat mengeliminasi, sehingga persamaan ketiga tidak pernah terpakai dan sistemnya tidak terselesaikan."
+    },
+    {
+      "id": "das-splv-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada sistem persamaan",
+      "body": "**Menjawab setengah pertanyaan.** Soal sering meminta $x + y$ atau $xy$, bukan $x$ saja. Baca lagi pertanyaannya setelah selesai menghitung.\n\n**Mengalikan tidak seluruh persamaan.** Saat menyamakan koefisien, ruas kanan juga harus ikut dikalikan. Melewatkannya mengubah persamaan itu menjadi persamaan lain.\n\n**Salah tanda saat mengurangkan.** $(2x+3y) - (x-y)$ memberi $x + 4y$, bukan $x + 2y$. Tanda minus mengenai seluruh kurung kedua.\n\n**Memeriksa di satu persamaan saja.** Jawaban yang salah kadang tetap memenuhi salah satu persamaan. Hanya pemeriksaan di keduanya yang meyakinkan.\n\nPada soal cerita, tuliskan dulu apa yang diwakili tiap huruf. Beberapa menit itu mencegah tertukarnya variabel di akhir.",
+      "questions": [
+        {
+          "id": "das-splv-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(2x + 3y) - (x - y)$ adalah ...",
+          "options": [
+            "$x + 4y$",
+            "$x + 2y$",
+            "$3x + 2y$",
+            "$x - 4y$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tanda minus membalik tanda setiap suku di kurung kedua:\n$-(x - y) = -x + y$\n\nGabungkan:\n$2x - x = x$\n$3y + y = 4y$\n\nHasilnya $x + 4y$.\n\nMenulis $x + 2y$ berarti tanda $-y$ tidak ikut dibalik.",
+          "hint": "Tanda minus mengenai kedua suku di dalam kurung.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "das-splv-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $x = 3$ dan $y = -2$ adalah penyelesaian $ax + y = 4$, maka nilai $a$ adalah ...",
+          "options": [
+            "$2$",
+            "$\\frac{2}{3}$",
+            "$-2$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan nilai yang diketahui:\n$a(3) + (-2) = 4$\n$3a - 2 = 4$\n$3a = 6$\n$a = 2$\n\nPeriksa: $2(3) + (-2) = 6 - 2 = 4$. Cocok.\n\nKesalahan umum adalah lupa bahwa $y$ bernilai negatif, lalu menulis $3a + 2 = 4$.",
+          "hint": "Perhatikan $y$ bernilai negatif.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Baca ulang apa yang sebenarnya ditanya",
+        "Kalikan seluruh persamaan, termasuk ruas kanan",
+        "Periksa jawaban di kedua persamaan"
+      ],
+      "pitfall": "Mengurangkan $(2x+3y) - (x-y)$ menjadi $x + 2y$ karena tanda minus tidak dikenakan pada suku $-y$."
+    }
+  ]
+}

@@ -2,6 +2,56 @@
   "version": 1,
   "entries": [
     {
+      "cardId": "das-aljabar-c1",
+      "topicId": "das-aljabar",
+      "topicTitle": "Bentuk Aljabar & Faktorisasi",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Hanya suku sejenis yang bisa digabung",
+      "haystack": "hanya suku sejenis yang bisa digabung bentuk aljabar sering terasa asing karena hurufnya. padahal hurufnya hanya penanda jenis, persis seperti satuan. kamu bisa menjumlahkan 3 apel dan 2 apel menjadi 5 apel. tapi 3 apel dan 2 jeruk tidak bisa digabung menjadi 5 apel-jeruk — jenisnya berbeda. begitu pula , sedangkan berhenti di situ. tidak ada yang bisa dikerjakan lagi. dua suku disebut sejenis kalau bagian hurufnya sama persis, termasuk pangkatnya. jadi dan sejenis, tapi dan tidak — sama seperti meter persegi berbeda jenis dari meter. saat menggabung, yang dijumlahkan hanya angka di depannya. hurufnya ikut apa adanya, tidak ikut dijumlahkan. sejenis = bagian huruf dan pangkatnya sama persis jumlahkan koefisiennya saja dan bukan suku sejenis menjumlahkan menjadi atau . pangkat berbeda berarti jenis berbeda, jadi tidak bisa digabung sama sekali. bentuk aljabar & faktorisasi",
+      "snippet": "Bentuk aljabar sering terasa asing karena hurufnya. Padahal hurufnya hanya penanda jenis, persis seperti satuan. Kamu bisa menjumlahkan 3 apel dan 2 apel men..."
+    },
+    {
+      "cardId": "das-aljabar-c2",
+      "topicId": "das-aljabar",
+      "topicTitle": "Bentuk Aljabar & Faktorisasi",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Menjabarkan dengan aman",
+      "haystack": "menjabarkan dengan aman menjabarkan berarti setiap suku di kurung pertama harus bertemu setiap suku di kurung kedua. tidak boleh ada yang terlewat. empat perkalian, karena dua suku dikali dua suku. kalau hasil jabaranmu kurang dari empat suku sebelum disederhanakan, berarti ada yang terlewat. bagian yang paling sering salah adalah tanda. memberi , dan suku terakhirnya positif karena negatif kali negatif. untuk kurung dikali suku tunggal, aturannya sama: , bukan . angka di luar harus mengenai semua yang di dalam. setelah menjabarkan, baru gabungkan suku sejenis. dua suku kali dua suku menghasilkan empat perkalian bawa tandanya ikut serta , semua kena mengalikan angka di luar kurung hanya ke suku pertama, misalnya menulis . bentuk aljabar & faktorisasi",
+      "snippet": "Menjabarkan [rumus] berarti setiap suku di kurung pertama harus bertemu setiap suku di kurung kedua. Tidak boleh ada yang terlewat. [rumus] Empat perkalian, ..."
+    },
+    {
+      "cardId": "das-aljabar-c3",
+      "topicId": "das-aljabar",
+      "topicTitle": "Bentuk Aljabar & Faktorisasi",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Tiga pola faktorisasi yang wajib dikenali",
+      "haystack": "tiga pola faktorisasi yang wajib dikenali sebagian besar soal faktorisasi jatuh ke salah satu dari tiga pola ini. mengenalinya menghemat banyak waktu dibanding mencoba-coba. selisih dua kuadrat: berlaku hanya untuk selisih. tidak bisa difaktorkan dalam bilangan real. kuadrat sempurna: cirinya suku tengah tepat dua kali hasil kali akar suku pertama dan terakhir. faktor persekutuan: selalu periksa ini lebih dulu. . urutan kerjanya penting: keluarkan faktor persekutuan lebih dulu, baru lihat pola apa yang tersisa di dalam kurung. sering kali setelah faktor persekutuan keluar, pola yang tadinya tersembunyi jadi terlihat jelas dan soal selesai dalam satu langkah lagi. keluarkan faktor persekutuan lebih dulu tidak terfaktorkan di bilangan real menulis . selisih dua kuadrat butuh tanda minus; jumlah dua kuadrat tidak bisa difaktorkan. bentuk aljabar & faktorisasi",
+      "snippet": "Sebagian besar soal faktorisasi jatuh ke salah satu dari tiga pola ini. Mengenalinya menghemat banyak waktu dibanding mencoba-coba. Selisih dua kuadrat: [rum..."
+    },
+    {
+      "cardId": "das-aljabar-c4",
+      "topicId": "das-aljabar",
+      "topicTitle": "Bentuk Aljabar & Faktorisasi",
+      "track": "dasar",
+      "type": "teknik",
+      "title": "Pecahan aljabar",
+      "haystack": "pecahan aljabar pecahan aljabar bekerja persis seperti pecahan biasa. bedanya hanya pada satu hal: kamu harus memfaktorkan dulu sebelum bisa mencoret. untuk menyederhanakan , faktorkan pembilangnya: pencoretan itu sah karena adalah faktor utuh di atas dan di bawah. tanpa memfaktorkan dulu, tidak ada yang boleh dicoret. satu syarat yang sering terlupa: hasilnya berlaku untuk , karena di situ penyebut aslinya nol. nilai itu tetap terlarang walaupun sudah lenyap dari bentuk akhir. untuk menjumlahkan pecahan aljabar, sama seperti pecahan biasa — samakan penyebut lebih dulu, biasanya dengan mengalikan silang atau mencari kpk bentuknya. faktorkan dulu, baru coret hanya faktor utuh yang boleh dicoret nilai yang membuat penyebut nol tetap terlarang mencoret pada . yang boleh dicoret hanya faktor, dan di sini adalah suku yang sedang dijumlahkan. bentuk aljabar & faktorisasi",
+      "snippet": "Pecahan aljabar bekerja persis seperti pecahan biasa. Bedanya hanya pada satu hal: kamu harus memfaktorkan dulu sebelum bisa mencoret. Untuk menyederhanakan ..."
+    },
+    {
+      "cardId": "das-aljabar-c5",
+      "topicId": "das-aljabar",
+      "topicTitle": "Bentuk Aljabar & Faktorisasi",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada bentuk aljabar",
+      "haystack": "kesalahan khas pada bentuk aljabar mengkuadratkan suku demi suku. bukan . yang benar — ada suku tengah yang sering hilang. uji dengan : ruas kiri 4, sedangkan hanya 2. lupa tanda di depan kurung. sama dengan , bukan . tanda minus mengenai setiap suku di dalamnya. mencoret suku, bukan faktor. sudah dibahas, tapi pantas diulang karena ini yang paling sering muncul. berhenti terlalu cepat saat memfaktorkan. setelah mengeluarkan faktor persekutuan, periksa lagi apakah sisanya masih bisa difaktorkan. kebiasaan yang menolong: masukkan satu angka sederhana ke bentuk awal dan bentuk akhirmu. kalau hasilnya berbeda, ada yang salah. tanda minus mengenai seluruh isi kurung uji hasilmu dengan memasukkan satu angka menulis sehingga suku tengah hilang. bentuk aljabar & faktorisasi",
+      "snippet": "Mengkuadratkan suku demi suku. [rumus] bukan [rumus] . Yang benar [rumus] — ada suku tengah yang sering hilang. Uji dengan [rumus] : ruas kiri 4, sedangkan [..."
+    },
+    {
       "cardId": "das-bilangan-c1",
       "topicId": "das-bilangan",
       "topicTitle": "Bilangan Bulat & Pecahan",
@@ -50,6 +100,106 @@
       "title": "Kesalahan yang paling sering pada pecahan",
       "haystack": "kesalahan yang paling sering pada pecahan menjumlahkan penyebut. bukan . penyebut harus disamakan dulu, lalu hanya pembilangnya yang dijumlahkan: . mencoret suku, bukan faktor. pada kamu tidak boleh mencoret . pencoretan hanya sah untuk faktor yang mengalikan seluruh pembilang dan penyebut. lupa menyederhanakan. dan bernilai sama, tapi ujian biasanya meminta bentuk paling sederhana. salah tanda pada pecahan negatif. , , dan semuanya bernilai sama. yang berbeda adalah . uji cepat: ganti pecahan dengan desimal kasar dan periksa apakah hasilnya masuk akal. samakan penyebut sebelum menjumlah coret faktor, jangan coret suku selalu sederhanakan jawaban akhir menulis dengan menjumlahkan pembilang dan penyebut terpisah. bilangan bulat & pecahan",
       "snippet": "Menjumlahkan penyebut. [rumus] bukan [rumus] . Penyebut harus disamakan dulu, lalu hanya pembilangnya yang dijumlahkan: [rumus] . Mencoret suku, bukan faktor..."
+    },
+    {
+      "cardId": "das-garis-c1",
+      "topicId": "das-garis",
+      "topicTitle": "Geometri Analitik: Gradien, Garis & Jarak",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Gradien mengukur kecuraman",
+      "haystack": "gradien mengukur kecuraman gradien menjawab satu pertanyaan: kalau kamu melangkah satu satuan ke kanan, naik berapa? tandanya bercerita banyak. gradien positif berarti garis naik ke kanan; negatif berarti turun. gradien nol berarti mendatar — melangkah ke kanan tidak mengubah ketinggian. garis tegak tidak punya gradien sama sekali, bukan bergradien nol. melangkah ke kanan nol satuan membuat penyebutnya nol, dan pembagian itu tidak terdefinisi. makin besar nilai mutlak gradien, makin curam garisnya. gradien 5 jauh lebih curam daripada gradien , dan gradien sama curamnya dengan 5 — hanya arahnya berlawanan. positif naik, negatif turun, nol mendatar garis tegak: gradien tidak terdefinisi membalik urutan pengurangan hanya di pembilang, misalnya , sehingga tandanya terbalik. geometri analitik: gradien, garis & jarak",
+      "snippet": "Gradien menjawab satu pertanyaan: kalau kamu melangkah satu satuan ke kanan, naik berapa? [rumus] Tandanya bercerita banyak. Gradien positif berarti garis na..."
+    },
+    {
+      "cardId": "das-garis-c2",
+      "topicId": "das-garis",
+      "topicTitle": "Geometri Analitik: Gradien, Garis & Jarak",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Menyusun persamaan garis",
+      "haystack": "menyusun persamaan garis ada dua bentuk yang menutup hampir semua soal, dan memilih yang tepat menghemat langkah. kalau diketahui gradien dan satu titik: kalau diketahui dua titik: cari gradiennya dulu, lalu pakai rumus di atas dengan salah satu titik. memakai titik yang mana saja memberi persamaan yang sama. bentuk berguna untuk membaca gradien dan titik potong sumbu- sekaligus, tapi biasanya bukan bentuk yang paling cepat untuk menyusun. setelah dapat persamaannya, selalu uji dengan memasukkan salah satu titik yang diketahui. kalau tidak memenuhi, ada kesalahan tanda di suatu tempat — biasanya pada . dua titik: cari dulu uji hasilnya dengan titik yang diketahui menulis dengan tanda tambah. rumusnya memakai pengurangan pada kedua sisi. geometri analitik: gradien, garis & jarak",
+      "snippet": "Ada dua bentuk yang menutup hampir semua soal, dan memilih yang tepat menghemat langkah. Kalau diketahui gradien dan satu titik: [rumus] Kalau diketahui dua ..."
+    },
+    {
+      "cardId": "das-garis-c3",
+      "topicId": "das-garis",
+      "topicTitle": "Geometri Analitik: Gradien, Garis & Jarak",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Sejajar dan tegak lurus",
+      "haystack": "sejajar dan tegak lurus dua garis sejajar punya kecuraman sama, jadi gradiennya sama: . ini langsung masuk akal — sama curam berarti tidak pernah bertemu. dua garis tegak lurus punya hubungan yang lebih mengejutkan: kenapa begitu? memutar sebuah garis menukar peran dan , sekaligus membalik salah satu tandanya. gradien berubah menjadi , dan hasil kali keduanya memang . cara praktisnya: balik pecahannya, lalu ganti tandanya. gradien 2 tegak lurus dengan . perkecualian: garis mendatar dan garis tegak saling tegak lurus, tapi aturan hasil kali tidak berlaku karena gradien garis tegak tidak terdefinisi. sejajar: tegak lurus: praktisnya: balik pecahan, ganti tanda menganggap tegak lurus berarti gradiennya berlawanan tanda saja, misalnya mengira tegak lurus . hasil kalinya , bukan . geometri analitik: gradien, garis & jarak",
+      "snippet": "Dua garis sejajar punya kecuraman sama, jadi gradiennya sama: [rumus] . Ini langsung masuk akal — sama curam berarti tidak pernah bertemu. Dua garis tegak lu..."
+    },
+    {
+      "cardId": "das-garis-c4",
+      "topicId": "das-garis",
+      "topicTitle": "Geometri Analitik: Gradien, Garis & Jarak",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Jarak dan titik tengah",
+      "haystack": "jarak dan titik tengah jarak antara dua titik sebenarnya pythagoras yang menyamar. selisih dan selisih membentuk dua sisi tegak, dan jaraknya adalah sisi miring: karena kedua selisih dikuadratkan, urutan titiknya tidak berpengaruh — jarak dari a ke b sama dengan dari b ke a. titik tengah lebih sederhana lagi, cukup rata-ratakan tiap koordinat: kesalahan tersering pada titik tengah adalah mengurangkan alih-alih menjumlahkan, biasanya karena rumus jarak yang baru saja dipakai memang memakai pengurangan. uji kewajarannya sebelum menutup soal: titik tengah harus berada di antara kedua titik asal pada kedua koordinatnya, bukan di luarnya. titik tengah pasti berada di antara kedua titik memakai pengurangan pada rumus titik tengah, sehingga titiknya jatuh di luar ruas garis. geometri analitik: gradien, garis & jarak",
+      "snippet": "Jarak antara dua titik sebenarnya Pythagoras yang menyamar. Selisih [rumus] dan selisih [rumus] membentuk dua sisi tegak, dan jaraknya adalah sisi miring: [r..."
+    },
+    {
+      "cardId": "das-garis-c5",
+      "topicId": "das-garis",
+      "topicTitle": "Geometri Analitik: Gradien, Garis & Jarak",
+      "track": "dasar",
+      "type": "contoh",
+      "title": "Soal gabungan dikerjakan penuh",
+      "haystack": "soal gabungan dikerjakan penuh soal: tentukan persamaan garis yang tegak lurus dengan dan melalui titik . langkah 1 — cari gradien garis yang diketahui. ubah ke bentuk : , jadi gradiennya . langkah 2 — cari gradien garis yang dicari. syarat tegak lurus : , jadi . langkah 3 — susun persamaannya. langkah 4 — periksa. masukkan : . cocok. perhatikan langkah 3: titik membuat ruas kiri menjadi , bukan . ubah ke untuk membaca gradien tegak lurus: balik dan ganti tanda titik negatif membuat tanda menjadi tambah menulis padahal . mengurangi bilangan negatif berarti menambah, jadi yang benar . geometri analitik: gradien, garis & jarak",
+      "snippet": "Soal: tentukan persamaan garis yang tegak lurus dengan [rumus] dan melalui titik [rumus] . Langkah 1 — cari gradien garis yang diketahui. Ubah ke bentuk [rum..."
+    },
+    {
+      "cardId": "das-geometri-c1",
+      "topicId": "das-geometri",
+      "topicTitle": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Semua rumus luas berasal dari persegi panjang",
+      "haystack": "semua rumus luas berasal dari persegi panjang rumus luas terasa banyak kalau dihafal satu per satu. padahal semuanya turunan dari satu bentuk: persegi panjang, yang luasnya . segitiga adalah setengah persegi panjang. potong persegi panjang menurut diagonalnya dan kamu dapat dua segitiga sama besar. karena itu . jajargenjang bisa dipotong dan digeser menjadi persegi panjang dengan alas dan tinggi yang sama. karena itu , tanpa faktor setengah. trapesium adalah rata-rata dua sisi sejajar dikali tinggi: . kalau , rumusnya kembali menjadi jajargenjang. melihat hubungannya berarti kamu hanya perlu mengingat satu rumus dan menurunkan sisanya. segitiga: jajargenjang: trapesium: memakai sisi miring sebagai tinggi segitiga. tinggi harus tegak lurus terhadap alas, bukan sekadar sisi yang terlihat menjulang. geometri bidang: segitiga, segiempat, lingkaran",
+      "snippet": "Rumus luas terasa banyak kalau dihafal satu per satu. Padahal semuanya turunan dari satu bentuk: persegi panjang, yang luasnya [rumus] . Segitiga adalah sete..."
+    },
+    {
+      "cardId": "das-geometri-c2",
+      "topicId": "das-geometri",
+      "topicTitle": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+      "track": "dasar",
+      "type": "rumus",
+      "title": "Lingkaran: keliling dan luas",
+      "haystack": "lingkaran: keliling dan luas lingkaran punya dua rumus yang sering tertukar, padahal bisa dibedakan dari satuannya. keliling adalah panjang, jadi satuannya cm — dan rumusnya memuat pangkat satu. luas adalah daerah, satuannya cm — dan rumusnya memuat . kalau ragu, lihat pangkatnya: pangkat dua berarti luas. untuk juring dengan sudut pusat , ambil bagiannya dari lingkaran penuh: pakai kalau jari-jarinya kelipatan 7, dan untuk yang lain. pemilihan ini bukan aturan baku, hanya kebiasaan yang membuat hitungannya berakhir bulat sehingga kamu punya petunjuk tambahan bahwa jawabanmu kemungkinan besar benar. juring: ambil bagiannya pangkat dua luas memakai diameter sebagai dalam rumus luas. kalau yang diketahui diameter, bagi dua lebih dulu. geometri bidang: segitiga, segiempat, lingkaran",
+      "snippet": "Lingkaran punya dua rumus yang sering tertukar, padahal bisa dibedakan dari satuannya. [rumus] Keliling adalah panjang, jadi satuannya cm — dan rumusnya memu..."
+    },
+    {
+      "cardId": "das-geometri-c3",
+      "topicId": "das-geometri",
+      "topicTitle": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Menghitung luas bangun gabungan",
+      "haystack": "menghitung luas bangun gabungan soal luas jarang memberi bangun tunggal yang rapi. biasanya berupa gabungan, dan strateginya selalu sama. 1. pecah bangunnya menjadi bentuk-bentuk yang rumusnya kamu tahu. 2. kalau ada bagian yang berlubang, hitung bangun luarnya lalu kurangi lubangnya. 3. hitung tiap bagian secara terpisah, tuliskan hasilnya. 4. jumlahkan atau kurangkan sesuai bentuknya. cara memecahnya tidak tunggal. daerah berbentuk l bisa dipecah jadi dua persegi panjang dengan dua cara berbeda, atau dihitung sebagai persegi panjang besar dikurangi satu sudut. ketiganya memberi jawaban sama — pilih yang ukurannya paling mudah kamu baca dari gambar. tulis ukuran tiap potongan di gambar sebelum menghitung. kebanyakan kesalahan lahir dari salah membaca ukuran, bukan salah rumus. pecah jadi bangun yang rumusnya dikenal bagian berlubang dikurangkan tandai ukuran tiap potongan sebelum menghitung mengurangi luas lubang dari bangun yang salah, misalnya mengurangi dari salah satu potongan padahal lubangnya ada di potongan lain. geometri bidang: segitiga, segiempat, lingkaran",
+      "snippet": "Soal luas jarang memberi bangun tunggal yang rapi. Biasanya berupa gabungan, dan strateginya selalu sama. 1. Pecah bangunnya menjadi bentuk-bentuk yang rumus..."
+    },
+    {
+      "cardId": "das-geometri-c4",
+      "topicId": "das-geometri",
+      "topicTitle": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Sudut pada segitiga dan segiempat",
+      "haystack": "sudut pada segitiga dan segiempat jumlah sudut dalam segitiga selalu . ini bukan kebetulan, dan buktinya bisa dibayangkan: robek ketiga sudut segitiga kertas lalu rapatkan ujung-ujungnya — ketiganya membentuk garis lurus. dari situ semua yang lain mengikuti. segiempat bisa dipotong jadi dua segitiga, jadi jumlah sudutnya . segi lima jadi tiga segitiga, yaitu . polanya: untuk segi banyak beraturan, tiap sudutnya sama besar, jadi tinggal dibagi . sudut luar segitiga sama dengan jumlah dua sudut dalam yang tidak bersebelahan dengannya — sering memangkas satu langkah perhitungan. segitiga: segi- : sudut luar = jumlah dua sudut dalam jauh memakai rumus lalu langsung menjawab tanpa membagi , padahal yang ditanya besar satu sudut pada segi banyak beraturan. geometri bidang: segitiga, segiempat, lingkaran",
+      "snippet": "Jumlah sudut dalam segitiga selalu [rumus] . Ini bukan kebetulan, dan buktinya bisa dibayangkan: robek ketiga sudut segitiga kertas lalu rapatkan ujung-ujung..."
+    },
+    {
+      "cardId": "das-geometri-c5",
+      "topicId": "das-geometri",
+      "topicTitle": "Geometri Bidang: Segitiga, Segiempat, Lingkaran",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada geometri bidang",
+      "haystack": "kesalahan khas pada geometri bidang memakai sisi miring sebagai tinggi. tinggi selalu tegak lurus alas. pada segitiga tumpul, tingginya bahkan bisa jatuh di luar segitiga itu sendiri. tertukar jari-jari dan diameter. kalau soal memberi diameter, bagi dua sebelum masuk ke rumus yang memakai . satuan tidak seragam. panjang dalam meter dicampur sentimeter menghasilkan angka yang jauh meleset. samakan satuan sebelum menghitung, bukan sesudah. menjawab pertanyaan yang salah. soal meminta keliling, kamu menghitung luas. ini kesalahan yang paling disesali karena hitungannya sendiri benar. periksa kewajaran hasil: luas harus punya satuan persegi, dan tidak mungkin lebih kecil dari bagian-bagiannya. tinggi selalu tegak lurus alas diameter dibagi dua sebelum dipakai sebagai samakan satuan sebelum menghitung baca ulang: keliling atau luas? memasukkan diameter ke rumus sehingga luasnya menjadi empat kali lipat dari seharusnya. geometri bidang: segitiga, segiempat, lingkaran",
+      "snippet": "Memakai sisi miring sebagai tinggi. Tinggi selalu tegak lurus alas. Pada segitiga tumpul, tingginya bahkan bisa jatuh di luar segitiga itu sendiri. Tertukar ..."
     },
     {
       "cardId": "das-kuadrat-c1",
@@ -152,6 +302,56 @@
       "snippet": "Jawaban pertidaksamaan berupa sekumpulan bilangan, bukan satu angka. Ada tiga cara menuliskannya dan ujian bisa memakai ketiganya. Notasi himpunan: [rumus] ,..."
     },
     {
+      "cardId": "das-pythagoras-c1",
+      "topicId": "das-pythagoras",
+      "topicTitle": "Teorema Pythagoras & Kesebangunan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Pythagoras adalah hubungan luas",
+      "haystack": "pythagoras adalah hubungan luas rumus biasanya dihafal sebagai hubungan panjang. padahal namanya sendiri memberi petunjuk: yang dijumlahkan adalah luas persegi . bayangkan persegi dibangun pada tiap sisi segitiga siku-siku. teoremanya menyatakan: luas dua persegi kecil, dijumlahkan, tepat sama dengan luas persegi besar pada sisi miring. dari cara pandang ini, dua hal langsung jelas. pertama, selalu sisi terpanjang — luasnya sama dengan dua luas lain digabung, jadi tidak mungkin lebih kecil. kedua, teoremanya hanya berlaku untuk segitiga siku-siku ; tanpa sudut hubungan luas itu tidak ada. beberapa tripel bulat sering muncul dan pantas dikenali: , , , serta kelipatannya. dengan sisi miring hanya berlaku pada segitiga siku-siku tripel sering: , , menempatkan sisi miring sebagai atau . sisi miring selalu yang berseberangan dengan sudut siku-siku, dan selalu yang terpanjang. teorema pythagoras & kesebangunan",
+      "snippet": "Rumus [rumus] biasanya dihafal sebagai hubungan panjang. Padahal namanya sendiri memberi petunjuk: yang dijumlahkan adalah luas persegi. Bayangkan persegi di..."
+    },
+    {
+      "cardId": "das-pythagoras-c2",
+      "topicId": "das-pythagoras",
+      "topicTitle": "Teorema Pythagoras & Kesebangunan",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Memeriksa jenis segitiga dari sisinya",
+      "haystack": "memeriksa jenis segitiga dari sisinya teorema pythagoras bisa dibalik menjadi alat penguji. ambil tiga panjang sisi, kuadratkan yang terpanjang, lalu bandingkan dengan jumlah kuadrat dua lainnya. - kalau : siku-siku - kalau : tumpul - kalau : lancip arahnya masuk akal. kalau sudut terbesar melebar melewati , sisi di hadapannya ikut memanjang, sehingga menjadi lebih besar. satu syarat sering terlewat: ketiga panjang itu harus bisa membentuk segitiga lebih dulu. jumlah dua sisi terpendek wajib melebihi sisi terpanjang. tanpa syarat itu, segitiganya tidak ada sama sekali dan pertanyaan jenisnya tidak berlaku. siku-siku tumpul lancip syarat segitiga: jumlah dua sisi terpendek sisi terpanjang menguji dengan sisi yang bukan terpanjang sebagai , sehingga kesimpulan jenis segitiganya terbalik. teorema pythagoras & kesebangunan",
+      "snippet": "Teorema Pythagoras bisa dibalik menjadi alat penguji. Ambil tiga panjang sisi, kuadratkan yang terpanjang, lalu bandingkan dengan jumlah kuadrat dua lainnya...."
+    },
+    {
+      "cardId": "das-pythagoras-c3",
+      "topicId": "das-pythagoras",
+      "topicTitle": "Teorema Pythagoras & Kesebangunan",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Sebangun berarti perbandingan sisi tetap",
+      "haystack": "sebangun berarti perbandingan sisi tetap dua bangun disebut sebangun kalau bentuknya sama persis tapi ukurannya boleh berbeda — seperti foto yang diperbesar tanpa berubah proporsi. syaratnya dua: sudut-sudut yang bersesuaian sama besar, dan sisi-sisi yang bersesuaian punya perbandingan yang tetap. perbandingan tetap itulah yang membuat kesebangunan berguna. kalau kamu tahu satu pasang sisi yang bersesuaian, kamu tahu faktor pengalinya, dan semua sisi lain bisa dihitung. untuk segitiga, cukup dua sudut sama untuk menjamin sebangun — sudut ketiganya otomatis sama karena jumlahnya selalu . ingat akibat pada luas: kalau sisinya berbanding , luasnya berbanding . sudut bersesuaian sama, sisi bersesuaian berbanding tetap dua sudut sama sudah cukup untuk segitiga sisi berarti luas memasangkan sisi yang tidak bersesuaian. sisi terpanjang satu bangun harus dipasangkan dengan sisi terpanjang bangun lainnya. teorema pythagoras & kesebangunan",
+      "snippet": "Dua bangun disebut sebangun kalau bentuknya sama persis tapi ukurannya boleh berbeda — seperti foto yang diperbesar tanpa berubah proporsi. Syaratnya dua: su..."
+    },
+    {
+      "cardId": "das-pythagoras-c4",
+      "topicId": "das-pythagoras",
+      "topicTitle": "Teorema Pythagoras & Kesebangunan",
+      "track": "dasar",
+      "type": "teknik",
+      "title": "Segitiga siku-siku bertingkat",
+      "haystack": "segitiga siku-siku bertingkat kalau dari sudut siku-siku ditarik garis tinggi ke sisi miring, terbentuk tiga segitiga yang semuanya sebangun — segitiga besar dan dua segitiga kecil di dalamnya. dari kesebangunan itu lahir tiga hubungan yang sering muncul di soal. dengan dan sebagai potongan sisi miring dan sebagai garis tinggi: pola ketiganya sama: tiap panjang dikuadratkan sama dengan hasil kali dua potongan yang \"menopang\"-nya. menghafal ketiganya tidak wajib. kalau kamu ingat bahwa ketiga segitiga itu sebangun, kamu bisa menurunkannya sendiri dengan menyusun perbandingan sisi yang bersesuaian. dan ketiga segitiga yang terbentuk saling sebangun memasangkan potongan sisi miring dengan sisi tegak yang salah, misalnya memakai padahal berada di seberang . teorema pythagoras & kesebangunan",
+      "snippet": "Kalau dari sudut siku-siku ditarik garis tinggi ke sisi miring, terbentuk tiga segitiga yang semuanya sebangun — segitiga besar dan dua segitiga kecil di dal..."
+    },
+    {
+      "cardId": "das-pythagoras-c5",
+      "topicId": "das-pythagoras",
+      "topicTitle": "Teorema Pythagoras & Kesebangunan",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada Pythagoras",
+      "haystack": "kesalahan khas pada pythagoras memakai pythagoras pada segitiga bukan siku-siku. rumus ini punya syarat, dan tanpa sudut hasilnya tidak bermakna apa-apa. menempatkan sisi miring di tempat yang salah. kalau yang dicari sisi tegak, rumusnya menjadi pengurangan: . menjumlahkan justru memberi angka yang terlalu besar. lupa mengakarkan. setelah dapat , jawabannya 10, bukan 100. kesalahan ini mudah tertangkap kalau kamu memeriksa kewajaran panjangnya. memakai faktor skala biasa untuk luas. sisi berbanding berarti luas berbanding . uji cepat: sisi miring harus lebih panjang dari kedua sisi tegak, tapi lebih pendek dari jumlah keduanya. syaratnya segitiga siku-siku mencari sisi tegak berarti mengurangkan jangan lupa mengakarkan di akhir berhenti di lalu menjawab 100, padahal yang ditanya yaitu 10. teorema pythagoras & kesebangunan",
+      "snippet": "Memakai Pythagoras pada segitiga bukan siku-siku. Rumus ini punya syarat, dan tanpa sudut [rumus] hasilnya tidak bermakna apa-apa. Menempatkan sisi miring di..."
+    },
+    {
       "cardId": "das-rasio-c1",
       "topicId": "das-rasio",
       "topicTitle": "Rasio, Perbandingan & Persen",
@@ -200,6 +400,56 @@
       "title": "Soal campuran dikerjakan penuh",
       "haystack": "soal campuran dikerjakan penuh soal: sebuah toko menaikkan harga barang dari harga beli, lalu memberi diskon pada harga jual. jika harga beli rp200.000, berapa keuntungan toko? langkah 1 — harga jual sebelum diskon. naik berarti dikali : langkah 2 — harga setelah diskon. diskon berarti dikali , dan dihitung dari harga jual, bukan harga beli: langkah 3 — keuntungan. keuntungan adalah harga akhir dikurangi harga beli: langkah 4 — periksa kewajaran. untungnya , masuk akal karena berada di antara dan nol setelah dipotong diskon. naik lalu turun persen: pakai pengali berturutan diskon dihitung dari harga jual, bukan harga beli untung = harga akhir harga beli menghitung diskon dari harga beli padahal diskon diberikan pada harga jual. rasio, perbandingan & persen",
       "snippet": "Soal: sebuah toko menaikkan harga barang [rumus] dari harga beli, lalu memberi diskon [rumus] pada harga jual. Jika harga beli Rp200.000, berapa keuntungan t..."
+    },
+    {
+      "cardId": "das-splv-c1",
+      "topicId": "das-splv",
+      "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+      "track": "dasar",
+      "type": "konsep",
+      "title": "Penyelesaian adalah titik potong",
+      "haystack": "penyelesaian adalah titik potong satu persamaan linear dua variabel seperti punya tak hingga penyelesaian — , , , dan seterusnya. kalau digambar, semuanya membentuk sebuah garis. dua persamaan berarti dua garis. penyelesaian sistemnya adalah titik yang memenuhi keduanya sekaligus, yaitu titik potong kedua garis. dari cara pandang ini, tiga kemungkinan langsung masuk akal: - kedua garis berpotongan di satu titik: tepat satu penyelesaian - kedua garis sejajar dan berbeda: tidak ada penyelesaian - kedua garis berimpit: tak hingga penyelesaian jadi kalau saat mengerjakan kamu mendapat pernyataan mustahil seperti , itu bukan kesalahan hitung — itu tandanya garisnya sejajar dan sistemnya memang tidak punya penyelesaian. penyelesaian = titik potong kedua garis dengan berarti tidak ada penyelesaian berarti tak hingga penyelesaian menganggap hasil sebagai kesalahan hitung lalu mengulang dari awal, padahal itu justru jawabannya: sistemnya tidak punya penyelesaian. sistem persamaan linear (spldv & spltv)",
+      "snippet": "Satu persamaan linear dua variabel seperti [rumus] punya tak hingga penyelesaian — [rumus] , [rumus] , [rumus] , dan seterusnya. Kalau digambar, semuanya mem..."
+    },
+    {
+      "cardId": "das-splv-c2",
+      "topicId": "das-splv",
+      "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Eliminasi: buat satu variabel lenyap",
+      "haystack": "eliminasi: buat satu variabel lenyap eliminasi bekerja dengan menyamakan koefisien satu variabel, lalu menjumlahkan atau mengurangkan kedua persamaan sehingga variabel itu hilang. 1. pilih variabel yang paling mudah disamakan koefisiennya. 2. kalikan salah satu atau kedua persamaan sampai koefisiennya sama besar. 3. jumlahkan kalau tandanya berlawanan, kurangkan kalau tandanya sama. 4. selesaikan persamaan satu variabel yang tersisa. 5. substitusikan kembali untuk mendapat variabel yang satunya. 6. periksa di kedua persamaan asli. contoh: dan . kalikan persamaan kedua dengan 3: . jumlahkan dengan yang pertama: , jadi , lalu . langkah 6 penting: memeriksa di satu persamaan saja tidak menangkap semua kesalahan. samakan koefisien salah satu variabel tanda berlawanan dijumlah, tanda sama dikurang periksa di kedua persamaan asli mengalikan hanya sebagian suku saat menyamakan koefisien. seluruh persamaan, termasuk ruas kanan, harus ikut dikalikan. sistem persamaan linear (spldv & spltv)",
+      "snippet": "Eliminasi bekerja dengan menyamakan koefisien satu variabel, lalu menjumlahkan atau mengurangkan kedua persamaan sehingga variabel itu hilang. 1. Pilih varia..."
+    },
+    {
+      "cardId": "das-splv-c3",
+      "topicId": "das-splv",
+      "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+      "track": "dasar",
+      "type": "prosedur",
+      "title": "Substitusi: ganti satu dengan yang lain",
+      "haystack": "substitusi: ganti satu dengan yang lain substitusi lebih cepat dari eliminasi ketika salah satu persamaan sudah menyatakan satu variabel secara langsung, atau mudah diubah ke bentuk itu. 1. dari salah satu persamaan, nyatakan satu variabel dalam variabel lainnya. 2. masukkan bentuk itu ke persamaan yang lain — bukan ke persamaan asalnya. 3. selesaikan persamaan satu variabel yang dihasilkan. 4. substitusikan balik untuk mendapat variabel kedua. contoh: dan . masukkan ke persamaan kedua: , jadi dan . lalu . langkah 2 punya jebakan: memasukkan kembali ke persamaan asalnya akan memberi , yang benar tapi tidak memberitahu apa-apa. nyatakan satu variabel, masukkan ke persamaan lain paling cepat bila satu persamaan sudah berbentuk substitusi balik untuk variabel kedua memasukkan bentuk yang sudah diubah kembali ke persamaan asalnya, sehingga hasilnya dan tidak ada kemajuan. sistem persamaan linear (spldv & spltv)",
+      "snippet": "Substitusi lebih cepat dari eliminasi ketika salah satu persamaan sudah menyatakan satu variabel secara langsung, atau mudah diubah ke bentuk itu. 1. Dari sa..."
+    },
+    {
+      "cardId": "das-splv-c4",
+      "topicId": "das-splv",
+      "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+      "track": "dasar",
+      "type": "teknik",
+      "title": "Tiga variabel: kurangi jadi dua",
+      "haystack": "tiga variabel: kurangi jadi dua sistem tiga variabel terlihat menakutkan, padahal strateginya cuma satu: kurangi menjadi sistem dua variabel yang sudah kamu kuasai. 1. pilih satu variabel untuk dilenyapkan, misalnya . 2. eliminasi dari pasangan persamaan pertama dan kedua. hasilnya satu persamaan dua variabel. 3. eliminasi juga dari pasangan kedua dan ketiga. hasilnya persamaan dua variabel yang kedua. 4. sekarang kamu punya sistem dua variabel — selesaikan seperti biasa. 5. substitusikan balik ke salah satu persamaan awal untuk mendapat variabel ketiga. yang sering salah di langkah 3: memakai kembali pasangan persamaan yang sama seperti langkah 2. pasangannya harus berbeda, supaya informasi dari persamaan ketiga benar-benar terpakai. pilih variabel yang koefisiennya paling sederhana untuk dilenyapkan lebih dulu. lenyapkan satu variabel dari dua pasangan berbeda hasilnya sistem dua variabel yang biasa substitusi balik untuk variabel ketiga memakai pasangan persamaan yang sama dua kali saat mengeliminasi, sehingga persamaan ketiga tidak pernah terpakai dan sistemnya tidak terselesaikan. sistem persamaan linear (spldv & spltv)",
+      "snippet": "Sistem tiga variabel terlihat menakutkan, padahal strateginya cuma satu: kurangi menjadi sistem dua variabel yang sudah kamu kuasai. 1. Pilih satu variabel u..."
+    },
+    {
+      "cardId": "das-splv-c5",
+      "topicId": "das-splv",
+      "topicTitle": "Sistem Persamaan Linear (SPLDV & SPLTV)",
+      "track": "dasar",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada sistem persamaan",
+      "haystack": "kesalahan khas pada sistem persamaan menjawab setengah pertanyaan. soal sering meminta atau , bukan saja. baca lagi pertanyaannya setelah selesai menghitung. mengalikan tidak seluruh persamaan. saat menyamakan koefisien, ruas kanan juga harus ikut dikalikan. melewatkannya mengubah persamaan itu menjadi persamaan lain. salah tanda saat mengurangkan. memberi , bukan . tanda minus mengenai seluruh kurung kedua. memeriksa di satu persamaan saja. jawaban yang salah kadang tetap memenuhi salah satu persamaan. hanya pemeriksaan di keduanya yang meyakinkan. pada soal cerita, tuliskan dulu apa yang diwakili tiap huruf. beberapa menit itu mencegah tertukarnya variabel di akhir. baca ulang apa yang sebenarnya ditanya kalikan seluruh persamaan, termasuk ruas kanan periksa jawaban di kedua persamaan mengurangkan menjadi karena tanda minus tidak dikenakan pada suku . sistem persamaan linear (spldv & spltv)",
+      "snippet": "Menjawab setengah pertanyaan. Soal sering meminta [rumus] atau [rumus] , bukan [rumus] saja. Baca lagi pertanyaannya setelah selesai menghitung. Mengalikan t..."
     },
     {
       "cardId": "lan-integral-tentu-c1",
