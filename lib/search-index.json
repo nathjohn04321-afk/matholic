@@ -552,6 +552,56 @@
       "snippet": "1. Memakai [rumus] pada bilangan negatif. Aturan itu hanya berlaku untuk bilangan tak negatif. Ubah dulu ke bentuk [rumus] : [rumus] , bukan [rumus] . 2. Sal..."
     },
     {
+      "cardId": "lan-distribusi-peluang-c1",
+      "topicId": "lan-distribusi-peluang",
+      "topicTitle": "Distribusi Binomial dan Normal",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Peubah acak dan sebarannya",
+      "haystack": "peubah acak dan sebarannya sampai sekarang kamu menghitung peluang satu kejadian tertentu. distribusi peluang melangkah lebih jauh: ia mendaftar semua hasil yang mungkin beserta peluangnya sekaligus. alatnya adalah peubah acak, yaitu aturan yang memberi angka pada setiap hasil percobaan. melempar tiga koin punya delapan hasil; kalau menyatakan banyaknya angka yang muncul, maka hanya bernilai , atau . ada dua jenis, dan pembedanya menentukan cara menghitungnya: diskret — nilainya bisa didaftar satu per satu, seperti banyaknya lemparan yang berhasil atau jumlah cacat pada sekotak barang. peluang tiap nilai dihitung sendiri-sendiri. kontinu — nilainya bisa apa saja dalam suatu selang, seperti tinggi badan atau waktu tunggu. di sini peluang pada satu titik justru nol, dan yang bermakna hanya peluang pada sebuah selang. berapa pun jenisnya, seluruh peluang selalu berjumlah — karena salah satu hasil pasti terjadi. peubah acak memberi angka pada setiap hasil percobaan diskret bisa didaftar; kontinu mengisi selang seluruh peluang dalam satu sebaran berjumlah menanyakan peluang sebuah nilai tunggal pada sebaran kontinu, misalnya peluang tinggi badan tepat cm. peluangnya nol, karena ada tak hingga banyak nilai di sekitarnya. yang bisa ditanyakan hanya peluang pada suatu selang. distribusi binomial dan normal",
+      "snippet": "Sampai sekarang kamu menghitung peluang satu kejadian tertentu. Distribusi peluang melangkah lebih jauh: ia mendaftar semua hasil yang mungkin beserta peluan..."
+    },
+    {
+      "cardId": "lan-distribusi-peluang-c2",
+      "topicId": "lan-distribusi-peluang",
+      "topicTitle": "Distribusi Binomial dan Normal",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Distribusi binomial",
+      "haystack": "distribusi binomial distribusi binomial berlaku kalau percobaanmu memenuhi empat syarat sekaligus: 1. banyaknya percobaan tetap, sebut 2. setiap percobaan hanya punya dua hasil: berhasil atau gagal 3. peluang berhasil sama di setiap percobaan 4. antar percobaan saling bebas kalau keempatnya terpenuhi, peluang mendapat tepat keberhasilan adalah: ketiga bagiannya punya arti masing-masing. bagian adalah peluang keberhasilan, adalah peluang sisanya gagal, dan menghitung ada berapa susunan yang menghasilkan keberhasilan itu. tanpa faktor terakhir kamu hanya menghitung satu urutan tertentu, bukan seluruhnya. rata-rata dan simpangan bakunya singkat: syarat ketiga sering luput diperiksa. mengambil kartu tanpa pengembalian melanggarnya, karena peluang berubah setiap kali satu kartu keluar. binomial butuh tetap, dua hasil, tetap, dan saling bebas dan memakai binomial untuk pengambilan tanpa pengembalian. setelah satu benda diambil, peluang berikutnya berubah, sehingga syarat \" tetap\" gugur dan rumusnya memberi jawaban yang meleset. distribusi binomial dan normal",
+      "snippet": "Distribusi binomial berlaku kalau percobaanmu memenuhi empat syarat sekaligus: 1. Banyaknya percobaan tetap, sebut [rumus] 2. Setiap percobaan hanya punya du..."
+    },
+    {
+      "cardId": "lan-distribusi-peluang-c3",
+      "topicId": "lan-distribusi-peluang",
+      "topicTitle": "Distribusi Binomial dan Normal",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Distribusi normal dan bentuk loncengnya",
+      "haystack": "distribusi normal dan bentuk loncengnya banyak besaran alami — tinggi badan, nilai ujian, kesalahan pengukuran — menyebar mengikuti satu bentuk yang sama: kurva lonceng yang simetris, disebut distribusi normal. sebarannya ditentukan sepenuhnya oleh dua angka. rata-rata menetapkan letak puncaknya, dan simpangan baku menetapkan lebarnya. semua kurva normal berbentuk sama, hanya bergeser dan melar. tiga kenyataan yang berguna dihafal: - sekitar data berada dalam - sekitar berada dalam - sekitar berada dalam karena setiap pasangan dan memberi kurva berbeda, tabel peluangnya disusun hanya untuk satu kasus baku, yaitu dan . untuk memakainya, ubah dulu nilaimu menjadi skor baku: skor menjawab pertanyaan \"berapa simpangan baku nilai ini dari rata-ratanya\". nilai berarti dua simpangan baku di atas rata-rata, dan artinya sama saja apakah datanya tinggi badan atau nilai ujian. normal ditentukan oleh (letak) dan (lebar) , , untuk 1, 2, 3 simpangan baku menyatakan jarak dalam satuan membagi dengan ragam alih-alih simpangan baku saat menghitung . untuk , pembaginya dan bukan — memakai ragam akan mengecilkan skornya lima kali lipat. distribusi binomial dan normal",
+      "snippet": "Banyak besaran alami — tinggi badan, nilai ujian, kesalahan pengukuran — menyebar mengikuti satu bentuk yang sama: kurva lonceng yang simetris, disebut distr..."
+    },
+    {
+      "cardId": "lan-distribusi-peluang-c4",
+      "topicId": "lan-distribusi-peluang",
+      "topicTitle": "Distribusi Binomial dan Normal",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Membaca tabel normal baku",
+      "haystack": "membaca tabel normal baku tabel memberi , yaitu peluang mendapat nilai di bawah . semua jenis pertanyaan lain diturunkan dari situ. peluang di bawah suatu nilai. langsung baca tabelnya. untuk , hasilnya . peluang di atas suatu nilai. kurangkan dari satu: peluang di antara dua nilai. kurangkan yang kecil dari yang besar: nilai negatif. manfaatkan simetri kurvanya: contoh lengkap: nilai ujian normal dengan , , dan kamu ingin peluang seorang siswa mendapat di bawah . hitung , lalu baca tabel: . jadi sekitar siswa mendapat nilai di bawah . menggambar sketsa kurva dan mengarsir daerah yang dicari akan mencegah sebagian besar kesalahan pengurangan. tabel selalu memberi peluang di sebelah kiri di kanan: kurangkan dari 1. di antara: selisih dua bacaan sketsa dan arsiran mencegah salah arah pengurangan membaca tabel sebagai peluang di sebelah kanan. untuk positif, bacaan tabel selalu lebih dari karena mencakup seluruh separuh kiri kurva — kalau jawabanmu untuk daerah kanan keluar di atas , hampir pasti arahnya tertukar. distribusi binomial dan normal",
+      "snippet": "Tabel [rumus] memberi [rumus] , yaitu peluang mendapat nilai di bawah [rumus] . Semua jenis pertanyaan lain diturunkan dari situ. Peluang di bawah suatu nila..."
+    },
+    {
+      "cardId": "lan-distribusi-peluang-c5",
+      "topicId": "lan-distribusi-peluang",
+      "topicTitle": "Distribusi Binomial dan Normal",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan distribusi",
+      "haystack": "empat jebakan distribusi 1. memakai binomial saat berubah. mengambil bola tanpa pengembalian membuat peluang berubah di setiap pengambilan. syarat \" tetap\" gugur, dan rumus binomial tidak berlaku. 2. melupakan faktor . tanpa faktor itu kamu menghitung peluang satu urutan tertentu, bukan seluruh susunan yang memberi keberhasilan. jawabannya akan jauh terlalu kecil. 3. membagi dengan saat mencari . pembaginya simpangan baku, bukan ragam. periksa satuannya: bersatuan sama dengan datanya, dan hanya pembagian dengan yang membuat menjadi bilangan tanpa satuan. 4. salah arah saat membaca tabel. tabel memberi daerah kiri. untuk positif, bacaan tabel selalu lebih besar dari — kalau hasil akhirmu untuk daerah kanan justru di atas , arahnya tertukar. untuk soal binomial, periksa keempat syaratnya sebelum memasang rumus. untuk soal normal, gambar kurvanya dan arsir daerah yang diminta sebelum menghitung. periksa keempat syarat sebelum memakai binomial dibagi , bukan tabel memberi daerah kiri, selalu menganggap semua soal peluang dengan dua kemungkinan otomatis binomial. pengambilan tanpa pengembalian juga punya dua hasil, tapi peluangnya berubah — dan itu sudah cukup membatalkan syaratnya. distribusi binomial dan normal",
+      "snippet": "1. Memakai binomial saat [rumus] berubah. Mengambil bola tanpa pengembalian membuat peluang berubah di setiap pengambilan. Syarat \" [rumus] tetap\" gugur, dan..."
+    },
+    {
       "cardId": "lan-integral-tentu-c1",
       "topicId": "lan-integral-tentu",
       "topicTitle": "Integral Tentu & Aplikasinya",
@@ -750,6 +800,56 @@
       "title": "Empat jebakan logika dan induksi",
       "haystack": "empat jebakan logika dan induksi 1. menganggap konvers senilai dengan implikasi. dari \"jika maka \" dan kenyataan , kamu tidak boleh menyimpulkan . hanya kontraposisi yang aman. 2. mengingkari \"semua\" menjadi \"semua tidak\". ingkaran dari \"semua siswa hadir\" adalah \"ada siswa yang tidak hadir\" — satu contoh sudah cukup. begitu pula ingkaran \"ada\" adalah \"semua tidak\". 3. melewatkan langkah dasar. pernyataan lolos langkah induksi dengan mulus, karena dari memang mengikuti . yang menggagalkannya justru langkah dasar, yang tidak pernah terpenuhi. 4. mengira langkah dasar selalu . pernyataan salah untuk tapi benar mulai . untuk soal seperti ini langkah dasarnya , dan kesimpulannya hanya berlaku untuk . pemeriksaan tercepat sebelum mulai membuktikan: hitung dua atau tiga kasus kecil. kalau salah satunya meleset, rumusnya memang salah — dan kamu tidak perlu membuang waktu membuktikannya. hanya kontraposisi yang senilai dengan implikasi ingkaran \"semua\" adalah \"ada yang tidak\" langkah dasar tidak selalu langsung menyusun bukti induksi tanpa menguji satu pun kasus kecil. beberapa rumus yang tampak masuk akal ternyata salah sejak , dan pengujian sepuluh detik menghemat satu halaman kerja sia-sia. logika matematika dan induksi",
       "snippet": "1. Menganggap konvers senilai dengan implikasi. Dari \"jika [rumus] maka [rumus] \" dan kenyataan [rumus] , kamu tidak boleh menyimpulkan [rumus] . Hanya kontr..."
+    },
+    {
+      "cardId": "lan-matematika-keuangan-c1",
+      "topicId": "lan-matematika-keuangan",
+      "topicTitle": "Matematika Keuangan",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Bunga tunggal dan bunga majemuk",
+      "haystack": "bunga tunggal dan bunga majemuk dua cara menghitung bunga, dan selisihnya jauh lebih besar dari yang terlihat. bunga tunggal dihitung selalu dari modal awal saja. bunga yang sudah diterima tidak ikut berbunga. bunga majemuk dihitung dari saldo terakhir, jadi bunga pun ikut berbunga. perhatikan bentuk keduanya. bunga tunggal tumbuh linear — grafiknya garis lurus. bunga majemuk tumbuh eksponen — grafiknya melengkung naik makin curam. untuk jangka pendek selisihnya kecil, tapi untuk jangka panjang ia menjadi sangat besar. contoh dengan modal rp2.000.000 dan bunga per tahun selama 4 tahun: - tunggal: - majemuk: selisihnya sekitar rp45.000 dalam empat tahun. dalam tiga puluh tahun, selisih yang sama berkembang menjadi berlipat-lipat modal awalnya. tunggal: , tumbuh linear majemuk: , tumbuh eksponen selisihnya kecil di awal, sangat besar di jangka panjang menuliskan bunga majemuk sebagai dengan pangkat terlupa. perbedaan antara mengalikan dan memangkatkan adalah perbedaan antara pertumbuhan linear dan eksponen — dan hasilnya berbeda jauh. matematika keuangan",
+      "snippet": "Dua cara menghitung bunga, dan selisihnya jauh lebih besar dari yang terlihat. Bunga tunggal dihitung selalu dari modal awal saja. Bunga yang sudah diterima ..."
+    },
+    {
+      "cardId": "lan-matematika-keuangan-c2",
+      "topicId": "lan-matematika-keuangan",
+      "topicTitle": "Matematika Keuangan",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Periode bunga yang bukan tahunan",
+      "haystack": "periode bunga yang bukan tahunan bunga sering dihitung lebih sering daripada setahun sekali — tiap bulan, tiap tiga bulan, atau tiap semester. aturannya dua langkah, dan keduanya harus dikerjakan bersamaan: bagi suku bunganya dengan banyaknya periode per tahun, dan kalikan banyaknya periode dengan lamanya tahun. dengan banyaknya periode per tahun, suku bunga tahunan, dan lamanya dalam tahun. contoh: rp1.000.000 dengan bunga per tahun selama satu tahun. - dimajemukkan setahun sekali: - dimajemukkan tiap bulan: suku bunga tahunannya sama persis, tapi hasilnya berbeda hampir rp7.000. makin sering dimajemukkan, makin besar hasilnya, karena bunga mulai berbunga lebih cepat. inilah alasan iklan pinjaman kadang menyebut \"bunga per bulan\" alih-alih per tahun: angka bulanan terdengar lebih kecil padahal beban sebenarnya lebih besar. bagi bunganya dan kalikan periodenya — keduanya sekaligus makin sering dimajemukkan, makin besar hasilnya membagi suku bunganya tapi lupa mengalikan banyaknya periode, misalnya menulis untuk satu tahun bunga bulanan. kedua penyesuaian itu sepasang: yang satu tanpa yang lain memberi hasil yang jauh terlalu kecil. matematika keuangan",
+      "snippet": "Bunga sering dihitung lebih sering daripada setahun sekali — tiap bulan, tiap tiga bulan, atau tiap semester. Aturannya dua langkah, dan keduanya harus diker..."
+    },
+    {
+      "cardId": "lan-matematika-keuangan-c3",
+      "topicId": "lan-matematika-keuangan",
+      "topicTitle": "Matematika Keuangan",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Penyusutan nilai barang",
+      "haystack": "penyusutan nilai barang kebalikan dari bunga adalah penyusutan: nilai barang yang berkurang seiring waktu. ada dua cara menghitungnya, sejajar dengan kedua cara menghitung bunga. metode garis lurus. penyusutannya sama besar setiap tahun, dihitung dari selisih nilai awal dan nilai sisa: nilai bukunya setelah tahun adalah nilai awal dikurangi . metode persentase tetap. nilainya berkurang dengan persentase tetap dari nilai terakhir: perhatikan bahwa ini rumus bunga majemuk dengan tanda dibalik. akibatnya berbeda dari garis lurus: penyusutannya besar di tahun-tahun awal lalu mengecil, karena persentase tetap dikenakan pada nilai yang terus menyusut. contoh garis lurus: mesin seharga rp20.000.000 dengan nilai sisa rp4.000.000 dan umur 8 tahun menyusut per tahun. nilai bukunya di akhir tahun ketiga adalah . garis lurus: penyusutan sama besar tiap tahun persentase tetap: , menyusut cepat di awal garis lurus memperhitungkan nilai sisa, persentase tetap tidak membagi nilai awal dengan umurnya tanpa mengurangi nilai sisanya lebih dulu. untuk mesin rp20 juta bernilai sisa rp4 juta, yang disusutkan hanyalah rp16 juta — sisanya memang tidak pernah hilang. matematika keuangan",
+      "snippet": "Kebalikan dari bunga adalah penyusutan: nilai barang yang berkurang seiring waktu. Ada dua cara menghitungnya, sejajar dengan kedua cara menghitung bunga. Me..."
+    },
+    {
+      "cardId": "lan-matematika-keuangan-c4",
+      "topicId": "lan-matematika-keuangan",
+      "topicTitle": "Matematika Keuangan",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Anuitas: membayar dengan angsuran tetap",
+      "haystack": "anuitas: membayar dengan angsuran tetap anuitas adalah pembayaran dengan jumlah sama besar setiap periode sampai pinjamannya lunas. cicilan rumah, kendaraan, dan kebanyakan pinjaman bank memakai pola ini. yang menarik bukan besarnya angsuran, melainkan susunannya. setiap angsuran terbagi dua: dengan bagian bunga dan bagian pokok. meski totalnya tetap, komposisinya berubah terus. di awal masa pinjaman hampir seluruh angsuran habis untuk bunga; menjelang akhir, hampir seluruhnya mengurangi pokok. alasannya sederhana: bunga dihitung dari sisa pinjaman, dan sisa itu paling besar di awal. besar angsurannya: dengan pinjaman, bunga per periode , dan banyaknya angsuran. contoh: pinjaman rp10.000.000 dengan bunga per bulan selama 12 bulan memberi angsuran sekitar rp888.488 per bulan. totalnya sekitar rp10.661.855 — sekitar rp662.000 di antaranya adalah bunga. perhatikan bahwa pada rumus ini adalah bunga per periode, bukan per tahun. angsuran tetap, tapi komposisinya berubah tiap periode di awal didominasi bunga, di akhir didominasi pokok pada rumus anuitas adalah bunga per periode memasukkan bunga tahunan ke rumus anuitas yang periodenya bulanan. untuk bunga per tahun dengan angsuran bulanan, yang dipakai adalah — memakai akan melipatgandakan angsurannya secara keliru. matematika keuangan",
+      "snippet": "Anuitas adalah pembayaran dengan jumlah sama besar setiap periode sampai pinjamannya lunas. Cicilan rumah, kendaraan, dan kebanyakan pinjaman bank memakai po..."
+    },
+    {
+      "cardId": "lan-matematika-keuangan-c5",
+      "topicId": "lan-matematika-keuangan",
+      "topicTitle": "Matematika Keuangan",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan matematika keuangan",
+      "haystack": "empat jebakan matematika keuangan 1. menukar rumus tunggal dengan majemuk. bunga tunggal memakai , majemuk memakai . perbedaan antara mengalikan dan memangkatkan adalah perbedaan antara pertumbuhan linear dan eksponen. 2. melupakan penyesuaian periode. bunga bulanan menuntut dua hal sekaligus: suku bunganya dibagi 12, dan banyaknya periodenya dikali 12. mengerjakan salah satu saja memberi hasil yang jauh meleset. 3. melupakan nilai sisa pada penyusutan garis lurus. yang disusutkan adalah selisih nilai awal dan nilai sisa, bukan seluruh nilai awal. 4. mencampur satuan bunga pada anuitas. kalau angsurannya bulanan, juga harus bunga bulanan. ini kesalahan yang paling mahal akibatnya karena angsuran hasilnya bisa berlipat-lipat. pemeriksaan yang murah untuk semuanya: perkirakan jawabannya secara kasar sebelum menghitung. pinjaman rp10 juta dengan bunga wajar tidak mungkin menuntut angsuran rp2 juta sebulan selama setahun — kalau angkamu terlihat aneh, biasanya memang aneh. tunggal mengalikan, majemuk memangkatkan bunga dibagi dan periode dikali — keduanya sekaligus perkirakan kasar dulu; angka yang aneh biasanya memang salah menerima hasil hitungan apa adanya tanpa menimbangnya terhadap akal sehat. soal keuangan punya keuntungan yang jarang dimiliki soal lain: kamu punya perkiraan wajar dari kehidupan sehari-hari, dan perkiraan itu menangkap kesalahan satuan dengan cepat. matematika keuangan",
+      "snippet": "1. Menukar rumus tunggal dengan majemuk. Bunga tunggal memakai [rumus] , majemuk memakai [rumus] . Perbedaan antara mengalikan dan memangkatkan adalah perbed..."
     },
     {
       "cardId": "lan-teknik-integrasi-c1",

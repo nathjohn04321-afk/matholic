@@ -39,13 +39,15 @@ import topik28 from "@/content/menengah/sta-statistik.json";
 import topik29 from "@/content/menengah/trg-perbandingan.json";
 import topik30 from "@/content/menengah/trg-persamaan.json";
 import topik31 from "@/content/lanjut/lan-bilangan-kompleks.json";
-import topik32 from "@/content/lanjut/lan-integral-tentu.json";
-import topik33 from "@/content/lanjut/lan-integral-trigonometri.json";
-import topik34 from "@/content/lanjut/lan-irisan-kerucut.json";
-import topik35 from "@/content/lanjut/lan-logika-induksi.json";
-import topik36 from "@/content/lanjut/lan-teknik-integrasi.json";
-import topik37 from "@/content/lanjut/lan-transformasi-geometri.json";
-import topik38 from "@/content/olimpiade/osn-keterbagian.json";
+import topik32 from "@/content/lanjut/lan-distribusi-peluang.json";
+import topik33 from "@/content/lanjut/lan-integral-tentu.json";
+import topik34 from "@/content/lanjut/lan-integral-trigonometri.json";
+import topik35 from "@/content/lanjut/lan-irisan-kerucut.json";
+import topik36 from "@/content/lanjut/lan-logika-induksi.json";
+import topik37 from "@/content/lanjut/lan-matematika-keuangan.json";
+import topik38 from "@/content/lanjut/lan-teknik-integrasi.json";
+import topik39 from "@/content/lanjut/lan-transformasi-geometri.json";
+import topik40 from "@/content/olimpiade/osn-keterbagian.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -87,4 +89,6 @@ export const RAW_TOPICS: Topic[] = [
   topik36 as unknown as Topic,
   topik37 as unknown as Topic,
   topik38 as unknown as Topic,
+  topik39 as unknown as Topic,
+  topik40 as unknown as Topic,
 ];

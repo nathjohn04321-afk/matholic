@@ -1,0 +1,283 @@
+{
+  "id": "lan-distribusi-peluang",
+  "track": "lanjut",
+  "title": "Distribusi Binomial dan Normal",
+  "order": 8,
+  "prerequisites": [
+    "pel-peluang"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Dua sebaran yang menjelaskan sebagian besar data nyata, dan kapan masing-masing berlaku.",
+  "tags": [
+    "peluang",
+    "statistik",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-distribusi-peluang-c1",
+      "type": "konsep",
+      "title": "Peubah acak dan sebarannya",
+      "body": "Sampai sekarang kamu menghitung peluang satu kejadian tertentu. Distribusi peluang melangkah lebih jauh: ia mendaftar **semua** hasil yang mungkin beserta peluangnya sekaligus.\n\nAlatnya adalah peubah acak, yaitu aturan yang memberi angka pada setiap hasil percobaan. Melempar tiga koin punya delapan hasil; kalau $X$ menyatakan banyaknya angka yang muncul, maka $X$ hanya bernilai $0, 1, 2$, atau $3$.\n\nAda dua jenis, dan pembedanya menentukan cara menghitungnya:\n\n**Diskret** — nilainya bisa didaftar satu per satu, seperti banyaknya lemparan yang berhasil atau jumlah cacat pada sekotak barang. Peluang tiap nilai dihitung sendiri-sendiri.\n\n**Kontinu** — nilainya bisa apa saja dalam suatu selang, seperti tinggi badan atau waktu tunggu. Di sini peluang pada satu titik justru nol, dan yang bermakna hanya peluang pada sebuah selang.\n\nBerapa pun jenisnya, seluruh peluang selalu berjumlah $1$ — karena salah satu hasil pasti terjadi.",
+      "questions": [
+        {
+          "id": "lan-distribusi-peluang-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Contoh peubah acak kontinu adalah ...",
+          "options": [
+            "waktu tunggu bus dalam menit",
+            "banyaknya siswa yang hadir",
+            "jumlah mata dadu yang muncul",
+            "banyaknya gol dalam pertandingan"
+          ],
+          "answerIndex": 0,
+          "solution": "Peubah acak kontinu bisa bernilai apa saja dalam suatu selang, termasuk pecahan dengan berapa pun angka di belakang koma.\n\nWaktu tunggu bisa $3$ menit, $3{,}5$ menit, atau $3{,}47$ menit — tidak ada lompatan antar nilai.\n\nTiga pilihan lainnya semuanya diskret: jumlah siswa, mata dadu, dan gol semuanya bilangan bulat yang bisa didaftar satu per satu. Tidak ada yang namanya $2{,}5$ gol.",
+          "hint": "Mana yang bisa bernilai pecahan sembarang?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q1b",
+          "difficulty": 1,
+          "format": "isian",
+          "prompt": "Sebuah peubah acak $X$ hanya bernilai $0$, $1$, atau $2$ dengan $P(X=0) = 0{,}3$ dan $P(X=1) = 0{,}5$. Berapa $P(X=2)$? (tulis desimal, contoh: 0,4)",
+          "answer": "0,2",
+          "acceptedAnswers": [
+            "0,2",
+            "0.2",
+            ",2",
+            ".2"
+          ],
+          "solution": "Seluruh peluang dalam satu sebaran harus berjumlah $1$, karena salah satu nilai pasti terjadi.\n\n$$P(X=0) + P(X=1) + P(X=2) = 1$$\n$$0{,}3 + 0{,}5 + P(X=2) = 1$$\n$$P(X=2) = 1 - 0{,}8 = 0{,}2$$\n\nSifat ini juga berguna sebagai pemeriksaan: kalau daftar peluang yang kamu susun tidak berjumlah $1$, ada yang keliru di perhitunganmu.",
+          "hint": "Seluruh peluang dalam satu sebaran berjumlah berapa?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Peubah acak memberi angka pada setiap hasil percobaan",
+        "Diskret bisa didaftar; kontinu mengisi selang",
+        "Seluruh peluang dalam satu sebaran berjumlah $1$"
+      ],
+      "pitfall": "Menanyakan peluang sebuah nilai tunggal pada sebaran kontinu, misalnya peluang tinggi badan tepat $170{,}000\\ldots$ cm. Peluangnya nol, karena ada tak hingga banyak nilai di sekitarnya. Yang bisa ditanyakan hanya peluang pada suatu selang."
+    },
+    {
+      "id": "lan-distribusi-peluang-c2",
+      "type": "rumus",
+      "title": "Distribusi binomial",
+      "body": "Distribusi binomial berlaku kalau percobaanmu memenuhi empat syarat sekaligus:\n\n1. Banyaknya percobaan tetap, sebut $n$\n2. Setiap percobaan hanya punya dua hasil: berhasil atau gagal\n3. Peluang berhasil $p$ sama di setiap percobaan\n4. Antar percobaan saling bebas\n\nKalau keempatnya terpenuhi, peluang mendapat tepat $k$ keberhasilan adalah:\n$$P(X=k) = \\binom{n}{k}p^k(1-p)^{n-k}$$\n\nKetiga bagiannya punya arti masing-masing. Bagian $p^k$ adalah peluang $k$ keberhasilan, $(1-p)^{n-k}$ adalah peluang sisanya gagal, dan $\\binom{n}{k}$ menghitung **ada berapa susunan** yang menghasilkan $k$ keberhasilan itu. Tanpa faktor terakhir kamu hanya menghitung satu urutan tertentu, bukan seluruhnya.\n\nRata-rata dan simpangan bakunya singkat:\n$$\\mu = np, \\qquad \\sigma = \\sqrt{np(1-p)}$$\n\nSyarat ketiga sering luput diperiksa. Mengambil kartu **tanpa pengembalian** melanggarnya, karena peluang berubah setiap kali satu kartu keluar.",
+      "questions": [
+        {
+          "id": "lan-distribusi-peluang-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah koin seimbang dilempar 5 kali. Peluang muncul tepat 3 angka adalah ...",
+          "options": [
+            "$\\frac{5}{16}$",
+            "$\\frac{3}{5}$",
+            "$\\frac{1}{32}$",
+            "$\\frac{1}{8}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus binomial dengan $n=5$, $k=3$, $p=\\frac{1}{2}$:\n\n$$P(X=3) = \\binom{5}{3}\\left(\\frac{1}{2}\\right)^3\\left(\\frac{1}{2}\\right)^2 = 10 \\cdot \\frac{1}{32} = \\frac{10}{32} = \\frac{5}{16}$$\n\nAngka $\\binom{5}{3} = 10$ berarti ada 10 susunan berbeda yang memberi tepat 3 angka dari 5 lemparan.\n\nTanpa faktor itu kamu hanya mendapat $\\frac{1}{32}$, yaitu peluang satu urutan tertentu saja seperti AAAGG.",
+          "hint": "Jangan lupa menghitung ada berapa susunan yang mungkin.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q3",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Sebuah dadu dilempar 30 kali. Rata-rata banyaknya mata 6 yang muncul adalah ... (bilangan bulat)",
+          "answer": "5",
+          "acceptedAnswers": [
+            "5"
+          ],
+          "solution": "Ini percobaan binomial dengan $n = 30$ dan $p = \\frac{1}{6}$ (peluang munculnya mata 6).\n\n$$\\mu = np = 30 \\times \\frac{1}{6} = 5$$\n\nArtinya kalau percobaan 30 lemparan ini diulang berkali-kali, rata-rata banyaknya mata 6 yang muncul adalah 5. Pada satu percobaan tertentu hasilnya bisa saja 3 atau 8 — rata-rata menggambarkan kecenderungan, bukan jaminan.",
+          "hint": "Rata-rata binomial cukup $n$ dikali $p$.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah koin seimbang dilempar 5 kali. Peluang muncul paling sedikit satu angka adalah ...",
+          "options": [
+            "$\\frac{31}{32}$",
+            "$\\frac{5}{32}$",
+            "$\\frac{1}{32}$",
+            "$\\frac{16}{32}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Menghitung \"paling sedikit satu\" secara langsung berarti menjumlahkan lima kasus: $k=1$ sampai $k=5$. Terlalu panjang.\n\nPakai komplemennya. Lawan dari \"paling sedikit satu angka\" adalah \"tidak ada angka sama sekali\":\n\n$$P(X=0) = \\binom{5}{0}\\left(\\frac{1}{2}\\right)^0\\left(\\frac{1}{2}\\right)^5 = \\frac{1}{32}$$\n\n$$P(X \\geq 1) = 1 - \\frac{1}{32} = \\frac{31}{32}$$\n\nSetiap kali soal berkata \"paling sedikit satu\", komplemen hampir selalu jalan terpendek.",
+          "hint": "Hitung lawannya: tidak ada sama sekali.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Binomial butuh $n$ tetap, dua hasil, $p$ tetap, dan saling bebas",
+        "$P(X=k) = \\binom{n}{k}p^k(1-p)^{n-k}$",
+        "$\\mu = np$ dan $\\sigma = \\sqrt{np(1-p)}$"
+      ],
+      "pitfall": "Memakai binomial untuk pengambilan tanpa pengembalian. Setelah satu benda diambil, peluang berikutnya berubah, sehingga syarat \"$p$ tetap\" gugur dan rumusnya memberi jawaban yang meleset."
+    },
+    {
+      "id": "lan-distribusi-peluang-c3",
+      "type": "konsep",
+      "title": "Distribusi normal dan bentuk loncengnya",
+      "body": "Banyak besaran alami — tinggi badan, nilai ujian, kesalahan pengukuran — menyebar mengikuti satu bentuk yang sama: kurva lonceng yang simetris, disebut distribusi normal.\n\nSebarannya ditentukan sepenuhnya oleh dua angka. Rata-rata $\\mu$ menetapkan letak puncaknya, dan simpangan baku $\\sigma$ menetapkan lebarnya. Semua kurva normal berbentuk sama, hanya bergeser dan melar.\n\nTiga kenyataan yang berguna dihafal:\n\n- Sekitar $68\\%$ data berada dalam $\\mu \\pm \\sigma$\n- Sekitar $95\\%$ berada dalam $\\mu \\pm 2\\sigma$\n- Sekitar $99{,}7\\%$ berada dalam $\\mu \\pm 3\\sigma$\n\nKarena setiap pasangan $\\mu$ dan $\\sigma$ memberi kurva berbeda, tabel peluangnya disusun hanya untuk satu kasus baku, yaitu $\\mu = 0$ dan $\\sigma = 1$. Untuk memakainya, ubah dulu nilaimu menjadi skor baku:\n$$z = \\frac{x - \\mu}{\\sigma}$$\n\nSkor $z$ menjawab pertanyaan \"berapa simpangan baku nilai ini dari rata-ratanya\". Nilai $z = 2$ berarti dua simpangan baku di atas rata-rata, dan artinya sama saja apakah datanya tinggi badan atau nilai ujian.",
+      "questions": [
+        {
+          "id": "lan-distribusi-peluang-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai ujian menyebar normal dengan $\\mu = 70$ dan $\\sigma = 5$. Skor baku untuk nilai $80$ adalah ...",
+          "options": [
+            "$2$",
+            "$10$",
+            "$1{,}6$",
+            "$0{,}5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus skor baku:\n\n$$z = \\frac{x - \\mu}{\\sigma} = \\frac{80 - 70}{5} = \\frac{10}{5} = 2$$\n\nArtinya nilai $80$ berada dua simpangan baku di atas rata-rata.\n\nDari aturan $95\\%$, kamu bisa langsung menyimpulkan bahwa nilai ini termasuk sekitar $2{,}5\\%$ tertinggi — karena $95\\%$ data berada di antara $z = -2$ dan $z = 2$, dan sisanya terbagi dua ujung.",
+          "hint": "Selisih dari rata-rata dibagi simpangan baku.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q6",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada distribusi normal, persentase data yang berada dalam jangkauan $\\mu \\pm 2\\sigma$ adalah sekitar ...",
+          "options": [
+            "$95\\%$",
+            "$68\\%$",
+            "$99{,}7\\%$",
+            "$50\\%$"
+          ],
+          "answerIndex": 0,
+          "solution": "Aturan yang berlaku untuk semua distribusi normal:\n\n- $\\mu \\pm \\sigma$ memuat sekitar $68\\%$ data\n- $\\mu \\pm 2\\sigma$ memuat sekitar $95\\%$ data\n- $\\mu \\pm 3\\sigma$ memuat sekitar $99{,}7\\%$ data\n\nAngka $95\\%$ inilah yang paling sering dipakai di luar kelas — ia menjadi dasar \"selang kepercayaan $95\\%$\" yang muncul di laporan survei dan berita hasil penelitian.\n\nPerhatikan bahwa aturan ini tidak bergantung pada nilai $\\mu$ dan $\\sigma$ sama sekali, karena semua kurva normal sebangun.",
+          "hint": "Ini aturan yang berlaku sama untuk semua kurva normal.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Normal ditentukan oleh $\\mu$ (letak) dan $\\sigma$ (lebar)",
+        "$68\\%$, $95\\%$, $99{,}7\\%$ untuk 1, 2, 3 simpangan baku",
+        "$z = \\frac{x-\\mu}{\\sigma}$ menyatakan jarak dalam satuan $\\sigma$"
+      ],
+      "pitfall": "Membagi dengan ragam $\\sigma^2$ alih-alih simpangan baku $\\sigma$ saat menghitung $z$. Untuk $\\sigma = 5$, pembaginya $5$ dan bukan $25$ — memakai ragam akan mengecilkan skornya lima kali lipat."
+    },
+    {
+      "id": "lan-distribusi-peluang-c4",
+      "type": "prosedur",
+      "title": "Membaca tabel normal baku",
+      "body": "Tabel $z$ memberi $P(Z < z)$, yaitu peluang mendapat nilai **di bawah** $z$. Semua jenis pertanyaan lain diturunkan dari situ.\n\n**Peluang di bawah suatu nilai.** Langsung baca tabelnya. Untuk $z = 2$, hasilnya $0{,}9772$.\n\n**Peluang di atas suatu nilai.** Kurangkan dari satu:\n$$P(Z > z) = 1 - P(Z < z)$$\n\n**Peluang di antara dua nilai.** Kurangkan yang kecil dari yang besar:\n$$P(a < Z < b) = P(Z<b) - P(Z<a)$$\n\n**Nilai $z$ negatif.** Manfaatkan simetri kurvanya:\n$$P(Z < -z) = 1 - P(Z < z)$$\n\nContoh lengkap: nilai ujian normal dengan $\\mu = 70$, $\\sigma = 5$, dan kamu ingin peluang seorang siswa mendapat di bawah $80$. Hitung $z = \\frac{80-70}{5} = 2$, lalu baca tabel: $0{,}9772$. Jadi sekitar $97{,}7\\%$ siswa mendapat nilai di bawah $80$.\n\nMenggambar sketsa kurva dan mengarsir daerah yang dicari akan mencegah sebagian besar kesalahan pengurangan.",
+      "questions": [
+        {
+          "id": "lan-distribusi-peluang-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $P(Z < 1) = 0{,}8413$. Nilai $P(Z > 1)$ adalah ...",
+          "options": [
+            "$0{,}1587$",
+            "$0{,}8413$",
+            "$0{,}3413$",
+            "$0{,}6827$"
+          ],
+          "answerIndex": 0,
+          "solution": "Seluruh luas di bawah kurva normal sama dengan $1$, jadi daerah kanan adalah sisa dari daerah kiri:\n\n$$P(Z > 1) = 1 - P(Z < 1) = 1 - 0{,}8413 = 0{,}1587$$\n\nMasuk akal secara gambar: $z=1$ berada di sebelah kanan puncak, jadi daerah di kanannya pasti kurang dari setengah.\n\nPilihan $0{,}3413$ adalah luas antara $z=0$ dan $z=1$, yaitu $0{,}8413 - 0{,}5$. Angka itu benar untuk pertanyaan lain, bukan untuk yang ini.",
+          "hint": "Seluruh luas kurva sama dengan 1.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Tinggi badan siswa menyebar normal dengan $\\mu = 160$ cm dan $\\sigma = 8$ cm. Peluang seorang siswa lebih tinggi dari $176$ cm paling dekat dengan ...",
+          "options": [
+            "$2{,}5\\%$",
+            "$5\\%$",
+            "$16\\%$",
+            "$32\\%$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung skor bakunya:\n$$z = \\frac{176 - 160}{8} = \\frac{16}{8} = 2$$\n\nDari aturan $95\\%$, sebanyak $95\\%$ data berada di antara $z = -2$ dan $z = 2$. Sisanya $5\\%$ terbagi rata di kedua ujung karena kurvanya simetris.\n\n$$P(Z > 2) \\approx \\frac{5\\%}{2} = 2{,}5\\%$$\n\nPilihan $5\\%$ adalah jebakan untuk yang lupa membagi dua — angka itu mencakup kedua ujung, termasuk siswa yang sangat pendek.",
+          "hint": "Sisa $5\\%$ terbagi ke dua ujung.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tabel $z$ selalu memberi peluang di sebelah kiri",
+        "Di kanan: kurangkan dari 1. Di antara: selisih dua bacaan",
+        "Sketsa dan arsiran mencegah salah arah pengurangan"
+      ],
+      "pitfall": "Membaca tabel sebagai peluang di sebelah kanan. Untuk $z$ positif, bacaan tabel selalu lebih dari $0{,}5$ karena mencakup seluruh separuh kiri kurva — kalau jawabanmu untuk daerah kanan keluar di atas $0{,}5$, hampir pasti arahnya tertukar."
+    },
+    {
+      "id": "lan-distribusi-peluang-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan distribusi",
+      "body": "**1. Memakai binomial saat $p$ berubah.** Mengambil bola tanpa pengembalian membuat peluang berubah di setiap pengambilan. Syarat \"$p$ tetap\" gugur, dan rumus binomial tidak berlaku.\n\n**2. Melupakan faktor $\\binom{n}{k}$.** Tanpa faktor itu kamu menghitung peluang satu urutan tertentu, bukan seluruh susunan yang memberi $k$ keberhasilan. Jawabannya akan jauh terlalu kecil.\n\n**3. Membagi dengan $\\sigma^2$ saat mencari $z$.** Pembaginya simpangan baku, bukan ragam. Periksa satuannya: $x - \\mu$ bersatuan sama dengan datanya, dan hanya pembagian dengan $\\sigma$ yang membuat $z$ menjadi bilangan tanpa satuan.\n\n**4. Salah arah saat membaca tabel.** Tabel memberi daerah kiri. Untuk $z$ positif, bacaan tabel selalu lebih besar dari $0{,}5$ — kalau hasil akhirmu untuk daerah kanan justru di atas $0{,}5$, arahnya tertukar.\n\nUntuk soal binomial, periksa keempat syaratnya sebelum memasang rumus. Untuk soal normal, gambar kurvanya dan arsir daerah yang diminta sebelum menghitung.",
+      "questions": [
+        {
+          "id": "lan-distribusi-peluang-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah percobaan tidak dapat dimodelkan dengan distribusi binomial jika ...",
+          "options": [
+            "peluang berhasil berubah di setiap percobaan",
+            "hanya ada dua hasil yang mungkin",
+            "banyaknya percobaan sudah ditentukan",
+            "antar percobaan saling bebas"
+          ],
+          "answerIndex": 0,
+          "solution": "Binomial menuntut empat syarat: banyaknya percobaan tetap, hanya dua hasil, peluang berhasil tetap, dan antar percobaan saling bebas.\n\nTiga pilihan lainnya justru menyebutkan syarat yang **terpenuhi**. Hanya \"peluang berhasil berubah\" yang melanggarnya.\n\nContoh nyatanya: mengambil 3 kartu dari setumpuk tanpa mengembalikannya. Peluang mendapat kartu As berubah setiap kali satu kartu keluar, sehingga binomial tidak berlaku.",
+          "hint": "Cari pilihan yang melanggar syarat, bukan yang memenuhi.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-distribusi-peluang-q10",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Pada distribusi normal, peluang sebuah data bernilai tepat sama dengan rata-ratanya adalah yang terbesar dibanding nilai lain, yaitu sekitar $0{,}4$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Pada sebaran **kontinu** seperti normal, peluang sebuah nilai tunggal selalu **nol** — termasuk di rata-ratanya.\n\nAlasannya: ada tak hingga banyak nilai di sekitar $\\mu$, dan memberi peluang tak nol pada masing-masing akan membuat jumlah seluruhnya melebihi $1$.\n\nAngka $0{,}4$ yang muncul di puncak kurva adalah **kerapatan**, bukan peluang. Yang bermakna hanyalah luas di bawah kurva pada sebuah selang, misalnya $P(69{,}5 < X < 70{,}5)$.\n\nInilah perbedaan mendasar dengan sebaran diskret seperti binomial, di mana $P(X=3)$ memang punya nilai nyata.",
+          "hint": "Berapa banyak nilai yang mungkin di sekitar rata-rata pada sebaran kontinu?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Periksa keempat syarat sebelum memakai binomial",
+        "$z$ dibagi $\\sigma$, bukan $\\sigma^2$",
+        "Tabel $z$ memberi daerah kiri, selalu"
+      ],
+      "pitfall": "Menganggap semua soal peluang dengan dua kemungkinan otomatis binomial. Pengambilan tanpa pengembalian juga punya dua hasil, tapi peluangnya berubah — dan itu sudah cukup membatalkan syaratnya."
+    }
+  ]
+}
