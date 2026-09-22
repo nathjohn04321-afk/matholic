@@ -1,0 +1,265 @@
+{
+  "id": "alj-program-linear",
+  "track": "menengah",
+  "title": "Program Linear",
+  "order": 7,
+  "prerequisites": [
+    "das-splv"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Kenapa nilai maksimum selalu berada di titik pojok daerah penyelesaian.",
+  "tags": [
+    "aljabar",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "alj-program-linear-c1",
+      "type": "konsep",
+      "title": "Optimum selalu di titik pojok",
+      "body": "Program linear mencari nilai terbesar atau terkecil dari suatu bentuk, dengan sejumlah pembatas. Yang membuatnya bisa dikerjakan tanpa mencoba tak hingga banyak titik adalah satu kenyataan: **nilai optimum selalu berada di titik pojok**.\n\nKenapa begitu? Bayangkan garis $z = 3x + 4y$ untuk berbagai nilai $z$. Semuanya sejajar, hanya bergeser. Menaikkan $z$ berarti menggeser garis itu menjauh dari titik asal.\n\nGeser terus sampai garisnya hampir meninggalkan daerah penyelesaian. Titik terakhir yang masih tersentuh pasti sebuah pojok — kecuali garisnya kebetulan sejajar dengan salah satu sisi, dan dalam kasus itu seluruh sisi optimum, termasuk kedua pojoknya.\n\nAkibatnya praktis: kamu cukup menghitung nilai di setiap titik pojok, lalu membandingkan. Tidak perlu memeriksa titik di dalam daerah sama sekali.",
+      "questions": [
+        {
+          "id": "alj-program-linear-q1",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai maksimum $z = 3x + 4y$ pada daerah $x+y \\le 10$, $x \\le 6$, $y \\le 8$, $x,y \\ge 0$ adalah ...",
+          "options": [
+            "$38$",
+            "$40$",
+            "$34$",
+            "$42$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari titik-titik pojoknya lebih dulu. Perpotongan yang memenuhi semua pembatas:\n$(0,0)$, $(6,0)$, $(6,4)$, $(2,8)$, dan $(0,8)$.\n\nHitung $z = 3x+4y$ di tiap pojok:\n$(0,0) \\to 0$\n$(6,0) \\to 18$\n$(6,4) \\to 18+16 = 34$\n$(2,8) \\to 6+32 = 38$\n$(0,8) \\to 32$\n\nNilai terbesarnya $38$, di titik $(2,8)$.",
+          "hint": "Daftarkan semua pojok, hitung $z$ di masing-masing.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-program-linear-q2",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Nilai maksimum suatu fungsi objektif bisa terjadi di titik yang berada di dalam daerah penyelesaian, bukan di pojoknya.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah untuk program linear. Fungsi objektifnya berbentuk garis lurus, dan garis selidik $z$ terus meningkat ke satu arah tertentu.\n\nDari titik mana pun di dalam daerah, kamu selalu bisa bergerak ke arah itu dan mendapat nilai lebih besar — sampai membentur batas daerahnya.\n\nJadi optimumnya selalu di batas, dan tepatnya di pojok. Satu-satunya perkecualian adalah ketika garis selidik sejajar dengan sebuah sisi; saat itu seluruh sisi optimum, tapi kedua ujungnya tetap pojok.",
+          "hint": "Bisakah kamu selalu bergerak ke arah yang menaikkan $z$?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Nilai optimum selalu di titik pojok",
+        "Hitung $z$ di setiap pojok, lalu bandingkan",
+        "Garis selidik bergeser sejajar saat $z$ berubah"
+      ],
+      "pitfall": "Memeriksa titik di tengah daerah penyelesaian. Titik dalam tidak pernah memberi nilai optimum, jadi menghitungnya hanya membuang waktu."
+    },
+    {
+      "id": "alj-program-linear-c2",
+      "type": "prosedur",
+      "title": "Langkah baku program linear",
+      "body": "Hampir semua soal program linear diselesaikan dengan urutan yang sama.\n\n1. Tetapkan variabelnya. Tulis dengan jelas apa yang diwakili $x$ dan $y$.\n2. Terjemahkan setiap syarat menjadi pertidaksamaan. Jangan lupa syarat tersembunyi $x \\ge 0$ dan $y \\ge 0$ untuk besaran yang tidak mungkin negatif.\n3. Gambar daerah penyelesaiannya.\n4. Tentukan koordinat setiap titik pojok, kalau perlu dengan menyelesaikan sistem persamaan dari dua garis yang berpotongan.\n5. Hitung fungsi objektif di setiap pojok.\n6. Pilih nilai terbesar atau terkecil sesuai yang diminta.\n\nLangkah 2 adalah yang paling sering salah pada soal cerita. Kata \"paling banyak\" menjadi $\\le$, sedangkan \"paling sedikit\" menjadi $\\ge$. Membacanya terbalik membuat seluruh daerah penyelesaian keliru.",
+      "questions": [
+        {
+          "id": "alj-program-linear-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Seorang pedagang punya modal Rp600.000 dan gerobak muat 50 barang. Barang A berharga Rp10.000, barang B Rp20.000. Pembatas modalnya adalah ...",
+          "options": [
+            "$10000x + 20000y \\le 600000$",
+            "$10000x + 20000y \\ge 600000$",
+            "$x + y \\le 600000$",
+            "$10000x + 20000y = 600000$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modal yang dipakai adalah harga dikali banyaknya:\n$$10000x + 20000y$$\n\nModalnya terbatas Rp600.000, artinya pengeluaran **tidak boleh melebihi** itu — jadi memakai $\\le$:\n$$10000x + 20000y \\le 600000$$\n\nMemakai tanda sama dengan berarti modal harus habis persis, padahal pedagang boleh menyisakan uang.",
+          "hint": "Modal terbatas berarti pengeluarannya paling banyak sekian.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-program-linear-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan nilai minimum $z = 2x + 3y$ pada daerah $x + y \\ge 4$, $x \\ge 0$, $y \\ge 0$.",
+          "answer": "8",
+          "acceptedAnswers": [
+            "delapan",
+            "= 8"
+          ],
+          "solution": "Daerahnya tidak terbatas ke atas, tapi punya pojok. Titik pojoknya adalah perpotongan $x+y=4$ dengan sumbu-sumbu:\n$(4,0)$ dan $(0,4)$.\n\nHitung $z = 2x+3y$:\n$(4,0) \\to 8$\n$(0,4) \\to 12$\n\nNilai terkecilnya $8$, di titik $(4,0)$.\n\nKarena koefisien $x$ lebih kecil, masuk akal minimumnya berada di titik yang mengutamakan $x$.",
+          "hint": "Cari titik potong garis pembatas dengan kedua sumbu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis syarat $x \\ge 0$, $y \\ge 0$ untuk besaran nyata",
+        "\"Paling banyak\" $\\Rightarrow \\le$, \"paling sedikit\" $\\Rightarrow \\ge$",
+        "Hitung $z$ hanya di titik pojok"
+      ],
+      "pitfall": "Lupa menuliskan pembatas $x \\ge 0$ dan $y \\ge 0$, sehingga daerah penyelesaiannya melebar ke kuadran yang tidak masuk akal."
+    },
+    {
+      "id": "alj-program-linear-c3",
+      "type": "teknik",
+      "title": "Menentukan daerah yang benar",
+      "body": "Setelah menggambar garis pembatas, kamu harus memutuskan sisi mana yang merupakan daerah penyelesaian. Ada cara yang jauh lebih cepat daripada menghafal aturan.\n\n**Uji satu titik.** Ambil titik yang jelas tidak berada di garis — biasanya $(0,0)$ paling mudah. Masukkan ke pertidaksamaannya. Kalau pernyataannya benar, daerah penyelesaiannya adalah sisi yang memuat titik itu. Kalau salah, sisi sebaliknya.\n\nContoh: untuk $2x + 3y \\le 12$, uji $(0,0)$ memberi $0 \\le 12$ yang benar. Jadi daerahnya adalah sisi yang memuat titik asal.\n\nSatu-satunya syarat: titik ujinya tidak boleh terletak persis di garis, karena hasilnya tidak memberi informasi. Kalau garisnya melewati $(0,0)$, pakai titik lain seperti $(1,0)$.\n\nCara ini bekerja untuk semua bentuk pertidaksamaan, tanpa perlu mengingat arah mana yang diarsir.",
+      "questions": [
+        {
+          "id": "alj-program-linear-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk menentukan daerah $3x + 2y \\le 6$, hasil uji titik $(0,0)$ adalah ...",
+          "options": [
+            "benar, daerahnya memuat titik asal",
+            "salah, daerahnya tidak memuat titik asal",
+            "tidak dapat diuji dengan $(0,0)$",
+            "garisnya melewati titik asal"
+          ],
+          "answerIndex": 0,
+          "solution": "Masukkan $(0,0)$ ke pertidaksamaan:\n$$3(0) + 2(0) = 0$$\n$$0 \\le 6 \\text{ — benar}$$\n\nKarena pernyataannya benar, daerah penyelesaiannya adalah sisi yang **memuat** titik asal.\n\nTitik $(0,0)$ sah dipakai di sini karena garis $3x+2y=6$ tidak melewatinya — coba saja, $0 \\neq 6$.",
+          "hint": "Masukkan angka nol ke kedua variabel.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-program-linear-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk pertidaksamaan $y \\ge 2x$, titik uji yang TIDAK boleh dipakai adalah ...",
+          "options": [
+            "$(0,0)$",
+            "$(1,0)$",
+            "$(0,1)$",
+            "$(2,1)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Garis $y = 2x$ melewati titik asal, karena $0 = 2(0)$ benar.\n\nTitik uji harus berada **di luar** garis supaya hasilnya memberi kesimpulan. Menguji $(0,0)$ memberi $0 \\ge 0$ yang benar, tapi itu hanya memberitahu bahwa titik itu ada di garisnya — bukan di sisi mana daerahnya.\n\nTiga titik lainnya tidak berada di garis, jadi semuanya sah dipakai.",
+          "hint": "Periksa titik mana yang terletak persis di garis.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Uji satu titik, biasanya $(0,0)$",
+        "Pernyataan benar berarti daerahnya memuat titik itu",
+        "Titik uji tidak boleh berada di garis"
+      ],
+      "pitfall": "Memakai $(0,0)$ sebagai titik uji padahal garis pembatasnya melewati titik asal, sehingga hasil ujinya tidak memberi kesimpulan apa pun."
+    },
+    {
+      "id": "alj-program-linear-c4",
+      "type": "contoh",
+      "title": "Soal cerita dikerjakan penuh",
+      "body": "Soal: seorang penjahit punya 60 m kain katun dan 40 m kain sutra. Baju model A butuh 2 m katun dan 1 m sutra, model B butuh 1 m katun dan 2 m sutra. Keuntungan model A Rp40.000 dan model B Rp30.000. Berapa keuntungan maksimumnya?\n\n**Langkah 1 — variabel.** $x$ = banyak baju A, $y$ = banyak baju B.\n\n**Langkah 2 — pembatas.**\nKatun: $2x + y \\le 60$\nSutra: $x + 2y \\le 40$\nSerta $x \\ge 0$ dan $y \\ge 0$.\n\n**Langkah 3 — fungsi objektif.** $z = 40000x + 30000y$.\n\n**Langkah 4 — titik pojok.** $(0,0)$, $(30,0)$, $(0,20)$, dan perpotongan kedua garis di $\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$.\n\nKarena banyak baju harus bulat, titik pecahan itu perlu diperiksa pada bilangan bulat terdekat yang masih memenuhi kedua pembatas.",
+      "questions": [
+        {
+          "id": "alj-program-linear-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada soal penjahit di atas, keuntungan di titik $(30,0)$ adalah ...",
+          "options": [
+            "Rp1.200.000",
+            "Rp900.000",
+            "Rp600.000",
+            "Rp1.500.000"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan $x = 30$ dan $y = 0$ ke fungsi objektif:\n$$z = 40000(30) + 30000(0)$$\n$$= 1200000$$\n\nPeriksa titik itu memenuhi pembatas:\nKatun: $2(30) + 0 = 60 \\le 60$. Pas.\nSutra: $30 + 0 = 30 \\le 40$. Memenuhi.",
+          "hint": "Masukkan koordinatnya ke fungsi keuntungan.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-program-linear-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Titik potong garis $2x+y=60$ dan $x+2y=40$ adalah ...",
+          "options": [
+            "$\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$",
+            "$(20,10)$",
+            "$(30,20)$",
+            "$\\left(\\frac{20}{3}, \\frac{80}{3}\\right)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Selesaikan sistemnya. Kalikan persamaan kedua dengan 2:\n$$2x + 4y = 80$$\n\nKurangkan persamaan pertama:\n$$(2x+4y) - (2x+y) = 80 - 60$$\n$$3y = 20 \\Rightarrow y = \\frac{20}{3}$$\n\nSubstitusikan ke $x + 2y = 40$:\n$$x = 40 - \\frac{40}{3} = \\frac{80}{3}$$\n\nTitik potongnya $\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$.",
+          "hint": "Eliminasi salah satu variabel dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis pembatas dari tiap sumber daya yang terbatas",
+        "Fungsi objektif dari yang ingin dimaksimumkan",
+        "Soal nyata sering menuntut jawaban bilangan bulat"
+      ],
+      "pitfall": "Menerima titik pojok berkoordinat pecahan sebagai jawaban akhir pada soal yang barangnya tidak bisa dipecah, seperti banyaknya baju."
+    },
+    {
+      "id": "alj-program-linear-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada program linear",
+      "body": "**Salah arah pertidaksamaan.** \"Paling banyak\" berarti $\\le$, \"paling sedikit\" berarti $\\ge$, \"tidak kurang dari\" juga $\\ge$. Salah satu saja membuat seluruh daerah keliru.\n\n**Lupa pembatas tak negatif.** Banyaknya barang tidak bisa negatif. Tanpa $x \\ge 0$ dan $y \\ge 0$, daerahnya melebar ke tempat yang tidak masuk akal.\n\n**Melewatkan satu titik pojok.** Daftarkan semuanya secara sistematis, termasuk perpotongan antar garis pembatas — bukan hanya yang ada di sumbu.\n\n**Menjawab koordinat, bukan nilainya.** Soal biasanya meminta nilai maksimum $z$, bukan di titik mana ia terjadi. Baca ulang pertanyaannya.\n\n**Menerima jawaban pecahan** pada soal yang objeknya tidak bisa dipecah. Periksa bilangan bulat terdekat yang masih memenuhi semua pembatas.",
+      "questions": [
+        {
+          "id": "alj-program-linear-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Kalimat \"banyaknya barang tidak lebih dari 50\" diterjemahkan menjadi ...",
+          "options": [
+            "$x \\le 50$",
+            "$x \\ge 50$",
+            "$x < 50$",
+            "$x = 50$"
+          ],
+          "answerIndex": 0,
+          "solution": "\"Tidak lebih dari 50\" berarti nilainya boleh 50, tapi tidak boleh melebihi.\n\nJadi batas atasnya termasuk:\n$$x \\le 50$$\n\nMemakai $<$ akan mengeluarkan nilai 50 itu sendiri, padahal kalimatnya masih mengizinkannya.",
+          "hint": "Apakah nilai 50 sendiri masih diperbolehkan?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-program-linear-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada soal program linear yang meminta \"nilai maksimum\", jawaban yang diharapkan adalah ...",
+          "options": [
+            "nilai fungsi objektifnya",
+            "koordinat titik pojoknya",
+            "banyaknya titik pojok",
+            "luas daerah penyelesaian"
+          ],
+          "answerIndex": 0,
+          "solution": "Soal yang meminta nilai maksimum menanyakan **nilai fungsi objektif** $z$, bukan di titik mana nilai itu tercapai.\n\nKeduanya memang dihitung bersamaan — kamu harus menemukan titiknya untuk mendapat nilainya. Tapi yang ditulis sebagai jawaban adalah nilainya.\n\nKalau soal menanyakan \"pada titik mana\", barulah koordinatnya yang dijawab. Membaca pertanyaannya sampai selesai mencegah kesalahan ini.",
+          "hint": "Perhatikan kata 'nilai' dalam pertanyaannya.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "\"Paling banyak\" $\\le$, \"paling sedikit\" $\\ge$",
+        "Selalu tulis $x \\ge 0$, $y \\ge 0$",
+        "Daftarkan semua pojok, termasuk perpotongan antar garis",
+        "Baca ulang: nilai $z$ atau koordinatnya?"
+      ],
+      "pitfall": "Menjawab titik $(2,8)$ padahal soal menanyakan nilai maksimum $z$, yang seharusnya $38$."
+    }
+  ]
+}

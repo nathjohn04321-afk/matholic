@@ -22,10 +22,12 @@ import topik11 from "@/content/menengah/alj-eksponen-logaritma.json";
 import topik12 from "@/content/menengah/alj-fungsi.json";
 import topik13 from "@/content/menengah/alj-matriks.json";
 import topik14 from "@/content/menengah/alj-nilai-mutlak.json";
-import topik15 from "@/content/menengah/alj-vektor.json";
-import topik16 from "@/content/menengah/kal-limit-aljabar.json";
-import topik17 from "@/content/lanjut/lan-integral-tentu.json";
-import topik18 from "@/content/olimpiade/osn-keterbagian.json";
+import topik15 from "@/content/menengah/alj-polinomial.json";
+import topik16 from "@/content/menengah/alj-program-linear.json";
+import topik17 from "@/content/menengah/alj-vektor.json";
+import topik18 from "@/content/menengah/kal-limit-aljabar.json";
+import topik19 from "@/content/lanjut/lan-integral-tentu.json";
+import topik20 from "@/content/olimpiade/osn-keterbagian.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -47,4 +49,6 @@ export const RAW_TOPICS: Topic[] = [
   topik16 as unknown as Topic,
   topik17 as unknown as Topic,
   topik18 as unknown as Topic,
+  topik19 as unknown as Topic,
+  topik20 as unknown as Topic,
 ];

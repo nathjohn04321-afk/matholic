@@ -822,6 +822,106 @@
       "snippet": "Mengkuadratkan tanpa syarat. Dari [rumus] orang langsung menulis [rumus] . Itu hanya sah kalau [rumus] . Kalau tidak dicek, kamu akan mendapat akar palsu. Co..."
     },
     {
+      "cardId": "alj-polinomial-c1",
+      "topicId": "alj-polinomial",
+      "topicTitle": "Polinomial",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Teorema sisa memangkas pembagian panjang",
+      "haystack": "teorema sisa memangkas pembagian panjang untuk mencari sisa pembagian oleh , kamu tidak perlu melakukan pembagian sama sekali. cukup hitung . alasannya rapi. pembagian selalu bisa ditulis sebagai dengan sisa yang berupa bilangan. sekarang masukkan : bagian pertama menjadi nol karena dikalikan , dan yang tersisa hanya . jadi . akibat langsungnya adalah teorema faktor: kalau , sisanya nol, artinya membagi habis — jadi adalah faktornya. untuk pembagi berbentuk , yang disubstitusikan adalah , yaitu akar dari pembaginya. sisa pembagian oleh adalah faktor dari untuk , substitusikan mensubstitusikan untuk pembagi . yang disubstitusikan adalah akar pembaginya, yaitu nilai yang membuat pembagi bernilai nol. polinomial",
+      "snippet": "Untuk mencari sisa pembagian [rumus] oleh [rumus] , kamu tidak perlu melakukan pembagian sama sekali. Cukup hitung [rumus] . [rumus] Alasannya rapi. Pembagia..."
+    },
+    {
+      "cardId": "alj-polinomial-c2",
+      "topicId": "alj-polinomial",
+      "topicTitle": "Polinomial",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Mencari akar dengan teorema akar rasional",
+      "haystack": "mencari akar dengan teorema akar rasional mencari akar polinomial derajat tiga terasa seperti menebak. padahal daftar calonnya terbatas dan bisa ditulis lebih dulu. teorema akar rasional mengatakan: kalau adalah akar rasional, maka pasti membagi suku tetapnya dan membagi koefisien pangkat tertinggi. untuk polinomial berkoefisien depan 1, ini menyederhana: calon akarnya hanya pembagi-pembagi suku tetap, termasuk yang negatif. contoh . suku tetapnya , jadi calonnya dan . uji satu per satu dengan teorema sisa — , jadi akarnya. setelah satu akar ditemukan, bagi polinomialnya dengan faktor itu. sisanya berderajat lebih rendah dan biasanya sudah bisa difaktorkan dengan cara biasa. calon akar rasional: pembagi suku tetap dibagi pembagi koefisien depan uji tiap calon dengan teorema sisa setelah satu akar ketemu, turunkan derajatnya hanya menguji calon akar yang positif. pembagi suku tetap mencakup yang negatif juga, dan akar negatif sama seringnya muncul. polinomial",
+      "snippet": "Mencari akar polinomial derajat tiga terasa seperti menebak. Padahal daftar calonnya terbatas dan bisa ditulis lebih dulu. Teorema akar rasional mengatakan: ..."
+    },
+    {
+      "cardId": "alj-polinomial-c3",
+      "topicId": "alj-polinomial",
+      "topicTitle": "Polinomial",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Vieta untuk derajat tiga",
+      "haystack": "vieta untuk derajat tiga hubungan vieta yang kamu kenal dari persamaan kuadrat punya versi untuk derajat lebih tinggi, dan polanya cukup mudah diingat sekali kamu melihat bentuknya. untuk dengan akar-akar berlaku: perhatikan dua pola sekaligus. tandanya berganti-ganti dimulai dari negatif, dan koefisien yang dipakai bergeser turun satu tingkat pada tiap baris. pola yang sama berlanjut untuk derajat empat dan seterusnya. gunanya besar untuk soal yang menanyakan sesuatu tentang akar tanpa meminta akarnya. misalnya bisa dihitung dari tanpa mencari satu akar pun — dan itu penyelamat ketika akarnya tidak berbentuk bilangan rapi. tandanya berganti-ganti dimulai dari negatif memakai tanda yang salah pada hasil kali akar derajat tiga. untuk derajat tiga hasil kalinya , berbeda dari derajat dua yang . polinomial",
+      "snippet": "Hubungan Vieta yang kamu kenal dari persamaan kuadrat punya versi untuk derajat lebih tinggi, dan polanya cukup mudah diingat sekali kamu melihat bentuknya. ..."
+    },
+    {
+      "cardId": "alj-polinomial-c4",
+      "topicId": "alj-polinomial",
+      "topicTitle": "Polinomial",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Pembagian dengan skema Horner",
+      "haystack": "pembagian dengan skema horner skema horner membagi polinomial dengan jauh lebih cepat daripada pembagian bersusun, dan sekaligus memberi sisanya. caranya: 1. tulis seluruh koefisien berurutan dari pangkat tertinggi. pangkat yang tidak ada ditulis sebagai nol — bagian ini paling sering terlewat. 2. turunkan koefisien pertama apa adanya. 3. kalikan dengan , tuliskan di bawah koefisien berikutnya, lalu jumlahkan. 4. ulangi sampai koefisien terakhir. angka-angka yang kamu peroleh adalah koefisien hasil baginya, dan angka terakhir adalah sisanya. contoh membagi dengan : koefisiennya . hasilnya dengan sisa — artinya hasil baginya . tulis koefisien lengkap, termasuk nol untuk pangkat yang hilang turunkan, kalikan , jumlahkan, ulangi angka terakhir adalah sisanya melewatkan koefisien nol untuk pangkat yang tidak muncul, misalnya menulis sebagai padahal seharusnya . polinomial",
+      "snippet": "Skema Horner membagi polinomial dengan [rumus] jauh lebih cepat daripada pembagian bersusun, dan sekaligus memberi sisanya. Caranya: 1. Tulis seluruh koefisi..."
+    },
+    {
+      "cardId": "alj-polinomial-c5",
+      "topicId": "alj-polinomial",
+      "topicTitle": "Polinomial",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada polinomial",
+      "haystack": "kesalahan khas pada polinomial salah tanda substitusi. untuk pembagi , yang disubstitusikan adalah . untuk , yang disubstitusikan . yang dicari selalu nilai yang membuat pembaginya nol. melewatkan koefisien nol. pangkat yang tidak muncul tetap harus ditulis sebagai nol pada skema horner. lupa akar negatif. saat menguji calon akar rasional, pembagi suku tetap mencakup yang negatif. memakai vieta derajat dua untuk derajat tiga. tandanya berbeda: hasil kali akar derajat tiga bertanda negatif terhadap . berhenti setelah satu akar. polinomial derajat tiga bisa punya sampai tiga akar. turunkan derajatnya dan periksa sisanya. substitusikan akar pembaginya, perhatikan tandanya koefisien nol wajib ditulis uji calon akar negatif juga vieta derajat tiga punya tanda berbeda mensubstitusikan untuk pembagi . yang benar , karena itulah nilai yang membuat pembaginya nol. polinomial",
+      "snippet": "Salah tanda substitusi. Untuk pembagi [rumus] , yang disubstitusikan adalah [rumus] . Untuk [rumus] , yang disubstitusikan [rumus] . Yang dicari selalu nilai..."
+    },
+    {
+      "cardId": "alj-program-linear-c1",
+      "topicId": "alj-program-linear",
+      "topicTitle": "Program Linear",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Optimum selalu di titik pojok",
+      "haystack": "optimum selalu di titik pojok program linear mencari nilai terbesar atau terkecil dari suatu bentuk, dengan sejumlah pembatas. yang membuatnya bisa dikerjakan tanpa mencoba tak hingga banyak titik adalah satu kenyataan: nilai optimum selalu berada di titik pojok . kenapa begitu? bayangkan garis untuk berbagai nilai . semuanya sejajar, hanya bergeser. menaikkan berarti menggeser garis itu menjauh dari titik asal. geser terus sampai garisnya hampir meninggalkan daerah penyelesaian. titik terakhir yang masih tersentuh pasti sebuah pojok — kecuali garisnya kebetulan sejajar dengan salah satu sisi, dan dalam kasus itu seluruh sisi optimum, termasuk kedua pojoknya. akibatnya praktis: kamu cukup menghitung nilai di setiap titik pojok, lalu membandingkan. tidak perlu memeriksa titik di dalam daerah sama sekali. nilai optimum selalu di titik pojok hitung di setiap pojok, lalu bandingkan garis selidik bergeser sejajar saat berubah memeriksa titik di tengah daerah penyelesaian. titik dalam tidak pernah memberi nilai optimum, jadi menghitungnya hanya membuang waktu. program linear",
+      "snippet": "Program linear mencari nilai terbesar atau terkecil dari suatu bentuk, dengan sejumlah pembatas. Yang membuatnya bisa dikerjakan tanpa mencoba tak hingga ban..."
+    },
+    {
+      "cardId": "alj-program-linear-c2",
+      "topicId": "alj-program-linear",
+      "topicTitle": "Program Linear",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Langkah baku program linear",
+      "haystack": "langkah baku program linear hampir semua soal program linear diselesaikan dengan urutan yang sama. 1. tetapkan variabelnya. tulis dengan jelas apa yang diwakili dan . 2. terjemahkan setiap syarat menjadi pertidaksamaan. jangan lupa syarat tersembunyi dan untuk besaran yang tidak mungkin negatif. 3. gambar daerah penyelesaiannya. 4. tentukan koordinat setiap titik pojok, kalau perlu dengan menyelesaikan sistem persamaan dari dua garis yang berpotongan. 5. hitung fungsi objektif di setiap pojok. 6. pilih nilai terbesar atau terkecil sesuai yang diminta. langkah 2 adalah yang paling sering salah pada soal cerita. kata \"paling banyak\" menjadi , sedangkan \"paling sedikit\" menjadi . membacanya terbalik membuat seluruh daerah penyelesaian keliru. tulis syarat , untuk besaran nyata \"paling banyak\" , \"paling sedikit\" hitung hanya di titik pojok lupa menuliskan pembatas dan , sehingga daerah penyelesaiannya melebar ke kuadran yang tidak masuk akal. program linear",
+      "snippet": "Hampir semua soal program linear diselesaikan dengan urutan yang sama. 1. Tetapkan variabelnya. Tulis dengan jelas apa yang diwakili [rumus] dan [rumus] . 2...."
+    },
+    {
+      "cardId": "alj-program-linear-c3",
+      "topicId": "alj-program-linear",
+      "topicTitle": "Program Linear",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Menentukan daerah yang benar",
+      "haystack": "menentukan daerah yang benar setelah menggambar garis pembatas, kamu harus memutuskan sisi mana yang merupakan daerah penyelesaian. ada cara yang jauh lebih cepat daripada menghafal aturan. uji satu titik. ambil titik yang jelas tidak berada di garis — biasanya paling mudah. masukkan ke pertidaksamaannya. kalau pernyataannya benar, daerah penyelesaiannya adalah sisi yang memuat titik itu. kalau salah, sisi sebaliknya. contoh: untuk , uji memberi yang benar. jadi daerahnya adalah sisi yang memuat titik asal. satu-satunya syarat: titik ujinya tidak boleh terletak persis di garis, karena hasilnya tidak memberi informasi. kalau garisnya melewati , pakai titik lain seperti . cara ini bekerja untuk semua bentuk pertidaksamaan, tanpa perlu mengingat arah mana yang diarsir. uji satu titik, biasanya pernyataan benar berarti daerahnya memuat titik itu titik uji tidak boleh berada di garis memakai sebagai titik uji padahal garis pembatasnya melewati titik asal, sehingga hasil ujinya tidak memberi kesimpulan apa pun. program linear",
+      "snippet": "Setelah menggambar garis pembatas, kamu harus memutuskan sisi mana yang merupakan daerah penyelesaian. Ada cara yang jauh lebih cepat daripada menghafal atur..."
+    },
+    {
+      "cardId": "alj-program-linear-c4",
+      "topicId": "alj-program-linear",
+      "topicTitle": "Program Linear",
+      "track": "menengah",
+      "type": "contoh",
+      "title": "Soal cerita dikerjakan penuh",
+      "haystack": "soal cerita dikerjakan penuh soal: seorang penjahit punya 60 m kain katun dan 40 m kain sutra. baju model a butuh 2 m katun dan 1 m sutra, model b butuh 1 m katun dan 2 m sutra. keuntungan model a rp40.000 dan model b rp30.000. berapa keuntungan maksimumnya? langkah 1 — variabel. = banyak baju a, = banyak baju b. langkah 2 — pembatas. katun: sutra: serta dan . langkah 3 — fungsi objektif. . langkah 4 — titik pojok. , , , dan perpotongan kedua garis di . karena banyak baju harus bulat, titik pecahan itu perlu diperiksa pada bilangan bulat terdekat yang masih memenuhi kedua pembatas. tulis pembatas dari tiap sumber daya yang terbatas fungsi objektif dari yang ingin dimaksimumkan soal nyata sering menuntut jawaban bilangan bulat menerima titik pojok berkoordinat pecahan sebagai jawaban akhir pada soal yang barangnya tidak bisa dipecah, seperti banyaknya baju. program linear",
+      "snippet": "Soal: seorang penjahit punya 60 m kain katun dan 40 m kain sutra. Baju model A butuh 2 m katun dan 1 m sutra, model B butuh 1 m katun dan 2 m sutra. Keuntung..."
+    },
+    {
+      "cardId": "alj-program-linear-c5",
+      "topicId": "alj-program-linear",
+      "topicTitle": "Program Linear",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada program linear",
+      "haystack": "kesalahan khas pada program linear salah arah pertidaksamaan. \"paling banyak\" berarti , \"paling sedikit\" berarti , \"tidak kurang dari\" juga . salah satu saja membuat seluruh daerah keliru. lupa pembatas tak negatif. banyaknya barang tidak bisa negatif. tanpa dan , daerahnya melebar ke tempat yang tidak masuk akal. melewatkan satu titik pojok. daftarkan semuanya secara sistematis, termasuk perpotongan antar garis pembatas — bukan hanya yang ada di sumbu. menjawab koordinat, bukan nilainya. soal biasanya meminta nilai maksimum , bukan di titik mana ia terjadi. baca ulang pertanyaannya. menerima jawaban pecahan pada soal yang objeknya tidak bisa dipecah. periksa bilangan bulat terdekat yang masih memenuhi semua pembatas. \"paling banyak\" , \"paling sedikit\" selalu tulis , daftarkan semua pojok, termasuk perpotongan antar garis baca ulang: nilai atau koordinatnya? menjawab titik padahal soal menanyakan nilai maksimum , yang seharusnya . program linear",
+      "snippet": "Salah arah pertidaksamaan. \"Paling banyak\" berarti [rumus] , \"paling sedikit\" berarti [rumus] , \"tidak kurang dari\" juga [rumus] . Salah satu saja membuat se..."
+    },
+    {
       "cardId": "alj-vektor-c1",
       "topicId": "alj-vektor",
       "topicTitle": "Vektor",

@@ -1,0 +1,266 @@
+{
+  "id": "alj-polinomial",
+  "track": "menengah",
+  "title": "Polinomial",
+  "order": 8,
+  "prerequisites": [
+    "das-kuadrat"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Teorema sisa sebagai jalan pintas, dan cara mencari akar tanpa mencoba semua bilangan.",
+  "tags": [
+    "aljabar",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "alj-polinomial-c1",
+      "type": "konsep",
+      "title": "Teorema sisa memangkas pembagian panjang",
+      "body": "Untuk mencari sisa pembagian $f(x)$ oleh $(x-a)$, kamu tidak perlu melakukan pembagian sama sekali. Cukup hitung $f(a)$.\n\n$$\\text{sisa} = f(a)$$\n\nAlasannya rapi. Pembagian selalu bisa ditulis sebagai\n$$f(x) = (x-a) \\cdot q(x) + s$$\ndengan $s$ sisa yang berupa bilangan. Sekarang masukkan $x = a$: bagian pertama menjadi nol karena dikalikan $(a-a)$, dan yang tersisa hanya $s$. Jadi $f(a) = s$.\n\nAkibat langsungnya adalah teorema faktor: kalau $f(a) = 0$, sisanya nol, artinya $(x-a)$ membagi habis $f(x)$ — jadi $(x-a)$ adalah faktornya.\n\nUntuk pembagi berbentuk $(ax-b)$, yang disubstitusikan adalah $x = \\frac{b}{a}$, yaitu akar dari pembaginya.",
+      "questions": [
+        {
+          "id": "alj-polinomial-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $f(x) = x^3 - 2x^2 + x - 2$ oleh $(x-2)$ adalah ...",
+          "options": [
+            "$0$",
+            "$4$",
+            "$-2$",
+            "$8$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai teorema sisa — substitusikan akar pembaginya, yaitu $x = 2$:\n$$f(2) = 2^3 - 2(2)^2 + 2 - 2$$\n$$= 8 - 8 + 2 - 2 = 0$$\n\nSisanya $0$, yang berarti $(x-2)$ adalah faktor dari $f(x)$.\n\nJauh lebih cepat daripada pembagian panjang.",
+          "hint": "Substitusikan nilai yang membuat pembaginya nol.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-polinomial-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(x) = x^3 + kx - 6$ habis dibagi $(x-3)$, maka nilai $k$ adalah ...",
+          "options": [
+            "$-7$",
+            "$7$",
+            "$-9$",
+            "$9$"
+          ],
+          "answerIndex": 0,
+          "solution": "Habis dibagi berarti sisanya nol, yaitu $f(3) = 0$:\n$$27 + 3k - 6 = 0$$\n$$3k = -21$$\n$$k = -7$$\n\nPeriksa: $f(x) = x^3 - 7x - 6$, dan $f(3) = 27 - 21 - 6 = 0$. Cocok.",
+          "hint": "Habis dibagi berarti sisanya nol.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sisa pembagian oleh $(x-a)$ adalah $f(a)$",
+        "$f(a) = 0 \\iff (x-a)$ faktor dari $f(x)$",
+        "Untuk $(ax-b)$, substitusikan $x = \\frac{b}{a}$"
+      ],
+      "pitfall": "Mensubstitusikan $x = -a$ untuk pembagi $(x-a)$. Yang disubstitusikan adalah akar pembaginya, yaitu nilai yang membuat pembagi bernilai nol."
+    },
+    {
+      "id": "alj-polinomial-c2",
+      "type": "teknik",
+      "title": "Mencari akar dengan teorema akar rasional",
+      "body": "Mencari akar polinomial derajat tiga terasa seperti menebak. Padahal daftar calonnya terbatas dan bisa ditulis lebih dulu.\n\nTeorema akar rasional mengatakan: kalau $\\frac{p}{q}$ adalah akar rasional, maka $p$ pasti membagi suku tetapnya dan $q$ membagi koefisien pangkat tertinggi.\n\nUntuk polinomial berkoefisien depan 1, ini menyederhana: calon akarnya hanya pembagi-pembagi suku tetap, termasuk yang negatif.\n\nContoh $x^3 - 2x^2 + x - 2$. Suku tetapnya $-2$, jadi calonnya $\\pm1$ dan $\\pm2$. Uji satu per satu dengan teorema sisa — $f(2) = 0$, jadi $2$ akarnya.\n\nSetelah satu akar ditemukan, bagi polinomialnya dengan faktor itu. Sisanya berderajat lebih rendah dan biasanya sudah bisa difaktorkan dengan cara biasa.",
+      "questions": [
+        {
+          "id": "alj-polinomial-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Calon akar rasional dari $x^3 - 2x^2 + x - 2$ adalah ...",
+          "options": [
+            "$\\pm1, \\pm2$",
+            "$\\pm1, \\pm2, \\pm3$",
+            "$1, 2$ saja",
+            "$\\pm2$ saja"
+          ],
+          "answerIndex": 0,
+          "solution": "Koefisien pangkat tertingginya 1, jadi calon akarnya cukup pembagi-pembagi suku tetap.\n\nSuku tetapnya $-2$, dan pembaginya: $1, 2$ — beserta yang negatif.\n\nJadi calonnya $\\pm1$ dan $\\pm2$.\n\nMenulis hanya $1, 2$ berarti melewatkan kemungkinan akar negatif, yang sama mungkinnya.",
+          "hint": "Jangan lupa pembagi yang negatif.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-polinomial-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan akar real dari $x^3 - 2x^2 + x - 2 = 0$.",
+          "answer": "2",
+          "acceptedAnswers": [
+            "x = 2",
+            "{2}",
+            "dua"
+          ],
+          "solution": "Uji calon akar dengan teorema sisa.\n\n$f(1) = 1 - 2 + 1 - 2 = -2$, bukan akar.\n$f(2) = 8 - 8 + 2 - 2 = 0$, akar.\n\nBagi dengan $(x-2)$:\n$$x^3 - 2x^2 + x - 2 = (x-2)(x^2+1)$$\n\nFaktor $x^2 + 1$ tidak punya akar real, karena $x^2 = -1$ mustahil untuk bilangan real.\n\nJadi satu-satunya akar real adalah $x = 2$.",
+          "hint": "Uji calon akarnya, lalu periksa sisa faktornya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Calon akar rasional: pembagi suku tetap dibagi pembagi koefisien depan",
+        "Uji tiap calon dengan teorema sisa",
+        "Setelah satu akar ketemu, turunkan derajatnya"
+      ],
+      "pitfall": "Hanya menguji calon akar yang positif. Pembagi suku tetap mencakup yang negatif juga, dan akar negatif sama seringnya muncul."
+    },
+    {
+      "id": "alj-polinomial-c3",
+      "type": "rumus",
+      "title": "Vieta untuk derajat tiga",
+      "body": "Hubungan Vieta yang kamu kenal dari persamaan kuadrat punya versi untuk derajat lebih tinggi, dan polanya cukup mudah diingat sekali kamu melihat bentuknya.\n\nUntuk $ax^3 + bx^2 + cx + d = 0$ dengan akar-akar $x_1, x_2, x_3$ berlaku:\n$$x_1+x_2+x_3 = -\\frac{b}{a}$$\n$$x_1x_2 + x_1x_3 + x_2x_3 = \\frac{c}{a}$$\n$$x_1x_2x_3 = -\\frac{d}{a}$$\n\nPerhatikan dua pola sekaligus. Tandanya berganti-ganti dimulai dari negatif, dan koefisien yang dipakai bergeser turun satu tingkat pada tiap baris. Pola yang sama berlanjut untuk derajat empat dan seterusnya.\n\nGunanya besar untuk soal yang menanyakan sesuatu **tentang** akar tanpa meminta akarnya. Misalnya $x_1^2+x_2^2+x_3^2$ bisa dihitung dari $(\\sum x_i)^2 - 2\\sum x_ix_j$ tanpa mencari satu akar pun — dan itu penyelamat ketika akarnya tidak berbentuk bilangan rapi.",
+      "questions": [
+        {
+          "id": "alj-polinomial-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jumlah akar-akar dari $2x^3 - 6x^2 + x - 5 = 0$ adalah ...",
+          "options": [
+            "$3$",
+            "$-3$",
+            "$6$",
+            "$\\frac{5}{2}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai Vieta dengan $a = 2$ dan $b = -6$:\n$$x_1+x_2+x_3 = -\\frac{b}{a} = -\\frac{-6}{2} = 3$$\n\nDua tanda negatif saling meniadakan.\n\nTidak perlu mencari akarnya sama sekali — yang bentuknya tentu tidak rapi.",
+          "hint": "Perhatikan $b$ sendiri sudah bernilai negatif.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-polinomial-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil kali akar-akar dari $x^3 - 4x^2 + x + 6 = 0$ adalah ...",
+          "options": [
+            "$-6$",
+            "$6$",
+            "$4$",
+            "$-1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai Vieta untuk derajat tiga dengan $a=1$ dan $d=6$:\n$$x_1x_2x_3 = -\\frac{d}{a} = -\\frac{6}{1} = -6$$\n\nPerhatikan tanda negatifnya. Untuk derajat tiga, hasil kali akar bertanda berlawanan dengan suku tetapnya.\n\nPeriksa: akar-akarnya $-1$, $2$, dan $3$, dan $(-1)(2)(3) = -6$. Cocok.",
+          "hint": "Untuk derajat tiga, ada tanda negatif pada hasil kalinya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sum x_i = -\\frac{b}{a}$",
+        "$\\sum x_ix_j = \\frac{c}{a}$",
+        "$x_1x_2x_3 = -\\frac{d}{a}$",
+        "Tandanya berganti-ganti dimulai dari negatif"
+      ],
+      "pitfall": "Memakai tanda yang salah pada hasil kali akar derajat tiga. Untuk derajat tiga hasil kalinya $-\\frac{d}{a}$, berbeda dari derajat dua yang $+\\frac{c}{a}$."
+    },
+    {
+      "id": "alj-polinomial-c4",
+      "type": "prosedur",
+      "title": "Pembagian dengan skema Horner",
+      "body": "Skema Horner membagi polinomial dengan $(x-a)$ jauh lebih cepat daripada pembagian bersusun, dan sekaligus memberi sisanya.\n\nCaranya:\n1. Tulis seluruh koefisien berurutan dari pangkat tertinggi. Pangkat yang tidak ada ditulis sebagai nol — bagian ini paling sering terlewat.\n2. Turunkan koefisien pertama apa adanya.\n3. Kalikan dengan $a$, tuliskan di bawah koefisien berikutnya, lalu jumlahkan.\n4. Ulangi sampai koefisien terakhir.\n\nAngka-angka yang kamu peroleh adalah koefisien hasil baginya, dan angka terakhir adalah sisanya.\n\nContoh membagi $x^3 - 2x^2 + x - 2$ dengan $(x-2)$: koefisiennya $1, -2, 1, -2$. Hasilnya $1, 0, 1$ dengan sisa $0$ — artinya hasil baginya $x^2 + 1$.",
+      "questions": [
+        {
+          "id": "alj-polinomial-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Koefisien yang ditulis untuk skema Horner pada $x^3 + 2x - 5$ adalah ...",
+          "options": [
+            "$1, 0, 2, -5$",
+            "$1, 2, -5$",
+            "$1, 0, 0, 2, -5$",
+            "$1, 3, 2, -5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tuliskan polinomialnya lengkap dengan semua pangkat dari 3 ke bawah:\n$$x^3 + 0x^2 + 2x - 5$$\n\nKoefisiennya: $1, 0, 2, -5$.\n\nSuku $x^2$ tidak muncul di soal, jadi koefisiennya nol — dan nol itu **wajib** ditulis. Melewatkannya menggeser seluruh perhitungan Horner.",
+          "hint": "Pangkat berapa yang tidak muncul di polinomialnya?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-polinomial-q8",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan sisa pembagian $x^3 + 2x - 5$ oleh $(x-1)$.",
+          "answer": "-2",
+          "acceptedAnswers": [
+            "−2",
+            "minus 2"
+          ],
+          "solution": "Pakai teorema sisa, substitusikan $x = 1$:\n$$f(1) = 1^3 + 2(1) - 5 = 1 + 2 - 5 = -2$$\n\nSisanya $-2$.\n\nDengan Horner: koefisien $1, 0, 2, -5$ dan $a = 1$ memberi $1, 1, 3$ dengan sisa $-2$. Hasilnya sama.",
+          "hint": "Substitusikan akar pembaginya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis koefisien lengkap, termasuk nol untuk pangkat yang hilang",
+        "Turunkan, kalikan $a$, jumlahkan, ulangi",
+        "Angka terakhir adalah sisanya"
+      ],
+      "pitfall": "Melewatkan koefisien nol untuk pangkat yang tidak muncul, misalnya menulis $x^3 + 1$ sebagai $1, 1$ padahal seharusnya $1, 0, 0, 1$."
+    },
+    {
+      "id": "alj-polinomial-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada polinomial",
+      "body": "**Salah tanda substitusi.** Untuk pembagi $(x-3)$, yang disubstitusikan adalah $x = 3$. Untuk $(x+3)$, yang disubstitusikan $x = -3$. Yang dicari selalu nilai yang membuat pembaginya nol.\n\n**Melewatkan koefisien nol.** Pangkat yang tidak muncul tetap harus ditulis sebagai nol pada skema Horner.\n\n**Lupa akar negatif.** Saat menguji calon akar rasional, pembagi suku tetap mencakup yang negatif.\n\n**Memakai Vieta derajat dua untuk derajat tiga.** Tandanya berbeda: hasil kali akar derajat tiga bertanda negatif terhadap $\\frac{d}{a}$.\n\n**Berhenti setelah satu akar.** Polinomial derajat tiga bisa punya sampai tiga akar. Turunkan derajatnya dan periksa sisanya.",
+      "questions": [
+        {
+          "id": "alj-polinomial-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $f(x)$ oleh $(x+4)$ sama dengan ...",
+          "options": [
+            "$f(-4)$",
+            "$f(4)$",
+            "$f(0)$",
+            "$-f(4)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Teorema sisa memakai nilai yang membuat pembaginya nol.\n\n$$x + 4 = 0 \\Rightarrow x = -4$$\n\nJadi sisanya adalah $f(-4)$.\n\nKesalahan tersering adalah membaca tanda di dalam kurung apa adanya dan menulis $f(4)$. Tandanya selalu berlawanan.",
+          "hint": "Nilai berapa yang membuat $x+4$ bernilai nol?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-polinomial-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $x=1$ dan $x=-2$ adalah akar dari $x^3 + ax^2 + bx + 2 = 0$, maka akar ketiganya adalah ...",
+          "options": [
+            "$1$",
+            "$-1$",
+            "$2$",
+            "$-2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai Vieta pada hasil kali akar. Dengan $a_{\\text{depan}} = 1$ dan suku tetap $2$:\n$$x_1x_2x_3 = -\\frac{2}{1} = -2$$\n\nSubstitusikan dua akar yang diketahui:\n$$(1)(-2)(x_3) = -2$$\n$$-2x_3 = -2$$\n$$x_3 = 1$$\n\nAkar ketiganya $1$ — kebetulan sama dengan akar pertama, jadi $x=1$ adalah akar kembar.",
+          "hint": "Pakai hubungan hasil kali akar.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Substitusikan akar pembaginya, perhatikan tandanya",
+        "Koefisien nol wajib ditulis",
+        "Uji calon akar negatif juga",
+        "Vieta derajat tiga punya tanda berbeda"
+      ],
+      "pitfall": "Mensubstitusikan $x = 3$ untuk pembagi $(x+3)$. Yang benar $x = -3$, karena itulah nilai yang membuat pembaginya nol."
+    }
+  ]
+}
