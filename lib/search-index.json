@@ -1032,6 +1032,56 @@
       "snippet": "Menuliskan [rumus] sebagai jawaban. Bentuk itu bukan bilangan. Ia hanya memberitahu bahwa kamu belum selesai bekerja. Mencoret suku, bukan faktor. Dari [rumu..."
     },
     {
+      "cardId": "trg-perbandingan-c1",
+      "topicId": "trg-perbandingan",
+      "topicTitle": "Perbandingan Trigonometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Sinus dan kosinus adalah perbandingan, bukan panjang",
+      "haystack": "sinus dan kosinus adalah perbandingan, bukan panjang perbandingan trigonometri sering dihafal lewat singkatan tanpa memahami apa yang sebenarnya diukur. padahal intinya satu: ketiganya adalah perbandingan dua sisi , bukan panjang. pada segitiga siku-siku dengan sudut : karena berupa perbandingan, nilainya tidak bergantung pada ukuran segitiganya. segitiga kecil dan besar dengan sudut sama punya yang sama persis — dan inilah yang membuat tabel trigonometri bisa dipakai untuk segitiga apa pun. dari definisi itu langsung terlihat kenapa dan tidak pernah melebihi 1: sisi depan dan samping selalu lebih pendek dari sisi miring. , , nilainya tidak bergantung ukuran segitiga dan menjawab soal dengan nilai sinus lebih dari 1. karena sisi depan tidak pernah melebihi sisi miring, hasil seperti itu selalu menandakan kesalahan hitung. perbandingan trigonometri",
+      "snippet": "Perbandingan trigonometri sering dihafal lewat singkatan tanpa memahami apa yang sebenarnya diukur. Padahal intinya satu: ketiganya adalah perbandingan dua s..."
+    },
+    {
+      "cardId": "trg-perbandingan-c2",
+      "topicId": "trg-perbandingan",
+      "topicTitle": "Perbandingan Trigonometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Sudut istimewa dan cara mengingatnya",
+      "haystack": "sudut istimewa dan cara mengingatnya lima sudut ini muncul terus-menerus di soal, dan ada cara mengingatnya sekaligus tanpa menghafal satu per satu. tulis nilai untuk dalam bentuk yang belum disederhanakan: pembilangnya ternyata hanya akar dari berurutan. setelah disederhanakan, hasilnya , , , , dan . untuk kosinus, pakai daftar yang persis sama tapi dibalik urutannya . alasannya ada pada hubungan — sudut yang saling berpenyiku menukar peran sinus dan kosinus. tangen tinggal dibagi: . untuk penyebutnya nol, jadi tidak terdefinisi — bukan nol dan bukan tak hingga. : sampai memakai daftar yang sama, dibalik tidak terdefinisi menuliskan sebagai nol atau tak hingga sebagai jawaban akhir. yang benar adalah tidak terdefinisi, karena penyebutnya nol. perbandingan trigonometri",
+      "snippet": "Lima sudut ini muncul terus-menerus di soal, dan ada cara mengingatnya sekaligus tanpa menghafal satu per satu. Tulis nilai [rumus] untuk [rumus] dalam bentu..."
+    },
+    {
+      "cardId": "trg-perbandingan-c3",
+      "topicId": "trg-perbandingan",
+      "topicTitle": "Perbandingan Trigonometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Lingkaran satuan memperluas ke semua sudut",
+      "haystack": "lingkaran satuan memperluas ke semua sudut definisi lewat segitiga siku-siku hanya berlaku untuk sudut antara dan . lingkaran satuan memperluasnya ke sudut mana pun. pada lingkaran berjari-jari 1 berpusat di titik asal, sudut diukur dari sumbu- positif berlawanan arah jarum jam. titik yang ditunjuk punya koordinat . dari sini tanda di tiap kuadran langsung terbaca dari koordinatnya: - kuadran i: keduanya positif - kuadran ii: positif, negatif - kuadran iii: keduanya negatif - kuadran iv: positif, negatif tidak perlu menghafal singkatan apa pun — cukup ingat bahwa adalah koordinat dan adalah koordinat , lalu bayangkan letak titiknya. titik pada lingkaran satuan: adalah koordinat , adalah koordinat tanda mengikuti kuadran letak titiknya menghafal tanda tiap kuadran tanpa memahami asalnya, lalu tertukar antara kuadran ii dan iv — keduanya punya satu nilai positif dan satu negatif, hanya berbeda yang mana. perbandingan trigonometri",
+      "snippet": "Definisi lewat segitiga siku-siku hanya berlaku untuk sudut antara [rumus] dan [rumus] . Lingkaran satuan memperluasnya ke sudut mana pun. Pada lingkaran ber..."
+    },
+    {
+      "cardId": "trg-perbandingan-c4",
+      "topicId": "trg-perbandingan",
+      "topicTitle": "Perbandingan Trigonometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Aturan sinus dan aturan kosinus",
+      "haystack": "aturan sinus dan aturan kosinus untuk segitiga yang bukan siku-siku, dua aturan berikut menggantikan peran pythagoras, dan memilih yang tepat bergantung pada apa yang sudah kamu ketahui. aturan sinus dipakai ketika kamu punya pasangan sisi dan sudut yang berhadapan dengannya: aturan kosinus dipakai ketika kamu punya dua sisi beserta sudut di antaranya, atau ketika ketiga sisinya diketahui tanpa satu sudut pun: perhatikan aturan kosinus sebenarnya pythagoras dengan suku koreksi. kalau , maka dan suku terakhirnya lenyap — rumusnya kembali menjadi . jadi kamu sebenarnya hanya menghafal satu rumus, bukan dua. untuk luas segitiga tanpa mengetahui tingginya, pakai dengan sudut yang terletak tepat di antara kedua sisi itu. aturan sinus: pasangan sisi dan sudut di hadapannya aturan kosinus: dua sisi dan sudut apitnya dengan sudut apit memakai dengan sudut yang bukan apit kedua sisi itu. sudutnya harus berada tepat di antara dan . perbandingan trigonometri",
+      "snippet": "Untuk segitiga yang bukan siku-siku, dua aturan berikut menggantikan peran Pythagoras, dan memilih yang tepat bergantung pada apa yang sudah kamu ketahui. At..."
+    },
+    {
+      "cardId": "trg-perbandingan-c5",
+      "topicId": "trg-perbandingan",
+      "topicTitle": "Perbandingan Trigonometri",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada trigonometri",
+      "haystack": "kesalahan khas pada trigonometri tertukar sisi depan dan samping. keduanya bergantung pada sudut mana yang sedang ditinjau. sisi yang menjadi \"depan\" untuk satu sudut menjadi \"samping\" untuk sudut lainnya di segitiga yang sama. lupa tanda kuadran. sudut di atas punya nilai yang bisa negatif. bayangkan letak titiknya di lingkaran satuan sebelum menulis jawaban. memakai pythagoras pada segitiga sembarang. kalau tidak ada sudut , yang berlaku adalah aturan kosinus. kalkulator dalam mode radian. ini penyebab jawaban meleset jauh tanpa sebab yang jelas. pastikan modenya derajat kalau soalnya memakai derajat. menjawab dengan . selalu tanda kesalahan hitung, tidak pernah jawaban yang sah. depan dan samping bergantung sudut yang ditinjau periksa kuadran sebelum menulis tanda segitiga sembarang memakai aturan kosinus nilai sinus dan kosinus tidak pernah melebihi 1 memakai aturan sinus padahal yang diketahui dua sisi dan sudut apitnya — dalam keadaan itu tidak ada pasangan sisi-sudut yang lengkap, jadi yang dipakai aturan kosinus. perbandingan trigonometri",
+      "snippet": "Tertukar sisi depan dan samping. Keduanya bergantung pada sudut mana yang sedang ditinjau. Sisi yang menjadi \"depan\" untuk satu sudut menjadi \"samping\" untuk..."
+    },
+    {
       "cardId": "osn-keterbagian-c1",
       "topicId": "osn-keterbagian",
       "topicTitle": "Keterbagian & Kongruensi",

@@ -1,0 +1,268 @@
+{
+  "id": "trg-perbandingan",
+  "track": "menengah",
+  "title": "Perbandingan Trigonometri",
+  "order": 9,
+  "prerequisites": [
+    "das-pythagoras"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Sinus dan kosinus sebagai perbandingan sisi, lingkaran satuan, serta aturan sinus dan kosinus.",
+  "tags": [
+    "trigonometri",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "trg-perbandingan-c1",
+      "type": "konsep",
+      "title": "Sinus dan kosinus adalah perbandingan, bukan panjang",
+      "body": "Perbandingan trigonometri sering dihafal lewat singkatan tanpa memahami apa yang sebenarnya diukur. Padahal intinya satu: ketiganya adalah **perbandingan dua sisi**, bukan panjang.\n\nPada segitiga siku-siku dengan sudut $\\theta$:\n$$\\sin\\theta = \\frac{\\text{depan}}{\\text{miring}}, \\quad \\cos\\theta = \\frac{\\text{samping}}{\\text{miring}}, \\quad \\tan\\theta = \\frac{\\text{depan}}{\\text{samping}}$$\n\nKarena berupa perbandingan, nilainya tidak bergantung pada ukuran segitiganya. Segitiga kecil dan besar dengan sudut sama punya $\\sin\\theta$ yang sama persis — dan inilah yang membuat tabel trigonometri bisa dipakai untuk segitiga apa pun.\n\nDari definisi itu langsung terlihat kenapa $\\sin\\theta$ dan $\\cos\\theta$ tidak pernah melebihi 1: sisi depan dan samping selalu lebih pendek dari sisi miring.",
+      "questions": [
+        {
+          "id": "trg-perbandingan-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segitiga siku-siku, sisi depan sudut $\\theta$ adalah 3 dan sisi miringnya 5. Nilai $\\cos\\theta$ adalah ...",
+          "options": [
+            "$\\frac{4}{5}$",
+            "$\\frac{3}{5}$",
+            "$\\frac{5}{3}$",
+            "$\\frac{3}{4}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari sisi sampingnya dulu dengan Pythagoras:\n$$\\text{samping} = \\sqrt{5^2 - 3^2} = \\sqrt{16} = 4$$\n\nLalu:\n$$\\cos\\theta = \\frac{\\text{samping}}{\\text{miring}} = \\frac{4}{5}$$\n\nPilihan $\\frac{3}{5}$ adalah $\\sin\\theta$, bukan kosinusnya.",
+          "hint": "Cari sisi ketiganya dulu dengan Pythagoras.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "trg-perbandingan-q2",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Nilai $\\sin\\theta$ bisa mencapai $1{,}5$ untuk sudut tertentu.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Sinus adalah perbandingan sisi depan terhadap sisi miring.\n\nPada segitiga siku-siku, sisi miring selalu yang terpanjang — itu akibat langsung dari teorema Pythagoras. Jadi pembilangnya tidak pernah melebihi penyebutnya.\n\nAkibatnya $\\sin\\theta$ selalu berada antara $-1$ dan $1$. Nilai $1{,}5$ mustahil, dan kalau muncul di pekerjaanmu, itu tanda ada kesalahan hitung.",
+          "hint": "Sisi mana yang selalu terpanjang pada segitiga siku-siku?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sin = \\frac{de}{mi}$, $\\cos = \\frac{sa}{mi}$, $\\tan = \\frac{de}{sa}$",
+        "Nilainya tidak bergantung ukuran segitiga",
+        "$-1 \\le \\sin\\theta \\le 1$ dan $-1 \\le \\cos\\theta \\le 1$"
+      ],
+      "pitfall": "Menjawab soal dengan nilai sinus lebih dari 1. Karena sisi depan tidak pernah melebihi sisi miring, hasil seperti itu selalu menandakan kesalahan hitung."
+    },
+    {
+      "id": "trg-perbandingan-c2",
+      "type": "rumus",
+      "title": "Sudut istimewa dan cara mengingatnya",
+      "body": "Lima sudut ini muncul terus-menerus di soal, dan ada cara mengingatnya sekaligus tanpa menghafal satu per satu.\n\nTulis nilai $\\sin$ untuk $0^\\circ, 30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$ dalam bentuk yang belum disederhanakan:\n$$\\frac{\\sqrt{0}}{2}, \\; \\frac{\\sqrt{1}}{2}, \\; \\frac{\\sqrt{2}}{2}, \\; \\frac{\\sqrt{3}}{2}, \\; \\frac{\\sqrt{4}}{2}$$\n\nPembilangnya ternyata hanya akar dari $0, 1, 2, 3, 4$ berurutan. Setelah disederhanakan, hasilnya $0$, $\\frac{1}{2}$, $\\frac{1}{2}\\sqrt{2}$, $\\frac{1}{2}\\sqrt{3}$, dan $1$.\n\nUntuk kosinus, pakai daftar yang persis sama tapi **dibalik urutannya**. Alasannya ada pada hubungan $\\cos\\theta = \\sin(90^\\circ - \\theta)$ — sudut yang saling berpenyiku menukar peran sinus dan kosinus.\n\nTangen tinggal dibagi: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. Untuk $90^\\circ$ penyebutnya nol, jadi $\\tan 90^\\circ$ tidak terdefinisi — bukan nol dan bukan tak hingga.",
+      "questions": [
+        {
+          "id": "trg-perbandingan-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\sin 60^\\circ$ adalah ...",
+          "options": [
+            "$\\frac{1}{2}\\sqrt{3}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{1}{2}\\sqrt{2}$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai pola akar. Untuk $60^\\circ$, yang keempat dalam urutan:\n$$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} = \\frac{1}{2}\\sqrt{3}$$\n\nNilainya sekitar $0{,}866$ — masuk akal karena $60^\\circ$ mendekati $90^\\circ$, dan sinus membesar menuju 1 di sana.",
+          "hint": "Urutan akar: 0, 1, 2, 3, 4 di bawah akar, dibagi 2.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "trg-perbandingan-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Hitung nilai dari $\\sin^2 30^\\circ + \\cos^2 30^\\circ$.",
+          "answer": "1",
+          "acceptedAnswers": [
+            "satu",
+            "= 1"
+          ],
+          "solution": "Bisa dihitung langsung:\n$$\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{\\sqrt{3}}{2}\\right)^2 = \\frac{1}{4} + \\frac{3}{4} = 1$$\n\nTapi sebenarnya tidak perlu menghitung sama sekali. Identitas pokok trigonometri menyatakan:\n$$\\sin^2\\theta + \\cos^2\\theta = 1$$\n\nuntuk **setiap** sudut. Identitas itu sendiri adalah teorema Pythagoras yang ditulis dalam bentuk perbandingan.",
+          "hint": "Ada identitas yang membuat soal ini bisa dijawab tanpa menghitung.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sin$: $\\frac{\\sqrt{0}}{2}$ sampai $\\frac{\\sqrt{4}}{2}$",
+        "$\\cos$ memakai daftar yang sama, dibalik",
+        "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$",
+        "$\\tan 90^\\circ$ tidak terdefinisi"
+      ],
+      "pitfall": "Menuliskan $\\tan 90^\\circ$ sebagai nol atau tak hingga sebagai jawaban akhir. Yang benar adalah tidak terdefinisi, karena penyebutnya nol."
+    },
+    {
+      "id": "trg-perbandingan-c3",
+      "type": "konsep",
+      "title": "Lingkaran satuan memperluas ke semua sudut",
+      "body": "Definisi lewat segitiga siku-siku hanya berlaku untuk sudut antara $0^\\circ$ dan $90^\\circ$. Lingkaran satuan memperluasnya ke sudut mana pun.\n\nPada lingkaran berjari-jari 1 berpusat di titik asal, sudut $\\theta$ diukur dari sumbu-$x$ positif berlawanan arah jarum jam. Titik yang ditunjuk punya koordinat $(\\cos\\theta, \\sin\\theta)$.\n\nDari sini tanda di tiap kuadran langsung terbaca dari koordinatnya:\n- Kuadran I: keduanya positif\n- Kuadran II: $\\sin$ positif, $\\cos$ negatif\n- Kuadran III: keduanya negatif\n- Kuadran IV: $\\cos$ positif, $\\sin$ negatif\n\nTidak perlu menghafal singkatan apa pun — cukup ingat bahwa $\\cos$ adalah koordinat $x$ dan $\\sin$ adalah koordinat $y$, lalu bayangkan letak titiknya.",
+      "questions": [
+        {
+          "id": "trg-perbandingan-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\cos 120^\\circ$ adalah ...",
+          "options": [
+            "$-\\frac{1}{2}$",
+            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}\\sqrt{3}$",
+            "$\\frac{1}{2}\\sqrt{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut $120^\\circ$ berada di kuadran II, tempat koordinat $x$ bernilai negatif — jadi kosinusnya negatif.\n\nSudut acuannya:\n$$180^\\circ - 120^\\circ = 60^\\circ$$\n\nKarena $\\cos 60^\\circ = \\frac{1}{2}$:\n$$\\cos 120^\\circ = -\\frac{1}{2}$$",
+          "hint": "Kuadran berapa, dan koordinat $x$ di sana positif atau negatif?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-perbandingan-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\sin 150^\\circ$ adalah ...",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}$",
+            "$\\frac{1}{2}\\sqrt{3}$",
+            "$-\\frac{1}{2}\\sqrt{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut $150^\\circ$ berada di kuadran II, tempat koordinat $y$ bernilai positif — jadi sinusnya positif.\n\nSudut acuannya:\n$$180^\\circ - 150^\\circ = 30^\\circ$$\n\nKarena $\\sin 30^\\circ = \\frac{1}{2}$:\n$$\\sin 150^\\circ = \\frac{1}{2}$$",
+          "hint": "Di kuadran II, koordinat $y$ masih positif.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Titik pada lingkaran satuan: $(\\cos\\theta, \\sin\\theta)$",
+        "$\\cos$ adalah koordinat $x$, $\\sin$ adalah koordinat $y$",
+        "Tanda mengikuti kuadran letak titiknya"
+      ],
+      "pitfall": "Menghafal tanda tiap kuadran tanpa memahami asalnya, lalu tertukar antara kuadran II dan IV — keduanya punya satu nilai positif dan satu negatif, hanya berbeda yang mana."
+    },
+    {
+      "id": "trg-perbandingan-c4",
+      "type": "rumus",
+      "title": "Aturan sinus dan aturan kosinus",
+      "body": "Untuk segitiga yang **bukan** siku-siku, dua aturan berikut menggantikan peran Pythagoras, dan memilih yang tepat bergantung pada apa yang sudah kamu ketahui.\n\n**Aturan sinus** dipakai ketika kamu punya pasangan sisi dan sudut yang berhadapan dengannya:\n$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}$$\n\n**Aturan kosinus** dipakai ketika kamu punya dua sisi beserta sudut di antaranya, atau ketika ketiga sisinya diketahui tanpa satu sudut pun:\n$$c^2 = a^2 + b^2 - 2ab\\cos C$$\n\nPerhatikan aturan kosinus sebenarnya Pythagoras dengan suku koreksi. Kalau $C = 90^\\circ$, maka $\\cos C = 0$ dan suku terakhirnya lenyap — rumusnya kembali menjadi $a^2+b^2 = c^2$. Jadi kamu sebenarnya hanya menghafal satu rumus, bukan dua.\n\nUntuk luas segitiga tanpa mengetahui tingginya, pakai $L = \\frac{1}{2}ab\\sin C$ dengan $C$ sudut yang terletak tepat di **antara** kedua sisi itu.",
+      "questions": [
+        {
+          "id": "trg-perbandingan-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Luas segitiga dengan sisi 8 cm, 5 cm, dan sudut apit $30^\\circ$ adalah ...",
+          "options": [
+            "$10$ cm$^2$",
+            "$20$ cm$^2$",
+            "$40$ cm$^2$",
+            "$5$ cm$^2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus luas dengan sudut apit:\n$$L = \\tfrac{1}{2}ab\\sin C = \\tfrac{1}{2}(8)(5)\\sin 30^\\circ$$\n\nKarena $\\sin 30^\\circ = \\frac{1}{2}$:\n$$= \\tfrac{1}{2}(40)\\left(\\tfrac{1}{2}\\right) = 10$$\n\nLuasnya $10$ cm$^2$.",
+          "hint": "Kalikan setengah, kedua sisi, dan sinus sudut apitnya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-perbandingan-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segitiga dengan $a = 7$, $b = 8$, dan sudut $C = 60^\\circ$, nilai $c^2$ adalah ...",
+          "options": [
+            "$57$",
+            "$113$",
+            "$169$",
+            "$49$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan kosinus:\n$$c^2 = a^2 + b^2 - 2ab\\cos C$$\n$$= 49 + 64 - 2(7)(8)\\cos 60^\\circ$$\n\nKarena $\\cos 60^\\circ = \\frac{1}{2}$:\n$$= 113 - 112\\left(\\tfrac{1}{2}\\right) = 113 - 56 = 57$$\n\nPilihan $113$ muncul dari melupakan suku koreksinya — itu jawaban kalau sudutnya $90^\\circ$.",
+          "hint": "Jangan lupa suku $-2ab\\cos C$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Aturan sinus: pasangan sisi dan sudut di hadapannya",
+        "Aturan kosinus: dua sisi dan sudut apitnya",
+        "$L = \\frac{1}{2}ab\\sin C$ dengan $C$ sudut apit"
+      ],
+      "pitfall": "Memakai $\\frac{1}{2}ab\\sin C$ dengan sudut yang bukan apit kedua sisi itu. Sudutnya harus berada tepat di antara $a$ dan $b$."
+    },
+    {
+      "id": "trg-perbandingan-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada trigonometri",
+      "body": "**Tertukar sisi depan dan samping.** Keduanya bergantung pada sudut mana yang sedang ditinjau. Sisi yang menjadi \"depan\" untuk satu sudut menjadi \"samping\" untuk sudut lainnya di segitiga yang sama.\n\n**Lupa tanda kuadran.** Sudut di atas $90^\\circ$ punya nilai yang bisa negatif. Bayangkan letak titiknya di lingkaran satuan sebelum menulis jawaban.\n\n**Memakai Pythagoras pada segitiga sembarang.** Kalau tidak ada sudut $90^\\circ$, yang berlaku adalah aturan kosinus.\n\n**Kalkulator dalam mode radian.** Ini penyebab jawaban meleset jauh tanpa sebab yang jelas. Pastikan modenya derajat kalau soalnya memakai derajat.\n\n**Menjawab dengan $\\sin\\theta > 1$.** Selalu tanda kesalahan hitung, tidak pernah jawaban yang sah.",
+      "questions": [
+        {
+          "id": "trg-perbandingan-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui segitiga dengan sisi 6, 7, dan 9. Untuk mencari salah satu sudutnya, aturan yang dipakai adalah ...",
+          "options": [
+            "aturan kosinus",
+            "aturan sinus",
+            "teorema Pythagoras",
+            "rumus luas"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang diketahui ketiga sisinya, tanpa satu sudut pun.\n\nAturan sinus butuh minimal satu pasangan sisi dan sudut di hadapannya — di sini tidak ada.\n\nPythagoras hanya berlaku untuk segitiga siku-siku, dan $6^2+7^2 = 85 \\neq 81 = 9^2$, jadi segitiganya bukan siku-siku.\n\nYang bisa dipakai adalah aturan kosinus, yang bisa disusun ulang untuk mencari $\\cos C$ dari ketiga sisi.",
+          "hint": "Adakah pasangan sisi dan sudut yang sudah diketahui?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-perbandingan-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\tan 225^\\circ$ adalah ...",
+          "options": [
+            "$1$",
+            "$-1$",
+            "$\\frac{1}{2}\\sqrt{2}$",
+            "tidak terdefinisi"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut $225^\\circ$ berada di kuadran III, tempat koordinat $x$ dan $y$ keduanya negatif.\n\nKarena $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, membagi dua bilangan negatif memberi hasil **positif**.\n\nSudut acuannya:\n$$225^\\circ - 180^\\circ = 45^\\circ$$\n\nKarena $\\tan 45^\\circ = 1$, maka $\\tan 225^\\circ = 1$.",
+          "hint": "Di kuadran III kedua koordinat negatif — apa artinya untuk hasil baginya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Depan dan samping bergantung sudut yang ditinjau",
+        "Periksa kuadran sebelum menulis tanda",
+        "Segitiga sembarang memakai aturan kosinus",
+        "Nilai sinus dan kosinus tidak pernah melebihi 1"
+      ],
+      "pitfall": "Memakai aturan sinus padahal yang diketahui dua sisi dan sudut apitnya — dalam keadaan itu tidak ada pasangan sisi-sudut yang lengkap, jadi yang dipakai aturan kosinus."
+    }
+  ]
+}
