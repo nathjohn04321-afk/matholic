@@ -2,7 +2,7 @@
   "id": "das-kuadrat",
   "track": "dasar",
   "title": "Persamaan & Fungsi Kuadrat",
-  "order": 2,
+  "order": 3,
   "prerequisites": [
     "das-linear"
   ],

@@ -2,7 +2,7 @@
   "id": "das-aljabar",
   "track": "dasar",
   "title": "Bentuk Aljabar & Faktorisasi",
-  "order": 4,
+  "order": 5,
   "prerequisites": [
     "das-bilangan"
   ],

@@ -1072,6 +1072,56 @@
       "snippet": "Salah membaca tanda pusat. [rumus] berarti pusatnya di [rumus] , bukan [rumus] . Tanda di dalam kurung selalu berlawanan. Lupa mengakarkan. Ruas kanan persam..."
     },
     {
+      "cardId": "kal-integral-aljabar-c1",
+      "topicId": "kal-integral-aljabar",
+      "topicTitle": "Integral Fungsi Aljabar",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Integral adalah kebalikan turunan",
+      "haystack": "integral adalah kebalikan turunan turunan menjawab \"berapa laju perubahannya\". integral menjawab kebalikannya: \"fungsi apa yang lajunya seperti ini\". kamu sudah tahu . maka antiturunan dari adalah . tapi juga punya turunan , begitu pula . bilangan tetap hilang saat diturunkan, jadi ketika kamu membalik arah, informasi itu sudah lenyap dan tidak bisa dipulihkan. itulah sebabnya selalu ikut ditulis: bukan sekadar formalitas. ia berarti satu integral tak tentu mewakili seluruh keluarga fungsi yang bentuk grafiknya identik dan hanya bergeser naik-turun. semua anggota keluarga itu punya kemiringan sama persis di setiap — dan kemiringan itulah satu-satunya informasi yang kamu punya. untuk memilih satu anggota saja, kamu butuh satu titik yang dilalui grafiknya, misalnya . syarat semacam itulah yang mengunci nilai . integral tak tentu menghasilkan fungsi, bukan angka ada karena bilangan tetap hilang saat diturunkan satu titik yang dilalui grafik cukup untuk mengunci menganggap boleh dilewat karena \"toh cuma konstanta\". tanpa jawabanmu menunjuk satu fungsi, padahal soalnya punya tak hingga banyak jawaban yang sah. integral fungsi aljabar",
+      "snippet": "Turunan menjawab \"berapa laju perubahannya\". Integral menjawab kebalikannya: \"fungsi apa yang lajunya seperti ini\". Kamu sudah tahu [rumus] . Maka antituruna..."
+    },
+    {
+      "cardId": "kal-integral-aljabar-c2",
+      "topicId": "kal-integral-aljabar",
+      "topicTitle": "Integral Fungsi Aljabar",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Aturan pangkat dan bentuk $(ax+b)^n$",
+      "haystack": "aturan pangkat dan bentuk aturan pangkat untuk integral adalah pembalikan langsung dari aturan pangkat untuk turunan: naikkan pangkatnya satu, lalu bagi dengan pangkat yang baru. syarat ada karena akan menjadi nol, dan pembagian dengan nol tidak terdefinisi. dua sifat berikut membuat soal panjang jadi ringan: bilangan tetap boleh ditarik keluar, dan penjumlahan boleh dipecah suku per suku. untuk bentuk berpangkat dengan isi linear ada jalan pintas: pembagi tambahan itu membayar faktor yang akan muncul dari aturan rantai kalau hasilnya kamu turunkan kembali. cara paling aman memeriksa setiap jawaban integral memang itu: turunkan hasilmu, dan lihat apakah kamu kembali ke soal semula. berlaku untuk semua kecuali bilangan tetap ditarik keluar, penjumlahan dipecah butuh pembagi tambahan menulis . turunkan jawaban itu dan kamu dapat — dua kali lipat soalnya. pembagi itu wajib. integral fungsi aljabar",
+      "snippet": "Aturan pangkat untuk integral adalah pembalikan langsung dari aturan pangkat untuk turunan: [rumus] Naikkan pangkatnya satu, lalu bagi dengan pangkat yang ba..."
+    },
+    {
+      "cardId": "kal-integral-aljabar-c3",
+      "topicId": "kal-integral-aljabar",
+      "topicTitle": "Integral Fungsi Aljabar",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Integral tentu dan teorema dasar kalkulus",
+      "haystack": "integral tentu dan teorema dasar kalkulus integral tentu punya batas, dan hasilnya sebuah angka — bukan fungsi: dengan antiturunan mana pun dari . pernyataan inilah yang disebut teorema dasar kalkulus. perhatikan nasib di sini. kalau kamu memakai , hasilnya menjadi . konstantanya saling menghapus. jadi pada integral tentu memang tidak perlu ditulis — bukan karena boleh dilupakan, tapi karena terbukti tidak berpengaruh. kalimat \"antiturunan mana pun\" tadi jadi masuk akal karena hal ini. contoh: . antiturunannya , jadi hasilnya . dua sifat yang sering dipakai: yang pertama wajar: lebar intervalnya nol. yang kedua berarti menukar batas membalik tanda. hasil integral tentu berupa angka, bukan fungsi saling menghapus sehingga tidak perlu ditulis menukar batas membalik tanda hasilnya menghitung alih-alih . jawabannya akan benar secara nilai tapi terbalik tandanya, dan pada soal luas kesalahan ini menghasilkan luas negatif yang mustahil. integral fungsi aljabar",
+      "snippet": "Integral tentu punya batas, dan hasilnya sebuah angka — bukan fungsi: [rumus] dengan [rumus] antiturunan mana pun dari [rumus] . Pernyataan inilah yang diseb..."
+    },
+    {
+      "cardId": "kal-integral-aljabar-c4",
+      "topicId": "kal-integral-aljabar",
+      "topicTitle": "Integral Fungsi Aljabar",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kapan integral sama dengan luas",
+      "haystack": "kapan integral sama dengan luas untuk pada , nilai sama dengan luas daerah antara grafik dan sumbu . alasannya: integral adalah limit dari jumlah luas persegi panjang tipis selebar dan setinggi . tapi kalau grafiknya berada di bawah sumbu , tingginya bertanda negatif dan integralnya ikut negatif — sementara luas tidak pernah negatif. untuk hasilnya , sedangkan luas daerahnya . maka aturannya: pecah interval di setiap titik potong dengan sumbu , hitung tiap potongan secara terpisah, ambil nilai mutlaknya, baru jumlahkan. untuk luas antara dua kurva pada dengan selalu di atas : selisih \"atas dikurangi bawah\" ini otomatis tidak negatif, jadi kamu tidak perlu memikirkan posisi sumbu sama sekali. batas dan adalah absis titik potong kedua kurva, dicari dengan menyelesaikan . integral memberi luas hanya jika grafik di atas sumbu di bawah sumbu , ambil nilai mutlak tiap potongan luas antar kurva: (atas bawah), batasnya titik potong langsung mengintegralkan dari batas kiri ke batas kanan pada soal luas tanpa mencari titik potong dengan sumbu lebih dulu. potongan positif dan negatif akan saling memakan, dan luas yang kamu dapat terlalu kecil. integral fungsi aljabar",
+      "snippet": "Untuk [rumus] pada [rumus] , nilai [rumus] sama dengan luas daerah antara grafik dan sumbu [rumus] . Alasannya: integral adalah limit dari jumlah luas perseg..."
+    },
+    {
+      "cardId": "kal-integral-aljabar-c5",
+      "topicId": "kal-integral-aljabar",
+      "topicTitle": "Integral Fungsi Aljabar",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Lima kesalahan integral yang paling sering",
+      "haystack": "lima kesalahan integral yang paling sering 1. lupa pada integral tak tentu. jawaban tanpa menunjuk satu fungsi, padahal soalnya punya tak hingga banyak jawaban sah. pada integral tentu kebalikannya: menulis tidak salah, hanya mubazir karena pasti terhapus. 2. memakai aturan pangkat saat . bukan — bentuk itu tidak terdefinisi. integral ini membutuhkan logaritma natural, di luar cakupan bab ini. 3. lupa pembagi pada bentuk . uji sendiri dengan menurunkan jawabanmu: yang salah akan memberi kali soal aslinya, bukan soalnya. 4. membalik urutan menjadi . hasilnya benar besarnya tapi salah tandanya. biasakan menulis batas atas lebih dulu. 5. menyamakan hasil integral negatif dengan luas negatif. kalau soal meminta luas dan integralmu keluar negatif, itu bukan jawaban — itu tanda daerahnya berada di bawah sumbu . ambil nilai mutlaknya. satu kebiasaan menutup empat dari lima kesalahan ini: turunkan kembali jawabanmu sebelum menulis hasil akhir. selalu turunkan kembali hasil integral untuk memeriksanya aturan pangkat tidak berlaku untuk luas tidak pernah bernilai negatif menyingkat pemeriksaan dengan hanya melihat \"apakah bentuknya mirip\". bentuk yang mirip tetap bisa salah pengali — hanya penurunan ulang yang membuktikannya. integral fungsi aljabar",
+      "snippet": "1. Lupa [rumus] pada integral tak tentu. Jawaban tanpa [rumus] menunjuk satu fungsi, padahal soalnya punya tak hingga banyak jawaban sah. Pada integral tentu..."
+    },
+    {
       "cardId": "kal-limit-aljabar-c1",
       "topicId": "kal-limit-aljabar",
       "topicTitle": "Limit Fungsi Aljabar",

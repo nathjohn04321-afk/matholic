@@ -27,18 +27,19 @@ import topik16 from "@/content/menengah/alj-program-linear.json";
 import topik17 from "@/content/menengah/alj-vektor.json";
 import topik18 from "@/content/menengah/geo-dimensi-tiga.json";
 import topik19 from "@/content/menengah/geo-lingkaran.json";
-import topik20 from "@/content/menengah/kal-limit-aljabar.json";
-import topik21 from "@/content/menengah/kal-limit-tak-hingga.json";
-import topik22 from "@/content/menengah/kal-limit-trigonometri.json";
-import topik23 from "@/content/menengah/kal-turunan-aljabar.json";
-import topik24 from "@/content/menengah/kal-turunan-trigonometri.json";
-import topik25 from "@/content/menengah/pel-peluang.json";
-import topik26 from "@/content/menengah/pel-pencacahan.json";
-import topik27 from "@/content/menengah/sta-statistik.json";
-import topik28 from "@/content/menengah/trg-perbandingan.json";
-import topik29 from "@/content/menengah/trg-persamaan.json";
-import topik30 from "@/content/lanjut/lan-integral-tentu.json";
-import topik31 from "@/content/olimpiade/osn-keterbagian.json";
+import topik20 from "@/content/menengah/kal-integral-aljabar.json";
+import topik21 from "@/content/menengah/kal-limit-aljabar.json";
+import topik22 from "@/content/menengah/kal-limit-tak-hingga.json";
+import topik23 from "@/content/menengah/kal-limit-trigonometri.json";
+import topik24 from "@/content/menengah/kal-turunan-aljabar.json";
+import topik25 from "@/content/menengah/kal-turunan-trigonometri.json";
+import topik26 from "@/content/menengah/pel-peluang.json";
+import topik27 from "@/content/menengah/pel-pencacahan.json";
+import topik28 from "@/content/menengah/sta-statistik.json";
+import topik29 from "@/content/menengah/trg-perbandingan.json";
+import topik30 from "@/content/menengah/trg-persamaan.json";
+import topik31 from "@/content/lanjut/lan-integral-tentu.json";
+import topik32 from "@/content/olimpiade/osn-keterbagian.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -73,4 +74,5 @@ export const RAW_TOPICS: Topic[] = [
   topik29 as unknown as Topic,
   topik30 as unknown as Topic,
   topik31 as unknown as Topic,
+  topik32 as unknown as Topic,
 ];

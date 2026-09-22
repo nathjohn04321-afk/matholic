@@ -2,7 +2,7 @@
   "id": "kal-limit-aljabar",
   "track": "menengah",
   "title": "Limit Fungsi Aljabar",
-  "order": 3,
+  "order": 16,
   "prerequisites": [
     "alj-nilai-mutlak"
   ],

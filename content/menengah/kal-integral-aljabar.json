@@ -1,0 +1,281 @@
+{
+  "id": "kal-integral-aljabar",
+  "track": "menengah",
+  "title": "Integral Fungsi Aljabar",
+  "order": 21,
+  "prerequisites": [
+    "kal-turunan-aljabar"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Integral sebagai kebalikan turunan, kenapa $+C$ harus ada, dan kapan integral bukan luas.",
+  "tags": [
+    "kalkulus",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "kal-integral-aljabar-c1",
+      "type": "konsep",
+      "title": "Integral adalah kebalikan turunan",
+      "body": "Turunan menjawab \"berapa laju perubahannya\". Integral menjawab kebalikannya: \"fungsi apa yang lajunya seperti ini\".\n\nKamu sudah tahu $\\frac{d}{dx}x^3 = 3x^2$. Maka antiturunan dari $3x^2$ adalah $x^3$. Tapi $x^3 + 7$ juga punya turunan $3x^2$, begitu pula $x^3 - 2$. Bilangan tetap hilang saat diturunkan, jadi ketika kamu membalik arah, informasi itu sudah lenyap dan tidak bisa dipulihkan. Itulah sebabnya $+C$ selalu ikut ditulis:\n\n$$\\int 3x^2\\,dx = x^3 + C$$\n\n$+C$ bukan sekadar formalitas. Ia berarti satu integral tak tentu mewakili **seluruh keluarga** fungsi yang bentuk grafiknya identik dan hanya bergeser naik-turun. Semua anggota keluarga itu punya kemiringan sama persis di setiap $x$ — dan kemiringan itulah satu-satunya informasi yang kamu punya.\n\nUntuk memilih satu anggota saja, kamu butuh satu titik yang dilalui grafiknya, misalnya $f(1) = 5$. Syarat semacam itulah yang mengunci nilai $C$.",
+      "questions": [
+        {
+          "id": "kal-integral-aljabar-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int (3x^2 - 4x + 5)\\,dx$ adalah ...",
+          "options": [
+            "$x^3 - 2x^2 + 5x + C$",
+            "$3x^3 - 4x^2 + 5x + C$",
+            "$x^3 - 4x^2 + 5x + C$",
+            "$6x - 4 + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kerjakan suku demi suku dengan $\\int x^n dx = \\frac{x^{n+1}}{n+1}$.\n\n$\\int 3x^2\\,dx = 3 \\cdot \\frac{x^3}{3} = x^3$\n\n$\\int -4x\\,dx = -4 \\cdot \\frac{x^2}{2} = -2x^2$\n\n$\\int 5\\,dx = 5x$\n\nJadi hasilnya $x^3 - 2x^2 + 5x + C$.\n\nSelalu cek dengan menurunkan kembali: turunan $x^3 - 2x^2 + 5x$ adalah $3x^2 - 4x + 5$, sama dengan soalnya. Pilihan terakhir adalah jebakan — itu turunan, bukan integral.",
+          "hint": "Naikkan pangkatnya satu, lalu bagi dengan pangkat yang baru.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $f'(x) = 6x - 2$ dan $f(1) = 5$. Nilai $f(3)$ adalah ...",
+          "options": [
+            "$25$",
+            "$21$",
+            "$27$",
+            "$24$"
+          ],
+          "answerIndex": 0,
+          "solution": "Integralkan untuk mendapatkan $f$:\n$$f(x) = \\int (6x-2)\\,dx = 3x^2 - 2x + C$$\n\nPakai syarat $f(1) = 5$ untuk mengunci $C$:\n$$3(1)^2 - 2(1) + C = 5 \\Rightarrow 1 + C = 5 \\Rightarrow C = 4$$\n\nJadi $f(x) = 3x^2 - 2x + 4$, sehingga\n$$f(3) = 27 - 6 + 4 = 25$$\n\nTanpa syarat $f(1) = 5$ soal ini tidak punya jawaban tunggal — itulah gunanya titik yang diberikan.",
+          "hint": "Cari $C$ dulu dari $f(1) = 5$, baru substitusikan $x = 3$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Integral tak tentu menghasilkan fungsi, bukan angka",
+        "$+C$ ada karena bilangan tetap hilang saat diturunkan",
+        "Satu titik yang dilalui grafik cukup untuk mengunci $C$"
+      ],
+      "pitfall": "Menganggap $+C$ boleh dilewat karena \"toh cuma konstanta\". Tanpa $+C$ jawabanmu menunjuk satu fungsi, padahal soalnya punya tak hingga banyak jawaban yang sah."
+    },
+    {
+      "id": "kal-integral-aljabar-c2",
+      "type": "rumus",
+      "title": "Aturan pangkat dan bentuk $(ax+b)^n$",
+      "body": "Aturan pangkat untuk integral adalah pembalikan langsung dari aturan pangkat untuk turunan:\n\n$$\\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C, \\quad n \\neq -1$$\n\nNaikkan pangkatnya satu, lalu bagi dengan pangkat yang baru. Syarat $n \\neq -1$ ada karena $n + 1$ akan menjadi nol, dan pembagian dengan nol tidak terdefinisi.\n\nDua sifat berikut membuat soal panjang jadi ringan:\n\n$$\\int k\\,f(x)\\,dx = k\\int f(x)\\,dx$$\n$$\\int [f(x) \\pm g(x)]\\,dx = \\int f(x)\\,dx \\pm \\int g(x)\\,dx$$\n\nBilangan tetap boleh ditarik keluar, dan penjumlahan boleh dipecah suku per suku.\n\nUntuk bentuk berpangkat dengan isi linear ada jalan pintas:\n\n$$\\int (ax+b)^n\\,dx = \\frac{(ax+b)^{n+1}}{a(n+1)} + C$$\n\nPembagi $a$ tambahan itu membayar faktor $a$ yang akan muncul dari aturan rantai kalau hasilnya kamu turunkan kembali. Cara paling aman memeriksa setiap jawaban integral memang itu: turunkan hasilmu, dan lihat apakah kamu kembali ke soal semula.",
+      "questions": [
+        {
+          "id": "kal-integral-aljabar-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int (2x+3)^4\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{(2x+3)^5}{10} + C$",
+            "$\\frac{(2x+3)^5}{5} + C$",
+            "$\\frac{(2x+3)^5}{2} + C$",
+            "$8(2x+3)^3 + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai $\\int (ax+b)^n dx = \\frac{(ax+b)^{n+1}}{a(n+1)} + C$ dengan $a = 2$ dan $n = 4$.\n\n$$\\int (2x+3)^4 dx = \\frac{(2x+3)^5}{2 \\cdot 5} + C = \\frac{(2x+3)^5}{10} + C$$\n\nCek dengan menurunkan:\n$$\\frac{d}{dx}\\frac{(2x+3)^5}{10} = \\frac{5(2x+3)^4 \\cdot 2}{10} = (2x+3)^4$$\n\nKalau kamu memilih $\\frac{(2x+3)^5}{5}$, turunannya menjadi $2(2x+3)^4$ — dua kali lipat yang diminta.",
+          "hint": "Bagi tambahan dengan koefisien $x$ yang ada di dalam kurung.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Antiturunan dari $x^3 - \\frac{1}{x^2}$ adalah $\\frac{x^4}{4} + \\frac{1}{x} + C$. Berapa nilai $\\int_1^2 \\left(x^3 - \\frac{1}{x^2}\\right)dx$? (tulis desimal, contoh: 1,5)",
+          "answer": "3,25",
+          "acceptedAnswers": [
+            "3,25",
+            "3.25"
+          ],
+          "solution": "Antiturunannya $F(x) = \\frac{x^4}{4} + \\frac{1}{x}$.\n\n$$F(2) = \\frac{16}{4} + \\frac{1}{2} = 4 + 0{,}5 = 4{,}5$$\n$$F(1) = \\frac{1}{4} + 1 = 1{,}25$$\n\n$$\\int_1^2 = F(2) - F(1) = 4{,}5 - 1{,}25 = 3{,}25$$\n\nCatatan asal antiturunannya: $\\frac{1}{x^2} = x^{-2}$, dan $\\int x^{-2}dx = \\frac{x^{-1}}{-1} = -\\frac{1}{x}$. Karena di soal tandanya minus, hasilnya menjadi $+\\frac{1}{x}$.",
+          "hint": "Tulis $\\frac{1}{x^2}$ sebagai $x^{-2}$ lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$ berlaku untuk semua $n$ kecuali $-1$",
+        "Bilangan tetap ditarik keluar, penjumlahan dipecah",
+        "$(ax+b)^n$ butuh pembagi tambahan $a$"
+      ],
+      "pitfall": "Menulis $\\int (2x+3)^4 dx = \\frac{(2x+3)^5}{5}$. Turunkan jawaban itu dan kamu dapat $2(2x+3)^4$ — dua kali lipat soalnya. Pembagi $a$ itu wajib."
+    },
+    {
+      "id": "kal-integral-aljabar-c3",
+      "type": "konsep",
+      "title": "Integral tentu dan teorema dasar kalkulus",
+      "body": "Integral tentu punya batas, dan hasilnya sebuah **angka** — bukan fungsi:\n\n$$\\int_a^b f(x)\\,dx = F(b) - F(a)$$\n\ndengan $F$ antiturunan mana pun dari $f$. Pernyataan inilah yang disebut Teorema Dasar Kalkulus.\n\nPerhatikan nasib $+C$ di sini. Kalau kamu memakai $F(x) + C$, hasilnya menjadi $[F(b) + C] - [F(a) + C] = F(b) - F(a)$. Konstantanya saling menghapus. Jadi pada integral tentu $+C$ memang tidak perlu ditulis — bukan karena boleh dilupakan, tapi karena terbukti tidak berpengaruh. Kalimat \"antiturunan mana pun\" tadi jadi masuk akal karena hal ini.\n\nContoh: $\\int_1^3 (2x+1)\\,dx$. Antiturunannya $x^2 + x$, jadi hasilnya $(9+3) - (1+1) = 10$.\n\nDua sifat yang sering dipakai:\n\n$$\\int_a^a f(x)\\,dx = 0, \\qquad \\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx$$\n\nYang pertama wajar: lebar intervalnya nol. Yang kedua berarti menukar batas membalik tanda.",
+      "questions": [
+        {
+          "id": "kal-integral-aljabar-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\int_0^2 (x^2+1)\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{14}{3}$",
+            "$\\frac{8}{3}$",
+            "$\\frac{11}{3}$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Antiturunannya $F(x) = \\frac{x^3}{3} + x$.\n\n$$F(2) = \\frac{8}{3} + 2 = \\frac{8}{3} + \\frac{6}{3} = \\frac{14}{3}$$\n$$F(0) = 0 + 0 = 0$$\n\n$$\\int_0^2 (x^2+1)\\,dx = \\frac{14}{3} - 0 = \\frac{14}{3}$$\n\nPilihan $\\frac{8}{3}$ muncul kalau kamu lupa mengintegralkan suku $+1$.",
+          "hint": "Hitung $F(2) - F(0)$.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $\\int_1^k (2x-1)\\,dx = 12$ dengan $k > 1$, maka nilai $k$ adalah ...",
+          "options": [
+            "$4$",
+            "$3$",
+            "$5$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Antiturunannya $F(x) = x^2 - x$.\n\n$$\\int_1^k (2x-1)\\,dx = (k^2 - k) - (1 - 1) = k^2 - k$$\n\nSamakan dengan 12:\n$$k^2 - k - 12 = 0$$\n$$(k-4)(k+3) = 0$$\n\nDiperoleh $k = 4$ atau $k = -3$. Karena disyaratkan $k > 1$, jawabannya $k = 4$.\n\nCek: $\\int_1^4 (2x-1)dx = (16-4) - 0 = 12$. Benar.",
+          "hint": "Hitung integralnya dalam $k$, lalu selesaikan persamaan kuadrat yang muncul.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $\\int_1^5 f(x)\\,dx = 12$ dan $\\int_1^3 f(x)\\,dx = 5$. Nilai $\\int_5^3 f(x)\\,dx$ adalah ...",
+          "options": [
+            "$-7$",
+            "$7$",
+            "$17$",
+            "$-17$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pecah dulu intervalnya di $x = 3$:\n$$\\int_1^5 = \\int_1^3 + \\int_3^5$$\n$$12 = 5 + \\int_3^5 \\Rightarrow \\int_3^5 f(x)\\,dx = 7$$\n\nYang diminta batasnya terbalik, dan menukar batas membalik tanda:\n$$\\int_5^3 f(x)\\,dx = -\\int_3^5 f(x)\\,dx = -7$$\n\nKalau kamu menjawab $7$, kamu sudah benar sampai langkah kedua tapi melewatkan pembalikan tanda di langkah terakhir.",
+          "hint": "Pecah $[1,5]$ di $x = 3$, lalu perhatikan urutan batas yang diminta.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Hasil integral tentu berupa angka, bukan fungsi",
+        "$+C$ saling menghapus sehingga tidak perlu ditulis",
+        "Menukar batas membalik tanda hasilnya"
+      ],
+      "pitfall": "Menghitung $F(a) - F(b)$ alih-alih $F(b) - F(a)$. Jawabannya akan benar secara nilai tapi terbalik tandanya, dan pada soal luas kesalahan ini menghasilkan luas negatif yang mustahil."
+    },
+    {
+      "id": "kal-integral-aljabar-c4",
+      "type": "konsep",
+      "title": "Kapan integral sama dengan luas",
+      "body": "Untuk $f(x) \\geq 0$ pada $[a,b]$, nilai $\\int_a^b f(x)\\,dx$ sama dengan luas daerah antara grafik dan sumbu $x$. Alasannya: integral adalah limit dari jumlah luas persegi panjang tipis selebar $dx$ dan setinggi $f(x)$.\n\nTapi kalau grafiknya berada **di bawah** sumbu $x$, tingginya bertanda negatif dan integralnya ikut negatif — sementara luas tidak pernah negatif. Untuk $\\int_0^3 (x-3)\\,dx$ hasilnya $-4{,}5$, sedangkan luas daerahnya $4{,}5$.\n\nMaka aturannya: pecah interval di setiap titik potong dengan sumbu $x$, hitung tiap potongan secara terpisah, ambil nilai mutlaknya, baru jumlahkan.\n\nUntuk luas **antara dua kurva** pada $[a,b]$ dengan $f$ selalu di atas $g$:\n\n$$L = \\int_a^b [f(x) - g(x)]\\,dx$$\n\nSelisih \"atas dikurangi bawah\" ini otomatis tidak negatif, jadi kamu tidak perlu memikirkan posisi sumbu $x$ sama sekali. Batas $a$ dan $b$ adalah absis titik potong kedua kurva, dicari dengan menyelesaikan $f(x) = g(x)$.",
+      "questions": [
+        {
+          "id": "kal-integral-aljabar-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Luas daerah yang dibatasi kurva $y = 4 - x^2$ dan sumbu $x$ adalah ...",
+          "options": [
+            "$\\frac{32}{3}$",
+            "$\\frac{16}{3}$",
+            "$8$",
+            "$\\frac{64}{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari batasnya dari $4 - x^2 = 0$, diperoleh $x = -2$ dan $x = 2$.\n\nPada interval itu $4 - x^2 \\geq 0$, jadi grafiknya di atas sumbu $x$ dan integralnya langsung memberi luas.\n\n$$L = \\int_{-2}^{2} (4-x^2)\\,dx = \\left[4x - \\frac{x^3}{3}\\right]_{-2}^{2}$$\n\nDi $x = 2$: $8 - \\frac{8}{3} = \\frac{16}{3}$\n\nDi $x = -2$: $-8 + \\frac{8}{3} = -\\frac{16}{3}$\n\n$$L = \\frac{16}{3} - \\left(-\\frac{16}{3}\\right) = \\frac{32}{3}$$",
+          "hint": "Batasnya adalah titik potong kurva dengan sumbu $x$.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Luas daerah yang dibatasi kurva $y = x^2$ dan garis $y = x + 2$ adalah ...",
+          "options": [
+            "$\\frac{9}{2}$",
+            "$\\frac{7}{2}$",
+            "$\\frac{9}{4}$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari titik potongnya: $x^2 = x + 2 \\Rightarrow x^2 - x - 2 = 0 \\Rightarrow (x-2)(x+1) = 0$, jadi $x = -1$ dan $x = 2$.\n\nTentukan mana yang di atas dengan menguji satu titik di antaranya, misal $x = 0$: garis bernilai $2$, parabola bernilai $0$. Jadi garisnya di atas.\n\n$$L = \\int_{-1}^{2}\\left[(x+2) - x^2\\right]dx = \\left[\\frac{x^2}{2} + 2x - \\frac{x^3}{3}\\right]_{-1}^{2}$$\n\nDi $x = 2$: $2 + 4 - \\frac{8}{3} = \\frac{10}{3}$\n\nDi $x = -1$: $\\frac{1}{2} - 2 + \\frac{1}{3} = -\\frac{7}{6}$\n\n$$L = \\frac{10}{3} + \\frac{7}{6} = \\frac{20}{6} + \\frac{7}{6} = \\frac{27}{6} = \\frac{9}{2}$$",
+          "hint": "Integralkan (fungsi atas $-$ fungsi bawah) di antara kedua titik potong.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Integral memberi luas hanya jika grafik di atas sumbu $x$",
+        "Di bawah sumbu $x$, ambil nilai mutlak tiap potongan",
+        "Luas antar kurva: $\\int$ (atas $-$ bawah), batasnya titik potong"
+      ],
+      "pitfall": "Langsung mengintegralkan dari batas kiri ke batas kanan pada soal luas tanpa mencari titik potong dengan sumbu $x$ lebih dulu. Potongan positif dan negatif akan saling memakan, dan luas yang kamu dapat terlalu kecil."
+    },
+    {
+      "id": "kal-integral-aljabar-c5",
+      "type": "jebakan",
+      "title": "Lima kesalahan integral yang paling sering",
+      "body": "**1. Lupa $+C$ pada integral tak tentu.** Jawaban tanpa $+C$ menunjuk satu fungsi, padahal soalnya punya tak hingga banyak jawaban sah. Pada integral tentu kebalikannya: menulis $+C$ tidak salah, hanya mubazir karena pasti terhapus.\n\n**2. Memakai aturan pangkat saat $n = -1$.** $\\int x^{-1}dx$ bukan $\\frac{x^0}{0}$ — bentuk itu tidak terdefinisi. Integral ini membutuhkan logaritma natural, di luar cakupan bab ini.\n\n**3. Lupa pembagi $a$ pada bentuk $(ax+b)^n$.** Uji sendiri dengan menurunkan jawabanmu: yang salah akan memberi $a$ kali soal aslinya, bukan soalnya.\n\n**4. Membalik urutan menjadi $F(a) - F(b)$.** Hasilnya benar besarnya tapi salah tandanya. Biasakan menulis batas atas lebih dulu.\n\n**5. Menyamakan hasil integral negatif dengan luas negatif.** Kalau soal meminta luas dan integralmu keluar negatif, itu bukan jawaban — itu tanda daerahnya berada di bawah sumbu $x$. Ambil nilai mutlaknya.\n\nSatu kebiasaan menutup empat dari lima kesalahan ini: turunkan kembali jawabanmu sebelum menulis hasil akhir.",
+      "questions": [
+        {
+          "id": "kal-integral-aljabar-q10",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Nilai $\\int_0^3 (x-3)\\,dx$ sama dengan luas daerah antara garis $y = x - 3$ dan sumbu $x$ pada $0 \\leq x \\leq 3$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Pada $0 \\leq x < 3$ nilai $x - 3$ selalu **negatif**, jadi grafiknya berada di bawah sumbu $x$.\n\n$$\\int_0^3 (x-3)\\,dx = \\left[\\frac{x^2}{2} - 3x\\right]_0^3 = \\left(\\frac{9}{2} - 9\\right) - 0 = -\\frac{9}{2}$$\n\nIntegralnya $-\\frac{9}{2}$, sedangkan luasnya $\\frac{9}{2}$. Keduanya baru bernilai sama kalau grafiknya berada di atas sumbu $x$ sepanjang interval itu.",
+          "hint": "Periksa dulu tanda $x - 3$ pada interval tersebut.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "kal-integral-aljabar-q11",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Jika $\\int_a^b f(x)\\,dx = 0$, maka pasti $f(x) = 0$ untuk setiap $x$ pada $[a,b]$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Integral nol hanya berarti bagian positif dan bagian negatifnya sama besar, bukan bahwa fungsinya nol di mana-mana.\n\nContoh tandingan: $\\int_{-1}^{1} x\\,dx = \\left[\\frac{x^2}{2}\\right]_{-1}^{1} = \\frac{1}{2} - \\frac{1}{2} = 0$, padahal $f(x) = x$ jelas tidak nol kecuali di satu titik.\n\nInilah alasan soal luas mengharuskan kamu memecah interval di titik potong dengan sumbu $x$: tanpa itu, potongan yang saling menghapus akan menyamarkan luas yang sebenarnya ada.",
+          "hint": "Coba cari satu fungsi tak-nol yang integralnya kebetulan nol.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Selalu turunkan kembali hasil integral untuk memeriksanya",
+        "Aturan pangkat tidak berlaku untuk $n = -1$",
+        "Luas tidak pernah bernilai negatif"
+      ],
+      "pitfall": "Menyingkat pemeriksaan dengan hanya melihat \"apakah bentuknya mirip\". Bentuk yang mirip tetap bisa salah pengali — hanya penurunan ulang yang membuktikannya."
+    }
+  ]
+}

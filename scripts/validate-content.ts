@@ -81,6 +81,8 @@ const totals: Totals = {
 };
 
 const seenTopicIds = new Set<string>();
+/** order harus unik per jalur, karena urutan topik diurutkan dengan nilai itu. */
+const ordersByTrack = new Map<string, Map<number, string>>();
 const seenCardIds = new Set<string>();
 const seenQuestionIds = new Set<string>();
 const topicIdsByFile = new Map<string, string>();
@@ -296,6 +298,18 @@ function validateTopic(raw: string, file: string): void {
 
   if (typeof topic.order !== 'number' || !Number.isInteger(topic.order)) {
     fail(file, 'order harus bilangan bulat');
+  } else if (typeof track === 'string') {
+    let taken = ordersByTrack.get(track);
+    if (!taken) {
+      taken = new Map<number, string>();
+      ordersByTrack.set(track, taken);
+    }
+    const bentrok = taken.get(topic.order);
+    if (bentrok !== undefined) {
+      fail(file, `order ${topic.order} sudah dipakai "${bentrok}" di jalur ${track}`);
+    } else {
+      taken.set(topic.order, topicId);
+    }
   }
   if (
     typeof topic.estimatedMinutes !== 'number' ||

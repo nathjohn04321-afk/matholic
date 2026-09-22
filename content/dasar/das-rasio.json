@@ -2,7 +2,7 @@
   "id": "das-rasio",
   "track": "dasar",
   "title": "Rasio, Perbandingan & Persen",
-  "order": 3,
+  "order": 4,
   "prerequisites": [
     "das-bilangan"
   ],
