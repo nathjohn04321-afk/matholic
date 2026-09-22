@@ -1,0 +1,263 @@
+{
+  "id": "lan-teknik-integrasi",
+  "track": "lanjut",
+  "title": "Teknik Integrasi: Substitusi dan Parsial",
+  "order": 3,
+  "prerequisites": [
+    "lan-integral-trigonometri"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Dua alat untuk integral yang tak punya rumus langsung, dan cara memilih di antara keduanya.",
+  "tags": [
+    "kalkulus",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-teknik-integrasi-c1",
+      "type": "konsep",
+      "title": "Substitusi adalah aturan rantai yang dibalik",
+      "body": "Aturan rantai bilang $\\frac{d}{dx}F(g(x)) = F'(g(x))\\cdot g'(x)$. Perhatikan bentuk ruas kanannya: sebuah fungsi komposisi **dikalikan turunan bagian dalamnya**. Kalau kamu menemui bentuk seperti itu di dalam integral, kamu tahu ia berasal dari komposisi.\n\n$$\\int f(g(x))\\cdot g'(x)\\,dx = F(g(x)) + C$$\n\nDalam praktiknya, misalkan $u = g(x)$ sehingga $du = g'(x)\\,dx$. Seluruh integral berubah menjadi $\\int f(u)\\,du$ — bentuk dasar yang sudah kamu kuasai.\n\nKunci keberhasilannya cuma satu pertanyaan: **apakah turunan dari calon $u$ juga ada di dalam integral, setidaknya sampai faktor bilangan tetap?** Kalau ya, substitusi akan jalan. Kalau tidak, teknik ini buntu dan kamu perlu alat lain.\n\nContoh: pada $\\int x(x^2+1)^3 dx$ ambil $u = x^2+1$. Maka $du = 2x\\,dx$, dan faktor $x$ memang tersedia di soal. Sisanya tinggal mengurus angka $2$.",
+      "questions": [
+        {
+          "id": "lan-teknik-integrasi-q1",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int x(x^2+1)^3\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{(x^2+1)^4}{8} + C$",
+            "$\\frac{(x^2+1)^4}{4} + C$",
+            "$\\frac{x^2(x^2+1)^4}{8} + C$",
+            "$\\frac{(x^2+1)^4}{2} + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil $u = x^2 + 1$, maka $du = 2x\\,dx$, sehingga $x\\,dx = \\frac{1}{2}du$.\n\n$$\\int x(x^2+1)^3 dx = \\int u^3 \\cdot \\frac{1}{2}du = \\frac{1}{2}\\cdot\\frac{u^4}{4} = \\frac{u^4}{8}$$\n\nKembalikan ke $x$: $\\frac{(x^2+1)^4}{8} + C$.\n\nCek: $\\frac{d}{dx}\\frac{(x^2+1)^4}{8} = \\frac{4(x^2+1)^3 \\cdot 2x}{8} = x(x^2+1)^3$. Benar.",
+          "hint": "Ambil $u$ = isi kurung, lalu lihat apakah $du$ sudah tersedia.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-teknik-integrasi-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int 2x\\sqrt{x^2+5}\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{2}{3}(x^2+5)^{3/2} + C$",
+            "$\\frac{2}{3}(x^2+5)^{1/2} + C$",
+            "$\\frac{3}{2}(x^2+5)^{3/2} + C$",
+            "$(x^2+5)^{3/2} + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil $u = x^2 + 5$, maka $du = 2x\\,dx$ — persis faktor yang tersedia di soal.\n\n$$\\int 2x\\sqrt{x^2+5}\\,dx = \\int \\sqrt{u}\\,du = \\int u^{1/2}du = \\frac{u^{3/2}}{3/2} = \\frac{2}{3}u^{3/2}$$\n\nJadi hasilnya $\\frac{2}{3}(x^2+5)^{3/2} + C$.\n\nCek: $\\frac{d}{dx}\\frac{2}{3}(x^2+5)^{3/2} = \\frac{2}{3}\\cdot\\frac{3}{2}(x^2+5)^{1/2}\\cdot 2x = 2x\\sqrt{x^2+5}$. Benar.",
+          "hint": "Tulis akarnya sebagai pangkat $\\frac{1}{2}$ lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Substitusi hanya jalan kalau turunan $u$ ikut hadir di integral",
+        "$u = g(x) \\Rightarrow du = g'(x)\\,dx$",
+        "Setelah substitusi, tidak boleh ada $x$ yang tersisa"
+      ],
+      "pitfall": "Memilih $u$ sebagai bagian yang terlihat paling rumit tanpa memeriksa turunannya. Pada $\\int (x^2+1)^3 dx$ tanpa faktor $x$, substitusi $u = x^2+1$ justru macet — $du = 2x\\,dx$ sementara $x$ tidak tersedia untuk ditukar."
+    },
+    {
+      "id": "lan-teknik-integrasi-c2",
+      "type": "prosedur",
+      "title": "Substitusi pada integral tentu: ganti batasnya",
+      "body": "Pada integral tentu kamu punya dua pilihan, dan satu di antaranya jauh lebih aman.\n\n**Cara pertama (rawan salah):** kerjakan sebagai integral tak tentu, kembalikan hasilnya ke variabel $x$, baru masukkan batas asli.\n\n**Cara kedua (disarankan):** ganti batasnya ikut bersama variabelnya. Kalau $u = g(x)$, maka batas $x = a$ menjadi $u = g(a)$ dan batas $x = b$ menjadi $u = g(b)$:\n\n$$\\int_a^b f(g(x))g'(x)\\,dx = \\int_{g(a)}^{g(b)} f(u)\\,du$$\n\nDengan cara kedua kamu tidak perlu kembali ke $x$ sama sekali.\n\nContoh: $\\int_1^2 x(x^2+3)^2 dx$ dengan $u = x^2+3$, $x\\,dx = \\frac{1}{2}du$. Batasnya berubah: $x=1 \\to u=4$ dan $x=2 \\to u=7$.\n\n$$\\frac{1}{2}\\int_4^7 u^2 du = \\frac{1}{2}\\left[\\frac{u^3}{3}\\right]_4^7 = \\frac{343-64}{6} = \\frac{279}{6} = \\frac{93}{2}$$\n\nKesalahan paling mahal di sini adalah mengganti variabel tapi lupa mengganti batasnya.",
+      "questions": [
+        {
+          "id": "lan-teknik-integrasi-q3",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Nilai $\\int_1^2 x(x^2+3)^2\\,dx$ adalah ... (tulis desimal, contoh: 1,5)",
+          "answer": "46,5",
+          "acceptedAnswers": [
+            "46,5",
+            "46.5"
+          ],
+          "solution": "Ambil $u = x^2+3$, maka $du = 2x\\,dx$ sehingga $x\\,dx = \\frac{1}{2}du$.\n\nGanti batasnya: $x = 1 \\Rightarrow u = 4$, dan $x = 2 \\Rightarrow u = 7$.\n\n$$\\int_1^2 x(x^2+3)^2 dx = \\frac{1}{2}\\int_4^7 u^2\\,du = \\frac{1}{2}\\left[\\frac{u^3}{3}\\right]_4^7$$\n\n$$= \\frac{1}{6}(343 - 64) = \\frac{279}{6} = 46{,}5$$\n\nKalau kamu lupa mengganti batas dan memakai $\\int_1^2 u^2 du$, hasilnya $\\frac{7}{6}$ — jauh meleset.",
+          "hint": "Ganti batasnya bersama variabelnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-teknik-integrasi-q4",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\int_0^2 x\\sqrt{x^2+1}\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{5\\sqrt{5}-1}{3}$",
+            "$\\frac{5\\sqrt{5}}{3}$",
+            "$\\frac{\\sqrt{5}-1}{3}$",
+            "$\\frac{5\\sqrt{5}+1}{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil $u = x^2+1$, maka $x\\,dx = \\frac{1}{2}du$. Batasnya: $x=0 \\Rightarrow u=1$, dan $x=2 \\Rightarrow u=5$.\n\n$$\\int_0^2 x\\sqrt{x^2+1}\\,dx = \\frac{1}{2}\\int_1^5 u^{1/2}du = \\frac{1}{2}\\left[\\frac{2}{3}u^{3/2}\\right]_1^5 = \\frac{1}{3}\\left[u^{3/2}\\right]_1^5$$\n\n$$= \\frac{1}{3}\\left(5^{3/2} - 1\\right) = \\frac{5\\sqrt{5}-1}{3}$$\n\nPerhatikan $5^{3/2} = 5\\sqrt{5} \\approx 11{,}18$, jadi hasilnya sekitar $3{,}39$.",
+          "hint": "Setelah batas diganti, suku $-1$ berasal dari batas bawah $u=1$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Ganti batas bersama variabelnya: $x=a \\to u=g(a)$",
+        "Dengan batas yang ikut diganti, tak perlu kembali ke $x$",
+        "Jangan campur: batas $x$ dengan variabel $u$ selalu salah"
+      ],
+      "pitfall": "Menuliskan $\\int_4^7$ tapi kemudian mengembalikan hasilnya ke bentuk $x$ dan memasukkan $x=1$ dan $x=2$. Batas dan variabel harus sepasang — begitu kamu mengganti salah satunya, yang lain wajib ikut."
+    },
+    {
+      "id": "lan-teknik-integrasi-c3",
+      "type": "teknik",
+      "title": "Integral parsial: memindahkan kesulitan",
+      "body": "Substitusi buntu pada bentuk seperti $\\int x\\sin x\\,dx$. Tidak ada pilihan $u$ yang turunannya melengkapi sisanya. Yang kamu punya bukan komposisi, melainkan **hasil kali dua fungsi yang tidak berhubungan**.\n\nUntuk itu ada integral parsial, yang lahir dari membalik aturan hasil kali:\n\n$$\\int u\\,dv = uv - \\int v\\,du$$\n\nPerhatikan apa yang sebenarnya terjadi. Kamu tidak menyelesaikan integralnya — kamu **menukarnya dengan integral lain**. Teknik ini berguna hanya kalau $\\int v\\,du$ lebih mudah daripada $\\int u\\,dv$. Kalau lebih sulit, pilihanmu terbalik.\n\nPedoman memilih $u$: ambil bagian yang **menyederhana kalau diturunkan**. Fungsi aljabar seperti $x$ atau $x^2$ hampir selalu pilihan bagus, karena menurunkannya mengurangi pangkat dan akhirnya menjadi bilangan tetap. Sisanya menjadi $dv$.\n\nContoh: $\\int x\\sin x\\,dx$ dengan $u = x$ dan $dv = \\sin x\\,dx$. Maka $du = dx$ dan $v = -\\cos x$, sehingga hasilnya $-x\\cos x + \\int\\cos x\\,dx = -x\\cos x + \\sin x + C$.",
+      "questions": [
+        {
+          "id": "lan-teknik-integrasi-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int x\\sin x\\,dx$ adalah ...",
+          "options": [
+            "$-x\\cos x + \\sin x + C$",
+            "$x\\cos x - \\sin x + C$",
+            "$-x\\cos x - \\sin x + C$",
+            "$\\frac{x^2}{2}\\cos x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai integral parsial dengan $u = x$ (karena menurunkannya menyederhanakan) dan $dv = \\sin x\\,dx$.\n\n$$du = dx, \\qquad v = \\int \\sin x\\,dx = -\\cos x$$\n\n$$\\int x\\sin x\\,dx = uv - \\int v\\,du = -x\\cos x - \\int(-\\cos x)\\,dx$$\n$$= -x\\cos x + \\int \\cos x\\,dx = -x\\cos x + \\sin x + C$$\n\nCek: $\\frac{d}{dx}(-x\\cos x + \\sin x) = -\\cos x + x\\sin x + \\cos x = x\\sin x$. Benar.\n\nDua tanda minus yang saling bertemu di langkah ketiga adalah tempat kesalahan paling sering terjadi.",
+          "hint": "Ambil $u = x$, dan hati-hati dengan dua tanda minus yang bertemu.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-teknik-integrasi-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int x e^x\\,dx$ adalah ...",
+          "options": [
+            "$(x-1)e^x + C$",
+            "$(x+1)e^x + C$",
+            "$\\frac{x^2}{2}e^x + C$",
+            "$xe^x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil $u = x$ dan $dv = e^x dx$, sehingga $du = dx$ dan $v = e^x$.\n\n$$\\int xe^x dx = xe^x - \\int e^x dx = xe^x - e^x + C = (x-1)e^x + C$$\n\nCek dengan aturan hasil kali:\n$$\\frac{d}{dx}\\left[(x-1)e^x\\right] = 1\\cdot e^x + (x-1)e^x = e^x(1 + x - 1) = xe^x$$\n\nBenar. Kalau kamu menjawab $(x+1)e^x$, turunannya menjadi $(x+2)e^x$ — tandanya tertukar.",
+          "hint": "Antiturunan $e^x$ adalah $e^x$ sendiri; sisanya tinggal mengurus tanda.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\int u\\,dv = uv - \\int v\\,du$ membalik aturan hasil kali",
+        "Parsial menukar integral, bukan menyelesaikannya",
+        "Pilih $u$ yang menyederhana saat diturunkan"
+      ],
+      "pitfall": "Memilih $u = \\sin x$ dan $dv = x\\,dx$ pada $\\int x\\sin x\\,dx$. Ini sah secara rumus, tapi menghasilkan $\\int \\frac{x^2}{2}\\cos x\\,dx$ — pangkat $x$ malah naik dan soalnya jadi lebih sulit dari semula."
+    },
+    {
+      "id": "lan-teknik-integrasi-c4",
+      "type": "prosedur",
+      "title": "Memilih teknik: tiga pertanyaan berurutan",
+      "body": "Soal integral jarang memberi tahu teknik mana yang dipakai. Urutan pemeriksaan berikut menyelesaikan hampir semua soal tingkat SMA tanpa coba-coba.\n\n**Pertanyaan 1: apakah ini bentuk dasar?** Kalau soalnya $x^n$, $\\sin(ax+b)$, $(ax+b)^n$, atau jumlah dari bentuk-bentuk itu, kerjakan langsung dengan rumus. Jangan memakai teknik berat untuk soal ringan.\n\n**Pertanyaan 2: adakah fungsi di dalam fungsi, dengan turunan bagian dalam ikut hadir?** Kalau ya, pakai substitusi. Ciri khasnya: ada kurung berpangkat atau akar, dan di luarnya ada faktor yang mirip turunan isi kurung. Faktor yang meleset hanya di bilangan tetap tetap bisa dikerjakan — angkanya tinggal disesuaikan.\n\n**Pertanyaan 3: apakah ini hasil kali dua jenis fungsi yang tak berhubungan?** Misalnya aljabar dikali trigonometri, atau aljabar dikali eksponen. Kalau ya, pakai parsial dengan $u$ = bagian aljabarnya.\n\nBedanya substitusi dan parsial sering terlihat dari satu hal: substitusi butuh **hubungan** antara kedua faktor, parsial justru dipakai ketika hubungan itu tidak ada.",
+      "questions": [
+        {
+          "id": "lan-teknik-integrasi-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Teknik paling tepat untuk $\\int x\\cos(x^2)\\,dx$ adalah ...",
+          "options": [
+            "substitusi $u = x^2$",
+            "integral parsial dengan $u = x$",
+            "rumus dasar $\\int \\cos$",
+            "substitusi $u = \\cos(x^2)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan strukturnya: ada fungsi di dalam fungsi, yaitu $\\cos$ dari $x^2$. Turunan bagian dalamnya adalah $2x$, dan faktor $x$ memang hadir di luar.\n\nAmbil $u = x^2$, maka $du = 2x\\,dx$ sehingga $x\\,dx = \\frac{1}{2}du$:\n\n$$\\int x\\cos(x^2)dx = \\frac{1}{2}\\int \\cos u\\,du = \\frac{1}{2}\\sin(x^2) + C$$\n\nParsial dengan $u = x$ akan memberi $v = \\int\\cos(x^2)dx$, yang justru tidak bisa dinyatakan dengan fungsi dasar sama sekali. Perbedaannya tajam: di sini kedua faktor berhubungan, jadi substitusilah alatnya.",
+          "hint": "Periksa dulu apakah salah satu faktor adalah turunan bagian dalam faktor lainnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-teknik-integrasi-q8",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Integral parsial selalu bisa dipakai pada hasil kali dua fungsi, dan selalu membuat soalnya lebih mudah.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Rumusnya memang selalu **sah** dipakai, tapi tidak selalu **berguna**.\n\nParsial hanya menukar $\\int u\\,dv$ dengan $\\int v\\,du$. Kalau pilihanmu keliru, integral baru itu bisa lebih sulit dari yang lama. Contohnya $\\int x\\sin x\\,dx$ dengan $u = \\sin x$ dan $dv = x\\,dx$ menghasilkan $\\int \\frac{x^2}{2}\\cos x\\,dx$ — pangkat $x$ naik, bukan turun.\n\nSelain itu, banyak hasil kali justru lebih pendek dikerjakan dengan substitusi, seperti $\\int x(x^2+1)^3 dx$. Memilih teknik adalah bagian dari soalnya.",
+          "hint": "Perhatikan apakah $\\int v\\,du$ pasti lebih mudah dari $\\int u\\,dv$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Periksa bentuk dasar dulu sebelum memakai teknik berat",
+        "Substitusi: ada komposisi, dan turunan bagian dalam hadir",
+        "Parsial: hasil kali dua jenis fungsi yang tak berhubungan"
+      ],
+      "pitfall": "Langsung mencoba parsial pada $\\int x(x^2+1)^3 dx$ karena melihat \"hasil kali\". Di sini kedua faktor justru berhubungan — $x$ adalah turunan $x^2+1$ sampai faktor 2 — sehingga substitusi jauh lebih pendek."
+    },
+    {
+      "id": "lan-teknik-integrasi-c5",
+      "type": "jebakan",
+      "title": "Empat kesalahan teknik integrasi",
+      "body": "**1. Menyisakan $x$ setelah substitusi.** Bentuk seperti $\\int u^3 x\\,du$ tidak punya arti. Setelah mengganti variabel, seluruh integral wajib bersih dari $x$ — kalau ada yang tersisa, pilihan $u$-mu belum cocok.\n\n**2. Lupa mengganti batas pada integral tentu.** Menulis $\\int_1^2$ padahal variabelnya sudah $u$ akan memberi jawaban yang salah tanpa gejala apa pun. Kalau ragu, kerjakan sebagai integral tak tentu dulu lalu kembali ke $x$.\n\n**3. Tanda minus ganda pada parsial.** Pada $\\int x\\sin x\\,dx$, nilai $v = -\\cos x$ bertemu tanda minus dari rumus $uv - \\int v\\,du$. Dua minus menjadi plus, dan langkah inilah yang paling sering keliru.\n\n**4. Memilih $u$ yang justru memperumit.** Kalau setelah satu putaran parsial integralmu terlihat lebih sulit, jangan diteruskan — balik pilihanmu dan ulangi dari awal.\n\nSeperti semua integral, satu pemeriksaan menutup keempatnya: turunkan kembali jawaban akhirmu dan bandingkan dengan soalnya.",
+      "questions": [
+        {
+          "id": "lan-teknik-integrasi-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int x\\cos 2x\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{x}{2}\\sin 2x + \\frac{1}{4}\\cos 2x + C$",
+            "$\\frac{x}{2}\\sin 2x - \\frac{1}{4}\\cos 2x + C$",
+            "$x\\sin 2x + \\cos 2x + C$",
+            "$\\frac{x^2}{2}\\sin 2x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil $u = x$ dan $dv = \\cos 2x\\,dx$, sehingga $du = dx$ dan $v = \\frac{1}{2}\\sin 2x$.\n\n$$\\int x\\cos 2x\\,dx = \\frac{x}{2}\\sin 2x - \\int \\frac{1}{2}\\sin 2x\\,dx$$\n\n$$= \\frac{x}{2}\\sin 2x - \\frac{1}{2}\\left(-\\frac{1}{2}\\cos 2x\\right) = \\frac{x}{2}\\sin 2x + \\frac{1}{4}\\cos 2x + C$$\n\nTandanya menjadi plus karena antiturunan $\\sin 2x$ sendiri bertanda minus. Cek dengan menurunkan:\n$$\\frac{1}{2}\\sin 2x + x\\cos 2x - \\frac{1}{2}\\sin 2x = x\\cos 2x$$\n\nBenar.",
+          "hint": "Perhatikan tanda minus dari antiturunan sinus bertemu minus dari rumus parsial.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-teknik-integrasi-q10",
+          "difficulty": 5,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\int_0^{\\pi} x\\sin x\\,dx$ adalah ...",
+          "options": [
+            "$\\pi$",
+            "$2\\pi$",
+            "$0$",
+            "$\\frac{\\pi}{2}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dari integral parsial, antiturunannya $F(x) = -x\\cos x + \\sin x$.\n\nDi $x = \\pi$:\n$$F(\\pi) = -\\pi\\cos\\pi + \\sin\\pi = -\\pi(-1) + 0 = \\pi$$\n\nDi $x = 0$:\n$$F(0) = -0\\cdot\\cos 0 + \\sin 0 = 0$$\n\n$$\\int_0^{\\pi} x\\sin x\\,dx = \\pi - 0 = \\pi$$\n\nPerhatikan bahwa suku $\\sin x$ hilang di kedua batas, dan seluruh hasilnya datang dari suku $-x\\cos x$ di batas atas.",
+          "hint": "Cari antiturunannya lebih dulu dengan parsial, baru pasang batasnya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Setelah substitusi, tidak boleh ada $x$ tersisa",
+        "Ganti variabel berarti ganti batas",
+        "Kalau parsial memperumit, balik pilihan $u$ dan $dv$"
+      ],
+      "pitfall": "Menganggap satu putaran parsial yang gagal berarti soalnya tidak bisa dikerjakan. Yang gagal biasanya pilihan $u$-nya, bukan tekniknya — tukar peran kedua faktor dan coba sekali lagi."
+    }
+  ]
+}

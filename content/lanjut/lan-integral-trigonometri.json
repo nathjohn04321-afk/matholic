@@ -1,0 +1,265 @@
+{
+  "id": "lan-integral-trigonometri",
+  "track": "lanjut",
+  "title": "Integral Fungsi Trigonometri",
+  "order": 2,
+  "prerequisites": [
+    "lan-integral-tentu",
+    "kal-turunan-trigonometri"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Membalik turunan trigonometri, menaklukkan pangkat genap dengan identitas sudut rangkap.",
+  "tags": [
+    "kalkulus",
+    "trigonometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-integral-trigonometri-c1",
+      "type": "rumus",
+      "title": "Enam integral dasar dan asal tandanya",
+      "body": "Setiap integral trigonometri dasar adalah pembalikan dari turunan yang sudah kamu hafal. Jangan menghafalnya sebagai daftar baru — baca tabel turunan dari kanan ke kiri.\n\n$$\\int \\sin x\\,dx = -\\cos x + C$$\n$$\\int \\cos x\\,dx = \\sin x + C$$\n$$\\int \\sec^2 x\\,dx = \\tan x + C$$\n$$\\int \\csc^2 x\\,dx = -\\cot x + C$$\n$$\\int \\sec x \\tan x\\,dx = \\sec x + C$$\n$$\\int \\csc x \\cot x\\,dx = -\\csc x + C$$\n\nPerhatikan pergeseran tandanya. Pada turunan, yang bertanda minus adalah yang berawalan \"ko\" — kosinus, kotangen, kosekan. Pada integral, tanda minus justru pindah ke pasangannya: $\\int \\sin$ bertanda minus, $\\int \\cos$ tidak. Ini konsekuensi langsung dari $\\frac{d}{dx}\\cos x = -\\sin x$: untuk membalikkannya kamu perlu minus lagi supaya saling membatalkan.\n\nKalau kamu ragu tandanya, turunkan jawabanmu. $\\frac{d}{dx}(-\\cos x) = \\sin x$ — cocok.",
+      "questions": [
+        {
+          "id": "lan-integral-trigonometri-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int (\\sin x + 2\\cos x)\\,dx$ adalah ...",
+          "options": [
+            "$-\\cos x + 2\\sin x + C$",
+            "$\\cos x + 2\\sin x + C$",
+            "$-\\cos x - 2\\sin x + C$",
+            "$\\cos x - 2\\sin x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pecah menjadi dua integral terpisah:\n\n$$\\int \\sin x\\,dx = -\\cos x$$\n$$\\int 2\\cos x\\,dx = 2\\sin x$$\n\nJadi hasilnya $-\\cos x + 2\\sin x + C$.\n\nCek dengan menurunkan: $\\frac{d}{dx}(-\\cos x + 2\\sin x) = \\sin x + 2\\cos x$. Sesuai soal.",
+          "hint": "Ingat hanya salah satu dari sinus dan kosinus yang berubah tanda.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-trigonometri-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int \\cos 3x\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{1}{3}\\sin 3x + C$",
+            "$3\\sin 3x + C$",
+            "$\\sin 3x + C$",
+            "$-\\frac{1}{3}\\sin 3x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudutnya berkoefisien, jadi aturan rantai ikut bermain. Secara umum:\n\n$$\\int \\cos(ax)\\,dx = \\frac{1}{a}\\sin(ax) + C$$\n\nDengan $a = 3$ hasilnya $\\frac{1}{3}\\sin 3x + C$.\n\nCek: $\\frac{d}{dx}\\left(\\frac{1}{3}\\sin 3x\\right) = \\frac{1}{3} \\cdot 3\\cos 3x = \\cos 3x$. Benar.\n\nKalau kamu menjawab $3\\sin 3x$, turunannya menjadi $9\\cos 3x$ — sembilan kali lipat soalnya.",
+          "hint": "Koefisien sudut masuk sebagai pembagi, bukan pengali.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Baca tabel turunan dari kanan ke kiri, jangan hafal daftar baru",
+        "$\\int \\sin x\\,dx = -\\cos x + C$, tapi $\\int \\cos x\\,dx = +\\sin x + C$",
+        "Ragu tanda? Turunkan kembali jawabanmu"
+      ],
+      "pitfall": "Menyalin tanda minus dari tabel turunan apa adanya, sehingga menulis $\\int \\cos x\\,dx = -\\sin x$. Tanda minus pada integral menempel di tempat yang berbeda karena ia harus membatalkan minus yang muncul saat diturunkan."
+    },
+    {
+      "id": "lan-integral-trigonometri-c2",
+      "type": "teknik",
+      "title": "Sudut berkoefisien dan pergeseran",
+      "body": "Bentuk paling sering muncul di soal bukan $\\sin x$ polos, melainkan $\\sin(ax+b)$. Polanya seragam untuk semua fungsi trigonometri:\n\n$$\\int \\sin(ax+b)\\,dx = -\\frac{1}{a}\\cos(ax+b) + C$$\n$$\\int \\cos(ax+b)\\,dx = \\frac{1}{a}\\sin(ax+b) + C$$\n\nPembagi $a$ itu bukan hafalan terpisah. Ia muncul karena menurunkan hasilnya akan memunculkan faktor $a$ dari aturan rantai, dan $\\frac{1}{a}$ bertugas membatalkannya. Nilai $b$ tidak berpengaruh sama sekali — turunan bilangan tetap adalah nol, jadi pergeseran sudut tidak menghasilkan faktor tambahan apa pun.\n\nContoh: $\\int \\sin(2x+1)\\,dx = -\\frac{1}{2}\\cos(2x+1) + C$.\n\nUntuk integral tentu, hati-hati dengan satuan sudut. Batas seperti $0$ sampai $\\frac{\\pi}{2}$ selalu berarti radian, dan kalkulator dalam mode derajat akan memberi jawaban yang sepenuhnya berbeda.",
+      "questions": [
+        {
+          "id": "lan-integral-trigonometri-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int \\sin(2x+1)\\,dx$ adalah ...",
+          "options": [
+            "$-\\frac{1}{2}\\cos(2x+1) + C$",
+            "$-2\\cos(2x+1) + C$",
+            "$\\frac{1}{2}\\cos(2x+1) + C$",
+            "$-\\frac{1}{3}\\cos(2x+1) + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai $\\int \\sin(ax+b)dx = -\\frac{1}{a}\\cos(ax+b) + C$ dengan $a = 2$, $b = 1$.\n\n$$\\int \\sin(2x+1)\\,dx = -\\frac{1}{2}\\cos(2x+1) + C$$\n\nCek: $\\frac{d}{dx}\\left(-\\frac{1}{2}\\cos(2x+1)\\right) = -\\frac{1}{2}\\cdot(-\\sin(2x+1))\\cdot 2 = \\sin(2x+1)$. Benar.\n\nPilihan $-\\frac{1}{3}$ adalah jebakan untuk yang ikut membagi dengan $b = 1$ sehingga memakai $a+b = 3$.",
+          "hint": "Hanya koefisien $x$ yang jadi pembagi.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-trigonometri-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\int_0^{\\pi/6} \\cos 3x\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{1}{3}$",
+            "$1$",
+            "$\\frac{1}{6}$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Antiturunannya $F(x) = \\frac{1}{3}\\sin 3x$.\n\n$$F\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{3}\\sin\\left(\\frac{3\\pi}{6}\\right) = \\frac{1}{3}\\sin\\frac{\\pi}{2} = \\frac{1}{3}\\cdot 1 = \\frac{1}{3}$$\n$$F(0) = \\frac{1}{3}\\sin 0 = 0$$\n\n$$\\int_0^{\\pi/6}\\cos 3x\\,dx = \\frac{1}{3} - 0 = \\frac{1}{3}$$\n\nPerhatikan bahwa $3x$ harus dihitung dulu sebelum mencari nilai sinusnya — bukan $\\sin\\frac{\\pi}{6}$ lalu dikali 3.",
+          "hint": "Substitusikan batasnya ke $3x$ lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\int \\sin(ax+b)dx = -\\frac{1}{a}\\cos(ax+b) + C$",
+        "Pembagi $a$ membatalkan faktor rantai; $b$ tidak berpengaruh",
+        "Batas integral trigonometri selalu dalam radian"
+      ],
+      "pitfall": "Membagi dengan $b$ juga, misalnya menulis $\\int \\cos(2x+1)dx = \\frac{1}{3}\\sin(2x+1)$. Hanya koefisien $x$ yang muncul saat diturunkan; suku tetap $b$ menghilang."
+    },
+    {
+      "id": "lan-integral-trigonometri-c3",
+      "type": "teknik",
+      "title": "Pangkat genap: identitas sudut rangkap",
+      "body": "$\\int \\sin^2 x\\,dx$ tidak bisa diserang langsung. Tidak ada fungsi sederhana yang turunannya $\\sin^2 x$, dan aturan pangkat tidak berlaku karena yang dipangkatkan bukan $x$.\n\nJalan keluarnya: ubah pangkat genap menjadi sudut rangkap. Dari $\\cos 2x = 1 - 2\\sin^2 x$ dan $\\cos 2x = 2\\cos^2 x - 1$ kamu dapat:\n\n$$\\sin^2 x = \\frac{1 - \\cos 2x}{2}, \\qquad \\cos^2 x = \\frac{1 + \\cos 2x}{2}$$\n\nSekarang integralnya menjadi mudah karena tidak ada lagi pangkat:\n\n$$\\int \\sin^2 x\\,dx = \\int \\frac{1 - \\cos 2x}{2}dx = \\frac{x}{2} - \\frac{\\sin 2x}{4} + C$$\n\nInti idenya: menukar **pangkat** dengan **sudut yang lebih besar**. Pangkat menyulitkan integral, sudut besar tidak — ia hanya memberi pembagi tambahan.\n\nUntuk hasil kali, pakai $\\sin 2x = 2\\sin x\\cos x$ dengan arah berlawanan: bentuk yang sulit diintegralkan diganti oleh bentuk tunggal yang mudah. Maka $\\int \\sin x\\cos x\\,dx = \\frac{1}{2}\\int \\sin 2x\\,dx = -\\frac{1}{4}\\cos 2x + C$.\n\nPola umumnya: setiap kali kamu melihat pangkat atau hasil kali fungsi trigonometri, cari identitas yang mengubahnya menjadi satu suku bersudut tunggal. Sesudah itu integralnya tinggal memakai rumus dasar.",
+      "questions": [
+        {
+          "id": "lan-integral-trigonometri-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\int_0^{\\pi/2} \\sin^2 x\\,dx$ adalah ...",
+          "options": [
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{1}{2}$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ubah dulu dengan identitas sudut rangkap:\n\n$$\\sin^2 x = \\frac{1 - \\cos 2x}{2}$$\n\n$$\\int_0^{\\pi/2}\\frac{1-\\cos 2x}{2}dx = \\left[\\frac{x}{2} - \\frac{\\sin 2x}{4}\\right]_0^{\\pi/2}$$\n\nDi $x = \\frac{\\pi}{2}$: $\\frac{\\pi}{4} - \\frac{\\sin \\pi}{4} = \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$\n\nDi $x = 0$: $0 - 0 = 0$\n\nJadi hasilnya $\\frac{\\pi}{4}$.\n\nMasuk akal: pada seperempat periode itu $\\sin^2 x$ berayun antara 0 dan 1, dan rata-ratanya persis $\\frac{1}{2}$, dikali lebar $\\frac{\\pi}{2}$ menghasilkan $\\frac{\\pi}{4}$.",
+          "hint": "Pangkat dua harus dibuang dulu dengan identitas sudut rangkap.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-trigonometri-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $\\int 2\\sin x \\cos x\\,dx$ adalah ...",
+          "options": [
+            "$-\\frac{1}{2}\\cos 2x + C$",
+            "$\\sin^2 x \\cos^2 x + C$",
+            "$2\\sin^2 x + C$",
+            "$-\\cos 2x + C$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kenali bentuknya: $2\\sin x\\cos x = \\sin 2x$.\n\n$$\\int 2\\sin x\\cos x\\,dx = \\int \\sin 2x\\,dx = -\\frac{1}{2}\\cos 2x + C$$\n\nCek: $\\frac{d}{dx}\\left(-\\frac{1}{2}\\cos 2x\\right) = -\\frac{1}{2}(-\\sin 2x)(2) = \\sin 2x = 2\\sin x\\cos x$. Benar.\n\nCatatan menarik: $\\sin^2 x + C$ juga jawaban yang sah, karena $\\sin^2 x = \\frac{1-\\cos 2x}{2}$ hanya berbeda konstanta $\\frac{1}{2}$ dari jawaban di atas. Dua antiturunan yang berbeda konstanta memang sama-sama benar.",
+          "hint": "Kenali identitas sudut rangkap untuk sinus.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pangkat genap wajib diturunkan lewat identitas sudut rangkap",
+        "$\\sin^2 x = \\frac{1-\\cos 2x}{2}$, $\\cos^2 x = \\frac{1+\\cos 2x}{2}$",
+        "Menukar pangkat dengan sudut besar membuat integral bisa dikerjakan"
+      ],
+      "pitfall": "Menerapkan aturan pangkat menjadi $\\int \\sin^2 x\\,dx = \\frac{\\sin^3 x}{3}$. Aturan pangkat hanya berlaku kalau yang dipangkatkan adalah $x$ itu sendiri; di sini turunan bagian dalamnya bukan 1, dan menurunkan $\\frac{\\sin^3 x}{3}$ memberi $\\sin^2 x\\cos x$ — ada faktor liar."
+    },
+    {
+      "id": "lan-integral-trigonometri-c4",
+      "type": "contoh",
+      "title": "Luas di bawah kurva trigonometri",
+      "body": "Soal luas dengan kurva trigonometri mengandung jebakan yang tidak ada pada fungsi aljabar: sinus dan kosinus **berganti tanda secara berkala**, jadi daerah di atas dan di bawah sumbu $x$ silih berganti dalam satu interval.\n\n**Contoh aman.** Luas di bawah $y = \\sin x$ dari $0$ sampai $\\pi$. Di seluruh interval itu $\\sin x \\geq 0$, jadi integral langsung memberi luas:\n\n$$L = \\int_0^{\\pi}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1 + 1 = 2$$\n\n**Contoh berbahaya.** Kalau batasnya diperluas menjadi $0$ sampai $2\\pi$, integralnya menjadi nol — bukan karena tidak ada daerah, tapi karena gelombang di bawah sumbu $x$ persis menghapus gelombang di atasnya.\n\nLuas sebenarnya adalah $2 + 2 = 4$. Caranya: pecah di $x = \\pi$, tempat kurva memotong sumbu $x$, hitung kedua potongan, ambil nilai mutlak masing-masing, baru jumlahkan. Selalu gambar kasar grafiknya sebelum memasang batas.",
+      "questions": [
+        {
+          "id": "lan-integral-trigonometri-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Luas daerah di bawah kurva $y = \\sin x$ dari $x = 0$ sampai $x = \\pi$ adalah ...",
+          "options": [
+            "$2$",
+            "$0$",
+            "$1$",
+            "$\\pi$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pada $0 \\leq x \\leq \\pi$ nilai $\\sin x \\geq 0$, jadi kurvanya di atas sumbu $x$ dan integralnya langsung memberi luas.\n\n$$L = \\int_0^{\\pi}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{\\pi}$$\n\n$$= (-\\cos\\pi) - (-\\cos 0) = -(-1) + 1 = 2$$\n\nJawaban $0$ adalah jebakan untuk yang memakai batas $0$ sampai $2\\pi$.",
+          "hint": "Periksa dulu apakah kurvanya memotong sumbu $x$ di dalam interval.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-trigonometri-q8",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Karena $\\int_0^{2\\pi}\\sin x\\,dx = 0$, maka luas daerah antara kurva $y = \\sin x$ dan sumbu $x$ pada $0 \\leq x \\leq 2\\pi$ juga nol.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Integralnya memang nol, tapi luasnya $4$.\n\nPada $0 \\leq x \\leq \\pi$ kurva berada di atas sumbu $x$ dan menyumbang $+2$. Pada $\\pi \\leq x \\leq 2\\pi$ kurva berada di bawah sumbu $x$ dan menyumbang $-2$. Keduanya saling menghapus dalam integral, tapi luas tidak mengenal tanda.\n\n$$L = |2| + |-2| = 4$$\n\nJustru hasil nol itulah peringatan bahwa intervalnya harus dipecah di $x = \\pi$.",
+          "hint": "Periksa tanda $\\sin x$ pada masing-masing separuh interval.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sinus dan kosinus berganti tanda, jadi potongan bisa saling menghapus",
+        "Pecah interval di setiap titik potong dengan sumbu $x$",
+        "Gambar kasar grafik sebelum memasang batas integral"
+      ],
+      "pitfall": "Menghitung $\\int_0^{2\\pi}\\sin x\\,dx$ dan menyimpulkan luasnya nol. Hasil nol di sini justru bukti bahwa intervalnya harus dipecah, bukan jawaban."
+    },
+    {
+      "id": "lan-integral-trigonometri-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan integral trigonometri",
+      "body": "**1. Menyalin tanda dari tabel turunan.** $\\int \\cos x\\,dx = +\\sin x$, bukan $-\\sin x$. Tanda minus berpindah tempat saat arah operasinya dibalik.\n\n**2. Mengalikan koefisien sudut, bukan membaginya.** $\\int \\cos 3x\\,dx$ adalah $\\frac{1}{3}\\sin 3x$, bukan $3\\sin 3x$. Uji cepat: turunkan jawabanmu dan lihat apakah koefisiennya kembali seperti soal.\n\n**3. Memakai aturan pangkat pada $\\sin^n x$.** Tidak ada bentuk $\\frac{\\sin^{n+1}x}{n+1}$ yang benar di sini, karena turunannya akan memunculkan faktor $\\cos x$ yang tidak diminta. Pangkat genap wajib lewat identitas sudut rangkap.\n\n**4. Mode derajat pada kalkulator.** Semua batas integral trigonometri dibaca dalam radian. Kalkulator dalam mode derajat akan menghitung $\\sin(1{,}57)$ sebagai sudut $1{,}57°$ dan memberi hasil yang jauh meleset.\n\nTiga dari empat jebakan ini tertangkap oleh satu kebiasaan: turunkan kembali jawabanmu, dan bandingkan dengan soal aslinya sebelum menulis hasil akhir.",
+      "questions": [
+        {
+          "id": "lan-integral-trigonometri-q9",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Nilai $\\int_0^{\\pi/2} \\cos x\\,dx$ adalah ... (tulis bilangan bulat)",
+          "answer": "1",
+          "acceptedAnswers": [
+            "1"
+          ],
+          "solution": "Antiturunan $\\cos x$ adalah $\\sin x$ (tanpa tanda minus).\n\n$$\\int_0^{\\pi/2}\\cos x\\,dx = \\left[\\sin x\\right]_0^{\\pi/2} = \\sin\\frac{\\pi}{2} - \\sin 0 = 1 - 0 = 1$$\n\nKalau kamu mendapat $-1$, kemungkinan besar kamu memakai $-\\sin x$ sebagai antiturunan — itu tandanya tertukar dengan kasus $\\int \\sin x\\,dx$.",
+          "hint": "Antiturunan kosinus tidak bertanda minus.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-integral-trigonometri-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $\\int_0^{a} \\sin x\\,dx = 1$ dengan $0 < a < \\pi$, maka nilai $a$ adalah ...",
+          "options": [
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{\\pi}{3}$",
+            "$\\frac{\\pi}{4}$",
+            "$\\frac{2\\pi}{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung integralnya dalam $a$:\n\n$$\\int_0^{a}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{a} = -\\cos a + \\cos 0 = 1 - \\cos a$$\n\nSamakan dengan 1:\n$$1 - \\cos a = 1 \\Rightarrow \\cos a = 0$$\n\nPada $0 < a < \\pi$, penyelesaian $\\cos a = 0$ hanya $a = \\frac{\\pi}{2}$.\n\nCek: $\\int_0^{\\pi/2}\\sin x\\,dx = -\\cos\\frac{\\pi}{2} + \\cos 0 = 0 + 1 = 1$. Benar.",
+          "hint": "Hitung integralnya dalam $a$ lebih dulu, baru selesaikan persamaannya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Turunkan kembali jawabanmu — ini menangkap sebagian besar kesalahan",
+        "Koefisien sudut menjadi pembagi, bukan pengali",
+        "Semua sudut pada integral dibaca dalam radian"
+      ],
+      "pitfall": "Menganggap pemeriksaan \"bentuknya sudah mirip\" sudah cukup. Bentuk yang mirip tetap bisa salah tanda atau salah pengali — hanya penurunan ulang yang membuktikannya."
+    }
+  ]
+}

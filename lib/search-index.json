@@ -552,6 +552,106 @@
       "snippet": "Lupa mengurangi batas bawah. Setelah mendapat antiturunan, hasilnya adalah nilai di batas atas dikurangi nilai di batas bawah. Banyak orang berhenti setelah ..."
     },
     {
+      "cardId": "lan-integral-trigonometri-c1",
+      "topicId": "lan-integral-trigonometri",
+      "topicTitle": "Integral Fungsi Trigonometri",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Enam integral dasar dan asal tandanya",
+      "haystack": "enam integral dasar dan asal tandanya setiap integral trigonometri dasar adalah pembalikan dari turunan yang sudah kamu hafal. jangan menghafalnya sebagai daftar baru — baca tabel turunan dari kanan ke kiri. perhatikan pergeseran tandanya. pada turunan, yang bertanda minus adalah yang berawalan \"ko\" — kosinus, kotangen, kosekan. pada integral, tanda minus justru pindah ke pasangannya: bertanda minus, tidak. ini konsekuensi langsung dari : untuk membalikkannya kamu perlu minus lagi supaya saling membatalkan. kalau kamu ragu tandanya, turunkan jawabanmu. — cocok. baca tabel turunan dari kanan ke kiri, jangan hafal daftar baru , tapi ragu tanda? turunkan kembali jawabanmu menyalin tanda minus dari tabel turunan apa adanya, sehingga menulis . tanda minus pada integral menempel di tempat yang berbeda karena ia harus membatalkan minus yang muncul saat diturunkan. integral fungsi trigonometri",
+      "snippet": "Setiap integral trigonometri dasar adalah pembalikan dari turunan yang sudah kamu hafal. Jangan menghafalnya sebagai daftar baru — baca tabel turunan dari ka..."
+    },
+    {
+      "cardId": "lan-integral-trigonometri-c2",
+      "topicId": "lan-integral-trigonometri",
+      "topicTitle": "Integral Fungsi Trigonometri",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Sudut berkoefisien dan pergeseran",
+      "haystack": "sudut berkoefisien dan pergeseran bentuk paling sering muncul di soal bukan polos, melainkan . polanya seragam untuk semua fungsi trigonometri: pembagi itu bukan hafalan terpisah. ia muncul karena menurunkan hasilnya akan memunculkan faktor dari aturan rantai, dan bertugas membatalkannya. nilai tidak berpengaruh sama sekali — turunan bilangan tetap adalah nol, jadi pergeseran sudut tidak menghasilkan faktor tambahan apa pun. contoh: . untuk integral tentu, hati-hati dengan satuan sudut. batas seperti sampai selalu berarti radian, dan kalkulator dalam mode derajat akan memberi jawaban yang sepenuhnya berbeda. pembagi membatalkan faktor rantai; tidak berpengaruh batas integral trigonometri selalu dalam radian membagi dengan juga, misalnya menulis . hanya koefisien yang muncul saat diturunkan; suku tetap menghilang. integral fungsi trigonometri",
+      "snippet": "Bentuk paling sering muncul di soal bukan [rumus] polos, melainkan [rumus] . Polanya seragam untuk semua fungsi trigonometri: [rumus] [rumus] Pembagi [rumus]..."
+    },
+    {
+      "cardId": "lan-integral-trigonometri-c3",
+      "topicId": "lan-integral-trigonometri",
+      "topicTitle": "Integral Fungsi Trigonometri",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Pangkat genap: identitas sudut rangkap",
+      "haystack": "pangkat genap: identitas sudut rangkap tidak bisa diserang langsung. tidak ada fungsi sederhana yang turunannya , dan aturan pangkat tidak berlaku karena yang dipangkatkan bukan . jalan keluarnya: ubah pangkat genap menjadi sudut rangkap. dari dan kamu dapat: sekarang integralnya menjadi mudah karena tidak ada lagi pangkat: inti idenya: menukar pangkat dengan sudut yang lebih besar . pangkat menyulitkan integral, sudut besar tidak — ia hanya memberi pembagi tambahan. untuk hasil kali, pakai dengan arah berlawanan: bentuk yang sulit diintegralkan diganti oleh bentuk tunggal yang mudah. maka . pola umumnya: setiap kali kamu melihat pangkat atau hasil kali fungsi trigonometri, cari identitas yang mengubahnya menjadi satu suku bersudut tunggal. sesudah itu integralnya tinggal memakai rumus dasar. pangkat genap wajib diturunkan lewat identitas sudut rangkap , menukar pangkat dengan sudut besar membuat integral bisa dikerjakan menerapkan aturan pangkat menjadi . aturan pangkat hanya berlaku kalau yang dipangkatkan adalah itu sendiri; di sini turunan bagian dalamnya bukan 1, dan menurunkan memberi — ada faktor liar. integral fungsi trigonometri",
+      "snippet": "[rumus] tidak bisa diserang langsung. Tidak ada fungsi sederhana yang turunannya [rumus] , dan aturan pangkat tidak berlaku karena yang dipangkatkan bukan [r..."
+    },
+    {
+      "cardId": "lan-integral-trigonometri-c4",
+      "topicId": "lan-integral-trigonometri",
+      "topicTitle": "Integral Fungsi Trigonometri",
+      "track": "lanjut",
+      "type": "contoh",
+      "title": "Luas di bawah kurva trigonometri",
+      "haystack": "luas di bawah kurva trigonometri soal luas dengan kurva trigonometri mengandung jebakan yang tidak ada pada fungsi aljabar: sinus dan kosinus berganti tanda secara berkala , jadi daerah di atas dan di bawah sumbu silih berganti dalam satu interval. contoh aman. luas di bawah dari sampai . di seluruh interval itu , jadi integral langsung memberi luas: contoh berbahaya. kalau batasnya diperluas menjadi sampai , integralnya menjadi nol — bukan karena tidak ada daerah, tapi karena gelombang di bawah sumbu persis menghapus gelombang di atasnya. luas sebenarnya adalah . caranya: pecah di , tempat kurva memotong sumbu , hitung kedua potongan, ambil nilai mutlak masing-masing, baru jumlahkan. selalu gambar kasar grafiknya sebelum memasang batas. sinus dan kosinus berganti tanda, jadi potongan bisa saling menghapus pecah interval di setiap titik potong dengan sumbu gambar kasar grafik sebelum memasang batas integral menghitung dan menyimpulkan luasnya nol. hasil nol di sini justru bukti bahwa intervalnya harus dipecah, bukan jawaban. integral fungsi trigonometri",
+      "snippet": "Soal luas dengan kurva trigonometri mengandung jebakan yang tidak ada pada fungsi aljabar: sinus dan kosinus berganti tanda secara berkala, jadi daerah di at..."
+    },
+    {
+      "cardId": "lan-integral-trigonometri-c5",
+      "topicId": "lan-integral-trigonometri",
+      "topicTitle": "Integral Fungsi Trigonometri",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan integral trigonometri",
+      "haystack": "empat jebakan integral trigonometri 1. menyalin tanda dari tabel turunan. , bukan . tanda minus berpindah tempat saat arah operasinya dibalik. 2. mengalikan koefisien sudut, bukan membaginya. adalah , bukan . uji cepat: turunkan jawabanmu dan lihat apakah koefisiennya kembali seperti soal. 3. memakai aturan pangkat pada . tidak ada bentuk yang benar di sini, karena turunannya akan memunculkan faktor yang tidak diminta. pangkat genap wajib lewat identitas sudut rangkap. 4. mode derajat pada kalkulator. semua batas integral trigonometri dibaca dalam radian. kalkulator dalam mode derajat akan menghitung sebagai sudut dan memberi hasil yang jauh meleset. tiga dari empat jebakan ini tertangkap oleh satu kebiasaan: turunkan kembali jawabanmu, dan bandingkan dengan soal aslinya sebelum menulis hasil akhir. turunkan kembali jawabanmu — ini menangkap sebagian besar kesalahan koefisien sudut menjadi pembagi, bukan pengali semua sudut pada integral dibaca dalam radian menganggap pemeriksaan \"bentuknya sudah mirip\" sudah cukup. bentuk yang mirip tetap bisa salah tanda atau salah pengali — hanya penurunan ulang yang membuktikannya. integral fungsi trigonometri",
+      "snippet": "1. Menyalin tanda dari tabel turunan. [rumus] , bukan [rumus] . Tanda minus berpindah tempat saat arah operasinya dibalik. 2. Mengalikan koefisien sudut, buk..."
+    },
+    {
+      "cardId": "lan-teknik-integrasi-c1",
+      "topicId": "lan-teknik-integrasi",
+      "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Substitusi adalah aturan rantai yang dibalik",
+      "haystack": "substitusi adalah aturan rantai yang dibalik aturan rantai bilang . perhatikan bentuk ruas kanannya: sebuah fungsi komposisi dikalikan turunan bagian dalamnya . kalau kamu menemui bentuk seperti itu di dalam integral, kamu tahu ia berasal dari komposisi. dalam praktiknya, misalkan sehingga . seluruh integral berubah menjadi — bentuk dasar yang sudah kamu kuasai. kunci keberhasilannya cuma satu pertanyaan: apakah turunan dari calon juga ada di dalam integral, setidaknya sampai faktor bilangan tetap? kalau ya, substitusi akan jalan. kalau tidak, teknik ini buntu dan kamu perlu alat lain. contoh: pada ambil . maka , dan faktor memang tersedia di soal. sisanya tinggal mengurus angka . substitusi hanya jalan kalau turunan ikut hadir di integral setelah substitusi, tidak boleh ada yang tersisa memilih sebagai bagian yang terlihat paling rumit tanpa memeriksa turunannya. pada tanpa faktor , substitusi justru macet — sementara tidak tersedia untuk ditukar. teknik integrasi: substitusi dan parsial",
+      "snippet": "Aturan rantai bilang [rumus] . Perhatikan bentuk ruas kanannya: sebuah fungsi komposisi dikalikan turunan bagian dalamnya. Kalau kamu menemui bentuk seperti ..."
+    },
+    {
+      "cardId": "lan-teknik-integrasi-c2",
+      "topicId": "lan-teknik-integrasi",
+      "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Substitusi pada integral tentu: ganti batasnya",
+      "haystack": "substitusi pada integral tentu: ganti batasnya pada integral tentu kamu punya dua pilihan, dan satu di antaranya jauh lebih aman. cara pertama (rawan salah): kerjakan sebagai integral tak tentu, kembalikan hasilnya ke variabel , baru masukkan batas asli. cara kedua (disarankan): ganti batasnya ikut bersama variabelnya. kalau , maka batas menjadi dan batas menjadi : dengan cara kedua kamu tidak perlu kembali ke sama sekali. contoh: dengan , . batasnya berubah: dan . kesalahan paling mahal di sini adalah mengganti variabel tapi lupa mengganti batasnya. ganti batas bersama variabelnya: dengan batas yang ikut diganti, tak perlu kembali ke jangan campur: batas dengan variabel selalu salah menuliskan tapi kemudian mengembalikan hasilnya ke bentuk dan memasukkan dan . batas dan variabel harus sepasang — begitu kamu mengganti salah satunya, yang lain wajib ikut. teknik integrasi: substitusi dan parsial",
+      "snippet": "Pada integral tentu kamu punya dua pilihan, dan satu di antaranya jauh lebih aman. Cara pertama (rawan salah): kerjakan sebagai integral tak tentu, kembalika..."
+    },
+    {
+      "cardId": "lan-teknik-integrasi-c3",
+      "topicId": "lan-teknik-integrasi",
+      "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Integral parsial: memindahkan kesulitan",
+      "haystack": "integral parsial: memindahkan kesulitan substitusi buntu pada bentuk seperti . tidak ada pilihan yang turunannya melengkapi sisanya. yang kamu punya bukan komposisi, melainkan hasil kali dua fungsi yang tidak berhubungan . untuk itu ada integral parsial, yang lahir dari membalik aturan hasil kali: perhatikan apa yang sebenarnya terjadi. kamu tidak menyelesaikan integralnya — kamu menukarnya dengan integral lain . teknik ini berguna hanya kalau lebih mudah daripada . kalau lebih sulit, pilihanmu terbalik. pedoman memilih : ambil bagian yang menyederhana kalau diturunkan . fungsi aljabar seperti atau hampir selalu pilihan bagus, karena menurunkannya mengurangi pangkat dan akhirnya menjadi bilangan tetap. sisanya menjadi . contoh: dengan dan . maka dan , sehingga hasilnya . membalik aturan hasil kali parsial menukar integral, bukan menyelesaikannya pilih yang menyederhana saat diturunkan memilih dan pada . ini sah secara rumus, tapi menghasilkan — pangkat malah naik dan soalnya jadi lebih sulit dari semula. teknik integrasi: substitusi dan parsial",
+      "snippet": "Substitusi buntu pada bentuk seperti [rumus] . Tidak ada pilihan [rumus] yang turunannya melengkapi sisanya. Yang kamu punya bukan komposisi, melainkan hasil..."
+    },
+    {
+      "cardId": "lan-teknik-integrasi-c4",
+      "topicId": "lan-teknik-integrasi",
+      "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Memilih teknik: tiga pertanyaan berurutan",
+      "haystack": "memilih teknik: tiga pertanyaan berurutan soal integral jarang memberi tahu teknik mana yang dipakai. urutan pemeriksaan berikut menyelesaikan hampir semua soal tingkat sma tanpa coba-coba. pertanyaan 1: apakah ini bentuk dasar? kalau soalnya , , , atau jumlah dari bentuk-bentuk itu, kerjakan langsung dengan rumus. jangan memakai teknik berat untuk soal ringan. pertanyaan 2: adakah fungsi di dalam fungsi, dengan turunan bagian dalam ikut hadir? kalau ya, pakai substitusi. ciri khasnya: ada kurung berpangkat atau akar, dan di luarnya ada faktor yang mirip turunan isi kurung. faktor yang meleset hanya di bilangan tetap tetap bisa dikerjakan — angkanya tinggal disesuaikan. pertanyaan 3: apakah ini hasil kali dua jenis fungsi yang tak berhubungan? misalnya aljabar dikali trigonometri, atau aljabar dikali eksponen. kalau ya, pakai parsial dengan = bagian aljabarnya. bedanya substitusi dan parsial sering terlihat dari satu hal: substitusi butuh hubungan antara kedua faktor, parsial justru dipakai ketika hubungan itu tidak ada. periksa bentuk dasar dulu sebelum memakai teknik berat substitusi: ada komposisi, dan turunan bagian dalam hadir parsial: hasil kali dua jenis fungsi yang tak berhubungan langsung mencoba parsial pada karena melihat \"hasil kali\". di sini kedua faktor justru berhubungan — adalah turunan sampai faktor 2 — sehingga substitusi jauh lebih pendek. teknik integrasi: substitusi dan parsial",
+      "snippet": "Soal integral jarang memberi tahu teknik mana yang dipakai. Urutan pemeriksaan berikut menyelesaikan hampir semua soal tingkat SMA tanpa coba-coba. Pertanyaa..."
+    },
+    {
+      "cardId": "lan-teknik-integrasi-c5",
+      "topicId": "lan-teknik-integrasi",
+      "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat kesalahan teknik integrasi",
+      "haystack": "empat kesalahan teknik integrasi 1. menyisakan setelah substitusi. bentuk seperti tidak punya arti. setelah mengganti variabel, seluruh integral wajib bersih dari — kalau ada yang tersisa, pilihan -mu belum cocok. 2. lupa mengganti batas pada integral tentu. menulis padahal variabelnya sudah akan memberi jawaban yang salah tanpa gejala apa pun. kalau ragu, kerjakan sebagai integral tak tentu dulu lalu kembali ke . 3. tanda minus ganda pada parsial. pada , nilai bertemu tanda minus dari rumus . dua minus menjadi plus, dan langkah inilah yang paling sering keliru. 4. memilih yang justru memperumit. kalau setelah satu putaran parsial integralmu terlihat lebih sulit, jangan diteruskan — balik pilihanmu dan ulangi dari awal. seperti semua integral, satu pemeriksaan menutup keempatnya: turunkan kembali jawaban akhirmu dan bandingkan dengan soalnya. setelah substitusi, tidak boleh ada tersisa ganti variabel berarti ganti batas kalau parsial memperumit, balik pilihan dan menganggap satu putaran parsial yang gagal berarti soalnya tidak bisa dikerjakan. yang gagal biasanya pilihan -nya, bukan tekniknya — tukar peran kedua faktor dan coba sekali lagi. teknik integrasi: substitusi dan parsial",
+      "snippet": "1. Menyisakan [rumus] setelah substitusi. Bentuk seperti [rumus] tidak punya arti. Setelah mengganti variabel, seluruh integral wajib bersih dari [rumus] — k..."
+    },
+    {
       "cardId": "alj-barisan-c1",
       "topicId": "alj-barisan",
       "topicTitle": "Barisan Aritmatika & Geometri",
