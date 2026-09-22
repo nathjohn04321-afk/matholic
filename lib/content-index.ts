@@ -52,8 +52,11 @@ import topik41 from "@/content/olimpiade/osn-fermat-euler.json";
 import topik42 from "@/content/olimpiade/osn-fungsi-lantai.json";
 import topik43 from "@/content/olimpiade/osn-graf-ekstremal.json";
 import topik44 from "@/content/olimpiade/osn-hitung-dua-cara.json";
-import topik45 from "@/content/olimpiade/osn-keterbagian.json";
-import topik46 from "@/content/olimpiade/osn-sarang-merpati.json";
+import topik45 from "@/content/olimpiade/osn-ketaksamaan.json";
+import topik46 from "@/content/olimpiade/osn-keterbagian.json";
+import topik47 from "@/content/olimpiade/osn-persamaan-fungsional.json";
+import topik48 from "@/content/olimpiade/osn-polinomial-lanjut.json";
+import topik49 from "@/content/olimpiade/osn-sarang-merpati.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -103,4 +106,7 @@ export const RAW_TOPICS: Topic[] = [
   topik44 as unknown as Topic,
   topik45 as unknown as Topic,
   topik46 as unknown as Topic,
+  topik47 as unknown as Topic,
+  topik48 as unknown as Topic,
+  topik49 as unknown as Topic,
 ];

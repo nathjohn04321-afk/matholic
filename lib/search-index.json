@@ -2282,6 +2282,56 @@
       "snippet": "1. Dua cara yang menghitung himpunan berbeda. Sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama — termasuk kasus batas se..."
     },
     {
+      "cardId": "osn-ketaksamaan-c1",
+      "topicId": "osn-ketaksamaan",
+      "topicTitle": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "AM-GM: rata-rata mana yang lebih besar",
+      "haystack": "am-gm: rata-rata mana yang lebih besar untuk dua bilangan tak negatif, rata-rata biasa tidak pernah lebih kecil dari akar hasil kalinya: buktinya satu baris. kurangkan kedua ruas dan kalikan dua: kuadrat tidak pernah negatif, jadi ketaksamaannya terbukti. yang lebih berguna adalah kapan ia menjadi kesamaan : tepat ketika , yaitu . syarat kesamaan itu bukan catatan kaki — ia yang memberi tahu di titik mana nilai maksimum atau minimum tercapai. bentuk umum untuk bilangan tak negatif: dengan kesamaan tepat ketika semua bilangannya sama. syarat tak negatif juga wajib. untuk dan , rata-ratanya sementara akar hasil kalinya — ketaksamaannya terbalik seluruhnya. untuk kesamaan tepat ketika semua bilangannya sama syarat tak negatif wajib — tanpa itu ketaksamaannya bisa terbalik memakai am-gm tanpa memeriksa apakah semua sukunya tak negatif. pada soal yang memuat variabel bisa negatif, ketaksamaan ini tidak berlaku dan seluruh kesimpulannya runtuh. ketaksamaan: am-gm dan cauchy-schwarz",
+      "snippet": "Untuk dua bilangan tak negatif, rata-rata biasa tidak pernah lebih kecil dari akar hasil kalinya: [rumus] Buktinya satu baris. Kurangkan kedua ruas dan kalik..."
+    },
+    {
+      "cardId": "osn-ketaksamaan-c2",
+      "topicId": "osn-ketaksamaan",
+      "topicTitle": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Memakai AM-GM pada soal maksimum dan minimum",
+      "haystack": "memakai am-gm pada soal maksimum dan minimum am-gm berguna tepat ketika salah satu dari dua hal ini terjadi: - hasil kalinya tetap → jumlahnya punya nilai minimum - jumlahnya tetap → hasil kalinya punya nilai maksimum kedua arah itu adalah sisi yang sama dari ketaksamaan yang sama, hanya dibaca berbeda. contoh arah pertama. cari nilai minimum untuk . hasil kalinya , tetap. maka , tercapai di . contoh arah kedua. cari nilai maksimum jika dengan keduanya positif. jumlahnya tetap, jadi , sehingga , tercapai di . kalau hasil kalinya belum tetap, pecah sukunya sampai tetap. untuk mencari minimum , tulis suku keduanya sebagai lalu pakai am-gm tiga suku — hasil kali ketiganya menjadi , sebuah bilangan tetap. langkah terakhir yang wajib: periksa apakah kesamaannya bisa tercapai . batas yang tidak pernah tercapai bukanlah nilai maksimum atau minimum. hasil kali tetap memberi minimum jumlah; jumlah tetap memberi maksimum hasil kali kalau belum tetap, pecah sukunya sampai tetap selalu periksa apakah kesamaannya bisa tercapai menyimpulkan bahwa batas dari am-gm otomatis menjadi nilai maksimum atau minimum. kalau syarat kesamaannya melanggar batasan soal — misalnya menuntut padahal soal membatasi — batas itu tidak pernah tercapai dan bukan jawabannya. ketaksamaan: am-gm dan cauchy-schwarz",
+      "snippet": "AM-GM berguna tepat ketika salah satu dari dua hal ini terjadi: - Hasil kalinya tetap → jumlahnya punya nilai minimum - Jumlahnya tetap → hasil kalinya punya..."
+    },
+    {
+      "cardId": "osn-ketaksamaan-c3",
+      "topicId": "osn-ketaksamaan",
+      "topicTitle": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Cauchy-Schwarz",
+      "haystack": "cauchy-schwarz ketaksamaan kedua yang wajib dikuasai: untuk dua suku ia berbentuk: kesamaan tercapai ketika kedua barisan sebanding , yaitu bentuk yang paling sering dipakai di olimpiade adalah bentuk engel, sering disebut lema cauchy-schwarz: dengan seluruh . bentuk ini langsung menyelesaikan soal yang memuat penjumlahan pecahan berpembilang kuadrat. kapan memilih cauchy dan kapan am-gm? pedoman kasarnya: am-gm cocok untuk bentuk hasil kali dan jumlah , sementara cauchy cocok untuk bentuk kuadrat dan pecahan . kalau soal memuat , hampir pasti cauchy jalannya. bentuk engel: kesamaan tercapai ketika kedua barisannya sebanding memakai bentuk engel tanpa memastikan seluruh penyebutnya positif. untuk penyebut negatif arah ketaksamaannya bisa terbalik, dan kesimpulannya menjadi kebalikan dari yang benar. ketaksamaan: am-gm dan cauchy-schwarz",
+      "snippet": "Ketaksamaan kedua yang wajib dikuasai: [rumus] Untuk dua suku ia berbentuk: [rumus] Kesamaan tercapai ketika kedua barisan sebanding, yaitu [rumus] Bentuk ya..."
+    },
+    {
+      "cardId": "osn-ketaksamaan-c4",
+      "topicId": "osn-ketaksamaan",
+      "topicTitle": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+      "track": "olimpiade",
+      "type": "prosedur",
+      "title": "Menyusun bukti ketaksamaan",
+      "haystack": "menyusun bukti ketaksamaan soal ketaksamaan olimpiade biasanya meminta bukti, bukan angka. urutan berikut hampir selalu berhasil. 1. periksa syarat tandanya. apakah semua variabel positif? kalau tidak, am-gm dan bentuk engel keduanya gugur. 2. tebak kapan kesamaannya tercapai. untuk ketaksamaan simetris, biasanya di . titik itu memberi tahu bentuk mana yang harus kamu pakai agar batasnya tajam. 3. cocokkan bentuk soal dengan bentuk baku. adakah kuadrat dibagi sesuatu? pakai engel. adakah hasil kali yang tetap? pakai am-gm. 4. periksa ketajamannya. substitusikan titik kesamaan tebakanmu ke hasil akhirnya. kalau kedua ruas tidak bertemu di sana, ketaksamaanmu terlalu longgar dan bukti belum selesai. contoh. buktikan untuk . bentuk engel langsung memberi: kesamaan tercapai ketika , yaitu — dan di titik itu kedua ruas memang bernilai . buktinya tajam, jadi selesai. tebak titik kesamaan lebih dulu; ia menentukan bentuk yang dipakai kuadrat dibagi sesuatu → engel. hasil kali tetap → am-gm substitusikan titik kesamaan untuk menguji ketajamannya menyusun rantai ketaksamaan yang setiap langkahnya benar, tapi kesamaannya tercapai di titik berbeda-beda. rantai semacam itu menghasilkan batas yang tidak pernah tercapai, sehingga tidak membuktikan apa yang diminta. ketaksamaan: am-gm dan cauchy-schwarz",
+      "snippet": "Soal ketaksamaan olimpiade biasanya meminta bukti, bukan angka. Urutan berikut hampir selalu berhasil. 1. Periksa syarat tandanya. Apakah semua variabel posi..."
+    },
+    {
+      "cardId": "osn-ketaksamaan-c5",
+      "topicId": "osn-ketaksamaan",
+      "topicTitle": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan ketaksamaan",
+      "haystack": "empat jebakan ketaksamaan 1. melewatkan syarat tanda. am-gm menuntut suku tak negatif, bentuk engel menuntut penyebut positif. periksa dulu, sebelum memakai. 2. melupakan syarat kesamaan. batas yang tidak pernah tercapai bukan nilai maksimum atau minimum. selalu periksa apakah titik kesamaannya memenuhi seluruh batasan soal. 3. merantai ketaksamaan dengan titik kesamaan berbeda. kalau langkah pertama tajam di dan langkah kedua tajam di , rantainya menghasilkan batas longgar yang tidak membuktikan apa pun. 4. memakai am-gm tanpa hasil kali yang tetap. kalau hasil kali sukunya masih memuat variabel, batas bawahnya juga memuat variabel — dan itu bukan batas yang berguna. pecah sukunya sampai hasil kalinya menjadi bilangan tetap. pemeriksaan penutup yang selalu murah: uji dengan angka. ambil dua atau tiga nilai yang memenuhi batasan soal, dan pastikan ketaksamaanmu memang berlaku serta tajam di titik yang kamu klaim. periksa tanda variabelnya sebelum memakai ketaksamaan apa pun titik kesamaan seluruh rantai harus sama am-gm hanya berguna kalau hasil kalinya bilangan tetap menganggap bukti selesai begitu sebuah batas ditemukan. batas yang benar tapi longgar tidak menjawab soal yang meminta nilai maksimum atau minimum — ketajamannya wajib diperiksa dengan mensubstitusikan titik kesamaan. ketaksamaan: am-gm dan cauchy-schwarz",
+      "snippet": "1. Melewatkan syarat tanda. AM-GM menuntut suku tak negatif, bentuk Engel menuntut penyebut positif. Periksa dulu, sebelum memakai. 2. Melupakan syarat kesam..."
+    },
+    {
       "cardId": "osn-keterbagian-c1",
       "topicId": "osn-keterbagian",
       "topicTitle": "Keterbagian & Kongruensi",
@@ -2330,6 +2380,106 @@
       "title": "FPB, KPK, dan algoritma Euclid",
       "haystack": "fpb, kpk, dan algoritma euclid fpb dua bilangan bisa dicari tanpa memfaktorkan keduanya. ini berguna sekali ketika bilangannya besar dan faktorisasinya sendiri sulit — persis situasi yang sering muncul di soal olimpiade. algoritma euclid bertumpu pada satu kenyataan sederhana: . ganti bilangan yang besar dengan sisanya, lalu ulangi sampai salah satunya menjadi nol. bilangan yang tersisa itulah fpb-nya. contoh mencari : , jadi , jadi , jadi hasilnya hubungannya dengan kpk juga rapi dan sering dipakai untuk dua bilangan: dua bilangan disebut koprima bila fpb-nya sama dengan satu. koprima berarti fpb-nya memakai rumus untuk tiga bilangan atau lebih. rumus itu hanya berlaku untuk tepat dua bilangan. keterbagian & kongruensi",
       "snippet": "FPB dua bilangan bisa dicari tanpa memfaktorkan keduanya. Ini berguna sekali ketika bilangannya besar dan faktorisasinya sendiri sulit — persis situasi yang ..."
+    },
+    {
+      "cardId": "osn-persamaan-fungsional-c1",
+      "topicId": "osn-persamaan-fungsional",
+      "topicTitle": "Persamaan Fungsional",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Yang dicari adalah fungsinya",
+      "haystack": "yang dicari adalah fungsinya pada persamaan biasa kamu mencari bilangan yang memenuhi syarat. pada persamaan fungsional, yang dicari adalah fungsi yang memenuhi syarat — dan syarat itu harus berlaku untuk setiap nilai masukan. contoh: cari semua fungsi yang memenuhi untuk setiap real. perbedaan pentingnya ada pada kata \"setiap\". karena persamaannya berlaku untuk semua nilai, kamu boleh memilih nilai apa pun yang menguntungkan — dan pemilihan nilai itulah senjata utamamu. substitusi yang hampir selalu dicoba pertama: - atau — sering langsung memberi - — mengubah dua variabel menjadi satu - — sering memunculkan hubungan dengan - — mengaitkan seluruhnya dengan sebuah bilangan tetap pada contoh di atas, substitusi memberi , sehingga . lalu memberi , sehingga . dua fakta itu diperoleh tanpa mengetahui apa pun tentang bentuk . yang dicari fungsinya, dan syaratnya berlaku untuk setiap masukan kebebasan memilih nilai substitusi adalah senjata utamanya coba , , , dan lebih dulu mengira menemukan satu fungsi yang cocok sudah menjawab soal. soal biasanya meminta semua fungsi yang memenuhi, jadi kamu juga harus membuktikan tidak ada yang lain. persamaan fungsional",
+      "snippet": "Pada persamaan biasa kamu mencari bilangan yang memenuhi syarat. Pada persamaan fungsional, yang dicari adalah fungsi yang memenuhi syarat — dan syarat itu h..."
+    },
+    {
+      "cardId": "osn-persamaan-fungsional-c2",
+      "topicId": "osn-persamaan-fungsional",
+      "topicTitle": "Persamaan Fungsional",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Membentuk sistem persamaan",
+      "haystack": "membentuk sistem persamaan teknik yang sangat produktif: kalau persamaannya mengaitkan dengan untuk suatu transformasi , substitusikan ke tempat untuk mendapat persamaan kedua. dari dua persamaan itu, bisa diselesaikan seperti sistem linear biasa. contoh. cari yang memenuhi untuk setiap . persamaan aslinya: ganti dengan di seluruh persamaan: sekarang perlakukan dan sebagai dua bilangan yang dicari. kalikan (i) dengan lalu kurangi (ii): teknik ini bekerja karena memenuhi — menerapkannya dua kali mengembalikanmu ke awal, sehingga sistemnya tertutup. transformasi lain dengan sifat sama, seperti atau , juga bisa dipakai begitu. substitusikan untuk mendapat persamaan kedua perlakukan dan sebagai dua variabel berhasil ketika , sehingga sistemnya tertutup menerapkan teknik ini pada transformasi yang tidak kembali ke . untuk , substitusi berulang menghasilkan rantai tak berujung dan sistemnya tidak pernah tertutup. persamaan fungsional",
+      "snippet": "Teknik yang sangat produktif: kalau persamaannya mengaitkan [rumus] dengan [rumus] untuk suatu transformasi [rumus] , substitusikan [rumus] ke tempat [rumus]..."
+    },
+    {
+      "cardId": "osn-persamaan-fungsional-c3",
+      "topicId": "osn-persamaan-fungsional",
+      "topicTitle": "Persamaan Fungsional",
+      "track": "olimpiade",
+      "type": "prosedur",
+      "title": "Menebak bentuk, lalu membuktikan ketunggalan",
+      "haystack": "menebak bentuk, lalu membuktikan ketunggalan soal olimpiade yang meminta \"semua fungsi\" menuntut dua pekerjaan terpisah, dan keduanya wajib. bagian 1: temukan calonnya. pakai substitusi untuk menyimpulkan bentuk . sering berujung pada bentuk seperti , , atau fungsi tetap. bagian 2: buktikan tidak ada yang lain. tunjukkan bahwa setiap fungsi yang memenuhi persamaan itu pasti berbentuk seperti calonmu. bagian inilah yang sering dilewatkan, padahal tanpanya jawaban belum lengkap. contoh. cari semua yang memenuhi untuk bilangan bulat. substitusi memberi . diteruskan, , dan secara induksi untuk setiap bulat positif. ambil : . tulis , maka untuk semua bilangan bulat positif. bersama dan yang sudah kita peroleh, hasilnya untuk setiap bilangan bulat. langkah terakhir yang wajib: periksa bahwa benar-benar memenuhi persamaan aslinya. di sini ✓. temukan calonnya, lalu buktikan tidak ada yang lain substitusi berulang sering memberi bentuk umumnya lewat induksi selalu periksa calonmu memenuhi persamaan aslinya berhenti setelah menemukan satu fungsi yang cocok. menunjukkan memenuhi persamaan tidak membuktikan ia satu-satunya — soal \"cari semua\" menuntut kedua arah pembuktian. persamaan fungsional",
+      "snippet": "Soal olimpiade yang meminta \"semua fungsi\" menuntut dua pekerjaan terpisah, dan keduanya wajib. Bagian 1: temukan calonnya. Pakai substitusi untuk menyimpulk..."
+    },
+    {
+      "cardId": "osn-persamaan-fungsional-c4",
+      "topicId": "osn-persamaan-fungsional",
+      "topicTitle": "Persamaan Fungsional",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Fungsi injektif dan nilai khusus",
+      "haystack": "fungsi injektif dan nilai khusus beberapa sifat yang sering harus kamu simpulkan sendiri dari persamaannya. injektif berarti memaksa — fungsi tidak pernah memberi keluaran sama untuk dua masukan berbeda. sifat ini sangat kuat: kalau kamu bisa membuktikannya, maka dari kamu boleh langsung mencoret -nya. surjektif berarti setiap nilai keluaran tercapai oleh suatu masukan. berguna karena memungkinkanmu menulis \"ambil sedemikian sehingga \" untuk apa pun. contoh. misalkan untuk setiap . fungsi semacam ini pasti injektif: andaikan , terapkan pada kedua ruas untuk memperoleh , yang berarti . sifat itu juga membuatnya surjektif, karena setiap adalah keluaran dari itu sendiri. nilai khusus juga sering menjadi kunci. menemukan atau kadang langsung mempersempit seluruh kemungkinan — misalnya pada persamaan perkalian , substitusi memberi , sehingga kecuali bernilai nol seluruhnya. injektif memungkinkanmu mencoret dari kedua ruas langsung memberi injektif sekaligus surjektif nilai khusus seperti dan sering mempersempit seluruh kemungkinan mencoret dari kedua ruas tanpa membuktikan injektif lebih dulu. untuk , dari kamu jelas tidak boleh menyimpulkan . persamaan fungsional",
+      "snippet": "Beberapa sifat yang sering harus kamu simpulkan sendiri dari persamaannya. Injektif berarti [rumus] memaksa [rumus] — fungsi tidak pernah memberi keluaran sa..."
+    },
+    {
+      "cardId": "osn-persamaan-fungsional-c5",
+      "topicId": "osn-persamaan-fungsional",
+      "topicTitle": "Persamaan Fungsional",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan persamaan fungsional",
+      "haystack": "empat jebakan persamaan fungsional 1. berhenti setelah menemukan satu fungsi. soal \"cari semua\" menuntut dua arah: temukan calonnya, dan buktikan tidak ada yang lain. 2. mencoret tanpa membuktikan injektif. dari tidak otomatis mengikuti . buktikan injektifnya lebih dulu, atau jangan mencoret. 3. lupa memeriksa jawaban akhir. rantai penyimpulan pada persamaan fungsional panjang dan mudah tergelincir. substitusikan calonmu kembali ke persamaan aslinya sebelum menjawab. 4. melupakan daerah asalnya. persamaan untuk bilangan bulat dan untuk bilangan real punya jawaban yang bisa sangat berbeda. persamaan pada bilangan bulat hanya punya jawaban , tapi pada bilangan real tanpa syarat tambahan ia punya jawaban lain yang sangat aneh. kebiasaan yang paling membantu: catat setiap fakta yang kamu peroleh dari substitusi. fakta seperti atau sering baru terpakai beberapa langkah kemudian, dan mudah terlupa kalau tidak dituliskan. \"cari semua\" menuntut pembuktian ketunggalan juga jangan mencoret sebelum injektifnya terbukti catat setiap fakta dari substitusi — sering terpakai belakangan menganggap pemeriksaan akhir tidak perlu karena setiap langkah terasa benar. penyimpulan pada persamaan fungsional sering berupa implikasi satu arah, sehingga hasilnya perlu diuji balik ke persamaan aslinya. persamaan fungsional",
+      "snippet": "1. Berhenti setelah menemukan satu fungsi. Soal \"cari semua\" menuntut dua arah: temukan calonnya, dan buktikan tidak ada yang lain. 2. Mencoret [rumus] tanpa..."
+    },
+    {
+      "cardId": "osn-polinomial-lanjut-c1",
+      "topicId": "osn-polinomial-lanjut",
+      "topicTitle": "Polinomial Lanjut: Vieta dan Akar Rasional",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Rumus Vieta: akar tanpa mencarinya",
+      "haystack": "rumus vieta: akar tanpa mencarinya untuk polinomial berderajat dengan akar-akar , koefisiennya terhubung langsung dengan akar-akarnya — tanpa perlu mencari akar itu satu per satu. untuk : untuk : perhatikan polanya: tandanya berselang-seling mulai dari negatif, dan koefisiennya diambil berurutan dari kiri. asalnya sederhana. kalau dan akar dari , maka polinomialnya bisa ditulis . jabarkan: bandingkan koefisiennya, dan rumus vieta muncul sendiri. kegunaan terbesarnya: menghitung besaran simetris dari akar-akar, seperti atau , tanpa pernah menyentuh akarnya. contohnya . vieta menghubungkan koefisien dengan akar, tanpa mencari akarnya tandanya berselang-seling mulai dari negatif besaran simetris dihitung dari jumlah dan hasil kali akar melupakan pembagian dengan koefisien utama . untuk , jumlah akarnya , bukan — rumus vieta selalu memuat sebagai penyebut. polinomial lanjut: vieta dan akar rasional",
+      "snippet": "Untuk polinomial berderajat [rumus] dengan akar-akar [rumus] , koefisiennya terhubung langsung dengan akar-akarnya — tanpa perlu mencari akar itu satu per sa..."
+    },
+    {
+      "cardId": "osn-polinomial-lanjut-c2",
+      "topicId": "osn-polinomial-lanjut",
+      "topicTitle": "Polinomial Lanjut: Vieta dan Akar Rasional",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Teorema sisa dan teorema faktor",
+      "haystack": "teorema sisa dan teorema faktor dua alat yang menghemat banyak pembagian panjang. teorema sisa. sisa pembagian oleh adalah . alasannya: tulis dengan bilangan tetap karena pembaginya berderajat satu. substitusikan , dan suku pertamanya lenyap: . teorema faktor. bentuk adalah faktor dari tepat ketika . ini kasus khusus teorema sisa dengan . untuk pembagi berderajat lebih tinggi, sisanya juga berderajat lebih tinggi. sisa pembagian oleh berbentuk , dan kedua bilangan itu dicari dari dua persamaan: contoh. jika dan , cari sisa pembagian oleh . tulis sisanya . maka dan . kurangkan: , lalu . sisanya . perhatikan bahwa kita tidak perlu tahu apa pun tentang selain kedua nilai itu. sisa pembagian oleh adalah faktor dari tepat ketika sisa oleh pembagi derajat berderajat paling tinggi mengira sisa pembagian oleh adalah sebuah bilangan tetap. derajat sisa selalu kurang dari derajat pembaginya, jadi untuk pembagi kuadrat sisanya berbentuk linear. polinomial lanjut: vieta dan akar rasional",
+      "snippet": "Dua alat yang menghemat banyak pembagian panjang. Teorema sisa. Sisa pembagian [rumus] oleh [rumus] adalah [rumus] . Alasannya: tulis [rumus] dengan [rumus] ..."
+    },
+    {
+      "cardId": "osn-polinomial-lanjut-c3",
+      "topicId": "osn-polinomial-lanjut",
+      "topicTitle": "Polinomial Lanjut: Vieta dan Akar Rasional",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Teorema akar rasional",
+      "haystack": "teorema akar rasional kalau polinomial berkoefisien bulat punya akar rasional dalam bentuk paling sederhana, maka: - membagi (suku tetap) - membagi (koefisien utama) teorema ini mengubah pencarian akar dari tak berhingga menjadi daftar berhingga yang bisa diperiksa satu per satu. contoh. cari akar rasional dari . pembagi dari (suku tetap): . pembagi dari (koefisien utama): . calon akarnya: . hanya enam nilai yang perlu diuji. kasus khusus yang paling sering muncul: kalau koefisien utamanya , maka sehingga setiap akar rasionalnya pasti bilangan bulat yang membagi suku tetap. akibat pentingnya: kalau tak satu pun calon itu menjadi akar, polinomialnya tidak punya akar rasional sama sekali. ini cara membuktikan ketakrasionalan — misalnya irasional karena tidak punya akar rasional. akar rasional : dan koefisien utama berarti setiap akar rasional adalah bilangan bulat tak ada calon yang cocok membuktikan tidak ada akar rasional menganggap teorema ini menjamin adanya akar rasional. ia hanya mempersempit daftar calon — polinomial seperti lolos seluruh pemeriksaan tanpa satu pun akar rasional. polinomial lanjut: vieta dan akar rasional",
+      "snippet": "Kalau polinomial berkoefisien bulat [rumus] punya akar rasional [rumus] dalam bentuk paling sederhana, maka: - [rumus] membagi [rumus] (suku tetap) - [rumus]..."
+    },
+    {
+      "cardId": "osn-polinomial-lanjut-c4",
+      "topicId": "osn-polinomial-lanjut",
+      "topicTitle": "Polinomial Lanjut: Vieta dan Akar Rasional",
+      "track": "olimpiade",
+      "type": "prosedur",
+      "title": "Menyusun polinomial dari nilai yang diketahui",
+      "haystack": "menyusun polinomial dari nilai yang diketahui bentuk soal yang sering muncul: sebuah polinomial diketahui nilainya di beberapa titik, lalu ditanyakan nilainya di titik lain. kuncinya adalah mengenali berapa banyak syarat yang dibutuhkan . polinomial berderajat punya koefisien, jadi ia tertentu penuh oleh nilai. kalau beberapa nilainya nol, bentuk faktorlah yang paling cepat. contoh. polinomial berderajat memenuhi dan . cari . karena ketiga akarnya diketahui dan derajatnya tepat : pakai untuk menemukan : maka , sehingga teknik lain yang sering berguna: kalau bernilai sama di beberapa titik, misalnya , tinjau . fungsi punya akar di ketiga titik itu, dan soalnya kembali ke bentuk faktor yang sudah dikenal. polinomial derajat tertentu penuh oleh nilai akar yang diketahui langsung memberi bentuk faktornya nilai yang sama di beberapa titik: tinjau dikurangi nilai itu melupakan faktor pengali pada bentuk faktor. bentuk hanya satu di antara tak hingga banyak polinomial berakar sama — satu syarat tambahan diperlukan untuk mengunci . polinomial lanjut: vieta dan akar rasional",
+      "snippet": "Bentuk soal yang sering muncul: sebuah polinomial diketahui nilainya di beberapa titik, lalu ditanyakan nilainya di titik lain. Kuncinya adalah mengenali ber..."
+    },
+    {
+      "cardId": "osn-polinomial-lanjut-c5",
+      "topicId": "osn-polinomial-lanjut",
+      "topicTitle": "Polinomial Lanjut: Vieta dan Akar Rasional",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan polinomial olimpiade",
+      "haystack": "empat jebakan polinomial olimpiade 1. melupakan koefisien utama pada vieta. jumlah akar adalah , bukan . untuk polinomial yang koefisien utamanya bukan , pembagian itu wajib. 2. melupakan faktor pengali pada bentuk faktor. polinomial berakar , , dan tidak harus — ia bisa dikali bilangan tetap apa pun. satu syarat tambahan diperlukan untuk menguncinya. 3. mengira sisa selalu bilangan tetap. derajat sisa selalu kurang dari derajat pembaginya. pembagi kuadrat memberi sisa linear, bukan bilangan tetap. 4. mengira teorema akar rasional menjamin adanya akar. ia hanya mempersempit daftar calon. kalau tak satu pun cocok, polinomialnya memang tidak punya akar rasional. pemeriksaan yang selalu murah: substitusikan jawabanmu kembali. untuk soal akar, masukkan akarnya ke polinomial aslinya dan pastikan hasilnya nol. untuk soal sisa, uji pada titik-titik yang diketahui nilainya. vieta selalu memuat pembagian dengan koefisien utama derajat sisa selalu kurang dari derajat pembaginya substitusikan jawabanmu kembali untuk memeriksanya melewatkan pemeriksaan balik karena polinomialnya terasa sederhana. kesalahan tanda pada polinomial sangat mudah terjadi dan sama sekali tidak terlihat dari bentuk jawabannya — hanya substitusi yang membongkarnya. polinomial lanjut: vieta dan akar rasional",
+      "snippet": "1. Melupakan koefisien utama pada Vieta. Jumlah akar adalah [rumus] , bukan [rumus] . Untuk polinomial yang koefisien utamanya bukan [rumus] , pembagian itu ..."
     },
     {
       "cardId": "osn-sarang-merpati-c1",

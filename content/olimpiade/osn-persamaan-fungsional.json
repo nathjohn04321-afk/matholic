@@ -1,0 +1,263 @@
+{
+  "id": "osn-persamaan-fungsional",
+  "track": "olimpiade",
+  "title": "Persamaan Fungsional",
+  "order": 9,
+  "prerequisites": [
+    "alj-fungsi"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Ketika yang dicari bukan bilangan, melainkan fungsinya sendiri.",
+  "tags": [
+    "aljabar",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-persamaan-fungsional-c1",
+      "type": "konsep",
+      "title": "Yang dicari adalah fungsinya",
+      "body": "Pada persamaan biasa kamu mencari bilangan yang memenuhi syarat. Pada persamaan fungsional, yang dicari adalah **fungsi** yang memenuhi syarat — dan syarat itu harus berlaku untuk setiap nilai masukan.\n\nContoh: cari semua fungsi $f$ yang memenuhi $f(x+y) = f(x) + f(y)$ untuk setiap $x, y$ real.\n\nPerbedaan pentingnya ada pada kata \"setiap\". Karena persamaannya berlaku untuk semua nilai, kamu boleh memilih nilai apa pun yang menguntungkan — dan pemilihan nilai itulah senjata utamamu.\n\nSubstitusi yang hampir selalu dicoba pertama:\n\n- $x = 0$ atau $y = 0$ — sering langsung memberi $f(0)$\n- $y = x$ — mengubah dua variabel menjadi satu\n- $y = -x$ — sering memunculkan hubungan dengan $f(0)$\n- $x = 1$ — mengaitkan seluruhnya dengan sebuah bilangan tetap $f(1)$\n\nPada contoh di atas, substitusi $x = y = 0$ memberi $f(0) = 2f(0)$, sehingga $f(0) = 0$. Lalu $y = -x$ memberi $f(0) = f(x) + f(-x)$, sehingga $f(-x) = -f(x)$.\n\nDua fakta itu diperoleh tanpa mengetahui apa pun tentang bentuk $f$.",
+      "questions": [
+        {
+          "id": "osn-persamaan-fungsional-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(x+y) = f(x) + f(y)$ untuk setiap $x, y$ real, maka nilai $f(0)$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "tidak dapat ditentukan",
+            "bergantung pada $f$"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan $x = y = 0$:\n\n$$f(0+0) = f(0) + f(0)$$\n$$f(0) = 2f(0)$$\n\nKurangkan $f(0)$ dari kedua ruas:\n\n$$0 = f(0)$$\n\nJadi $f(0) = 0$, berlaku untuk **setiap** fungsi yang memenuhi persamaan itu — tanpa perlu tahu bentuknya sama sekali.\n\nInilah pola khas persamaan fungsional: substitusi yang tepat memberi informasi pasti tentang fungsi yang belum kamu kenali.",
+          "hint": "Substitusikan nilai yang paling sederhana.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-persamaan-fungsional-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(x) + f(1-x) = 1$ untuk setiap $x$ real, maka nilai $f\\left(\\frac{1}{2}\\right)$ adalah ...",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$1$",
+            "$0$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pilih nilai $x$ yang membuat kedua sukunya menjadi sama. Itu terjadi ketika $x = 1-x$, yaitu $x = \\frac{1}{2}$.\n\nSubstitusikan:\n\n$$f\\left(\\frac{1}{2}\\right) + f\\left(1 - \\frac{1}{2}\\right) = 1$$\n$$f\\left(\\frac{1}{2}\\right) + f\\left(\\frac{1}{2}\\right) = 1$$\n$$2f\\left(\\frac{1}{2}\\right) = 1 \\Rightarrow f\\left(\\frac{1}{2}\\right) = \\frac{1}{2}$$\n\nPerhatikan strateginya: mencari **titik tetap** dari transformasi $x \\mapsto 1-x$. Titik itulah yang meruntuhkan dua suku berbeda menjadi satu, dan teknik ini berulang di banyak soal.",
+          "hint": "Cari nilai $x$ yang membuat kedua sukunya sama.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Yang dicari fungsinya, dan syaratnya berlaku untuk setiap masukan",
+        "Kebebasan memilih nilai substitusi adalah senjata utamanya",
+        "Coba $0$, $x=y$, $y=-x$, dan $1$ lebih dulu"
+      ],
+      "pitfall": "Mengira menemukan satu fungsi yang cocok sudah menjawab soal. Soal biasanya meminta **semua** fungsi yang memenuhi, jadi kamu juga harus membuktikan tidak ada yang lain."
+    },
+    {
+      "id": "osn-persamaan-fungsional-c2",
+      "type": "teknik",
+      "title": "Membentuk sistem persamaan",
+      "body": "Teknik yang sangat produktif: kalau persamaannya mengaitkan $f(x)$ dengan $f(g(x))$ untuk suatu transformasi $g$, **substitusikan $g(x)$ ke tempat $x$** untuk mendapat persamaan kedua. Dari dua persamaan itu, $f(x)$ bisa diselesaikan seperti sistem linear biasa.\n\n**Contoh.** Cari $f$ yang memenuhi $2f(x) + f\\left(\\frac{1}{x}\\right) = 3x$ untuk setiap $x \\neq 0$.\n\nPersamaan aslinya:\n$$2f(x) + f\\left(\\tfrac{1}{x}\\right) = 3x \\qquad (\\text{I})$$\n\nGanti $x$ dengan $\\frac{1}{x}$ di seluruh persamaan:\n$$2f\\left(\\tfrac{1}{x}\\right) + f(x) = \\frac{3}{x} \\qquad (\\text{II})$$\n\nSekarang perlakukan $f(x)$ dan $f\\left(\\frac{1}{x}\\right)$ sebagai dua bilangan yang dicari. Kalikan (I) dengan $2$ lalu kurangi (II):\n$$4f(x) + 2f\\left(\\tfrac{1}{x}\\right) - 2f\\left(\\tfrac{1}{x}\\right) - f(x) = 6x - \\frac{3}{x}$$\n$$3f(x) = 6x - \\frac{3}{x} \\Rightarrow f(x) = 2x - \\frac{1}{x}$$\n\nTeknik ini bekerja karena $g(x) = \\frac{1}{x}$ memenuhi $g(g(x)) = x$ — menerapkannya dua kali mengembalikanmu ke awal, sehingga sistemnya tertutup. Transformasi lain dengan sifat sama, seperti $1-x$ atau $-x$, juga bisa dipakai begitu.",
+      "questions": [
+        {
+          "id": "osn-persamaan-fungsional-q3",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $2f(x) + f\\left(\\frac{1}{x}\\right) = 3x$ untuk setiap $x \\neq 0$, maka $f(x)$ sama dengan ...",
+          "options": [
+            "$2x - \\frac{1}{x}$",
+            "$x + \\frac{1}{x}$",
+            "$3x - \\frac{1}{x}$",
+            "$x - \\frac{2}{x}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tulis persamaan aslinya sebagai (I). Lalu ganti $x$ dengan $\\frac{1}{x}$ untuk mendapat (II):\n\n$$2f(x) + f\\left(\\tfrac{1}{x}\\right) = 3x \\qquad (\\text{I})$$\n$$2f\\left(\\tfrac{1}{x}\\right) + f(x) = \\frac{3}{x} \\qquad (\\text{II})$$\n\nKalikan (I) dengan $2$, lalu kurangi (II):\n\n$$3f(x) = 6x - \\frac{3}{x}$$\n$$f(x) = 2x - \\frac{1}{x}$$\n\nCek dengan mensubstitusikan kembali ke (I): $2\\left(2x - \\frac{1}{x}\\right) + \\left(\\frac{2}{x} - x\\right) = 4x - \\frac{2}{x} + \\frac{2}{x} - x = 3x$ ✓",
+          "hint": "Ganti $x$ dengan $\\frac{1}{x}$ untuk membentuk persamaan kedua.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-persamaan-fungsional-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Dengan $f(x) = 2x - \\frac{1}{x}$ dari soal sebelumnya, berapa nilai $f(2)$? (tulis desimal, contoh: 1,5)",
+          "answer": "3,5",
+          "acceptedAnswers": [
+            "3,5",
+            "3.5"
+          ],
+          "solution": "Substitusikan $x = 2$:\n\n$$f(2) = 2(2) - \\frac{1}{2} = 4 - 0{,}5 = 3{,}5$$\n\nCek lewat persamaan aslinya. Dengan $x = 2$, persamaan $2f(x) + f\\left(\\frac{1}{x}\\right) = 3x$ menjadi:\n\n$$2f(2) + f\\left(\\tfrac{1}{2}\\right) = 6$$\n\nDan $f\\left(\\frac{1}{2}\\right) = 1 - 2 = -1$, sehingga $2(3{,}5) + (-1) = 7 - 1 = 6$ ✓\n\nPemeriksaan semacam ini wajib dilakukan pada soal persamaan fungsional, karena jawabannya mudah meleset di satu tanda.",
+          "hint": "Substitusikan langsung ke rumus yang sudah ditemukan.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Substitusikan $g(x)$ untuk mendapat persamaan kedua",
+        "Perlakukan $f(x)$ dan $f(g(x))$ sebagai dua variabel",
+        "Berhasil ketika $g(g(x)) = x$, sehingga sistemnya tertutup"
+      ],
+      "pitfall": "Menerapkan teknik ini pada transformasi yang tidak kembali ke $x$. Untuk $g(x) = x+1$, substitusi berulang menghasilkan rantai tak berujung $f(x), f(x+1), f(x+2), \\ldots$ dan sistemnya tidak pernah tertutup."
+    },
+    {
+      "id": "osn-persamaan-fungsional-c3",
+      "type": "prosedur",
+      "title": "Menebak bentuk, lalu membuktikan ketunggalan",
+      "body": "Soal olimpiade yang meminta \"semua fungsi\" menuntut dua pekerjaan terpisah, dan keduanya wajib.\n\n**Bagian 1: temukan calonnya.** Pakai substitusi untuk menyimpulkan bentuk $f$. Sering berujung pada bentuk seperti $f(x) = cx$, $f(x) = x^2$, atau fungsi tetap.\n\n**Bagian 2: buktikan tidak ada yang lain.** Tunjukkan bahwa setiap fungsi yang memenuhi persamaan itu pasti berbentuk seperti calonmu. Bagian inilah yang sering dilewatkan, padahal tanpanya jawaban belum lengkap.\n\n**Contoh.** Cari semua $f$ yang memenuhi $f(x+y) = f(x)+f(y)$ untuk $x,y$ bilangan bulat.\n\nSubstitusi $y = x$ memberi $f(2x) = 2f(x)$. Diteruskan, $f(3x) = f(2x) + f(x) = 3f(x)$, dan secara induksi $f(nx) = nf(x)$ untuk setiap $n$ bulat positif.\n\nAmbil $x = 1$: $f(n) = nf(1)$. Tulis $c = f(1)$, maka $f(n) = cn$ untuk semua bilangan bulat positif.\n\nBersama $f(0) = 0$ dan $f(-n) = -f(n)$ yang sudah kita peroleh, hasilnya $f(n) = cn$ untuk setiap bilangan bulat.\n\n**Langkah terakhir yang wajib:** periksa bahwa $f(n) = cn$ benar-benar memenuhi persamaan aslinya. Di sini $c(x+y) = cx + cy$ ✓.",
+      "questions": [
+        {
+          "id": "osn-persamaan-fungsional-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(x+y) = f(x)+f(y)$ untuk setiap bilangan bulat $x,y$ dan $f(1) = 3$, maka $f(5)$ adalah ...",
+          "options": [
+            "$15$",
+            "$8$",
+            "$3$",
+            "$243$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dari persamaannya, tambahkan satu demi satu:\n\n$$f(2) = f(1+1) = f(1)+f(1) = 6$$\n$$f(3) = f(2+1) = 6 + 3 = 9$$\n$$f(4) = 9 + 3 = 12$$\n$$f(5) = 12 + 3 = 15$$\n\nPola umumnya $f(n) = 3n$, jadi $f(5) = 15$.\n\nPilihan $8$ muncul kalau kamu menghitung $f(5) = f(1)+5$, dan $243$ kalau kamu mengira persamaannya bersifat perkalian. Perhatikan bahwa persamaan ini mengubah **penjumlahan masukan** menjadi **penjumlahan keluaran**, bukan perkalian.",
+          "hint": "Bangun dari $f(1)$ dengan menambahkan satu demi satu.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-persamaan-fungsional-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(xy) = f(x) \\cdot f(y)$ untuk setiap $x,y$ real dan $f(2) = 4$, maka $f(4)$ adalah ...",
+          "options": [
+            "$16$",
+            "$8$",
+            "$4$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan $x = y = 2$:\n\n$$f(4) = f(2 \\times 2) = f(2) \\cdot f(2) = 4 \\times 4 = 16$$\n\nPerhatikan bahwa kamu tidak perlu tahu bentuk $f$ sama sekali — persamaannya sendiri sudah cukup.\n\nKalau penasaran, salah satu fungsi yang memenuhi adalah $f(x) = x^2$, dan memang $(xy)^2 = x^2 y^2$ serta $f(2) = 4$ ✓. Dengan fungsi itu, $f(4) = 16$ ✓\n\nTapi $f(x)=x^2$ bukan satu-satunya kemungkinan, dan itulah kenapa mengerjakannya lewat persamaan lebih aman daripada menebak bentuknya.",
+          "hint": "Substitusikan $x = y = 2$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Temukan calonnya, lalu buktikan tidak ada yang lain",
+        "Substitusi berulang sering memberi bentuk umumnya lewat induksi",
+        "Selalu periksa calonmu memenuhi persamaan aslinya"
+      ],
+      "pitfall": "Berhenti setelah menemukan satu fungsi yang cocok. Menunjukkan $f(x)=2x$ memenuhi persamaan tidak membuktikan ia satu-satunya — soal \"cari semua\" menuntut kedua arah pembuktian."
+    },
+    {
+      "id": "osn-persamaan-fungsional-c4",
+      "type": "contoh",
+      "title": "Fungsi injektif dan nilai khusus",
+      "body": "Beberapa sifat yang sering harus kamu simpulkan sendiri dari persamaannya.\n\n**Injektif** berarti $f(a) = f(b)$ memaksa $a = b$ — fungsi tidak pernah memberi keluaran sama untuk dua masukan berbeda. Sifat ini sangat kuat: kalau kamu bisa membuktikannya, maka dari $f(\\text{sesuatu}) = f(\\text{sesuatu lain})$ kamu boleh langsung mencoret $f$-nya.\n\n**Surjektif** berarti setiap nilai keluaran tercapai oleh suatu masukan. Berguna karena memungkinkanmu menulis \"ambil $a$ sedemikian sehingga $f(a) = c$\" untuk $c$ apa pun.\n\n**Contoh.** Misalkan $f(f(x)) = x$ untuk setiap $x$. Fungsi semacam ini pasti injektif: andaikan $f(a) = f(b)$, terapkan $f$ pada kedua ruas untuk memperoleh $f(f(a)) = f(f(b))$, yang berarti $a = b$.\n\nSifat itu juga membuatnya surjektif, karena setiap $x$ adalah keluaran dari $f(x)$ itu sendiri.\n\nNilai khusus juga sering menjadi kunci. Menemukan $f(0)$ atau $f(1)$ kadang langsung mempersempit seluruh kemungkinan — misalnya pada persamaan perkalian $f(xy) = f(x)f(y)$, substitusi $y=1$ memberi $f(x) = f(x)f(1)$, sehingga $f(1) = 1$ kecuali $f$ bernilai nol seluruhnya.",
+      "questions": [
+        {
+          "id": "osn-persamaan-fungsional-q7",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Dari persamaan $f(a) = f(b)$ selalu dapat disimpulkan bahwa $a = b$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Kesimpulan itu hanya sah kalau $f$ terbukti **injektif**.\n\nContoh tandingan: ambil $f(x) = x^2$. Di sini $f(2) = 4$ dan $f(-2) = 4$, jadi $f(2) = f(-2)$ padahal $2 \\neq -2$.\n\nContoh lain yang lebih ekstrem: fungsi tetap $f(x) = 5$ memberi $f(a) = f(b)$ untuk **setiap** pasangan $a$ dan $b$.\n\nPada soal persamaan fungsional, injektif biasanya harus kamu **buktikan** dari persamaannya, bukan diandaikan. Salah satu cara yang sering berhasil: tunjukkan bahwa $f(f(x)) = x$, yang langsung memberi injektif.\n\nMencoret $f$ tanpa pembuktian itu adalah salah satu kesalahan paling sering pada soal jenis ini.",
+          "hint": "Coba $f(x) = x^2$ dengan $a = 2$ dan $b = -2$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-persamaan-fungsional-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(f(x)) = x$ untuk setiap $x$ real, maka pernyataan yang pasti benar tentang $f$ adalah ...",
+          "options": [
+            "$f$ injektif",
+            "$f(x) = x$ untuk setiap $x$",
+            "$f$ fungsi tetap",
+            "$f(0) = 0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Buktikan injektifnya. Andaikan $f(a) = f(b)$.\n\nTerapkan $f$ pada kedua ruas:\n$$f(f(a)) = f(f(b))$$\n\nMenurut persamaan yang diberikan, ruas kiri sama dengan $a$ dan ruas kanan sama dengan $b$:\n$$a = b$$\n\nJadi $f$ injektif.\n\nPilihan lainnya tidak dijamin. Fungsi $f(x) = -x$ memenuhi $f(f(x)) = x$ padahal ia bukan $f(x)=x$. Fungsi tetap jelas gagal karena $f(f(x))$ akan tetap bernilai tetap. Dan $f(x) = 1-x$ memenuhi persamaannya tapi $f(0) = 1 \\neq 0$.",
+          "hint": "Terapkan $f$ pada kedua ruas dari $f(a) = f(b)$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Injektif memungkinkanmu mencoret $f$ dari kedua ruas",
+        "$f(f(x)) = x$ langsung memberi injektif sekaligus surjektif",
+        "Nilai khusus seperti $f(0)$ dan $f(1)$ sering mempersempit seluruh kemungkinan"
+      ],
+      "pitfall": "Mencoret $f$ dari kedua ruas tanpa membuktikan injektif lebih dulu. Untuk $f(x) = x^2$, dari $f(2) = f(-2)$ kamu jelas tidak boleh menyimpulkan $2 = -2$."
+    },
+    {
+      "id": "osn-persamaan-fungsional-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan persamaan fungsional",
+      "body": "**1. Berhenti setelah menemukan satu fungsi.** Soal \"cari semua\" menuntut dua arah: temukan calonnya, dan buktikan tidak ada yang lain.\n\n**2. Mencoret $f$ tanpa membuktikan injektif.** Dari $f(a)=f(b)$ tidak otomatis mengikuti $a=b$. Buktikan injektifnya lebih dulu, atau jangan mencoret.\n\n**3. Lupa memeriksa jawaban akhir.** Rantai penyimpulan pada persamaan fungsional panjang dan mudah tergelincir. Substitusikan calonmu kembali ke persamaan aslinya sebelum menjawab.\n\n**4. Melupakan daerah asalnya.** Persamaan untuk bilangan bulat dan untuk bilangan real punya jawaban yang bisa sangat berbeda. Persamaan $f(x+y) = f(x)+f(y)$ pada bilangan bulat hanya punya jawaban $f(n)=cn$, tapi pada bilangan real tanpa syarat tambahan ia punya jawaban lain yang sangat aneh.\n\nKebiasaan yang paling membantu: catat setiap fakta yang kamu peroleh dari substitusi. Fakta seperti $f(0)=0$ atau $f(-x)=-f(x)$ sering baru terpakai beberapa langkah kemudian, dan mudah terlupa kalau tidak dituliskan.",
+      "questions": [
+        {
+          "id": "osn-persamaan-fungsional-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Fungsi yang memenuhi $f(xy) = f(x)f(y)$ untuk setiap $x,y$ real adalah ...",
+          "options": [
+            "$f(x) = x^2$",
+            "$f(x) = x + 1$",
+            "$f(x) = 2x$",
+            "$f(x) = x - 1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Periksa $f(x) = x^2$:\n\n$$f(xy) = (xy)^2 = x^2 y^2 = f(x) \\cdot f(y) \\text{ ✓}$$\n\nPeriksa yang lain dengan $x = y = 2$:\n\n$f(x)=x+1$: $f(4) = 5$ tapi $f(2)f(2) = 9$ ✗\n\n$f(x)=2x$: $f(4) = 8$ tapi $f(2)f(2) = 16$ ✗\n\n$f(x)=x-1$: $f(4) = 3$ tapi $f(2)f(2) = 1$ ✗\n\nCara memeriksa yang paling cepat memang begitu: ambil satu pasangan angka sederhana, lalu bandingkan kedua ruas.",
+          "hint": "Uji tiap pilihan dengan $x = y = 2$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-persamaan-fungsional-q9b",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada soal yang meminta \"cari semua fungsi yang memenuhi ...\", menunjukkan bahwa $f(x)=2x$ memenuhi persamaannya berarti ...",
+          "options": [
+            "baru menyelesaikan separuh soal",
+            "sudah menyelesaikan seluruh soal",
+            "membuktikan tidak ada fungsi lain",
+            "membuktikan $f$ injektif"
+          ],
+          "answerIndex": 0,
+          "solution": "Soal \"cari semua\" menuntut dua pekerjaan yang terpisah.\n\n**Sudah dikerjakan:** menunjukkan $f(x)=2x$ memang memenuhi persamaannya. Ini membuktikan sedikitnya ada satu jawaban.\n\n**Belum dikerjakan:** membuktikan tidak ada fungsi lain yang juga memenuhi. Tanpa bagian ini, kamu belum menjawab kata \"semua\".\n\nKedua arah itu memerlukan cara berbeda. Yang pertama cukup dengan substitusi; yang kedua menuntut penyimpulan dari persamaannya sampai bentuk $f$ terpaksa seperti itu.\n\nDi olimpiade, bagian kedua inilah yang biasanya memuat sebagian besar nilainya — dan bagian yang paling sering dilewatkan.",
+          "hint": "Ada berapa hal yang dituntut oleh kata \"semua\"?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "\"Cari semua\" menuntut pembuktian ketunggalan juga",
+        "Jangan mencoret $f$ sebelum injektifnya terbukti",
+        "Catat setiap fakta dari substitusi — sering terpakai belakangan"
+      ],
+      "pitfall": "Menganggap pemeriksaan akhir tidak perlu karena setiap langkah terasa benar. Penyimpulan pada persamaan fungsional sering berupa implikasi satu arah, sehingga hasilnya perlu diuji balik ke persamaan aslinya."
+    }
+  ]
+}

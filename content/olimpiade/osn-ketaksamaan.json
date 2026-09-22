@@ -1,0 +1,262 @@
+{
+  "id": "osn-ketaksamaan",
+  "track": "olimpiade",
+  "title": "Ketaksamaan: AM-GM dan Cauchy-Schwarz",
+  "order": 8,
+  "prerequisites": [
+    "alj-fungsi"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Dua ketaksamaan yang menyelesaikan sebagian besar soal nilai maksimum dan minimum olimpiade.",
+  "tags": [
+    "aljabar",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-ketaksamaan-c1",
+      "type": "konsep",
+      "title": "AM-GM: rata-rata mana yang lebih besar",
+      "body": "Untuk dua bilangan tak negatif, rata-rata biasa tidak pernah lebih kecil dari akar hasil kalinya:\n$$\\frac{a+b}{2} \\geq \\sqrt{ab}$$\n\nBuktinya satu baris. Kurangkan kedua ruas dan kalikan dua:\n$$a + b - 2\\sqrt{ab} = \\left(\\sqrt{a} - \\sqrt{b}\\right)^2 \\geq 0$$\n\nKuadrat tidak pernah negatif, jadi ketaksamaannya terbukti. Yang lebih berguna adalah kapan ia menjadi **kesamaan**: tepat ketika $\\sqrt{a} = \\sqrt{b}$, yaitu $a = b$.\n\nSyarat kesamaan itu bukan catatan kaki — ia yang memberi tahu di titik mana nilai maksimum atau minimum tercapai.\n\nBentuk umum untuk $n$ bilangan tak negatif:\n$$\\frac{a_1 + a_2 + \\cdots + a_n}{n} \\geq \\sqrt[n]{a_1 a_2 \\cdots a_n}$$\n\ndengan kesamaan tepat ketika semua bilangannya sama.\n\nSyarat tak negatif juga wajib. Untuk $a = -1$ dan $b = -4$, rata-ratanya $-2{,}5$ sementara akar hasil kalinya $2$ — ketaksamaannya terbalik seluruhnya.",
+      "questions": [
+        {
+          "id": "osn-ketaksamaan-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai minimum dari $x + \\frac{1}{x}$ untuk $x > 0$ adalah ...",
+          "options": [
+            "$2$",
+            "$1$",
+            "$0$",
+            "tidak ada"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai AM-GM pada kedua suku:\n\n$$\\frac{x + \\frac{1}{x}}{2} \\geq \\sqrt{x \\cdot \\frac{1}{x}} = \\sqrt{1} = 1$$\n\n$$x + \\frac{1}{x} \\geq 2$$\n\nKesamaan tercapai ketika $x = \\frac{1}{x}$, yaitu $x = 1$ (nilai $x = -1$ tidak dipakai karena disyaratkan $x > 0$).\n\nCek: pada $x=1$ nilainya $1 + 1 = 2$ ✓\n\nPerhatikan bahwa syarat $x > 0$ bukan hiasan. Untuk $x < 0$ nilai $x + \\frac{1}{x}$ justru bisa serendah $-2$.",
+          "hint": "Kalikan kedua suku — hasilnya bilangan tetap.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ketaksamaan-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai minimum dari $2x + \\frac{8}{x}$ untuk $x > 0$ adalah ...",
+          "options": [
+            "$8$",
+            "$4$",
+            "$16$",
+            "$10$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai AM-GM pada kedua suku. Hasil kalinya adalah bilangan tetap, dan itulah yang membuat teknik ini bekerja:\n\n$$2x \\cdot \\frac{8}{x} = 16$$\n\n$$\\frac{2x + \\frac{8}{x}}{2} \\geq \\sqrt{16} = 4$$\n\n$$2x + \\frac{8}{x} \\geq 8$$\n\nKesamaan tercapai ketika $2x = \\frac{8}{x}$, yaitu $x^2 = 4$, sehingga $x = 2$.\n\nCek: $2(2) + \\frac{8}{2} = 4 + 4 = 8$ ✓\n\nKunci pemakaian AM-GM adalah memecah bentuknya sehingga hasil kali sukunya menjadi bilangan tetap. Kalau hasil kalinya masih memuat $x$, batas bawahnya tidak berarti apa-apa.",
+          "hint": "Periksa dulu apakah hasil kali kedua sukunya bilangan tetap.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\frac{a+b}{2} \\geq \\sqrt{ab}$ untuk $a, b \\geq 0$",
+        "Kesamaan tepat ketika semua bilangannya sama",
+        "Syarat tak negatif wajib — tanpa itu ketaksamaannya bisa terbalik"
+      ],
+      "pitfall": "Memakai AM-GM tanpa memeriksa apakah semua sukunya tak negatif. Pada soal yang memuat variabel bisa negatif, ketaksamaan ini tidak berlaku dan seluruh kesimpulannya runtuh."
+    },
+    {
+      "id": "osn-ketaksamaan-c2",
+      "type": "teknik",
+      "title": "Memakai AM-GM pada soal maksimum dan minimum",
+      "body": "AM-GM berguna tepat ketika salah satu dari dua hal ini terjadi:\n\n- **Hasil kalinya tetap** → jumlahnya punya nilai minimum\n- **Jumlahnya tetap** → hasil kalinya punya nilai maksimum\n\nKedua arah itu adalah sisi yang sama dari ketaksamaan yang sama, hanya dibaca berbeda.\n\n**Contoh arah pertama.** Cari nilai minimum $x + \\frac{16}{x}$ untuk $x>0$. Hasil kalinya $16$, tetap. Maka $x + \\frac{16}{x} \\geq 2\\sqrt{16} = 8$, tercapai di $x = 4$.\n\n**Contoh arah kedua.** Cari nilai maksimum $xy$ jika $x + y = 10$ dengan keduanya positif. Jumlahnya tetap, jadi $\\sqrt{xy} \\leq \\frac{10}{2} = 5$, sehingga $xy \\leq 25$, tercapai di $x = y = 5$.\n\nKalau hasil kalinya belum tetap, **pecah sukunya** sampai tetap. Untuk mencari minimum $x^2 + \\frac{2}{x}$, tulis suku keduanya sebagai $\\frac{1}{x} + \\frac{1}{x}$ lalu pakai AM-GM tiga suku — hasil kali ketiganya menjadi $1$, sebuah bilangan tetap.\n\nLangkah terakhir yang wajib: **periksa apakah kesamaannya bisa tercapai**. Batas yang tidak pernah tercapai bukanlah nilai maksimum atau minimum.",
+      "questions": [
+        {
+          "id": "osn-ketaksamaan-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $x + y = 10$ dengan $x, y > 0$, nilai maksimum dari $xy$ adalah ...",
+          "options": [
+            "$25$",
+            "$50$",
+            "$100$",
+            "$20$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlahnya tetap, jadi pakai AM-GM untuk membatasi hasil kalinya:\n\n$$\\sqrt{xy} \\leq \\frac{x+y}{2} = \\frac{10}{2} = 5$$\n\n$$xy \\leq 25$$\n\nKesamaan tercapai ketika $x = y$, dan bersama $x+y = 10$ ini memberi $x = y = 5$.\n\nCek: $5 \\times 5 = 25$ ✓. Bandingkan dengan pilihan lain seperti $x=2, y=8$ yang memberi $16$ — memang lebih kecil.\n\nHasil ini punya tafsiran geometris: di antara semua persegi panjang berkeliling tetap, yang luasnya terbesar adalah persegi.",
+          "hint": "Kapan hasil kali dua bilangan berjumlah tetap menjadi terbesar?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ketaksamaan-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Jika $xy = 16$ dengan $x, y > 0$, berapa nilai minimum dari $x + y$? (bilangan bulat)",
+          "answer": "8",
+          "acceptedAnswers": [
+            "8"
+          ],
+          "solution": "Hasil kalinya tetap, jadi pakai AM-GM untuk membatasi jumlahnya:\n\n$$\\frac{x+y}{2} \\geq \\sqrt{xy} = \\sqrt{16} = 4$$\n\n$$x + y \\geq 8$$\n\nKesamaan tercapai ketika $x = y$, dan bersama $xy = 16$ ini memberi $x = y = 4$.\n\nCek: $4 + 4 = 8$ ✓. Bandingkan $x=2, y=8$ yang memberi $10$, atau $x=1, y=16$ yang memberi $17$ — keduanya lebih besar.\n\nPerhatikan bahwa soal ini adalah kebalikan langsung dari soal sebelumnya: di sana jumlah tetap membatasi hasil kali, di sini hasil kali tetap membatasi jumlah.",
+          "hint": "Hasil kalinya tetap, jadi jumlahnya punya batas bawah.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Hasil kali tetap memberi minimum jumlah; jumlah tetap memberi maksimum hasil kali",
+        "Kalau belum tetap, pecah sukunya sampai tetap",
+        "Selalu periksa apakah kesamaannya bisa tercapai"
+      ],
+      "pitfall": "Menyimpulkan bahwa batas dari AM-GM otomatis menjadi nilai maksimum atau minimum. Kalau syarat kesamaannya melanggar batasan soal — misalnya menuntut $x = 5$ padahal soal membatasi $x \\leq 3$ — batas itu tidak pernah tercapai dan bukan jawabannya."
+    },
+    {
+      "id": "osn-ketaksamaan-c3",
+      "type": "rumus",
+      "title": "Cauchy-Schwarz",
+      "body": "Ketaksamaan kedua yang wajib dikuasai:\n$$\\left(a_1^2 + a_2^2 + \\cdots + a_n^2\\right)\\left(b_1^2 + b_2^2 + \\cdots + b_n^2\\right) \\geq \\left(a_1b_1 + a_2b_2 + \\cdots + a_nb_n\\right)^2$$\n\nUntuk dua suku ia berbentuk:\n$$(a^2+b^2)(c^2+d^2) \\geq (ac+bd)^2$$\n\nKesamaan tercapai ketika kedua barisan **sebanding**, yaitu $\\frac{a_1}{b_1} = \\frac{a_2}{b_2} = \\cdots$\n\nBentuk yang paling sering dipakai di olimpiade adalah bentuk Engel, sering disebut lema Cauchy-Schwarz:\n$$\\frac{x_1^2}{y_1} + \\frac{x_2^2}{y_2} + \\cdots + \\frac{x_n^2}{y_n} \\geq \\frac{(x_1+x_2+\\cdots+x_n)^2}{y_1+y_2+\\cdots+y_n}$$\n\ndengan seluruh $y_i > 0$. Bentuk ini langsung menyelesaikan soal yang memuat penjumlahan pecahan berpembilang kuadrat.\n\nKapan memilih Cauchy dan kapan AM-GM? Pedoman kasarnya: AM-GM cocok untuk bentuk **hasil kali dan jumlah**, sementara Cauchy cocok untuk bentuk **kuadrat dan pecahan**. Kalau soal memuat $\\frac{x^2}{y}$, hampir pasti Cauchy jalannya.",
+      "questions": [
+        {
+          "id": "osn-ketaksamaan-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dengan $x = 3$ dan $y = 4$, perbandingan antara $2(x^2+y^2)$ dan $(x+y)^2$ adalah ...",
+          "options": [
+            "$2(x^2+y^2) > (x+y)^2$",
+            "$2(x^2+y^2) < (x+y)^2$",
+            "keduanya sama",
+            "bergantung tandanya"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung keduanya:\n\n$$2(x^2+y^2) = 2(9+16) = 50$$\n$$(x+y)^2 = 7^2 = 49$$\n\nJadi $50 > 49$.\n\nIni kasus khusus Cauchy-Schwarz dengan $(1^2+1^2)(x^2+y^2) \\geq (x+y)^2$.\n\nKesamaan hanya tercapai ketika $\\frac{1}{x} = \\frac{1}{y}$, yaitu $x = y$. Di sini $3 \\neq 4$, jadi ketaksamaannya tegas — dan selisih $1$ itu justru mengukur seberapa jauh $x$ dan $y$ berbeda.",
+          "hint": "Hitung saja keduanya, lalu bandingkan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ketaksamaan-q6",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Ketaksamaan AM-GM $\\frac{a+b}{2} \\geq \\sqrt{ab}$ berlaku untuk setiap bilangan real $a$ dan $b$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Syarat $a, b \\geq 0$ wajib dipenuhi.\n\nContoh tandingan: ambil $a = -1$ dan $b = -4$.\n\nRuas kiri: $\\frac{-1 + (-4)}{2} = -2{,}5$\n\nRuas kanan: $\\sqrt{(-1)(-4)} = \\sqrt{4} = 2$\n\nDi sini $-2{,}5 < 2$, jadi ketaksamaannya justru terbalik.\n\nPenyebabnya terlihat dari pembuktiannya sendiri: bukti bersandar pada $(\\sqrt{a}-\\sqrt{b})^2 \\geq 0$, dan bentuk $\\sqrt{a}$ tidak terdefinisi sebagai bilangan real ketika $a$ negatif.\n\nKarena itu memeriksa tanda variabelnya selalu jadi langkah pertama sebelum memakai AM-GM.",
+          "hint": "Coba $a = -1$ dan $b = -4$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$(a^2+b^2)(c^2+d^2) \\geq (ac+bd)^2$",
+        "Bentuk Engel: $\\sum \\frac{x_i^2}{y_i} \\geq \\frac{(\\sum x_i)^2}{\\sum y_i}$",
+        "Kesamaan tercapai ketika kedua barisannya sebanding"
+      ],
+      "pitfall": "Memakai bentuk Engel tanpa memastikan seluruh penyebutnya positif. Untuk penyebut negatif arah ketaksamaannya bisa terbalik, dan kesimpulannya menjadi kebalikan dari yang benar."
+    },
+    {
+      "id": "osn-ketaksamaan-c4",
+      "type": "prosedur",
+      "title": "Menyusun bukti ketaksamaan",
+      "body": "Soal ketaksamaan olimpiade biasanya meminta bukti, bukan angka. Urutan berikut hampir selalu berhasil.\n\n**1. Periksa syarat tandanya.** Apakah semua variabel positif? Kalau tidak, AM-GM dan bentuk Engel keduanya gugur.\n\n**2. Tebak kapan kesamaannya tercapai.** Untuk ketaksamaan simetris, biasanya di $a = b = c$. Titik itu memberi tahu bentuk mana yang harus kamu pakai agar batasnya tajam.\n\n**3. Cocokkan bentuk soal dengan bentuk baku.** Adakah kuadrat dibagi sesuatu? Pakai Engel. Adakah hasil kali yang tetap? Pakai AM-GM.\n\n**4. Periksa ketajamannya.** Substitusikan titik kesamaan tebakanmu ke hasil akhirnya. Kalau kedua ruas tidak bertemu di sana, ketaksamaanmu terlalu longgar dan bukti belum selesai.\n\n**Contoh.** Buktikan $\\frac{a^2}{b} + \\frac{b^2}{a} \\geq a+b$ untuk $a, b > 0$.\n\nBentuk Engel langsung memberi:\n$$\\frac{a^2}{b} + \\frac{b^2}{a} \\geq \\frac{(a+b)^2}{a+b} = a+b$$\n\nKesamaan tercapai ketika $\\frac{a}{b} = \\frac{b}{a}$, yaitu $a = b$ — dan di titik itu kedua ruas memang bernilai $2a$. Buktinya tajam, jadi selesai.",
+      "questions": [
+        {
+          "id": "osn-ketaksamaan-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk $a, b > 0$, ketaksamaan $\\frac{a^2}{b} + \\frac{b^2}{a} \\geq a + b$ mencapai kesamaan ketika ...",
+          "options": [
+            "$a = b$",
+            "$a = 2b$",
+            "$ab = 1$",
+            "$a + b = 1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai bentuk Engel:\n\n$$\\frac{a^2}{b} + \\frac{b^2}{a} \\geq \\frac{(a+b)^2}{a+b} = a+b$$\n\nKesamaan pada bentuk Engel tercapai ketika barisan pembilang dan penyebutnya sebanding, yaitu\n\n$$\\frac{a}{b} = \\frac{b}{a} \\Rightarrow a^2 = b^2 \\Rightarrow a = b$$\n\n(nilai $a = -b$ tidak dipakai karena keduanya positif).\n\nCek dengan $a = b = 3$: ruas kiri $3 + 3 = 6$, ruas kanan $3 + 3 = 6$ ✓\n\nCek dengan $a=1, b=2$: ruas kiri $\\frac{1}{2} + 4 = 4{,}5$, ruas kanan $3$ — memang lebih besar.",
+          "hint": "Kesamaan Engel menuntut pembilang dan penyebut sebanding.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ketaksamaan-q7b",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk soal yang memuat bentuk $\\frac{x^2}{y} + \\frac{y^2}{z} + \\frac{z^2}{x}$, ketaksamaan yang paling langsung dipakai adalah ...",
+          "options": [
+            "bentuk Engel dari Cauchy-Schwarz",
+            "AM-GM dua suku",
+            "ketaksamaan segitiga",
+            "AM-GM tiga suku"
+          ],
+          "answerIndex": 0,
+          "solution": "Bentuk Engel dirancang persis untuk penjumlahan pecahan berpembilang kuadrat:\n\n$$\\frac{x_1^2}{y_1} + \\frac{x_2^2}{y_2} + \\cdots \\geq \\frac{(x_1+x_2+\\cdots)^2}{y_1+y_2+\\cdots}$$\n\nDiterapkan pada soal ini:\n\n$$\\frac{x^2}{y} + \\frac{y^2}{z} + \\frac{z^2}{x} \\geq \\frac{(x+y+z)^2}{x+y+z} = x+y+z$$\n\nSatu langkah, dan batasnya langsung tajam — kesamaannya tercapai di $x = y = z$.\n\nAM-GM juga bisa dipakai di sini, tapi memerlukan pemecahan suku yang lebih berbelit. Pedomannya: begitu kamu melihat kuadrat dibagi sesuatu, Engel hampir selalu jalan terpendek.",
+          "hint": "Bentuk apa yang cocok untuk kuadrat dibagi sesuatu?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tebak titik kesamaan lebih dulu; ia menentukan bentuk yang dipakai",
+        "Kuadrat dibagi sesuatu → Engel. Hasil kali tetap → AM-GM",
+        "Substitusikan titik kesamaan untuk menguji ketajamannya"
+      ],
+      "pitfall": "Menyusun rantai ketaksamaan yang setiap langkahnya benar, tapi kesamaannya tercapai di titik berbeda-beda. Rantai semacam itu menghasilkan batas yang tidak pernah tercapai, sehingga tidak membuktikan apa yang diminta."
+    },
+    {
+      "id": "osn-ketaksamaan-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan ketaksamaan",
+      "body": "**1. Melewatkan syarat tanda.** AM-GM menuntut suku tak negatif, bentuk Engel menuntut penyebut positif. Periksa dulu, sebelum memakai.\n\n**2. Melupakan syarat kesamaan.** Batas yang tidak pernah tercapai bukan nilai maksimum atau minimum. Selalu periksa apakah titik kesamaannya memenuhi seluruh batasan soal.\n\n**3. Merantai ketaksamaan dengan titik kesamaan berbeda.** Kalau langkah pertama tajam di $a=b$ dan langkah kedua tajam di $a=2b$, rantainya menghasilkan batas longgar yang tidak membuktikan apa pun.\n\n**4. Memakai AM-GM tanpa hasil kali yang tetap.** Kalau hasil kali sukunya masih memuat variabel, batas bawahnya juga memuat variabel — dan itu bukan batas yang berguna. Pecah sukunya sampai hasil kalinya menjadi bilangan tetap.\n\nPemeriksaan penutup yang selalu murah: uji dengan angka. Ambil dua atau tiga nilai yang memenuhi batasan soal, dan pastikan ketaksamaanmu memang berlaku serta tajam di titik yang kamu klaim.",
+      "questions": [
+        {
+          "id": "osn-ketaksamaan-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai minimum dari $x + \\frac{4}{x}$ untuk $x > 0$ adalah ...",
+          "options": [
+            "$4$",
+            "$2$",
+            "$5$",
+            "$8$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hasil kali kedua sukunya tetap:\n$$x \\cdot \\frac{4}{x} = 4$$\n\nPakai AM-GM:\n$$\\frac{x + \\frac{4}{x}}{2} \\geq \\sqrt{4} = 2 \\Rightarrow x + \\frac{4}{x} \\geq 4$$\n\nKesamaan tercapai ketika $x = \\frac{4}{x}$, yaitu $x^2 = 4$, sehingga $x = 2$.\n\nCek: $2 + \\frac{4}{2} = 2 + 2 = 4$ ✓\n\nPola umumnya: minimum $x + \\frac{k}{x}$ untuk $x>0$ adalah $2\\sqrt{k}$, tercapai di $x = \\sqrt{k}$.",
+          "hint": "Batas bawahnya adalah $2\\sqrt{\\text{hasil kali}}$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ketaksamaan-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah soal meminta nilai minimum $x + \\frac{9}{x}$ dengan syarat tambahan $0 < x \\leq 2$. Nilai minimumnya adalah ...",
+          "options": [
+            "$6{,}5$",
+            "$6$",
+            "$4{,}5$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "AM-GM memberi $x + \\frac{9}{x} \\geq 2\\sqrt{9} = 6$, tercapai di $x = 3$.\n\nTapi $x = 3$ **melanggar** syarat $x \\leq 2$, jadi batas $6$ itu tidak pernah tercapai.\n\nPerhatikan bahwa fungsi $x + \\frac{9}{x}$ menurun pada $0 < x < 3$. Karena seluruh daerah yang diizinkan berada di sebelah kiri $x=3$, nilai terkecilnya berada di ujung kanan, yaitu $x = 2$:\n\n$$2 + \\frac{9}{2} = 2 + 4{,}5 = 6{,}5$$\n\nInilah alasan syarat kesamaan wajib diperiksa terhadap batasan soal. Menjawab $6$ di sini adalah kesalahan yang sangat mudah terjadi.",
+          "hint": "Periksa apakah titik kesamaan AM-GM memenuhi batasan soalnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Periksa tanda variabelnya sebelum memakai ketaksamaan apa pun",
+        "Titik kesamaan seluruh rantai harus sama",
+        "AM-GM hanya berguna kalau hasil kalinya bilangan tetap"
+      ],
+      "pitfall": "Menganggap bukti selesai begitu sebuah batas ditemukan. Batas yang benar tapi longgar tidak menjawab soal yang meminta nilai maksimum atau minimum — ketajamannya wajib diperiksa dengan mensubstitusikan titik kesamaan."
+    }
+  ]
+}
