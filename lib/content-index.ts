@@ -50,7 +50,10 @@ import topik39 from "@/content/lanjut/lan-transformasi-geometri.json";
 import topik40 from "@/content/olimpiade/osn-crt-diophantine.json";
 import topik41 from "@/content/olimpiade/osn-fermat-euler.json";
 import topik42 from "@/content/olimpiade/osn-fungsi-lantai.json";
-import topik43 from "@/content/olimpiade/osn-keterbagian.json";
+import topik43 from "@/content/olimpiade/osn-graf-ekstremal.json";
+import topik44 from "@/content/olimpiade/osn-hitung-dua-cara.json";
+import topik45 from "@/content/olimpiade/osn-keterbagian.json";
+import topik46 from "@/content/olimpiade/osn-sarang-merpati.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -97,4 +100,7 @@ export const RAW_TOPICS: Topic[] = [
   topik41 as unknown as Topic,
   topik42 as unknown as Topic,
   topik43 as unknown as Topic,
+  topik44 as unknown as Topic,
+  topik45 as unknown as Topic,
+  topik46 as unknown as Topic,
 ];

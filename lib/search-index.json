@@ -2182,6 +2182,106 @@
       "snippet": "1. Memperlakukan lantai bilangan negatif seperti membuang desimal. [rumus] , bukan [rumus] . Lantai selalu turun. 2. Mengira lantai bersifat aditif. [rumus] ..."
     },
     {
+      "cardId": "osn-graf-ekstremal-c1",
+      "topicId": "osn-graf-ekstremal",
+      "topicTitle": "Teori Graf dan Prinsip Ekstremal",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Graf: hubungan apa pun jadi titik dan garis",
+      "haystack": "graf: hubungan apa pun jadi titik dan garis graf adalah himpunan simpul (titik) yang sebagian pasangannya dihubungkan oleh sisi (garis). sesederhana itu, dan justru karena itu ia bisa memodelkan hampir apa saja. orang yang saling kenal, kota yang terhubung jalan, tim yang sudah bertanding, bilangan yang saling membagi — semuanya menjadi graf begitu kamu memutuskan apa simpulnya dan kapan dua simpul dihubungkan. derajat sebuah simpul adalah banyaknya sisi yang menempel padanya. dari situ lahir hubungan yang menjadi tulang punggung hampir semua soal graf: jumlah seluruh derajat sama dengan dua kali banyaknya sisi. alasannya adalah menghitung dua cara: setiap sisi punya dua ujung, jadi ia menyumbang tepat pada total derajat. akibat langsungnya sering langsung menyelesaikan soal: jumlah seluruh derajat pasti genap . karena itu banyaknya simpul berderajat ganjil juga pasti genap. contoh pemakaiannya: mungkinkah ada orang yang masing-masing berkenalan dengan tepat orang lain? jumlah derajatnya , ganjil — jadi mustahil. , hasil dari menghitung dua cara jumlah seluruh derajat selalu genap banyaknya simpul berderajat ganjil selalu genap menganggap setiap barisan derajat bisa diwujudkan sebagai graf. barisan yang jumlahnya ganjil mustahil, dan bahkan yang jumlahnya genap pun belum tentu bisa — misalnya satu simpul berderajat pada graf beranggota simpul. teori graf dan prinsip ekstremal",
+      "snippet": "Graf adalah himpunan simpul (titik) yang sebagian pasangannya dihubungkan oleh sisi (garis). Sesederhana itu, dan justru karena itu ia bisa memodelkan hampir..."
+    },
+    {
+      "cardId": "osn-graf-ekstremal-c2",
+      "topicId": "osn-graf-ekstremal",
+      "topicTitle": "Teori Graf dan Prinsip Ekstremal",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Graf terhubung, pohon, dan lintasan",
+      "haystack": "graf terhubung, pohon, dan lintasan beberapa istilah yang muncul terus-menerus di soal olimpiade. terhubung berarti ada lintasan antara setiap dua simpul. kalau tidak, grafnya terpecah menjadi beberapa komponen yang saling terpisah. pohon adalah graf terhubung tanpa siklus. sifatnya sangat kaku: pohon adalah graf terhubung dengan sisi paling sedikit . menghapus satu sisi mana pun memutus keterhubungannya, dan menambah satu sisi mana pun menciptakan siklus. tidak ada ruang gerak sama sekali. akibat praktisnya: graf terhubung dengan simpul wajib punya sedikitnya sisi. kurang dari itu, keterhubungan mustahil. lintasan euler melewati setiap sisi tepat sekali. ia ada tepat ketika grafnya terhubung dan banyaknya simpul berderajat ganjil adalah atau . alasannya mudah dilihat: setiap kali lintasan memasuki sebuah simpul ia harus keluar lagi, sehingga sisi di simpul itu terpakai berpasangan — kecuali di titik awal dan titik akhir. lintasan hamilton melewati setiap simpul tepat sekali. berbeda dari euler, tidak ada ciri sederhana untuk keberadaannya, dan itulah yang membuatnya jauh lebih sulit. pohon: terhubung, tanpa siklus, dan graf terhubung simpul butuh sedikitnya sisi euler ada bila simpul berderajat ganjil ada atau menukar lintasan euler dengan hamilton. euler melewati setiap sisi dan punya ciri derajat yang mudah diperiksa; hamilton melewati setiap simpul dan tidak punya ciri sederhana sama sekali. teori graf dan prinsip ekstremal",
+      "snippet": "Beberapa istilah yang muncul terus-menerus di soal olimpiade. Terhubung berarti ada lintasan antara setiap dua simpul. Kalau tidak, grafnya terpecah menjadi ..."
+    },
+    {
+      "cardId": "osn-graf-ekstremal-c3",
+      "topicId": "osn-graf-ekstremal",
+      "topicTitle": "Teori Graf dan Prinsip Ekstremal",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Prinsip ekstremal: mulai dari yang paling ujung",
+      "haystack": "prinsip ekstremal: mulai dari yang paling ujung saat sebuah soal terasa tidak punya pijakan, prinsip ekstremal sering memberikan pijakan itu: pandanglah benda yang paling besar, paling kecil, atau paling ujung. alasan teknik ini bekerja: benda ekstrem punya sifat tambahan yang tidak dimiliki benda biasa. simpul berderajat terbesar tidak bisa ditambah tetangganya lagi; lintasan terpanjang tidak bisa diperpanjang. ketidakmungkinan itulah yang kamu pakai. contoh. buktikan bahwa graf yang setiap simpulnya berderajat sedikitnya pasti memuat siklus. ambil lintasan terpanjang dalam graf itu, sebut ujungnya . karena , simpul punya sedikitnya dua tetangga. salah satunya ada di lintasan itu — yaitu simpul sebelum . tetangga yang satu lagi tidak mungkin berada di luar lintasan, sebab kalau begitu lintasannya bisa diperpanjang dan ia bukan yang terpanjang. jadi tetangga itu pasti berada di dalam lintasan, dan sisa lintasan dari situ sampai ditutup oleh sisi tersebut — sebuah siklus. perhatikan polanya: sifat \"terpanjang\" dipakai untuk menyingkirkan satu kemungkinan, dan yang tersisa langsung memberi kesimpulannya. pandang benda terbesar, terkecil, atau terpanjang benda ekstrem punya sifat tambahan: ia tidak bisa diperbesar lagi ketidakmungkinan diperbesar itulah yang dipakai dalam buktinya memilih benda ekstrem yang keberadaannya tidak dijamin. prinsip ini hanya sah pada himpunan berhingga dan tak kosong — pada himpunan tak hingga, \"yang terbesar\" bisa saja tidak ada sama sekali. teori graf dan prinsip ekstremal",
+      "snippet": "Saat sebuah soal terasa tidak punya pijakan, prinsip ekstremal sering memberikan pijakan itu: pandanglah benda yang paling besar, paling kecil, atau paling u..."
+    },
+    {
+      "cardId": "osn-graf-ekstremal-c4",
+      "topicId": "osn-graf-ekstremal",
+      "topicTitle": "Teori Graf dan Prinsip Ekstremal",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Teori Ramsey: keteraturan yang tak terhindarkan",
+      "haystack": "teori ramsey: keteraturan yang tak terhindarkan salah satu hasil paling mengejutkan dalam kombinatorika: keacakan yang cukup besar pasti memuat keteraturan. soal klasik. di antara enam orang, buktikan pasti ada tiga yang saling kenal semua, atau tiga yang saling asing semua. modelkan sebagai graf lengkap simpul dengan setiap sisi diwarnai merah (kenal) atau biru (asing). yang harus dibuktikan: pasti ada segitiga sewarna. bukti. ambil satu orang, sebut . ia punya sisi menuju orang lain, masing-masing merah atau biru. menurut sarang merpati, sedikitnya sisi sewarna — anggap saja merah, menuju , , dan . sekarang perhatikan ketiga sisi di antara , , dan : - kalau ada satu yang merah, katakanlah , maka , , membentuk segitiga merah. - kalau tidak ada satu pun yang merah, ketiganya biru, dan , , membentuk segitiga biru. kedua kemungkinan itu mencakup semuanya, jadi segitiga sewarna pasti ada. angka tidak bisa diturunkan: untuk orang ada susunan tanpa segitiga sewarna, yaitu pewarnaan berbentuk segi lima beserta diagonal-diagonalnya. keacakan yang cukup besar memaksa munculnya keteraturan bukti menggabungkan sarang merpati dengan kasus angka tajam — untuk orang ada tandingannya mengira hasil ini berlaku mulai dari lima orang. untuk lima orang ada pewarnaan yang sama sekali tidak memuat segitiga sewarna, jadi batas enam itu tidak bisa diperkecil. teori graf dan prinsip ekstremal",
+      "snippet": "Salah satu hasil paling mengejutkan dalam kombinatorika: keacakan yang cukup besar pasti memuat keteraturan. Soal klasik. Di antara enam orang, buktikan past..."
+    },
+    {
+      "cardId": "osn-graf-ekstremal-c5",
+      "topicId": "osn-graf-ekstremal",
+      "topicTitle": "Teori Graf dan Prinsip Ekstremal",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan graf dan prinsip ekstremal",
+      "haystack": "empat jebakan graf dan prinsip ekstremal 1. menukar jumlah derajat dengan banyaknya sisi. keduanya berselisih faktor dua. kalau jawabanmu untuk banyaknya sisi terasa dua kali lipat terlalu besar, kemungkinan inilah sebabnya. 2. menganggap semua barisan derajat bisa diwujudkan. jumlah yang ganjil langsung mustahil. bahkan jumlah genap pun belum tentu bisa — derajat mustahil pada graf beranggota simpul. 3. memilih benda ekstrem yang mungkin tidak ada. prinsip ekstremal sah hanya pada himpunan berhingga dan tak kosong. pastikan dulu bendanya memang ada sebelum memakainya. 4. menukar euler dengan hamilton. euler melewati setiap sisi dan punya ciri derajat yang mudah diperiksa. hamilton melewati setiap simpul dan tidak punya ciri sederhana sama sekali. untuk soal graf, satu kebiasaan sangat membantu: gambar contoh kecil. graf dengan tiga atau empat simpul cukup untuk menguji sebagian besar dugaan, dan jauh lebih cepat daripada membayangkannya di kepala. jumlah derajat adalah dua kali banyaknya sisi prinsip ekstremal butuh himpunan berhingga dan tak kosong gambar graf kecil untuk menguji dugaanmu menguji dugaan hanya dengan membayangkan graf di kepala. graf berukuran kecil pun punya banyak susunan, dan menggambar tiga contoh biasanya sudah menemukan tandingan yang tak terbayangkan sebelumnya. teori graf dan prinsip ekstremal",
+      "snippet": "1. Menukar jumlah derajat dengan banyaknya sisi. Keduanya berselisih faktor dua. Kalau jawabanmu untuk banyaknya sisi terasa dua kali lipat terlalu besar, ke..."
+    },
+    {
+      "cardId": "osn-hitung-dua-cara-c1",
+      "topicId": "osn-hitung-dua-cara",
+      "topicTitle": "Menghitung Dua Cara dan Rekursi",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Satu himpunan, dua cara menghitungnya",
+      "haystack": "satu himpunan, dua cara menghitungnya teknik pembuktian paling elegan dalam kombinatorika bersandar pada satu gagasan sederhana: kalau kamu menghitung himpunan yang sama dengan dua cara berbeda, kedua hasilnya wajib sama. contoh. berapa banyak himpunan bagian dari sebuah himpunan beranggota ? cara pertama. untuk setiap anggota, ada dua pilihan: masuk atau tidak. karena pilihan itu bebas satu sama lain, banyaknya himpunan bagian adalah . cara kedua. kelompokkan menurut ukurannya. ada himpunan bagian berukuran nol, berukuran satu, dan seterusnya. kedua cara menghitung benda yang sama, jadi: identitas ini terbukti tanpa satu pun manipulasi aljabar. tidak ada penjabaran, tidak ada induksi — hanya dua sudut pandang atas himpunan yang sama. inilah kekuatan teknik ini. bukti semacam ini disebut bukti bijektif, dan ia sering menjelaskan kenapa sebuah identitas benar, bukan sekadar memastikan bahwa ia benar. dua cara menghitung himpunan yang sama harus memberi hasil sama terbukti tanpa aljabar sama sekali bukti bijektif menjelaskan kenapa, bukan hanya memastikan bahwa mengira kedua cara harus menghitung dengan rumus yang mirip. justru sebaliknya — makin berbeda kedua sudut pandangnya, makin kuat identitas yang dihasilkannya. menghitung dua cara dan rekursi",
+      "snippet": "Teknik pembuktian paling elegan dalam kombinatorika bersandar pada satu gagasan sederhana: kalau kamu menghitung himpunan yang sama dengan dua cara berbeda, ..."
+    },
+    {
+      "cardId": "osn-hitung-dua-cara-c2",
+      "topicId": "osn-hitung-dua-cara",
+      "topicTitle": "Menghitung Dua Cara dan Rekursi",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Menghitung pasangan dari dua arah",
+      "haystack": "menghitung pasangan dari dua arah bentuk paling produktif dari teknik ini adalah menghitung pasangan . susun sebuah himpunan pasangan, lalu hitung dari sisi kiri dan sisi kanan. contoh. buktikan . hitung banyaknya pasangan (panitia, ketua) yang bisa dibentuk dari orang, dengan ketua harus anggota panitianya. dari sisi panitia. pilih dulu panitia berukuran , ada cara. lalu pilih ketuanya dari anggota itu, ada cara. jumlahkan untuk semua ukuran: . dari sisi ketua. pilih dulu ketuanya, ada cara. lalu tentukan siapa saja anggota lainnya — setiap dari orang sisanya bebas masuk atau tidak, memberi cara. kedua cara menghitung himpunan pasangan yang sama, jadi identitasnya terbukti. kunci keberhasilannya ada pada memilih benda apa yang dihitung. benda itu harus punya dua bagian yang bisa dipilih dalam urutan berbeda — dan urutan yang berbeda itulah yang menghasilkan dua rumus berbeda. hitung pasangan, lalu balik urutan pemilihannya sisi kiri dan kanan memberi rumus berbeda untuk benda sama kuncinya: menemukan benda apa yang layak dihitung menyusun dua cara yang sebetulnya menghitung himpunan berbeda. sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama persis — termasuk kasus batas seperti panitia kosong. menghitung dua cara dan rekursi",
+      "snippet": "Bentuk paling produktif dari teknik ini adalah menghitung pasangan. Susun sebuah himpunan pasangan, lalu hitung dari sisi kiri dan sisi kanan. Contoh. Buktik..."
+    },
+    {
+      "cardId": "osn-hitung-dua-cara-c3",
+      "topicId": "osn-hitung-dua-cara",
+      "topicTitle": "Menghitung Dua Cara dan Rekursi",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Rekursi: menyandarkan pada kasus lebih kecil",
+      "haystack": "rekursi: menyandarkan pada kasus lebih kecil kalau menghitung langsung terasa mustahil, coba tanyakan: bagaimana kasus berukuran bersandar pada kasus yang lebih kecil? contoh. ada berapa cara menaiki tangga anak tangga, kalau sekali melangkah kamu boleh naik satu atau dua anak tangga? perhatikan langkah terakhir . ia pasti satu anak tangga atau dua, dan tidak ada kemungkinan ketiga. - kalau langkah terakhirnya satu, sebelumnya kamu berada di anak tangga ke- - kalau langkah terakhirnya dua, sebelumnya kamu berada di anak tangga ke- kedua kemungkinan itu tidak beririsan dan mencakup semuanya, jadi: dengan dan , barisannya menjadi — barisan fibonacci yang bergeser. jadi . pola kerjanya selalu sama: cari satu keputusan yang memecah masalah menjadi kasus-kasus yang tidak beririsan dan mencakup semuanya . langkah terakhir, benda terakhir, atau posisi paling kanan adalah pilihan yang hampir selalu berhasil. cari keputusan yang memecah soal jadi kasus lebih kecil kasusnya harus tidak beririsan dan mencakup semua nilai awal harus dihitung manual, bukan ditebak menetapkan nilai awal secara ceroboh. untuk soal tangga, bukan — dua anak tangga bisa dinaiki satu-satu atau sekaligus. salah satu nilai awal menggeser seluruh barisannya. menghitung dua cara dan rekursi",
+      "snippet": "Kalau menghitung langsung terasa mustahil, coba tanyakan: bagaimana kasus berukuran [rumus] bersandar pada kasus yang lebih kecil? Contoh. Ada berapa cara me..."
+    },
+    {
+      "cardId": "osn-hitung-dua-cara-c4",
+      "topicId": "osn-hitung-dua-cara",
+      "topicTitle": "Menghitung Dua Cara dan Rekursi",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Rekursi dengan syarat larangan",
+      "haystack": "rekursi dengan syarat larangan rekursi sangat cocok untuk soal yang melarang pola tertentu. contoh. ada berapa barisan biner panjang yang tidak memuat dua angka berdampingan? perhatikan digit terakhir : - kalau digit terakhirnya , digit sebelumnya boleh apa saja asalkan sah. ada pilihan. - kalau digit terakhirnya , digit sebelumnya wajib agar tidak melanggar. sisanya adalah barisan sah panjang , ada pilihan. nilai awalnya: (yaitu dan ) dan (yaitu , , — sedangkan dilarang). barisannya: . perhatikan bahwa rekursinya sama persis dengan soal tangga, tapi nilai awalnya berbeda sehingga barisannya bergeser. ini sering terjadi: banyak soal berbeda berbagi rekursi yang sama, dan yang membedakan hasilnya hanyalah kasus dasarnya. karena itu nilai awal wajib dihitung manual, tidak boleh ditebak dari kemiripan. larangan pola sering memaksa lebih dari satu posisi sekaligus soal berbeda bisa berbagi rekursi sama dengan nilai awal berbeda nilai awal wajib dihitung manual menyalin nilai awal dari soal lain yang rekursinya mirip. soal tangga mulai dari sedangkan soal barisan biner mulai dari — rekursinya identik, tapi hasilnya bergeser satu posisi sepanjang barisan. menghitung dua cara dan rekursi",
+      "snippet": "Rekursi sangat cocok untuk soal yang melarang pola tertentu. Contoh. Ada berapa barisan biner panjang [rumus] yang tidak memuat dua angka [rumus] berdampinga..."
+    },
+    {
+      "cardId": "osn-hitung-dua-cara-c5",
+      "topicId": "osn-hitung-dua-cara",
+      "topicTitle": "Menghitung Dua Cara dan Rekursi",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan pencacahan olimpiade",
+      "haystack": "empat jebakan pencacahan olimpiade 1. dua cara yang menghitung himpunan berbeda. sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama — termasuk kasus batas seperti himpunan kosong atau panitia tanpa anggota. 2. kasus rekursi yang saling beririsan. kalau satu keadaan bisa masuk dua kasus sekaligus, kamu menghitungnya dua kali. pemisahannya harus tegas: satu keadaan, tepat satu kasus. 3. nilai awal yang ditebak. rekursi yang benar dengan nilai awal yang salah menghasilkan seluruh barisan yang salah. hitung dua atau tiga suku pertama dengan mendaftar manual. 4. lupa membuang yang bukan bagian dari jawaban. pada soal diagonal, mencakup sisi-sisinya; pada soal himpunan bagian tak kosong, mencakup himpunan kosong. satu pemeriksaan menangkap hampir semuanya: uji rumusmu pada kasus kecil yang bisa didaftar manual. kalau atau sudah meleset, tidak ada gunanya melanjutkan ke besar. pastikan kedua cara mencacah benda yang sama persis kasus rekursi harus tidak beririsan dan mencakup semua uji rumusmu pada kasus kecil yang bisa didaftar manual mempercayai rumus yang terlihat rapi tanpa mengujinya pada kasus kecil. rumus pencacahan yang meleset karena pencacahan ganda sering tetap terlihat masuk akal — hanya pengujian manual yang membongkarnya. menghitung dua cara dan rekursi",
+      "snippet": "1. Dua cara yang menghitung himpunan berbeda. Sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama — termasuk kasus batas se..."
+    },
+    {
       "cardId": "osn-keterbagian-c1",
       "topicId": "osn-keterbagian",
       "topicTitle": "Keterbagian & Kongruensi",
@@ -2230,6 +2330,56 @@
       "title": "FPB, KPK, dan algoritma Euclid",
       "haystack": "fpb, kpk, dan algoritma euclid fpb dua bilangan bisa dicari tanpa memfaktorkan keduanya. ini berguna sekali ketika bilangannya besar dan faktorisasinya sendiri sulit — persis situasi yang sering muncul di soal olimpiade. algoritma euclid bertumpu pada satu kenyataan sederhana: . ganti bilangan yang besar dengan sisanya, lalu ulangi sampai salah satunya menjadi nol. bilangan yang tersisa itulah fpb-nya. contoh mencari : , jadi , jadi , jadi hasilnya hubungannya dengan kpk juga rapi dan sering dipakai untuk dua bilangan: dua bilangan disebut koprima bila fpb-nya sama dengan satu. koprima berarti fpb-nya memakai rumus untuk tiga bilangan atau lebih. rumus itu hanya berlaku untuk tepat dua bilangan. keterbagian & kongruensi",
       "snippet": "FPB dua bilangan bisa dicari tanpa memfaktorkan keduanya. Ini berguna sekali ketika bilangannya besar dan faktorisasinya sendiri sulit — persis situasi yang ..."
+    },
+    {
+      "cardId": "osn-sarang-merpati-c1",
+      "topicId": "osn-sarang-merpati",
+      "topicTitle": "Prinsip Sarang Merpati dan Invarian",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Sarang merpati: lebih banyak benda daripada wadah",
+      "haystack": "sarang merpati: lebih banyak benda daripada wadah kalau merpati menempati sarang, pasti ada sarang yang berisi lebih dari satu merpati. pernyataan itu terdengar sepele sampai kamu melihat apa yang bisa dibuktikannya. di antara orang, pasti ada dua yang lahir di bulan yang sama — karena hanya ada bulan. tidak perlu tahu apa pun tentang orang-orangnya. bentuk umumnya: kalau benda dimasukkan ke wadah, pasti ada wadah yang berisi sedikitnya benda. kekuatan prinsip ini terletak pada apa yang tidak dituntutnya. kamu tidak perlu tahu benda mana yang masuk wadah mana, dan tidak perlu menyusun contohnya. prinsip ini membuktikan sesuatu ada tanpa menunjukkan yang mana. seluruh kesulitan soal olimpiade justru ada di satu langkah: menentukan apa merpatinya dan apa sarangnya. begitu pemilihan itu tepat, sisanya biasanya satu baris. petunjuk untuk memilih sarang: cari sifat yang jumlah kemungkinannya terbatas — sisa bagi, paritas, digit terakhir, atau daerah pada suatu bangun. benda dalam wadah memaksa ada wadah berisi lebih dari satu umum: ada wadah berisi sedikitnya benda kesulitannya ada pada memilih apa merpati dan apa sarangnya mencoba menyusun contoh nyatanya. prinsip ini membuktikan keberadaan tanpa menunjukkan yang mana, dan justru itulah kegunaannya — memaksa dirimu menemukan contohnya sering malah membuat soal jadi mustahil. prinsip sarang merpati dan invarian",
+      "snippet": "Kalau [rumus] merpati menempati [rumus] sarang, pasti ada sarang yang berisi lebih dari satu merpati. Pernyataan itu terdengar sepele sampai kamu melihat apa..."
+    },
+    {
+      "cardId": "osn-sarang-merpati-c2",
+      "topicId": "osn-sarang-merpati",
+      "topicTitle": "Prinsip Sarang Merpati dan Invarian",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Memilih sarang yang tepat",
+      "haystack": "memilih sarang yang tepat soal sarang merpati yang sulit selalu menyembunyikan sarangnya. berikut pilihan yang paling sering berhasil. sisa bagi. kalau soal menyebut keterbagian atau selisih kelipatan , sarangnya adalah kelas sisa. ini pilihan yang hampir selalu dicoba pertama. daerah geometris. kalau soal menyebut titik-titik dalam sebuah bangun, bagilah bangun itu menjadi beberapa bagian. contoh: titik di dalam persegi pasti memuat dua titik berjarak paling jauh — bagi perseginya menjadi empat persegi , yang diagonalnya . paritas atau nilai terbatas. kalau setiap benda punya sifat yang hanya bernilai beberapa kemungkinan, sifat itu sendiri adalah sarangnya. jumlah parsial. untuk barisan bilangan, bentuk dengan jumlah suku pertama. kalau dua jumlah parsial bersisa sama modulo , maka selisihnya — yaitu jumlah beberapa suku berurutan — habis dibagi . trik terakhir itu sangat produktif: ia mengubah soal tentang \"beberapa suku berurutan\" menjadi soal tentang dua jumlah parsial, yang jauh lebih mudah ditangani. sisa bagi adalah pilihan sarang yang paling sering berhasil untuk titik dalam bangun, bagi bangunnya menjadi daerah jumlah parsial mengubah soal 'suku berurutan' menjadi soal dua bilangan memilih sarang sebanyak atau lebih banyak daripada merpatinya. kalau jumlah sarangnya tidak kurang dari jumlah merpatinya, prinsip ini tidak menyimpulkan apa pun — dan itu tanda bahwa pemilihanmu perlu diperbaiki. prinsip sarang merpati dan invarian",
+      "snippet": "Soal sarang merpati yang sulit selalu menyembunyikan sarangnya. Berikut pilihan yang paling sering berhasil. Sisa bagi. Kalau soal menyebut keterbagian atau ..."
+    },
+    {
+      "cardId": "osn-sarang-merpati-c3",
+      "topicId": "osn-sarang-merpati",
+      "topicTitle": "Prinsip Sarang Merpati dan Invarian",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Invarian: besaran yang tidak pernah berubah",
+      "haystack": "invarian: besaran yang tidak pernah berubah sarang merpati membuktikan sesuatu pasti terjadi . invarian membuktikan kebalikannya: sesuatu mustahil terjadi . gagasannya: temukan besaran yang tidak berubah oleh operasi apa pun yang diizinkan. kalau keadaan awal dan keadaan target punya nilai besaran berbeda, target itu tidak akan pernah tercapai. contoh. di papan tertulis bilangan sampai . sekali langkah, kamu boleh menghapus dua bilangan lalu menuliskan selisihnya. mungkinkah bilangan terakhir yang tersisa adalah ? perhatikan paritas jumlah seluruh bilangan . awalnya jumlahnya , yaitu ganjil. saat kamu mengganti dan dengan , jumlahnya berubah sebesar — selalu bilangan genap. perubahan genap tidak mengubah paritas. jadi jumlahnya selalu ganjil, di langkah ke berapa pun. bilangan terakhir yang tersisa juga merupakan jumlah itu sendiri, jadi ia pasti ganjil. karena genap, ia mustahil. perhatikan bahwa kita tidak pernah mencoba satu pun urutan langkah. invarian menutup seluruh kemungkinan sekaligus. invarian membuktikan kemustahilan, bukan keberadaan paritas adalah invarian yang paling sering berhasil satu invarian menutup seluruh kemungkinan sekaligus menyimpulkan \"mustahil\" hanya karena beberapa percobaan gagal. percobaan yang gagal tidak membuktikan apa pun — yang membuktikan adalah besaran yang terbukti tidak pernah berubah. prinsip sarang merpati dan invarian",
+      "snippet": "Sarang merpati membuktikan sesuatu pasti terjadi. Invarian membuktikan kebalikannya: sesuatu mustahil terjadi. Gagasannya: temukan besaran yang tidak berubah..."
+    },
+    {
+      "cardId": "osn-sarang-merpati-c4",
+      "topicId": "osn-sarang-merpati",
+      "topicTitle": "Prinsip Sarang Merpati dan Invarian",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Mencari invarian yang tepat",
+      "haystack": "mencari invarian yang tepat sama seperti sarang merpati, seluruh kesulitannya ada pada memilih besaran yang tepat. berikut yang paling sering berhasil. paritas. ganjil atau genap dari sebuah jumlah, selisih, hasil kali, atau cacah. ini selalu dicoba pertama karena paling sering berhasil. sisa bagi. untuk operasi yang menambah atau mengurangi dengan nilai tetap, periksa nilainya modulo bilangan itu. pewarnaan. untuk soal papan dan ubin, warnai petaknya — dua warna berselang-seling, atau tiga warna diagonal. setiap ubin lalu menutup pola warna yang tetap. jumlah berbobot. beri setiap posisi sebuah bobot, lalu periksa jumlah berbobotnya. ini berguna untuk soal yang melibatkan perpindahan bidak. cara mencarinya: kerjakan beberapa langkah dan amati apa yang tidak berubah. hitung jumlahnya, hitung paritasnya, hitung sisanya modulo bilangan kecil. besaran yang bertahan di semua percobaan itulah calon invarianmu. sesudah menemukannya, buktikan ia benar-benar kekal untuk setiap operasi yang diizinkan — bukan hanya untuk contoh yang kebetulan kamu coba. coba paritas lebih dulu — ia paling sering berhasil untuk soal papan dan ubin, pewarnaan hampir selalu jalannya buktikan kekekalannya untuk setiap operasi, bukan hanya contohmu berhenti setelah menemukan besaran yang bertahan di beberapa contoh. calon invarian wajib dibuktikan kekal untuk semua operasi yang diizinkan — tanpa itu, buktinya belum ada. prinsip sarang merpati dan invarian",
+      "snippet": "Sama seperti sarang merpati, seluruh kesulitannya ada pada memilih besaran yang tepat. Berikut yang paling sering berhasil. Paritas. Ganjil atau genap dari s..."
+    },
+    {
+      "cardId": "osn-sarang-merpati-c5",
+      "topicId": "osn-sarang-merpati",
+      "topicTitle": "Prinsip Sarang Merpati dan Invarian",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan sarang merpati dan invarian",
+      "haystack": "empat jebakan sarang merpati dan invarian 1. sarang sebanyak atau lebih banyak daripada merpati. prinsip ini tidak menyimpulkan apa pun kalau jumlah sarangnya tidak kurang dari jumlah merpatinya. kalau perbandinganmu tidak ketat, pemilihan sarangmu perlu diperbaiki. 2. salah membaca \"minimal untuk memastikan\". yang dicari adalah keadaan terburuk plus satu, bukan keadaan yang kebetulan berhasil. untuk tiga bola sewarna dari empat warna, jawabannya , bukan . 3. menyimpulkan kemustahilan dari percobaan yang gagal. berapa pun banyaknya percobaan gagal, itu bukan bukti. bukti datang dari besaran yang terbukti kekal. 4. tidak memeriksa kekekalan invarian untuk semua operasi. kalau soal mengizinkan dua jenis langkah, keduanya harus diperiksa. satu operasi yang merusak invarian membatalkan seluruh argumennya. pemeriksaan penutup untuk keduanya: nyatakan dengan jelas apa merpatinya, apa sarangnya, atau besaran apa yang kekal. argumen yang tidak bisa dinyatakan sejelas itu biasanya memang belum utuh. jumlah merpati harus benar-benar melebihi jumlah sarang \"minimal untuk memastikan\" berarti keadaan terburuk ditambah satu periksa kekekalan invarian untuk setiap operasi yang diizinkan menganggap contoh yang berhasil sudah menjawab soal \"minimal untuk memastikan\". mengambil bola memang bisa memberi tiga warna sama, tapi soalnya menuntut jaminan — dan jaminan baru datang di bola ke- . prinsip sarang merpati dan invarian",
+      "snippet": "1. Sarang sebanyak atau lebih banyak daripada merpati. Prinsip ini tidak menyimpulkan apa pun kalau jumlah sarangnya tidak kurang dari jumlah merpatinya. Kal..."
     }
   ]
 }

@@ -1,0 +1,259 @@
+{
+  "id": "osn-hitung-dua-cara",
+  "track": "olimpiade",
+  "title": "Menghitung Dua Cara dan Rekursi",
+  "order": 5,
+  "prerequisites": [
+    "pel-pencacahan"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Dua jawaban untuk satu pertanyaan harus sama — dan dari situ identitas lahir.",
+  "tags": [
+    "kombinatorika",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-hitung-dua-cara-c1",
+      "type": "konsep",
+      "title": "Satu himpunan, dua cara menghitungnya",
+      "body": "Teknik pembuktian paling elegan dalam kombinatorika bersandar pada satu gagasan sederhana: kalau kamu menghitung himpunan yang sama dengan dua cara berbeda, kedua hasilnya wajib sama.\n\n**Contoh.** Berapa banyak himpunan bagian dari sebuah himpunan beranggota $n$?\n\n*Cara pertama.* Untuk setiap anggota, ada dua pilihan: masuk atau tidak. Karena pilihan itu bebas satu sama lain, banyaknya himpunan bagian adalah $2^n$.\n\n*Cara kedua.* Kelompokkan menurut ukurannya. Ada $\\binom{n}{0}$ himpunan bagian berukuran nol, $\\binom{n}{1}$ berukuran satu, dan seterusnya.\n\nKedua cara menghitung benda yang sama, jadi:\n$$\\sum_{k=0}^{n}\\binom{n}{k} = 2^n$$\n\nIdentitas ini terbukti tanpa satu pun manipulasi aljabar. Tidak ada penjabaran, tidak ada induksi — hanya dua sudut pandang atas himpunan yang sama.\n\nInilah kekuatan teknik ini. Bukti semacam ini disebut bukti bijektif, dan ia sering menjelaskan **kenapa** sebuah identitas benar, bukan sekadar memastikan bahwa ia benar.",
+      "questions": [
+        {
+          "id": "osn-hitung-dua-cara-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\binom{5}{0}+\\binom{5}{1}+\\binom{5}{2}+\\binom{5}{3}+\\binom{5}{4}+\\binom{5}{5}$ adalah ...",
+          "options": [
+            "$32$",
+            "$31$",
+            "$16$",
+            "$25$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlah itu menghitung seluruh himpunan bagian dari himpunan beranggota $5$, dikelompokkan menurut ukurannya.\n\nCara kedua menghitungnya: setiap anggota punya dua pilihan, masuk atau tidak, jadi totalnya $2^5 = 32$.\n\n$$\\sum_{k=0}^{5}\\binom{5}{k} = 2^5 = 32$$\n\nCek langsung: $1 + 5 + 10 + 10 + 5 + 1 = 32$ ✓\n\nPilihan $31$ adalah jebakan untuk yang mengecualikan himpunan kosong — padahal $\\binom{5}{0} = 1$ memang menghitungnya.",
+          "hint": "Apa yang sebenarnya dihitung oleh jumlah ini?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-hitung-dua-cara-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Identitas Pascal $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$ dapat dijelaskan dengan menghitung dua cara, yaitu dengan ...",
+          "options": [
+            "memisahkan berdasarkan apakah satu anggota tertentu terpilih atau tidak",
+            "menjumlahkan seluruh baris segitiga Pascal",
+            "menjabarkan $(1+x)^n$ dan membandingkan koefisien",
+            "memakai induksi matematika pada $n$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ruas kiri menghitung banyaknya cara memilih $k$ benda dari $n$.\n\nUntuk menghitungnya dengan cara kedua, tandai satu benda tertentu — sebut saja benda $A$ — lalu pisahkan pilihan-pilihan itu menjadi dua kelompok yang tidak beririsan.\n\n**$A$ terpilih:** tinggal memilih $k-1$ benda lagi dari $n-1$ sisanya, ada $\\binom{n-1}{k-1}$ cara.\n\n**$A$ tidak terpilih:** seluruh $k$ benda diambil dari $n-1$ sisanya, ada $\\binom{n-1}{k}$ cara.\n\nKarena setiap pilihan masuk tepat satu kelompok, jumlahnya sama dengan totalnya.\n\nCek dengan angka: $\\binom{10}{3} = 120$ dan $\\binom{9}{2}+\\binom{9}{3} = 36 + 84 = 120$ ✓",
+          "hint": "Tandai satu benda, lalu pisahkan berdasarkan nasibnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Dua cara menghitung himpunan yang sama harus memberi hasil sama",
+        "$\\sum_k \\binom{n}{k} = 2^n$ terbukti tanpa aljabar sama sekali",
+        "Bukti bijektif menjelaskan kenapa, bukan hanya memastikan bahwa"
+      ],
+      "pitfall": "Mengira kedua cara harus menghitung dengan rumus yang mirip. Justru sebaliknya — makin berbeda kedua sudut pandangnya, makin kuat identitas yang dihasilkannya."
+    },
+    {
+      "id": "osn-hitung-dua-cara-c2",
+      "type": "teknik",
+      "title": "Menghitung pasangan dari dua arah",
+      "body": "Bentuk paling produktif dari teknik ini adalah menghitung **pasangan**. Susun sebuah himpunan pasangan, lalu hitung dari sisi kiri dan sisi kanan.\n\n**Contoh.** Buktikan $\\sum_{k=0}^{n} k\\binom{n}{k} = n \\cdot 2^{n-1}$.\n\nHitung banyaknya pasangan (panitia, ketua) yang bisa dibentuk dari $n$ orang, dengan ketua harus anggota panitianya.\n\n*Dari sisi panitia.* Pilih dulu panitia berukuran $k$, ada $\\binom{n}{k}$ cara. Lalu pilih ketuanya dari $k$ anggota itu, ada $k$ cara. Jumlahkan untuk semua ukuran: $\\sum_k k\\binom{n}{k}$.\n\n*Dari sisi ketua.* Pilih dulu ketuanya, ada $n$ cara. Lalu tentukan siapa saja anggota lainnya — setiap dari $n-1$ orang sisanya bebas masuk atau tidak, memberi $2^{n-1}$ cara.\n\nKedua cara menghitung himpunan pasangan yang sama, jadi identitasnya terbukti.\n\nKunci keberhasilannya ada pada memilih **benda apa** yang dihitung. Benda itu harus punya dua bagian yang bisa dipilih dalam urutan berbeda — dan urutan yang berbeda itulah yang menghasilkan dua rumus berbeda.",
+      "questions": [
+        {
+          "id": "osn-hitung-dua-cara-q3",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Dari $10$ orang, berapa banyak cara memilih sebuah panitia beranggota $3$ orang? (bilangan bulat)",
+          "answer": "120",
+          "acceptedAnswers": [
+            "120"
+          ],
+          "solution": "Ini kombinasi biasa karena urutannya tidak diperhatikan:\n\n$$\\binom{10}{3} = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = \\frac{720}{6} = 120$$\n\nCek dengan identitas Pascal: $\\binom{10}{3} = \\binom{9}{2} + \\binom{9}{3} = 36 + 84 = 120$ ✓\n\nPembagian dengan $3! = 6$ itu yang membedakannya dari permutasi. Tanpa pembagian itu kamu menghitung $720$ susunan berurutan, padahal panitia yang sama dengan urutan berbeda tetaplah panitia yang sama.",
+          "hint": "Urutan anggota panitia tidak diperhatikan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-hitung-dua-cara-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya diagonal pada segi delapan beraturan adalah ...",
+          "options": [
+            "$20$",
+            "$28$",
+            "$16$",
+            "$24$"
+          ],
+          "answerIndex": 0,
+          "solution": "Setiap diagonal menghubungkan dua titik sudut, jadi mulailah dengan menghitung seluruh pasangan titik sudut:\n\n$$\\binom{8}{2} = \\frac{8 \\times 7}{2} = 28$$\n\nTapi $28$ itu mencakup sisi-sisinya juga. Segi delapan punya $8$ sisi, dan sisi bukan diagonal:\n\n$$28 - 8 = 20$$\n\nRumus umumnya $\\frac{n(n-3)}{2}$, yang untuk $n=8$ memberi $\\frac{8 \\times 5}{2} = 20$ ✓\n\nBentuk $n-3$ itu masuk akal: dari setiap titik sudut, kamu tidak bisa menarik diagonal ke dirinya sendiri maupun ke dua tetangganya.",
+          "hint": "Hitung semua pasangan titik sudut, lalu buang sisinya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Hitung pasangan, lalu balik urutan pemilihannya",
+        "Sisi kiri dan kanan memberi rumus berbeda untuk benda sama",
+        "Kuncinya: menemukan benda apa yang layak dihitung"
+      ],
+      "pitfall": "Menyusun dua cara yang sebetulnya menghitung himpunan berbeda. Sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama persis — termasuk kasus batas seperti panitia kosong."
+    },
+    {
+      "id": "osn-hitung-dua-cara-c3",
+      "type": "konsep",
+      "title": "Rekursi: menyandarkan pada kasus lebih kecil",
+      "body": "Kalau menghitung langsung terasa mustahil, coba tanyakan: **bagaimana kasus berukuran $n$ bersandar pada kasus yang lebih kecil?**\n\n**Contoh.** Ada berapa cara menaiki tangga $n$ anak tangga, kalau sekali melangkah kamu boleh naik satu atau dua anak tangga?\n\nPerhatikan langkah **terakhir**. Ia pasti satu anak tangga atau dua, dan tidak ada kemungkinan ketiga.\n\n- Kalau langkah terakhirnya satu, sebelumnya kamu berada di anak tangga ke-$(n-1)$\n- Kalau langkah terakhirnya dua, sebelumnya kamu berada di anak tangga ke-$(n-2)$\n\nKedua kemungkinan itu tidak beririsan dan mencakup semuanya, jadi:\n$$T(n) = T(n-1) + T(n-2)$$\n\nDengan $T(1) = 1$ dan $T(2) = 2$, barisannya menjadi $1, 2, 3, 5, 8, 13, 21, 34, 55, 89$ — barisan Fibonacci yang bergeser. Jadi $T(10) = 89$.\n\nPola kerjanya selalu sama: cari satu keputusan yang **memecah masalah menjadi kasus-kasus yang tidak beririsan dan mencakup semuanya**. Langkah terakhir, benda terakhir, atau posisi paling kanan adalah pilihan yang hampir selalu berhasil.",
+      "questions": [
+        {
+          "id": "osn-hitung-dua-cara-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya cara menaiki tangga dengan $5$ anak tangga, jika sekali melangkah boleh naik satu atau dua anak tangga, adalah ...",
+          "options": [
+            "$8$",
+            "$5$",
+            "$13$",
+            "$10$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rekursi $T(n) = T(n-1) + T(n-2)$ berdasarkan langkah terakhir.\n\nNilai awalnya dihitung manual:\n\n$T(1) = 1$ (hanya satu cara)\n\n$T(2) = 2$ (satu-satu, atau langsung dua)\n\nLanjutkan:\n\n$T(3) = 2 + 1 = 3$\n\n$T(4) = 3 + 2 = 5$\n\n$T(5) = 5 + 3 = 8$\n\nJadi ada $8$ cara. Perhatikan bahwa barisannya adalah Fibonacci yang bergeser satu posisi.",
+          "hint": "Pikirkan langkah terakhirnya: satu atau dua anak tangga.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-hitung-dua-cara-q6",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Dengan aturan yang sama (naik satu atau dua anak tangga sekali melangkah), berapa banyak cara menaiki tangga dengan $10$ anak tangga? (bilangan bulat)",
+          "answer": "89",
+          "acceptedAnswers": [
+            "89"
+          ],
+          "solution": "Lanjutkan barisan $T(n) = T(n-1) + T(n-2)$ dari $T(1)=1$ dan $T(2)=2$:\n\n$$1,\\ 2,\\ 3,\\ 5,\\ 8,\\ 13,\\ 21,\\ 34,\\ 55,\\ 89$$\n\nSuku ke-$10$ adalah $89$.\n\nPerhatikan betapa cepat rekursi menyelesaikan soal ini: mendaftar seluruh $89$ jalur satu per satu akan sangat panjang, sementara sepuluh penjumlahan sudah cukup.\n\nKesalahan yang sering terjadi adalah memakai $T(1)=1$, $T(2)=1$ seperti Fibonacci baku, yang akan memberi $55$ — meleset satu posisi.",
+          "hint": "Teruskan barisannya sampai suku kesepuluh.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Cari keputusan yang memecah soal jadi kasus lebih kecil",
+        "Kasusnya harus tidak beririsan dan mencakup semua",
+        "Nilai awal harus dihitung manual, bukan ditebak"
+      ],
+      "pitfall": "Menetapkan nilai awal secara ceroboh. Untuk soal tangga, $T(2) = 2$ bukan $1$ — dua anak tangga bisa dinaiki satu-satu atau sekaligus. Salah satu nilai awal menggeser seluruh barisannya."
+    },
+    {
+      "id": "osn-hitung-dua-cara-c4",
+      "type": "contoh",
+      "title": "Rekursi dengan syarat larangan",
+      "body": "Rekursi sangat cocok untuk soal yang melarang pola tertentu.\n\n**Contoh.** Ada berapa barisan biner panjang $n$ yang tidak memuat dua angka $1$ berdampingan?\n\nPerhatikan digit **terakhir**:\n\n- Kalau digit terakhirnya $0$, digit sebelumnya boleh apa saja asalkan sah. Ada $B(n-1)$ pilihan.\n- Kalau digit terakhirnya $1$, digit sebelumnya **wajib** $0$ agar tidak melanggar. Sisanya adalah barisan sah panjang $n-2$, ada $B(n-2)$ pilihan.\n\n$$B(n) = B(n-1) + B(n-2)$$\n\nNilai awalnya: $B(1) = 2$ (yaitu $0$ dan $1$) dan $B(2) = 3$ (yaitu $00$, $01$, $10$ — sedangkan $11$ dilarang).\n\nBarisannya: $2, 3, 5, 8, 13, 21, 34, 55$.\n\nPerhatikan bahwa rekursinya sama persis dengan soal tangga, tapi nilai awalnya berbeda sehingga barisannya bergeser. Ini sering terjadi: banyak soal berbeda berbagi rekursi yang sama, dan yang membedakan hasilnya hanyalah kasus dasarnya. Karena itu nilai awal wajib dihitung manual, tidak boleh ditebak dari kemiripan.",
+      "questions": [
+        {
+          "id": "osn-hitung-dua-cara-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya barisan biner panjang $5$ yang tidak memuat dua angka $1$ berdampingan adalah ...",
+          "options": [
+            "$13$",
+            "$8$",
+            "$21$",
+            "$16$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rekursi $B(n) = B(n-1) + B(n-2)$ berdasarkan digit terakhir.\n\nNilai awalnya:\n\n$B(1) = 2$ — yaitu $0$ dan $1$\n\n$B(2) = 3$ — yaitu $00$, $01$, $10$; sedangkan $11$ dilarang\n\nLanjutkan:\n\n$B(3) = 3 + 2 = 5$\n\n$B(4) = 5 + 3 = 8$\n\n$B(5) = 8 + 5 = 13$\n\nJadi ada $13$ barisan. Bandingkan dengan $2^5 = 32$ barisan tanpa syarat — larangan itu memangkas lebih dari separuhnya.",
+          "hint": "Perhatikan digit terakhirnya; jika $1$, digit sebelumnya terpaksa $0$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-hitung-dua-cara-q7b",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dua soal berbeda sama-sama memiliki rekursi $a_n = a_{n-1} + a_{n-2}$, tetapi soal pertama bernilai awal $1, 2$ dan soal kedua bernilai awal $2, 3$. Suku ke-$6$ keduanya berturut-turut adalah ...",
+          "options": [
+            "$13$ dan $21$",
+            "$13$ dan $13$",
+            "$8$ dan $13$",
+            "$21$ dan $34$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tuliskan kedua barisannya.\n\n**Mulai dari $1, 2$:** $1, 2, 3, 5, 8, 13, \\ldots$ — suku ke-$6$ adalah $13$.\n\n**Mulai dari $2, 3$:** $2, 3, 5, 8, 13, 21, \\ldots$ — suku ke-$6$ adalah $21$.\n\nRekursinya identik, tapi hasilnya berbeda karena barisan kedua bergeser satu posisi di depan.\n\nInilah alasan nilai awal wajib dihitung manual untuk setiap soal. Menyalinnya dari soal lain yang rekursinya kebetulan sama akan menggeser seluruh jawabanmu.",
+          "hint": "Tulis kedua barisannya sampai suku keenam.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Larangan pola sering memaksa lebih dari satu posisi sekaligus",
+        "Soal berbeda bisa berbagi rekursi sama dengan nilai awal berbeda",
+        "Nilai awal wajib dihitung manual"
+      ],
+      "pitfall": "Menyalin nilai awal dari soal lain yang rekursinya mirip. Soal tangga mulai dari $1, 2$ sedangkan soal barisan biner mulai dari $2, 3$ — rekursinya identik, tapi hasilnya bergeser satu posisi sepanjang barisan."
+    },
+    {
+      "id": "osn-hitung-dua-cara-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan pencacahan olimpiade",
+      "body": "**1. Dua cara yang menghitung himpunan berbeda.** Sebelum menyamakan hasilnya, pastikan kedua cara benar-benar mencacah benda yang sama — termasuk kasus batas seperti himpunan kosong atau panitia tanpa anggota.\n\n**2. Kasus rekursi yang saling beririsan.** Kalau satu keadaan bisa masuk dua kasus sekaligus, kamu menghitungnya dua kali. Pemisahannya harus tegas: satu keadaan, tepat satu kasus.\n\n**3. Nilai awal yang ditebak.** Rekursi yang benar dengan nilai awal yang salah menghasilkan seluruh barisan yang salah. Hitung dua atau tiga suku pertama dengan mendaftar manual.\n\n**4. Lupa membuang yang bukan bagian dari jawaban.** Pada soal diagonal, $\\binom{n}{2}$ mencakup sisi-sisinya; pada soal himpunan bagian tak kosong, $2^n$ mencakup himpunan kosong.\n\nSatu pemeriksaan menangkap hampir semuanya: uji rumusmu pada kasus kecil yang bisa didaftar manual. Kalau $n = 3$ atau $n = 4$ sudah meleset, tidak ada gunanya melanjutkan ke $n$ besar.",
+      "questions": [
+        {
+          "id": "osn-hitung-dua-cara-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Dalam sebuah pertemuan, setiap dua orang berjabat tangan tepat sekali. Jika ada $10$ orang, banyaknya jabat tangan adalah ...",
+          "options": [
+            "$45$",
+            "$90$",
+            "$100$",
+            "$55$"
+          ],
+          "answerIndex": 0,
+          "solution": "Setiap jabat tangan melibatkan tepat dua orang, dan urutannya tidak diperhatikan — A berjabat tangan dengan B sama dengan B berjabat tangan dengan A.\n\n$$\\binom{10}{2} = \\frac{10 \\times 9}{2} = 45$$\n\nCara lain melihatnya: setiap orang berjabat tangan dengan $9$ orang lain, memberi $10 \\times 9 = 90$. Tapi angka itu menghitung setiap jabat tangan dua kali — sekali dari masing-masing pihak — jadi dibagi dua menjadi $45$.\n\nKedua cara menghitung benda yang sama, dan kesepakatan hasilnya adalah contoh kecil dari teknik menghitung dua cara.",
+          "hint": "Setiap jabat tangan melibatkan dua orang.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-hitung-dua-cara-q9",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Jika sebuah rekursi $a_n = a_{n-1} + a_{n-2}$ sudah benar, maka nilai awalnya tidak mempengaruhi hasil akhir untuk $n$ besar.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Nilai awal menentukan **seluruh** barisannya.\n\nBandingkan dua barisan dengan rekursi yang sama persis:\n\nMulai dari $1, 2$: $1, 2, 3, 5, 8, 13, 21, 34, 55, 89$\n\nMulai dari $2, 3$: $2, 3, 5, 8, 13, 21, 34, 55, 89, 144$\n\nPada suku ke-$10$, yang satu memberi $89$ dan yang lain $144$ — berbeda jauh, dan selisihnya justru **membesar** seiring $n$ bertambah, bukan mengecil.\n\nKarena itu kasus dasar harus dihitung manual dengan mendaftar, bukan disalin dari soal lain yang rekursinya kebetulan mirip.",
+          "hint": "Bandingkan dua barisan yang rekursinya sama tapi nilai awalnya berbeda.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pastikan kedua cara mencacah benda yang sama persis",
+        "Kasus rekursi harus tidak beririsan dan mencakup semua",
+        "Uji rumusmu pada kasus kecil yang bisa didaftar manual"
+      ],
+      "pitfall": "Mempercayai rumus yang terlihat rapi tanpa mengujinya pada kasus kecil. Rumus pencacahan yang meleset karena pencacahan ganda sering tetap terlihat masuk akal — hanya pengujian manual yang membongkarnya."
+    }
+  ]
+}

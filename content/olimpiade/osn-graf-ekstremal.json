@@ -1,0 +1,260 @@
+{
+  "id": "osn-graf-ekstremal",
+  "track": "olimpiade",
+  "title": "Teori Graf dan Prinsip Ekstremal",
+  "order": 7,
+  "prerequisites": [
+    "osn-sarang-merpati"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Titik dan garis yang memodelkan hubungan apa pun, dan cara memulai bukti dari yang paling ujung.",
+  "tags": [
+    "kombinatorika",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-graf-ekstremal-c1",
+      "type": "konsep",
+      "title": "Graf: hubungan apa pun jadi titik dan garis",
+      "body": "Graf adalah himpunan **simpul** (titik) yang sebagian pasangannya dihubungkan oleh **sisi** (garis). Sesederhana itu, dan justru karena itu ia bisa memodelkan hampir apa saja.\n\nOrang yang saling kenal, kota yang terhubung jalan, tim yang sudah bertanding, bilangan yang saling membagi — semuanya menjadi graf begitu kamu memutuskan apa simpulnya dan kapan dua simpul dihubungkan.\n\n**Derajat** sebuah simpul adalah banyaknya sisi yang menempel padanya. Dari situ lahir hubungan yang menjadi tulang punggung hampir semua soal graf:\n$$\\sum_{v} \\deg(v) = 2|E|$$\n\nJumlah seluruh derajat sama dengan dua kali banyaknya sisi. Alasannya adalah menghitung dua cara: setiap sisi punya dua ujung, jadi ia menyumbang tepat $2$ pada total derajat.\n\nAkibat langsungnya sering langsung menyelesaikan soal: jumlah seluruh derajat pasti **genap**. Karena itu banyaknya simpul berderajat ganjil juga pasti genap.\n\nContoh pemakaiannya: mungkinkah ada $7$ orang yang masing-masing berkenalan dengan tepat $3$ orang lain? Jumlah derajatnya $21$, ganjil — jadi mustahil.",
+      "questions": [
+        {
+          "id": "osn-graf-ekstremal-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Mungkinkah terdapat $7$ orang yang masing-masing berkenalan dengan tepat $3$ orang lainnya?",
+          "options": [
+            "Tidak, karena jumlah derajatnya ganjil",
+            "Ya, dengan susunan tertentu",
+            "Tidak, karena $7$ bilangan prima",
+            "Ya, karena $3 < 7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modelkan sebagai graf: simpul adalah orang, sisi adalah hubungan kenal.\n\nKalau setiap dari $7$ orang berderajat $3$, jumlah seluruh derajatnya:\n\n$$7 \\times 3 = 21$$\n\nTapi jumlah derajat selalu sama dengan $2|E|$, yang pasti **genap**. Angka $21$ ganjil, jadi keadaan itu mustahil.\n\nPerhatikan bahwa argumennya tidak bergantung pada susunan sama sekali. Kita tidak mencoba satu pun kemungkinan — hubungan derajat sudah menutup semuanya sekaligus.",
+          "hint": "Hitung jumlah seluruh derajatnya.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-graf-ekstremal-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah graf lengkap dengan $6$ simpul (setiap dua simpul terhubung) memiliki berapa sisi?",
+          "options": [
+            "$15$",
+            "$30$",
+            "$12$",
+            "$36$"
+          ],
+          "answerIndex": 0,
+          "solution": "Setiap sisi menghubungkan tepat dua simpul, dan pada graf lengkap **setiap** pasangan terhubung.\n\n$$\\binom{6}{2} = \\frac{6 \\times 5}{2} = 15$$\n\nCek lewat derajat: setiap simpul terhubung ke $5$ simpul lain, jadi jumlah derajatnya $6 \\times 5 = 30$. Karena jumlah derajat sama dengan $2|E|$:\n\n$$|E| = \\frac{30}{2} = 15 \\text{ ✓}$$\n\nPilihan $30$ adalah jumlah derajatnya, bukan banyaknya sisi — keduanya berselisih faktor dua.",
+          "hint": "Setiap sisi adalah satu pasangan simpul.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sum \\deg(v) = 2|E|$, hasil dari menghitung dua cara",
+        "Jumlah seluruh derajat selalu genap",
+        "Banyaknya simpul berderajat ganjil selalu genap"
+      ],
+      "pitfall": "Menganggap setiap barisan derajat bisa diwujudkan sebagai graf. Barisan yang jumlahnya ganjil mustahil, dan bahkan yang jumlahnya genap pun belum tentu bisa — misalnya satu simpul berderajat $5$ pada graf beranggota $4$ simpul."
+    },
+    {
+      "id": "osn-graf-ekstremal-c2",
+      "type": "rumus",
+      "title": "Graf terhubung, pohon, dan lintasan",
+      "body": "Beberapa istilah yang muncul terus-menerus di soal olimpiade.\n\n**Terhubung** berarti ada lintasan antara setiap dua simpul. Kalau tidak, grafnya terpecah menjadi beberapa **komponen** yang saling terpisah.\n\n**Pohon** adalah graf terhubung tanpa siklus. Sifatnya sangat kaku:\n$$|E| = |V| - 1$$\n\nPohon adalah graf terhubung dengan sisi **paling sedikit**. Menghapus satu sisi mana pun memutus keterhubungannya, dan menambah satu sisi mana pun menciptakan siklus. Tidak ada ruang gerak sama sekali.\n\nAkibat praktisnya: graf terhubung dengan $n$ simpul wajib punya sedikitnya $n-1$ sisi. Kurang dari itu, keterhubungan mustahil.\n\n**Lintasan Euler** melewati setiap **sisi** tepat sekali. Ia ada tepat ketika grafnya terhubung dan banyaknya simpul berderajat ganjil adalah $0$ atau $2$. Alasannya mudah dilihat: setiap kali lintasan memasuki sebuah simpul ia harus keluar lagi, sehingga sisi di simpul itu terpakai berpasangan — kecuali di titik awal dan titik akhir.\n\n**Lintasan Hamilton** melewati setiap **simpul** tepat sekali. Berbeda dari Euler, tidak ada ciri sederhana untuk keberadaannya, dan itulah yang membuatnya jauh lebih sulit.",
+      "questions": [
+        {
+          "id": "osn-graf-ekstremal-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah pohon dengan $10$ simpul memiliki berapa sisi?",
+          "options": [
+            "$9$",
+            "$10$",
+            "$11$",
+            "$45$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pohon adalah graf terhubung tanpa siklus, dan sifat pentingnya:\n\n$$|E| = |V| - 1 = 10 - 1 = 9$$\n\nCara memahaminya: bayangkan membangun pohon itu satu simpul demi satu simpul. Simpul pertama berdiri sendiri tanpa sisi. Setiap simpul berikutnya harus disambungkan dengan tepat satu sisi — lebih dari satu akan menciptakan siklus, kurang dari satu akan memutusnya.\n\nJadi $9$ simpul tambahan membutuhkan tepat $9$ sisi.",
+          "hint": "Setiap simpul baru butuh tepat satu sisi penghubung.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-graf-ekstremal-q4",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Sebuah graf terhubung dengan $10$ simpul dapat memiliki hanya $8$ sisi.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Graf terhubung dengan $n$ simpul membutuhkan sedikitnya $n-1$ sisi, jadi minimalnya $9$.\n\nAlasannya: setiap sisi yang ditambahkan paling banyak menyatukan dua komponen menjadi satu, sehingga mengurangi banyaknya komponen paling banyak satu.\n\nTanpa sisi sama sekali, ada $10$ komponen. Untuk menyatukannya menjadi satu komponen, kamu harus mengurangi sembilan komponen — dan itu butuh sedikitnya $9$ sisi.\n\nDengan $8$ sisi, paling banyak kamu turun ke $2$ komponen, yang berarti grafnya masih terpecah.\n\nGraf dengan tepat $9$ sisi yang terhubung adalah pohon — batas minimumnya.",
+          "hint": "Berapa banyak komponen yang bisa disatukan oleh satu sisi?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pohon: terhubung, tanpa siklus, dan $|E| = |V|-1$",
+        "Graf terhubung $n$ simpul butuh sedikitnya $n-1$ sisi",
+        "Euler ada bila simpul berderajat ganjil ada $0$ atau $2$"
+      ],
+      "pitfall": "Menukar lintasan Euler dengan Hamilton. Euler melewati setiap sisi dan punya ciri derajat yang mudah diperiksa; Hamilton melewati setiap simpul dan tidak punya ciri sederhana sama sekali."
+    },
+    {
+      "id": "osn-graf-ekstremal-c3",
+      "type": "teknik",
+      "title": "Prinsip ekstremal: mulai dari yang paling ujung",
+      "body": "Saat sebuah soal terasa tidak punya pijakan, prinsip ekstremal sering memberikan pijakan itu: **pandanglah benda yang paling besar, paling kecil, atau paling ujung.**\n\nAlasan teknik ini bekerja: benda ekstrem punya sifat tambahan yang tidak dimiliki benda biasa. Simpul berderajat terbesar tidak bisa ditambah tetangganya lagi; lintasan terpanjang tidak bisa diperpanjang. Ketidakmungkinan itulah yang kamu pakai.\n\n**Contoh.** Buktikan bahwa graf yang setiap simpulnya berderajat sedikitnya $2$ pasti memuat siklus.\n\nAmbil lintasan **terpanjang** dalam graf itu, sebut ujungnya $v$. Karena $\\deg(v) \\geq 2$, simpul $v$ punya sedikitnya dua tetangga. Salah satunya ada di lintasan itu — yaitu simpul sebelum $v$.\n\nTetangga yang satu lagi tidak mungkin berada di luar lintasan, sebab kalau begitu lintasannya bisa diperpanjang dan ia bukan yang terpanjang. Jadi tetangga itu pasti berada **di dalam** lintasan, dan sisa lintasan dari situ sampai $v$ ditutup oleh sisi tersebut — sebuah siklus.\n\nPerhatikan polanya: sifat \"terpanjang\" dipakai untuk menyingkirkan satu kemungkinan, dan yang tersisa langsung memberi kesimpulannya.",
+      "questions": [
+        {
+          "id": "osn-graf-ekstremal-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dalam membuktikan bahwa graf dengan semua simpul berderajat sedikitnya $2$ pasti memuat siklus, benda ekstrem yang dipilih adalah ...",
+          "options": [
+            "lintasan terpanjang",
+            "simpul berderajat terkecil",
+            "sisi terpendek",
+            "komponen terbesar"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil lintasan terpanjang, dan sebut salah satu ujungnya $v$.\n\nKarena $\\deg(v) \\geq 2$, simpul $v$ punya sedikitnya dua tetangga. Satu di antaranya adalah simpul sebelum $v$ pada lintasan itu.\n\nTetangga yang lain tidak mungkin berada di luar lintasan — kalau begitu lintasannya bisa diperpanjang, bertentangan dengan pilihan \"terpanjang\".\n\nJadi tetangga itu berada di dalam lintasan, dan sisi ke simpul itu menutup sebuah siklus.\n\nInilah pola khas prinsip ekstremal: sifat \"terpanjang\" menyingkirkan satu kemungkinan, dan sisanya langsung menjadi kesimpulan.",
+          "hint": "Sifat apa yang menyingkirkan kemungkinan 'tetangganya di luar'?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-graf-ekstremal-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Dalam sebuah pesta beranggota $n \\geq 2$ orang, pasti ada dua orang yang jumlah kenalannya sama. Alat yang membuktikannya adalah ...",
+          "options": [
+            "sarang merpati, karena derajat $0$ dan $n-1$ tidak bisa muncul bersamaan",
+            "invarian paritas jumlah derajat",
+            "prinsip ekstremal pada lintasan terpanjang",
+            "rumus $|E| = |V| - 1$ untuk pohon"
+          ],
+          "answerIndex": 0,
+          "solution": "Derajat setiap orang berada di antara $0$ dan $n-1$, jadi sekilas ada $n$ kemungkinan untuk $n$ orang — belum cukup untuk sarang merpati.\n\nTapi kedua nilai ujung itu **tidak bisa muncul bersamaan**. Kalau ada orang berderajat $n-1$, ia kenal semua orang, sehingga tak seorang pun bisa berderajat $0$. Sebaliknya juga begitu.\n\nJadi derajat yang benar-benar tersedia hanya $n-1$ nilai: entah $\\{0, 1, \\ldots, n-2\\}$ atau $\\{1, 2, \\ldots, n-1\\}$.\n\nSekarang ada $n$ orang dan hanya $n-1$ nilai, sehingga sarang merpati menjamin ada dua orang berderajat sama.\n\nLangkah kunci soal ini bukan sarang merpatinya, melainkan menyadari bahwa dua nilai ujungnya saling meniadakan.",
+          "hint": "Bisakah ada orang yang kenal semua orang sekaligus ada yang kenal tak seorang pun?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pandang benda terbesar, terkecil, atau terpanjang",
+        "Benda ekstrem punya sifat tambahan: ia tidak bisa diperbesar lagi",
+        "Ketidakmungkinan diperbesar itulah yang dipakai dalam buktinya"
+      ],
+      "pitfall": "Memilih benda ekstrem yang keberadaannya tidak dijamin. Prinsip ini hanya sah pada himpunan berhingga dan tak kosong — pada himpunan tak hingga, \"yang terbesar\" bisa saja tidak ada sama sekali."
+    },
+    {
+      "id": "osn-graf-ekstremal-c4",
+      "type": "contoh",
+      "title": "Teori Ramsey: keteraturan yang tak terhindarkan",
+      "body": "Salah satu hasil paling mengejutkan dalam kombinatorika: **keacakan yang cukup besar pasti memuat keteraturan.**\n\n**Soal klasik.** Di antara enam orang, buktikan pasti ada tiga yang saling kenal semua, atau tiga yang saling asing semua.\n\nModelkan sebagai graf lengkap $6$ simpul dengan setiap sisi diwarnai merah (kenal) atau biru (asing). Yang harus dibuktikan: pasti ada segitiga sewarna.\n\n**Bukti.** Ambil satu orang, sebut $A$. Ia punya $5$ sisi menuju orang lain, masing-masing merah atau biru. Menurut sarang merpati, sedikitnya $3$ sisi sewarna — anggap saja merah, menuju $B$, $C$, dan $D$.\n\nSekarang perhatikan ketiga sisi di antara $B$, $C$, dan $D$:\n\n- Kalau ada satu yang merah, katakanlah $BC$, maka $A$, $B$, $C$ membentuk segitiga merah.\n- Kalau tidak ada satu pun yang merah, ketiganya biru, dan $B$, $C$, $D$ membentuk segitiga biru.\n\nKedua kemungkinan itu mencakup semuanya, jadi segitiga sewarna pasti ada.\n\nAngka $6$ tidak bisa diturunkan: untuk $5$ orang ada susunan tanpa segitiga sewarna, yaitu pewarnaan berbentuk segi lima beserta diagonal-diagonalnya.",
+      "questions": [
+        {
+          "id": "osn-graf-ekstremal-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dalam bukti bahwa di antara $6$ orang pasti ada $3$ yang saling kenal atau $3$ yang saling asing, langkah pertamanya adalah ...",
+          "options": [
+            "mengambil satu orang dan memperhatikan $5$ hubungannya",
+            "menghitung seluruh sisi graf lengkap $6$ simpul",
+            "memakai invarian paritas",
+            "mengambil lintasan terpanjang"
+          ],
+          "answerIndex": 0,
+          "solution": "Ambil satu orang, sebut $A$. Ia punya $5$ hubungan dengan orang lain, masing-masing bernilai kenal atau asing — dua kemungkinan saja.\n\nMenurut sarang merpati, sedikitnya $\\lceil 5/2 \\rceil = 3$ hubungan bernilai sama. Anggap ketiganya \"kenal\", menuju $B$, $C$, dan $D$.\n\nDari sini soalnya menyusut menjadi pemeriksaan tiga hubungan di antara $B$, $C$, dan $D$ saja:\n\nKalau ada satu pasangan yang saling kenal, ia bersama $A$ membentuk trio saling kenal. Kalau tidak ada satu pun, ketiganya saling asing.\n\nPerhatikan bagaimana langkah pertama itu memangkas soal dari $15$ hubungan menjadi hanya $3$.",
+          "hint": "Sarang merpati dipakai pada hubungan satu orang tertentu.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-graf-ekstremal-q7b",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Hasil \"di antara $n$ orang pasti ada $3$ yang saling kenal atau $3$ yang saling asing\" sudah berlaku mulai dari $n = 5$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Batas terkecilnya adalah $6$, dan angka itu tajam.\n\nUntuk $5$ orang ada pewarnaan tandingan yang tidak memuat segitiga sewarna sama sekali. Susun kelimanya sebagai titik sudut segi lima:\n\n- Lima sisi segi limanya diwarnai merah\n- Lima diagonalnya diwarnai biru\n\nSisi-sisi merah membentuk satu siklus sepanjang lima, dan siklus ganjil sepanjang lima tidak memuat segitiga. Hal yang sama berlaku untuk diagonal birunya, yang juga membentuk siklus sepanjang lima.\n\nJadi tidak ada segitiga sewarna, dan $n = 5$ tidak cukup. Satu orang tambahan sudah mengubah keadaan sepenuhnya — itulah yang membuat bilangan Ramsey $R(3,3) = 6$ menarik.",
+          "hint": "Coba susun lima orang sebagai segi lima, lalu warnai sisi dan diagonalnya berbeda.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Keacakan yang cukup besar memaksa munculnya keteraturan",
+        "Bukti $R(3,3) = 6$ menggabungkan sarang merpati dengan kasus",
+        "Angka $6$ tajam — untuk $5$ orang ada tandingannya"
+      ],
+      "pitfall": "Mengira hasil ini berlaku mulai dari lima orang. Untuk lima orang ada pewarnaan yang sama sekali tidak memuat segitiga sewarna, jadi batas enam itu tidak bisa diperkecil."
+    },
+    {
+      "id": "osn-graf-ekstremal-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan graf dan prinsip ekstremal",
+      "body": "**1. Menukar jumlah derajat dengan banyaknya sisi.** Keduanya berselisih faktor dua. Kalau jawabanmu untuk banyaknya sisi terasa dua kali lipat terlalu besar, kemungkinan inilah sebabnya.\n\n**2. Menganggap semua barisan derajat bisa diwujudkan.** Jumlah yang ganjil langsung mustahil. Bahkan jumlah genap pun belum tentu bisa — derajat $5$ mustahil pada graf beranggota $4$ simpul.\n\n**3. Memilih benda ekstrem yang mungkin tidak ada.** Prinsip ekstremal sah hanya pada himpunan berhingga dan tak kosong. Pastikan dulu bendanya memang ada sebelum memakainya.\n\n**4. Menukar Euler dengan Hamilton.** Euler melewati setiap sisi dan punya ciri derajat yang mudah diperiksa. Hamilton melewati setiap simpul dan tidak punya ciri sederhana sama sekali.\n\nUntuk soal graf, satu kebiasaan sangat membantu: gambar contoh kecil. Graf dengan tiga atau empat simpul cukup untuk menguji sebagian besar dugaan, dan jauh lebih cepat daripada membayangkannya di kepala.",
+      "questions": [
+        {
+          "id": "osn-graf-ekstremal-q8",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Sebuah graf memiliki $5$ simpul dengan derajat berturut-turut $4, 3, 3, 2, 2$. Berapa banyak sisinya? (bilangan bulat)",
+          "answer": "7",
+          "acceptedAnswers": [
+            "7"
+          ],
+          "solution": "Pakai hubungan jumlah derajat dengan banyaknya sisi:\n\n$$\\sum \\deg(v) = 4 + 3 + 3 + 2 + 2 = 14$$\n\n$$|E| = \\frac{14}{2} = 7$$\n\nPerhatikan bahwa jumlah derajatnya genap — syarat yang wajib terpenuhi agar barisan derajat ini mungkin ada. Kalau jumlahnya ganjil, grafnya tidak akan pernah bisa dibuat.\n\nKesalahan umum adalah menjawab $14$, yaitu jumlah derajat itu sendiri. Setiap sisi terhitung dua kali karena punya dua ujung.",
+          "hint": "Jumlah derajat sama dengan dua kali banyaknya sisi.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-graf-ekstremal-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada sebuah graf, banyaknya simpul berderajat ganjil pasti ...",
+          "options": [
+            "genap",
+            "ganjil",
+            "nol",
+            "sama dengan banyaknya sisi"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlah seluruh derajat sama dengan $2|E|$, jadi selalu **genap**.\n\nPisahkan jumlah itu menjadi dua kelompok:\n\n$$\\underbrace{\\sum_{\\deg \\text{ genap}}}_{\\text{genap}} + \\sum_{\\deg \\text{ ganjil}} = \\text{genap}$$\n\nKelompok pertama pasti genap karena seluruh sukunya genap. Agar totalnya genap, kelompok kedua juga wajib genap.\n\nTapi kelompok kedua adalah jumlah dari bilangan-bilangan ganjil, dan jumlah bilangan ganjil genap hanya kalau **banyaknya** genap.\n\nPilihan \"nol\" terlalu kuat: graf dengan dua simpul dan satu sisi punya tepat dua simpul berderajat ganjil.",
+          "hint": "Jumlah berapa banyak bilangan ganjil yang menghasilkan bilangan genap?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Jumlah derajat adalah dua kali banyaknya sisi",
+        "Prinsip ekstremal butuh himpunan berhingga dan tak kosong",
+        "Gambar graf kecil untuk menguji dugaanmu"
+      ],
+      "pitfall": "Menguji dugaan hanya dengan membayangkan graf di kepala. Graf berukuran kecil pun punya banyak susunan, dan menggambar tiga contoh biasanya sudah menemukan tandingan yang tak terbayangkan sebelumnya."
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "id": "osn-sarang-merpati",
+  "track": "olimpiade",
+  "title": "Prinsip Sarang Merpati dan Invarian",
+  "order": 6,
+  "prerequisites": [
+    "pel-pencacahan"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Dua alat untuk membuktikan sesuatu pasti terjadi, atau justru mustahil terjadi.",
+  "tags": [
+    "kombinatorika",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-sarang-merpati-c1",
+      "type": "konsep",
+      "title": "Sarang merpati: lebih banyak benda daripada wadah",
+      "body": "Kalau $n+1$ merpati menempati $n$ sarang, pasti ada sarang yang berisi lebih dari satu merpati.\n\nPernyataan itu terdengar sepele sampai kamu melihat apa yang bisa dibuktikannya. Di antara $13$ orang, pasti ada dua yang lahir di bulan yang sama — karena hanya ada $12$ bulan. Tidak perlu tahu apa pun tentang orang-orangnya.\n\nBentuk umumnya: kalau $n$ benda dimasukkan ke $k$ wadah, pasti ada wadah yang berisi sedikitnya $\\left\\lceil \\frac{n}{k} \\right\\rceil$ benda.\n\nKekuatan prinsip ini terletak pada apa yang **tidak** dituntutnya. Kamu tidak perlu tahu benda mana yang masuk wadah mana, dan tidak perlu menyusun contohnya. Prinsip ini membuktikan sesuatu **ada** tanpa menunjukkan yang mana.\n\nSeluruh kesulitan soal olimpiade justru ada di satu langkah: **menentukan apa merpatinya dan apa sarangnya.** Begitu pemilihan itu tepat, sisanya biasanya satu baris.\n\nPetunjuk untuk memilih sarang: cari sifat yang jumlah kemungkinannya terbatas — sisa bagi, paritas, digit terakhir, atau daerah pada suatu bangun.",
+      "questions": [
+        {
+          "id": "osn-sarang-merpati-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Di antara berapa orang minimal kita bisa memastikan ada dua orang yang lahir pada bulan yang sama?",
+          "options": [
+            "$13$",
+            "$12$",
+            "$24$",
+            "$7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ada $12$ bulan, yang berperan sebagai sarang.\n\nDengan $12$ orang, masih **mungkin** semuanya lahir di bulan berbeda — satu orang per bulan. Jadi $12$ belum cukup.\n\nDengan $13$ orang, sarangnya kehabisan tempat. Berapa pun susunannya, pasti ada bulan yang menampung dua orang.\n\nPerhatikan kata \"minimal\" dan \"memastikan\" pada soalnya. Yang dicari bukan kemungkinan, melainkan jaminan — dan jaminan baru muncul di $n+1 = 13$.",
+          "hint": "Berapa banyak bulan dalam setahun?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-sarang-merpati-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dari bilangan $1$ sampai $100$, berapa banyak bilangan minimal yang harus dipilih agar pasti ada dua di antaranya yang selisihnya kelipatan $9$?",
+          "options": [
+            "$10$",
+            "$9$",
+            "$12$",
+            "$11$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dua bilangan selisihnya kelipatan $9$ tepat ketika keduanya bersisa sama jika dibagi $9$.\n\nJadi sarangnya adalah kelas sisa modulo $9$, dan ada tepat $9$ kelas: sisa $0$ sampai $8$.\n\nDengan $9$ bilangan, masih mungkin semuanya bersisa berbeda. Dengan $10$ bilangan, pasti ada dua yang sekelas.\n\n$$10 = 9 + 1$$\n\nLangkah kunci soal ini bukan hitungannya, melainkan mengenali bahwa \"selisih kelipatan $9$\" sama artinya dengan \"sisa bagi $9$ yang sama\". Sesudah itu, sarangnya langsung terlihat.",
+          "hint": "Kapan dua bilangan selisihnya kelipatan $9$?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$n+1$ benda dalam $n$ wadah memaksa ada wadah berisi lebih dari satu",
+        "Umum: ada wadah berisi sedikitnya $\\lceil n/k \\rceil$ benda",
+        "Kesulitannya ada pada memilih apa merpati dan apa sarangnya"
+      ],
+      "pitfall": "Mencoba menyusun contoh nyatanya. Prinsip ini membuktikan keberadaan tanpa menunjukkan yang mana, dan justru itulah kegunaannya — memaksa dirimu menemukan contohnya sering malah membuat soal jadi mustahil."
+    },
+    {
+      "id": "osn-sarang-merpati-c2",
+      "type": "teknik",
+      "title": "Memilih sarang yang tepat",
+      "body": "Soal sarang merpati yang sulit selalu menyembunyikan sarangnya. Berikut pilihan yang paling sering berhasil.\n\n**Sisa bagi.** Kalau soal menyebut keterbagian atau selisih kelipatan $m$, sarangnya adalah $m$ kelas sisa. Ini pilihan yang hampir selalu dicoba pertama.\n\n**Daerah geometris.** Kalau soal menyebut titik-titik dalam sebuah bangun, bagilah bangun itu menjadi beberapa bagian. Contoh: $5$ titik di dalam persegi $2 \\times 2$ pasti memuat dua titik berjarak paling jauh $\\sqrt{2}$ — bagi perseginya menjadi empat persegi $1\\times 1$, yang diagonalnya $\\sqrt{2}$.\n\n**Paritas atau nilai terbatas.** Kalau setiap benda punya sifat yang hanya bernilai beberapa kemungkinan, sifat itu sendiri adalah sarangnya.\n\n**Jumlah parsial.** Untuk barisan bilangan, bentuk $S_1, S_2, \\ldots, S_n$ dengan $S_k$ jumlah $k$ suku pertama. Kalau dua jumlah parsial bersisa sama modulo $n$, maka selisihnya — yaitu jumlah beberapa suku berurutan — habis dibagi $n$.\n\nTrik terakhir itu sangat produktif: ia mengubah soal tentang \"beberapa suku berurutan\" menjadi soal tentang dua jumlah parsial, yang jauh lebih mudah ditangani.",
+      "questions": [
+        {
+          "id": "osn-sarang-merpati-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Lima titik ditempatkan di dalam persegi berukuran $2 \\times 2$. Pernyataan yang pasti benar adalah ...",
+          "options": [
+            "ada dua titik yang berjarak paling jauh $\\sqrt{2}$",
+            "ada dua titik yang berjarak paling jauh $1$",
+            "kelima titik membentuk segi lima",
+            "ada tiga titik yang segaris"
+          ],
+          "answerIndex": 0,
+          "solution": "Bagi persegi $2 \\times 2$ menjadi empat persegi kecil berukuran $1 \\times 1$. Itulah sarangnya.\n\nAda $5$ titik dan $4$ daerah, jadi menurut prinsip sarang merpati pasti ada satu persegi kecil yang memuat dua titik.\n\nDua titik dalam persegi $1 \\times 1$ paling jauh berjarak sepanjang diagonalnya:\n\n$$\\sqrt{1^2 + 1^2} = \\sqrt{2}$$\n\nJadi ada dua titik berjarak paling jauh $\\sqrt{2}$.\n\nPilihan dengan batas $1$ terlalu kuat — dua titik di sudut berlawanan persegi kecil berjarak $\\sqrt{2} \\approx 1{,}41$, yang melebihi $1$.",
+          "hint": "Bagi perseginya menjadi beberapa daerah lebih dulu.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-sarang-merpati-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Sebuah kotak berisi bola dengan $4$ warna berbeda. Berapa banyak bola minimal yang harus diambil agar pasti mendapat $3$ bola berwarna sama? (bilangan bulat)",
+          "answer": "9",
+          "acceptedAnswers": [
+            "9"
+          ],
+          "solution": "Pikirkan keadaan terburuknya: kamu sudah mengambil sebanyak mungkin bola **tanpa** pernah mendapat tiga warna sama.\n\nPaling banyak kamu bisa punya $2$ bola dari masing-masing warna:\n\n$$4 \\times 2 = 8 \\text{ bola}$$\n\nDengan $8$ bola, masih mungkin belum ada warna yang mencapai tiga. Tapi bola ke-$9$ harus masuk salah satu dari empat warna itu, dan warna itu langsung mencapai tiga.\n\n$$8 + 1 = 9$$\n\nPola umumnya: untuk menjamin $r$ benda sekelompok dari $k$ kelompok, ambil $k(r-1) + 1$ benda.",
+          "hint": "Berapa banyak bola bisa diambil tanpa pernah mendapat tiga warna sama?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sisa bagi adalah pilihan sarang yang paling sering berhasil",
+        "Untuk titik dalam bangun, bagi bangunnya menjadi daerah",
+        "Jumlah parsial mengubah soal 'suku berurutan' menjadi soal dua bilangan"
+      ],
+      "pitfall": "Memilih sarang sebanyak atau lebih banyak daripada merpatinya. Kalau jumlah sarangnya tidak kurang dari jumlah merpatinya, prinsip ini tidak menyimpulkan apa pun — dan itu tanda bahwa pemilihanmu perlu diperbaiki."
+    },
+    {
+      "id": "osn-sarang-merpati-c3",
+      "type": "konsep",
+      "title": "Invarian: besaran yang tidak pernah berubah",
+      "body": "Sarang merpati membuktikan sesuatu **pasti terjadi**. Invarian membuktikan kebalikannya: sesuatu **mustahil terjadi**.\n\nGagasannya: temukan besaran yang tidak berubah oleh operasi apa pun yang diizinkan. Kalau keadaan awal dan keadaan target punya nilai besaran berbeda, target itu tidak akan pernah tercapai.\n\n**Contoh.** Di papan tertulis bilangan $1$ sampai $10$. Sekali langkah, kamu boleh menghapus dua bilangan lalu menuliskan selisihnya. Mungkinkah bilangan terakhir yang tersisa adalah $0$?\n\nPerhatikan **paritas jumlah seluruh bilangan**. Awalnya jumlahnya $1+2+\\cdots+10 = 55$, yaitu ganjil.\n\nSaat kamu mengganti $a$ dan $b$ dengan $a-b$, jumlahnya berubah sebesar $(a-b) - (a+b) = -2b$ — selalu bilangan genap. Perubahan genap tidak mengubah paritas.\n\nJadi jumlahnya selalu ganjil, di langkah ke berapa pun. Bilangan terakhir yang tersisa juga merupakan jumlah itu sendiri, jadi ia pasti ganjil. Karena $0$ genap, ia mustahil.\n\nPerhatikan bahwa kita tidak pernah mencoba satu pun urutan langkah. Invarian menutup **seluruh** kemungkinan sekaligus.",
+      "questions": [
+        {
+          "id": "osn-sarang-merpati-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Di papan tertulis bilangan $1$ sampai $10$. Setiap langkah, dua bilangan dihapus dan diganti dengan selisihnya. Bilangan terakhir yang tersisa ...",
+          "options": [
+            "pasti ganjil",
+            "pasti genap",
+            "bisa ganjil atau genap",
+            "pasti nol"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan paritas jumlah seluruh bilangan di papan.\n\nAwalnya: $1+2+\\cdots+10 = \\frac{10 \\times 11}{2} = 55$, yaitu **ganjil**.\n\nSaat $a$ dan $b$ diganti dengan $a-b$, jumlahnya berubah sebesar:\n\n$$(a-b) - (a+b) = -2b$$\n\nPerubahan itu selalu genap, jadi paritas jumlahnya tidak pernah berubah.\n\nSetelah sembilan langkah tersisa satu bilangan, dan bilangan itu adalah jumlah seluruh isi papan saat itu — yang masih ganjil.\n\nJadi hasil akhirnya pasti ganjil, dan $0$ mustahil.",
+          "hint": "Periksa paritas jumlah seluruh bilangannya.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-sarang-merpati-q6",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Sebuah papan catur $8 \\times 8$ yang dibuang dua kotak sudut berlawanannya masih bisa ditutup penuh oleh $31$ buah domino berukuran $1 \\times 2$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah, dan invarian warna membuktikannya.\n\nDua kotak sudut yang berlawanan pada papan catur selalu **berwarna sama**. Setelah keduanya dibuang, tersisa $30$ kotak satu warna dan $32$ kotak warna lainnya.\n\nSementara itu, setiap domino $1 \\times 2$ selalu menutup tepat satu kotak hitam dan satu kotak putih — berapa pun letak dan arahnya.\n\nMaka $31$ domino akan menutup $31$ kotak hitam dan $31$ kotak putih. Angka itu tidak pernah cocok dengan $30$ dan $32$.\n\nJadi penutupannya mustahil. Perhatikan bahwa kita tidak mencoba satu susunan pun — invarian warna sudah menutup semuanya.",
+          "hint": "Warnai papannya, lalu hitung kotak tiap warna yang tersisa.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Invarian membuktikan kemustahilan, bukan keberadaan",
+        "Paritas adalah invarian yang paling sering berhasil",
+        "Satu invarian menutup seluruh kemungkinan sekaligus"
+      ],
+      "pitfall": "Menyimpulkan \"mustahil\" hanya karena beberapa percobaan gagal. Percobaan yang gagal tidak membuktikan apa pun — yang membuktikan adalah besaran yang terbukti tidak pernah berubah."
+    },
+    {
+      "id": "osn-sarang-merpati-c4",
+      "type": "teknik",
+      "title": "Mencari invarian yang tepat",
+      "body": "Sama seperti sarang merpati, seluruh kesulitannya ada pada memilih besaran yang tepat. Berikut yang paling sering berhasil.\n\n**Paritas.** Ganjil atau genap dari sebuah jumlah, selisih, hasil kali, atau cacah. Ini selalu dicoba pertama karena paling sering berhasil.\n\n**Sisa bagi.** Untuk operasi yang menambah atau mengurangi dengan nilai tetap, periksa nilainya modulo bilangan itu.\n\n**Pewarnaan.** Untuk soal papan dan ubin, warnai petaknya — dua warna berselang-seling, atau tiga warna diagonal. Setiap ubin lalu menutup pola warna yang tetap.\n\n**Jumlah berbobot.** Beri setiap posisi sebuah bobot, lalu periksa jumlah berbobotnya. Ini berguna untuk soal yang melibatkan perpindahan bidak.\n\nCara mencarinya: **kerjakan beberapa langkah dan amati apa yang tidak berubah.** Hitung jumlahnya, hitung paritasnya, hitung sisanya modulo bilangan kecil. Besaran yang bertahan di semua percobaan itulah calon invarianmu.\n\nSesudah menemukannya, buktikan ia benar-benar kekal untuk **setiap** operasi yang diizinkan — bukan hanya untuk contoh yang kebetulan kamu coba.",
+      "questions": [
+        {
+          "id": "osn-sarang-merpati-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah bidak berada di titik $(0,0)$ dan setiap langkah bergerak diagonal sejauh satu satuan, yaitu mengubah kedua koordinatnya masing-masing sebesar $+1$ atau $-1$. Bidak itu tidak akan pernah mencapai titik ...",
+          "options": [
+            "$(1,0)$",
+            "$(2,0)$",
+            "$(3,3)$",
+            "$(0,4)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan besaran $x + y$.\n\nAwalnya $0 + 0 = 0$, yaitu genap. Setiap langkah mengubah $x$ sebesar $\\pm 1$ dan $y$ sebesar $\\pm 1$, jadi $x+y$ berubah sebesar $-2$, $0$, atau $+2$ — selalu genap.\n\nMaka $x+y$ selalu tetap genap, di langkah ke berapa pun.\n\nPeriksa keempat pilihan:\n\n$(1,0)$: $x+y = 1$, **ganjil** — mustahil\n\n$(2,0)$: $x+y = 2$, genap ✓\n\n$(3,3)$: $x+y = 6$, genap ✓\n\n$(0,4)$: $x+y = 4$, genap ✓\n\nJadi hanya $(1,0)$ yang tak terjangkau.",
+          "hint": "Periksa paritas $x+y$ setelah setiap langkah.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-sarang-merpati-q7b",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Sebuah besaran yang nilainya tetap pada lima percobaan berturut-turut sudah cukup untuk disebut invarian dan dipakai sebagai bukti.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Percobaan yang berhasil hanya menghasilkan **dugaan**, bukan bukti.\n\nUntuk memakai sebuah besaran sebagai invarian, kamu harus membuktikan bahwa **setiap** operasi yang diizinkan tidak mengubahnya. Pembuktiannya dikerjakan secara umum, memakai lambang, bukan memakai angka tertentu.\n\nContohnya pada soal papan tadi: kita tidak memeriksa sepuluh pasang bilangan, melainkan menunjukkan bahwa mengganti $a$ dan $b$ dengan $a-b$ selalu mengubah jumlahnya sebesar $-2b$ — bentuk yang genap berapa pun nilai $b$.\n\nBahayanya nyata: kalau soal mengizinkan dua jenis operasi dan percobaanmu kebetulan hanya memakai satu jenis, besaran itu bisa saja runtuh oleh operasi yang belum kamu coba.",
+          "hint": "Berapa banyak operasi yang harus diperiksa agar sebuah besaran terbukti kekal?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Coba paritas lebih dulu — ia paling sering berhasil",
+        "Untuk soal papan dan ubin, pewarnaan hampir selalu jalannya",
+        "Buktikan kekekalannya untuk setiap operasi, bukan hanya contohmu"
+      ],
+      "pitfall": "Berhenti setelah menemukan besaran yang bertahan di beberapa contoh. Calon invarian wajib dibuktikan kekal untuk semua operasi yang diizinkan — tanpa itu, buktinya belum ada."
+    },
+    {
+      "id": "osn-sarang-merpati-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan sarang merpati dan invarian",
+      "body": "**1. Sarang sebanyak atau lebih banyak daripada merpati.** Prinsip ini tidak menyimpulkan apa pun kalau jumlah sarangnya tidak kurang dari jumlah merpatinya. Kalau perbandinganmu tidak ketat, pemilihan sarangmu perlu diperbaiki.\n\n**2. Salah membaca \"minimal untuk memastikan\".** Yang dicari adalah keadaan terburuk plus satu, bukan keadaan yang kebetulan berhasil. Untuk tiga bola sewarna dari empat warna, jawabannya $4 \\times 2 + 1 = 9$, bukan $3$.\n\n**3. Menyimpulkan kemustahilan dari percobaan yang gagal.** Berapa pun banyaknya percobaan gagal, itu bukan bukti. Bukti datang dari besaran yang terbukti kekal.\n\n**4. Tidak memeriksa kekekalan invarian untuk semua operasi.** Kalau soal mengizinkan dua jenis langkah, keduanya harus diperiksa. Satu operasi yang merusak invarian membatalkan seluruh argumennya.\n\nPemeriksaan penutup untuk keduanya: nyatakan dengan jelas apa merpatinya, apa sarangnya, atau besaran apa yang kekal. Argumen yang tidak bisa dinyatakan sejelas itu biasanya memang belum utuh.",
+      "questions": [
+        {
+          "id": "osn-sarang-merpati-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Dari $11$ bilangan bulat yang dipilih sembarang, pasti ada dua di antaranya yang ...",
+          "options": [
+            "digit satuannya sama",
+            "jumlahnya genap",
+            "selisihnya $1$",
+            "hasil kalinya ganjil"
+          ],
+          "answerIndex": 0,
+          "solution": "Digit satuan sebuah bilangan bulat hanya punya $10$ kemungkinan: $0$ sampai $9$. Itulah sarangnya.\n\nDengan $11$ bilangan dan hanya $10$ kemungkinan digit satuan, pasti ada dua bilangan yang digit satuannya sama.\n\n$$11 > 10$$\n\nPilihan lainnya tidak dijamin. Selisih $1$ misalnya jelas gagal untuk bilangan $10, 20, 30, \\ldots, 110$ — sebelas bilangan yang tak satu pun berselisih $1$.",
+          "hint": "Ada berapa kemungkinan digit satuan?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-sarang-merpati-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah kotak berisi bola merah, biru, dan hijau. Berapa banyak bola minimal yang harus diambil agar pasti mendapat $4$ bola berwarna sama?",
+          "options": [
+            "$10$",
+            "$12$",
+            "$4$",
+            "$7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pikirkan keadaan terburuk: ambil sebanyak mungkin tanpa pernah mencapai empat warna sama.\n\nPaling banyak $3$ bola dari masing-masing warna:\n\n$$3 \\times 3 = 9 \\text{ bola}$$\n\nDengan $9$ bola, masih mungkin tiap warna baru mencapai tiga. Tapi bola ke-$10$ harus masuk salah satu dari tiga warna itu, dan warna itu langsung mencapai empat.\n\n$$9 + 1 = 10$$\n\nRumus umumnya $k(r-1)+1$ dengan $k$ banyaknya warna dan $r$ banyaknya bola sewarna yang diminta. Di sini $3(4-1)+1 = 10$.",
+          "hint": "Berapa banyak bola bisa diambil tanpa pernah mencapai empat warna sama?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Jumlah merpati harus benar-benar melebihi jumlah sarang",
+        "\"Minimal untuk memastikan\" berarti keadaan terburuk ditambah satu",
+        "Periksa kekekalan invarian untuk setiap operasi yang diizinkan"
+      ],
+      "pitfall": "Menganggap contoh yang berhasil sudah menjawab soal \"minimal untuk memastikan\". Mengambil $3$ bola memang **bisa** memberi tiga warna sama, tapi soalnya menuntut jaminan — dan jaminan baru datang di bola ke-$9$."
+    }
+  ]
+}
