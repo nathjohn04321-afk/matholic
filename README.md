@@ -7,13 +7,23 @@ kartu dimunculkan lagi lewat jadwal pengulangan supaya materi melekat.
 Seluruh isi aplikasi dibundel di dalam APK. Aplikasi tidak pernah menghubungi
 internet.
 
-> **Status: milestone 1–5 dan 7 selesai. Milestone 6 sebagian.**
+> **Status: milestone 1–7 selesai.**
 >
 > Semua layar berfungsi: membaca materi, latihan soal, pengulangan terjadwal,
 > Buku Kesalahan, pencarian, statistik, dan pengaturan. APK bisa dibangun.
 >
-> Yang belum: **isi kurikulum masih 7 topik** dari sekitar 68 yang
-> didaftar SPEC.md bagian 6 — 38 kartu dan 76 soal.
+> Kurikulum terisi **52 topik, 263 kartu, 532 soal**:
+>
+> | Jalur | Topik | Kartu | Soal |
+> |---|--:|--:|--:|
+> | Dasar | 10 | 50 | 100 |
+> | Menengah | 21 | 108 | 217 |
+> | Lanjut | 9 | 45 | 94 |
+> | Olimpiade | 12 | 60 | 121 |
+>
+> Sebaran kesulitan 31% / 48% / 20% terhadap target SPEC 30/50/20.
+> Setiap jawaban numerik diverifikasi dengan Python atau sympy sebelum ditulis.
+>
 > Menambah topik tidak perlu mengubah kode sama sekali; lihat bagian
 > "Menambah materi baru" di bawah.
 

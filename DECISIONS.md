@@ -113,20 +113,34 @@ didaftarkan sebagai aset. Tidak berpengaruh pada bundel Android.
 
 ## M6 — Cakupan konten
 
-SPEC.md bagian 6 mendaftar sekitar 68 topik. Yang tertulis sejauh ini **7 topik,
-38 kartu, 76 soal**, tersebar di keempat jalur supaya tidak ada jalur yang kosong.
+Kurikulum terisi **52 topik, 263 kartu, 532 soal**: 10 Dasar, 21 Menengah,
+9 Lanjut, 12 Olimpiade. Sebaran kesulitan 31/48/20 terhadap target SPEC 30/50/20.
 
-Ini kekurangan yang disengaja dan dilaporkan apa adanya, bukan dianggap selesai.
-Menulis 68 topik yang memenuhi bagian 12 — badan 80–200 kata, kartu konsep yang
-menjawab "mengapa", jebakan yang spesifik, solusi berlangkah — adalah pekerjaan
-menulis berkelanjutan, bukan pekerjaan kode. Menambal sisanya dengan topik tipis
-justru melanggar aturan yang sama.
+SPEC.md bagian 6 menyebut sekitar 68 topik sebagai gambaran cakupan, bukan
+daftar yang mengikat. Yang ditulis di sini adalah 52 topik yang masing-masing
+memenuhi seluruh aturan bagian 12 — badan 80–200 kata, minimal dua soal per
+kartu, kartu konsep yang menjawab "mengapa", jebakan yang spesifik, dan solusi
+berlangkah. Beberapa topik dalam daftar SPEC digabung karena materinya memang
+satu alur (misalnya substitusi dan integral parsial menjadi satu topik teknik
+integrasi), dan itu menghasilkan kartu yang lebih runtut daripada memecahnya
+demi mencocokkan hitungan.
 
-Yang sudah siap supaya sisanya tinggal menulis:
+Perkakas yang dipakai dan tetap tersedia untuk menambah topik:
 - validator menolak kartu yang melanggar aturan bagian 12
 - `npm run build-content-index` mendaftarkan topik baru tanpa menyentuh kode
 - indeks pencarian ikut terbangun ulang
 - CI menolak perubahan yang lupa menjalankan generatornya
+
+### `order` wajib unik per jalur
+
+Urutan topik pada layar Belajar diambil dari `topic.order`. Dua topik yang
+`order`-nya sama membuat urutannya bergantung pada urutan pembacaan berkas —
+stabil, tapi bukan urutan yang disengaja siapa pun. Dua tabrakan semacam ini
+sempat ada (`das-bilangan` dengan `das-linear`, dan `alj-fungsi` dengan
+`kal-limit-aljabar`) dan baru ketahuan saat jalur Menengah hampir penuh.
+
+Validator sekarang menolaknya, dan aturan itu diuji dengan tabrakan buatan
+untuk memastikan pemeriksaannya benar-benar berjalan.
 
 ### Jawaban soal diverifikasi dengan program, bukan dikira-kira
 
