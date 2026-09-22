@@ -227,7 +227,7 @@
             "$f(x) = x - 1$"
           ],
           "answerIndex": 0,
-          "solution": "Periksa $f(x) = x^2$:\n\n$$f(xy) = (xy)^2 = x^2 y^2 = f(x) \\cdot f(y) \\text{ ✓}$$\n\nPeriksa yang lain dengan $x = y = 2$:\n\n$f(x)=x+1$: $f(4) = 5$ tapi $f(2)f(2) = 9$ ✗\n\n$f(x)=2x$: $f(4) = 8$ tapi $f(2)f(2) = 16$ ✗\n\n$f(x)=x-1$: $f(4) = 3$ tapi $f(2)f(2) = 1$ ✗\n\nCara memeriksa yang paling cepat memang begitu: ambil satu pasangan angka sederhana, lalu bandingkan kedua ruas.",
+          "solution": "Periksa $f(x) = x^2$:\n\n$$f(xy) = (xy)^2 = x^2 y^2 = f(x) \\cdot f(y)$$\n\nKedua ruas cocok, jadi $f(x)=x^2$ memenuhi.\n\nPeriksa yang lain dengan $x = y = 2$:\n\n$f(x)=x+1$: $f(4) = 5$ tapi $f(2)f(2) = 9$ ✗\n\n$f(x)=2x$: $f(4) = 8$ tapi $f(2)f(2) = 16$ ✗\n\n$f(x)=x-1$: $f(4) = 3$ tapi $f(2)f(2) = 1$ ✗\n\nCara memeriksa yang paling cepat memang begitu: ambil satu pasangan angka sederhana, lalu bandingkan kedua ruas.",
           "hint": "Uji tiap pilihan dengan $x = y = 2$.",
           "tags": [
             "osn"

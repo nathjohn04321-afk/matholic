@@ -49,7 +49,7 @@
             "$36$"
           ],
           "answerIndex": 0,
-          "solution": "Setiap sisi menghubungkan tepat dua simpul, dan pada graf lengkap **setiap** pasangan terhubung.\n\n$$\\binom{6}{2} = \\frac{6 \\times 5}{2} = 15$$\n\nCek lewat derajat: setiap simpul terhubung ke $5$ simpul lain, jadi jumlah derajatnya $6 \\times 5 = 30$. Karena jumlah derajat sama dengan $2|E|$:\n\n$$|E| = \\frac{30}{2} = 15 \\text{ ✓}$$\n\nPilihan $30$ adalah jumlah derajatnya, bukan banyaknya sisi — keduanya berselisih faktor dua.",
+          "solution": "Setiap sisi menghubungkan tepat dua simpul, dan pada graf lengkap **setiap** pasangan terhubung.\n\n$$\\binom{6}{2} = \\frac{6 \\times 5}{2} = 15$$\n\nCek lewat derajat: setiap simpul terhubung ke $5$ simpul lain, jadi jumlah derajatnya $6 \\times 5 = 30$. Karena jumlah derajat sama dengan $2|E|$:\n\n$$|E| = \\frac{30}{2} = 15$$\n\nCocok dengan hitungan pertama.\n\nPilihan $30$ adalah jumlah derajatnya, bukan banyaknya sisi — keduanya berselisih faktor dua.",
           "hint": "Setiap sisi adalah satu pasangan simpul.",
           "tags": [
             "osn"

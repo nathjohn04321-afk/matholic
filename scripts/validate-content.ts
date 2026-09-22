@@ -5,11 +5,14 @@
  * Jalankan:  npm run validate-content
  *
  * Berkas ini sengaja berdiri sendiri — tidak mengimpor lib/ — supaya bisa
- * dijalankan langsung oleh node tanpa proses bundling.
+ * dijalankan langsung oleh node tanpa proses bundling. KaTeX diimpor karena
+ * ia satu-satunya cara memastikan rumusnya benar-benar bisa dirender;
+ * memeriksa tanda $ berpasangan saja tidak menangkap perintah yang salah.
  */
 
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import katex from 'katex';
 
 const TRACKS = ['dasar', 'menengah', 'lanjut', 'olimpiade'] as const;
 const CARD_TYPES = [
@@ -44,6 +47,37 @@ function warn(where: string, message: string): void {
 function countWords(body: string): number {
   const withoutMath = body.replace(/\$\$[\s\S]*?\$\$|\$[^$]*\$/g, ' RUMUS ');
   return withoutMath.split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Render setiap rumus dengan KaTeX. Menangkap perintah yang salah tulis dan
+ * karakter yang tidak punya metrik font — keduanya lolos dari pemeriksaan
+ * tanda $ berpasangan, tapi rusak di layar HP.
+ */
+const MATH_RE = /\$\$([\s\S]*?)\$\$|\$([^$\n]+?)\$/g;
+
+function mathErrors(text: string): string[] {
+  const errors: string[] = [];
+  MATH_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = MATH_RE.exec(text)) !== null) {
+    const displayMode = m[1] !== undefined;
+    const src = (displayMode ? m[1] : m[2]).trim();
+    try {
+      katex.renderToString(src, { displayMode, throwOnError: true, strict: 'error' });
+    } catch (error) {
+      const pesan = error instanceof Error ? error.message.split('\n')[0] : String(error);
+      errors.push(`${src} — ${pesan}`);
+    }
+  }
+  return errors;
+}
+
+/** Laporkan setiap rumus yang gagal dirender pada sepotong teks. */
+function reportMath(where: string, label: string, text: string): void {
+  for (const e of mathErrors(text)) {
+    fail(where, `rumus pada ${label} gagal dirender: ${e}`);
+  }
 }
 
 /** Periksa `$` berpasangan, supaya rumus tidak bocor jadi teks mentah. */
@@ -126,8 +160,12 @@ function validateQuestion(q: unknown, where: string, cardId: string): void {
   }
 
   if (!isNonEmptyString(question.prompt)) fail(where, 'prompt kosong');
-  if (isNonEmptyString(question.prompt) && unbalancedDollars(question.prompt)) {
-    fail(where, 'tanda $ pada prompt tidak berpasangan');
+  if (isNonEmptyString(question.prompt)) {
+    if (unbalancedDollars(question.prompt)) {
+      fail(where, 'tanda $ pada prompt tidak berpasangan');
+    } else {
+      reportMath(where, 'prompt', question.prompt);
+    }
   }
 
   // Solusi harus menunjukkan langkah (SPEC.md bagian 12).
@@ -136,8 +174,12 @@ function validateQuestion(q: unknown, where: string, cardId: string): void {
   } else if (question.solution.trim().length < 25) {
     warn(where, 'solution sangat pendek — harus menunjukkan langkah');
   }
-  if (isNonEmptyString(question.solution) && unbalancedDollars(question.solution)) {
-    fail(where, 'tanda $ pada solution tidak berpasangan');
+  if (isNonEmptyString(question.solution)) {
+    if (unbalancedDollars(question.solution)) {
+      fail(where, 'tanda $ pada solution tidak berpasangan');
+    } else {
+      reportMath(where, 'solution', question.solution);
+    }
   }
 
   if (format === 'pilihan-ganda' || format === 'benar-salah') {
@@ -152,6 +194,14 @@ function validateQuestion(q: unknown, where: string, cardId: string): void {
     if (new Set(options).size !== options.length) {
       fail(where, 'ada pilihan yang sama persis');
     }
+    options.forEach((opt, i) => {
+      if (!isNonEmptyString(opt)) return;
+      if (unbalancedDollars(opt)) {
+        fail(where, `tanda $ pada options[${i}] tidak berpasangan`);
+      } else {
+        reportMath(where, `options[${i}]`, opt);
+      }
+    });
     const answerIndex = question.answerIndex;
     if (
       typeof answerIndex !== 'number' ||
@@ -220,6 +270,8 @@ function validateCard(c: unknown, where: string, topicId: string): void {
     }
     if (unbalancedDollars(card.body)) {
       fail(where, 'tanda $ pada body tidak berpasangan');
+    } else {
+      reportMath(where, 'body', card.body);
     }
   }
 
@@ -230,6 +282,8 @@ function validateCard(c: unknown, where: string, topicId: string): void {
       card.keyPoints.forEach((kp, i) => {
         if (unbalancedDollars(kp)) {
           fail(where, `tanda $ pada keyPoints[${i}] tidak berpasangan`);
+        } else {
+          reportMath(where, `keyPoints[${i}]`, kp);
         }
       });
     }
