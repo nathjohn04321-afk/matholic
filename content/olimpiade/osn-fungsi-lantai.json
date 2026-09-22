@@ -1,0 +1,259 @@
+{
+  "id": "osn-fungsi-lantai",
+  "track": "olimpiade",
+  "title": "Fungsi Lantai dan Formula Legendre",
+  "order": 4,
+  "prerequisites": [
+    "osn-keterbagian"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Membulatkan ke bawah terdengar sepele, sampai kamu memakainya menghitung faktor prima dalam faktorial.",
+  "tags": [
+    "teori-bilangan",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-fungsi-lantai-c1",
+      "type": "konsep",
+      "title": "Lantai, dan kenapa ia tidak simetris",
+      "body": "Fungsi lantai $\\lfloor x \\rfloor$ memberi bilangan bulat **terbesar yang tidak melebihi** $x$. Untuk bilangan positif ini terasa seperti \"membuang angka di belakang koma\":\n$$\\lfloor 2{,}9 \\rfloor = 2, \\qquad \\lfloor 5 \\rfloor = 5$$\n\nTapi untuk bilangan negatif, gambaran itu menyesatkan:\n$$\\lfloor -3{,}5 \\rfloor = -4, \\quad \\text{bukan } -3$$\n\nLantai selalu bergerak **ke bawah** pada garis bilangan, bukan menuju nol. Bilangan $-4$ memang lebih kecil dari $-3{,}5$, sementara $-3$ justru lebih besar sehingga tidak memenuhi definisi.\n\nDua sifat yang jadi tulang punggung hampir semua soal:\n$$\\lfloor x \\rfloor \\leq x < \\lfloor x \\rfloor + 1$$\n$$x = \\lfloor x \\rfloor + \\{x\\}, \\qquad 0 \\leq \\{x\\} < 1$$\n\nBagian $\\{x\\}$ disebut bagian pecahan. Memisahkan sebuah bilangan menjadi bagian bulat dan bagian pecahan adalah langkah pertama pada sebagian besar soal fungsi lantai.\n\nSatu sifat yang **tidak** berlaku: $\\lfloor x+y \\rfloor$ belum tentu sama dengan $\\lfloor x \\rfloor + \\lfloor y \\rfloor$. Untuk $x = y = 0{,}6$, ruas kirinya $1$ dan ruas kanannya $0$.",
+      "questions": [
+        {
+          "id": "osn-fungsi-lantai-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\lfloor -3{,}5 \\rfloor$ adalah ...",
+          "options": [
+            "$-4$",
+            "$-3$",
+            "$3$",
+            "$4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Fungsi lantai memberi bilangan bulat terbesar yang **tidak melebihi** $-3{,}5$.\n\nCalon terdekatnya adalah $-4$ dan $-3$. Karena $-3 > -3{,}5$, ia tidak memenuhi syarat \"tidak melebihi\". Yang memenuhi adalah $-4$.\n\n$$\\lfloor -3{,}5 \\rfloor = -4$$\n\nPerhatikan bedanya dengan bilangan positif: $\\lfloor 3{,}5 \\rfloor = 3$. Untuk yang positif lantai memang membuang desimalnya, tapi untuk yang negatif ia turun ke bilangan bulat berikutnya.",
+          "hint": "Mana yang lebih kecil, $-4$ atau $-3$?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fungsi-lantai-q2",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Untuk setiap bilangan real $x$ dan $y$, berlaku $\\lfloor x+y \\rfloor = \\lfloor x \\rfloor + \\lfloor y \\rfloor$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Ambil $x = y = 0{,}6$.\n\nRuas kiri: $\\lfloor 1{,}2 \\rfloor = 1$\n\nRuas kanan: $\\lfloor 0{,}6 \\rfloor + \\lfloor 0{,}6 \\rfloor = 0 + 0 = 0$\n\nKeduanya berbeda. Penyebabnya: kedua bagian pecahan bisa berjumlah melebihi $1$, dan kelebihan itu \"naik\" menjadi satu satuan bulat pada ruas kiri.\n\nYang selalu berlaku hanyalah ketaksamaan:\n$$\\lfloor x \\rfloor + \\lfloor y \\rfloor \\leq \\lfloor x+y \\rfloor \\leq \\lfloor x \\rfloor + \\lfloor y \\rfloor + 1$$\n\nSelisihnya paling banyak satu, karena jumlah dua bagian pecahan selalu kurang dari $2$.",
+          "hint": "Coba $x = y = 0{,}6$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Lantai bergerak ke bawah, bukan menuju nol",
+        "$x = \\lfloor x \\rfloor + \\{x\\}$ dengan $0 \\leq \\{x\\} < 1$",
+        "$\\lfloor x+y \\rfloor \\neq \\lfloor x \\rfloor + \\lfloor y \\rfloor$ pada umumnya"
+      ],
+      "pitfall": "Menghitung $\\lfloor -3{,}5 \\rfloor$ sebagai $-3$ dengan membuang angka di belakang koma. Untuk bilangan negatif, membuang desimal justru membulatkan ke atas — hasilnya berbeda satu dari yang benar."
+    },
+    {
+      "id": "osn-fungsi-lantai-c2",
+      "type": "rumus",
+      "title": "Formula Legendre",
+      "body": "Berapa banyak angka nol di akhir $100!$? Menghitung $100!$ langsung mustahil — bilangannya punya 158 digit.\n\nSetiap nol di akhir berasal dari satu faktor $10 = 2 \\times 5$. Karena faktor $2$ jauh lebih berlimpah daripada faktor $5$ dalam sebuah faktorial, banyaknya nol ditentukan sepenuhnya oleh banyaknya faktor $5$.\n\n**Formula Legendre** menghitungnya. Eksponen prima $p$ dalam $n!$ adalah:\n$$v_p(n!) = \\left\\lfloor \\frac{n}{p} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^2} \\right\\rfloor + \\left\\lfloor \\frac{n}{p^3} \\right\\rfloor + \\cdots$$\n\nSuku pertama menghitung kelipatan $p$ di antara $1$ sampai $n$. Tapi kelipatan $p^2$ menyumbang **dua** faktor $p$, bukan satu — dan suku pertama hanya mencatatnya sekali. Suku kedua menambahkan yang terlewat itu, suku ketiga menambahkan lagi untuk kelipatan $p^3$, dan seterusnya.\n\nDeretnya berhenti sendiri begitu $p^k > n$, karena sejak itu setiap sukunya nol.\n\nUntuk $100!$ dan $p = 5$:\n$$\\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{25} \\right\\rfloor + \\left\\lfloor \\frac{100}{125} \\right\\rfloor = 20 + 4 + 0 = 24$$",
+      "questions": [
+        {
+          "id": "osn-fungsi-lantai-q3",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Banyaknya angka nol di akhir bilangan $100!$ adalah ... (bilangan bulat)",
+          "answer": "24",
+          "acceptedAnswers": [
+            "24"
+          ],
+          "solution": "Setiap nol di akhir berasal dari satu pasangan faktor $2 \\times 5$. Faktor $2$ jauh lebih berlimpah, jadi yang membatasi adalah banyaknya faktor $5$.\n\nPakai formula Legendre dengan $p = 5$:\n\n$$\\left\\lfloor \\frac{100}{5} \\right\\rfloor = 20$$\n$$\\left\\lfloor \\frac{100}{25} \\right\\rfloor = 4$$\n$$\\left\\lfloor \\frac{100}{125} \\right\\rfloor = 0$$\n\n$$20 + 4 + 0 = 24$$\n\nSuku kedua itu penting: bilangan $25, 50, 75, 100$ masing-masing menyumbang **dua** faktor $5$, dan suku pertama hanya mencatatnya sekali.",
+          "hint": "Hitung faktor $5$-nya, dan jangan berhenti di suku pertama.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fungsi-lantai-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Eksponen tertinggi dari $2$ yang membagi $10!$ adalah ...",
+          "options": [
+            "$8$",
+            "$5$",
+            "$7$",
+            "$10$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai formula Legendre dengan $n = 10$ dan $p = 2$:\n\n$$\\left\\lfloor \\frac{10}{2} \\right\\rfloor = 5$$\n$$\\left\\lfloor \\frac{10}{4} \\right\\rfloor = 2$$\n$$\\left\\lfloor \\frac{10}{8} \\right\\rfloor = 1$$\n$$\\left\\lfloor \\frac{10}{16} \\right\\rfloor = 0$$\n\n$$5 + 2 + 1 + 0 = 8$$\n\nCek manual: $2 \\to 1$, $4 \\to 2$, $6 \\to 1$, $8 \\to 3$, $10 \\to 1$ faktor $2$. Totalnya $1+2+1+3+1 = 8$. Cocok.\n\nPilihan $5$ adalah jebakan untuk yang berhenti di suku pertama.",
+          "hint": "Lanjutkan sampai pembaginya melebihi $10$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$v_p(n!) = \\sum_k \\lfloor n/p^k \\rfloor$",
+        "Tiap suku menambahkan faktor yang terlewat oleh suku sebelumnya",
+        "Banyaknya nol di akhir ditentukan oleh faktor $5$, bukan $2$"
+      ],
+      "pitfall": "Berhenti di suku pertama, yaitu hanya menghitung $\\lfloor n/p \\rfloor$. Untuk $100!$ itu memberi $20$, padahal jawabannya $24$ — empat faktor dari kelipatan $25$ terlewat seluruhnya."
+    },
+    {
+      "id": "osn-fungsi-lantai-c3",
+      "type": "teknik",
+      "title": "Menghitung dengan lantai",
+      "body": "Fungsi lantai punya satu kegunaan yang muncul terus-menerus di olimpiade: **menghitung banyaknya kelipatan**.\n\nBanyaknya kelipatan $d$ di antara $1$ dan $n$ adalah tepat $\\left\\lfloor \\frac{n}{d} \\right\\rfloor$. Rumus ini persis, bukan hampiran.\n\nDigabung dengan prinsip inklusi-eksklusi, ia menyelesaikan soal pencacahan yang tampak rumit. Misalnya, berapa banyak bilangan dari $1$ sampai $100$ yang habis dibagi $2$ atau $3$?\n\n$$\\left\\lfloor \\frac{100}{2} \\right\\rfloor + \\left\\lfloor \\frac{100}{3} \\right\\rfloor - \\left\\lfloor \\frac{100}{6} \\right\\rfloor = 50 + 33 - 16 = 67$$\n\nSuku terakhir mengurangi kelipatan $6$, yang terhitung dua kali karena habis dibagi $2$ maupun $3$.\n\nUntuk jumlah berbentuk $\\sum \\lfloor k/m \\rfloor$, jangan cari rumus tertutup — kelompokkan sukunya. Pada $\\sum_{k=1}^{10}\\lfloor k/3 \\rfloor$, nilainya $0$ untuk $k=1,2$; lalu $1$ untuk $k=3,4,5$; $2$ untuk $k=6,7,8$; dan $3$ untuk $k=9,10$. Jumlahnya $0+3(1)+3(2)+2(3) = 15$.",
+      "questions": [
+        {
+          "id": "osn-fungsi-lantai-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya bilangan bulat dari $1$ sampai $100$ yang habis dibagi $7$ adalah ...",
+          "options": [
+            "$14$",
+            "$15$",
+            "$13$",
+            "$7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Banyaknya kelipatan $7$ dari $1$ sampai $100$ adalah\n\n$$\\left\\lfloor \\frac{100}{7} \\right\\rfloor = \\lfloor 14{,}28\\ldots \\rfloor = 14$$\n\nCek: kelipatan $7$ terbesar yang tidak melebihi $100$ adalah $98 = 7 \\times 14$. Kelipatan berikutnya, $105$, sudah melewati batas.\n\nRumus $\\lfloor n/d \\rfloor$ ini persis, bukan hampiran — dan itulah kenapa fungsi lantai muncul di mana-mana dalam soal pencacahan.",
+          "hint": "Kelipatan $7$ terbesar yang tidak melebihi $100$?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fungsi-lantai-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya bilangan bulat dari $1$ sampai $100$ yang habis dibagi $2$ atau $3$ adalah ...",
+          "options": [
+            "$67$",
+            "$83$",
+            "$50$",
+            "$66$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai inklusi-eksklusi.\n\nKelipatan $2$: $\\left\\lfloor \\frac{100}{2} \\right\\rfloor = 50$\n\nKelipatan $3$: $\\left\\lfloor \\frac{100}{3} \\right\\rfloor = 33$\n\nKelipatan keduanya, yaitu kelipatan $6$: $\\left\\lfloor \\frac{100}{6} \\right\\rfloor = 16$\n\n$$50 + 33 - 16 = 67$$\n\nPengurangan itu wajib: bilangan seperti $6$, $12$, dan $18$ terhitung dua kali, sekali sebagai kelipatan $2$ dan sekali sebagai kelipatan $3$.\n\nPilihan $83$ adalah hasil tanpa pengurangan — selisihnya persis $16$.",
+          "hint": "Jangan lupa mengurangi yang terhitung dua kali.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Banyaknya kelipatan $d$ sampai $n$ adalah $\\lfloor n/d \\rfloor$, persis",
+        "Gabungkan dengan inklusi-eksklusi untuk syarat majemuk",
+        "Jumlah berbentuk lantai diselesaikan dengan mengelompokkan suku"
+      ],
+      "pitfall": "Menghitung kelipatan $2$ atau $3$ sebagai $50 + 33 = 83$ tanpa mengurangi irisannya. Bilangan seperti $6$, $12$, dan $18$ terhitung dua kali, dan ada $16$ bilangan semacam itu."
+    },
+    {
+      "id": "osn-fungsi-lantai-c4",
+      "type": "contoh",
+      "title": "Membuktikan identitas lantai",
+      "body": "Soal olimpiade sering meminta pembuktian identitas yang melibatkan lantai. Teknik bakunya selalu sama: **tulis $x = n + f$** dengan $n = \\lfloor x \\rfloor$ bulat dan $0 \\leq f < 1$, lalu periksa kasusnya berdasarkan letak $f$.\n\n**Contoh.** Buktikan $\\lfloor x \\rfloor + \\lfloor x + \\tfrac{1}{2} \\rfloor = \\lfloor 2x \\rfloor$.\n\nTulis $x = n + f$. Karena $n$ bulat, ia bisa dikeluarkan dari setiap lantai, dan soalnya menyusut menjadi pernyataan tentang $f$ saja:\n$$\\lfloor f \\rfloor + \\lfloor f + \\tfrac{1}{2} \\rfloor = \\lfloor 2f \\rfloor$$\n\n**Kasus 1: $0 \\leq f < \\tfrac{1}{2}$.** Di sini $\\lfloor f \\rfloor = 0$, $f + \\tfrac{1}{2} < 1$ sehingga lantainya $0$, dan $2f < 1$ sehingga lantainya juga $0$. Kedua ruas bernilai $0$.\n\n**Kasus 2: $\\tfrac{1}{2} \\leq f < 1$.** Sekarang $\\lfloor f \\rfloor = 0$, tapi $1 \\leq f + \\tfrac{1}{2} < \\tfrac{3}{2}$ sehingga lantainya $1$. Di ruas kanan, $1 \\leq 2f < 2$ sehingga lantainya juga $1$. Kedua ruas bernilai $1$.\n\nKedua kasus terpenuhi, dan bersama-sama keduanya mencakup semua kemungkinan. Terbukti.",
+      "questions": [
+        {
+          "id": "osn-fungsi-lantai-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk $x = 0{,}7$, nilai $\\lfloor x \\rfloor + \\lfloor x + \\tfrac{1}{2} \\rfloor$ adalah ...",
+          "options": [
+            "$1$",
+            "$0$",
+            "$2$",
+            "$1{,}4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung masing-masing suku.\n\n$$\\lfloor 0{,}7 \\rfloor = 0$$\n$$\\lfloor 0{,}7 + 0{,}5 \\rfloor = \\lfloor 1{,}2 \\rfloor = 1$$\n\n$$0 + 1 = 1$$\n\nCek dengan identitas $\\lfloor x \\rfloor + \\lfloor x + \\tfrac{1}{2} \\rfloor = \\lfloor 2x \\rfloor$: ruas kanannya $\\lfloor 1{,}4 \\rfloor = 1$. Cocok.\n\nPilihan $1{,}4$ bukan jawaban yang mungkin sama sekali — hasil penjumlahan dua lantai selalu bilangan bulat.",
+          "hint": "Hitung kedua lantai secara terpisah.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fungsi-lantai-q8",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Nilai dari $\\sum_{k=1}^{10}\\left\\lfloor \\frac{k}{3} \\right\\rfloor$ adalah ... (bilangan bulat)",
+          "answer": "15",
+          "acceptedAnswers": [
+            "15"
+          ],
+          "solution": "Jangan mencari rumus tertutup — kelompokkan saja sukunya menurut nilainya.\n\n$k = 1, 2$ memberi $\\lfloor k/3 \\rfloor = 0$ — dua suku bernilai $0$\n\n$k = 3, 4, 5$ memberi $1$ — tiga suku, menyumbang $3$\n\n$k = 6, 7, 8$ memberi $2$ — tiga suku, menyumbang $6$\n\n$k = 9, 10$ memberi $3$ — dua suku, menyumbang $6$\n\n$$0 + 3 + 6 + 6 = 15$$\n\nPengelompokan ini bekerja karena nilai lantai berubah hanya di kelipatan $3$, dan di antara dua kelipatan nilainya tetap.",
+          "hint": "Kelompokkan suku yang nilai lantainya sama.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis $x = n + f$ dan keluarkan bagian bulatnya",
+        "Periksa kasus berdasarkan letak bagian pecahan",
+        "Pastikan kasus-kasusnya mencakup seluruh kemungkinan"
+      ],
+      "pitfall": "Membuktikan identitas hanya dengan beberapa contoh angka. Identitas lantai sering benar untuk sebagian jangkauan dan salah untuk sisanya, jadi pembagian kasus yang menyeluruh adalah satu-satunya bukti yang sah."
+    },
+    {
+      "id": "osn-fungsi-lantai-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan fungsi lantai",
+      "body": "**1. Memperlakukan lantai bilangan negatif seperti membuang desimal.** $\\lfloor -2{,}3 \\rfloor = -3$, bukan $-2$. Lantai selalu turun.\n\n**2. Mengira lantai bersifat aditif.** $\\lfloor x \\rfloor + \\lfloor y \\rfloor$ bisa berbeda satu dari $\\lfloor x+y \\rfloor$. Tidak ada jalan pintas — pecah menjadi bagian bulat dan pecahan.\n\n**3. Berhenti di suku pertama formula Legendre.** Kelipatan $p^2$ menyumbang dua faktor, $p^3$ menyumbang tiga, dan seterusnya. Lanjutkan sampai pembaginya melebihi $n$.\n\n**4. Menghitung faktor $2$ untuk soal angka nol di akhir.** Yang membatasi adalah faktor $5$, karena faktor $2$ selalu lebih berlimpah dalam faktorial.\n\nUntuk soal pembuktian, satu disiplin menutup hampir semuanya: tulis $x = n + f$, lalu periksa kasus berdasarkan letak $f$. Menebak dari beberapa contoh angka hampir selalu menghasilkan klaim yang benar sebagian saja.",
+      "questions": [
+        {
+          "id": "osn-fungsi-lantai-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya angka nol di akhir bilangan $50!$ adalah ...",
+          "options": [
+            "$12$",
+            "$10$",
+            "$11$",
+            "$25$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung banyaknya faktor $5$ dengan formula Legendre:\n\n$$\\left\\lfloor \\frac{50}{5} \\right\\rfloor = 10$$\n$$\\left\\lfloor \\frac{50}{25} \\right\\rfloor = 2$$\n$$\\left\\lfloor \\frac{50}{125} \\right\\rfloor = 0$$\n\n$$10 + 2 = 12$$\n\nSuku kedua berasal dari $25$ dan $50$, yang masing-masing menyumbang dua faktor $5$.\n\nPilihan $10$ adalah hasil kalau berhenti di suku pertama.",
+          "hint": "Jangan lupa kelipatan $25$ menyumbang dua faktor.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fungsi-lantai-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $\\left\\lfloor \\frac{7}{2} \\right\\rfloor + \\left\\lfloor \\frac{7}{4} \\right\\rfloor + \\left\\lfloor \\frac{7}{8} \\right\\rfloor$ adalah ...",
+          "options": [
+            "$4$",
+            "$5$",
+            "$3$",
+            "$7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung satu per satu:\n\n$$\\left\\lfloor \\frac{7}{2} \\right\\rfloor = \\lfloor 3{,}5 \\rfloor = 3$$\n$$\\left\\lfloor \\frac{7}{4} \\right\\rfloor = \\lfloor 1{,}75 \\rfloor = 1$$\n$$\\left\\lfloor \\frac{7}{8} \\right\\rfloor = \\lfloor 0{,}875 \\rfloor = 0$$\n\n$$3 + 1 + 0 = 4$$\n\nIni persis formula Legendre untuk $p=2$ dan $n=7$, jadi $7! = 5040$ memuat tepat empat faktor $2$. Cek: $5040 = 2^4 \\times 315$, dan $315$ memang ganjil.",
+          "hint": "Bulatkan tiap pecahan ke bawah lebih dulu.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Lantai selalu turun, termasuk pada bilangan negatif",
+        "Lanjutkan formula Legendre sampai $p^k > n$",
+        "Untuk pembuktian, pecah menjadi bagian bulat dan pecahan"
+      ],
+      "pitfall": "Mempercayai pola dari nilai-nilai positif saat menyusun identitas. Banyak identitas lantai yang mulus di sisi positif langsung gugur begitu diuji dengan bilangan negatif."
+    }
+  ]
+}

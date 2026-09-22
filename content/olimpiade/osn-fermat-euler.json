@@ -1,0 +1,265 @@
+{
+  "id": "osn-fermat-euler",
+  "track": "olimpiade",
+  "title": "Teorema Fermat Kecil dan Euler",
+  "order": 2,
+  "prerequisites": [
+    "osn-keterbagian"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Menjinakkan pangkat raksasa: kenapa eksponen ikut punya modulusnya sendiri.",
+  "tags": [
+    "teori-bilangan",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-fermat-euler-c1",
+      "type": "konsep",
+      "title": "Pangkat berputar, dan periodenya bisa dihitung",
+      "body": "Berapa sisa $3^{100}$ dibagi $7$? Menghitungnya langsung mustahil — bilangannya punya 48 digit.\n\nCoba amati pangkat kecilnya dulu, semuanya modulo $7$:\n\n$$3^1 \\equiv 3, \\quad 3^2 \\equiv 2, \\quad 3^3 \\equiv 6, \\quad 3^4 \\equiv 4, \\quad 3^5 \\equiv 5, \\quad 3^6 \\equiv 1$$\n\nSetelah mencapai $1$, seluruh pola mengulang dari awal. Sisa-sisanya berputar dengan periode $6$, dan periode itu bukan kebetulan: $6 = 7 - 1$.\n\nItulah isi **Teorema Fermat Kecil**. Kalau $p$ prima dan $p \\nmid a$:\n$$a^{p-1} \\equiv 1 \\pmod p$$\n\nAkibat praktisnya besar sekali. Kalau $a^{p-1} \\equiv 1$, maka eksponen yang berselisih kelipatan $p-1$ memberi hasil sama. Artinya **eksponen boleh direduksi modulo $p-1$**, sementara bilangan pokoknya direduksi modulo $p$. Dua modulus berbeda untuk dua tempat berbeda.\n\nKembali ke soal tadi: $100 = 6 \\times 16 + 4$, jadi $3^{100} \\equiv 3^4 \\equiv 4 \\pmod 7$.",
+      "questions": [
+        {
+          "id": "osn-fermat-euler-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $3^{100}$ oleh $7$ adalah ...",
+          "options": [
+            "$4$",
+            "$2$",
+            "$1$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Karena $7$ prima dan $7 \\nmid 3$, teorema Fermat Kecil memberi $3^6 \\equiv 1 \\pmod 7$.\n\nReduksi eksponennya modulo $6$:\n$$100 = 6 \\times 16 + 4$$\n\n$$3^{100} = (3^6)^{16} \\cdot 3^4 \\equiv 1^{16} \\cdot 3^4 \\equiv 3^4 \\pmod 7$$\n\nHitung $3^4 = 81 = 7 \\times 11 + 4$, jadi sisanya $4$.\n\nPilihan $2$ adalah jebakan untuk yang mereduksi eksponen modulo $7$: $100 \\bmod 7 = 2$ memberi $3^2 \\equiv 2$, yang salah.",
+          "hint": "Reduksi eksponennya modulo $p-1 = 6$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fermat-euler-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $2^{100}$ oleh $13$ adalah ...",
+          "options": [
+            "$3$",
+            "$4$",
+            "$1$",
+            "$9$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modulusnya prima, jadi $2^{12} \\equiv 1 \\pmod{13}$ menurut Fermat Kecil.\n\n$$100 = 12 \\times 8 + 4$$\n\n$$2^{100} \\equiv 2^4 = 16 \\equiv 3 \\pmod{13}$$\n\nPerhatikan urutan kerjanya: reduksi eksponen dulu memakai modulus $12$, baru hitung pangkat kecilnya memakai modulus $13$. Mencampur kedua modulus itu adalah sumber kesalahan paling sering.",
+          "hint": "Periodenya $13-1 = 12$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$a^{p-1} \\equiv 1 \\pmod p$ untuk $p$ prima dan $p \\nmid a$",
+        "Eksponen direduksi modulo $p-1$, bukan modulo $p$",
+        "Pangkat besar jadi pangkat kecil dalam satu langkah"
+      ],
+      "pitfall": "Mereduksi eksponen modulo $p$ alih-alih modulo $p-1$. Untuk $3^{100} \\bmod 7$, yang dipakai adalah $100 \\bmod 6 = 4$, bukan $100 \\bmod 7 = 2$ — dan $3^2 \\equiv 2$ jelas berbeda dari jawaban benarnya $4$."
+    },
+    {
+      "id": "osn-fermat-euler-c2",
+      "type": "rumus",
+      "title": "Teorema Euler: ketika modulusnya bukan prima",
+      "body": "Fermat Kecil menuntut modulus prima. Untuk modulus sembarang, perluasannya adalah **Teorema Euler**:\n\n$$a^{\\varphi(n)} \\equiv 1 \\pmod n \\quad \\text{asalkan } \\gcd(a,n) = 1$$\n\nFungsi $\\varphi(n)$ menghitung banyaknya bilangan dari $1$ sampai $n$ yang relatif prima terhadap $n$. Cara menghitungnya dari faktorisasi:\n$$\\varphi(n) = n\\prod_{p \\mid n}\\left(1 - \\frac{1}{p}\\right)$$\n\nContoh: $100 = 2^2 \\cdot 5^2$, sehingga\n$$\\varphi(100) = 100\\left(1-\\frac{1}{2}\\right)\\left(1-\\frac{1}{5}\\right) = 100 \\cdot \\frac{1}{2} \\cdot \\frac{4}{5} = 40$$\n\nUntuk $p$ prima, $\\varphi(p) = p-1$ — jadi Fermat Kecil hanyalah kasus khusus dari Euler.\n\nSyarat $\\gcd(a,n)=1$ tidak boleh dilewat. Tanpa itu teoremanya gugur: $2^{\\varphi(4)} = 2^2 = 4 \\equiv 0 \\pmod 4$, bukan $1$, karena $\\gcd(2,4) = 2$.\n\nAlasan syarat itu ada: seluruh pembuktiannya bersandar pada keberadaan invers perkalian bagi $a$ modulo $n$, dan invers semacam itu hanya ada ketika keduanya relatif prima. Karena itu pemeriksaan $\\gcd$ bukan formalitas, melainkan langkah pertama yang menentukan apakah teorema ini boleh dipakai sama sekali.",
+      "questions": [
+        {
+          "id": "osn-fermat-euler-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\varphi(100)$ adalah ...",
+          "options": [
+            "$40$",
+            "$50$",
+            "$99$",
+            "$60$"
+          ],
+          "answerIndex": 0,
+          "solution": "Faktorkan lebih dulu: $100 = 2^2 \\times 5^2$.\n\n$$\\varphi(100) = 100\\left(1 - \\frac{1}{2}\\right)\\left(1 - \\frac{1}{5}\\right) = 100 \\times \\frac{1}{2} \\times \\frac{4}{5} = 40$$\n\nPerhatikan bahwa yang masuk ke rumus hanyalah **faktor prima berbedanya**, bukan pangkatnya. Meskipun $2$ muncul dua kali dalam faktorisasi, ia hanya menyumbang satu faktor $\\left(1-\\frac{1}{2}\\right)$.\n\nPilihan $99$ berlaku hanya kalau $100$ prima — dan ia jelas tidak.",
+          "hint": "Pakai faktor prima berbedanya saja.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fermat-euler-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dua digit terakhir dari $7^{2024}$ adalah ...",
+          "options": [
+            "$01$",
+            "$07$",
+            "$49$",
+            "$43$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dua digit terakhir berarti nilainya modulo $100$.\n\nKarena $\\gcd(7,100) = 1$, teorema Euler berlaku dengan $\\varphi(100) = 40$:\n$$7^{40} \\equiv 1 \\pmod{100}$$\n\n$$2024 = 40 \\times 50 + 24 \\Rightarrow 7^{2024} \\equiv 7^{24} \\pmod{100}$$\n\nUntuk menghitung $7^{24}$, perhatikan bahwa $7^2 = 49$ dan $7^4 = 2401 \\equiv 1 \\pmod{100}$. Ternyata periode sebenarnya jauh lebih pendek dari $40$.\n\nKarena $24$ habis dibagi $4$: $7^{24} = (7^4)^6 \\equiv 1^6 = 1 \\pmod{100}$.\n\nJadi dua digit terakhirnya $01$. Pelajaran di sini: Euler memberi periode yang **berlaku**, tapi belum tentu yang **terpendek**.",
+          "hint": "Cari juga periode yang lebih pendek dari $\\varphi(n)$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$a^{\\varphi(n)} \\equiv 1 \\pmod n$ bila $\\gcd(a,n)=1$",
+        "$\\varphi(p) = p-1$, jadi Fermat kasus khusus Euler",
+        "Syarat relatif prima wajib diperiksa lebih dulu"
+      ],
+      "pitfall": "Memakai teorema Euler tanpa memeriksa $\\gcd(a,n) = 1$. Untuk mencari $6^{100} \\bmod 10$ teorema ini tidak berlaku sama sekali karena $\\gcd(6,10) = 2$, dan memakainya memberi jawaban yang keliru."
+    },
+    {
+      "id": "osn-fermat-euler-c3",
+      "type": "teknik",
+      "title": "Strategi menaklukkan pangkat raksasa",
+      "body": "Soal olimpiade dengan pangkat besar hampir selalu diselesaikan lewat urutan berikut.\n\n**1. Periksa $\\gcd$ bilangan pokok dengan modulusnya.** Kalau tidak relatif prima, kedua teorema tadi gugur dan kamu perlu memecah modulusnya lebih dulu.\n\n**2. Tentukan periodenya.** Pakai $p-1$ untuk modulus prima, atau $\\varphi(n)$ untuk yang lain. Ini memberi periode yang pasti berlaku.\n\n**3. Cari periode yang lebih pendek.** Hitung $a^1, a^2, a^4, \\ldots$ modulo $n$ sampai bertemu $1$. Periode sesungguhnya selalu membagi $\\varphi(n)$, dan sering jauh lebih kecil.\n\n**4. Reduksi eksponennya** modulo periode itu, lalu hitung pangkat kecil yang tersisa.\n\nUntuk modulus yang bisa difaktorkan, ada jalan lain yang sering lebih pendek: kerjakan soalnya terpisah untuk setiap faktor prima, lalu gabungkan hasilnya. Mencari $x \\bmod 100$ misalnya bisa dikerjakan sebagai $x \\bmod 4$ dan $x \\bmod 25$ secara terpisah.\n\nUntuk soal \"digit satuan\", modulusnya cukup $10$, dan periodenya paling banyak $4$ untuk semua bilangan pokok — sering bisa dilihat langsung tanpa teorema apa pun.",
+      "questions": [
+        {
+          "id": "osn-fermat-euler-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Digit satuan dari $3^{2023}$ adalah ...",
+          "options": [
+            "$7$",
+            "$3$",
+            "$9$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Digit satuan berarti nilainya modulo $10$. Daftar pangkat kecilnya:\n\n$$3^1 \\equiv 3, \\quad 3^2 \\equiv 9, \\quad 3^3 \\equiv 7, \\quad 3^4 \\equiv 1 \\pmod{10}$$\n\nPeriodenya $4$. Reduksi eksponennya:\n$$2023 = 4 \\times 505 + 3$$\n\n$$3^{2023} \\equiv 3^3 \\equiv 7 \\pmod{10}$$\n\nCatatan: $\\varphi(10) = 4$, jadi teorema Euler memberi periode yang sama. Untuk soal digit satuan, mendaftar empat pangkat pertama biasanya lebih cepat daripada menghitung $\\varphi$.",
+          "hint": "Daftar saja pangkat kecilnya sampai berulang.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fermat-euler-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $7^{222}$ oleh $11$ adalah ...",
+          "options": [
+            "$5$",
+            "$7$",
+            "$1$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Karena $11$ prima dan $11 \\nmid 7$, berlaku $7^{10} \\equiv 1 \\pmod{11}$.\n\n$$222 = 10 \\times 22 + 2$$\n\n$$7^{222} \\equiv 7^2 = 49 \\pmod{11}$$\n\n$$49 = 11 \\times 4 + 5 \\Rightarrow 7^{222} \\equiv 5 \\pmod{11}$$\n\nPerhatikan betapa singkatnya: satu pembagian untuk mereduksi eksponen, satu pengkuadratan, satu pembagian lagi. Tanpa teorema ini soalnya praktis tak tergarap.",
+          "hint": "Periodenya $11 - 1 = 10$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Periksa $\\gcd$ dulu, selalu",
+        "Periode sesungguhnya membagi $\\varphi(n)$, sering jauh lebih pendek",
+        "Modulus majemuk boleh dipecah per faktor prima"
+      ],
+      "pitfall": "Menganggap $\\varphi(n)$ adalah periode terkecil. Untuk $7$ modulo $100$, nilai $\\varphi(100) = 40$ memang berlaku, tapi periode sesungguhnya hanya $4$ — dan mengetahuinya memangkas pekerjaan sepuluh kali lipat."
+    },
+    {
+      "id": "osn-fermat-euler-c4",
+      "type": "contoh",
+      "title": "Membuktikan keterbagian dengan Fermat",
+      "body": "Fermat Kecil tidak hanya menghitung sisa — ia juga alat pembuktian. Bentuk soal yang khas: buktikan bahwa suatu bentuk selalu habis dibagi bilangan tertentu.\n\n**Contoh.** Buktikan $n^5 - n$ selalu habis dibagi $30$ untuk setiap bilangan bulat $n$.\n\nFaktorkan $30 = 2 \\times 3 \\times 5$. Karena ketiganya prima berbeda, cukup dibuktikan keterbagian oleh masing-masing secara terpisah.\n\n**Oleh $5$:** Fermat Kecil memberi $n^5 \\equiv n \\pmod 5$ untuk setiap $n$ — termasuk yang habis dibagi $5$, karena kedua ruas menjadi nol. Jadi $n^5 - n \\equiv 0 \\pmod 5$.\n\n**Oleh $3$:** dari $n^3 \\equiv n \\pmod 3$ diperoleh $n^5 = n^3 \\cdot n^2 \\equiv n \\cdot n^2 = n^3 \\equiv n$.\n\n**Oleh $2$:** $n^5$ dan $n$ selalu punya paritas sama, jadi selisihnya genap.\n\nKetiganya terpenuhi, dan karena $2$, $3$, $5$ saling prima, hasil kalinya juga membagi. Pola \"pecah menjadi faktor prima, tangani satu per satu\" ini berlaku untuk hampir semua soal keterbagian.",
+      "questions": [
+        {
+          "id": "osn-fermat-euler-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk $n^3 - n$ selalu habis dibagi ... untuk setiap bilangan bulat $n$.",
+          "options": [
+            "$6$",
+            "$3$",
+            "$9$",
+            "$12$"
+          ],
+          "answerIndex": 0,
+          "solution": "Faktorkan lebih dulu:\n$$n^3 - n = n(n^2-1) = (n-1)n(n+1)$$\n\nIni hasil kali tiga bilangan bulat **berurutan**.\n\nDi antara tiga bilangan berurutan pasti ada yang habis dibagi $2$, dan pasti ada pula yang habis dibagi $3$. Karena $\\gcd(2,3) = 1$, hasil kalinya habis dibagi $6$.\n\nUji: $n=2$ memberi $6$, $n=3$ memberi $24$, $n=4$ memberi $60$. Semuanya kelipatan $6$.\n\nPilihan $12$ gugur karena $n=2$ memberi $6$, yang bukan kelipatan $12$. Satu contoh tandingan sudah cukup membatalkannya.",
+          "hint": "Faktorkan menjadi tiga bilangan berurutan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fermat-euler-q8",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Teorema Euler $a^{\\varphi(n)} \\equiv 1 \\pmod n$ berlaku untuk setiap bilangan bulat $a$ dan setiap $n > 1$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Ada syarat yang wajib dipenuhi: $\\gcd(a,n) = 1$.\n\nContoh tandingan: ambil $a = 2$ dan $n = 4$. Di sini $\\varphi(4) = 2$, sehingga teoremanya akan mengklaim $2^2 \\equiv 1 \\pmod 4$. Padahal $2^2 = 4 \\equiv 0 \\pmod 4$.\n\nPenyebabnya: $\\gcd(2,4) = 2 \\neq 1$.\n\nAlasan yang lebih dalam: teorema ini bersandar pada adanya invers perkalian bagi $a$ modulo $n$, dan invers itu hanya ada kalau $a$ relatif prima terhadap $n$. Tanpa invers, seluruh argumennya runtuh.\n\nKarena itu pemeriksaan $\\gcd$ selalu jadi langkah pertama, bukan formalitas.",
+          "hint": "Coba $a=2$ dan $n=4$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$a^p \\equiv a \\pmod p$ berlaku untuk **semua** $a$",
+        "Pecah modulusnya menjadi faktor prima, tangani terpisah",
+        "Faktor-faktor yang saling prima boleh digabungkan kembali"
+      ],
+      "pitfall": "Menggabungkan kembali faktor-faktor yang **tidak** saling prima. Dari habis dibagi $4$ dan habis dibagi $6$ kamu tidak boleh menyimpulkan habis dibagi $24$ — bilangan $12$ adalah tandingannya."
+    },
+    {
+      "id": "osn-fermat-euler-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan teorema pangkat",
+      "body": "**1. Mereduksi eksponen dengan modulus yang salah.** Bilangan pokok direduksi modulo $n$, tapi eksponen direduksi modulo $\\varphi(n)$. Keduanya modulus berbeda untuk tempat berbeda.\n\n**2. Melewatkan syarat $\\gcd = 1$.** Tanpa itu teorema Euler tidak berlaku sama sekali. Periksa sebelum memakai, bukan sesudah.\n\n**3. Menganggap $\\varphi(n)$ pasti periode terkecil.** Ia periode yang berlaku, bukan yang terpendek. Mencari periode sebenarnya sering memangkas pekerjaan berlipat-lipat.\n\n**4. Menggabungkan faktor yang tidak saling prima.** Habis dibagi $4$ dan $6$ tidak berarti habis dibagi $24$. Penggabungan hanya sah kalau faktornya saling prima.\n\nPemeriksaan termurah untuk seluruh jawabanmu: uji dengan bilangan kecil. Kalau kamu menyimpulkan suatu bentuk selalu habis dibagi $12$, coba dulu $n = 1, 2, 3$ — satu kegagalan sudah membatalkan seluruh klaimnya.",
+      "questions": [
+        {
+          "id": "osn-fermat-euler-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $5^{2023}$ oleh $7$ adalah ...",
+          "options": [
+            "$5$",
+            "$3$",
+            "$1$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modulusnya prima, jadi $5^6 \\equiv 1 \\pmod 7$.\n\n$$2023 = 6 \\times 337 + 1$$\n\n$$5^{2023} \\equiv 5^1 = 5 \\pmod 7$$\n\nSisa eksponennya kebetulan $1$, sehingga jawabannya langsung bilangan pokoknya sendiri.\n\nUntuk memastikan pembagiannya benar: $6 \\times 337 = 2022$, dan $2023 - 2022 = 1$. Cocok.",
+          "hint": "Reduksi $2023$ modulo $6$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-fermat-euler-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sisa pembagian $2^{1000}$ oleh $9$ adalah ...",
+          "options": [
+            "$7$",
+            "$1$",
+            "$4$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modulusnya bukan prima, jadi pakai teorema Euler. Karena $9 = 3^2$:\n\n$$\\varphi(9) = 9\\left(1 - \\frac{1}{3}\\right) = 6$$\n\nSyaratnya terpenuhi karena $\\gcd(2,9) = 1$, sehingga $2^6 \\equiv 1 \\pmod 9$.\n\n$$1000 = 6 \\times 166 + 4$$\n\n$$2^{1000} \\equiv 2^4 = 16 \\equiv 7 \\pmod 9$$\n\nCek dengan daftar: $2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 \\equiv 8$, $2^4 \\equiv 7$, $2^5 \\equiv 5$, $2^6 \\equiv 1$. Periodenya memang $6$, dan suku keempatnya memang $7$.",
+          "hint": "Hitung $\\varphi(9)$ lebih dulu.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pokok modulo $n$, eksponen modulo $\\varphi(n)$",
+        "Selalu uji kesimpulanmu dengan bilangan kecil",
+        "Penggabungan faktor butuh syarat saling prima"
+      ],
+      "pitfall": "Mempercayai pola dari dua atau tiga contoh sebagai bukti. Bilangan $n^2+n+41$ menghasilkan bilangan prima untuk $n = 0$ sampai $39$, tapi gagal di $n = 40$ — pola yang panjang pun bukan jaminan."
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "id": "osn-crt-diophantine",
+  "track": "olimpiade",
+  "title": "Teorema Sisa Cina dan Persamaan Diophantine",
+  "order": 3,
+  "prerequisites": [
+    "osn-keterbagian"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Menggabungkan beberapa syarat sisa menjadi satu, dan menyelesaikan persamaan di bilangan bulat.",
+  "tags": [
+    "teori-bilangan",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-crt-diophantine-c1",
+      "type": "konsep",
+      "title": "Beberapa syarat sisa, satu jawaban",
+      "body": "Soal klasik: cari bilangan yang bersisa $2$ jika dibagi $3$, dan bersisa $3$ jika dibagi $5$.\n\nCara paling jujur adalah mendaftar. Bilangan bersisa $2$ modulo $3$: $2, 5, 8, 11, 14, 17, 20, 23, \\ldots$ Dari daftar itu, mana yang bersisa $3$ modulo $5$? Jawabannya $8$, lalu $23$, lalu $38$ — berselisih $15$ setiap kali.\n\nAngka $15$ itu bukan kebetulan: $15 = 3 \\times 5$. Begitu satu penyelesaian ditemukan, seluruh penyelesaian lainnya berselisih kelipatan hasil kali modulusnya.\n\n**Teorema Sisa Cina** menjamin hal ini secara umum. Kalau $m_1, m_2, \\ldots, m_k$ **saling prima berpasangan**, maka sistem\n$$x \\equiv a_1 \\pmod{m_1}, \\quad x \\equiv a_2 \\pmod{m_2}, \\quad \\ldots$$\npunya tepat satu penyelesaian modulo $M = m_1 m_2 \\cdots m_k$.\n\nKata \"tepat satu\" itu penting dua arah: penyelesaiannya pasti **ada**, dan pasti **tunggal** dalam satu putaran $M$. Tanpa syarat saling prima, keduanya bisa gagal — sistem dengan modulus $4$ dan $6$ bisa saja tidak punya penyelesaian sama sekali.",
+      "questions": [
+        {
+          "id": "osn-crt-diophantine-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bilangan bulat positif terkecil yang bersisa $2$ jika dibagi $3$ dan bersisa $3$ jika dibagi $5$ adalah ...",
+          "options": [
+            "$8$",
+            "$13$",
+            "$23$",
+            "$11$"
+          ],
+          "answerIndex": 0,
+          "solution": "Daftar bilangan yang bersisa $2$ modulo $3$:\n$$2, 5, 8, 11, 14, 17, 20, 23, \\ldots$$\n\nPeriksa satu per satu mana yang bersisa $3$ modulo $5$:\n\n$2 \\bmod 5 = 2$ — bukan\n\n$5 \\bmod 5 = 0$ — bukan\n\n$8 \\bmod 5 = 3$ — **ya**\n\nJadi jawabannya $8$. Penyelesaian berikutnya adalah $8 + 15 = 23$, karena modulusnya saling prima sehingga putarannya $3 \\times 5 = 15$.",
+          "hint": "Daftar saja salah satu syaratnya, lalu saring dengan syarat lainnya.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-crt-diophantine-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bilangan bulat positif terkecil yang bersisa $3$ jika dibagi $5$ dan bersisa $4$ jika dibagi $7$ adalah ...",
+          "options": [
+            "$18$",
+            "$25$",
+            "$32$",
+            "$11$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tulis syarat pertama sebagai bentuk umum:\n$$x = 5k + 3$$\n\nSubstitusikan ke syarat kedua:\n$$5k + 3 \\equiv 4 \\pmod 7 \\Rightarrow 5k \\equiv 1 \\pmod 7$$\n\nCari $k$ dengan mencoba: $5 \\times 3 = 15 \\equiv 1 \\pmod 7$. Jadi $k \\equiv 3 \\pmod 7$.\n\nAmbil $k = 3$:\n$$x = 5(3) + 3 = 18$$\n\nCek: $18 = 5(3)+3$ ✓ dan $18 = 7(2)+4$ ✓.\n\nPenyelesaian berikutnya berselisih $35$, yaitu $53$, $88$, dan seterusnya.",
+          "hint": "Tulis satu syarat sebagai bentuk umum, lalu masukkan ke syarat lainnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Modulus yang saling prima menjamin penyelesaiannya ada dan tunggal",
+        "Penyelesaiannya tunggal modulo hasil kali seluruh modulus",
+        "Tanpa syarat saling prima, sistemnya bisa kosong"
+      ],
+      "pitfall": "Menerapkan teorema ini pada modulus yang punya faktor bersama. Sistem $x \\equiv 1 \\pmod 4$ dan $x \\equiv 2 \\pmod 6$ tidak punya penyelesaian sama sekali, karena syarat pertama menuntut $x$ ganjil sementara yang kedua menuntutnya genap."
+    },
+    {
+      "id": "osn-crt-diophantine-c2",
+      "type": "prosedur",
+      "title": "Menyelesaikan sistem sisa selangkah demi selangkah",
+      "body": "Cara paling andal untuk sistem kongruensi adalah **substitusi berantai**. Tidak perlu menghafal rumus umum, dan lebih kecil kemungkinan salahnya.\n\nSelesaikan $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 4$, dan $x \\equiv 2 \\pmod 5$.\n\n**Langkah 1.** Tulis syarat pertama sebagai $x = 3a + 2$.\n\n**Langkah 2.** Masukkan ke syarat kedua:\n$$3a + 2 \\equiv 3 \\pmod 4 \\Rightarrow 3a \\equiv 1 \\pmod 4$$\nKarena $3 \\times 3 = 9 \\equiv 1$, diperoleh $a \\equiv 3 \\pmod 4$, jadi $a = 4b + 3$.\n\nSubstitusikan kembali: $x = 3(4b+3) + 2 = 12b + 11$.\n\n**Langkah 3.** Masukkan ke syarat ketiga:\n$$12b + 11 \\equiv 2 \\pmod 5 \\Rightarrow 2b \\equiv 1 \\pmod 5$$\nKarena $2 \\times 3 = 6 \\equiv 1$, diperoleh $b \\equiv 3 \\pmod 5$, jadi $b = 5c + 3$.\n\n$$x = 12(5c+3) + 11 = 60c + 47$$\n\nPenyelesaian terkecilnya $47$, dan putarannya $60 = 3 \\times 4 \\times 5$ — persis seperti yang dijanjikan teoremanya.",
+      "questions": [
+        {
+          "id": "osn-crt-diophantine-q3",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Bilangan bulat positif terkecil yang bersisa $2$ jika dibagi $3$, bersisa $3$ jika dibagi $4$, dan bersisa $2$ jika dibagi $5$ adalah ... (bilangan bulat)",
+          "answer": "47",
+          "acceptedAnswers": [
+            "47"
+          ],
+          "solution": "Pakai substitusi berantai.\n\nDari syarat pertama: $x = 3a + 2$.\n\nMasukkan ke syarat kedua: $3a + 2 \\equiv 3 \\pmod 4$, jadi $3a \\equiv 1 \\pmod 4$. Karena $3 \\times 3 = 9 \\equiv 1 \\pmod 4$, maka $a \\equiv 3 \\pmod 4$.\n\nTulis $a = 4b + 3$, sehingga $x = 12b + 11$.\n\nMasukkan ke syarat ketiga: $12b + 11 \\equiv 2 \\pmod 5$. Karena $12 \\equiv 2$ dan $11 \\equiv 1$, ini menjadi $2b \\equiv 1 \\pmod 5$, sehingga $b \\equiv 3 \\pmod 5$.\n\nAmbil $b = 3$: $x = 12(3) + 11 = 47$.\n\nCek: $47 = 3(15)+2$ ✓, $47 = 4(11)+3$ ✓, $47 = 5(9)+2$ ✓.",
+          "hint": "Serap syaratnya satu per satu, mulai dari yang pertama.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-crt-diophantine-q3b",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sistem $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 4$, $x \\equiv 2 \\pmod 5$ memiliki penyelesaian yang berulang setiap ...",
+          "options": [
+            "$60$",
+            "$12$",
+            "$47$",
+            "$30$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ketiga modulusnya — $3$, $4$, dan $5$ — saling prima berpasangan.\n\nTeorema Sisa Cina menjamin penyelesaiannya tunggal modulo hasil kali seluruh modulusnya:\n\n$$M = 3 \\times 4 \\times 5 = 60$$\n\nJadi kalau $47$ adalah satu penyelesaian, penyelesaian lainnya adalah $107$, $167$, dan seterusnya — juga $-13$ ke arah negatif.\n\nPilihan $47$ adalah penyelesaian terkecilnya, bukan periodenya. Keduanya sering tertukar.",
+          "hint": "Berapa hasil kali seluruh modulusnya?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Substitusi berantai: satu syarat diserap setiap langkah",
+        "Setiap langkah mempersempit bentuk umumnya",
+        "Putaran akhirnya adalah hasil kali seluruh modulus"
+      ],
+      "pitfall": "Menyelesaikan tiap kongruensi sendiri-sendiri lalu menjumlahkan hasilnya. Sistem kongruensi bukan sistem persamaan linear biasa — syaratnya harus diserap satu per satu ke dalam bentuk umum yang makin sempit."
+    },
+    {
+      "id": "osn-crt-diophantine-c3",
+      "type": "rumus",
+      "title": "Persamaan Diophantine linear",
+      "body": "Persamaan Diophantine adalah persamaan yang penyelesaiannya dituntut berupa **bilangan bulat**. Bentuk linearnya:\n$$ax + by = c$$\n\nSyarat adanya penyelesaian sangat tegas:\n$$ax+by=c \\text{ punya penyelesaian bulat} \\iff \\gcd(a,b) \\mid c$$\n\nAlasannya langsung: setiap nilai $ax+by$ pasti kelipatan $\\gcd(a,b)$, jadi $c$ yang bukan kelipatannya mustahil tercapai. Persamaan $6x + 9y = 5$ tidak punya penyelesaian bulat sama sekali, karena ruas kirinya selalu kelipatan $3$ sementara $5$ bukan.\n\nKalau syaratnya terpenuhi dan $(x_0, y_0)$ satu penyelesaian, maka **seluruh** penyelesaiannya:\n$$x = x_0 + \\frac{b}{d}t, \\qquad y = y_0 - \\frac{a}{d}t, \\qquad d = \\gcd(a,b)$$\n\ndengan $t$ bilangan bulat sembarang. Tanda yang berlawanan pada kedua rumus itu memastikan perubahannya saling menghapus, sehingga nilai $ax+by$ tetap.\n\nSoal olimpiade sering menambahkan syarat $x, y > 0$, yang membatasi $t$ pada jangkauan berhingga — dan di situlah sebagian besar pekerjaannya.",
+      "questions": [
+        {
+          "id": "osn-crt-diophantine-q4",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Persamaan $6x + 9y = 5$ dengan $x, y$ bilangan bulat ...",
+          "options": [
+            "tidak punya penyelesaian",
+            "punya tepat satu penyelesaian",
+            "punya tepat dua penyelesaian",
+            "punya tak hingga banyak penyelesaian"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung $\\gcd(6,9) = 3$.\n\nSyarat adanya penyelesaian bulat adalah $\\gcd(a,b) \\mid c$. Di sini $3 \\nmid 5$, jadi tidak ada penyelesaian.\n\nTerlihat juga secara langsung: $6x + 9y = 3(2x + 3y)$ selalu kelipatan $3$, berapa pun nilai $x$ dan $y$. Bilangan $5$ bukan kelipatan $3$, jadi ruas kiri tidak akan pernah mencapainya.\n\nPemeriksaan $\\gcd$ ini selalu langkah pertama — ia bisa menyelesaikan soal dalam satu baris.",
+          "hint": "Periksa $\\gcd$ kedua koefisiennya lebih dulu.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-crt-diophantine-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya pasangan bilangan bulat **positif** $(x,y)$ yang memenuhi $5x + 3y = 52$ adalah ...",
+          "options": [
+            "$3$",
+            "$2$",
+            "$4$",
+            "$5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Karena $\\gcd(5,3) = 1$ membagi $52$, penyelesaiannya ada.\n\nSelesaikan untuk $y$: $y = \\frac{52 - 5x}{3}$. Agar $y$ bulat, $52 - 5x$ harus habis dibagi $3$.\n\nModulo $3$: $52 \\equiv 1$ dan $5 \\equiv 2$, jadi $1 - 2x \\equiv 0 \\pmod 3$, yang memberi $x \\equiv 2 \\pmod 3$.\n\nCalon nilai $x$: $2, 5, 8, 11, \\ldots$ Syarat $y > 0$ menuntut $5x < 52$, jadi $x \\leq 10$.\n\n$x=2 \\Rightarrow y=14$ ✓\n\n$x=5 \\Rightarrow y=9$ ✓\n\n$x=8 \\Rightarrow y=4$ ✓\n\n$x=11$ sudah melebihi batas. Jadi ada $3$ pasangan.",
+          "hint": "Cari syarat keterbagiannya dulu, baru terapkan batas positifnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$ax+by=c$ punya penyelesaian bulat tepat ketika $\\gcd(a,b) \\mid c$",
+        "Satu penyelesaian membangkitkan seluruhnya lewat parameter $t$",
+        "Syarat positif membatasi $t$ pada jangkauan berhingga"
+      ],
+      "pitfall": "Berhenti setelah menemukan satu penyelesaian. Persamaan Diophantine yang punya satu penyelesaian selalu punya tak hingga banyak, dan soal biasanya menanyakan yang mana — terkecil, positif, atau seluruhnya."
+    },
+    {
+      "id": "osn-crt-diophantine-c4",
+      "type": "teknik",
+      "title": "Algoritma Euklides yang diperluas",
+      "body": "Untuk menemukan satu penyelesaian $ax + by = \\gcd(a,b)$, alatnya adalah algoritma Euklides yang dijalankan mundur.\n\n**Contoh:** selesaikan $7x + 11y = 1$.\n\nJalankan Euklides maju dulu:\n$$11 = 1 \\times 7 + 4$$\n$$7 = 1 \\times 4 + 3$$\n$$4 = 1 \\times 3 + 1$$\n\nSisanya sudah mencapai $1$, jadi $\\gcd(7,11) = 1$. Sekarang jalankan mundur, menyatakan $1$ lewat bilangan-bilangan sebelumnya:\n$$1 = 4 - 1 \\times 3$$\n$$= 4 - (7 - 4) = 2 \\times 4 - 7$$\n$$= 2(11 - 7) - 7 = 2 \\times 11 - 3 \\times 7$$\n\nJadi $x = -3$ dan $y = 2$. Cek: $7(-3) + 11(2) = -21 + 22 = 1$ ✓\n\nUntuk ruas kanan selain $\\gcd$, kalikan saja. Penyelesaian $7x+11y = 100$ diperoleh dengan mengalikan keduanya dengan $100$: $x = -300$, $y = 200$.\n\nUntuk bilangan kecil, mencoba-coba sering lebih cepat. Algoritma ini yang selalu bisa diandalkan saat angkanya besar.",
+      "questions": [
+        {
+          "id": "osn-crt-diophantine-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Salah satu penyelesaian bulat dari $7x + 11y = 1$ adalah ...",
+          "options": [
+            "$(-3, 2)$",
+            "$(3, -2)$",
+            "$(2, -3)$",
+            "$(1, 1)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Periksa langsung setiap pilihan.\n\n$(-3, 2)$: $7(-3) + 11(2) = -21 + 22 = 1$ ✓\n\n$(3,-2)$: $21 - 22 = -1$ — tandanya terbalik\n\n$(2,-3)$: $14 - 33 = -19$ ✗\n\n$(1,1)$: $7 + 11 = 18$ ✗\n\nCara mencarinya lewat Euklides mundur: dari $11 = 7 + 4$, $7 = 4 + 3$, dan $4 = 3 + 1$, diperoleh $1 = 4 - 3 = 4 - (7-4) = 2(4) - 7 = 2(11-7) - 7 = 2(11) - 3(7)$.",
+          "hint": "Substitusikan saja tiap pilihan — ini cara tercepat.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-crt-diophantine-q7",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Jika persamaan $ax + by = c$ punya satu penyelesaian bilangan bulat, maka ia punya tak hingga banyak penyelesaian bilangan bulat.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 0,
+          "solution": "Benar. Dari satu penyelesaian $(x_0, y_0)$, seluruh penyelesaian lainnya diberikan oleh\n\n$$x = x_0 + \\frac{b}{d}t, \\qquad y = y_0 - \\frac{a}{d}t$$\n\ndengan $d = \\gcd(a,b)$ dan $t$ bilangan bulat sembarang.\n\nAlasannya mudah diperiksa: tambahan pada $ax$ adalah $\\frac{ab}{d}t$, dan tambahan pada $by$ adalah $-\\frac{ab}{d}t$. Keduanya saling menghapus, sehingga jumlahnya tetap $c$.\n\nKarena ada tak hingga banyak nilai $t$ yang bisa dipilih, penyelesaiannya pun tak hingga banyak. Yang bisa berhingga hanyalah penyelesaian dengan syarat tambahan, misalnya $x,y > 0$.",
+          "hint": "Coba tambahkan sesuatu ke $x$ dan kurangkan padanannya dari $y$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Euklides maju mencari $\\gcd$, mundur menyatakannya sebagai kombinasi",
+        "Penyelesaian untuk $c$ lain diperoleh dengan mengalikan",
+        "Untuk bilangan kecil, mencoba-coba sering lebih cepat"
+      ],
+      "pitfall": "Mengalikan penyelesaian tanpa memastikan $\\gcd(a,b) \\mid c$ lebih dulu. Untuk $6x+9y=3$ penyelesaiannya ada, tapi mengalikannya dengan $\\frac{5}{3}$ untuk mencapai $5$ menghasilkan bilangan pecahan — yang bukan penyelesaian Diophantine."
+    },
+    {
+      "id": "osn-crt-diophantine-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan sistem sisa dan Diophantine",
+      "body": "**1. Memakai Teorema Sisa Cina pada modulus yang tidak saling prima.** Sistem dengan modulus $4$ dan $6$ tidak dijamin apa pun oleh teorema ini — ia bisa punya penyelesaian, bisa juga tidak. Periksa $\\gcd$ antar modulus lebih dulu.\n\n**2. Melewatkan uji $\\gcd(a,b) \\mid c$.** Satu pemeriksaan ini bisa menyelesaikan soal Diophantine dalam satu baris, atau menyelamatkanmu dari mencari sesuatu yang tidak ada.\n\n**3. Berhenti di satu penyelesaian.** Soal biasanya meminta yang terkecil, yang positif, atau banyaknya. Satu penyelesaian hanyalah titik awal.\n\n**4. Lupa memeriksa jawaban akhir ke semua syarat.** Substitusi berantai mudah tergelincir satu langkah, dan kesalahan itu tidak terlihat sampai kamu mengujinya kembali.\n\nPemeriksaan terakhir itu murah dan wajib: masukkan jawabanmu ke setiap syarat asli. Untuk sistem tiga kongruensi, tiga pembagian sudah cukup memastikan seluruh pekerjaanmu.",
+      "questions": [
+        {
+          "id": "osn-crt-diophantine-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sistem $x \\equiv 1 \\pmod 4$ dan $x \\equiv 2 \\pmod 6$ ...",
+          "options": [
+            "tidak punya penyelesaian",
+            "punya penyelesaian tunggal modulo $24$",
+            "punya penyelesaian tunggal modulo $12$",
+            "punya tepat dua penyelesaian"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan bahwa $\\gcd(4,6) = 2 \\neq 1$, jadi Teorema Sisa Cina tidak menjamin apa pun. Periksa langsung.\n\nSyarat pertama, $x \\equiv 1 \\pmod 4$, menuntut $x$ **ganjil**.\n\nSyarat kedua, $x \\equiv 2 \\pmod 6$, menuntut $x$ **genap**.\n\nTidak ada bilangan yang sekaligus ganjil dan genap, jadi sistemnya tidak punya penyelesaian.\n\nInilah tepatnya yang bisa terjadi kalau syarat saling prima dilanggar — dan alasan kenapa syarat itu ada.",
+          "hint": "Periksa paritas yang dituntut masing-masing syarat.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-crt-diophantine-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Bilangan bulat positif terkecil yang bersisa $1$ jika dibagi $4$, bersisa $2$ jika dibagi $5$, dan bersisa $3$ jika dibagi $7$ adalah ...",
+          "options": [
+            "$17$",
+            "$37$",
+            "$57$",
+            "$117$"
+          ],
+          "answerIndex": 0,
+          "solution": "Modulus $4$, $5$, dan $7$ saling prima berpasangan, jadi penyelesaiannya tunggal modulo $140$.\n\nDari syarat pertama: $x = 4a + 1$.\n\nMasukkan ke syarat kedua: $4a + 1 \\equiv 2 \\pmod 5$, jadi $4a \\equiv 1 \\pmod 5$. Karena $4 \\times 4 = 16 \\equiv 1$, maka $a \\equiv 4 \\pmod 5$.\n\nTulis $a = 5b + 4$, sehingga $x = 20b + 17$.\n\nMasukkan ke syarat ketiga: $20b + 17 \\equiv 3 \\pmod 7$. Karena $20 \\equiv 6$ dan $17 \\equiv 3$, ini menjadi $6b \\equiv 0 \\pmod 7$, sehingga $b \\equiv 0 \\pmod 7$.\n\nAmbil $b = 0$: $x = 17$.\n\nCek: $17 = 4(4)+1$ ✓, $17 = 5(3)+2$ ✓, $17 = 7(2)+3$ ✓.",
+          "hint": "Substitusi berantai; syarat terakhir bisa saja langsung terpenuhi.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Periksa saling prima antar modulus sebelum memakai teoremanya",
+        "Uji $\\gcd(a,b) \\mid c$ sebelum mencari penyelesaian",
+        "Selalu masukkan jawaban akhirmu kembali ke semua syarat"
+      ],
+      "pitfall": "Menganggap pemeriksaan akhir buang waktu karena langkahnya sudah terasa benar. Substitusi berantai punya banyak titik tergelincir, dan tiga pembagian di akhir menangkap semuanya sekaligus."
+    }
+  ]
+}

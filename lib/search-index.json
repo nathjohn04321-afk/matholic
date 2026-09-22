@@ -2032,6 +2032,156 @@
       "snippet": "Menjawab hanya satu penyelesaian. Hampir semua persamaan trigonometri punya lebih dari satu jawaban dalam satu putaran. Setengah jawaban tetap dihitung salah..."
     },
     {
+      "cardId": "osn-crt-diophantine-c1",
+      "topicId": "osn-crt-diophantine",
+      "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Beberapa syarat sisa, satu jawaban",
+      "haystack": "beberapa syarat sisa, satu jawaban soal klasik: cari bilangan yang bersisa jika dibagi , dan bersisa jika dibagi . cara paling jujur adalah mendaftar. bilangan bersisa modulo : dari daftar itu, mana yang bersisa modulo ? jawabannya , lalu , lalu — berselisih setiap kali. angka itu bukan kebetulan: . begitu satu penyelesaian ditemukan, seluruh penyelesaian lainnya berselisih kelipatan hasil kali modulusnya. teorema sisa cina menjamin hal ini secara umum. kalau saling prima berpasangan , maka sistem punya tepat satu penyelesaian modulo . kata \"tepat satu\" itu penting dua arah: penyelesaiannya pasti ada , dan pasti tunggal dalam satu putaran . tanpa syarat saling prima, keduanya bisa gagal — sistem dengan modulus dan bisa saja tidak punya penyelesaian sama sekali. modulus yang saling prima menjamin penyelesaiannya ada dan tunggal penyelesaiannya tunggal modulo hasil kali seluruh modulus tanpa syarat saling prima, sistemnya bisa kosong menerapkan teorema ini pada modulus yang punya faktor bersama. sistem dan tidak punya penyelesaian sama sekali, karena syarat pertama menuntut ganjil sementara yang kedua menuntutnya genap. teorema sisa cina dan persamaan diophantine",
+      "snippet": "Soal klasik: cari bilangan yang bersisa [rumus] jika dibagi [rumus] , dan bersisa [rumus] jika dibagi [rumus] . Cara paling jujur adalah mendaftar. Bilangan ..."
+    },
+    {
+      "cardId": "osn-crt-diophantine-c2",
+      "topicId": "osn-crt-diophantine",
+      "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
+      "track": "olimpiade",
+      "type": "prosedur",
+      "title": "Menyelesaikan sistem sisa selangkah demi selangkah",
+      "haystack": "menyelesaikan sistem sisa selangkah demi selangkah cara paling andal untuk sistem kongruensi adalah substitusi berantai . tidak perlu menghafal rumus umum, dan lebih kecil kemungkinan salahnya. selesaikan , , dan . langkah 1. tulis syarat pertama sebagai . langkah 2. masukkan ke syarat kedua: karena , diperoleh , jadi . substitusikan kembali: . langkah 3. masukkan ke syarat ketiga: karena , diperoleh , jadi . penyelesaian terkecilnya , dan putarannya — persis seperti yang dijanjikan teoremanya. substitusi berantai: satu syarat diserap setiap langkah setiap langkah mempersempit bentuk umumnya putaran akhirnya adalah hasil kali seluruh modulus menyelesaikan tiap kongruensi sendiri-sendiri lalu menjumlahkan hasilnya. sistem kongruensi bukan sistem persamaan linear biasa — syaratnya harus diserap satu per satu ke dalam bentuk umum yang makin sempit. teorema sisa cina dan persamaan diophantine",
+      "snippet": "Cara paling andal untuk sistem kongruensi adalah substitusi berantai. Tidak perlu menghafal rumus umum, dan lebih kecil kemungkinan salahnya. Selesaikan [rum..."
+    },
+    {
+      "cardId": "osn-crt-diophantine-c3",
+      "topicId": "osn-crt-diophantine",
+      "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Persamaan Diophantine linear",
+      "haystack": "persamaan diophantine linear persamaan diophantine adalah persamaan yang penyelesaiannya dituntut berupa bilangan bulat . bentuk linearnya: syarat adanya penyelesaian sangat tegas: alasannya langsung: setiap nilai pasti kelipatan , jadi yang bukan kelipatannya mustahil tercapai. persamaan tidak punya penyelesaian bulat sama sekali, karena ruas kirinya selalu kelipatan sementara bukan. kalau syaratnya terpenuhi dan satu penyelesaian, maka seluruh penyelesaiannya: dengan bilangan bulat sembarang. tanda yang berlawanan pada kedua rumus itu memastikan perubahannya saling menghapus, sehingga nilai tetap. soal olimpiade sering menambahkan syarat , yang membatasi pada jangkauan berhingga — dan di situlah sebagian besar pekerjaannya. punya penyelesaian bulat tepat ketika satu penyelesaian membangkitkan seluruhnya lewat parameter syarat positif membatasi pada jangkauan berhingga berhenti setelah menemukan satu penyelesaian. persamaan diophantine yang punya satu penyelesaian selalu punya tak hingga banyak, dan soal biasanya menanyakan yang mana — terkecil, positif, atau seluruhnya. teorema sisa cina dan persamaan diophantine",
+      "snippet": "Persamaan Diophantine adalah persamaan yang penyelesaiannya dituntut berupa bilangan bulat. Bentuk linearnya: [rumus] Syarat adanya penyelesaian sangat tegas..."
+    },
+    {
+      "cardId": "osn-crt-diophantine-c4",
+      "topicId": "osn-crt-diophantine",
+      "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Algoritma Euklides yang diperluas",
+      "haystack": "algoritma euklides yang diperluas untuk menemukan satu penyelesaian , alatnya adalah algoritma euklides yang dijalankan mundur. contoh: selesaikan . jalankan euklides maju dulu: sisanya sudah mencapai , jadi . sekarang jalankan mundur, menyatakan lewat bilangan-bilangan sebelumnya: jadi dan . cek: ✓ untuk ruas kanan selain , kalikan saja. penyelesaian diperoleh dengan mengalikan keduanya dengan : , . untuk bilangan kecil, mencoba-coba sering lebih cepat. algoritma ini yang selalu bisa diandalkan saat angkanya besar. euklides maju mencari , mundur menyatakannya sebagai kombinasi penyelesaian untuk lain diperoleh dengan mengalikan untuk bilangan kecil, mencoba-coba sering lebih cepat mengalikan penyelesaian tanpa memastikan lebih dulu. untuk penyelesaiannya ada, tapi mengalikannya dengan untuk mencapai menghasilkan bilangan pecahan — yang bukan penyelesaian diophantine. teorema sisa cina dan persamaan diophantine",
+      "snippet": "Untuk menemukan satu penyelesaian [rumus] , alatnya adalah algoritma Euklides yang dijalankan mundur. Contoh: selesaikan [rumus] . Jalankan Euklides maju dul..."
+    },
+    {
+      "cardId": "osn-crt-diophantine-c5",
+      "topicId": "osn-crt-diophantine",
+      "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan sistem sisa dan Diophantine",
+      "haystack": "empat jebakan sistem sisa dan diophantine 1. memakai teorema sisa cina pada modulus yang tidak saling prima. sistem dengan modulus dan tidak dijamin apa pun oleh teorema ini — ia bisa punya penyelesaian, bisa juga tidak. periksa antar modulus lebih dulu. 2. melewatkan uji . satu pemeriksaan ini bisa menyelesaikan soal diophantine dalam satu baris, atau menyelamatkanmu dari mencari sesuatu yang tidak ada. 3. berhenti di satu penyelesaian. soal biasanya meminta yang terkecil, yang positif, atau banyaknya. satu penyelesaian hanyalah titik awal. 4. lupa memeriksa jawaban akhir ke semua syarat. substitusi berantai mudah tergelincir satu langkah, dan kesalahan itu tidak terlihat sampai kamu mengujinya kembali. pemeriksaan terakhir itu murah dan wajib: masukkan jawabanmu ke setiap syarat asli. untuk sistem tiga kongruensi, tiga pembagian sudah cukup memastikan seluruh pekerjaanmu. periksa saling prima antar modulus sebelum memakai teoremanya uji sebelum mencari penyelesaian selalu masukkan jawaban akhirmu kembali ke semua syarat menganggap pemeriksaan akhir buang waktu karena langkahnya sudah terasa benar. substitusi berantai punya banyak titik tergelincir, dan tiga pembagian di akhir menangkap semuanya sekaligus. teorema sisa cina dan persamaan diophantine",
+      "snippet": "1. Memakai Teorema Sisa Cina pada modulus yang tidak saling prima. Sistem dengan modulus [rumus] dan [rumus] tidak dijamin apa pun oleh teorema ini — ia bisa..."
+    },
+    {
+      "cardId": "osn-fermat-euler-c1",
+      "topicId": "osn-fermat-euler",
+      "topicTitle": "Teorema Fermat Kecil dan Euler",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Pangkat berputar, dan periodenya bisa dihitung",
+      "haystack": "pangkat berputar, dan periodenya bisa dihitung berapa sisa dibagi ? menghitungnya langsung mustahil — bilangannya punya 48 digit. coba amati pangkat kecilnya dulu, semuanya modulo : setelah mencapai , seluruh pola mengulang dari awal. sisa-sisanya berputar dengan periode , dan periode itu bukan kebetulan: . itulah isi teorema fermat kecil . kalau prima dan : akibat praktisnya besar sekali. kalau , maka eksponen yang berselisih kelipatan memberi hasil sama. artinya eksponen boleh direduksi modulo , sementara bilangan pokoknya direduksi modulo . dua modulus berbeda untuk dua tempat berbeda. kembali ke soal tadi: , jadi . untuk prima dan eksponen direduksi modulo , bukan modulo pangkat besar jadi pangkat kecil dalam satu langkah mereduksi eksponen modulo alih-alih modulo . untuk , yang dipakai adalah , bukan — dan jelas berbeda dari jawaban benarnya . teorema fermat kecil dan euler",
+      "snippet": "Berapa sisa [rumus] dibagi [rumus] ? Menghitungnya langsung mustahil — bilangannya punya 48 digit. Coba amati pangkat kecilnya dulu, semuanya modulo [rumus] ..."
+    },
+    {
+      "cardId": "osn-fermat-euler-c2",
+      "topicId": "osn-fermat-euler",
+      "topicTitle": "Teorema Fermat Kecil dan Euler",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Teorema Euler: ketika modulusnya bukan prima",
+      "haystack": "teorema euler: ketika modulusnya bukan prima fermat kecil menuntut modulus prima. untuk modulus sembarang, perluasannya adalah teorema euler : fungsi menghitung banyaknya bilangan dari sampai yang relatif prima terhadap . cara menghitungnya dari faktorisasi: contoh: , sehingga untuk prima, — jadi fermat kecil hanyalah kasus khusus dari euler. syarat tidak boleh dilewat. tanpa itu teoremanya gugur: , bukan , karena . alasan syarat itu ada: seluruh pembuktiannya bersandar pada keberadaan invers perkalian bagi modulo , dan invers semacam itu hanya ada ketika keduanya relatif prima. karena itu pemeriksaan bukan formalitas, melainkan langkah pertama yang menentukan apakah teorema ini boleh dipakai sama sekali. bila , jadi fermat kasus khusus euler syarat relatif prima wajib diperiksa lebih dulu memakai teorema euler tanpa memeriksa . untuk mencari teorema ini tidak berlaku sama sekali karena , dan memakainya memberi jawaban yang keliru. teorema fermat kecil dan euler",
+      "snippet": "Fermat Kecil menuntut modulus prima. Untuk modulus sembarang, perluasannya adalah Teorema Euler: [rumus] Fungsi [rumus] menghitung banyaknya bilangan dari [r..."
+    },
+    {
+      "cardId": "osn-fermat-euler-c3",
+      "topicId": "osn-fermat-euler",
+      "topicTitle": "Teorema Fermat Kecil dan Euler",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Strategi menaklukkan pangkat raksasa",
+      "haystack": "strategi menaklukkan pangkat raksasa soal olimpiade dengan pangkat besar hampir selalu diselesaikan lewat urutan berikut. 1. periksa bilangan pokok dengan modulusnya. kalau tidak relatif prima, kedua teorema tadi gugur dan kamu perlu memecah modulusnya lebih dulu. 2. tentukan periodenya. pakai untuk modulus prima, atau untuk yang lain. ini memberi periode yang pasti berlaku. 3. cari periode yang lebih pendek. hitung modulo sampai bertemu . periode sesungguhnya selalu membagi , dan sering jauh lebih kecil. 4. reduksi eksponennya modulo periode itu, lalu hitung pangkat kecil yang tersisa. untuk modulus yang bisa difaktorkan, ada jalan lain yang sering lebih pendek: kerjakan soalnya terpisah untuk setiap faktor prima, lalu gabungkan hasilnya. mencari misalnya bisa dikerjakan sebagai dan secara terpisah. untuk soal \"digit satuan\", modulusnya cukup , dan periodenya paling banyak untuk semua bilangan pokok — sering bisa dilihat langsung tanpa teorema apa pun. periksa dulu, selalu periode sesungguhnya membagi , sering jauh lebih pendek modulus majemuk boleh dipecah per faktor prima menganggap adalah periode terkecil. untuk modulo , nilai memang berlaku, tapi periode sesungguhnya hanya — dan mengetahuinya memangkas pekerjaan sepuluh kali lipat. teorema fermat kecil dan euler",
+      "snippet": "Soal olimpiade dengan pangkat besar hampir selalu diselesaikan lewat urutan berikut. 1. Periksa [rumus] bilangan pokok dengan modulusnya. Kalau tidak relatif..."
+    },
+    {
+      "cardId": "osn-fermat-euler-c4",
+      "topicId": "osn-fermat-euler",
+      "topicTitle": "Teorema Fermat Kecil dan Euler",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Membuktikan keterbagian dengan Fermat",
+      "haystack": "membuktikan keterbagian dengan fermat fermat kecil tidak hanya menghitung sisa — ia juga alat pembuktian. bentuk soal yang khas: buktikan bahwa suatu bentuk selalu habis dibagi bilangan tertentu. contoh. buktikan selalu habis dibagi untuk setiap bilangan bulat . faktorkan . karena ketiganya prima berbeda, cukup dibuktikan keterbagian oleh masing-masing secara terpisah. oleh : fermat kecil memberi untuk setiap — termasuk yang habis dibagi , karena kedua ruas menjadi nol. jadi . oleh : dari diperoleh . oleh : dan selalu punya paritas sama, jadi selisihnya genap. ketiganya terpenuhi, dan karena , , saling prima, hasil kalinya juga membagi. pola \"pecah menjadi faktor prima, tangani satu per satu\" ini berlaku untuk hampir semua soal keterbagian. berlaku untuk semua pecah modulusnya menjadi faktor prima, tangani terpisah faktor-faktor yang saling prima boleh digabungkan kembali menggabungkan kembali faktor-faktor yang tidak saling prima. dari habis dibagi dan habis dibagi kamu tidak boleh menyimpulkan habis dibagi — bilangan adalah tandingannya. teorema fermat kecil dan euler",
+      "snippet": "Fermat Kecil tidak hanya menghitung sisa — ia juga alat pembuktian. Bentuk soal yang khas: buktikan bahwa suatu bentuk selalu habis dibagi bilangan tertentu...."
+    },
+    {
+      "cardId": "osn-fermat-euler-c5",
+      "topicId": "osn-fermat-euler",
+      "topicTitle": "Teorema Fermat Kecil dan Euler",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan teorema pangkat",
+      "haystack": "empat jebakan teorema pangkat 1. mereduksi eksponen dengan modulus yang salah. bilangan pokok direduksi modulo , tapi eksponen direduksi modulo . keduanya modulus berbeda untuk tempat berbeda. 2. melewatkan syarat . tanpa itu teorema euler tidak berlaku sama sekali. periksa sebelum memakai, bukan sesudah. 3. menganggap pasti periode terkecil. ia periode yang berlaku, bukan yang terpendek. mencari periode sebenarnya sering memangkas pekerjaan berlipat-lipat. 4. menggabungkan faktor yang tidak saling prima. habis dibagi dan tidak berarti habis dibagi . penggabungan hanya sah kalau faktornya saling prima. pemeriksaan termurah untuk seluruh jawabanmu: uji dengan bilangan kecil. kalau kamu menyimpulkan suatu bentuk selalu habis dibagi , coba dulu — satu kegagalan sudah membatalkan seluruh klaimnya. pokok modulo , eksponen modulo selalu uji kesimpulanmu dengan bilangan kecil penggabungan faktor butuh syarat saling prima mempercayai pola dari dua atau tiga contoh sebagai bukti. bilangan menghasilkan bilangan prima untuk sampai , tapi gagal di — pola yang panjang pun bukan jaminan. teorema fermat kecil dan euler",
+      "snippet": "1. Mereduksi eksponen dengan modulus yang salah. Bilangan pokok direduksi modulo [rumus] , tapi eksponen direduksi modulo [rumus] . Keduanya modulus berbeda ..."
+    },
+    {
+      "cardId": "osn-fungsi-lantai-c1",
+      "topicId": "osn-fungsi-lantai",
+      "topicTitle": "Fungsi Lantai dan Formula Legendre",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Lantai, dan kenapa ia tidak simetris",
+      "haystack": "lantai, dan kenapa ia tidak simetris fungsi lantai memberi bilangan bulat terbesar yang tidak melebihi . untuk bilangan positif ini terasa seperti \"membuang angka di belakang koma\": tapi untuk bilangan negatif, gambaran itu menyesatkan: lantai selalu bergerak ke bawah pada garis bilangan, bukan menuju nol. bilangan memang lebih kecil dari , sementara justru lebih besar sehingga tidak memenuhi definisi. dua sifat yang jadi tulang punggung hampir semua soal: bagian disebut bagian pecahan. memisahkan sebuah bilangan menjadi bagian bulat dan bagian pecahan adalah langkah pertama pada sebagian besar soal fungsi lantai. satu sifat yang tidak berlaku: belum tentu sama dengan . untuk , ruas kirinya dan ruas kanannya . lantai bergerak ke bawah, bukan menuju nol dengan pada umumnya menghitung sebagai dengan membuang angka di belakang koma. untuk bilangan negatif, membuang desimal justru membulatkan ke atas — hasilnya berbeda satu dari yang benar. fungsi lantai dan formula legendre",
+      "snippet": "Fungsi lantai [rumus] memberi bilangan bulat terbesar yang tidak melebihi [rumus] . Untuk bilangan positif ini terasa seperti \"membuang angka di belakang kom..."
+    },
+    {
+      "cardId": "osn-fungsi-lantai-c2",
+      "topicId": "osn-fungsi-lantai",
+      "topicTitle": "Fungsi Lantai dan Formula Legendre",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Formula Legendre",
+      "haystack": "formula legendre berapa banyak angka nol di akhir ? menghitung langsung mustahil — bilangannya punya 158 digit. setiap nol di akhir berasal dari satu faktor . karena faktor jauh lebih berlimpah daripada faktor dalam sebuah faktorial, banyaknya nol ditentukan sepenuhnya oleh banyaknya faktor . formula legendre menghitungnya. eksponen prima dalam adalah: suku pertama menghitung kelipatan di antara sampai . tapi kelipatan menyumbang dua faktor , bukan satu — dan suku pertama hanya mencatatnya sekali. suku kedua menambahkan yang terlewat itu, suku ketiga menambahkan lagi untuk kelipatan , dan seterusnya. deretnya berhenti sendiri begitu , karena sejak itu setiap sukunya nol. untuk dan : tiap suku menambahkan faktor yang terlewat oleh suku sebelumnya banyaknya nol di akhir ditentukan oleh faktor , bukan berhenti di suku pertama, yaitu hanya menghitung . untuk itu memberi , padahal jawabannya — empat faktor dari kelipatan terlewat seluruhnya. fungsi lantai dan formula legendre",
+      "snippet": "Berapa banyak angka nol di akhir [rumus] ? Menghitung [rumus] langsung mustahil — bilangannya punya 158 digit. Setiap nol di akhir berasal dari satu faktor [..."
+    },
+    {
+      "cardId": "osn-fungsi-lantai-c3",
+      "topicId": "osn-fungsi-lantai",
+      "topicTitle": "Fungsi Lantai dan Formula Legendre",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Menghitung dengan lantai",
+      "haystack": "menghitung dengan lantai fungsi lantai punya satu kegunaan yang muncul terus-menerus di olimpiade: menghitung banyaknya kelipatan . banyaknya kelipatan di antara dan adalah tepat . rumus ini persis, bukan hampiran. digabung dengan prinsip inklusi-eksklusi, ia menyelesaikan soal pencacahan yang tampak rumit. misalnya, berapa banyak bilangan dari sampai yang habis dibagi atau ? suku terakhir mengurangi kelipatan , yang terhitung dua kali karena habis dibagi maupun . untuk jumlah berbentuk , jangan cari rumus tertutup — kelompokkan sukunya. pada , nilainya untuk ; lalu untuk ; untuk ; dan untuk . jumlahnya . banyaknya kelipatan sampai adalah , persis gabungkan dengan inklusi-eksklusi untuk syarat majemuk jumlah berbentuk lantai diselesaikan dengan mengelompokkan suku menghitung kelipatan atau sebagai tanpa mengurangi irisannya. bilangan seperti , , dan terhitung dua kali, dan ada bilangan semacam itu. fungsi lantai dan formula legendre",
+      "snippet": "Fungsi lantai punya satu kegunaan yang muncul terus-menerus di olimpiade: menghitung banyaknya kelipatan. Banyaknya kelipatan [rumus] di antara [rumus] dan [..."
+    },
+    {
+      "cardId": "osn-fungsi-lantai-c4",
+      "topicId": "osn-fungsi-lantai",
+      "topicTitle": "Fungsi Lantai dan Formula Legendre",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Membuktikan identitas lantai",
+      "haystack": "membuktikan identitas lantai soal olimpiade sering meminta pembuktian identitas yang melibatkan lantai. teknik bakunya selalu sama: tulis dengan bulat dan , lalu periksa kasusnya berdasarkan letak . contoh. buktikan . tulis . karena bulat, ia bisa dikeluarkan dari setiap lantai, dan soalnya menyusut menjadi pernyataan tentang saja: kasus 1: . di sini , sehingga lantainya , dan sehingga lantainya juga . kedua ruas bernilai . kasus 2: . sekarang , tapi sehingga lantainya . di ruas kanan, sehingga lantainya juga . kedua ruas bernilai . kedua kasus terpenuhi, dan bersama-sama keduanya mencakup semua kemungkinan. terbukti. tulis dan keluarkan bagian bulatnya periksa kasus berdasarkan letak bagian pecahan pastikan kasus-kasusnya mencakup seluruh kemungkinan membuktikan identitas hanya dengan beberapa contoh angka. identitas lantai sering benar untuk sebagian jangkauan dan salah untuk sisanya, jadi pembagian kasus yang menyeluruh adalah satu-satunya bukti yang sah. fungsi lantai dan formula legendre",
+      "snippet": "Soal olimpiade sering meminta pembuktian identitas yang melibatkan lantai. Teknik bakunya selalu sama: tulis [rumus] dengan [rumus] bulat dan [rumus] , lalu ..."
+    },
+    {
+      "cardId": "osn-fungsi-lantai-c5",
+      "topicId": "osn-fungsi-lantai",
+      "topicTitle": "Fungsi Lantai dan Formula Legendre",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan fungsi lantai",
+      "haystack": "empat jebakan fungsi lantai 1. memperlakukan lantai bilangan negatif seperti membuang desimal. , bukan . lantai selalu turun. 2. mengira lantai bersifat aditif. bisa berbeda satu dari . tidak ada jalan pintas — pecah menjadi bagian bulat dan pecahan. 3. berhenti di suku pertama formula legendre. kelipatan menyumbang dua faktor, menyumbang tiga, dan seterusnya. lanjutkan sampai pembaginya melebihi . 4. menghitung faktor untuk soal angka nol di akhir. yang membatasi adalah faktor , karena faktor selalu lebih berlimpah dalam faktorial. untuk soal pembuktian, satu disiplin menutup hampir semuanya: tulis , lalu periksa kasus berdasarkan letak . menebak dari beberapa contoh angka hampir selalu menghasilkan klaim yang benar sebagian saja. lantai selalu turun, termasuk pada bilangan negatif lanjutkan formula legendre sampai untuk pembuktian, pecah menjadi bagian bulat dan pecahan mempercayai pola dari nilai-nilai positif saat menyusun identitas. banyak identitas lantai yang mulus di sisi positif langsung gugur begitu diuji dengan bilangan negatif. fungsi lantai dan formula legendre",
+      "snippet": "1. Memperlakukan lantai bilangan negatif seperti membuang desimal. [rumus] , bukan [rumus] . Lantai selalu turun. 2. Mengira lantai bersifat aditif. [rumus] ..."
+    },
+    {
       "cardId": "osn-keterbagian-c1",
       "topicId": "osn-keterbagian",
       "topicTitle": "Keterbagian & Kongruensi",
