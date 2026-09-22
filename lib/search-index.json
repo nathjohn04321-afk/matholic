@@ -1082,6 +1082,106 @@
       "snippet": "Menuliskan [rumus] sebagai jawaban. Bentuk itu bukan bilangan. Ia hanya memberitahu bahwa kamu belum selesai bekerja. Mencoret suku, bukan faktor. Dari [rumu..."
     },
     {
+      "cardId": "pel-pencacahan-c1",
+      "topicId": "pel-pencacahan",
+      "topicTitle": "Pencacahan",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Satu pertanyaan memisahkan permutasi dari kombinasi",
+      "haystack": "satu pertanyaan memisahkan permutasi dari kombinasi kebanyakan kesalahan di bab ini lahir dari memilih rumus sebelum memikirkan soalnya. padahal cukup satu pertanyaan: apakah urutan berpengaruh? kalau urutan berpengaruh, itu permutasi. memilih ketua dan wakil dari 5 orang: a sebagai ketua dan b sebagai wakil berbeda dari sebaliknya. kalau urutan tidak berpengaruh, itu kombinasi. memilih 2 wakil dari 5 orang: memilih a dan b sama saja dengan memilih b dan a. perhatikan kombinasi punya tambahan di penyebut. itulah yang membuang perhitungan berulang: setiap kelompok yang sama terhitung kali pada permutasi, jadi dibagi habis. akibatnya selalu lebih kecil atau sama dengan . urutan berpengaruh permutasi urutan tidak berpengaruh kombinasi memakai permutasi untuk soal memilih tim, padahal susunan anggota tim tidak membedakan apa pun — hasilnya menjadi berlipat-lipat terlalu besar. pencacahan",
+      "snippet": "Kebanyakan kesalahan di bab ini lahir dari memilih rumus sebelum memikirkan soalnya. Padahal cukup satu pertanyaan: apakah urutan berpengaruh? Kalau urutan b..."
+    },
+    {
+      "cardId": "pel-pencacahan-c2",
+      "topicId": "pel-pencacahan",
+      "topicTitle": "Pencacahan",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Aturan perkalian dan penjumlahan",
+      "haystack": "aturan perkalian dan penjumlahan sebelum sampai ke permutasi dan kombinasi, dua aturan dasar ini menyelesaikan banyak soal sendirian. aturan perkalian dipakai untuk tahapan yang dilakukan berurutan . kalau tahap pertama punya cara dan tahap kedua cara, seluruhnya ada cara. contoh: 3 baju dan 4 celana memberi pasangan. aturan penjumlahan dipakai untuk pilihan yang saling menggantikan . kalau kamu memilih satu dari 3 baju atau satu dari 4 celana, ada pilihan. kata kuncinya: \"dan\" mengarah ke perkalian, \"atau\" mengarah ke penjumlahan. banyak soal menggabungkan keduanya. pecah soalnya menjadi tahapan lebih dulu, tentukan tiap tahap berapa cara, baru putuskan dikali atau dijumlah. \"dan\" (berurutan) dikalikan \"atau\" (menggantikan) dijumlahkan pecah soal jadi tahapan lebih dulu menjumlahkan tahapan yang seharusnya dikalikan, misalnya menghitung pasangan baju dan celana sebagai alih-alih . pencacahan",
+      "snippet": "Sebelum sampai ke permutasi dan kombinasi, dua aturan dasar ini menyelesaikan banyak soal sendirian. Aturan perkalian dipakai untuk tahapan yang dilakukan be..."
+    },
+    {
+      "cardId": "pel-pencacahan-c3",
+      "topicId": "pel-pencacahan",
+      "topicTitle": "Pencacahan",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Memilih dengan syarat tambahan",
+      "haystack": "memilih dengan syarat tambahan soal sering menambahkan syarat, misalnya \"harus memuat sedikitnya satu perempuan\" atau \"dua orang tertentu harus berdampingan\". ada dua teknik yang menutup hampir semuanya. teknik komplemen. untuk syarat \"sedikitnya satu\", hitung total tanpa syarat lalu kurangi kasus yang tidak memenuhi. menghitung \"tidak ada satu pun\" biasanya jauh lebih mudah daripada menjumlahkan \"satu, dua, tiga, ...\". teknik menggabung. untuk syarat \"harus berdampingan\", perlakukan kedua orang itu sebagai satu blok. susun bloknya bersama yang lain, lalu kalikan dengan banyaknya susunan di dalam blok itu sendiri. contoh: 5 orang duduk berjajar dengan a dan b harus bersebelahan. anggap ab satu blok, jadi ada 4 benda yang disusun: . di dalam blok, a dan b bisa bertukar: . seluruhnya . \"sedikitnya satu\" total dikurangi yang tidak memenuhi \"harus berdampingan\" gabungkan jadi satu blok jangan lupa mengalikan susunan di dalam blok lupa mengalikan dengan susunan di dalam blok pada soal berdampingan, sehingga jawabannya tepat separuh dari seharusnya. pencacahan",
+      "snippet": "Soal sering menambahkan syarat, misalnya \"harus memuat sedikitnya satu perempuan\" atau \"dua orang tertentu harus berdampingan\". Ada dua teknik yang menutup h..."
+    },
+    {
+      "cardId": "pel-pencacahan-c4",
+      "topicId": "pel-pencacahan",
+      "topicTitle": "Pencacahan",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Faktorial dan sifatnya",
+      "haystack": "faktorial dan sifatnya faktorial adalah hasil kali seluruh bilangan asli sampai : satu kesepakatan yang sering membingungkan: , bukan nol. alasannya bukan sekadar kesepakatan kosong — dengan definisi itu, rumus kombinasi tetap bekerja di kasus tepi. misalnya harus bernilai 1, karena memang hanya ada satu cara memilih semuanya. sifat yang sering memangkas pekerjaan: ini berguna untuk menyederhanakan pecahan faktorial. bentuk tidak perlu dihitung penuh — cukup , karena di atas dan bawah saling mencoret. kebiasaan ini penting, karena sudah melebihi tiga juta. sederhanakan pecahan faktorial dengan mencoret, jangan dihitung penuh menghitung dengan menghitung kedua faktorial secara penuh, padahal sebagian besar faktornya saling mencoret. pencacahan",
+      "snippet": "Faktorial adalah hasil kali seluruh bilangan asli sampai [rumus] : [rumus] Satu kesepakatan yang sering membingungkan: [rumus] , bukan nol. Alasannya bukan s..."
+    },
+    {
+      "cardId": "pel-pencacahan-c5",
+      "topicId": "pel-pencacahan",
+      "topicTitle": "Pencacahan",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada pencacahan",
+      "haystack": "kesalahan khas pada pencacahan memilih rumus sebelum membaca soal. tanyakan dulu apakah urutan berpengaruh. hampir semua kesalahan di bab ini berakar di sini. lupa huruf berulang. kata dengan huruf kembar punya susunan lebih sedikit, karena menukar huruf yang sama tidak menghasilkan susunan baru. menjumlahkan yang seharusnya dikali. tahapan berurutan dikalikan; pilihan yang saling menggantikan dijumlahkan. lupa susunan di dalam blok. pada soal berdampingan, kedua orang di dalam blok masih bisa bertukar tempat. mengira . nilainya 1, dan itu penting agar rumus kombinasi tetap bekerja. uji kewajaran: jawaban kombinasi tidak pernah melebihi permutasi untuk dan yang sama. tanyakan dulu: apakah urutan berpengaruh? huruf berulang membagi hasilnya \"dan\" dikali, \"atau\" dijumlah memakai untuk soal yang posisinya berbeda peran, seperti juara 1 dan juara 2 — di situ urutan jelas berpengaruh. pencacahan",
+      "snippet": "Memilih rumus sebelum membaca soal. Tanyakan dulu apakah urutan berpengaruh. Hampir semua kesalahan di bab ini berakar di sini. Lupa huruf berulang. Kata den..."
+    },
+    {
+      "cardId": "sta-statistik-c1",
+      "topicId": "sta-statistik",
+      "topicTitle": "Statistik",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Rata-rata dan median mengukur hal berbeda",
+      "haystack": "rata-rata dan median mengukur hal berbeda keduanya disebut ukuran pemusatan, tapi jawabannya bisa berbeda jauh — dan memilih yang salah membuat kesimpulanmu menyesatkan. rata-rata membagi total secara merata. ia memperhitungkan setiap nilai, termasuk yang ekstrem. satu nilai yang sangat besar menariknya naik cukup jauh. median adalah nilai tengah setelah diurutkan. ia hanya peduli pada urutan, bukan besaran, sehingga tidak terpengaruh nilai ekstrem. contoh gaji di sebuah kantor kecil: enam orang bergaji 5 juta dan satu direktur bergaji 100 juta. rata-ratanya sekitar 18 juta — angka yang tidak menggambarkan siapa pun. mediannya 5 juta, jauh lebih jujur. aturan praktisnya: kalau datanya punya nilai ekstrem atau sangat miring, median lebih mewakili. kalau datanya seimbang, rata-rata memakai lebih banyak informasi. rata-rata memperhitungkan semua nilai, termasuk ekstrem median hanya peduli urutan, tahan terhadap ekstrem data miring median lebih mewakili menghitung median tanpa mengurutkan datanya lebih dulu. median adalah nilai tengah dari data terurut, bukan dari urutan asli. statistik",
+      "snippet": "Keduanya disebut ukuran pemusatan, tapi jawabannya bisa berbeda jauh — dan memilih yang salah membuat kesimpulanmu menyesatkan. Rata-rata membagi total secar..."
+    },
+    {
+      "cardId": "sta-statistik-c2",
+      "topicId": "sta-statistik",
+      "topicTitle": "Statistik",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Menghitung rata-rata data berkelompok",
+      "haystack": "menghitung rata-rata data berkelompok untuk data yang sudah dikelompokkan dalam tabel frekuensi, nilai aslinya tidak diketahui lagi. yang dipakai adalah titik tengah tiap kelas sebagai wakilnya. dengan titik tengah kelas dan frekuensinya. langkah kerjanya: 1. hitung titik tengah tiap kelas: rata-rata batas bawah dan batas atasnya. 2. kalikan tiap titik tengah dengan frekuensinya. 3. jumlahkan semua hasil kali itu. 4. bagi dengan jumlah seluruh frekuensi. langkah 4 sering salah: pembaginya adalah total frekuensi , bukan banyaknya kelas. membaginya dengan banyak kelas memberi angka yang jauh meleset, dan kesalahan ini tidak terlihat dari bentuk jawabannya. titik tengah = rata-rata batas bawah dan atas kelas pembaginya total frekuensi, bukan banyaknya kelas membagi dengan banyaknya kelas alih-alih total frekuensi, sehingga rata-ratanya jauh lebih besar dari seharusnya. statistik",
+      "snippet": "Untuk data yang sudah dikelompokkan dalam tabel frekuensi, nilai aslinya tidak diketahui lagi. Yang dipakai adalah titik tengah tiap kelas sebagai wakilnya. ..."
+    },
+    {
+      "cardId": "sta-statistik-c3",
+      "topicId": "sta-statistik",
+      "topicTitle": "Statistik",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Apa yang diukur simpangan baku",
+      "haystack": "apa yang diukur simpangan baku rata-rata memberitahu di mana pusat data berada, tapi tidak memberitahu seberapa menyebar. dua kelompok bisa punya rata-rata sama dengan sebaran yang sangat berbeda. simpangan baku mengukur rata-rata jarak tiap data dari rata-ratanya . kenapa dikuadratkan? karena kalau simpangannya dijumlahkan langsung, yang positif dan negatif saling meniadakan sehingga hasilnya selalu nol. mengkuadratkan membuat semuanya positif; mengakarkan di akhir mengembalikan satuannya seperti semula. membacanya sederhana: makin besar simpangan baku, makin menyebar datanya. simpangan baku nol berarti semua datanya sama persis. nilai di dalam akar disebut ragam atau varians. ragam adalah kuadrat simpangan baku, dan keduanya sering tertukar. simpangan baku mengukur sebaran data ragam simpangan baku nol berarti semua data sama menjawab dengan ragam padahal yang ditanya simpangan baku, atau sebaliknya. keduanya berbeda satu operasi akar. statistik",
+      "snippet": "Rata-rata memberitahu di mana pusat data berada, tapi tidak memberitahu seberapa menyebar. Dua kelompok bisa punya rata-rata sama dengan sebaran yang sangat ..."
+    },
+    {
+      "cardId": "sta-statistik-c4",
+      "topicId": "sta-statistik",
+      "topicTitle": "Statistik",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Kuartil dan jangkauan",
+      "haystack": "kuartil dan jangkauan kuartil membagi data terurut menjadi empat bagian sama banyak. adalah median dari separuh bawah, adalah median seluruh data, dan adalah median dari separuh atas. dari ketiganya lahir dua ukuran sebaran: jangkauan antarkuartil lebih berguna karena hanya melihat 50% data di tengah, sehingga tidak terpengaruh nilai ekstrem — alasan yang sama seperti median lebih tahan daripada rata-rata. data disebut pencilan kalau berada lebih dari di luar atau . aturan ini dipakai untuk menandai data yang pantas diperiksa ulang, bukan untuk langsung membuangnya. adalah median seluruh data jangkauan jangkauan antarkuartil , tahan terhadap pencilan menghitung sebagai median separuh bawah termasuk pada data berjumlah ganjil, padahal cara baku sekolah mengeluarkannya. statistik",
+      "snippet": "Kuartil membagi data terurut menjadi empat bagian sama banyak. [rumus] adalah median dari separuh bawah, [rumus] adalah median seluruh data, dan [rumus] adal..."
+    },
+    {
+      "cardId": "sta-statistik-c5",
+      "topicId": "sta-statistik",
+      "topicTitle": "Statistik",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada statistik",
+      "haystack": "kesalahan khas pada statistik lupa mengurutkan sebelum mencari median. median adalah nilai tengah data terurut . ini kesalahan paling sering, dan paling mudah dihindari. membagi dengan banyaknya kelas. pada data berkelompok, pembaginya total frekuensi. tertukar ragam dan simpangan baku. ragam adalah kuadratnya; simpangan baku adalah akarnya. baca pertanyaannya sampai selesai. mengira rata-rata selalu ada di dalam data. rata-rata bisa muncul dari data yang seluruhnya bilangan bulat. menghitung rata-rata dari rata-rata. kalau kelompoknya berbeda ukuran, rata-rata gabungannya harus ditimbang: total seluruh nilai dibagi total seluruh data, bukan rata-rata dari kedua rata-rata. urutkan sebelum mencari median ragam , simpangan baku rata-rata gabungan harus ditimbang jumlah datanya menghitung rata-rata gabungan dua kelas dengan merata-ratakan kedua rata-rata, padahal jumlah siswanya berbeda. statistik",
+      "snippet": "Lupa mengurutkan sebelum mencari median. Median adalah nilai tengah data terurut. Ini kesalahan paling sering, dan paling mudah dihindari. Membagi dengan ban..."
+    },
+    {
       "cardId": "trg-perbandingan-c1",
       "topicId": "trg-perbandingan",
       "topicTitle": "Perbandingan Trigonometri",

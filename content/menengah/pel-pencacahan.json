@@ -1,0 +1,266 @@
+{
+  "id": "pel-pencacahan",
+  "track": "menengah",
+  "title": "Pencacahan",
+  "order": 14,
+  "prerequisites": [
+    "das-bilangan"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Kapan urutan penting dan kapan tidak — satu pertanyaan yang menentukan permutasi atau kombinasi.",
+  "tags": [
+    "peluang",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "pel-pencacahan-c1",
+      "type": "konsep",
+      "title": "Satu pertanyaan memisahkan permutasi dari kombinasi",
+      "body": "Kebanyakan kesalahan di bab ini lahir dari memilih rumus sebelum memikirkan soalnya. Padahal cukup satu pertanyaan: **apakah urutan berpengaruh?**\n\nKalau urutan berpengaruh, itu permutasi. Memilih ketua dan wakil dari 5 orang: A sebagai ketua dan B sebagai wakil berbeda dari sebaliknya.\n\nKalau urutan tidak berpengaruh, itu kombinasi. Memilih 2 wakil dari 5 orang: memilih A dan B sama saja dengan memilih B dan A.\n\n$$P(n,k) = \\frac{n!}{(n-k)!}, \\qquad C(n,k) = \\frac{n!}{k!(n-k)!}$$\n\nPerhatikan kombinasi punya $k!$ tambahan di penyebut. Itulah yang membuang perhitungan berulang: setiap kelompok yang sama terhitung $k!$ kali pada permutasi, jadi dibagi habis.\n\nAkibatnya $C(n,k)$ selalu lebih kecil atau sama dengan $P(n,k)$.",
+      "questions": [
+        {
+          "id": "pel-pencacahan-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya cara memilih ketua dan wakil ketua dari 5 orang adalah ...",
+          "options": [
+            "$20$",
+            "$10$",
+            "$25$",
+            "$120$"
+          ],
+          "answerIndex": 0,
+          "solution": "Urutan berpengaruh di sini — menjadi ketua berbeda dari menjadi wakil. Jadi ini permutasi.\n\n$$P(5,2) = \\frac{5!}{3!} = 5 \\times 4 = 20$$\n\nCara lain: ada 5 pilihan untuk ketua, lalu 4 sisa untuk wakil, jadi $5 \\times 4 = 20$.\n\nPilihan $10$ adalah $C(5,2)$ — jawaban kalau kedua jabatan itu setara.",
+          "hint": "Apakah ketua dan wakil bisa ditukar tanpa mengubah hasilnya?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "pel-pencacahan-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya cara memilih 3 orang dari 5 untuk sebuah tim adalah ...",
+          "options": [
+            "$10$",
+            "$60$",
+            "$20$",
+            "$15$"
+          ],
+          "answerIndex": 0,
+          "solution": "Anggota tim tidak dibedakan perannya, jadi urutan tidak berpengaruh. Ini kombinasi.\n\n$$C(5,3) = \\frac{5!}{3!\\,2!} = \\frac{120}{6 \\times 2} = 10$$\n\nPilihan $60$ adalah $P(5,3)$ — itu jawaban kalau ketiga orang mendapat peran berbeda.",
+          "hint": "Apakah menukar posisi anggota mengubah timnya?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Urutan berpengaruh $\\Rightarrow$ permutasi",
+        "Urutan tidak berpengaruh $\\Rightarrow$ kombinasi",
+        "$C(n,k) = \\frac{P(n,k)}{k!}$"
+      ],
+      "pitfall": "Memakai permutasi untuk soal memilih tim, padahal susunan anggota tim tidak membedakan apa pun — hasilnya menjadi berlipat-lipat terlalu besar."
+    },
+    {
+      "id": "pel-pencacahan-c2",
+      "type": "rumus",
+      "title": "Aturan perkalian dan penjumlahan",
+      "body": "Sebelum sampai ke permutasi dan kombinasi, dua aturan dasar ini menyelesaikan banyak soal sendirian.\n\n**Aturan perkalian** dipakai untuk tahapan yang dilakukan **berurutan**. Kalau tahap pertama punya $m$ cara dan tahap kedua $n$ cara, seluruhnya ada $m \\times n$ cara.\n\nContoh: 3 baju dan 4 celana memberi $3 \\times 4 = 12$ pasangan.\n\n**Aturan penjumlahan** dipakai untuk pilihan yang saling **menggantikan**. Kalau kamu memilih satu dari 3 baju **atau** satu dari 4 celana, ada $3 + 4 = 7$ pilihan.\n\nKata kuncinya: \"dan\" mengarah ke perkalian, \"atau\" mengarah ke penjumlahan.\n\nBanyak soal menggabungkan keduanya. Pecah soalnya menjadi tahapan lebih dulu, tentukan tiap tahap berapa cara, baru putuskan dikali atau dijumlah.",
+      "questions": [
+        {
+          "id": "pel-pencacahan-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Tersedia 4 jenis roti dan 3 jenis minuman. Banyaknya pasangan roti dan minuman adalah ...",
+          "options": [
+            "$12$",
+            "$7$",
+            "$64$",
+            "$81$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kedua pilihan dilakukan berurutan — kamu memilih roti **dan** minuman. Jadi dikalikan.\n\n$$4 \\times 3 = 12$$\n\nPilihan $7$ muncul dari menjumlahkan, yang berlaku kalau kamu hanya memilih salah satu di antara keduanya.",
+          "hint": "Kata 'dan' mengarah ke operasi apa?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "pel-pencacahan-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Berapa banyak susunan huruf berbeda yang dapat dibentuk dari kata BUKU?",
+          "answer": "12",
+          "acceptedAnswers": [
+            "dua belas",
+            "= 12"
+          ],
+          "solution": "Kata BUKU punya 4 huruf, tapi huruf U muncul **dua kali**.\n\nKalau semua huruf berbeda, susunannya $4! = 24$. Tapi menukar kedua U tidak menghasilkan susunan baru, jadi setiap susunan terhitung dua kali.\n\n$$\\frac{4!}{2!} = \\frac{24}{2} = 12$$\n\nRumus umumnya: bagi $n!$ dengan faktorial banyaknya tiap huruf yang berulang.",
+          "hint": "Ada huruf yang muncul lebih dari sekali.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "\"dan\" (berurutan) $\\Rightarrow$ dikalikan",
+        "\"atau\" (menggantikan) $\\Rightarrow$ dijumlahkan",
+        "Pecah soal jadi tahapan lebih dulu"
+      ],
+      "pitfall": "Menjumlahkan tahapan yang seharusnya dikalikan, misalnya menghitung pasangan baju dan celana sebagai $3+4$ alih-alih $3 \\times 4$."
+    },
+    {
+      "id": "pel-pencacahan-c3",
+      "type": "teknik",
+      "title": "Memilih dengan syarat tambahan",
+      "body": "Soal sering menambahkan syarat, misalnya \"harus memuat sedikitnya satu perempuan\" atau \"dua orang tertentu harus berdampingan\". Ada dua teknik yang menutup hampir semuanya.\n\n**Teknik komplemen.** Untuk syarat \"sedikitnya satu\", hitung total tanpa syarat lalu kurangi kasus yang tidak memenuhi. Menghitung \"tidak ada satu pun\" biasanya jauh lebih mudah daripada menjumlahkan \"satu, dua, tiga, ...\".\n\n**Teknik menggabung.** Untuk syarat \"harus berdampingan\", perlakukan kedua orang itu sebagai satu blok. Susun bloknya bersama yang lain, lalu kalikan dengan banyaknya susunan di dalam blok itu sendiri.\n\nContoh: 5 orang duduk berjajar dengan A dan B harus bersebelahan. Anggap AB satu blok, jadi ada 4 benda yang disusun: $4! = 24$. Di dalam blok, A dan B bisa bertukar: $2! = 2$. Seluruhnya $24 \\times 2 = 48$.",
+      "questions": [
+        {
+          "id": "pel-pencacahan-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Lima orang duduk berjajar. Banyaknya susunan dengan A dan B selalu berdampingan adalah ...",
+          "options": [
+            "$48$",
+            "$24$",
+            "$120$",
+            "$96$"
+          ],
+          "answerIndex": 0,
+          "solution": "Anggap A dan B sebagai satu blok. Sekarang ada 4 benda yang disusun: blok AB, dan tiga orang lainnya.\n\n$$4! = 24$$\n\nDi dalam bloknya sendiri, A dan B bisa bertukar tempat:\n$$2! = 2$$\n\nSeluruhnya:\n$$24 \\times 2 = 48$$\n\nMenjawab 24 berarti lupa bahwa AB dan BA adalah susunan berbeda.",
+          "hint": "Gabungkan A dan B jadi satu, lalu jangan lupa mereka bisa bertukar.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "pel-pencacahan-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Dari 10 orang akan dipilih 2 sebagai perwakilan. Banyaknya cara memilih adalah ...",
+          "options": [
+            "$45$",
+            "$90$",
+            "$20$",
+            "$100$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kedua perwakilan tidak dibedakan perannya, jadi urutan tidak berpengaruh — ini kombinasi.\n\n$$C(10,2) = \\frac{10 \\times 9}{2} = 45$$\n\nPilihan $90$ adalah $P(10,2)$, yang berlaku kalau kedua posisi itu berbeda jabatan.",
+          "hint": "Apakah kedua perwakilan punya peran berbeda?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "\"Sedikitnya satu\" $\\Rightarrow$ total dikurangi yang tidak memenuhi",
+        "\"Harus berdampingan\" $\\Rightarrow$ gabungkan jadi satu blok",
+        "Jangan lupa mengalikan susunan di dalam blok"
+      ],
+      "pitfall": "Lupa mengalikan dengan susunan di dalam blok pada soal berdampingan, sehingga jawabannya tepat separuh dari seharusnya."
+    },
+    {
+      "id": "pel-pencacahan-c4",
+      "type": "rumus",
+      "title": "Faktorial dan sifatnya",
+      "body": "Faktorial adalah hasil kali seluruh bilangan asli sampai $n$:\n$$n! = n \\times (n-1) \\times \\cdots \\times 2 \\times 1$$\n\nSatu kesepakatan yang sering membingungkan: $0! = 1$, bukan nol. Alasannya bukan sekadar kesepakatan kosong — dengan definisi itu, rumus kombinasi tetap bekerja di kasus tepi. Misalnya $C(n,n) = \\frac{n!}{n!\\,0!}$ harus bernilai 1, karena memang hanya ada satu cara memilih semuanya.\n\nSifat yang sering memangkas pekerjaan:\n$$n! = n \\times (n-1)!$$\n\nIni berguna untuk menyederhanakan pecahan faktorial. Bentuk $\\frac{10!}{8!}$ tidak perlu dihitung penuh — cukup $10 \\times 9 = 90$, karena $8!$ di atas dan bawah saling mencoret.\n\nKebiasaan ini penting, karena $10!$ sudah melebihi tiga juta.",
+      "questions": [
+        {
+          "id": "pel-pencacahan-q7",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Hitung nilai dari $\\frac{7!}{5!}$.",
+          "answer": "42",
+          "acceptedAnswers": [
+            "empat puluh dua",
+            "= 42"
+          ],
+          "solution": "Jangan hitung kedua faktorial penuh. Pakai sifat $n! = n \\times (n-1)!$:\n$$\\frac{7!}{5!} = \\frac{7 \\times 6 \\times 5!}{5!}$$\n\nFaktor $5!$ saling mencoret:\n$$= 7 \\times 6 = 42$$",
+          "hint": "Tulis $7!$ sebagai $7 \\times 6 \\times 5!$.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "pel-pencacahan-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $C(8,8)$ adalah ...",
+          "options": [
+            "$1$",
+            "$8$",
+            "$0$",
+            "$40320$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus kombinasi:\n$$C(8,8) = \\frac{8!}{8!\\,0!} = \\frac{8!}{8! \\times 1} = 1$$\n\nMasuk akal tanpa rumus sekalipun: memilih seluruh 8 orang dari 8 orang hanya bisa dilakukan dengan satu cara — ambil semuanya.\n\nDi sinilah kesepakatan $0! = 1$ terbukti berguna; kalau $0!$ bernilai nol, rumusnya akan pecah.",
+          "hint": "Ada berapa cara memilih semuanya dari semuanya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$0! = 1$",
+        "$n! = n \\times (n-1)!$",
+        "Sederhanakan pecahan faktorial dengan mencoret, jangan dihitung penuh"
+      ],
+      "pitfall": "Menghitung $\\frac{10!}{8!}$ dengan menghitung kedua faktorial secara penuh, padahal sebagian besar faktornya saling mencoret."
+    },
+    {
+      "id": "pel-pencacahan-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada pencacahan",
+      "body": "**Memilih rumus sebelum membaca soal.** Tanyakan dulu apakah urutan berpengaruh. Hampir semua kesalahan di bab ini berakar di sini.\n\n**Lupa huruf berulang.** Kata dengan huruf kembar punya susunan lebih sedikit, karena menukar huruf yang sama tidak menghasilkan susunan baru.\n\n**Menjumlahkan yang seharusnya dikali.** Tahapan berurutan dikalikan; pilihan yang saling menggantikan dijumlahkan.\n\n**Lupa susunan di dalam blok.** Pada soal berdampingan, kedua orang di dalam blok masih bisa bertukar tempat.\n\n**Mengira $0! = 0$.** Nilainya 1, dan itu penting agar rumus kombinasi tetap bekerja.\n\nUji kewajaran: jawaban kombinasi tidak pernah melebihi permutasi untuk $n$ dan $k$ yang sama.",
+      "questions": [
+        {
+          "id": "pel-pencacahan-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk memilih juara 1, 2, dan 3 dari 6 peserta, rumus yang tepat adalah ...",
+          "options": [
+            "$P(6,3)$",
+            "$C(6,3)$",
+            "$6!$",
+            "$3!$"
+          ],
+          "answerIndex": 0,
+          "solution": "Juara 1, 2, dan 3 adalah posisi yang **berbeda**. Menukar dua orang mengubah hasilnya sama sekali.\n\nKarena urutan berpengaruh, yang dipakai permutasi:\n$$P(6,3) = 6 \\times 5 \\times 4 = 120$$\n\nMemakai $C(6,3) = 20$ berarti menganggap ketiga juara setara — keliru untuk soal ini.",
+          "hint": "Apakah juara 1 dan juara 2 bisa ditukar tanpa mengubah apa pun?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "pel-pencacahan-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Dari 5 pria dan 4 wanita akan dipilih 3 orang. Banyaknya cara agar terpilih paling sedikit satu wanita adalah ...",
+          "options": [
+            "$74$",
+            "$84$",
+            "$10$",
+            "$64$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai teknik komplemen — jauh lebih singkat daripada menjumlahkan kasus satu, dua, dan tiga wanita.\n\nTotal cara memilih 3 dari 9 orang:\n$$C(9,3) = 84$$\n\nCara yang **tidak** memuat wanita sama sekali, yaitu memilih 3 dari 5 pria:\n$$C(5,3) = 10$$\n\nKurangkan:\n$$84 - 10 = 74$$",
+          "hint": "Lebih mudah menghitung yang tidak memenuhi, lalu dikurangkan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tanyakan dulu: apakah urutan berpengaruh?",
+        "Huruf berulang membagi hasilnya",
+        "\"dan\" dikali, \"atau\" dijumlah",
+        "$0! = 1$"
+      ],
+      "pitfall": "Memakai $C(n,k)$ untuk soal yang posisinya berbeda peran, seperti juara 1 dan juara 2 — di situ urutan jelas berpengaruh."
+    }
+  ]
+}
