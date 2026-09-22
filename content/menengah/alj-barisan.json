@@ -1,0 +1,267 @@
+{
+  "id": "alj-barisan",
+  "track": "menengah",
+  "title": "Barisan Aritmatika & Geometri",
+  "order": 4,
+  "prerequisites": [
+    "das-sigma"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Rumus suku ke-n dan jumlah, serta cara membaca soal yang tidak menyebut a dan b langsung.",
+  "tags": [
+    "aljabar",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "alj-barisan-c1",
+      "type": "konsep",
+      "title": "Kenapa rumusnya memakai n−1",
+      "body": "Rumus $U_n = a + (n-1)b$ sering dihafal dengan bagian $(n-1)$ yang terasa sewenang-wenang. Padahal alasannya bisa dihitung dengan jari.\n\nSuku pertama adalah $a$ — belum ditambah beda sama sekali, jadi nol kali.\nSuku kedua $a+b$ — satu kali.\nSuku ketiga $a+2b$ — dua kali.\n\nPolanya jelas: untuk sampai ke suku ke-$n$, kamu melangkah sebanyak $n-1$ kali, bukan $n$ kali. Langkahnya selalu satu lebih sedikit daripada nomor sukunya, karena suku pertama adalah titik berangkat, bukan hasil langkah.\n\nAlasan yang sama berlaku pada geometri: $U_n = ar^{n-1}$. Bedanya, di sana yang dihitung adalah berapa kali dikalikan, bukan ditambahkan.\n\nKalau ragu, tulis empat suku pertama dan hitung langsung — lebih cepat daripada menebak.",
+      "questions": [
+        {
+          "id": "alj-barisan-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Suku ke-15 barisan aritmatika dengan $a = 4$ dan $b = 3$ adalah ...",
+          "options": [
+            "$46$",
+            "$49$",
+            "$45$",
+            "$43$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai $U_n = a + (n-1)b$:\n$$U_{15} = 4 + (15-1)(3) = 4 + 14(3) = 4 + 42 = 46$$\n\nPerhatikan pengalinya $14$, bukan $15$. Memakai 15 memberi 49 — itu sebenarnya suku ke-16.",
+          "hint": "Berapa kali beda ditambahkan untuk sampai suku ke-15?",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-barisan-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $U_3 = 11$ dan $U_7 = 27$ pada barisan aritmatika. Beda barisan itu adalah ...",
+          "options": [
+            "$4$",
+            "$16$",
+            "$8$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dari suku ke-3 ke suku ke-7 ada $7 - 3 = 4$ langkah.\n\nSelisih nilainya:\n$$27 - 11 = 16$$\n\nJadi tiap langkah bernilai:\n$$b = \\frac{16}{4} = 4$$\n\nPeriksa: $U_3 = 11$, maka $U_4=15$, $U_5=19$, $U_6=23$, $U_7=27$. Cocok.\n\nMembagi dengan 7 atau 3 adalah kesalahan umum — yang dibagi adalah banyaknya langkah antar keduanya.",
+          "hint": "Berapa langkah dari suku ke-3 ke suku ke-7?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$U_n = a + (n-1)b$ untuk aritmatika",
+        "$U_n = ar^{n-1}$ untuk geometri",
+        "Langkahnya selalu $n-1$, karena suku pertama titik berangkat"
+      ],
+      "pitfall": "Memakai $n$ alih-alih $n-1$, sehingga jawabannya selalu satu suku terlalu jauh — kesalahan yang sulit terlihat karena hasilnya tetap berupa angka yang masuk akal."
+    },
+    {
+      "id": "alj-barisan-c2",
+      "type": "rumus",
+      "title": "Jumlah deret dan bentuk pilihannya",
+      "body": "Untuk deret aritmatika ada dua bentuk rumus jumlah, dan memilih yang tepat menghemat banyak langkah.\n$$S_n = \\frac{n}{2}\\left(2a + (n-1)b\\right) \\quad \\text{atau} \\quad S_n = \\frac{n}{2}(a + U_n)$$\n\nBentuk kedua jauh lebih cepat kalau suku terakhirnya sudah diketahui — tinggal rata-ratakan suku pertama dan terakhir, lalu kalikan banyaknya suku. Ini juga menjelaskan rumusnya: pada deret aritmatika, rata-rata seluruh suku persis sama dengan rata-rata suku pertama dan terakhir.\n\nUntuk deret geometri:\n$$S_n = \\frac{a(r^n-1)}{r-1} \\quad (r \\neq 1)$$\nKalau $r < 1$, bentuk $\\frac{a(1-r^n)}{1-r}$ lebih nyaman karena menghindari tanda negatif di kedua tempat.\n\nSatu hubungan lagi yang sering memangkas pekerjaan: $U_n = S_n - S_{n-1}$. Masuk akal kalau dibaca pelan — jumlah $n$ suku dikurangi jumlah $n-1$ suku menyisakan tepat suku ke-$n$. Soal yang memberi rumus $S_n$ dan menanyakan satu suku biasanya paling cepat dikerjakan lewat hubungan ini.",
+      "questions": [
+        {
+          "id": "alj-barisan-q3",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Hitung jumlah 20 suku pertama dari $3, 7, 11, 15, \\ldots$",
+          "answer": "820",
+          "acceptedAnswers": [
+            "delapan ratus dua puluh",
+            "= 820"
+          ],
+          "solution": "Barisan aritmatika dengan $a = 3$, $b = 4$.\n\nCari suku ke-20 dulu:\n$$U_{20} = 3 + 19(4) = 3 + 76 = 79$$\n\nPakai rumus jumlah:\n$$S_{20} = \\frac{20}{2}(3 + 79) = 10 \\times 82 = 820$$",
+          "hint": "Cari suku terakhirnya dulu, lalu rata-ratakan dengan suku pertama.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "alj-barisan-q4",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $S_n = n^2 + 2n$, maka suku ke-5 barisan itu adalah ...",
+          "options": [
+            "$13$",
+            "$35$",
+            "$11$",
+            "$24$"
+          ],
+          "answerIndex": 2,
+          "solution": "Pakai hubungan $U_n = S_n - S_{n-1}$.\n\n$$S_5 = 5^2 + 2(5) = 25 + 10 = 35$$\n$$S_4 = 4^2 + 2(4) = 16 + 8 = 24$$\n$$U_5 = 35 - 24 = 11$$\n\nPilihan $35$ adalah $S_5$, yaitu jumlah lima suku pertama — bukan suku kelimanya. Membedakan keduanya adalah inti soal ini.",
+          "hint": "Suku ke-$n$ adalah selisih dua jumlah berurutan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$S_n = \\frac{n}{2}(a + U_n)$ bila $U_n$ diketahui",
+        "Geometri: $S_n = \\frac{a(r^n-1)}{r-1}$",
+        "$U_n = S_n - S_{n-1}$"
+      ],
+      "pitfall": "Memakai rumus $S_n$ geometri saat $r = 1$. Kalau rasionya satu, penyebutnya nol dan rumus itu tidak berlaku — jumlahnya cukup $na$."
+    },
+    {
+      "id": "alj-barisan-c3",
+      "type": "teknik",
+      "title": "Soal yang tidak menyebut a dan b",
+      "body": "Soal ujian jarang memberi $a$ dan $b$ langsung. Biasanya kamu diberi dua suku, atau jumlah beberapa suku, lalu harus menggali sendiri.\n\nStrateginya selalu sama: tuliskan yang diketahui dalam bentuk $a$ dan $b$, lalu selesaikan sebagai sistem persamaan.\n\nContoh: diketahui $U_4 = 17$ dan $U_9 = 37$.\n$a + 3b = 17$\n$a + 8b = 37$\nKurangkan: $5b = 20$, jadi $b = 4$ dan $a = 5$.\n\nCara pintasnya: selisih dua suku dibagi selisih nomornya langsung memberi $b$. Tapi menulis sistemnya tetap lebih aman untuk soal yang lebih rumit.\n\nUntuk tiga suku berurutan, ada hubungan yang sering memangkas pekerjaan: suku tengah adalah rata-rata kedua tetangganya.",
+      "questions": [
+        {
+          "id": "alj-barisan-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $U_4 = 17$ dan $U_9 = 37$. Suku pertama barisan itu adalah ...",
+          "options": [
+            "$5$",
+            "$4$",
+            "$9$",
+            "$13$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tulis keduanya dalam $a$ dan $b$:\n$$a + 3b = 17$$\n$$a + 8b = 37$$\n\nKurangkan persamaan pertama dari kedua:\n$$5b = 20 \\Rightarrow b = 4$$\n\nSubstitusikan:\n$$a + 12 = 17 \\Rightarrow a = 5$$\n\nPeriksa: $U_9 = 5 + 8(4) = 37$. Cocok.",
+          "hint": "Ingat $U_4 = a + 3b$, bukan $a + 4b$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-barisan-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Tiga bilangan membentuk barisan aritmatika. Jumlahnya 21 dan bilangan tengahnya adalah ...",
+          "options": [
+            "$7$",
+            "$3$",
+            "$10{,}5$",
+            "tidak dapat ditentukan"
+          ],
+          "answerIndex": 0,
+          "solution": "Pada tiga suku aritmatika, suku tengah adalah rata-rata kedua tetangganya.\n\nMisalkan ketiganya $x-b$, $x$, $x+b$. Jumlahnya:\n$$(x-b) + x + (x+b) = 3x$$\n\nSuku $b$ saling meniadakan, jadi:\n$$3x = 21 \\Rightarrow x = 7$$\n\nBilangan tengahnya 7, berapa pun bedanya. Inilah sebabnya soal ini bisa dijawab tanpa informasi tambahan.",
+          "hint": "Tulis ketiganya sebagai $x-b$, $x$, $x+b$.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis yang diketahui sebagai persamaan dalam $a$ dan $b$",
+        "$b = \\frac{U_m - U_n}{m-n}$",
+        "Tiga suku aritmatika: yang tengah adalah rata-ratanya"
+      ],
+      "pitfall": "Menyusun persamaan dari nomor suku yang salah, misalnya menulis $U_4 = a + 4b$ padahal yang benar $a + 3b$."
+    },
+    {
+      "id": "alj-barisan-c4",
+      "type": "konsep",
+      "title": "Deret tak hingga dan syaratnya",
+      "body": "Deret geometri tak hingga bisa punya jumlah berhingga — sesuatu yang terasa mustahil sebelum kamu melihat alasannya.\n\n$$S_\\infty = \\frac{a}{1-r}, \\qquad |r| < 1$$\n\nSyarat $|r| < 1$ adalah intinya. Kalau tiap suku mengecil cukup cepat, tambahannya makin lama makin tidak berarti, dan jumlahnya mendekat ke satu nilai tanpa pernah melewatinya.\n\nContoh $1 + \\frac{1}{2} + \\frac{1}{4} + \\cdots$. Setiap langkah menutup separuh jarak yang tersisa menuju 2, jadi jumlahnya mendekati 2 selamanya tanpa pernah sampai.\n\nKalau $|r| \\ge 1$, sukunya tidak mengecil — jumlahnya membesar tanpa batas dan rumus di atas tidak berlaku. Memaksakannya menghasilkan angka yang kelihatan wajar tapi keliru, seperti jumlah negatif untuk deret berisi bilangan positif semua.",
+      "questions": [
+        {
+          "id": "alj-barisan-q7",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan jumlah tak hingga dari $12 + 4 + \\frac{4}{3} + \\cdots$",
+          "answer": "18",
+          "acceptedAnswers": [
+            "delapan belas",
+            "= 18"
+          ],
+          "solution": "Cari rasionya:\n$$r = \\frac{4}{12} = \\frac{1}{3}$$\n\nKarena $|r| < 1$, jumlah tak hingganya ada:\n$$S_\\infty = \\frac{a}{1-r} = \\frac{12}{1 - \\frac{1}{3}} = \\frac{12}{\\frac{2}{3}}$$\n$$= 12 \\times \\frac{3}{2} = 18$$",
+          "hint": "Bagi suku kedua dengan pertama untuk mendapat rasio.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-barisan-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah bola dijatuhkan dari ketinggian 8 m dan memantul $\\frac{1}{2}$ kali tinggi sebelumnya. Panjang lintasan seluruhnya sampai berhenti adalah ...",
+          "options": [
+            "$24$ m",
+            "$16$ m",
+            "$8$ m",
+            "$32$ m"
+          ],
+          "answerIndex": 0,
+          "solution": "Lintasan turun pertama: $8$ m.\n\nSetelah itu bola naik lalu turun berulang, masing-masing membentuk deret geometri dengan $a = 4$ dan $r = \\frac{1}{2}$:\n$$S_\\infty = \\frac{4}{1 - \\frac{1}{2}} = 8$$\n\nKarena naik dan turun sama panjang, keduanya memberi $8 + 8 = 16$.\n\nTotal seluruh lintasan:\n$$8 + 16 = 24 \\text{ m}$$\n\nKesalahan umum: lupa bahwa setiap pantulan dihitung dua kali — sekali naik, sekali turun.",
+          "hint": "Jangan lupa bola naik DAN turun pada tiap pantulan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$S_\\infty = \\frac{a}{1-r}$ hanya bila $|r| < 1$",
+        "$|r| \\ge 1$: jumlahnya tak berhingga",
+        "Periksa rasio sebelum memakai rumusnya"
+      ],
+      "pitfall": "Memakai $S_\\infty$ tanpa memeriksa rasio. Untuk $r = 2$, rumusnya memberi $\\frac{a}{-1}$ yang negatif — jelas mustahil untuk deret bersuku positif."
+    },
+    {
+      "id": "alj-barisan-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada barisan dan deret",
+      "body": "**Tertukar $U_n$ dengan $S_n$.** Yang satu nilai satu suku, yang lain jumlah semua suku sampai situ. Hitungannya bisa benar tapi menjawab pertanyaan yang berbeda.\n\n**Memakai $n$ alih-alih $n-1$.** Hasilnya tetap berupa angka wajar, jadi kesalahan ini sulit terlihat tanpa memeriksa ulang dengan mendaftar beberapa suku.\n\n**Membagi dengan nomor suku, bukan selisihnya.** Dari $U_3$ ke $U_7$ ada 4 langkah, bukan 7.\n\n**Memakai $S_\\infty$ untuk $|r| \\ge 1$.** Selalu periksa rasionya lebih dulu.\n\n**Lupa memeriksa jenis barisannya.** Beberapa soal memberi barisan yang bukan aritmatika maupun geometri. Periksa selisih dan hasil bagi sebelum memilih rumus.\n\nUji murah: daftarkan empat suku pertama dan bandingkan dengan rumus yang kamu pakai.",
+      "questions": [
+        {
+          "id": "alj-barisan-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Barisan $2, 6, 12, 20, 30, \\ldots$ adalah barisan ...",
+          "options": [
+            "bukan aritmatika maupun geometri",
+            "aritmatika dengan $b = 4$",
+            "geometri dengan $r = 3$",
+            "aritmatika dengan $b = 6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Periksa selisihnya:\n$6-2 = 4$, $12-6 = 6$, $20-12 = 8$, $30-20 = 10$\nSelisihnya berubah, jadi bukan aritmatika.\n\nPeriksa hasil baginya:\n$6 \\div 2 = 3$, $12 \\div 6 = 2$\nHasil baginya juga berubah, jadi bukan geometri.\n\nBarisan ini sebenarnya $n(n+1)$, tapi bukan keduanya. Memeriksa lebih dari satu pasang suku adalah yang menyelamatkan di sini.",
+          "hint": "Periksa selisih DAN hasil bagi, masing-masing beberapa pasang.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "alj-barisan-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada deret aritmatika, $S_5 = 45$ dan $S_4 = 32$. Suku kelimanya adalah ...",
+          "options": [
+            "$13$",
+            "$45$",
+            "$77$",
+            "$9$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai hubungan $U_n = S_n - S_{n-1}$:\n$$U_5 = S_5 - S_4 = 45 - 32 = 13$$\n\nMasuk akal: $S_5$ adalah jumlah lima suku dan $S_4$ jumlah empat suku, jadi selisihnya persis suku kelima.\n\nPilihan $45$ adalah $S_5$, bukan $U_5$.",
+          "hint": "Apa selisih antara jumlah 5 suku dan jumlah 4 suku?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Bedakan $U_n$ dari $S_n$",
+        "Periksa jenis barisan sebelum memilih rumus",
+        "Selisih nomor suku, bukan nomornya",
+        "Daftarkan beberapa suku untuk menguji"
+      ],
+      "pitfall": "Menjawab dengan $S_n$ padahal soal meminta $U_n$ — hitungannya benar seluruhnya tapi menjawab hal lain."
+    }
+  ]
+}

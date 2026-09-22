@@ -17,13 +17,15 @@ import topik6 from "@/content/dasar/das-pythagoras.json";
 import topik7 from "@/content/dasar/das-rasio.json";
 import topik8 from "@/content/dasar/das-sigma.json";
 import topik9 from "@/content/dasar/das-splv.json";
-import topik10 from "@/content/menengah/alj-eksponen-logaritma.json";
-import topik11 from "@/content/menengah/alj-fungsi.json";
-import topik12 from "@/content/menengah/alj-matriks.json";
-import topik13 from "@/content/menengah/alj-nilai-mutlak.json";
-import topik14 from "@/content/menengah/kal-limit-aljabar.json";
-import topik15 from "@/content/lanjut/lan-integral-tentu.json";
-import topik16 from "@/content/olimpiade/osn-keterbagian.json";
+import topik10 from "@/content/menengah/alj-barisan.json";
+import topik11 from "@/content/menengah/alj-eksponen-logaritma.json";
+import topik12 from "@/content/menengah/alj-fungsi.json";
+import topik13 from "@/content/menengah/alj-matriks.json";
+import topik14 from "@/content/menengah/alj-nilai-mutlak.json";
+import topik15 from "@/content/menengah/alj-vektor.json";
+import topik16 from "@/content/menengah/kal-limit-aljabar.json";
+import topik17 from "@/content/lanjut/lan-integral-tentu.json";
+import topik18 from "@/content/olimpiade/osn-keterbagian.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -43,4 +45,6 @@ export const RAW_TOPICS: Topic[] = [
   topik14 as unknown as Topic,
   topik15 as unknown as Topic,
   topik16 as unknown as Topic,
+  topik17 as unknown as Topic,
+  topik18 as unknown as Topic,
 ];

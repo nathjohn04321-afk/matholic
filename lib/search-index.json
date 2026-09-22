@@ -552,6 +552,56 @@
       "snippet": "Lupa mengurangi batas bawah. Setelah mendapat antiturunan, hasilnya adalah nilai di batas atas dikurangi nilai di batas bawah. Banyak orang berhenti setelah ..."
     },
     {
+      "cardId": "alj-barisan-c1",
+      "topicId": "alj-barisan",
+      "topicTitle": "Barisan Aritmatika & Geometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kenapa rumusnya memakai n−1",
+      "haystack": "kenapa rumusnya memakai n−1 rumus sering dihafal dengan bagian yang terasa sewenang-wenang. padahal alasannya bisa dihitung dengan jari. suku pertama adalah — belum ditambah beda sama sekali, jadi nol kali. suku kedua — satu kali. suku ketiga — dua kali. polanya jelas: untuk sampai ke suku ke- , kamu melangkah sebanyak kali, bukan kali. langkahnya selalu satu lebih sedikit daripada nomor sukunya, karena suku pertama adalah titik berangkat, bukan hasil langkah. alasan yang sama berlaku pada geometri: . bedanya, di sana yang dihitung adalah berapa kali dikalikan, bukan ditambahkan. kalau ragu, tulis empat suku pertama dan hitung langsung — lebih cepat daripada menebak. untuk aritmatika untuk geometri langkahnya selalu , karena suku pertama titik berangkat memakai alih-alih , sehingga jawabannya selalu satu suku terlalu jauh — kesalahan yang sulit terlihat karena hasilnya tetap berupa angka yang masuk akal. barisan aritmatika & geometri",
+      "snippet": "Rumus [rumus] sering dihafal dengan bagian [rumus] yang terasa sewenang-wenang. Padahal alasannya bisa dihitung dengan jari. Suku pertama adalah [rumus] — be..."
+    },
+    {
+      "cardId": "alj-barisan-c2",
+      "topicId": "alj-barisan",
+      "topicTitle": "Barisan Aritmatika & Geometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Jumlah deret dan bentuk pilihannya",
+      "haystack": "jumlah deret dan bentuk pilihannya untuk deret aritmatika ada dua bentuk rumus jumlah, dan memilih yang tepat menghemat banyak langkah. bentuk kedua jauh lebih cepat kalau suku terakhirnya sudah diketahui — tinggal rata-ratakan suku pertama dan terakhir, lalu kalikan banyaknya suku. ini juga menjelaskan rumusnya: pada deret aritmatika, rata-rata seluruh suku persis sama dengan rata-rata suku pertama dan terakhir. untuk deret geometri: kalau , bentuk lebih nyaman karena menghindari tanda negatif di kedua tempat. satu hubungan lagi yang sering memangkas pekerjaan: . masuk akal kalau dibaca pelan — jumlah suku dikurangi jumlah suku menyisakan tepat suku ke- . soal yang memberi rumus dan menanyakan satu suku biasanya paling cepat dikerjakan lewat hubungan ini. bila diketahui geometri: memakai rumus geometri saat . kalau rasionya satu, penyebutnya nol dan rumus itu tidak berlaku — jumlahnya cukup . barisan aritmatika & geometri",
+      "snippet": "Untuk deret aritmatika ada dua bentuk rumus jumlah, dan memilih yang tepat menghemat banyak langkah. [rumus] Bentuk kedua jauh lebih cepat kalau suku terakhi..."
+    },
+    {
+      "cardId": "alj-barisan-c3",
+      "topicId": "alj-barisan",
+      "topicTitle": "Barisan Aritmatika & Geometri",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Soal yang tidak menyebut a dan b",
+      "haystack": "soal yang tidak menyebut a dan b soal ujian jarang memberi dan langsung. biasanya kamu diberi dua suku, atau jumlah beberapa suku, lalu harus menggali sendiri. strateginya selalu sama: tuliskan yang diketahui dalam bentuk dan , lalu selesaikan sebagai sistem persamaan. contoh: diketahui dan . kurangkan: , jadi dan . cara pintasnya: selisih dua suku dibagi selisih nomornya langsung memberi . tapi menulis sistemnya tetap lebih aman untuk soal yang lebih rumit. untuk tiga suku berurutan, ada hubungan yang sering memangkas pekerjaan: suku tengah adalah rata-rata kedua tetangganya. tulis yang diketahui sebagai persamaan dalam dan tiga suku aritmatika: yang tengah adalah rata-ratanya menyusun persamaan dari nomor suku yang salah, misalnya menulis padahal yang benar . barisan aritmatika & geometri",
+      "snippet": "Soal ujian jarang memberi [rumus] dan [rumus] langsung. Biasanya kamu diberi dua suku, atau jumlah beberapa suku, lalu harus menggali sendiri. Strateginya se..."
+    },
+    {
+      "cardId": "alj-barisan-c4",
+      "topicId": "alj-barisan",
+      "topicTitle": "Barisan Aritmatika & Geometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Deret tak hingga dan syaratnya",
+      "haystack": "deret tak hingga dan syaratnya deret geometri tak hingga bisa punya jumlah berhingga — sesuatu yang terasa mustahil sebelum kamu melihat alasannya. syarat adalah intinya. kalau tiap suku mengecil cukup cepat, tambahannya makin lama makin tidak berarti, dan jumlahnya mendekat ke satu nilai tanpa pernah melewatinya. contoh . setiap langkah menutup separuh jarak yang tersisa menuju 2, jadi jumlahnya mendekati 2 selamanya tanpa pernah sampai. kalau , sukunya tidak mengecil — jumlahnya membesar tanpa batas dan rumus di atas tidak berlaku. memaksakannya menghasilkan angka yang kelihatan wajar tapi keliru, seperti jumlah negatif untuk deret berisi bilangan positif semua. hanya bila : jumlahnya tak berhingga periksa rasio sebelum memakai rumusnya memakai tanpa memeriksa rasio. untuk , rumusnya memberi yang negatif — jelas mustahil untuk deret bersuku positif. barisan aritmatika & geometri",
+      "snippet": "Deret geometri tak hingga bisa punya jumlah berhingga — sesuatu yang terasa mustahil sebelum kamu melihat alasannya. [rumus] Syarat [rumus] adalah intinya. K..."
+    },
+    {
+      "cardId": "alj-barisan-c5",
+      "topicId": "alj-barisan",
+      "topicTitle": "Barisan Aritmatika & Geometri",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada barisan dan deret",
+      "haystack": "kesalahan khas pada barisan dan deret tertukar dengan . yang satu nilai satu suku, yang lain jumlah semua suku sampai situ. hitungannya bisa benar tapi menjawab pertanyaan yang berbeda. memakai alih-alih . hasilnya tetap berupa angka wajar, jadi kesalahan ini sulit terlihat tanpa memeriksa ulang dengan mendaftar beberapa suku. membagi dengan nomor suku, bukan selisihnya. dari ke ada 4 langkah, bukan 7. memakai untuk . selalu periksa rasionya lebih dulu. lupa memeriksa jenis barisannya. beberapa soal memberi barisan yang bukan aritmatika maupun geometri. periksa selisih dan hasil bagi sebelum memilih rumus. uji murah: daftarkan empat suku pertama dan bandingkan dengan rumus yang kamu pakai. bedakan dari periksa jenis barisan sebelum memilih rumus selisih nomor suku, bukan nomornya daftarkan beberapa suku untuk menguji menjawab dengan padahal soal meminta — hitungannya benar seluruhnya tapi menjawab hal lain. barisan aritmatika & geometri",
+      "snippet": "Tertukar [rumus] dengan [rumus] . Yang satu nilai satu suku, yang lain jumlah semua suku sampai situ. Hitungannya bisa benar tapi menjawab pertanyaan yang be..."
+    },
+    {
       "cardId": "alj-eksponen-logaritma-c1",
       "topicId": "alj-eksponen-logaritma",
       "topicTitle": "Eksponen & Logaritma",
@@ -770,6 +820,56 @@
       "title": "Tiga kesalahan yang paling mahal",
       "haystack": "tiga kesalahan yang paling mahal mengkuadratkan tanpa syarat. dari orang langsung menulis . itu hanya sah kalau . kalau tidak dicek, kamu akan mendapat akar palsu. contoh: dikuadratkan memberi , padahal aslinya tidak punya penyelesaian sama sekali. membalik arah pada pertidaksamaan. saat membagi dengan bilangan negatif, arah tanda harus dibalik. ini sering terlewat di tengah pengerjaan yang panjang. menulis dua potong sebagai satu rangkaian. penyelesaian tidak boleh ditulis . rangkaian itu berarti sekaligus di dua tempat yang mustahil. tulis atau . selalu uji jawabanmu dengan memasukkan satu angka ke soal asli. kuadratkan hanya bila ruas kanan dijamin tak-negatif bagi dengan bilangan negatif balik arah tanda dua selang terpisah ditulis dengan \"atau\", bukan dirangkai uji jawaban dengan satu angka sebelum menutup soal mengkuadratkan padahal bisa negatif, lalu menerima akar palsu tanpa memeriksanya kembali. persamaan & pertidaksamaan nilai mutlak",
       "snippet": "Mengkuadratkan tanpa syarat. Dari [rumus] orang langsung menulis [rumus] . Itu hanya sah kalau [rumus] . Kalau tidak dicek, kamu akan mendapat akar palsu. Co..."
+    },
+    {
+      "cardId": "alj-vektor-c1",
+      "topicId": "alj-vektor",
+      "topicTitle": "Vektor",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Vektor adalah perpindahan, bukan tempat",
+      "haystack": "vektor adalah perpindahan, bukan tempat perbedaan terpenting antara vektor dan titik sering terlewat: vektor tidak punya lokasi. ia hanya menyatakan seberapa jauh dan ke arah mana . vektor berarti \"bergeser 3 ke kanan dan 4 ke atas\". perpindahan itu sama saja apakah kamu memulainya dari titik asal atau dari mana pun. akibatnya, dua panah yang panjang dan arahnya sama adalah vektor yang sama, meski digambar di tempat berbeda. inilah yang membuat vektor bisa dijumlahkan dengan menyambung ujung ke pangkal. panjang vektor dihitung dengan pythagoras: vektor dari titik ke titik didapat dengan mengurangkan: . urutan pengurangannya penting — ujung dikurangi pangkal. vektor = besar dan arah, tanpa lokasi (ujung dikurangi pangkal) menulis . urutannya terbalik, dan hasilnya vektor yang arahnya berlawanan. vektor",
+      "snippet": "Perbedaan terpenting antara vektor dan titik sering terlewat: vektor tidak punya lokasi. Ia hanya menyatakan seberapa jauh dan ke arah mana. Vektor [rumus] b..."
+    },
+    {
+      "cardId": "alj-vektor-c2",
+      "topicId": "alj-vektor",
+      "topicTitle": "Vektor",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Hasil kali titik dan sudut",
+      "haystack": "hasil kali titik dan sudut hasil kali titik mengubah dua vektor menjadi satu bilangan, dan bilangan itu menyimpan informasi tentang sudut di antara keduanya. bentuk pertama mudah dihitung, bentuk kedua menjelaskan artinya. menyamakan keduanya memberi cara mencari sudut antara dua vektor. yang paling berguna adalah membaca tandanya. karena dan selalu positif, tanda hasil kali titik mengikuti tanda : - positif: sudutnya lancip - nol: tegak lurus, karena - negatif: sudutnya tumpul jadi memeriksa ketegaklurusan cukup dengan menghitung satu bilangan — tidak perlu sudutnya. hasil kali titik nol berarti tegak lurus mengira hasil kali titik menghasilkan vektor. hasilnya bilangan biasa — itu sebabnya disebut hasil kali skalar. vektor",
+      "snippet": "Hasil kali titik mengubah dua vektor menjadi satu bilangan, dan bilangan itu menyimpan informasi tentang sudut di antara keduanya. [rumus] Bentuk pertama mud..."
+    },
+    {
+      "cardId": "alj-vektor-c3",
+      "topicId": "alj-vektor",
+      "topicTitle": "Vektor",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Operasi vektor dan vektor satuan",
+      "haystack": "operasi vektor dan vektor satuan penjumlahan dan pengurangan dilakukan komponen demi komponen. secara gambar, menjumlahkan berarti menyambung ujung vektor pertama ke pangkal vektor kedua. perkalian dengan skalar mengubah panjang tanpa mengubah arah — kecuali kalau skalarnya negatif, yang membalik arahnya. mengalikan dengan 2 membuat vektor dua kali lebih panjang; mengalikan dengan membalikkannya. vektor satuan adalah vektor sepanjang tepat 1 yang searah dengan vektor aslinya: gunanya: memisahkan informasi arah dari informasi panjang. kalau kamu butuh arah saja, vektor satuan yang kamu pakai. langkah membuatnya: hitung panjangnya, lalu bagi tiap komponen dengan panjang itu. periksa hasilnya — panjang vektor satuan harus tepat 1. jumlah dan kurang: komponen demi komponen skalar negatif membalik arah , panjangnya selalu 1 membagi hanya salah satu komponen saat membuat vektor satuan, sehingga arahnya ikut berubah. vektor",
+      "snippet": "Penjumlahan dan pengurangan dilakukan komponen demi komponen. Secara gambar, menjumlahkan berarti menyambung ujung vektor pertama ke pangkal vektor kedua. Pe..."
+    },
+    {
+      "cardId": "alj-vektor-c4",
+      "topicId": "alj-vektor",
+      "topicTitle": "Vektor",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Proyeksi dan sudut antar vektor",
+      "haystack": "proyeksi dan sudut antar vektor proyeksi menjawab satu pertanyaan yang sangat konkret: kalau vektor dijatuhkan tegak lurus ke arah , seberapa panjang bayangannya di sana? panjang bayangan itu dihitung dengan: perhatikan yang menjadi penyebut adalah panjang saja — vektor yang menjadi arah proyeksi. membaginya dengan adalah kesalahan yang sangat sering terjadi, dan hasilnya tetap berupa angka wajar sehingga sulit ketahuan. kalau yang diminta vektor proyeksinya, bukan sekadar panjangnya, kalikan lagi dengan arah sehingga penyebutnya menjadi kuadrat: untuk mencari sudut antara dua vektor, susun ulang saja rumus hasil kali titik: panjang proyeksi pada : vektor proyeksi memakai membagi dengan saat mencari proyeksi pada . penyebutnya adalah panjang vektor yang menjadi arah, yaitu . vektor",
+      "snippet": "Proyeksi menjawab satu pertanyaan yang sangat konkret: kalau vektor [rumus] dijatuhkan tegak lurus ke arah [rumus] , seberapa panjang bayangannya di sana? Pa..."
+    },
+    {
+      "cardId": "alj-vektor-c5",
+      "topicId": "alj-vektor",
+      "topicTitle": "Vektor",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada vektor",
+      "haystack": "kesalahan khas pada vektor membalik urutan . vektor dari ke adalah . membaliknya memberi vektor yang arahnya berlawanan, dan soal biasanya menyediakan kedua pilihan. mengira hasil kali titik menghasilkan vektor. hasilnya bilangan biasa. kalau jawabanmu berbentuk vektor, ada yang salah. menjumlahkan panjang, bukan vektor. umumnya tidak sama dengan . keduanya sama hanya kalau kedua vektor searah. salah penyebut pada proyeksi. bagi dengan panjang vektor arahnya, bukan vektor yang diproyeksikan. lupa tanda komponen negatif. kesalahan tanda pada satu komponen mengubah seluruh hasil, dan sering tidak terlihat sampai jawabannya dibandingkan dengan pilihan. hasil kali titik menghasilkan bilangan pada umumnya menghitung dengan menjumlahkan kedua panjangnya. vektor harus dijumlahkan dulu komponen demi komponen, baru panjangnya dihitung. vektor",
+      "snippet": "Membalik urutan [rumus] . Vektor dari [rumus] ke [rumus] adalah [rumus] . Membaliknya memberi vektor yang arahnya berlawanan, dan soal biasanya menyediakan k..."
     },
     {
       "cardId": "kal-limit-aljabar-c1",
