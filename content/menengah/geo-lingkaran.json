@@ -1,0 +1,266 @@
+{
+  "id": "geo-lingkaran",
+  "track": "menengah",
+  "title": "Lingkaran",
+  "order": 11,
+  "prerequisites": [
+    "das-garis"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Persamaan lingkaran sebagai jarak tetap, dan cara membaca pusat serta jari-jari dari bentuk umum.",
+  "tags": [
+    "geometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "geo-lingkaran-c1",
+      "type": "konsep",
+      "title": "Persamaan lingkaran adalah rumus jarak",
+      "body": "Lingkaran adalah kumpulan titik yang jaraknya **tetap** dari satu titik pusat. Persamaannya tidak lain adalah rumus jarak yang ditulis ulang.\n\nJarak titik $(x,y)$ ke pusat $(a,b)$ adalah $\\sqrt{(x-a)^2 + (y-b)^2}$. Kalau jarak itu harus selalu sama dengan $r$, kuadratkan kedua ruas:\n$$(x-a)^2 + (y-b)^2 = r^2$$\n\nItu saja. Tidak ada yang perlu dihafal terpisah — kalau kamu ingat rumus jarak, kamu sudah punya persamaan lingkaran.\n\nPerhatikan tandanya. Pusat $(3,-2)$ memberi $(x-3)^2 + (y+2)^2$, karena mengurangi bilangan negatif berarti menambah. Tanda di dalam kurung selalu berlawanan dengan koordinat pusatnya.\n\nRuas kanan adalah $r^2$, bukan $r$ — jadi $r = \\sqrt{25} = 5$, bukan 25.",
+      "questions": [
+        {
+          "id": "geo-lingkaran-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pusat dan jari-jari lingkaran $(x-3)^2 + (y+2)^2 = 25$ adalah ...",
+          "options": [
+            "$(3,-2)$ dan $r=5$",
+            "$(-3,2)$ dan $r=5$",
+            "$(3,-2)$ dan $r=25$",
+            "$(3,2)$ dan $r=5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bandingkan dengan bentuk baku $(x-a)^2 + (y-b)^2 = r^2$.\n\n$(x-3)^2$ memberi $a = 3$.\n$(y+2)^2$ bisa ditulis $(y-(-2))^2$, jadi $b = -2$.\n\nPusatnya $(3,-2)$.\n\nRuas kanan adalah $r^2 = 25$, jadi:\n$$r = \\sqrt{25} = 5$$\n\nMenjawab $r = 25$ berarti lupa mengakarkan.",
+          "hint": "Tanda di dalam kurung berlawanan dengan koordinat pusat.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-lingkaran-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Persamaan lingkaran berpusat di $(-1,4)$ dengan jari-jari 3 adalah ...",
+          "options": [
+            "$(x+1)^2 + (y-4)^2 = 9$",
+            "$(x-1)^2 + (y+4)^2 = 9$",
+            "$(x+1)^2 + (y-4)^2 = 3$",
+            "$(x-1)^2 + (y-4)^2 = 9$"
+          ],
+          "answerIndex": 0,
+          "solution": "Masukkan ke bentuk baku dengan $a = -1$, $b = 4$, $r = 3$:\n$$(x-(-1))^2 + (y-4)^2 = 3^2$$\n$$(x+1)^2 + (y-4)^2 = 9$$\n\nDua hal yang sering salah: tanda $a$ negatif menjadi tambah di dalam kurung, dan ruas kanan harus dikuadratkan menjadi 9, bukan 3.",
+          "hint": "Jari-jarinya dikuadratkan di ruas kanan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$(x-a)^2 + (y-b)^2 = r^2$ dengan pusat $(a,b)$",
+        "Tanda dalam kurung berlawanan dengan koordinat pusat",
+        "Ruas kanan adalah $r^2$, jangan lupa mengakarkan"
+      ],
+      "pitfall": "Membaca pusat lingkaran $(x+3)^2+(y-1)^2=16$ sebagai $(3,1)$. Yang benar $(-3,1)$, karena tandanya berbalik."
+    },
+    {
+      "id": "geo-lingkaran-c2",
+      "type": "prosedur",
+      "title": "Dari bentuk umum ke bentuk baku",
+      "body": "Persamaan lingkaran sering diberikan dalam bentuk umum:\n$$x^2 + y^2 + Ax + By + C = 0$$\n\nUntuk membaca pusat dan jari-jarinya, ubah ke bentuk baku dengan melengkapkan kuadrat.\n\n1. Kelompokkan suku $x$ bersama, suku $y$ bersama, pindahkan $C$ ke ruas kanan.\n2. Lengkapkan kuadrat masing-masing: tambahkan $\\left(\\frac{A}{2}\\right)^2$ dan $\\left(\\frac{B}{2}\\right)^2$ ke **kedua** ruas.\n3. Tulis sebagai kuadrat sempurna.\n\nAda juga jalan pintas yang bisa langsung dipakai:\n$$\\text{pusat} = \\left(-\\frac{A}{2}, -\\frac{B}{2}\\right), \\qquad r = \\sqrt{\\frac{A^2}{4} + \\frac{B^2}{4} - C}$$\n\nKalau nilai di dalam akar ternyata negatif, tidak ada lingkaran yang memenuhi persamaan itu — ia tidak menggambarkan apa pun di bidang nyata. Kalau nilainya tepat nol, yang terbentuk hanya satu titik, bukan lingkaran. Memeriksa nilai di dalam akar sebelum melanjutkan menghemat pengerjaan pada soal yang memang tidak punya jawaban.",
+      "questions": [
+        {
+          "id": "geo-lingkaran-q3",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Pusat lingkaran $x^2 + y^2 - 6x + 4y - 12 = 0$ adalah ...",
+          "options": [
+            "$(3,-2)$",
+            "$(-3,2)$",
+            "$(6,-4)$",
+            "$(-6,4)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai jalan pintas dengan $A = -6$ dan $B = 4$:\n$$\\text{pusat} = \\left(-\\frac{-6}{2}, -\\frac{4}{2}\\right) = (3, -2)$$\n\nAtau lengkapkan kuadrat:\n$$(x^2-6x+9) + (y^2+4y+4) = 12+9+4$$\n$$(x-3)^2 + (y+2)^2 = 25$$\n\nPusatnya $(3,-2)$ dan jari-jarinya 5.",
+          "hint": "Pusatnya adalah setengah koefisien, dengan tanda dibalik.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-lingkaran-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan jari-jari lingkaran $x^2 + y^2 - 6x + 4y - 12 = 0$.",
+          "answer": "5",
+          "acceptedAnswers": [
+            "lima",
+            "r = 5"
+          ],
+          "solution": "Lengkapkan kuadrat untuk kedua variabel:\n$$(x^2 - 6x) + (y^2 + 4y) = 12$$\n\nTambahkan $9$ dan $4$ ke **kedua** ruas:\n$$(x^2-6x+9) + (y^2+4y+4) = 12 + 9 + 4$$\n$$(x-3)^2 + (y+2)^2 = 25$$\n\nRuas kanan adalah $r^2$, jadi:\n$$r = \\sqrt{25} = 5$$",
+          "hint": "Lengkapkan kuadrat, lalu akarkan ruas kanannya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pusat $= \\left(-\\frac{A}{2}, -\\frac{B}{2}\\right)$",
+        "$r = \\sqrt{\\frac{A^2}{4}+\\frac{B^2}{4}-C}$",
+        "Nilai dalam akar negatif berarti bukan lingkaran"
+      ],
+      "pitfall": "Lupa menambahkan angka pelengkap kuadrat ke ruas kanan juga. Menambahkannya hanya di ruas kiri mengubah persamaannya menjadi persamaan lain."
+    },
+    {
+      "id": "geo-lingkaran-c3",
+      "type": "konsep",
+      "title": "Kedudukan titik terhadap lingkaran",
+      "body": "Untuk mengetahui apakah sebuah titik berada di dalam, pada, atau di luar lingkaran, kamu tidak perlu menggambar. Bandingkan saja jaraknya ke pusat dengan jari-jarinya.\n\n- Jarak $< r$: titik di dalam\n- Jarak $= r$: titik pada lingkaran\n- Jarak $> r$: titik di luar\n\nCara praktisnya lebih singkat lagi: substitusikan koordinat titik ke ruas kiri persamaan bentuk baku, lalu bandingkan hasilnya dengan $r^2$. Tidak perlu mengakarkan sama sekali, karena membandingkan kuadrat memberi kesimpulan yang sama.\n\nPrinsip yang sama berlaku untuk garis terhadap lingkaran, hanya saja yang dibandingkan adalah jarak pusat ke garis. Kalau jaraknya sama dengan $r$, garisnya menyinggung; kalau kurang, memotong di dua titik; kalau lebih, tidak berpotongan sama sekali.",
+      "questions": [
+        {
+          "id": "geo-lingkaran-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Titik $(7,1)$ terhadap lingkaran $(x-3)^2+(y+2)^2=25$ berada ...",
+          "options": [
+            "pada lingkaran",
+            "di dalam lingkaran",
+            "di luar lingkaran",
+            "tidak dapat ditentukan"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan ke ruas kiri:\n$$(7-3)^2 + (1+2)^2 = 16 + 9 = 25$$\n\nBandingkan dengan $r^2 = 25$:\n$$25 = 25$$\n\nJaraknya tepat sama dengan jari-jari, jadi titiknya berada **pada** lingkaran.\n\nPeriksa langsung: jarak $(7,1)$ ke pusat $(3,-2)$ adalah $\\sqrt{16+9} = 5 = r$. Cocok.",
+          "hint": "Substitusikan ke ruas kiri dan bandingkan dengan 25.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-lingkaran-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Titik $(0,0)$ terhadap lingkaran $(x-3)^2+(y+2)^2=25$ berada ...",
+          "options": [
+            "di dalam lingkaran",
+            "pada lingkaran",
+            "di luar lingkaran",
+            "di pusat lingkaran"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan ke ruas kiri:\n$$(0-3)^2 + (0+2)^2 = 9 + 4 = 13$$\n\nBandingkan dengan $r^2 = 25$:\n$$13 < 25$$\n\nJaraknya lebih kecil dari jari-jari, jadi titiknya berada **di dalam** lingkaran.\n\nJarak sebenarnya $\\sqrt{13} \\approx 3{,}6$, memang kurang dari 5.",
+          "hint": "Hasil substitusi lebih besar atau lebih kecil dari 25?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Bandingkan jarak titik ke pusat dengan $r$",
+        "Substitusi ke ruas kiri lalu bandingkan dengan $r^2$",
+        "Garis menyinggung bila jarak pusat ke garis $= r$"
+      ],
+      "pitfall": "Membandingkan hasil substitusi dengan $r$ alih-alih $r^2$. Hasil substitusi sudah berupa kuadrat jarak, jadi pembandingnya juga harus kuadrat."
+    },
+    {
+      "id": "geo-lingkaran-c4",
+      "type": "rumus",
+      "title": "Garis singgung lingkaran",
+      "body": "Garis singgung menyentuh lingkaran tepat di satu titik, dan selalu tegak lurus jari-jari di titik singgung itu. Sifat tegak lurus inilah yang melahirkan rumusnya.\n\n**Singgung di titik $(x_1,y_1)$ pada lingkaran** $x^2+y^2=r^2$:\n$$x_1 x + y_1 y = r^2$$\n\nPolanya mudah diingat: ganti salah satu $x$ pada persamaan lingkaran dengan $x_1$, dan salah satu $y$ dengan $y_1$.\n\nUntuk lingkaran berpusat $(a,b)$, polanya sama dengan penyesuaian:\n$$(x_1-a)(x-a) + (y_1-b)(y-b) = r^2$$\n\n**Singgung bergradien $m$:**\n$$y = mx \\pm r\\sqrt{m^2+1}$$\nTanda $\\pm$ memberi dua garis — satu di tiap sisi lingkaran. Melupakan salah satunya berarti kehilangan separuh jawaban.",
+      "questions": [
+        {
+          "id": "geo-lingkaran-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Persamaan garis singgung lingkaran $x^2+y^2=25$ di titik $(3,4)$ adalah ...",
+          "options": [
+            "$3x + 4y = 25$",
+            "$3x - 4y = 25$",
+            "$4x + 3y = 25$",
+            "$x + y = 25$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai pola $x_1x + y_1y = r^2$ dengan $(x_1,y_1) = (3,4)$:\n$$3x + 4y = 25$$\n\nPeriksa titiknya memang ada di lingkaran: $3^2+4^2 = 25$. Benar.\n\nPeriksa garisnya melewati titik itu: $3(3)+4(4) = 9+16 = 25$. Cocok.",
+          "hint": "Ganti satu $x$ dengan 3 dan satu $y$ dengan 4.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-lingkaran-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya garis singgung lingkaran $x^2+y^2=9$ yang bergradien 2 adalah ...",
+          "options": [
+            "$2$",
+            "$1$",
+            "$0$",
+            "tak hingga"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus garis singgung bergradien:\n$$y = mx \\pm r\\sqrt{m^2+1}$$\n\nTanda $\\pm$ menghasilkan dua garis berbeda — keduanya bergradien 2, tapi menyinggung di sisi lingkaran yang berlawanan.\n\nSecara gambar ini masuk akal: bayangkan menggeser garis bergradien 2 melintasi lingkaran. Ia menyinggung sekali saat mendekat dari satu sisi, dan sekali lagi di sisi seberangnya.\n\nJadi ada $2$ garis singgung.",
+          "hint": "Perhatikan tanda $\\pm$ pada rumusnya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Singgung di titik: ganti satu $x$ dengan $x_1$, satu $y$ dengan $y_1$",
+        "Singgung bergradien: $y = mx \\pm r\\sqrt{m^2+1}$",
+        "Garis singgung tegak lurus jari-jari di titik singgung"
+      ],
+      "pitfall": "Menulis hanya satu garis singgung untuk soal bergradien tertentu. Selalu ada dua, satu di masing-masing sisi lingkaran."
+    },
+    {
+      "id": "geo-lingkaran-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada lingkaran",
+      "body": "**Salah membaca tanda pusat.** $(x+3)^2$ berarti pusatnya di $-3$, bukan $3$. Tanda di dalam kurung selalu berlawanan.\n\n**Lupa mengakarkan.** Ruas kanan persamaan adalah $r^2$. Kalau tertulis 49, jari-jarinya 7.\n\n**Lupa menambahkan ke kedua ruas.** Saat melengkapkan kuadrat, angka pelengkap harus ditambahkan di kiri **dan** kanan.\n\n**Menuliskan satu garis singgung saja.** Soal bergradien tertentu selalu punya dua jawaban.\n\n**Membandingkan dengan $r$, bukan $r^2$.** Hasil substitusi titik sudah berupa kuadrat jarak.\n\nUji murah: setelah menemukan pusat dan jari-jari, periksa satu titik yang seharusnya ada di lingkaran.",
+      "questions": [
+        {
+          "id": "geo-lingkaran-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jari-jari lingkaran $x^2 + y^2 = 49$ adalah ...",
+          "options": [
+            "$7$",
+            "$49$",
+            "$24{,}5$",
+            "$\\sqrt{7}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bentuk bakunya $x^2+y^2 = r^2$, jadi:\n$$r^2 = 49$$\n$$r = \\sqrt{49} = 7$$\n\nRuas kanan selalu berupa kuadrat jari-jari, bukan jari-jarinya langsung. Menjawab 49 adalah kesalahan yang paling sering terjadi di soal semudah ini.",
+          "hint": "Ruas kanan adalah $r^2$.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "geo-lingkaran-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pusat lingkaran $(x+5)^2 + (y-1)^2 = 16$ adalah ...",
+          "options": [
+            "$(-5,1)$",
+            "$(5,-1)$",
+            "$(5,1)$",
+            "$(-5,-1)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bandingkan dengan bentuk baku $(x-a)^2+(y-b)^2=r^2$.\n\n$(x+5)^2$ ditulis ulang sebagai $(x-(-5))^2$, jadi $a = -5$.\n$(y-1)^2$ memberi $b = 1$.\n\nPusatnya $(-5,1)$.\n\nTandanya selalu berlawanan dengan yang tertulis di dalam kurung — ini yang paling sering tertukar.",
+          "hint": "Tulis ulang $(x+5)$ sebagai $(x-(-5))$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tanda pusat berlawanan dengan yang di kurung",
+        "Ruas kanan $r^2$, harus diakarkan",
+        "Lengkapkan kuadrat di kedua ruas",
+        "Garis singgung bergradien selalu ada dua"
+      ],
+      "pitfall": "Menambahkan angka pelengkap kuadrat hanya di ruas kiri, sehingga jari-jari yang dihitung menjadi lebih kecil dari seharusnya."
+    }
+  ]
+}

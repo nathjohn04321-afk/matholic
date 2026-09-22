@@ -1,0 +1,266 @@
+{
+  "id": "trg-persamaan",
+  "track": "menengah",
+  "title": "Persamaan Trigonometri",
+  "order": 10,
+  "prerequisites": [
+    "trg-perbandingan"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Kenapa satu persamaan trigonometri punya banyak penyelesaian, dan cara menemukan semuanya.",
+  "tags": [
+    "trigonometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "trg-persamaan-c1",
+      "type": "konsep",
+      "title": "Kenapa penyelesaiannya lebih dari satu",
+      "body": "Persamaan $\\sin x = \\frac{1}{2}$ terasa seperti pertanyaan biasa, tapi jawabannya bukan satu angka. Alasannya ada pada bentuk fungsinya.\n\nSinus adalah fungsi **berulang** — grafiknya naik-turun tanpa henti dengan periode $360^\\circ$. Garis mendatar $y = \\frac{1}{2}$ memotong grafik itu berkali-kali, dan setiap perpotongan adalah satu penyelesaian.\n\nDalam satu putaran $0^\\circ$ sampai $360^\\circ$ biasanya ada **dua** perpotongan. Di luar selang itu, polanya berulang setiap $360^\\circ$.\n\nKarena itu soal selalu menyebutkan selangnya, misalnya \"untuk $0^\\circ \\le x \\le 360^\\circ$\". Tanpa batasan itu, jawabannya tak hingga banyaknya.\n\nMembaca soal tanpa memperhatikan selang adalah penyebab kehilangan nilai paling sering di bab ini.",
+      "questions": [
+        {
+          "id": "trg-persamaan-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian $\\sin x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
+          "options": [
+            "$x = 30^\\circ$ atau $x = 150^\\circ$",
+            "$x = 30^\\circ$ saja",
+            "$x = 30^\\circ$ atau $x = 330^\\circ$",
+            "$x = 60^\\circ$ atau $x = 120^\\circ$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut acuannya adalah $30^\\circ$, karena $\\sin 30^\\circ = \\frac{1}{2}$.\n\nSinus bernilai positif di kuadran I dan II. Jadi ada dua penyelesaian:\nKuadran I: $x = 30^\\circ$\nKuadran II: $x = 180^\\circ - 30^\\circ = 150^\\circ$\n\nPeriksa: $\\sin 150^\\circ = \\frac{1}{2}$. Benar.\n\nPilihan $330^\\circ$ salah — di sana sinusnya negatif.",
+          "hint": "Sinus positif di kuadran mana saja?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-persamaan-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian $\\cos x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
+          "options": [
+            "$x = 60^\\circ$ atau $x = 300^\\circ$",
+            "$x = 60^\\circ$ atau $x = 120^\\circ$",
+            "$x = 30^\\circ$ atau $x = 330^\\circ$",
+            "$x = 60^\\circ$ saja"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut acuannya $60^\\circ$, karena $\\cos 60^\\circ = \\frac{1}{2}$.\n\nKosinus bernilai positif di kuadran I dan IV:\nKuadran I: $x = 60^\\circ$\nKuadran IV: $x = 360^\\circ - 60^\\circ = 300^\\circ$\n\nPerhatikan bedanya dengan sinus. Sinus positif di kuadran I dan II, sedangkan kosinus di kuadran I dan IV — jadi pasangan penyelesaiannya berbeda pola.",
+          "hint": "Kosinus positif di kuadran I dan IV, bukan I dan II.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Fungsi trigonometri berulang, jadi penyelesaiannya banyak",
+        "Sinus dan kosinus berperiode $360^\\circ$, tangen $180^\\circ$",
+        "Selalu perhatikan selang yang diminta soal"
+      ],
+      "pitfall": "Menjawab hanya satu nilai padahal selangnya memuat dua penyelesaian. Setengah jawaban tetap dihitung salah."
+    },
+    {
+      "id": "trg-persamaan-c2",
+      "type": "prosedur",
+      "title": "Langkah baku menyelesaikan persamaan trigonometri",
+      "body": "Urutan ini bekerja untuk hampir semua persamaan trigonometri dasar.\n\n1. Sederhanakan sampai berbentuk $\\sin x = k$, $\\cos x = k$, atau $\\tan x = k$.\n2. Periksa apakah $k$ masuk akal. Untuk sinus dan kosinus, $k$ harus antara $-1$ dan $1$; kalau tidak, penyelesaiannya tidak ada.\n3. Cari sudut acuannya, yaitu sudut lancip yang nilainya $|k|$.\n4. Tentukan kuadran mana yang bertanda sesuai.\n5. Tuliskan semua penyelesaian di dalam selang yang diminta.\n\nPola kuadrannya:\n$\\sin x = k > 0$: kuadran I dan II\n$\\cos x = k > 0$: kuadran I dan IV\n$\\tan x = k > 0$: kuadran I dan III\n\nUntuk $k$ negatif, pakai dua kuadran yang tersisa. Langkah 2 sering dilewati padahal menghemat seluruh pengerjaan kalau ternyata tidak ada penyelesaian.",
+      "questions": [
+        {
+          "id": "trg-persamaan-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya penyelesaian $\\sin x = 2$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
+          "options": [
+            "$0$",
+            "$1$",
+            "$2$",
+            "$4$"
+          ],
+          "answerIndex": 0,
+          "solution": "Periksa nilainya dulu. Sinus selalu berada antara $-1$ dan $1$, karena ia perbandingan sisi depan terhadap sisi miring.\n\nNilai $2$ berada di luar jangkauan itu, jadi tidak ada sudut mana pun yang memenuhinya.\n\nBanyaknya penyelesaian adalah $0$.\n\nMemeriksa hal ini di awal menghemat seluruh pengerjaan.",
+          "hint": "Berapa nilai terbesar yang bisa dicapai sinus?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-persamaan-q4",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan semua penyelesaian $2\\sin x - 1 = 0$ untuk $0^\\circ \\le x \\le 360^\\circ$.",
+          "answer": "30 dan 150",
+          "acceptedAnswers": [
+            "30, 150",
+            "x = 30 atau x = 150",
+            "{30, 150}",
+            "30°, 150°"
+          ],
+          "solution": "Sederhanakan ke bentuk dasar lebih dulu:\n$$2\\sin x = 1$$\n$$\\sin x = \\frac{1}{2}$$\n\nNilai $\\frac{1}{2}$ berada dalam jangkauan, jadi penyelesaiannya ada.\n\nSudut acuannya $30^\\circ$, dan sinus positif di kuadran I dan II:\n$$x = 30^\\circ \\quad \\text{atau} \\quad x = 180^\\circ - 30^\\circ = 150^\\circ$$",
+          "hint": "Isolasi $\\sin x$ lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sederhanakan ke bentuk dasar lebih dulu",
+        "Periksa $|k| \\le 1$ untuk sinus dan kosinus",
+        "$\\sin$ positif: I & II; $\\cos$ positif: I & IV; $\\tan$ positif: I & III"
+      ],
+      "pitfall": "Melewatkan pemeriksaan $|k| \\le 1$, lalu memaksa mencari sudut untuk $\\sin x = 2$ yang jelas tidak punya penyelesaian."
+    },
+    {
+      "id": "trg-persamaan-c3",
+      "type": "teknik",
+      "title": "Persamaan yang menyamar sebagai kuadrat",
+      "body": "Beberapa persamaan trigonometri sebenarnya persamaan kuadrat yang menyamar. Cirinya: muncul $\\sin^2 x$ bersama $\\sin x$, atau $\\cos^2 x$ bersama $\\cos x$.\n\nStrateginya memisalkan. Untuk $2\\sin^2 x - \\sin x - 1 = 0$, misalkan $u = \\sin x$:\n$$2u^2 - u - 1 = 0$$\n$$(2u+1)(u-1) = 0$$\n$$u = -\\frac{1}{2} \\quad \\text{atau} \\quad u = 1$$\n\nKembalikan ke bentuk semula: $\\sin x = -\\frac{1}{2}$ atau $\\sin x = 1$, lalu selesaikan masing-masing seperti biasa.\n\nKalau persamaannya mencampur $\\sin$ dan $\\cos$, pakai identitas $\\sin^2 x + \\cos^2 x = 1$ untuk menyeragamkan menjadi satu jenis lebih dulu.\n\nJangan lupa membuang nilai $u$ yang jatuh di luar jangkauan $[-1,1]$ — nilai seperti itu tidak memberi penyelesaian sama sekali, karena tidak ada sudut yang sinusnya lebih dari satu. Persamaan kuadrat sering menghasilkan dua akar dengan hanya satu yang berlaku, dan memeriksa jangkauan adalah cara membuang yang palsu.",
+      "questions": [
+        {
+          "id": "trg-persamaan-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Pada $2\\sin^2 x - \\sin x - 1 = 0$, nilai $\\sin x$ yang mungkin adalah ...",
+          "options": [
+            "$-\\frac{1}{2}$ dan $1$",
+            "$\\frac{1}{2}$ dan $-1$",
+            "$2$ dan $-1$",
+            "$1$ saja"
+          ],
+          "answerIndex": 0,
+          "solution": "Misalkan $u = \\sin x$:\n$$2u^2 - u - 1 = 0$$\n\nFaktorkan:\n$$(2u+1)(u-1) = 0$$\n$$u = -\\frac{1}{2} \\quad \\text{atau} \\quad u = 1$$\n\nKeduanya berada dalam jangkauan $[-1,1]$, jadi keduanya sah.\n\nPeriksa: $2\\left(\\frac{1}{4}\\right) + \\frac{1}{2} - 1 = 0$. Benar untuk $u = -\\frac{1}{2}$.",
+          "hint": "Misalkan $u = \\sin x$ dan faktorkan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-persamaan-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Penyelesaian $\\tan x = 1$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
+          "options": [
+            "$45^\\circ$ dan $225^\\circ$",
+            "$45^\\circ$ dan $135^\\circ$",
+            "$45^\\circ$ saja",
+            "$45^\\circ$ dan $315^\\circ$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut acuannya $45^\\circ$, karena $\\tan 45^\\circ = 1$.\n\nTangen bernilai positif di kuadran I dan III:\nKuadran I: $x = 45^\\circ$\nKuadran III: $x = 180^\\circ + 45^\\circ = 225^\\circ$\n\nPerhatikan periode tangen adalah $180^\\circ$, bukan $360^\\circ$ — itu sebabnya kedua penyelesaiannya berjarak tepat $180^\\circ$.",
+          "hint": "Tangen positif di kuadran I dan III, dengan periode $180^\\circ$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sin^2 x$ bersama $\\sin x$ $\\Rightarrow$ misalkan $u = \\sin x$",
+        "Pakai $\\sin^2 x + \\cos^2 x = 1$ untuk menyeragamkan",
+        "Buang nilai $u$ di luar $[-1,1]$"
+      ],
+      "pitfall": "Berhenti setelah mendapat nilai $u$ dan menuliskannya sebagai jawaban. Yang ditanya adalah $x$, jadi harus dikembalikan dulu."
+    },
+    {
+      "id": "trg-persamaan-c4",
+      "type": "rumus",
+      "title": "Identitas yang sering menyelamatkan",
+      "body": "Identitas berikut mengubah bentuk yang buntu menjadi bentuk yang bisa diselesaikan.\n\n**Identitas pokok** — sebenarnya Pythagoras dalam bentuk lain:\n$$\\sin^2 x + \\cos^2 x = 1$$\n\nDari sini turun dua bentuk yang sering dipakai: $\\sin^2 x = 1 - \\cos^2 x$ dan sebaliknya.\n\n**Sudut rangkap:**\n$$\\sin 2x = 2\\sin x\\cos x$$\n$$\\cos 2x = \\cos^2 x - \\sin^2 x = 1 - 2\\sin^2 x = 2\\cos^2 x - 1$$\n\nTiga bentuk $\\cos 2x$ itu setara; pilih yang membuat persamaanmu memuat satu jenis fungsi saja.\n\n**Jumlah dua sudut:**\n$$\\sin(A+B) = \\sin A\\cos B + \\cos A\\sin B$$\n$$\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$$\n\nPerhatikan tanda pada rumus kosinus justru berlawanan dengan tanda di dalam kurung: $\\cos(A+B)$ memakai pengurangan, sedangkan $\\cos(A-B)$ memakai penjumlahan. Rumus sinus tidak berbalik seperti itu — tandanya mengikuti apa adanya. Perbedaan kecil inilah yang paling sering tertukar saat mengerjakan dengan terburu-buru.",
+      "questions": [
+        {
+          "id": "trg-persamaan-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk $1 - 2\\sin^2 x$ sama dengan ...",
+          "options": [
+            "$\\cos 2x$",
+            "$\\sin 2x$",
+            "$\\cos^2 x$",
+            "$2\\cos x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ini salah satu dari tiga bentuk setara rumus sudut rangkap kosinus:\n$$\\cos 2x = 1 - 2\\sin^2 x$$\n\nPeriksa dengan $x = 30^\\circ$:\nRuas kanan: $1 - 2\\left(\\frac{1}{2}\\right)^2 = 1 - \\frac{1}{2} = \\frac{1}{2}$\nRuas kiri: $\\cos 60^\\circ = \\frac{1}{2}$\n\nCocok.",
+          "hint": "Ini salah satu bentuk rumus sudut rangkap.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-persamaan-q8",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Hitung nilai dari $\\sin 30^\\circ \\cos 60^\\circ + \\cos 30^\\circ \\sin 60^\\circ$.",
+          "answer": "1",
+          "acceptedAnswers": [
+            "satu",
+            "= 1"
+          ],
+          "solution": "Bentuknya persis rumus jumlah sinus:\n$$\\sin A\\cos B + \\cos A\\sin B = \\sin(A+B)$$\n\nDengan $A = 30^\\circ$ dan $B = 60^\\circ$:\n$$= \\sin(30^\\circ + 60^\\circ) = \\sin 90^\\circ = 1$$\n\nMenghitung tiap suku terpisah memberi hasil sama: $\\frac{1}{2} \\cdot \\frac{1}{2} + \\frac{\\sqrt{3}}{2} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{1}{4} + \\frac{3}{4} = 1$.",
+          "hint": "Kenali bentuknya sebagai rumus jumlah sudut.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sin^2 x + \\cos^2 x = 1$",
+        "$\\sin 2x = 2\\sin x\\cos x$",
+        "$\\cos 2x$ punya tiga bentuk setara",
+        "Tanda $\\cos(A+B)$ berlawanan dengan di dalam kurung"
+      ],
+      "pitfall": "Menulis $\\cos(A+B) = \\cos A\\cos B + \\sin A\\sin B$ dengan tanda tambah. Tandanya berbalik menjadi kurang pada rumus kosinus."
+    },
+    {
+      "id": "trg-persamaan-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada persamaan trigonometri",
+      "body": "**Menjawab hanya satu penyelesaian.** Hampir semua persamaan trigonometri punya lebih dari satu jawaban dalam satu putaran. Setengah jawaban tetap dihitung salah.\n\n**Melewatkan selang yang diminta.** Kalau soal meminta $0^\\circ$ sampai $720^\\circ$, ada dua putaran — jumlah penyelesaiannya berlipat.\n\n**Membagi dengan $\\sin x$ atau $\\cos x$.** Persis seperti membagi dengan variabel di aljabar, ini membuang penyelesaian. Faktorkan, jangan bagi.\n\n**Lupa memeriksa jangkauan.** Persamaan $\\cos x = 1{,}5$ tidak punya penyelesaian sama sekali.\n\n**Berhenti di pemisalan.** Kalau kamu memisalkan $u = \\sin x$, jawaban akhirnya tetap harus berupa nilai $x$.",
+      "questions": [
+        {
+          "id": "trg-persamaan-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Untuk menyelesaikan $\\sin x \\cos x = \\sin x$, langkah yang benar adalah ...",
+          "options": [
+            "pindahkan semua ke satu ruas lalu faktorkan",
+            "bagi kedua ruas dengan $\\sin x$",
+            "bagi kedua ruas dengan $\\cos x$",
+            "kuadratkan kedua ruas"
+          ],
+          "answerIndex": 0,
+          "solution": "Membagi dengan $\\sin x$ membuang semua penyelesaian yang membuat $\\sin x = 0$.\n\nYang benar, pindahkan semua ke satu ruas:\n$$\\sin x\\cos x - \\sin x = 0$$\n$$\\sin x(\\cos x - 1) = 0$$\n\nHasil kali nol berarti salah satu faktornya nol:\n$$\\sin x = 0 \\quad \\text{atau} \\quad \\cos x = 1$$\n\nDengan membagi, cabang pertama hilang seluruhnya.",
+          "hint": "Apa yang terjadi pada penyelesaian dengan $\\sin x = 0$ kalau dibagi?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "trg-persamaan-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Banyaknya penyelesaian $\\sin x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 720^\\circ$ adalah ...",
+          "options": [
+            "$4$",
+            "$2$",
+            "$3$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dalam satu putaran $0^\\circ$ sampai $360^\\circ$ ada dua penyelesaian: $30^\\circ$ dan $150^\\circ$.\n\nSelang yang diminta mencakup **dua** putaran penuh. Polanya berulang setiap $360^\\circ$, jadi putaran kedua memberi:\n$$30^\\circ + 360^\\circ = 390^\\circ$$\n$$150^\\circ + 360^\\circ = 510^\\circ$$\n\nSeluruhnya ada $4$ penyelesaian.",
+          "hint": "Berapa putaran penuh yang tercakup selang itu?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Cari semua penyelesaian dalam selang yang diminta",
+        "Jangan membagi dengan $\\sin x$ atau $\\cos x$ — faktorkan",
+        "Periksa $|k| \\le 1$ sebelum mengerjakan"
+      ],
+      "pitfall": "Membagi kedua ruas $\\sin x\\cos x = \\sin x$ dengan $\\sin x$, sehingga seluruh penyelesaian dengan $\\sin x = 0$ hilang tanpa disadari."
+    }
+  ]
+}

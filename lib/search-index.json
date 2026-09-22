@@ -972,6 +972,56 @@
       "snippet": "Membalik urutan [rumus] . Vektor dari [rumus] ke [rumus] adalah [rumus] . Membaliknya memberi vektor yang arahnya berlawanan, dan soal biasanya menyediakan k..."
     },
     {
+      "cardId": "geo-lingkaran-c1",
+      "topicId": "geo-lingkaran",
+      "topicTitle": "Lingkaran",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Persamaan lingkaran adalah rumus jarak",
+      "haystack": "persamaan lingkaran adalah rumus jarak lingkaran adalah kumpulan titik yang jaraknya tetap dari satu titik pusat. persamaannya tidak lain adalah rumus jarak yang ditulis ulang. jarak titik ke pusat adalah . kalau jarak itu harus selalu sama dengan , kuadratkan kedua ruas: itu saja. tidak ada yang perlu dihafal terpisah — kalau kamu ingat rumus jarak, kamu sudah punya persamaan lingkaran. perhatikan tandanya. pusat memberi , karena mengurangi bilangan negatif berarti menambah. tanda di dalam kurung selalu berlawanan dengan koordinat pusatnya. ruas kanan adalah , bukan — jadi , bukan 25. dengan pusat tanda dalam kurung berlawanan dengan koordinat pusat ruas kanan adalah , jangan lupa mengakarkan membaca pusat lingkaran sebagai . yang benar , karena tandanya berbalik. lingkaran",
+      "snippet": "Lingkaran adalah kumpulan titik yang jaraknya tetap dari satu titik pusat. Persamaannya tidak lain adalah rumus jarak yang ditulis ulang. Jarak titik [rumus]..."
+    },
+    {
+      "cardId": "geo-lingkaran-c2",
+      "topicId": "geo-lingkaran",
+      "topicTitle": "Lingkaran",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Dari bentuk umum ke bentuk baku",
+      "haystack": "dari bentuk umum ke bentuk baku persamaan lingkaran sering diberikan dalam bentuk umum: untuk membaca pusat dan jari-jarinya, ubah ke bentuk baku dengan melengkapkan kuadrat. 1. kelompokkan suku bersama, suku bersama, pindahkan ke ruas kanan. 2. lengkapkan kuadrat masing-masing: tambahkan dan ke kedua ruas. 3. tulis sebagai kuadrat sempurna. ada juga jalan pintas yang bisa langsung dipakai: kalau nilai di dalam akar ternyata negatif, tidak ada lingkaran yang memenuhi persamaan itu — ia tidak menggambarkan apa pun di bidang nyata. kalau nilainya tepat nol, yang terbentuk hanya satu titik, bukan lingkaran. memeriksa nilai di dalam akar sebelum melanjutkan menghemat pengerjaan pada soal yang memang tidak punya jawaban. pusat nilai dalam akar negatif berarti bukan lingkaran lupa menambahkan angka pelengkap kuadrat ke ruas kanan juga. menambahkannya hanya di ruas kiri mengubah persamaannya menjadi persamaan lain. lingkaran",
+      "snippet": "Persamaan lingkaran sering diberikan dalam bentuk umum: [rumus] Untuk membaca pusat dan jari-jarinya, ubah ke bentuk baku dengan melengkapkan kuadrat. 1. Kel..."
+    },
+    {
+      "cardId": "geo-lingkaran-c3",
+      "topicId": "geo-lingkaran",
+      "topicTitle": "Lingkaran",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kedudukan titik terhadap lingkaran",
+      "haystack": "kedudukan titik terhadap lingkaran untuk mengetahui apakah sebuah titik berada di dalam, pada, atau di luar lingkaran, kamu tidak perlu menggambar. bandingkan saja jaraknya ke pusat dengan jari-jarinya. - jarak : titik di dalam - jarak : titik pada lingkaran - jarak : titik di luar cara praktisnya lebih singkat lagi: substitusikan koordinat titik ke ruas kiri persamaan bentuk baku, lalu bandingkan hasilnya dengan . tidak perlu mengakarkan sama sekali, karena membandingkan kuadrat memberi kesimpulan yang sama. prinsip yang sama berlaku untuk garis terhadap lingkaran, hanya saja yang dibandingkan adalah jarak pusat ke garis. kalau jaraknya sama dengan , garisnya menyinggung; kalau kurang, memotong di dua titik; kalau lebih, tidak berpotongan sama sekali. bandingkan jarak titik ke pusat dengan substitusi ke ruas kiri lalu bandingkan dengan garis menyinggung bila jarak pusat ke garis membandingkan hasil substitusi dengan alih-alih . hasil substitusi sudah berupa kuadrat jarak, jadi pembandingnya juga harus kuadrat. lingkaran",
+      "snippet": "Untuk mengetahui apakah sebuah titik berada di dalam, pada, atau di luar lingkaran, kamu tidak perlu menggambar. Bandingkan saja jaraknya ke pusat dengan jar..."
+    },
+    {
+      "cardId": "geo-lingkaran-c4",
+      "topicId": "geo-lingkaran",
+      "topicTitle": "Lingkaran",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Garis singgung lingkaran",
+      "haystack": "garis singgung lingkaran garis singgung menyentuh lingkaran tepat di satu titik, dan selalu tegak lurus jari-jari di titik singgung itu. sifat tegak lurus inilah yang melahirkan rumusnya. singgung di titik pada lingkaran : polanya mudah diingat: ganti salah satu pada persamaan lingkaran dengan , dan salah satu dengan . untuk lingkaran berpusat , polanya sama dengan penyesuaian: singgung bergradien : tanda memberi dua garis — satu di tiap sisi lingkaran. melupakan salah satunya berarti kehilangan separuh jawaban. singgung di titik: ganti satu dengan , satu dengan singgung bergradien: garis singgung tegak lurus jari-jari di titik singgung menulis hanya satu garis singgung untuk soal bergradien tertentu. selalu ada dua, satu di masing-masing sisi lingkaran. lingkaran",
+      "snippet": "Garis singgung menyentuh lingkaran tepat di satu titik, dan selalu tegak lurus jari-jari di titik singgung itu. Sifat tegak lurus inilah yang melahirkan rumu..."
+    },
+    {
+      "cardId": "geo-lingkaran-c5",
+      "topicId": "geo-lingkaran",
+      "topicTitle": "Lingkaran",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada lingkaran",
+      "haystack": "kesalahan khas pada lingkaran salah membaca tanda pusat. berarti pusatnya di , bukan . tanda di dalam kurung selalu berlawanan. lupa mengakarkan. ruas kanan persamaan adalah . kalau tertulis 49, jari-jarinya 7. lupa menambahkan ke kedua ruas. saat melengkapkan kuadrat, angka pelengkap harus ditambahkan di kiri dan kanan. menuliskan satu garis singgung saja. soal bergradien tertentu selalu punya dua jawaban. membandingkan dengan , bukan . hasil substitusi titik sudah berupa kuadrat jarak. uji murah: setelah menemukan pusat dan jari-jari, periksa satu titik yang seharusnya ada di lingkaran. tanda pusat berlawanan dengan yang di kurung ruas kanan , harus diakarkan lengkapkan kuadrat di kedua ruas garis singgung bergradien selalu ada dua menambahkan angka pelengkap kuadrat hanya di ruas kiri, sehingga jari-jari yang dihitung menjadi lebih kecil dari seharusnya. lingkaran",
+      "snippet": "Salah membaca tanda pusat. [rumus] berarti pusatnya di [rumus] , bukan [rumus] . Tanda di dalam kurung selalu berlawanan. Lupa mengakarkan. Ruas kanan persam..."
+    },
+    {
       "cardId": "kal-limit-aljabar-c1",
       "topicId": "kal-limit-aljabar",
       "topicTitle": "Limit Fungsi Aljabar",
@@ -1080,6 +1130,56 @@
       "title": "Kesalahan khas pada trigonometri",
       "haystack": "kesalahan khas pada trigonometri tertukar sisi depan dan samping. keduanya bergantung pada sudut mana yang sedang ditinjau. sisi yang menjadi \"depan\" untuk satu sudut menjadi \"samping\" untuk sudut lainnya di segitiga yang sama. lupa tanda kuadran. sudut di atas punya nilai yang bisa negatif. bayangkan letak titiknya di lingkaran satuan sebelum menulis jawaban. memakai pythagoras pada segitiga sembarang. kalau tidak ada sudut , yang berlaku adalah aturan kosinus. kalkulator dalam mode radian. ini penyebab jawaban meleset jauh tanpa sebab yang jelas. pastikan modenya derajat kalau soalnya memakai derajat. menjawab dengan . selalu tanda kesalahan hitung, tidak pernah jawaban yang sah. depan dan samping bergantung sudut yang ditinjau periksa kuadran sebelum menulis tanda segitiga sembarang memakai aturan kosinus nilai sinus dan kosinus tidak pernah melebihi 1 memakai aturan sinus padahal yang diketahui dua sisi dan sudut apitnya — dalam keadaan itu tidak ada pasangan sisi-sudut yang lengkap, jadi yang dipakai aturan kosinus. perbandingan trigonometri",
       "snippet": "Tertukar sisi depan dan samping. Keduanya bergantung pada sudut mana yang sedang ditinjau. Sisi yang menjadi \"depan\" untuk satu sudut menjadi \"samping\" untuk..."
+    },
+    {
+      "cardId": "trg-persamaan-c1",
+      "topicId": "trg-persamaan",
+      "topicTitle": "Persamaan Trigonometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kenapa penyelesaiannya lebih dari satu",
+      "haystack": "kenapa penyelesaiannya lebih dari satu persamaan terasa seperti pertanyaan biasa, tapi jawabannya bukan satu angka. alasannya ada pada bentuk fungsinya. sinus adalah fungsi berulang — grafiknya naik-turun tanpa henti dengan periode . garis mendatar memotong grafik itu berkali-kali, dan setiap perpotongan adalah satu penyelesaian. dalam satu putaran sampai biasanya ada dua perpotongan. di luar selang itu, polanya berulang setiap . karena itu soal selalu menyebutkan selangnya, misalnya \"untuk \". tanpa batasan itu, jawabannya tak hingga banyaknya. membaca soal tanpa memperhatikan selang adalah penyebab kehilangan nilai paling sering di bab ini. fungsi trigonometri berulang, jadi penyelesaiannya banyak sinus dan kosinus berperiode , tangen selalu perhatikan selang yang diminta soal menjawab hanya satu nilai padahal selangnya memuat dua penyelesaian. setengah jawaban tetap dihitung salah. persamaan trigonometri",
+      "snippet": "Persamaan [rumus] terasa seperti pertanyaan biasa, tapi jawabannya bukan satu angka. Alasannya ada pada bentuk fungsinya. Sinus adalah fungsi berulang — graf..."
+    },
+    {
+      "cardId": "trg-persamaan-c2",
+      "topicId": "trg-persamaan",
+      "topicTitle": "Persamaan Trigonometri",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Langkah baku menyelesaikan persamaan trigonometri",
+      "haystack": "langkah baku menyelesaikan persamaan trigonometri urutan ini bekerja untuk hampir semua persamaan trigonometri dasar. 1. sederhanakan sampai berbentuk , , atau . 2. periksa apakah masuk akal. untuk sinus dan kosinus, harus antara dan ; kalau tidak, penyelesaiannya tidak ada. 3. cari sudut acuannya, yaitu sudut lancip yang nilainya . 4. tentukan kuadran mana yang bertanda sesuai. 5. tuliskan semua penyelesaian di dalam selang yang diminta. pola kuadrannya: : kuadran i dan ii : kuadran i dan iv : kuadran i dan iii untuk negatif, pakai dua kuadran yang tersisa. langkah 2 sering dilewati padahal menghemat seluruh pengerjaan kalau ternyata tidak ada penyelesaian. sederhanakan ke bentuk dasar lebih dulu periksa untuk sinus dan kosinus positif: i & ii; positif: i & iv; positif: i & iii melewatkan pemeriksaan , lalu memaksa mencari sudut untuk yang jelas tidak punya penyelesaian. persamaan trigonometri",
+      "snippet": "Urutan ini bekerja untuk hampir semua persamaan trigonometri dasar. 1. Sederhanakan sampai berbentuk [rumus] , [rumus] , atau [rumus] . 2. Periksa apakah [ru..."
+    },
+    {
+      "cardId": "trg-persamaan-c3",
+      "topicId": "trg-persamaan",
+      "topicTitle": "Persamaan Trigonometri",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Persamaan yang menyamar sebagai kuadrat",
+      "haystack": "persamaan yang menyamar sebagai kuadrat beberapa persamaan trigonometri sebenarnya persamaan kuadrat yang menyamar. cirinya: muncul bersama , atau bersama . strateginya memisalkan. untuk , misalkan : kembalikan ke bentuk semula: atau , lalu selesaikan masing-masing seperti biasa. kalau persamaannya mencampur dan , pakai identitas untuk menyeragamkan menjadi satu jenis lebih dulu. jangan lupa membuang nilai yang jatuh di luar jangkauan — nilai seperti itu tidak memberi penyelesaian sama sekali, karena tidak ada sudut yang sinusnya lebih dari satu. persamaan kuadrat sering menghasilkan dua akar dengan hanya satu yang berlaku, dan memeriksa jangkauan adalah cara membuang yang palsu. bersama misalkan pakai untuk menyeragamkan buang nilai di luar berhenti setelah mendapat nilai dan menuliskannya sebagai jawaban. yang ditanya adalah , jadi harus dikembalikan dulu. persamaan trigonometri",
+      "snippet": "Beberapa persamaan trigonometri sebenarnya persamaan kuadrat yang menyamar. Cirinya: muncul [rumus] bersama [rumus] , atau [rumus] bersama [rumus] . Strategi..."
+    },
+    {
+      "cardId": "trg-persamaan-c4",
+      "topicId": "trg-persamaan",
+      "topicTitle": "Persamaan Trigonometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Identitas yang sering menyelamatkan",
+      "haystack": "identitas yang sering menyelamatkan identitas berikut mengubah bentuk yang buntu menjadi bentuk yang bisa diselesaikan. identitas pokok — sebenarnya pythagoras dalam bentuk lain: dari sini turun dua bentuk yang sering dipakai: dan sebaliknya. sudut rangkap: tiga bentuk itu setara; pilih yang membuat persamaanmu memuat satu jenis fungsi saja. jumlah dua sudut: perhatikan tanda pada rumus kosinus justru berlawanan dengan tanda di dalam kurung: memakai pengurangan, sedangkan memakai penjumlahan. rumus sinus tidak berbalik seperti itu — tandanya mengikuti apa adanya. perbedaan kecil inilah yang paling sering tertukar saat mengerjakan dengan terburu-buru. punya tiga bentuk setara tanda berlawanan dengan di dalam kurung menulis dengan tanda tambah. tandanya berbalik menjadi kurang pada rumus kosinus. persamaan trigonometri",
+      "snippet": "Identitas berikut mengubah bentuk yang buntu menjadi bentuk yang bisa diselesaikan. Identitas pokok — sebenarnya Pythagoras dalam bentuk lain: [rumus] Dari s..."
+    },
+    {
+      "cardId": "trg-persamaan-c5",
+      "topicId": "trg-persamaan",
+      "topicTitle": "Persamaan Trigonometri",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada persamaan trigonometri",
+      "haystack": "kesalahan khas pada persamaan trigonometri menjawab hanya satu penyelesaian. hampir semua persamaan trigonometri punya lebih dari satu jawaban dalam satu putaran. setengah jawaban tetap dihitung salah. melewatkan selang yang diminta. kalau soal meminta sampai , ada dua putaran — jumlah penyelesaiannya berlipat. membagi dengan atau . persis seperti membagi dengan variabel di aljabar, ini membuang penyelesaian. faktorkan, jangan bagi. lupa memeriksa jangkauan. persamaan tidak punya penyelesaian sama sekali. berhenti di pemisalan. kalau kamu memisalkan , jawaban akhirnya tetap harus berupa nilai . cari semua penyelesaian dalam selang yang diminta jangan membagi dengan atau — faktorkan periksa sebelum mengerjakan membagi kedua ruas dengan , sehingga seluruh penyelesaian dengan hilang tanpa disadari. persamaan trigonometri",
+      "snippet": "Menjawab hanya satu penyelesaian. Hampir semua persamaan trigonometri punya lebih dari satu jawaban dalam satu putaran. Setengah jawaban tetap dihitung salah..."
     },
     {
       "cardId": "osn-keterbagian-c1",
