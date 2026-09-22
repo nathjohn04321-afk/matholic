@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Harga 4 buku adalah Rp60.000. Harga 7 buku yang sama adalah ...",
           "options": [
-            "Rp105.000",
             "Rp90.000",
             "Rp120.000",
-            "Rp75.000"
+            "Rp75.000",
+            "Rp105.000"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Makin banyak buku, makin besar totalnya — ini senilai.\n\n$$\\frac{4}{60000} = \\frac{7}{x}$$\n\nKali silang:\n$$4x = 7 \\times 60000 = 420000$$\n$$x = 105000$$\n\nCara lain: harga satu buku $60000 \\div 4 = 15000$, lalu $7 \\times 15000 = 105000$.",
           "hint": "Cari harga satu buku dulu kalau lebih mudah.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Harga barang naik $20\\%$, lalu turun $20\\%$. Dibanding harga semula, harga akhirnya ...",
           "options": [
-            "sama saja",
-            "lebih murah $4\\%$",
+            "lebih murah $40\\%$",
             "lebih mahal $4\\%$",
-            "lebih murah $40\\%$"
+            "lebih murah $4\\%$",
+            "sama saja"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Pakai pengali supaya patokannya tidak tertukar.\n\nNaik $20\\%$: dikali $1{,}2$\nTurun $20\\%$: dikali $0{,}8$\n\n$$1{,}2 \\times 0{,}8 = 0{,}96$$\n\nHarga akhir $96\\%$ dari semula, jadi **lebih murah $4\\%$**.\n\nPenurunan kedua dihitung dari harga yang sudah naik, bukan dari harga awal — itu sebabnya tidak kembali sama.",
           "hint": "Turun 20% itu dari harga yang mana?",
           "tags": [
@@ -127,12 +127,12 @@
           "format": "pilihan-ganda",
           "prompt": "Uang Rp600.000 dibagi tiga orang dengan perbandingan $2:3:1$. Bagian terbesar adalah ...",
           "options": [
-            "Rp200.000",
             "Rp300.000",
+            "Rp200.000",
             "Rp100.000",
             "Rp360.000"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Jumlah bagian: $2+3+1 = 6$.\n\nNilai satu bagian:\n$$600000 \\div 6 = 100000$$\n\nBagian terbesar punya angka perbandingan 3:\n$$3 \\times 100000 = 300000$$\n\nPeriksa: $200000 + 300000 + 100000 = 600000$. Cocok.",
           "hint": "Bagi dengan jumlah seluruh angka perbandingan, bukan dengan 3 orang.",
           "tags": [
@@ -145,12 +145,12 @@
           "format": "pilihan-ganda",
           "prompt": "Perbandingan kelereng Andi dan Budi adalah $5:3$. Selisihnya 14 butir. Jumlah kelereng keduanya adalah ...",
           "options": [
-            "$56$",
             "$42$",
             "$112$",
-            "$28$"
+            "$28$",
+            "$56$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Yang diketahui selisih, bukan total. Jadi cari nilai satu bagian dari selisihnya.\n\nSelisih bagian: $5 - 3 = 2$ bagian, dan itu setara 14 butir.\n$$1 \\text{ bagian} = 14 \\div 2 = 7$$\n\nJumlah bagian keduanya: $5 + 3 = 8$ bagian.\n$$8 \\times 7 = 56$$\n\nPeriksa: Andi $35$, Budi $21$, selisihnya $14$. Cocok.",
           "hint": "Selisihnya setara berapa bagian?",
           "tags": [
@@ -177,12 +177,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada peta berskala $1:50.000$, jarak dua kota adalah 8 cm. Jarak sebenarnya adalah ...",
           "options": [
-            "$4$ km",
+            "$400$ km",
             "$40$ km",
             "$0{,}4$ km",
-            "$400$ km"
+            "$4$ km"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Jarak sebenarnya dalam cm:\n$$8 \\times 50000 = 400000 \\text{ cm}$$\n\nUbah ke kilometer, ingat $1 \\text{ km} = 100.000 \\text{ cm}$:\n$$400000 \\div 100000 = 4 \\text{ km}$$\n\nKesalahan tersering adalah berhenti di 400.000 lalu membaginya dengan 1.000, yang memberi 400 km — itu mengubah ke meter, bukan kilometer.",
           "hint": "Ingat 1 km berapa cm.",
           "tags": [
@@ -195,12 +195,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah bangun diperbesar sehingga panjang sisinya menjadi 3 kali semula. Luasnya menjadi ... kali semula.",
           "options": [
-            "$3$",
-            "$6$",
             "$9$",
+            "$6$",
+            "$3$",
             "$27$"
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "solution": "Luas bergantung pada dua dimensi, jadi faktor skalanya dikuadratkan.\n\n$$k = 3 \\Rightarrow \\text{luas} \\times k^2 = 3^2 = 9$$\n\nPeriksa dengan contoh: persegi sisi 2 punya luas 4. Diperbesar jadi sisi 6, luasnya 36. Dan $36 \\div 4 = 9$. Cocok.\n\nPilihan $27$ adalah faktor untuk volume, yaitu $k^3$.",
           "hint": "Luas punya dua dimensi — apa artinya untuk faktor skalanya?",
           "tags": [
@@ -245,12 +245,12 @@
           "format": "pilihan-ganda",
           "prompt": "Seorang pedagang membeli barang Rp150.000 dan menjualnya Rp180.000. Persentase keuntungannya adalah ...",
           "options": [
-            "$20\\%$",
+            "$83{,}3\\%$",
             "$30\\%$",
             "$16{,}7\\%$",
-            "$83{,}3\\%$"
+            "$20\\%$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Keuntungan dalam rupiah:\n$$180000 - 150000 = 30000$$\n\nPersentase keuntungan selalu dihitung terhadap **harga beli**:\n$$\\frac{30000}{150000} \\times 100\\% = 20\\%$$\n\nPilihan $16{,}7\\%$ muncul dari membagi dengan harga jual — itu keliru. Patokan untung dan rugi selalu harga beli.",
           "hint": "Persen untung dihitung terhadap harga yang mana?",
           "tags": [

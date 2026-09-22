@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Median dari data $9, 4, 7, 5, 6, 5, 8$ adalah ...",
           "options": [
-            "$6$",
-            "$5$",
             "$7$",
+            "$5$",
+            "$6$",
             "$6{,}3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Urutkan dulu — ini langkah yang paling sering dilewati:\n$$4, 5, 5, 6, 7, 8, 9$$\n\nAda 7 data, jadi nilai tengahnya adalah data ke-4:\n$$\\text{median} = 6$$\n\nMengambil nilai tengah dari urutan asli memberi 5, yang keliru.",
           "hint": "Urutkan datanya lebih dulu.",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Data $4, 5, 5, 6, 7, 8, 9$ punya modus ...",
           "options": [
-            "$5$",
             "$6$",
             "$9$",
+            "$5$",
             "tidak ada modus"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Modus adalah nilai yang paling sering muncul.\n\nHitung kemunculannya:\n$4$ muncul 1 kali\n$5$ muncul **2 kali**\n$6, 7, 8, 9$ masing-masing 1 kali\n\nJadi modusnya $5$.\n\nPerhatikan modus bisa berbeda dari median dan rata-rata. Di sini median $6$ dan modus $5$ — keduanya sah, hanya mengukur hal yang berbeda.",
           "hint": "Nilai mana yang muncul lebih dari sekali?",
           "tags": [
@@ -94,12 +94,12 @@
           "format": "pilihan-ganda",
           "prompt": "Rata-rata 5 bilangan adalah 12. Jika satu bilangan bernilai 8 dihapus, rata-rata sisanya adalah ...",
           "options": [
-            "$13$",
-            "$11$",
             "$12$",
+            "$11$",
+            "$13$",
             "$10$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Cari totalnya dulu dari rata-rata:\n$$\\text{total} = 5 \\times 12 = 60$$\n\nHapus bilangan 8:\n$$\\text{total baru} = 60 - 8 = 52$$\n\nSisanya 4 bilangan:\n$$\\bar{x} = \\frac{52}{4} = 13$$\n\nMasuk akal: yang dihapus lebih kecil dari rata-rata, jadi rata-rata sisanya naik.",
           "hint": "Ubah rata-rata menjadi total lebih dulu.",
           "tags": [
@@ -174,9 +174,9 @@
           "prompt": "Jangkauan dari data $4, 5, 5, 6, 7, 8, 9$ adalah ...",
           "options": [
             "$5$",
-            "$9$",
+            "$6$",
             "$4$",
-            "$6$"
+            "$9$"
           ],
           "answerIndex": 0,
           "solution": "Jangkauan adalah selisih nilai terbesar dan terkecil:\n$$9 - 4 = 5$$\n\nPerhatikan jangkauan hanya memakai dua nilai ekstrem, sehingga ia sangat peka terhadap pencilan. Satu data yang menyimpang jauh langsung melebarkan jangkauan, meski sebagian besar data rapat.",
@@ -192,9 +192,9 @@
           "prompt": "Ukuran sebaran yang paling tidak terpengaruh nilai ekstrem adalah ...",
           "options": [
             "jangkauan antarkuartil",
+            "simpangan baku",
             "jangkauan",
-            "rata-rata",
-            "simpangan baku"
+            "rata-rata"
           ],
           "answerIndex": 0,
           "solution": "Periksa satu per satu.\n\nJangkauan hanya memakai nilai terbesar dan terkecil — justru paling peka terhadap ekstrem.\n\nRata-rata dan simpangan baku memperhitungkan setiap data, termasuk yang ekstrem.\n\nJangkauan antarkuartil hanya melihat 50% data di tengah, sehingga nilai ekstrem di kedua ujungnya tidak ikut terhitung sama sekali.\n\nJadi jawabannya jangkauan antarkuartil.",
@@ -223,12 +223,12 @@
           "format": "pilihan-ganda",
           "prompt": "Kelas A berisi 20 siswa dengan rata-rata 7, kelas B berisi 30 siswa dengan rata-rata 8. Rata-rata gabungannya adalah ...",
           "options": [
-            "$7{,}6$",
             "$7{,}5$",
             "$8$",
-            "$7$"
+            "$7$",
+            "$7{,}6$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Jangan merata-ratakan kedua rata-rata — jumlah siswanya berbeda.\n\nHitung total nilai tiap kelas:\nKelas A: $20 \\times 7 = 140$\nKelas B: $30 \\times 8 = 240$\n\nTotal seluruhnya $380$, dengan total siswa $50$:\n$$\\bar{x} = \\frac{380}{50} = 7{,}6$$\n\nPilihan $7{,}5$ adalah rata-rata dari 7 dan 8 — keliru, karena kelas B punya lebih banyak siswa sehingga menarik hasilnya lebih dekat ke 8.",
           "hint": "Kelas mana yang lebih banyak siswanya?",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika semua data dalam suatu kelompok bernilai sama, maka simpangan bakunya ...",
           "options": [
-            "$0$",
             "$1$",
-            "sama dengan rata-ratanya",
-            "tidak dapat dihitung"
+            "tidak dapat dihitung",
+            "$0$",
+            "sama dengan rata-ratanya"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kalau semua data bernilai sama, rata-ratanya juga bernilai itu.\n\nMaka setiap simpangan $x_i - \\bar{x}$ bernilai nol, dan kuadratnya juga nol.\n\n$$s = \\sqrt{\\frac{0}{n}} = 0$$\n\nMasuk akal: simpangan baku mengukur sebaran, dan data yang semuanya sama tidak menyebar sama sekali.",
           "hint": "Berapa jarak tiap data dari rata-ratanya?",
           "tags": [

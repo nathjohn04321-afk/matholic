@@ -27,12 +27,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int (\\sin x + 2\\cos x)\\,dx$ adalah ...",
           "options": [
-            "$-\\cos x + 2\\sin x + C$",
-            "$\\cos x + 2\\sin x + C$",
             "$-\\cos x - 2\\sin x + C$",
-            "$\\cos x - 2\\sin x + C$"
+            "$\\cos x - 2\\sin x + C$",
+            "$-\\cos x + 2\\sin x + C$",
+            "$\\cos x + 2\\sin x + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pecah menjadi dua integral terpisah:\n\n$$\\int \\sin x\\,dx = -\\cos x$$\n$$\\int 2\\cos x\\,dx = 2\\sin x$$\n\nJadi hasilnya $-\\cos x + 2\\sin x + C$.\n\nCek dengan menurunkan: $\\frac{d}{dx}(-\\cos x + 2\\sin x) = \\sin x + 2\\cos x$. Sesuai soal.",
           "hint": "Ingat hanya salah satu dari sinus dan kosinus yang berubah tanda.",
           "tags": [
@@ -127,12 +127,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\int_0^{\\pi/2} \\sin^2 x\\,dx$ adalah ...",
           "options": [
-            "$\\frac{\\pi}{4}$",
             "$\\frac{\\pi}{2}$",
+            "$1$",
             "$\\frac{1}{2}$",
-            "$1$"
+            "$\\frac{\\pi}{4}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Ubah dulu dengan identitas sudut rangkap:\n\n$$\\sin^2 x = \\frac{1 - \\cos 2x}{2}$$\n\n$$\\int_0^{\\pi/2}\\frac{1-\\cos 2x}{2}dx = \\left[\\frac{x}{2} - \\frac{\\sin 2x}{4}\\right]_0^{\\pi/2}$$\n\nDi $x = \\frac{\\pi}{2}$: $\\frac{\\pi}{4} - \\frac{\\sin \\pi}{4} = \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$\n\nDi $x = 0$: $0 - 0 = 0$\n\nJadi hasilnya $\\frac{\\pi}{4}$.\n\nMasuk akal: pada seperempat periode itu $\\sin^2 x$ berayun antara 0 dan 1, dan rata-ratanya persis $\\frac{1}{2}$, dikali lebar $\\frac{\\pi}{2}$ menghasilkan $\\frac{\\pi}{4}$.",
           "hint": "Pangkat dua harus dibuang dulu dengan identitas sudut rangkap.",
           "tags": [
@@ -145,12 +145,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int 2\\sin x \\cos x\\,dx$ adalah ...",
           "options": [
-            "$-\\frac{1}{2}\\cos 2x + C$",
+            "$-\\cos 2x + C$",
             "$\\sin^2 x \\cos^2 x + C$",
-            "$2\\sin^2 x + C$",
-            "$-\\cos 2x + C$"
+            "$-\\frac{1}{2}\\cos 2x + C$",
+            "$2\\sin^2 x + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kenali bentuknya: $2\\sin x\\cos x = \\sin 2x$.\n\n$$\\int 2\\sin x\\cos x\\,dx = \\int \\sin 2x\\,dx = -\\frac{1}{2}\\cos 2x + C$$\n\nCek: $\\frac{d}{dx}\\left(-\\frac{1}{2}\\cos 2x\\right) = -\\frac{1}{2}(-\\sin 2x)(2) = \\sin 2x = 2\\sin x\\cos x$. Benar.\n\nCatatan menarik: $\\sin^2 x + C$ juga jawaban yang sah, karena $\\sin^2 x = \\frac{1-\\cos 2x}{2}$ hanya berbeda konstanta $\\frac{1}{2}$ dari jawaban di atas. Dua antiturunan yang berbeda konstanta memang sama-sama benar.",
           "hint": "Kenali identitas sudut rangkap untuk sinus.",
           "tags": [
@@ -177,12 +177,12 @@
           "format": "pilihan-ganda",
           "prompt": "Luas daerah di bawah kurva $y = \\sin x$ dari $x = 0$ sampai $x = \\pi$ adalah ...",
           "options": [
-            "$2$",
-            "$0$",
             "$1$",
-            "$\\pi$"
+            "$0$",
+            "$\\pi$",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pada $0 \\leq x \\leq \\pi$ nilai $\\sin x \\geq 0$, jadi kurvanya di atas sumbu $x$ dan integralnya langsung memberi luas.\n\n$$L = \\int_0^{\\pi}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{\\pi}$$\n\n$$= (-\\cos\\pi) - (-\\cos 0) = -(-1) + 1 = 2$$\n\nJawaban $0$ adalah jebakan untuk yang memakai batas $0$ sampai $2\\pi$.",
           "hint": "Periksa dulu apakah kurvanya memotong sumbu $x$ di dalam interval.",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $\\int_0^{a} \\sin x\\,dx = 1$ dengan $0 < a < \\pi$, maka nilai $a$ adalah ...",
           "options": [
-            "$\\frac{\\pi}{2}$",
             "$\\frac{\\pi}{3}$",
-            "$\\frac{\\pi}{4}$",
-            "$\\frac{2\\pi}{3}$"
+            "$\\frac{2\\pi}{3}$",
+            "$\\frac{\\pi}{2}$",
+            "$\\frac{\\pi}{4}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Hitung integralnya dalam $a$:\n\n$$\\int_0^{a}\\sin x\\,dx = \\left[-\\cos x\\right]_0^{a} = -\\cos a + \\cos 0 = 1 - \\cos a$$\n\nSamakan dengan 1:\n$$1 - \\cos a = 1 \\Rightarrow \\cos a = 0$$\n\nPada $0 < a < \\pi$, penyelesaian $\\cos a = 0$ hanya $a = \\frac{\\pi}{2}$.\n\nCek: $\\int_0^{\\pi/2}\\sin x\\,dx = -\\cos\\frac{\\pi}{2} + \\cos 0 = 0 + 1 = 1$. Benar.",
           "hint": "Hitung integralnya dalam $a$ lebih dulu, baru selesaikan persamaannya.",
           "tags": [

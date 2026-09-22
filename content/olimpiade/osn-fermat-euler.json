@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sisa pembagian $3^{100}$ oleh $7$ adalah ...",
           "options": [
-            "$4$",
             "$2$",
-            "$1$",
-            "$3$"
+            "$3$",
+            "$4$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Karena $7$ prima dan $7 \\nmid 3$, teorema Fermat Kecil memberi $3^6 \\equiv 1 \\pmod 7$.\n\nReduksi eksponennya modulo $6$:\n$$100 = 6 \\times 16 + 4$$\n\n$$3^{100} = (3^6)^{16} \\cdot 3^4 \\equiv 1^{16} \\cdot 3^4 \\equiv 3^4 \\pmod 7$$\n\nHitung $3^4 = 81 = 7 \\times 11 + 4$, jadi sisanya $4$.\n\nPilihan $2$ adalah jebakan untuk yang mereduksi eksponen modulo $7$: $100 \\bmod 7 = 2$ memberi $3^2 \\equiv 2$, yang salah.",
           "hint": "Reduksi eksponennya modulo $p-1 = 6$.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sisa pembagian $2^{100}$ oleh $13$ adalah ...",
           "options": [
-            "$3$",
             "$4$",
+            "$9$",
             "$1$",
-            "$9$"
+            "$3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Modulusnya prima, jadi $2^{12} \\equiv 1 \\pmod{13}$ menurut Fermat Kecil.\n\n$$100 = 12 \\times 8 + 4$$\n\n$$2^{100} \\equiv 2^4 = 16 \\equiv 3 \\pmod{13}$$\n\nPerhatikan urutan kerjanya: reduksi eksponen dulu memakai modulus $12$, baru hitung pangkat kecilnya memakai modulus $13$. Mencampur kedua modulus itu adalah sumber kesalahan paling sering.",
           "hint": "Periodenya $13-1 = 12$.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\varphi(100)$ adalah ...",
           "options": [
+            "$60$",
             "$40$",
-            "$50$",
             "$99$",
-            "$60$"
+            "$50$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Faktorkan lebih dulu: $100 = 2^2 \\times 5^2$.\n\n$$\\varphi(100) = 100\\left(1 - \\frac{1}{2}\\right)\\left(1 - \\frac{1}{5}\\right) = 100 \\times \\frac{1}{2} \\times \\frac{4}{5} = 40$$\n\nPerhatikan bahwa yang masuk ke rumus hanyalah **faktor prima berbedanya**, bukan pangkatnya. Meskipun $2$ muncul dua kali dalam faktorisasi, ia hanya menyumbang satu faktor $\\left(1-\\frac{1}{2}\\right)$.\n\nPilihan $99$ berlaku hanya kalau $100$ prima — dan ia jelas tidak.",
           "hint": "Pakai faktor prima berbedanya saja.",
           "tags": [
@@ -93,12 +93,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dua digit terakhir dari $7^{2024}$ adalah ...",
           "options": [
-            "$01$",
             "$07$",
-            "$49$",
-            "$43$"
+            "$43$",
+            "$01$",
+            "$49$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Dua digit terakhir berarti nilainya modulo $100$.\n\nKarena $\\gcd(7,100) = 1$, teorema Euler berlaku dengan $\\varphi(100) = 40$:\n$$7^{40} \\equiv 1 \\pmod{100}$$\n\n$$2024 = 40 \\times 50 + 24 \\Rightarrow 7^{2024} \\equiv 7^{24} \\pmod{100}$$\n\nUntuk menghitung $7^{24}$, perhatikan bahwa $7^2 = 49$ dan $7^4 = 2401 \\equiv 1 \\pmod{100}$. Ternyata periode sebenarnya jauh lebih pendek dari $40$.\n\nKarena $24$ habis dibagi $4$: $7^{24} = (7^4)^6 \\equiv 1^6 = 1 \\pmod{100}$.\n\nJadi dua digit terakhirnya $01$. Pelajaran di sini: Euler memberi periode yang **berlaku**, tapi belum tentu yang **terpendek**.",
           "hint": "Cari juga periode yang lebih pendek dari $\\varphi(n)$.",
           "tags": [
@@ -125,12 +125,12 @@
           "format": "pilihan-ganda",
           "prompt": "Digit satuan dari $3^{2023}$ adalah ...",
           "options": [
-            "$7$",
-            "$3$",
             "$9$",
-            "$1$"
+            "$1$",
+            "$7$",
+            "$3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Digit satuan berarti nilainya modulo $10$. Daftar pangkat kecilnya:\n\n$$3^1 \\equiv 3, \\quad 3^2 \\equiv 9, \\quad 3^3 \\equiv 7, \\quad 3^4 \\equiv 1 \\pmod{10}$$\n\nPeriodenya $4$. Reduksi eksponennya:\n$$2023 = 4 \\times 505 + 3$$\n\n$$3^{2023} \\equiv 3^3 \\equiv 7 \\pmod{10}$$\n\nCatatan: $\\varphi(10) = 4$, jadi teorema Euler memberi periode yang sama. Untuk soal digit satuan, mendaftar empat pangkat pertama biasanya lebih cepat daripada menghitung $\\varphi$.",
           "hint": "Daftar saja pangkat kecilnya sampai berulang.",
           "tags": [
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sisa pembagian $7^{222}$ oleh $11$ adalah ...",
           "options": [
-            "$5$",
-            "$7$",
+            "$3$",
             "$1$",
-            "$3$"
+            "$7$",
+            "$5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Karena $11$ prima dan $11 \\nmid 7$, berlaku $7^{10} \\equiv 1 \\pmod{11}$.\n\n$$222 = 10 \\times 22 + 2$$\n\n$$7^{222} \\equiv 7^2 = 49 \\pmod{11}$$\n\n$$49 = 11 \\times 4 + 5 \\Rightarrow 7^{222} \\equiv 5 \\pmod{11}$$\n\nPerhatikan betapa singkatnya: satu pembagian untuk mereduksi eksponen, satu pengkuadratan, satu pembagian lagi. Tanpa teorema ini soalnya praktis tak tergarap.",
           "hint": "Periodenya $11 - 1 = 10$.",
           "tags": [
@@ -176,8 +176,8 @@
           "prompt": "Bentuk $n^3 - n$ selalu habis dibagi ... untuk setiap bilangan bulat $n$.",
           "options": [
             "$6$",
-            "$3$",
             "$9$",
+            "$3$",
             "$12$"
           ],
           "answerIndex": 0,
@@ -223,12 +223,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sisa pembagian $5^{2023}$ oleh $7$ adalah ...",
           "options": [
-            "$5$",
             "$3$",
-            "$1$",
-            "$6$"
+            "$6$",
+            "$5$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Modulusnya prima, jadi $5^6 \\equiv 1 \\pmod 7$.\n\n$$2023 = 6 \\times 337 + 1$$\n\n$$5^{2023} \\equiv 5^1 = 5 \\pmod 7$$\n\nSisa eksponennya kebetulan $1$, sehingga jawabannya langsung bilangan pokoknya sendiri.\n\nUntuk memastikan pembagiannya benar: $6 \\times 337 = 2022$, dan $2023 - 2022 = 1$. Cocok.",
           "hint": "Reduksi $2023$ modulo $6$.",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sisa pembagian $2^{1000}$ oleh $9$ adalah ...",
           "options": [
-            "$7$",
-            "$1$",
+            "$2$",
             "$4$",
-            "$2$"
+            "$1$",
+            "$7$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Modulusnya bukan prima, jadi pakai teorema Euler. Karena $9 = 3^2$:\n\n$$\\varphi(9) = 9\\left(1 - \\frac{1}{3}\\right) = 6$$\n\nSyaratnya terpenuhi karena $\\gcd(2,9) = 1$, sehingga $2^6 \\equiv 1 \\pmod 9$.\n\n$$1000 = 6 \\times 166 + 4$$\n\n$$2^{1000} \\equiv 2^4 = 16 \\equiv 7 \\pmod 9$$\n\nCek dengan daftar: $2^1 \\equiv 2$, $2^2 \\equiv 4$, $2^3 \\equiv 8$, $2^4 \\equiv 7$, $2^5 \\equiv 5$, $2^6 \\equiv 1$. Periodenya memang $6$, dan suku keempatnya memang $7$.",
           "hint": "Hitung $\\varphi(9)$ lebih dulu.",
           "tags": [

@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Segitiga siku-siku punya sisi tegak 6 cm dan 8 cm. Sisi miringnya adalah ...",
           "options": [
-            "$10$ cm",
             "$14$ cm",
             "$48$ cm",
-            "$7$ cm"
+            "$7$ cm",
+            "$10$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai $a^2 + b^2 = c^2$:\n$$6^2 + 8^2 = 36 + 64 = 100$$\n$$c = \\sqrt{100} = 10$$\n\nIni tripel $(3,4,5)$ dikali 2, jadi bisa dikenali langsung tanpa menghitung.",
           "hint": "Kuadratkan keduanya, jumlahkan, lalu akarkan.",
           "tags": [
@@ -44,9 +44,9 @@
           "prompt": "Segitiga siku-siku punya sisi miring 13 cm dan satu sisi tegak 5 cm. Sisi tegak lainnya adalah ...",
           "options": [
             "$12$ cm",
+            "$\\sqrt{194}$ cm",
             "$18$ cm",
-            "$8$ cm",
-            "$\\sqrt{194}$ cm"
+            "$8$ cm"
           ],
           "answerIndex": 0,
           "solution": "Yang diketahui sisi miring, jadi rumusnya dibalik — bukan dijumlahkan, melainkan dikurangkan.\n\n$$a^2 = c^2 - b^2 = 13^2 - 5^2 = 169 - 25 = 144$$\n$$a = \\sqrt{144} = 12$$\n\nPilihan $\\sqrt{194}$ muncul dari menjumlahkan $169 + 25$, yaitu memperlakukan 13 sebagai sisi tegak.",
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Segitiga dengan sisi 7 cm, 8 cm, dan 12 cm berjenis ...",
           "options": [
-            "tumpul",
+            "tidak ada",
             "siku-siku",
-            "lancip",
-            "tidak ada"
+            "tumpul",
+            "lancip"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Sisi terpanjang adalah 12, jadi itulah $c$.\n\n$$c^2 = 144$$\n$$a^2 + b^2 = 49 + 64 = 113$$\n\nKarena $144 > 113$, segitiganya **tumpul**.\n\nPeriksa dulu apakah segitiganya ada: $7 + 8 = 15 > 12$. Ada.",
           "hint": "Kuadratkan yang terpanjang, bandingkan dengan jumlah dua lainnya.",
           "tags": [
@@ -126,9 +126,9 @@
           "prompt": "Dua segitiga sebangun. Sisi-sisi segitiga kecil 3, 4, 5 cm, dan sisi terpanjang segitiga besar 15 cm. Keliling segitiga besar adalah ...",
           "options": [
             "$36$ cm",
-            "$24$ cm",
+            "$12$ cm",
             "$45$ cm",
-            "$12$ cm"
+            "$24$ cm"
           ],
           "answerIndex": 0,
           "solution": "Cari faktor pengalinya dari pasangan sisi terpanjang:\n$$k = \\frac{15}{5} = 3$$\n\nSisi-sisi segitiga besar:\n$3 \\times 3 = 9$, $4 \\times 3 = 12$, $5 \\times 3 = 15$\n\nKelilingnya:\n$$9 + 12 + 15 = 36 \\text{ cm}$$\n\nCara singkat: keliling juga berbanding $k$, jadi $(3+4+5) \\times 3 = 36$.",
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dua bangun sebangun punya perbandingan sisi $2:5$. Perbandingan luasnya adalah ...",
           "options": [
-            "$4:25$",
             "$2:5$",
+            "$4:25$",
             "$8:125$",
             "$5:2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Luas bergantung pada dua dimensi, jadi perbandingannya dikuadratkan.\n\n$$\\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}$$\n\nJadi perbandingan luasnya $4:25$.\n\nPilihan $8:125$ adalah perbandingan volume, yaitu pangkat tiga.",
           "hint": "Luas punya dua dimensi.",
           "tags": [
@@ -191,12 +191,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah tiang setinggi 6 m punya bayangan 8 m. Pada saat yang sama, gedung punya bayangan 40 m. Tinggi gedung adalah ...",
           "options": [
-            "$30$ m",
+            "$20$ m",
             "$53{,}3$ m",
-            "$48$ m",
-            "$20$ m"
+            "$30$ m",
+            "$48$ m"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Sinar matahari membuat sudut sama, jadi kedua segitiga sebangun.\n\nSusun perbandingan tinggi terhadap bayangan:\n$$\\frac{6}{8} = \\frac{t}{40}$$\n\nKali silang:\n$$8t = 240 \\Rightarrow t = 30$$\n\nTinggi gedungnya 30 m.\n\nPastikan perbandingannya konsisten: tinggi di atas, bayangan di bawah, pada kedua ruas.",
           "hint": "Tinggi berbanding bayangan, pada kedua bangun.",
           "tags": [
@@ -224,9 +224,9 @@
           "prompt": "Diketahui $c^2 = 169$ pada segitiga siku-siku. Panjang sisi miringnya adalah ...",
           "options": [
             "$13$",
-            "$169$",
             "$84{,}5$",
-            "$\\sqrt{169^2}$"
+            "$\\sqrt{169^2}$",
+            "$169$"
           ],
           "answerIndex": 0,
           "solution": "Yang diketahui adalah $c^2$, sedangkan yang ditanya $c$. Jadi akarkan:\n$$c = \\sqrt{169} = 13$$\n\nMenjawab 169 berarti berhenti satu langkah sebelum selesai — kesalahan yang mudah terjadi kalau hasil antara terlihat seperti angka bulat yang rapi.",
@@ -242,9 +242,9 @@
           "prompt": "Sebuah tangga sepanjang 5 m bersandar di dinding, dengan kaki tangga 3 m dari dinding. Tinggi ujung tangga pada dinding adalah ...",
           "options": [
             "$4$ m",
-            "$8$ m",
+            "$2$ m",
             "$\\sqrt{34}$ m",
-            "$2$ m"
+            "$8$ m"
           ],
           "answerIndex": 0,
           "solution": "Tangga adalah sisi miring karena ia yang bersandar miring; dinding dan lantai membentuk sudut siku-siku.\n\n$$t^2 = 5^2 - 3^2 = 25 - 9 = 16$$\n$$t = 4 \\text{ m}$$\n\nIni tripel $(3,4,5)$.\n\nPilihan $\\sqrt{34}$ muncul dari menjumlahkan $25 + 9$, yaitu keliru menempatkan tangga sebagai sisi tegak.",

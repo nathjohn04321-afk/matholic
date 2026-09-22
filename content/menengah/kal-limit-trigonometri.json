@@ -42,12 +42,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\sin 2x}{5x}$ adalah ...",
           "options": [
-            "$\\frac{2}{5}$",
-            "$\\frac{5}{2}$",
             "$1$",
-            "$0$"
+            "$0$",
+            "$\\frac{5}{2}$",
+            "$\\frac{2}{5}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai pola $\\lim_{x\\to 0}\\frac{\\sin ax}{bx} = \\frac{a}{b}$ dengan $a=2$ dan $b=5$:\n$$\\frac{2}{5}$$\n\nCara panjangnya:\n$$\\frac{\\sin 2x}{5x} = \\frac{2}{5} \\cdot \\frac{\\sin 2x}{2x} \\to \\frac{2}{5} \\times 1 = \\frac{2}{5}$$",
           "hint": "Perbandingan koefisien di dalam sinus dan di penyebut.",
           "tags": [
@@ -75,8 +75,8 @@
           "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\tan 4x}{3x}$ adalah ...",
           "options": [
             "$\\frac{4}{3}$",
-            "$\\frac{3}{4}$",
             "$1$",
+            "$\\frac{3}{4}$",
             "$12$"
           ],
           "answerIndex": 0,
@@ -94,8 +94,8 @@
           "options": [
             "$\\frac{1}{2}$",
             "$1$",
-            "$0$",
-            "$2$"
+            "$2$",
+            "$0$"
           ],
           "answerIndex": 0,
           "solution": "Ini pola khusus untuk bentuk kosinus:\n$$\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2} = \\frac{1}{2}$$\n\nBisa diturunkan dengan mengalikan sekawan $1+\\cos x$:\n$$\\frac{1-\\cos^2 x}{x^2(1+\\cos x)} = \\frac{\\sin^2 x}{x^2(1+\\cos x)}$$\n$$= \\left(\\frac{\\sin x}{x}\\right)^2 \\cdot \\frac{1}{1+\\cos x} \\to 1 \\times \\frac{1}{2} = \\frac{1}{2}$$\n\nPenyebutnya berpangkat dua justru karena hal ini.",
@@ -124,12 +124,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to 0} \\frac{x}{\\sin 2x}$ adalah ...",
           "options": [
-            "$\\frac{1}{2}$",
-            "$2$",
             "$1$",
-            "$0$"
+            "$\\frac{1}{2}$",
+            "$0$",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Bentuk terbalik tetap mengikuti pola yang sama:\n$$\\lim_{x\\to 0}\\frac{ax}{\\sin bx} = \\frac{a}{b}$$\n\nDengan $a=1$ dan $b=2$:\n$$\\frac{1}{2}$$\n\nCara panjangnya: tulis sebagai $\\frac{1}{2} \\cdot \\frac{2x}{\\sin 2x}$, dan faktor kedua menuju 1.",
           "hint": "Pola yang sama berlaku untuk bentuk terbalik.",
           "tags": [
@@ -142,12 +142,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to 2} \\frac{\\sin x}{x}$ adalah ...",
           "options": [
-            "$\\frac{\\sin 2}{2}$",
             "$1$",
-            "$0$",
-            "tidak ada"
+            "tidak ada",
+            "$\\frac{\\sin 2}{2}$",
+            "$0$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Perhatikan $x \\to 2$, bukan $x \\to 0$. Limit istimewa tidak berlaku di sini.\n\nSubstitusikan langsung:\n$$\\frac{\\sin 2}{2}$$\n\nPenyebutnya tidak nol, jadi tidak ada bentuk tak tentu sama sekali — tidak perlu diolah.\n\nMenjawab 1 adalah kesalahan menerapkan limit istimewa di luar syaratnya.",
           "hint": "Perhatikan $x$ menuju berapa.",
           "tags": [
@@ -223,9 +223,9 @@
           "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\sin 5x}{x}$ adalah ...",
           "options": [
             "$5$",
-            "$1$",
+            "$0$",
             "$\\frac{1}{5}$",
-            "$0$"
+            "$1$"
           ],
           "answerIndex": 0,
           "solution": "Bentuknya belum cocok — isi sinus adalah $5x$ sedangkan penyebutnya $x$.\n\nSamakan dulu:\n$$\\frac{\\sin 5x}{x} = 5 \\cdot \\frac{\\sin 5x}{5x}$$\n\nFaktor kedua menuju 1, jadi:\n$$\\to 5 \\times 1 = 5$$\n\nMenjawab 1 berarti memakai limit istimewa tanpa menyesuaikan koefisiennya.",
@@ -241,9 +241,9 @@
           "prompt": "Syarat berlakunya $\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1$ adalah sudutnya dinyatakan dalam ...",
           "options": [
             "radian",
-            "derajat",
+            "gradian",
             "putaran",
-            "gradian"
+            "derajat"
           ],
           "answerIndex": 0,
           "solution": "Limit istimewa ini diturunkan dari perbandingan panjang busur dan tinggi tegak pada lingkaran satuan.\n\nPanjang busur sama dengan besar sudut **hanya jika** sudutnya diukur dalam radian — itulah definisi radian.\n\nDalam derajat, perbandingannya menjadi $\\frac{\\pi}{180}$, bukan 1.\n\nKarena itu semua soal limit trigonometri di kalkulus memakai radian.",

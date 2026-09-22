@@ -72,12 +72,12 @@
           "format": "pilihan-ganda",
           "prompt": "Teorema Menelaus dipakai untuk membuktikan bahwa ...",
           "options": [
-            "tiga titik terletak pada satu garis",
+            "empat titik terletak pada satu lingkaran",
             "tiga garis berpotongan di satu titik",
             "sebuah segitiga sama kaki",
-            "empat titik terletak pada satu lingkaran"
+            "tiga titik terletak pada satu garis"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Menelaus adalah teorema tentang **kolinearitas**, yaitu apakah tiga titik terletak pada satu garis.\n\nBandingkan dengan kembarannya:\n\n- **Ceva** → konkurensi, yaitu tiga garis berpotongan di satu titik\n- **Menelaus** → kolinearitas, yaitu tiga titik segaris\n\nBentuk rumusnya hampir identik, jadi yang menentukan pilihan bukan bentuknya melainkan pertanyaan soalnya.\n\nCara mengingat: **M**enelaus untuk **garis** yang me**M**otong, Ceva untuk **C**evian yang berpotongan.",
           "hint": "Apakah soal bertanya tentang tiga garis atau tiga titik?",
           "tags": [
@@ -90,12 +90,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah garis memotong segitiga $ABC$ sehingga $\\frac{AF}{FB} = \\frac{3}{2}$ dan $\\frac{BD}{DC} = \\frac{4}{5}$. Agar ketiga titiknya segaris, nilai $\\frac{CE}{EA}$ adalah ...",
           "options": [
-            "$\\frac{5}{6}$",
             "$\\frac{6}{5}$",
+            "$\\frac{5}{6}$",
             "$\\frac{5}{12}$",
             "$\\frac{12}{5}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Menurut Menelaus (dengan panjang tak berarah), hasil kali ketiganya harus $1$:\n\n$$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$$\n\n$$\\frac{3}{2} \\cdot \\frac{4}{5} \\cdot \\frac{CE}{EA} = 1$$\n\nSederhanakan dua faktor pertama:\n$$\\frac{3}{2} \\cdot \\frac{4}{5} = \\frac{12}{10} = \\frac{6}{5}$$\n\n$$\\frac{6}{5} \\cdot \\frac{CE}{EA} = 1 \\Rightarrow \\frac{CE}{EA} = \\frac{5}{6}$$\n\nCek: $\\frac{3}{2} \\times \\frac{4}{5} \\times \\frac{5}{6} = \\frac{60}{60} = 1$ ✓",
           "hint": "Hasil kali ketiganya bernilai $1$; cari faktor yang melengkapinya.",
           "tags": [
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah soal meminta pembuktian bahwa ketiga garis tinggi segitiga berpotongan di satu titik. Teorema yang tepat adalah ...",
           "options": [
-            "Ceva",
-            "Menelaus",
             "kuasa titik",
+            "Menelaus",
+            "Ceva",
             "teorema sisa"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Garis tinggi adalah cevian: masing-masing melalui satu titik sudut dan memotong sisi seberangnya.\n\nYang ditanyakan adalah apakah ketiganya bertemu di satu titik — yaitu **konkurensi**. Itu persis yang diputuskan teorema Ceva.\n\nMenelaus tidak cocok karena ia tentang tiga titik yang segaris, bukan tiga garis yang bertemu.\n\nTitik potong ketiga garis tinggi disebut titik tinggi segitiga. Bersama titik berat dan pusat lingkaran luar, ketiganya selalu terletak pada satu garis — yang disebut garis Euler.",
           "hint": "Garis tinggi adalah cevian; apa yang ditanyakan tentang ketiganya?",
           "tags": [
@@ -170,12 +170,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada segitiga $ABC$, titik $D$ pada $BC$ dengan $\\frac{BD}{DC} = \\frac{1}{2}$, dan $E$ titik tengah $AB$. Garis $DE$ memotong perpanjangan $AC$ di $F$. Nilai $\\frac{CF}{FA}$ adalah ...",
           "options": [
-            "$2$",
             "$\\frac{1}{2}$",
-            "$1$",
-            "$\\frac{2}{3}$"
+            "$2$",
+            "$\\frac{2}{3}$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ketiga titik $D$, $E$, dan $F$ segaris, jadi pakai Menelaus pada segitiga $ABC$ dengan garis pemotong $DEF$:\n\n$$\\frac{BD}{DC} \\cdot \\frac{CF}{FA} \\cdot \\frac{AE}{EB} = 1$$\n\nKarena $E$ titik tengah $AB$, maka $AE = EB$ sehingga $\\frac{AE}{EB} = 1$.\n\n$$\\frac{1}{2} \\cdot \\frac{CF}{FA} \\cdot 1 = 1$$\n\n$$\\frac{CF}{FA} = 2$$\n\nCek: $\\frac{1}{2} \\times 2 \\times 1 = 1$ ✓\n\nPerhatikan bahwa $F$ berada di **perpanjangan** $AC$, di luar ruasnya — ciri khas konfigurasi Menelaus.",
           "hint": "Susun Menelaus pada segitiga $ABC$ dengan garis $DEF$.",
           "tags": [
@@ -188,12 +188,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada sebuah gambar, salah satu dari ketiga titik berada di perpanjangan sisi segitiga, di luar ruasnya. Ini merupakan petunjuk bahwa soalnya memakai ...",
           "options": [
-            "Menelaus",
             "Ceva",
+            "teorema Pythagoras",
             "kuasa titik",
-            "teorema Pythagoras"
+            "Menelaus"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Perhatikan perbedaan konfigurasi keduanya.\n\nPada **Ceva**, ketiga cevian berangkat dari titik sudut menuju sisi seberangnya, sehingga ketiga titiknya berada **di dalam** ruas sisi segitiga.\n\nPada **Menelaus**, sebuah garis lurus memotong ketiga sisi segitiga. Garis lurus tidak mungkin memotong ketiga sisi di dalam ruasnya sekaligus — ia selalu melewati tepat satu titik di **perpanjangan** sisi.\n\nJadi titik yang berada di luar ruas adalah ciri khas konfigurasi Menelaus, dan sering menjadi petunjuk tercepat saat kamu ragu memilih.\n\nPada panjang berarah, titik luar itulah yang menyumbang tanda negatif sehingga hasil kalinya $-1$.",
           "hint": "Bisakah sebuah garis lurus memotong ketiga sisi segitiga di dalam ruasnya sekaligus?",
           "tags": [
@@ -220,13 +220,13 @@
           "format": "pilihan-ganda",
           "prompt": "Pada teorema Ceva untuk segitiga $ABC$, susunan perbandingan yang benar adalah ...",
           "options": [
-            "$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$",
-            "$\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB}$",
+            "$\\frac{BD}{CE} \\cdot \\frac{CE}{AF} \\cdot \\frac{AF}{BD}$",
             "$\\frac{DC}{BD} \\cdot \\frac{CE}{EA} \\cdot \\frac{FB}{AF}$",
-            "$\\frac{BD}{CE} \\cdot \\frac{CE}{AF} \\cdot \\frac{AF}{BD}$"
+            "$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$",
+            "$\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB}$"
           ],
-          "answerIndex": 0,
-          "solution": "Susunannya harus berjalan melingkar mengelilingi segitiga:\n\n$$B \\to C, \\qquad C \\to A, \\qquad A \\to B$$\n\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$$\n\nPerhatikan bahwa setiap titik sudut muncul tepat dua kali — sekali di pembilang dan sekali di penyebut. Susunan itulah yang membuat seluruhnya saling menghapus saat hasil kalinya $1$.\n\nPilihan kedua membalik satu pecahan, sehingga hasilnya menjadi kebalikan dari yang benar. Pilihan terakhir tidak melibatkan titik $D$, $E$, $F$ sama sekali sehingga hasilnya selalu $1$ tanpa arti apa pun.",
+          "answerIndex": 2,
+          "solution": "Susunannya harus berjalan melingkar mengelilingi segitiga:\n\n$$B \\to C, \\qquad C \\to A, \\qquad A \\to B$$\n\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$$\n\nPerhatikan bahwa setiap titik sudut muncul tepat dua kali — sekali di pembilang dan sekali di penyebut. Susunan itulah yang membuat seluruhnya saling menghapus saat hasil kalinya $1$.\n\nPilihan yang memuat $\\frac{EA}{CE}$ membalik satu pecahan, sehingga hasilnya menjadi kebalikan dari yang benar. Pilihan yang seluruh pecahannya hanya memuat $B$, $C$, $A$ tidak melibatkan titik $D$, $E$, $F$ sama sekali sehingga hasilnya selalu $1$ tanpa arti apa pun.",
           "hint": "Telusuri titik sudutnya mengelilingi segitiga secara berurutan.",
           "tags": [
             "osn"
@@ -238,12 +238,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada segitiga $ABC$, tiga cevian memenuhi $\\frac{BD}{DC} = 2$, $\\frac{CE}{EA} = 3$, dan $\\frac{AF}{FB} = \\frac{1}{6}$. Ketiga cevian tersebut ...",
           "options": [
-            "berpotongan di satu titik",
             "tidak berpotongan di satu titik",
             "sejajar satu sama lain",
-            "berpotongan di tiga titik berbeda"
+            "berpotongan di tiga titik berbeda",
+            "berpotongan di satu titik"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung hasil kali ketiganya menurut teorema Ceva:\n\n$$2 \\times 3 \\times \\frac{1}{6} = \\frac{6}{6} = 1$$\n\nHasilnya $1$, jadi menurut arah sebaliknya teorema Ceva, ketiga cevian itu memang berpotongan di satu titik.\n\nPerhatikan bahwa kita tidak menggambar apa pun dan tidak mencari titik potongnya. Perhitungan perbandingan saja sudah cukup memutuskan.\n\nInilah kegunaan arah sebaliknya: ia mengubah pertanyaan geometri menjadi satu perkalian pecahan.",
           "hint": "Hitung hasil kali ketiga perbandingannya.",
           "tags": [

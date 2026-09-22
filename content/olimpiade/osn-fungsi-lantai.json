@@ -26,8 +26,8 @@
           "prompt": "Nilai dari $\\lfloor -3{,}5 \\rfloor$ adalah ...",
           "options": [
             "$-4$",
-            "$-3$",
             "$3$",
+            "$-3$",
             "$4$"
           ],
           "answerIndex": 0,
@@ -88,12 +88,12 @@
           "format": "pilihan-ganda",
           "prompt": "Eksponen tertinggi dari $2$ yang membagi $10!$ adalah ...",
           "options": [
-            "$8$",
-            "$5$",
             "$7$",
-            "$10$"
+            "$8$",
+            "$10$",
+            "$5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai formula Legendre dengan $n = 10$ dan $p = 2$:\n\n$$\\left\\lfloor \\frac{10}{2} \\right\\rfloor = 5$$\n$$\\left\\lfloor \\frac{10}{4} \\right\\rfloor = 2$$\n$$\\left\\lfloor \\frac{10}{8} \\right\\rfloor = 1$$\n$$\\left\\lfloor \\frac{10}{16} \\right\\rfloor = 0$$\n\n$$5 + 2 + 1 + 0 = 8$$\n\nCek manual: $2 \\to 1$, $4 \\to 2$, $6 \\to 1$, $8 \\to 3$, $10 \\to 1$ faktor $2$. Totalnya $1+2+1+3+1 = 8$. Cocok.\n\nPilihan $5$ adalah jebakan untuk yang berhenti di suku pertama.",
           "hint": "Lanjutkan sampai pembaginya melebihi $10$.",
           "tags": [
@@ -120,12 +120,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya bilangan bulat dari $1$ sampai $100$ yang habis dibagi $7$ adalah ...",
           "options": [
+            "$7$",
             "$14$",
-            "$15$",
             "$13$",
-            "$7$"
+            "$15$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Banyaknya kelipatan $7$ dari $1$ sampai $100$ adalah\n\n$$\\left\\lfloor \\frac{100}{7} \\right\\rfloor = \\lfloor 14{,}28\\ldots \\rfloor = 14$$\n\nCek: kelipatan $7$ terbesar yang tidak melebihi $100$ adalah $98 = 7 \\times 14$. Kelipatan berikutnya, $105$, sudah melewati batas.\n\nRumus $\\lfloor n/d \\rfloor$ ini persis, bukan hampiran — dan itulah kenapa fungsi lantai muncul di mana-mana dalam soal pencacahan.",
           "hint": "Kelipatan $7$ terbesar yang tidak melebihi $100$?",
           "tags": [
@@ -138,12 +138,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya bilangan bulat dari $1$ sampai $100$ yang habis dibagi $2$ atau $3$ adalah ...",
           "options": [
+            "$66$",
             "$67$",
-            "$83$",
             "$50$",
-            "$66$"
+            "$83$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai inklusi-eksklusi.\n\nKelipatan $2$: $\\left\\lfloor \\frac{100}{2} \\right\\rfloor = 50$\n\nKelipatan $3$: $\\left\\lfloor \\frac{100}{3} \\right\\rfloor = 33$\n\nKelipatan keduanya, yaitu kelipatan $6$: $\\left\\lfloor \\frac{100}{6} \\right\\rfloor = 16$\n\n$$50 + 33 - 16 = 67$$\n\nPengurangan itu wajib: bilangan seperti $6$, $12$, dan $18$ terhitung dua kali, sekali sebagai kelipatan $2$ dan sekali sebagai kelipatan $3$.\n\nPilihan $83$ adalah hasil tanpa pengurangan — selisihnya persis $16$.",
           "hint": "Jangan lupa mengurangi yang terhitung dua kali.",
           "tags": [
@@ -170,12 +170,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk $x = 0{,}7$, nilai $\\lfloor x \\rfloor + \\lfloor x + \\tfrac{1}{2} \\rfloor$ adalah ...",
           "options": [
-            "$1$",
-            "$0$",
             "$2$",
-            "$1{,}4$"
+            "$0$",
+            "$1{,}4$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung masing-masing suku.\n\n$$\\lfloor 0{,}7 \\rfloor = 0$$\n$$\\lfloor 0{,}7 + 0{,}5 \\rfloor = \\lfloor 1{,}2 \\rfloor = 1$$\n\n$$0 + 1 = 1$$\n\nCek dengan identitas $\\lfloor x \\rfloor + \\lfloor x + \\tfrac{1}{2} \\rfloor = \\lfloor 2x \\rfloor$: ruas kanannya $\\lfloor 1{,}4 \\rfloor = 1$. Cocok.\n\nPilihan $1{,}4$ bukan jawaban yang mungkin sama sekali — hasil penjumlahan dua lantai selalu bilangan bulat.",
           "hint": "Hitung kedua lantai secara terpisah.",
           "tags": [
@@ -217,12 +217,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya angka nol di akhir bilangan $50!$ adalah ...",
           "options": [
-            "$12$",
             "$10$",
             "$11$",
-            "$25$"
+            "$25$",
+            "$12$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung banyaknya faktor $5$ dengan formula Legendre:\n\n$$\\left\\lfloor \\frac{50}{5} \\right\\rfloor = 10$$\n$$\\left\\lfloor \\frac{50}{25} \\right\\rfloor = 2$$\n$$\\left\\lfloor \\frac{50}{125} \\right\\rfloor = 0$$\n\n$$10 + 2 = 12$$\n\nSuku kedua berasal dari $25$ dan $50$, yang masing-masing menyumbang dua faktor $5$.\n\nPilihan $10$ adalah hasil kalau berhenti di suku pertama.",
           "hint": "Jangan lupa kelipatan $25$ menyumbang dua faktor.",
           "tags": [
@@ -235,12 +235,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\left\\lfloor \\frac{7}{2} \\right\\rfloor + \\left\\lfloor \\frac{7}{4} \\right\\rfloor + \\left\\lfloor \\frac{7}{8} \\right\\rfloor$ adalah ...",
           "options": [
-            "$4$",
             "$5$",
+            "$7$",
             "$3$",
-            "$7$"
+            "$4$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung satu per satu:\n\n$$\\left\\lfloor \\frac{7}{2} \\right\\rfloor = \\lfloor 3{,}5 \\rfloor = 3$$\n$$\\left\\lfloor \\frac{7}{4} \\right\\rfloor = \\lfloor 1{,}75 \\rfloor = 1$$\n$$\\left\\lfloor \\frac{7}{8} \\right\\rfloor = \\lfloor 0{,}875 \\rfloor = 0$$\n\n$$3 + 1 + 0 = 4$$\n\nIni persis formula Legendre untuk $p=2$ dan $n=7$, jadi $7! = 5040$ memuat tepat empat faktor $2$. Cek: $5040 = 2^4 \\times 315$, dan $315$ memang ganjil.",
           "hint": "Bulatkan tiap pecahan ke bawah lebih dulu.",
           "tags": [

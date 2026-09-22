@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Mungkinkah terdapat $7$ orang yang masing-masing berkenalan dengan tepat $3$ orang lainnya?",
           "options": [
+            "Tidak, karena $7$ bilangan prima",
             "Tidak, karena jumlah derajatnya ganjil",
             "Ya, dengan susunan tertentu",
-            "Tidak, karena $7$ bilangan prima",
             "Ya, karena $3 < 7$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Modelkan sebagai graf: simpul adalah orang, sisi adalah hubungan kenal.\n\nKalau setiap dari $7$ orang berderajat $3$, jumlah seluruh derajatnya:\n\n$$7 \\times 3 = 21$$\n\nTapi jumlah derajat selalu sama dengan $2|E|$, yang pasti **genap**. Angka $21$ ganjil, jadi keadaan itu mustahil.\n\nPerhatikan bahwa argumennya tidak bergantung pada susunan sama sekali. Kita tidak mencoba satu pun kemungkinan — hubungan derajat sudah menutup semuanya sekaligus.",
           "hint": "Hitung jumlah seluruh derajatnya.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah graf lengkap dengan $6$ simpul (setiap dua simpul terhubung) memiliki berapa sisi?",
           "options": [
+            "$12$",
             "$15$",
             "$30$",
-            "$12$",
             "$36$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Setiap sisi menghubungkan tepat dua simpul, dan pada graf lengkap **setiap** pasangan terhubung.\n\n$$\\binom{6}{2} = \\frac{6 \\times 5}{2} = 15$$\n\nCek lewat derajat: setiap simpul terhubung ke $5$ simpul lain, jadi jumlah derajatnya $6 \\times 5 = 30$. Karena jumlah derajat sama dengan $2|E|$:\n\n$$|E| = \\frac{30}{2} = 15$$\n\nCocok dengan hitungan pertama.\n\nPilihan $30$ adalah jumlah derajatnya, bukan banyaknya sisi — keduanya berselisih faktor dua.",
           "hint": "Setiap sisi adalah satu pasangan simpul.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah pohon dengan $10$ simpul memiliki berapa sisi?",
           "options": [
-            "$9$",
-            "$10$",
             "$11$",
-            "$45$"
+            "$45$",
+            "$9$",
+            "$10$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pohon adalah graf terhubung tanpa siklus, dan sifat pentingnya:\n\n$$|E| = |V| - 1 = 10 - 1 = 9$$\n\nCara memahaminya: bayangkan membangun pohon itu satu simpul demi satu simpul. Simpul pertama berdiri sendiri tanpa sisi. Setiap simpul berikutnya harus disambungkan dengan tepat satu sisi — lebih dari satu akan menciptakan siklus, kurang dari satu akan memutusnya.\n\nJadi $9$ simpul tambahan membutuhkan tepat $9$ sisi.",
           "hint": "Setiap simpul baru butuh tepat satu sisi penghubung.",
           "tags": [
@@ -124,9 +124,9 @@
           "prompt": "Dalam membuktikan bahwa graf dengan semua simpul berderajat sedikitnya $2$ pasti memuat siklus, benda ekstrem yang dipilih adalah ...",
           "options": [
             "lintasan terpanjang",
-            "simpul berderajat terkecil",
+            "komponen terbesar",
             "sisi terpendek",
-            "komponen terbesar"
+            "simpul berderajat terkecil"
           ],
           "answerIndex": 0,
           "solution": "Ambil lintasan terpanjang, dan sebut salah satu ujungnya $v$.\n\nKarena $\\deg(v) \\geq 2$, simpul $v$ punya sedikitnya dua tetangga. Satu di antaranya adalah simpul sebelum $v$ pada lintasan itu.\n\nTetangga yang lain tidak mungkin berada di luar lintasan — kalau begitu lintasannya bisa diperpanjang, bertentangan dengan pilihan \"terpanjang\".\n\nJadi tetangga itu berada di dalam lintasan, dan sisi ke simpul itu menutup sebuah siklus.\n\nInilah pola khas prinsip ekstremal: sifat \"terpanjang\" menyingkirkan satu kemungkinan, dan sisanya langsung menjadi kesimpulan.",
@@ -142,9 +142,9 @@
           "prompt": "Dalam sebuah pesta beranggota $n \\geq 2$ orang, pasti ada dua orang yang jumlah kenalannya sama. Alat yang membuktikannya adalah ...",
           "options": [
             "sarang merpati, karena derajat $0$ dan $n-1$ tidak bisa muncul bersamaan",
-            "invarian paritas jumlah derajat",
             "prinsip ekstremal pada lintasan terpanjang",
-            "rumus $|E| = |V| - 1$ untuk pohon"
+            "rumus $|E| = |V| - 1$ untuk pohon",
+            "invarian paritas jumlah derajat"
           ],
           "answerIndex": 0,
           "solution": "Derajat setiap orang berada di antara $0$ dan $n-1$, jadi sekilas ada $n$ kemungkinan untuk $n$ orang — belum cukup untuk sarang merpati.\n\nTapi kedua nilai ujung itu **tidak bisa muncul bersamaan**. Kalau ada orang berderajat $n-1$, ia kenal semua orang, sehingga tak seorang pun bisa berderajat $0$. Sebaliknya juga begitu.\n\nJadi derajat yang benar-benar tersedia hanya $n-1$ nilai: entah $\\{0, 1, \\ldots, n-2\\}$ atau $\\{1, 2, \\ldots, n-1\\}$.\n\nSekarang ada $n$ orang dan hanya $n-1$ nilai, sehingga sarang merpati menjamin ada dua orang berderajat sama.\n\nLangkah kunci soal ini bukan sarang merpatinya, melainkan menyadari bahwa dua nilai ujungnya saling meniadakan.",
@@ -173,12 +173,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dalam bukti bahwa di antara $6$ orang pasti ada $3$ yang saling kenal atau $3$ yang saling asing, langkah pertamanya adalah ...",
           "options": [
-            "mengambil satu orang dan memperhatikan $5$ hubungannya",
             "menghitung seluruh sisi graf lengkap $6$ simpul",
-            "memakai invarian paritas",
-            "mengambil lintasan terpanjang"
+            "mengambil satu orang dan memperhatikan $5$ hubungannya",
+            "mengambil lintasan terpanjang",
+            "memakai invarian paritas"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ambil satu orang, sebut $A$. Ia punya $5$ hubungan dengan orang lain, masing-masing bernilai kenal atau asing — dua kemungkinan saja.\n\nMenurut sarang merpati, sedikitnya $\\lceil 5/2 \\rceil = 3$ hubungan bernilai sama. Anggap ketiganya \"kenal\", menuju $B$, $C$, dan $D$.\n\nDari sini soalnya menyusut menjadi pemeriksaan tiga hubungan di antara $B$, $C$, dan $D$ saja:\n\nKalau ada satu pasangan yang saling kenal, ia bersama $A$ membentuk trio saling kenal. Kalau tidak ada satu pun, ketiganya saling asing.\n\nPerhatikan bagaimana langkah pertama itu memangkas soal dari $15$ hubungan menjadi hanya $3$.",
           "hint": "Sarang merpati dipakai pada hubungan satu orang tertentu.",
           "tags": [
@@ -236,12 +236,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada sebuah graf, banyaknya simpul berderajat ganjil pasti ...",
           "options": [
-            "genap",
             "ganjil",
-            "nol",
-            "sama dengan banyaknya sisi"
+            "sama dengan banyaknya sisi",
+            "genap",
+            "nol"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Jumlah seluruh derajat sama dengan $2|E|$, jadi selalu **genap**.\n\nPisahkan jumlah itu menjadi dua kelompok:\n\n$$\\underbrace{\\sum_{\\deg \\text{ genap}}}_{\\text{genap}} + \\sum_{\\deg \\text{ ganjil}} = \\text{genap}$$\n\nKelompok pertama pasti genap karena seluruh sukunya genap. Agar totalnya genap, kelompok kedua juga wajib genap.\n\nTapi kelompok kedua adalah jumlah dari bilangan-bilangan ganjil, dan jumlah bilangan ganjil genap hanya kalau **banyaknya** genap.\n\nPilihan \"nol\" terlalu kuat: graf dengan dua simpul dan satu sisi punya tepat dua simpul berderajat ganjil.",
           "hint": "Jumlah berapa banyak bilangan ganjil yang menghasilkan bilangan genap?",
           "tags": [

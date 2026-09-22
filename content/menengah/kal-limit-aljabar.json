@@ -32,10 +32,10 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x \\to 2} (3x + 1)$ adalah ...",
           "options": [
-            "$6$",
+            "Tidak ada",
             "$7$",
-            "$1$",
-            "Tidak ada"
+            "$6$",
+            "$1$"
           ],
           "answerIndex": 1,
           "solution": "Fungsi $3x+1$ adalah polinomial, jadi tidak ada masalah di $x=2$. Substitusi langsung boleh.\n\n$3(2) + 1 = 6 + 1 = 7$",
@@ -78,10 +78,10 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil substitusi langsung pada $\\lim_{x \\to 3} \\frac{x^2-9}{x-3}$ adalah ...",
           "options": [
-            "$6$, dan itu jawabannya",
+            "$0$, dan itu jawabannya",
             "$\\frac{0}{0}$, perlu diolah dulu",
             "$\\frac{9}{0}$, menuju tak hingga",
-            "$0$, dan itu jawabannya"
+            "$6$, dan itu jawabannya"
           ],
           "answerIndex": 1,
           "solution": "Substitusikan $x = 3$:\nPembilang: $3^2 - 9 = 0$\nPenyebut: $3 - 3 = 0$\n\nJadi hasilnya $\\frac{0}{0}$ — bentuk tak tentu.\n\nIni belum jawaban. Setelah difaktorkan, $\\frac{(x-3)(x+3)}{x-3} = x+3 \\to 6$. Tapi pertanyaannya tentang hasil substitusi, bukan nilai limitnya.",
@@ -96,12 +96,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x \\to 1} \\frac{x^2 + 2x}{x + 3}$ adalah ...",
           "options": [
-            "$\\frac{3}{4}$",
             "$\\frac{1}{4}$",
-            "$0$",
-            "Tidak ada"
+            "$\\frac{3}{4}$",
+            "Tidak ada",
+            "$0$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Coba substitusi langsung $x = 1$:\nPembilang: $1 + 2 = 3$\nPenyebut: $1 + 3 = 4$\n\nHasilnya $\\frac{3}{4}$ — angka biasa, bukan bentuk tak tentu.\n\nJadi tidak perlu diolah lagi. Jawabannya $\\frac{3}{4}$.",
           "hint": "Penyebutnya tidak nol di $x=1$, jadi substitusi langsung selesai.",
           "tags": [
@@ -128,12 +128,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x \\to 2} \\frac{x^2-4}{x^2-5x+6}$ adalah ...",
           "options": [
+            "$0$",
             "$-4$",
-            "$4$",
             "$-1$",
-            "$0$"
+            "$4$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusi memberi $\\frac{0}{0}$, jadi faktorkan keduanya.\n\nPembilang: $x^2-4 = (x-2)(x+2)$\nPenyebut: $x^2-5x+6 = (x-2)(x-3)$\n\nCoret faktor $(x-2)$:\n$$\\frac{(x-2)(x+2)}{(x-2)(x-3)} = \\frac{x+2}{x-3}$$\n\nSubstitusi $x = 2$:\n$$\\frac{2+2}{2-3} = \\frac{4}{-1} = -4$$",
           "hint": "Faktorkan pembilang dan penyebut, cari faktor yang sama.",
           "tags": [
@@ -178,12 +178,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x \\to 0} \\frac{\\sqrt{x+4}-2}{x}$ adalah ...",
           "options": [
-            "$\\frac{1}{4}$",
             "$\\frac{1}{2}$",
-            "$0$",
-            "$4$"
+            "$\\frac{1}{4}$",
+            "$4$",
+            "$0$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusi memberi $\\frac{0}{0}$. Ada akar, jadi kalikan dengan sekawan $\\sqrt{x+4}+2$.\n\n$$\\frac{\\sqrt{x+4}-2}{x} \\cdot \\frac{\\sqrt{x+4}+2}{\\sqrt{x+4}+2} = \\frac{(x+4)-4}{x(\\sqrt{x+4}+2)}$$\n\nPembilang menjadi $x$:\n$$= \\frac{x}{x(\\sqrt{x+4}+2)} = \\frac{1}{\\sqrt{x+4}+2}$$\n\nSubstitusi $x = 0$:\n$$\\frac{1}{\\sqrt{4}+2} = \\frac{1}{4}$$",
           "hint": "Kalikan atas dan bawah dengan $\\sqrt{x+4}+2$.",
           "tags": [
@@ -197,12 +197,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x \\to 9} \\frac{x-9}{\\sqrt{x}-3}$ adalah ...",
           "options": [
-            "$3$",
             "$6$",
-            "$9$",
-            "$\\frac{1}{6}$"
+            "$\\frac{1}{6}$",
+            "$3$",
+            "$9$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Substitusi memberi $\\frac{0}{0}$. Kalikan dengan sekawan penyebut, yaitu $\\sqrt{x}+3$.\n\n$$\\frac{x-9}{\\sqrt{x}-3} \\cdot \\frac{\\sqrt{x}+3}{\\sqrt{x}+3} = \\frac{(x-9)(\\sqrt{x}+3)}{x-9}$$\n\nCoret $(x-9)$:\n$$= \\sqrt{x}+3$$\n\nSubstitusi $x = 9$:\n$\\sqrt{9}+3 = 3+3 = 6$",
           "hint": "Sekawannya ada di penyebut kali ini.",
           "tags": [
@@ -230,11 +230,11 @@
           "prompt": "Nilai $\\lim_{x \\to 1} \\frac{x^3-1}{x^2-1}$ adalah ...",
           "options": [
             "$\\frac{2}{3}$",
-            "$\\frac{3}{2}$",
+            "$3$",
             "$1$",
-            "$3$"
+            "$\\frac{3}{2}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Substitusi memberi $\\frac{0}{0}$, jadi faktorkan.\n\nSelisih kubus: $x^3-1 = (x-1)(x^2+x+1)$\nSelisih kuadrat: $x^2-1 = (x-1)(x+1)$\n\nCoret $(x-1)$:\n$$\\frac{x^2+x+1}{x+1}$$\n\nSubstitusi $x=1$:\n$$\\frac{1+1+1}{1+1} = \\frac{3}{2}$$",
           "hint": "Ingat rumus selisih dua kubus.",
           "tags": [
@@ -279,9 +279,9 @@
           "prompt": "Nilai $\\lim_{x \\to 2} \\frac{x+1}{x-2}$ adalah ...",
           "options": [
             "$3$",
-            "$0$",
+            "$\\frac{1}{2}$",
             "Tidak ada, nilainya membesar tanpa batas",
-            "$\\frac{1}{2}$"
+            "$0$"
           ],
           "answerIndex": 2,
           "solution": "Substitusi $x=2$:\nPembilang: $2+1 = 3$, bukan nol.\nPenyebut: $2-2 = 0$.\n\nBentuknya $\\frac{3}{0}$, bukan $\\frac{0}{0}$. Tidak ada faktor yang bisa dicoret.\n\nSaat $x$ mendekat 2, penyebutnya mengecil menuju nol sedangkan pembilangnya tetap sekitar 3. Pecahannya membesar tanpa batas.\n\nJadi limitnya tidak ada sebagai bilangan.",

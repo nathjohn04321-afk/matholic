@@ -31,12 +31,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $|3 - 7|$ adalah ...",
           "options": [
-            "$-4$",
-            "$4$",
+            "$-10$",
             "$10$",
-            "$-10$"
+            "$-4$",
+            "$4$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Hitung isi tanda mutlak dulu: $3 - 7 = -4$.\nLalu ambil nilai mutlaknya: $|-4| = 4$.\n\nCara jarak: $|3-7|$ adalah jarak antara 3 dan 7, yaitu 4.",
           "hint": "Selesaikan yang di dalam tanda mutlak lebih dulu.",
           "tags": [
@@ -49,12 +49,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $|x - 5| = 3$ adalah ...",
           "options": [
+            "$\\{2, 8\\}$",
             "$\\{2\\}$",
             "$\\{8\\}$",
-            "$\\{2, 8\\}$",
             "$\\{-2, 8\\}$"
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "solution": "Baca sebagai jarak: cari $x$ yang jaraknya 3 dari 5.\nTitik di kiri: $5 - 3 = 2$.\nTitik di kanan: $5 + 3 = 8$.\n\nCara aljabar memberi hasil sama:\n$x - 5 = 3 \\Rightarrow x = 8$\n$x - 5 = -3 \\Rightarrow x = 2$",
           "hint": "Ada dua titik yang jaraknya sama dari sebuah titik.",
           "tags": [
@@ -82,10 +82,10 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $a = -2$ dan $b = 5$, nilai $|a + b| - (|a| + |b|)$ adalah ...",
           "options": [
-            "$0$",
+            "$-10$",
             "$-4$",
             "$4$",
-            "$-10$"
+            "$0$"
           ],
           "answerIndex": 1,
           "solution": "Ruas pertama: $|a+b| = |-2+5| = |3| = 3$.\nRuas kedua: $|a| + |b| = 2 + 5 = 7$.\nSelisih: $3 - 7 = -4$.\n\nHasilnya negatif — itu memang yang dijamin ketaksamaan segitiga: $|a+b| \\le |a|+|b|$.",
@@ -127,12 +127,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya penyelesaian $|3x + 2| = -5$ adalah ...",
           "options": [
-            "$0$",
             "$1$",
+            "$0$",
             "$2$",
             "Tak hingga"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ruas kiri adalah nilai mutlak, jadi nilainya selalu $\\ge 0$.\nRuas kanan bernilai $-5$, yang negatif.\n\nTidak ada $x$ yang membuat sesuatu yang tak-negatif sama dengan $-5$. Himpunan penyelesaiannya kosong, jadi banyaknya penyelesaian adalah $0$.",
           "hint": "Periksa tanda ruas kanan sebelum mengerjakan apa pun.",
           "tags": [
@@ -196,12 +196,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $|x + 1| > 4$ adalah ...",
           "options": [
+            "$\\{x \\mid x > 3\\}$",
             "$\\{x \\mid -5 < x < 3\\}$",
             "$\\{x \\mid x < -5 \\text{ atau } x > 3\\}$",
-            "$\\{x \\mid x > 3\\}$",
             "$\\{x \\mid -3 < x < 5\\}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Bentuk \"lebih dari\" berarti terpisah, jadi pecah jadi dua:\n\n$x + 1 > 4 \\Rightarrow x > 3$\n$x + 1 < -4 \\Rightarrow x < -5$\n\nKeduanya dirangkai dengan \"atau\":\n$x < -5$ atau $x > 3$",
           "hint": "Tanda lebih dari memberi dua selang di pinggir, dihubungkan dengan \"atau\".",
           "tags": [
@@ -228,12 +228,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $|x - 1| \\le 2x$ adalah ...",
           "options": [
-            "$\\left\\{x \\mid x \\ge \\frac{1}{3}\\right\\}$",
+            "$\\left\\{x \\mid \\frac{1}{3} \\le x \\le 1\\right\\}$",
             "$\\left\\{x \\mid x \\le \\frac{1}{3}\\right\\}$",
-            "$\\{x \\mid x \\ge 1\\}$",
-            "$\\left\\{x \\mid \\frac{1}{3} \\le x \\le 1\\right\\}$"
+            "$\\left\\{x \\mid x \\ge \\frac{1}{3}\\right\\}$",
+            "$\\{x \\mid x \\ge 1\\}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pecah menurut tanda isi tanda mutlak.\n\nKasus 1: $x \\ge 1$, maka $|x-1| = x-1$.\n$x - 1 \\le 2x \\Rightarrow -1 \\le x$. Digabung syarat $x \\ge 1$, hasilnya $x \\ge 1$.\n\nKasus 2: $x < 1$, maka $|x-1| = 1-x$.\n$1 - x \\le 2x \\Rightarrow 1 \\le 3x \\Rightarrow x \\ge \\frac{1}{3}$. Digabung syarat $x < 1$, hasilnya $\\frac{1}{3} \\le x < 1$.\n\nGabungan kedua kasus: $x \\ge \\frac{1}{3}$.",
           "hint": "Ruas kanan memuat $x$ — pecah dua kasus, lalu cek tiap hasil terhadap syaratnya.",
           "tags": [
@@ -277,12 +277,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya penyelesaian $|x| = x - 3$ adalah ...",
           "options": [
+            "Tak hingga",
             "$0$",
             "$1$",
-            "$2$",
-            "Tak hingga"
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Perhatikan ruas kanan harus tak-negatif, jadi $x - 3 \\ge 0$, artinya $x \\ge 3$.\n\nUntuk $x \\ge 3$ pasti $x$ positif, sehingga $|x| = x$.\nPersamaannya jadi $x = x - 3$, yaitu $0 = -3$. Mustahil.\n\nJadi tidak ada penyelesaian. Banyaknya $0$.\n\nKalau langsung dikuadratkan, kamu akan dapat $x = \\frac{9}{6}$ — akar palsu, karena nilai itu melanggar syarat $x \\ge 3$.",
           "hint": "Periksa syarat ruas kanan lebih dulu, jangan langsung dikuadratkan.",
           "tags": [

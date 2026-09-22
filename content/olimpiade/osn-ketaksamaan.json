@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai minimum dari $x + \\frac{1}{x}$ untuk $x > 0$ adalah ...",
           "options": [
-            "$2$",
-            "$1$",
             "$0$",
-            "tidak ada"
+            "$1$",
+            "tidak ada",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai AM-GM pada kedua suku:\n\n$$\\frac{x + \\frac{1}{x}}{2} \\geq \\sqrt{x \\cdot \\frac{1}{x}} = \\sqrt{1} = 1$$\n\n$$x + \\frac{1}{x} \\geq 2$$\n\nKesamaan tercapai ketika $x = \\frac{1}{x}$, yaitu $x = 1$ (nilai $x = -1$ tidak dipakai karena disyaratkan $x > 0$).\n\nCek: pada $x=1$ nilainya $1 + 1 = 2$ ✓\n\nPerhatikan bahwa syarat $x > 0$ bukan hiasan. Untuk $x < 0$ nilai $x + \\frac{1}{x}$ justru bisa serendah $-2$.",
           "hint": "Kalikan kedua suku — hasilnya bilangan tetap.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai minimum dari $2x + \\frac{8}{x}$ untuk $x > 0$ adalah ...",
           "options": [
+            "$16$",
             "$8$",
             "$4$",
-            "$16$",
             "$10$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai AM-GM pada kedua suku. Hasil kalinya adalah bilangan tetap, dan itulah yang membuat teknik ini bekerja:\n\n$$2x \\cdot \\frac{8}{x} = 16$$\n\n$$\\frac{2x + \\frac{8}{x}}{2} \\geq \\sqrt{16} = 4$$\n\n$$2x + \\frac{8}{x} \\geq 8$$\n\nKesamaan tercapai ketika $2x = \\frac{8}{x}$, yaitu $x^2 = 4$, sehingga $x = 2$.\n\nCek: $2(2) + \\frac{8}{2} = 4 + 4 = 8$ ✓\n\nKunci pemakaian AM-GM adalah memecah bentuknya sehingga hasil kali sukunya menjadi bilangan tetap. Kalau hasil kalinya masih memuat $x$, batas bawahnya tidak berarti apa-apa.",
           "hint": "Periksa dulu apakah hasil kali kedua sukunya bilangan tetap.",
           "tags": [
@@ -76,9 +76,9 @@
           "prompt": "Jika $x + y = 10$ dengan $x, y > 0$, nilai maksimum dari $xy$ adalah ...",
           "options": [
             "$25$",
-            "$50$",
+            "$20$",
             "$100$",
-            "$20$"
+            "$50$"
           ],
           "answerIndex": 0,
           "solution": "Jumlahnya tetap, jadi pakai AM-GM untuk membatasi hasil kalinya:\n\n$$\\sqrt{xy} \\leq \\frac{x+y}{2} = \\frac{10}{2} = 5$$\n\n$$xy \\leq 25$$\n\nKesamaan tercapai ketika $x = y$, dan bersama $x+y = 10$ ini memberi $x = y = 5$.\n\nCek: $5 \\times 5 = 25$ ✓. Bandingkan dengan pilihan lain seperti $x=2, y=8$ yang memberi $16$ — memang lebih kecil.\n\nHasil ini punya tafsiran geometris: di antara semua persegi panjang berkeliling tetap, yang luasnya terbesar adalah persegi.",
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dengan $x = 3$ dan $y = 4$, perbandingan antara $2(x^2+y^2)$ dan $(x+y)^2$ adalah ...",
           "options": [
-            "$2(x^2+y^2) > (x+y)^2$",
             "$2(x^2+y^2) < (x+y)^2$",
+            "$2(x^2+y^2) > (x+y)^2$",
             "keduanya sama",
             "bergantung tandanya"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Hitung keduanya:\n\n$$2(x^2+y^2) = 2(9+16) = 50$$\n$$(x+y)^2 = 7^2 = 49$$\n\nJadi $50 > 49$.\n\nIni kasus khusus Cauchy-Schwarz dengan $(1^2+1^2)(x^2+y^2) \\geq (x+y)^2$.\n\nKesamaan hanya tercapai ketika $\\frac{1}{x} = \\frac{1}{y}$, yaitu $x = y$. Di sini $3 \\neq 4$, jadi ketaksamaannya tegas — dan selisih $1$ itu justru mengukur seberapa jauh $x$ dan $y$ berbeda.",
           "hint": "Hitung saja keduanya, lalu bandingkan.",
           "tags": [
@@ -170,12 +170,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk $a, b > 0$, ketaksamaan $\\frac{a^2}{b} + \\frac{b^2}{a} \\geq a + b$ mencapai kesamaan ketika ...",
           "options": [
-            "$a = b$",
-            "$a = 2b$",
+            "$a + b = 1$",
             "$ab = 1$",
-            "$a + b = 1$"
+            "$a = 2b$",
+            "$a = b$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai bentuk Engel:\n\n$$\\frac{a^2}{b} + \\frac{b^2}{a} \\geq \\frac{(a+b)^2}{a+b} = a+b$$\n\nKesamaan pada bentuk Engel tercapai ketika barisan pembilang dan penyebutnya sebanding, yaitu\n\n$$\\frac{a}{b} = \\frac{b}{a} \\Rightarrow a^2 = b^2 \\Rightarrow a = b$$\n\n(nilai $a = -b$ tidak dipakai karena keduanya positif).\n\nCek dengan $a = b = 3$: ruas kiri $3 + 3 = 6$, ruas kanan $3 + 3 = 6$ ✓\n\nCek dengan $a=1, b=2$: ruas kiri $\\frac{1}{2} + 4 = 4{,}5$, ruas kanan $3$ — memang lebih besar.",
           "hint": "Kesamaan Engel menuntut pembilang dan penyebut sebanding.",
           "tags": [
@@ -188,12 +188,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk soal yang memuat bentuk $\\frac{x^2}{y} + \\frac{y^2}{z} + \\frac{z^2}{x}$, ketaksamaan yang paling langsung dipakai adalah ...",
           "options": [
-            "bentuk Engel dari Cauchy-Schwarz",
             "AM-GM dua suku",
+            "bentuk Engel dari Cauchy-Schwarz",
             "ketaksamaan segitiga",
             "AM-GM tiga suku"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Bentuk Engel dirancang persis untuk penjumlahan pecahan berpembilang kuadrat:\n\n$$\\frac{x_1^2}{y_1} + \\frac{x_2^2}{y_2} + \\cdots \\geq \\frac{(x_1+x_2+\\cdots)^2}{y_1+y_2+\\cdots}$$\n\nDiterapkan pada soal ini:\n\n$$\\frac{x^2}{y} + \\frac{y^2}{z} + \\frac{z^2}{x} \\geq \\frac{(x+y+z)^2}{x+y+z} = x+y+z$$\n\nSatu langkah, dan batasnya langsung tajam — kesamaannya tercapai di $x = y = z$.\n\nAM-GM juga bisa dipakai di sini, tapi memerlukan pemecahan suku yang lebih berbelit. Pedomannya: begitu kamu melihat kuadrat dibagi sesuatu, Engel hampir selalu jalan terpendek.",
           "hint": "Bentuk apa yang cocok untuk kuadrat dibagi sesuatu?",
           "tags": [
@@ -220,12 +220,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai minimum dari $x + \\frac{4}{x}$ untuk $x > 0$ adalah ...",
           "options": [
-            "$4$",
-            "$2$",
             "$5$",
-            "$8$"
+            "$8$",
+            "$4$",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Hasil kali kedua sukunya tetap:\n$$x \\cdot \\frac{4}{x} = 4$$\n\nPakai AM-GM:\n$$\\frac{x + \\frac{4}{x}}{2} \\geq \\sqrt{4} = 2 \\Rightarrow x + \\frac{4}{x} \\geq 4$$\n\nKesamaan tercapai ketika $x = \\frac{4}{x}$, yaitu $x^2 = 4$, sehingga $x = 2$.\n\nCek: $2 + \\frac{4}{2} = 2 + 2 = 4$ ✓\n\nPola umumnya: minimum $x + \\frac{k}{x}$ untuk $x>0$ adalah $2\\sqrt{k}$, tercapai di $x = \\sqrt{k}$.",
           "hint": "Batas bawahnya adalah $2\\sqrt{\\text{hasil kali}}$.",
           "tags": [
@@ -238,12 +238,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah soal meminta nilai minimum $x + \\frac{9}{x}$ dengan syarat tambahan $0 < x \\leq 2$. Nilai minimumnya adalah ...",
           "options": [
-            "$6{,}5$",
             "$6$",
             "$4{,}5$",
+            "$6{,}5$",
             "$3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "AM-GM memberi $x + \\frac{9}{x} \\geq 2\\sqrt{9} = 6$, tercapai di $x = 3$.\n\nTapi $x = 3$ **melanggar** syarat $x \\leq 2$, jadi batas $6$ itu tidak pernah tercapai.\n\nPerhatikan bahwa fungsi $x + \\frac{9}{x}$ menurun pada $0 < x < 3$. Karena seluruh daerah yang diizinkan berada di sebelah kiri $x=3$, nilai terkecilnya berada di ujung kanan, yaitu $x = 2$:\n\n$$2 + \\frac{9}{2} = 2 + 4{,}5 = 6{,}5$$\n\nInilah alasan syarat kesamaan wajib diperiksa terhadap batasan soal. Menjawab $6$ di sini adalah kesalahan yang sangat mudah terjadi.",
           "hint": "Periksa apakah titik kesamaan AM-GM memenuhi batasan soalnya.",
           "tags": [

@@ -29,12 +29,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pernyataan yang benar untuk $17$ dibagi $5$ adalah ...",
           "options": [
-            "$17 \\equiv 2 \\pmod 5$",
             "$17 \\equiv 3 \\pmod 5$",
+            "$17 \\equiv 0 \\pmod 5$",
             "$17 \\equiv 5 \\pmod 2$",
-            "$17 \\equiv 0 \\pmod 5$"
+            "$17 \\equiv 2 \\pmod 5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "$17 = 3 \\times 5 + 2$, jadi sisanya $2$.\n\nPeriksa lewat definisi: $17 - 2 = 15$, dan $5 \\mid 15$. Benar.\n\nJadi $17 \\equiv 2 \\pmod 5$.",
           "hint": "Bagi 17 dengan 5, lihat sisanya.",
           "tags": [
@@ -77,12 +77,12 @@
           "format": "pilihan-ganda",
           "prompt": "Agar bilangan empat angka $\\overline{3a41}$ habis dibagi 9, nilai $a$ adalah ...",
           "options": [
-            "$0$",
             "$1$",
+            "$9$",
             "$5$",
-            "$9$"
+            "$0$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Bilangan habis dibagi 9 bila jumlah angkanya habis dibagi 9.\n\nJumlah angkanya: $3 + a + 4 + 1 = 8 + a$.\n\nCari $a$ berupa satu angka yang membuat $8+a$ kelipatan 9:\n$8 + a = 9 \\Rightarrow a = 1$\n$8 + a = 18 \\Rightarrow a = 10$, bukan satu angka\n\nJadi $a = 1$, dan bilangannya $3141$.\n\nPeriksa: $3+1+4+1 = 9$, habis dibagi 9. Benar.",
           "hint": "Jumlahkan semua angkanya, lalu cari kelipatan 9 terdekat.",
           "tags": [
@@ -141,12 +141,12 @@
           "format": "pilihan-ganda",
           "prompt": "Angka satuan dari $7^{2024}$ adalah ...",
           "options": [
-            "$1$",
+            "$9$",
             "$3$",
             "$7$",
-            "$9$"
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Cari siklus pangkat 7 modulo 10:\n$7^1 \\equiv 7$, $7^2 \\equiv 9$, $7^3 \\equiv 3$, $7^4 \\equiv 1 \\pmod{10}$\n\nSiklusnya panjang 4: $7, 9, 3, 1$.\n\nCari posisi 2024:\n$2024 = 4 \\times 506 + 0$\n\nSisanya **nol**, yang berarti posisi terakhir siklus — bukan yang pertama. Suku terakhir adalah $1$.\n\nJadi angka satuannya $1$.",
           "hint": "Sisa nol menunjuk ke suku terakhir siklus.",
           "tags": [
@@ -173,12 +173,12 @@
           "format": "pilihan-ganda",
           "prompt": "Manakah yang TIDAK mungkin menjadi kuadrat sempurna?",
           "options": [
-            "$n$ dengan $n \\equiv 0 \\pmod 4$",
-            "$n$ dengan $n \\equiv 1 \\pmod 4$",
+            "Semua mungkin",
             "$n$ dengan $n \\equiv 3 \\pmod 4$",
-            "Semua mungkin"
+            "$n$ dengan $n \\equiv 1 \\pmod 4$",
+            "$n$ dengan $n \\equiv 0 \\pmod 4$"
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "solution": "Periksa semua kemungkinan bilangan bulat.\n\nKalau $n$ genap, $n = 2k$:\n$n^2 = 4k^2 \\equiv 0 \\pmod 4$\n\nKalau $n$ ganjil, $n = 2k+1$:\n$n^2 = 4k^2 + 4k + 1 \\equiv 1 \\pmod 4$\n\nJadi kuadrat sempurna hanya bisa bersisa $0$ atau $1$ modulo 4.\n\nBersisa $3$ mustahil.",
           "hint": "Pecah menurut genap dan ganjil, lalu kuadratkan.",
           "tags": [
@@ -191,13 +191,13 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil kali dua bilangan bulat berurutan $n(n+1)$ selalu ...",
           "options": [
-            "ganjil",
             "genap",
+            "kuadrat sempurna",
             "kelipatan 3",
-            "kuadrat sempurna"
+            "ganjil"
           ],
-          "answerIndex": 1,
-          "solution": "Dari dua bilangan berurutan, salah satunya pasti genap — tidak ada dua ganjil yang berurutan.\n\nHasil kali yang memuat faktor genap pasti genap.\n\nJadi $n(n+1)$ selalu genap.\n\nPeriksa pilihan lain:\n$2 \\times 3 = 6$ kelipatan 3, tapi $3 \\times 4 = 12$... juga kelipatan 3. Namun $1 \\times 2 = 2$ bukan kelipatan 3, jadi pilihan itu gugur.\n$1 \\times 2 = 2$ bukan kuadrat sempurna, jadi pilihan terakhir juga gugur.",
+          "answerIndex": 0,
+          "solution": "Dari dua bilangan berurutan, salah satunya pasti genap — tidak ada dua ganjil yang berurutan.\n\nHasil kali yang memuat faktor genap pasti genap.\n\nJadi $n(n+1)$ selalu genap.\n\nPeriksa pilihan lain:\n$2 \\times 3 = 6$ kelipatan 3, tapi $3 \\times 4 = 12$... juga kelipatan 3. Namun $1 \\times 2 = 2$ bukan kelipatan 3, jadi pilihan itu gugur.\n$1 \\times 2 = 2$ bukan kuadrat sempurna, jadi pilihan \"kuadrat sempurna\" juga gugur.",
           "hint": "Di antara dua bilangan berurutan, ada berapa yang genap?",
           "tags": [
             "osn"
@@ -239,12 +239,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $\\gcd(a,b) = 6$ dan $a \\times b = 216$, maka KPK$(a,b)$ adalah ...",
           "options": [
-            "$36$",
-            "$6$",
+            "$1296$",
             "$216$",
-            "$1296$"
+            "$36$",
+            "$6$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai hubungan untuk dua bilangan:\n$$\\gcd(a,b) \\times \\text{KPK}(a,b) = a \\times b$$\n\nSubstitusikan yang diketahui:\n$6 \\times \\text{KPK} = 216$\n$\\text{KPK} = 36$\n\nPeriksa masuk akal: KPK harus kelipatan FPB, dan $36 = 6 \\times 6$. Cocok.",
           "hint": "Ada satu rumus yang menghubungkan FPB, KPK, dan hasil kali.",
           "tags": [

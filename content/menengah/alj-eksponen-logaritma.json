@@ -33,11 +33,11 @@
           "prompt": "Nilai dari ${}^3\\log 81$ adalah ...",
           "options": [
             "$3$",
-            "$4$",
             "$27$",
-            "$9$"
+            "$9$",
+            "$4$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Tanyakan: 3 dipangkatkan berapa supaya jadi 81?\n$3^1 = 3$\n$3^2 = 9$\n$3^3 = 27$\n$3^4 = 81$\n\nJadi ${}^3\\log 81 = 4$.",
           "hint": "Daftarkan pangkat-pangkat 3 sampai kamu menemukan 81.",
           "tags": [
@@ -50,12 +50,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika ${}^2\\log x = 5$, maka $x$ sama dengan ...",
           "options": [
-            "$10$",
-            "$25$",
+            "$7$",
             "$32$",
-            "$7$"
+            "$25$",
+            "$10$"
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "solution": "Ubah ke bentuk pangkat memakai ${}^a\\log b = c \\iff a^c = b$:\n${}^2\\log x = 5$ berarti $2^5 = x$.\n\n$2^5 = 32$, jadi $x = 32$.",
           "hint": "Kembalikan ke bentuk pangkat.",
           "tags": [
@@ -83,12 +83,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari ${}^2\\log 8 + {}^2\\log 4$ adalah ...",
           "options": [
-            "$5$",
             "$6$",
+            "$12$",
             "$32$",
-            "$12$"
+            "$5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Cara pertama, hitung satu-satu:\n${}^2\\log 8 = 3$ karena $2^3 = 8$\n${}^2\\log 4 = 2$ karena $2^2 = 4$\nJumlahnya $3 + 2 = 5$.\n\nCara kedua, pakai sifat penjumlahan:\n${}^2\\log 8 + {}^2\\log 4 = {}^2\\log 32 = 5$ karena $2^5 = 32$.",
           "hint": "Penjumlahan dua log berbasis sama jadi log dari hasil kali.",
           "tags": [
@@ -129,12 +129,12 @@
           "format": "pilihan-ganda",
           "prompt": "Penyelesaian dari $9^{x} = 27$ adalah ...",
           "options": [
+            "$x = 3$",
             "$x = \\frac{2}{3}$",
             "$x = \\frac{3}{2}$",
-            "$x = 3$",
             "$x = 2$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Samakan basis ke 3.\n$9 = 3^2$ dan $27 = 3^3$.\n\n$(3^2)^x = 3^3$\n$3^{2x} = 3^3$\n\nBasis sama, jadi pangkatnya disamakan:\n$2x = 3$\n$x = \\frac{3}{2}$",
           "hint": "Tulis 9 dan 27 sebagai pangkat dari 3.",
           "tags": [
@@ -147,12 +147,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $2^{2x} - 5 \\cdot 2^{x} + 4 = 0$ adalah ...",
           "options": [
-            "$\\{0, 2\\}$",
-            "$\\{1, 4\\}$",
             "$\\{0, 1\\}$",
-            "$\\{2, 4\\}$"
+            "$\\{2, 4\\}$",
+            "$\\{1, 4\\}$",
+            "$\\{0, 2\\}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Perhatikan $2^{2x} = (2^x)^2$. Misalkan $y = 2^x$ dengan syarat $y > 0$.\n\nPersamaannya jadi kuadrat biasa:\n$y^2 - 5y + 4 = 0$\n$(y-1)(y-4) = 0$\n$y = 1$ atau $y = 4$\n\nKembalikan ke $x$:\n$2^x = 1 \\Rightarrow x = 0$\n$2^x = 4 \\Rightarrow x = 2$\n\nHimpunan penyelesaian $\\{0, 2\\}$.\n\nPerhatikan jawabannya adalah nilai $x$, bukan nilai $y$ — itu sebabnya $\\{1,4\\}$ salah.",
           "hint": "Misalkan $y = 2^x$ supaya bentuknya jadi persamaan kuadrat.",
           "tags": [
@@ -197,12 +197,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $x$ yang memenuhi ${}^3\\log(2x - 1) = 2$ adalah ...",
           "options": [
-            "$x = 5$",
             "$x = 4$",
-            "$x = \\frac{7}{2}$",
-            "$x = 3$"
+            "$x = 5$",
+            "$x = 3$",
+            "$x = \\frac{7}{2}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Syarat: $2x - 1 > 0$, jadi $x > \\frac{1}{2}$.\n\nUbah ke bentuk pangkat:\n$2x - 1 = 3^2 = 9$\n$2x = 10$\n$x = 5$\n\nPeriksa syarat: $5 > \\frac{1}{2}$, memenuhi. Jawaban $x = 5$.",
           "hint": "Ubah ke bentuk pangkat, lalu cek syarat numerusnya.",
           "tags": [
@@ -229,12 +229,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari ${}^2\\log 3 \\cdot {}^3\\log 4 \\cdot {}^4\\log 8$ adalah ...",
           "options": [
-            "$2$",
-            "$3$",
             "$8$",
-            "$6$"
+            "$6$",
+            "$3$",
+            "$2$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Pakai sifat rantai ${}^a\\log b \\cdot {}^b\\log c = {}^a\\log c$ berturut-turut.\n\n${}^2\\log 3 \\cdot {}^3\\log 4 = {}^2\\log 4$\n${}^2\\log 4 \\cdot {}^4\\log 8 = {}^2\\log 8$\n\n${}^2\\log 8 = 3$ karena $2^3 = 8$.",
           "hint": "Basis dan numerus yang bertemu saling mencoret.",
           "tags": [
@@ -279,12 +279,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian ${}^{\\frac{1}{2}}\\log x > 2$ adalah ...",
           "options": [
-            "$\\{x \\mid x > 4\\}$",
             "$\\left\\{x \\mid 0 < x < \\frac{1}{4}\\right\\}$",
+            "$\\{x \\mid x > 4\\}$",
             "$\\left\\{x \\mid x > \\frac{1}{4}\\right\\}$",
             "$\\{x \\mid 0 < x < 4\\}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Syarat numerus: $x > 0$.\n\nBasisnya $\\frac{1}{2}$, yang berada di antara 0 dan 1. Fungsinya turun, jadi arah tanda **dibalik** saat dilepas:\n\n${}^{\\frac{1}{2}}\\log x > 2$\n$x < \\left(\\frac{1}{2}\\right)^2$\n$x < \\frac{1}{4}$\n\nGabung dengan syarat $x > 0$:\n$0 < x < \\frac{1}{4}$",
           "hint": "Periksa basisnya dulu. Basis antara 0 dan 1 membalik arah tanda.",
           "tags": [

@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{2x^2+3x-1}{x^2-5}$ adalah ...",
           "options": [
-            "$2$",
-            "$0$",
             "$\\infty$",
-            "$-\\frac{1}{5}$"
+            "$0$",
+            "$-\\frac{1}{5}$",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pangkat tertinggi di atas dan di bawah sama, yaitu $x^2$.\n\nJadi hasilnya perbandingan koefisiennya:\n$$\\frac{2}{1} = 2$$\n\nCara panjangnya: bagi setiap suku dengan $x^2$.\n$$\\frac{2 + \\frac{3}{x} - \\frac{1}{x^2}}{1 - \\frac{5}{x^2}}$$\nSaat $x \\to \\infty$, semua pecahan menuju nol, tersisa $\\frac{2}{1} = 2$.",
           "hint": "Bandingkan koefisien pangkat tertingginya.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{3x+2}{x^2+1}$ adalah ...",
           "options": [
-            "$0$",
             "$3$",
+            "$2$",
             "$\\infty$",
-            "$2$"
+            "$0$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pangkat tertinggi pembilang adalah 1, penyebut adalah 2. Penyebut tumbuh jauh lebih cepat.\n\nBagi semuanya dengan $x^2$:\n$$\\frac{\\frac{3}{x} + \\frac{2}{x^2}}{1 + \\frac{1}{x^2}}$$\n\nSaat $x \\to \\infty$, pembilangnya menuju nol sedangkan penyebutnya menuju 1:\n$$\\frac{0}{1} = 0$$\n\nMasuk akal: penyebut yang membesar jauh lebih cepat membuat pecahannya mengecil menuju nol.",
           "hint": "Mana yang tumbuh lebih cepat, pembilang atau penyebutnya?",
           "tags": [
@@ -91,12 +91,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+4x} - \\sqrt{x^2+2x}\\right)$ adalah ...",
           "options": [
-            "$1$",
             "$2$",
             "$0$",
-            "$\\infty$"
+            "$\\infty$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Koefisien $x^2$ pada keduanya sama, yaitu $a = 1$. Pakai jalan pintas:\n$$\\frac{b-p}{2\\sqrt{a}} = \\frac{4-2}{2\\sqrt{1}} = \\frac{2}{2} = 1$$\n\nCara panjangnya lewat sekawan memberi hasil sama:\n$$\\frac{(x^2+4x)-(x^2+2x)}{\\sqrt{x^2+4x}+\\sqrt{x^2+2x}} = \\frac{2x}{\\ldots} \\to \\frac{2}{2} = 1$$\n\nMenjawab nol adalah kesalahan umum — kedua akar memang sama-sama membesar, tapi selisihnya tetap menuju 1.",
           "hint": "Koefisien $x^2$-nya sama — ada jalan pintas.",
           "tags": [
@@ -124,8 +124,8 @@
           "prompt": "Saat $x \\to \\infty$, nilai $\\frac{7}{x^3}$ menuju ...",
           "options": [
             "$0$",
-            "$7$",
             "$\\infty$",
+            "$7$",
             "$3$"
           ],
           "answerIndex": 0,
@@ -142,8 +142,8 @@
           "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{x^2+1}{2x+3}$ adalah ...",
           "options": [
             "tidak ada, menuju tak hingga",
-            "$\\frac{1}{2}$",
             "$0$",
+            "$\\frac{1}{2}$",
             "$2$"
           ],
           "answerIndex": 0,
@@ -174,8 +174,8 @@
           "prompt": "Asimtot datar dari $f(x) = \\frac{3x+1}{x-2}$ adalah ...",
           "options": [
             "$y = 3$",
-            "$y = 0$",
             "$x = 2$",
+            "$y = 0$",
             "tidak ada"
           ],
           "answerIndex": 0,
@@ -192,9 +192,9 @@
           "prompt": "Asimtot tegak dari $f(x) = \\frac{x+1}{x-4}$ adalah ...",
           "options": [
             "$x = 4$",
-            "$x = -1$",
+            "$x = 0$",
             "$y = 1$",
-            "$x = 0$"
+            "$x = -1$"
           ],
           "answerIndex": 0,
           "solution": "Asimtot tegak muncul di nilai $x$ yang membuat penyebut nol sedangkan pembilangnya tidak nol.\n\n$$x - 4 = 0 \\Rightarrow x = 4$$\n\nPeriksa pembilangnya di situ: $4+1 = 5 \\neq 0$. Jadi memang asimtot tegak.\n\nKalau pembilangnya juga nol di titik itu, yang terjadi bukan asimtot melainkan lubang pada grafik.",
@@ -241,8 +241,8 @@
           "options": [
             "$0$",
             "$5$",
-            "$\\infty$",
-            "$1$"
+            "$1$",
+            "$\\infty$"
           ],
           "answerIndex": 0,
           "solution": "Pembilangnya tetap 5, sedangkan penyebutnya membesar tanpa batas.\n\nPangkat pembilang adalah 0, penyebut adalah 2 — pembilang jauh lebih kecil.\n\n$$\\lim_{x\\to\\infty} \\frac{5}{x^2+1} = 0$$\n\nPeriksa dengan angka: $x = 100$ memberi sekitar $0{,}0005$. Jelas menuju nol.",

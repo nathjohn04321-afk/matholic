@@ -27,9 +27,9 @@
           "prompt": "Jika $f(x) = 2x^2 - 3$, maka $f(-2)$ adalah ...",
           "options": [
             "$5$",
-            "$-11$",
             "$11$",
-            "$-5$"
+            "$-5$",
+            "$-11$"
           ],
           "answerIndex": 0,
           "solution": "Ganti setiap $x$ dengan $-2$:\n$$f(-2) = 2(-2)^2 - 3$$\n\nKerjakan pangkat lebih dulu:\n$$(-2)^2 = 4$$\n$$= 2(4) - 3 = 8 - 3 = 5$$\n\nKesalahan umum: menghitung $2(-2)^2$ sebagai $(-4)^2$, yang memberi hasil berbeda. Pangkat mengenai $-2$, bukan $2 \\times -2$.",
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x) = 3x + 1$, maka $f(x+2)$ adalah ...",
           "options": [
-            "$3x + 7$",
-            "$3x + 3$",
             "$3x + 2$",
-            "$f(x) + 2$"
+            "$f(x) + 2$",
+            "$3x + 3$",
+            "$3x + 7$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Ganti seluruh $x$ pada rumus dengan $(x+2)$:\n$$f(x+2) = 3(x+2) + 1$$\n$$= 3x + 6 + 1 = 3x + 7$$\n\nPerhatikan angka 2 ikut dikalikan 3. Menulis $3x + 3$ berarti hanya menambahkan 2 ke hasil akhir, yang keliru.",
           "hint": "Ganti $x$ dengan seluruh bentuk $(x+2)$.",
           "tags": [
@@ -79,8 +79,8 @@
           "options": [
             "$7$",
             "$25$",
-            "$4$",
-            "$11$"
+            "$11$",
+            "$4$"
           ],
           "answerIndex": 0,
           "solution": "Kerjakan $g$ lebih dulu karena ia yang di kanan:\n$$g(2) = 2^2 = 4$$\n\nLalu masukkan hasilnya ke $f$:\n$$f(4) = 4 + 3 = 7$$\n\nBandingkan dengan urutan sebaliknya: $(g \\circ f)(2) = g(5) = 25$. Berbeda jauh — inilah kenapa urutan penting.",
@@ -126,12 +126,12 @@
           "format": "pilihan-ganda",
           "prompt": "Invers dari $f(x) = 3x - 6$ adalah ...",
           "options": [
-            "$f^{-1}(x) = \\frac{x+6}{3}$",
             "$f^{-1}(x) = \\frac{1}{3x-6}$",
-            "$f^{-1}(x) = \\frac{x-6}{3}$",
-            "$f^{-1}(x) = 3x + 6$"
+            "$f^{-1}(x) = 3x + 6$",
+            "$f^{-1}(x) = \\frac{x+6}{3}$",
+            "$f^{-1}(x) = \\frac{x-6}{3}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Tulis $y = 3x - 6$, lalu tukar peran $x$ dan $y$:\n$$x = 3y - 6$$\n\nSelesaikan untuk $y$:\n$$x + 6 = 3y$$\n$$y = \\frac{x+6}{3}$$\n\nPeriksa: $f(4) = 6$, dan $f^{-1}(6) = \\frac{12}{3} = 4$. Kembali ke semula. Cocok.\n\nPilihan $\\frac{1}{3x-6}$ adalah kebalikan bilangan, bukan invers fungsi.",
           "hint": "Tukar $x$ dan $y$, lalu selesaikan untuk $y$.",
           "tags": [
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Invers dari $f(x) = \\frac{x+2}{x-1}$ untuk $x \\neq 1$ adalah ...",
           "options": [
-            "$\\frac{x+2}{x-1}$",
             "$\\frac{x-1}{x+2}$",
-            "$\\frac{2x+1}{x-1}$",
-            "$\\frac{x-2}{x+1}$"
+            "$\\frac{x-2}{x+1}$",
+            "$\\frac{x+2}{x-1}$",
+            "$\\frac{2x+1}{x-1}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Tulis $y = \\frac{x+2}{x-1}$, lalu tukar:\n$$x = \\frac{y+2}{y-1}$$\n\nKali silang:\n$$x(y-1) = y+2$$\n$$xy - x = y + 2$$\n\nKumpulkan suku ber-$y$:\n$$xy - y = x + 2$$\n$$y(x-1) = x+2$$\n$$y = \\frac{x+2}{x-1}$$\n\nInversnya sama dengan fungsi aslinya. Fungsi seperti ini disebut involusi — memasukkan hasilnya kembali mengembalikan nilai semula.\n\nPeriksa: $f(3) = \\frac{5}{2}$, lalu $f(\\frac{5}{2}) = \\frac{9/2}{3/2} = 3$. Kembali.",
           "hint": "Kali silang, kumpulkan suku ber-$y$, lalu faktorkan.",
           "tags": [
@@ -193,12 +193,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x) = 5x + 2$, nilai $f^{-1}(12)$ adalah ...",
           "options": [
+            "$\\frac{1}{62}$",
             "$2$",
             "$62$",
-            "$\\frac{1}{62}$",
             "$14$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Cara cepat: $f^{-1}(12)$ menanyakan \"berapa masukan yang menghasilkan 12?\"\n\n$$5x + 2 = 12$$\n$$5x = 10$$\n$$x = 2$$\n\nJadi $f^{-1}(12) = 2$.\n\nTidak perlu mencari rumus inversnya lengkap kalau yang ditanya hanya satu nilai.",
           "hint": "Tanyakan: masukan apa yang menghasilkan 12?",
           "tags": [
@@ -245,8 +245,8 @@
           "options": [
             "$2x + 3$",
             "$2x + 6$",
-            "$2x + 4$",
-            "$x + 4$"
+            "$x + 4$",
+            "$2x + 4$"
           ],
           "answerIndex": 0,
           "solution": "Diketahui $f(g(x)) = 2x+5$ dengan $g(x) = x+1$.\n\nJadi $f(x+1) = 2x + 5$.\n\nMisalkan $u = x+1$, berarti $x = u - 1$. Substitusikan:\n$$f(u) = 2(u-1) + 5 = 2u - 2 + 5 = 2u + 3$$\n\nGanti nama peubahnya kembali: $f(x) = 2x + 3$.\n\nPeriksa: $f(g(2)) = f(3) = 9$, dan $2(2)+5 = 9$. Cocok.",

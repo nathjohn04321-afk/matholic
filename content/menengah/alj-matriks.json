@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $p$ agar $\\begin{pmatrix} p & 4 \\\\ 3 & 6 \\end{pmatrix}$ tidak punya invers adalah ...",
           "options": [
-            "$2$",
-            "$-2$",
             "$8$",
-            "$18$"
+            "$-2$",
+            "$18$",
+            "$2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Matriks tidak punya invers tepat ketika determinannya nol.\n\n$$\\det = 6p - 12 = 0$$\n$$6p = 12$$\n$$p = 2$$\n\nPeriksa: dengan $p=2$, matriksnya $\\begin{pmatrix} 2&4\\\\3&6 \\end{pmatrix}$, dan baris kedua adalah $1{,}5$ kali baris pertama — barisnya sebanding, jadi memang pipih.",
           "hint": "Tidak punya invers berarti determinannya nol.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\begin{pmatrix} 1&2 \\\\ 3&4 \\end{pmatrix}\\begin{pmatrix} 1&0 \\\\ 0&1 \\end{pmatrix}$ adalah ...",
           "options": [
-            "$\\begin{pmatrix} 1&2 \\\\ 3&4 \\end{pmatrix}$",
-            "$\\begin{pmatrix} 1&0 \\\\ 0&4 \\end{pmatrix}$",
             "$\\begin{pmatrix} 1&2 \\\\ 0&4 \\end{pmatrix}$",
-            "$\\begin{pmatrix} 0&0 \\\\ 0&0 \\end{pmatrix}$"
+            "$\\begin{pmatrix} 1&0 \\\\ 0&4 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 0&0 \\\\ 0&0 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 1&2 \\\\ 3&4 \\end{pmatrix}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Matriks kedua adalah matriks identitas. Mengalikan dengan identitas tidak mengubah apa pun, persis seperti mengalikan bilangan dengan 1.\n\nPeriksa satu elemen dengan aturan baris kali kolom:\nBaris 1 dari matriks pertama $(1, 2)$ dipasangkan kolom 1 dari identitas $(1, 0)$:\n$$1(1) + 2(0) = 1$$\n\nCocok dengan elemen aslinya.",
           "hint": "Perhatikan bentuk matriks keduanya.",
           "tags": [
@@ -125,12 +125,12 @@
           "format": "pilihan-ganda",
           "prompt": "Invers dari $\\begin{pmatrix} 2&1 \\\\ 3&2 \\end{pmatrix}$ adalah ...",
           "options": [
-            "$\\begin{pmatrix} 2&-1 \\\\ -3&2 \\end{pmatrix}$",
             "$\\begin{pmatrix} -2&1 \\\\ 3&-2 \\end{pmatrix}$",
-            "$\\begin{pmatrix} 2&1 \\\\ 3&2 \\end{pmatrix}$",
-            "$\\begin{pmatrix} 2&3 \\\\ 1&2 \\end{pmatrix}$"
+            "$\\begin{pmatrix} 2&3 \\\\ 1&2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2&-1 \\\\ -3&2 \\end{pmatrix}$",
+            "$\\begin{pmatrix} 2&1 \\\\ 3&2 \\end{pmatrix}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Hitung determinannya dulu:\n$$\\det = (2)(2) - (1)(3) = 4 - 3 = 1$$\n\nKarena determinannya 1, pembagiannya tidak mengubah apa-apa.\n\nTukar diagonal utama ($2$ dan $2$ — kebetulan sama), balik tanda $1$ dan $3$:\n$$A^{-1} = \\begin{pmatrix} 2&-1 \\\\ -3&2 \\end{pmatrix}$$\n\nPeriksa: $\\begin{pmatrix} 2&1\\\\3&2 \\end{pmatrix}\\begin{pmatrix} 2&-1\\\\-3&2 \\end{pmatrix} = \\begin{pmatrix} 1&0\\\\0&1 \\end{pmatrix}$. Cocok.",
           "hint": "Determinannya bernilai 1 — itu menyederhanakan banyak hal.",
           "tags": [
@@ -145,9 +145,9 @@
           "prompt": "Matriks $\\begin{pmatrix} 4&2 \\\\ 6&3 \\end{pmatrix}$ ...",
           "options": [
             "tidak punya invers",
-            "punya invers dengan $\\det = 24$",
+            "adalah matriks identitas",
             "punya invers dengan $\\det = -24$",
-            "adalah matriks identitas"
+            "punya invers dengan $\\det = 24$"
           ],
           "answerIndex": 0,
           "solution": "Hitung determinannya:\n$$\\det = (4)(3) - (2)(6) = 12 - 12 = 0$$\n\nKarena determinannya nol, matriks ini **tidak punya invers**.\n\nSecara geometris, baris kedua tepat $1{,}5$ kali baris pertama. Kedua barisnya searah, sehingga transformasinya memipihkan bidang menjadi garis — dan yang pipih tidak bisa dikembalikan.",
@@ -179,8 +179,8 @@
           "options": [
             "$3$",
             "$1$",
-            "$4$",
-            "$2$"
+            "$2$",
+            "$4$"
           ],
           "answerIndex": 0,
           "solution": "Susun matriks koefisiennya:\n$$A = \\begin{pmatrix} 2&1 \\\\ 1&1 \\end{pmatrix}, \\quad \\det A = 2 - 1 = 1$$\n\nGanti kolom pertama dengan ruas kanan:\n$$A_x = \\begin{pmatrix} 7&1 \\\\ 4&1 \\end{pmatrix}, \\quad \\det A_x = 7 - 4 = 3$$\n\n$$x = \\frac{3}{1} = 3$$\n\nPeriksa: dengan $x=3$, dari $x+y=4$ didapat $y=1$, dan $2(3)+1 = 7$. Cocok.",
@@ -225,12 +225,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $A = \\begin{pmatrix} 1&2 \\\\ 0&1 \\end{pmatrix}$ dan $B = \\begin{pmatrix} 1&0 \\\\ 3&1 \\end{pmatrix}$, maka ...",
           "options": [
-            "$AB \\neq BA$",
             "$AB = BA$",
+            "$A = B$",
             "$AB = 0$",
-            "$A = B$"
+            "$AB \\neq BA$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung keduanya dengan aturan baris kali kolom.\n\n$$AB = \\begin{pmatrix} 1(1)+2(3) & 1(0)+2(1) \\\\ 0(1)+1(3) & 0(0)+1(1) \\end{pmatrix} = \\begin{pmatrix} 7&2 \\\\ 3&1 \\end{pmatrix}$$\n\n$$BA = \\begin{pmatrix} 1(1)+0(0) & 1(2)+0(1) \\\\ 3(1)+1(0) & 3(2)+1(1) \\end{pmatrix} = \\begin{pmatrix} 1&2 \\\\ 3&7 \\end{pmatrix}$$\n\nKeduanya jelas berbeda, jadi $AB \\neq BA$.",
           "hint": "Hitung keduanya dan bandingkan.",
           "tags": [
@@ -245,8 +245,8 @@
           "options": [
             "$-2$",
             "$2$",
-            "$22$",
-            "$-22$"
+            "$-22$",
+            "$22$"
           ],
           "answerIndex": 0,
           "solution": "Pakai $ad - bc$:\n$$\\det = (5)(2) - (3)(4) = 10 - 12 = -2$$\n\nHasilnya negatif, dan itu sah. Tanda negatif pada determinan menunjukkan transformasinya membalik orientasi bidang — seperti pantulan cermin.\n\nNilai mutlaknya, yaitu 2, adalah faktor pengali luasnya.",

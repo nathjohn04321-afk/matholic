@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\binom{5}{0}+\\binom{5}{1}+\\binom{5}{2}+\\binom{5}{3}+\\binom{5}{4}+\\binom{5}{5}$ adalah ...",
           "options": [
-            "$32$",
             "$31$",
+            "$32$",
             "$16$",
             "$25$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Jumlah itu menghitung seluruh himpunan bagian dari himpunan beranggota $5$, dikelompokkan menurut ukurannya.\n\nCara kedua menghitungnya: setiap anggota punya dua pilihan, masuk atau tidak, jadi totalnya $2^5 = 32$.\n\n$$\\sum_{k=0}^{5}\\binom{5}{k} = 2^5 = 32$$\n\nCek langsung: $1 + 5 + 10 + 10 + 5 + 1 = 32$ ✓\n\nPilihan $31$ adalah jebakan untuk yang mengecualikan himpunan kosong — padahal $\\binom{5}{0} = 1$ memang menghitungnya.",
           "hint": "Apa yang sebenarnya dihitung oleh jumlah ini?",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Identitas Pascal $\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$ dapat dijelaskan dengan menghitung dua cara, yaitu dengan ...",
           "options": [
+            "memakai induksi matematika pada $n$",
             "memisahkan berdasarkan apakah satu anggota tertentu terpilih atau tidak",
-            "menjumlahkan seluruh baris segitiga Pascal",
             "menjabarkan $(1+x)^n$ dan membandingkan koefisien",
-            "memakai induksi matematika pada $n$"
+            "menjumlahkan seluruh baris segitiga Pascal"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ruas kiri menghitung banyaknya cara memilih $k$ benda dari $n$.\n\nUntuk menghitungnya dengan cara kedua, tandai satu benda tertentu — sebut saja benda $A$ — lalu pisahkan pilihan-pilihan itu menjadi dua kelompok yang tidak beririsan.\n\n**$A$ terpilih:** tinggal memilih $k-1$ benda lagi dari $n-1$ sisanya, ada $\\binom{n-1}{k-1}$ cara.\n\n**$A$ tidak terpilih:** seluruh $k$ benda diambil dari $n-1$ sisanya, ada $\\binom{n-1}{k}$ cara.\n\nKarena setiap pilihan masuk tepat satu kelompok, jumlahnya sama dengan totalnya.\n\nCek dengan angka: $\\binom{10}{3} = 120$ dan $\\binom{9}{2}+\\binom{9}{3} = 36 + 84 = 120$ ✓",
           "hint": "Tandai satu benda, lalu pisahkan berdasarkan nasibnya.",
           "tags": [
@@ -90,12 +90,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya diagonal pada segi delapan beraturan adalah ...",
           "options": [
+            "$16$",
             "$20$",
             "$28$",
-            "$16$",
             "$24$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Setiap diagonal menghubungkan dua titik sudut, jadi mulailah dengan menghitung seluruh pasangan titik sudut:\n\n$$\\binom{8}{2} = \\frac{8 \\times 7}{2} = 28$$\n\nTapi $28$ itu mencakup sisi-sisinya juga. Segi delapan punya $8$ sisi, dan sisi bukan diagonal:\n\n$$28 - 8 = 20$$\n\nRumus umumnya $\\frac{n(n-3)}{2}$, yang untuk $n=8$ memberi $\\frac{8 \\times 5}{2} = 20$ ✓\n\nBentuk $n-3$ itu masuk akal: dari setiap titik sudut, kamu tidak bisa menarik diagonal ke dirinya sendiri maupun ke dua tetangganya.",
           "hint": "Hitung semua pasangan titik sudut, lalu buang sisinya.",
           "tags": [
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya cara menaiki tangga dengan $5$ anak tangga, jika sekali melangkah boleh naik satu atau dua anak tangga, adalah ...",
           "options": [
-            "$8$",
+            "$10$",
             "$5$",
             "$13$",
-            "$10$"
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai rekursi $T(n) = T(n-1) + T(n-2)$ berdasarkan langkah terakhir.\n\nNilai awalnya dihitung manual:\n\n$T(1) = 1$ (hanya satu cara)\n\n$T(2) = 2$ (satu-satu, atau langsung dua)\n\nLanjutkan:\n\n$T(3) = 2 + 1 = 3$\n\n$T(4) = 3 + 2 = 5$\n\n$T(5) = 5 + 3 = 8$\n\nJadi ada $8$ cara. Perhatikan bahwa barisannya adalah Fibonacci yang bergeser satu posisi.",
           "hint": "Pikirkan langkah terakhirnya: satu atau dua anak tangga.",
           "tags": [
@@ -169,12 +169,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya barisan biner panjang $5$ yang tidak memuat dua angka $1$ berdampingan adalah ...",
           "options": [
-            "$13$",
-            "$8$",
             "$21$",
-            "$16$"
+            "$13$",
+            "$16$",
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai rekursi $B(n) = B(n-1) + B(n-2)$ berdasarkan digit terakhir.\n\nNilai awalnya:\n\n$B(1) = 2$ — yaitu $0$ dan $1$\n\n$B(2) = 3$ — yaitu $00$, $01$, $10$; sedangkan $11$ dilarang\n\nLanjutkan:\n\n$B(3) = 3 + 2 = 5$\n\n$B(4) = 5 + 3 = 8$\n\n$B(5) = 8 + 5 = 13$\n\nJadi ada $13$ barisan. Bandingkan dengan $2^5 = 32$ barisan tanpa syarat — larangan itu memangkas lebih dari separuhnya.",
           "hint": "Perhatikan digit terakhirnya; jika $1$, digit sebelumnya terpaksa $0$.",
           "tags": [
@@ -219,12 +219,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dalam sebuah pertemuan, setiap dua orang berjabat tangan tepat sekali. Jika ada $10$ orang, banyaknya jabat tangan adalah ...",
           "options": [
-            "$45$",
             "$90$",
             "$100$",
-            "$55$"
+            "$55$",
+            "$45$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Setiap jabat tangan melibatkan tepat dua orang, dan urutannya tidak diperhatikan — A berjabat tangan dengan B sama dengan B berjabat tangan dengan A.\n\n$$\\binom{10}{2} = \\frac{10 \\times 9}{2} = 45$$\n\nCara lain melihatnya: setiap orang berjabat tangan dengan $9$ orang lain, memberi $10 \\times 9 = 90$. Tapi angka itu menghitung setiap jabat tangan dua kali — sekali dari masing-masing pihak — jadi dibagi dua menjadi $45$.\n\nKedua cara menghitung benda yang sama, dan kesepakatan hasilnya adalah contoh kecil dari teknik menghitung dua cara.",
           "hint": "Setiap jabat tangan melibatkan dua orang.",
           "tags": [

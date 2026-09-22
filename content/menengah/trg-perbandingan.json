@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada segitiga siku-siku, sisi depan sudut $\\theta$ adalah 3 dan sisi miringnya 5. Nilai $\\cos\\theta$ adalah ...",
           "options": [
-            "$\\frac{4}{5}$",
-            "$\\frac{3}{5}$",
             "$\\frac{5}{3}$",
+            "$\\frac{3}{5}$",
+            "$\\frac{4}{5}$",
             "$\\frac{3}{4}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Cari sisi sampingnya dulu dengan Pythagoras:\n$$\\text{samping} = \\sqrt{5^2 - 3^2} = \\sqrt{16} = 4$$\n\nLalu:\n$$\\cos\\theta = \\frac{\\text{samping}}{\\text{miring}} = \\frac{4}{5}$$\n\nPilihan $\\frac{3}{5}$ adalah $\\sin\\theta$, bukan kosinusnya.",
           "hint": "Cari sisi ketiganya dulu dengan Pythagoras.",
           "tags": [
@@ -74,12 +74,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\sin 60^\\circ$ adalah ...",
           "options": [
-            "$\\frac{1}{2}\\sqrt{3}$",
-            "$\\frac{1}{2}$",
             "$\\frac{1}{2}\\sqrt{2}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{1}{2}\\sqrt{3}$",
             "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai pola akar. Untuk $60^\\circ$, yang keempat dalam urutan:\n$$\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} = \\frac{1}{2}\\sqrt{3}$$\n\nNilainya sekitar $0{,}866$ — masuk akal karena $60^\\circ$ mendekati $90^\\circ$, dan sinus membesar menuju 1 di sana.",
           "hint": "Urutan akar: 0, 1, 2, 3, 4 di bawah akar, dibagi 2.",
           "tags": [
@@ -124,9 +124,9 @@
           "prompt": "Nilai dari $\\cos 120^\\circ$ adalah ...",
           "options": [
             "$-\\frac{1}{2}$",
-            "$\\frac{1}{2}$",
+            "$\\frac{1}{2}\\sqrt{3}$",
             "$-\\frac{1}{2}\\sqrt{3}$",
-            "$\\frac{1}{2}\\sqrt{3}$"
+            "$\\frac{1}{2}$"
           ],
           "answerIndex": 0,
           "solution": "Sudut $120^\\circ$ berada di kuadran II, tempat koordinat $x$ bernilai negatif — jadi kosinusnya negatif.\n\nSudut acuannya:\n$$180^\\circ - 120^\\circ = 60^\\circ$$\n\nKarena $\\cos 60^\\circ = \\frac{1}{2}$:\n$$\\cos 120^\\circ = -\\frac{1}{2}$$",
@@ -142,12 +142,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\sin 150^\\circ$ adalah ...",
           "options": [
-            "$\\frac{1}{2}$",
+            "$-\\frac{1}{2}\\sqrt{3}$",
             "$-\\frac{1}{2}$",
-            "$\\frac{1}{2}\\sqrt{3}$",
-            "$-\\frac{1}{2}\\sqrt{3}$"
+            "$\\frac{1}{2}$",
+            "$\\frac{1}{2}\\sqrt{3}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Sudut $150^\\circ$ berada di kuadran II, tempat koordinat $y$ bernilai positif — jadi sinusnya positif.\n\nSudut acuannya:\n$$180^\\circ - 150^\\circ = 30^\\circ$$\n\nKarena $\\sin 30^\\circ = \\frac{1}{2}$:\n$$\\sin 150^\\circ = \\frac{1}{2}$$",
           "hint": "Di kuadran II, koordinat $y$ masih positif.",
           "tags": [
@@ -174,12 +174,12 @@
           "format": "pilihan-ganda",
           "prompt": "Luas segitiga dengan sisi 8 cm, 5 cm, dan sudut apit $30^\\circ$ adalah ...",
           "options": [
-            "$10$ cm$^2$",
-            "$20$ cm$^2$",
+            "$5$ cm$^2$",
             "$40$ cm$^2$",
-            "$5$ cm$^2$"
+            "$10$ cm$^2$",
+            "$20$ cm$^2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus luas dengan sudut apit:\n$$L = \\tfrac{1}{2}ab\\sin C = \\tfrac{1}{2}(8)(5)\\sin 30^\\circ$$\n\nKarena $\\sin 30^\\circ = \\frac{1}{2}$:\n$$= \\tfrac{1}{2}(40)\\left(\\tfrac{1}{2}\\right) = 10$$\n\nLuasnya $10$ cm$^2$.",
           "hint": "Kalikan setengah, kedua sisi, dan sinus sudut apitnya.",
           "tags": [
@@ -193,12 +193,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada segitiga dengan $a = 7$, $b = 8$, dan sudut $C = 60^\\circ$, nilai $c^2$ adalah ...",
           "options": [
-            "$57$",
-            "$113$",
             "$169$",
-            "$49$"
+            "$113$",
+            "$49$",
+            "$57$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai aturan kosinus:\n$$c^2 = a^2 + b^2 - 2ab\\cos C$$\n$$= 49 + 64 - 2(7)(8)\\cos 60^\\circ$$\n\nKarena $\\cos 60^\\circ = \\frac{1}{2}$:\n$$= 113 - 112\\left(\\tfrac{1}{2}\\right) = 113 - 56 = 57$$\n\nPilihan $113$ muncul dari melupakan suku koreksinya — itu jawaban kalau sudutnya $90^\\circ$.",
           "hint": "Jangan lupa suku $-2ab\\cos C$.",
           "tags": [
@@ -225,12 +225,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui segitiga dengan sisi 6, 7, dan 9. Untuk mencari salah satu sudutnya, aturan yang dipakai adalah ...",
           "options": [
+            "teorema Pythagoras",
             "aturan kosinus",
             "aturan sinus",
-            "teorema Pythagoras",
             "rumus luas"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Yang diketahui ketiga sisinya, tanpa satu sudut pun.\n\nAturan sinus butuh minimal satu pasangan sisi dan sudut di hadapannya — di sini tidak ada.\n\nPythagoras hanya berlaku untuk segitiga siku-siku, dan $6^2+7^2 = 85 \\neq 81 = 9^2$, jadi segitiganya bukan siku-siku.\n\nYang bisa dipakai adalah aturan kosinus, yang bisa disusun ulang untuk mencari $\\cos C$ dari ketiga sisi.",
           "hint": "Adakah pasangan sisi dan sudut yang sudah diketahui?",
           "tags": [
@@ -243,12 +243,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\tan 225^\\circ$ adalah ...",
           "options": [
-            "$1$",
             "$-1$",
             "$\\frac{1}{2}\\sqrt{2}$",
+            "$1$",
             "tidak terdefinisi"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Sudut $225^\\circ$ berada di kuadran III, tempat koordinat $x$ dan $y$ keduanya negatif.\n\nKarena $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, membagi dua bilangan negatif memberi hasil **positif**.\n\nSudut acuannya:\n$$225^\\circ - 180^\\circ = 45^\\circ$$\n\nKarena $\\tan 45^\\circ = 1$, maka $\\tan 225^\\circ = 1$.",
           "hint": "Di kuadran III kedua koordinat negatif — apa artinya untuk hasil baginya?",
           "tags": [

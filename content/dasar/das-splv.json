@@ -28,8 +28,8 @@
           "options": [
             "tidak punya penyelesaian",
             "punya satu penyelesaian",
-            "punya tak hingga penyelesaian",
-            "salah hitung"
+            "salah hitung",
+            "punya tak hingga penyelesaian"
           ],
           "answerIndex": 0,
           "solution": "Pernyataan $0 = 7$ tidak mungkin benar untuk nilai $x$ dan $y$ mana pun.\n\nSecara grafik, ini berarti kedua garisnya sejajar dan tidak pernah berpotongan.\n\nJadi sistemnya tidak punya penyelesaian. Ini hasil yang sah, bukan tanda kesalahan hitung.",
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Penyelesaian dari $x + y = 7$ dan $x - y = 1$ adalah ...",
           "options": [
-            "$(4, 3)$",
-            "$(3, 4)$",
+            "$(6, 1)$",
             "$(5, 2)$",
-            "$(6, 1)$"
+            "$(3, 4)$",
+            "$(4, 3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Jumlahkan kedua persamaan supaya $y$ hilang:\n$(x+y) + (x-y) = 7 + 1$\n$2x = 8$\n$x = 4$\n\nSubstitusikan ke persamaan pertama:\n$4 + y = 7$\n$y = 3$\n\nPeriksa di persamaan kedua: $4 - 3 = 1$. Cocok.\n\nJadi $(4,3)$.",
           "hint": "Jumlahkan keduanya dan lihat apa yang lenyap.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Penyelesaian dari $2x + 3y = 12$ dan $x - y = 1$ adalah ...",
           "options": [
+            "$(1, 0)$",
             "$(3, 2)$",
-            "$(2, 3)$",
             "$(4, 3)$",
-            "$(1, 0)$"
+            "$(2, 3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Kalikan persamaan kedua dengan 3 supaya koefisien $y$ menjadi $3$:\n$3(x - y) = 3(1) \\Rightarrow 3x - 3y = 3$\n\nJumlahkan dengan persamaan pertama — $+3y$ dan $-3y$ saling lenyap:\n$2x + 3x = 12 + 3$\n$5x = 15$\n$x = 3$\n\nSubstitusikan ke $x - y = 1$:\n$3 - y = 1 \\Rightarrow y = 2$\n\nPeriksa di persamaan pertama: $2(3) + 3(2) = 12$. Cocok.",
           "hint": "Kalikan persamaan kedua sampai koefisien $y$-nya cocok.",
           "tags": [
@@ -125,9 +125,9 @@
           "prompt": "Jika $y = 2x - 1$ dan $3x + y = 9$, maka nilai $x$ adalah ...",
           "options": [
             "$2$",
+            "$4$",
             "$3$",
-            "$1$",
-            "$4$"
+            "$1$"
           ],
           "answerIndex": 0,
           "solution": "Masukkan $y = 2x-1$ ke persamaan kedua:\n$3x + (2x - 1) = 9$\n$5x - 1 = 9$\n$5x = 10$\n$x = 2$\n\nPeriksa: $y = 2(2)-1 = 3$, dan $3(2) + 3 = 9$. Cocok.",
@@ -142,12 +142,12 @@
           "format": "pilihan-ganda",
           "prompt": "Harga 2 pensil dan 3 buku Rp31.000. Harga 1 pensil dan 2 buku Rp19.000. Harga satu buku adalah ...",
           "options": [
-            "Rp7.000",
-            "Rp5.000",
             "Rp9.000",
-            "Rp6.000"
+            "Rp6.000",
+            "Rp7.000",
+            "Rp5.000"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Misalkan pensil $p$ dan buku $b$.\n$2p + 3b = 31000$\n$p + 2b = 19000$\n\nDari persamaan kedua: $p = 19000 - 2b$.\n\nSubstitusikan ke persamaan pertama:\n$2(19000 - 2b) + 3b = 31000$\n$38000 - 4b + 3b = 31000$\n$38000 - b = 31000$\n$b = 7000$\n\nPeriksa: $p = 19000 - 14000 = 5000$, dan $2(5000) + 3(7000) = 31000$. Cocok.",
           "hint": "Nyatakan harga pensil dari persamaan kedua.",
           "tags": [
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $x+y+z = 6$, $x - y + z = 2$, dan $x + y - z = 0$. Nilai $y$ adalah ...",
           "options": [
-            "$2$",
             "$3$",
-            "$1$",
-            "$4$"
+            "$4$",
+            "$2$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kurangkan persamaan kedua dari persamaan pertama — $x$ dan $z$ lenyap:\n$(x+y+z) - (x-y+z) = 6 - 2$\n$2y = 4$\n$y = 2$\n\nPeriksa dengan persamaan lain. Dari persamaan pertama dan ketiga:\n$(x+y+z) - (x+y-z) = 6 - 0 \\Rightarrow 2z = 6 \\Rightarrow z = 3$\nLalu $x = 6 - 2 - 3 = 1$.\n\nPeriksa di persamaan kedua: $1 - 2 + 3 = 2$. Cocok.",
           "hint": "Kurangkan dua persamaan pertama dan lihat apa yang lenyap.",
           "tags": [
@@ -223,12 +223,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $(2x + 3y) - (x - y)$ adalah ...",
           "options": [
-            "$x + 4y$",
-            "$x + 2y$",
+            "$x - 4y$",
             "$3x + 2y$",
-            "$x - 4y$"
+            "$x + 4y$",
+            "$x + 2y$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Tanda minus membalik tanda setiap suku di kurung kedua:\n$-(x - y) = -x + y$\n\nGabungkan:\n$2x - x = x$\n$3y + y = 4y$\n\nHasilnya $x + 4y$.\n\nMenulis $x + 2y$ berarti tanda $-y$ tidak ikut dibalik.",
           "hint": "Tanda minus mengenai kedua suku di dalam kurung.",
           "tags": [

@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Suku ke-15 barisan aritmatika dengan $a = 4$ dan $b = 3$ adalah ...",
           "options": [
-            "$46$",
-            "$49$",
+            "$43$",
             "$45$",
-            "$43$"
+            "$46$",
+            "$49$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai $U_n = a + (n-1)b$:\n$$U_{15} = 4 + (15-1)(3) = 4 + 14(3) = 4 + 42 = 46$$\n\nPerhatikan pengalinya $14$, bukan $15$. Memakai 15 memberi 49 — itu sebenarnya suku ke-16.",
           "hint": "Berapa kali beda ditambahkan untuk sampai suku ke-15?",
           "tags": [
@@ -93,12 +93,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $S_n = n^2 + 2n$, maka suku ke-5 barisan itu adalah ...",
           "options": [
-            "$13$",
             "$35$",
             "$11$",
-            "$24$"
+            "$24$",
+            "$13$"
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "solution": "Pakai hubungan $U_n = S_n - S_{n-1}$.\n\n$$S_5 = 5^2 + 2(5) = 25 + 10 = 35$$\n$$S_4 = 4^2 + 2(4) = 16 + 8 = 24$$\n$$U_5 = 35 - 24 = 11$$\n\nPilihan $35$ adalah $S_5$, yaitu jumlah lima suku pertama — bukan suku kelimanya. Membedakan keduanya adalah inti soal ini.",
           "hint": "Suku ke-$n$ adalah selisih dua jumlah berurutan.",
           "tags": [
@@ -125,12 +125,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $U_4 = 17$ dan $U_9 = 37$. Suku pertama barisan itu adalah ...",
           "options": [
-            "$5$",
-            "$4$",
             "$9$",
-            "$13$"
+            "$4$",
+            "$13$",
+            "$5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Tulis keduanya dalam $a$ dan $b$:\n$$a + 3b = 17$$\n$$a + 8b = 37$$\n\nKurangkan persamaan pertama dari kedua:\n$$5b = 20 \\Rightarrow b = 4$$\n\nSubstitusikan:\n$$a + 12 = 17 \\Rightarrow a = 5$$\n\nPeriksa: $U_9 = 5 + 8(4) = 37$. Cocok.",
           "hint": "Ingat $U_4 = a + 3b$, bukan $a + 4b$.",
           "tags": [
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Tiga bilangan membentuk barisan aritmatika. Jumlahnya 21 dan bilangan tengahnya adalah ...",
           "options": [
-            "$7$",
-            "$3$",
             "$10{,}5$",
-            "tidak dapat ditentukan"
+            "$3$",
+            "tidak dapat ditentukan",
+            "$7$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pada tiga suku aritmatika, suku tengah adalah rata-rata kedua tetangganya.\n\nMisalkan ketiganya $x-b$, $x$, $x+b$. Jumlahnya:\n$$(x-b) + x + (x+b) = 3x$$\n\nSuku $b$ saling meniadakan, jadi:\n$$3x = 21 \\Rightarrow x = 7$$\n\nBilangan tengahnya 7, berapa pun bedanya. Inilah sebabnya soal ini bisa dijawab tanpa informasi tambahan.",
           "hint": "Tulis ketiganya sebagai $x-b$, $x$, $x+b$.",
           "tags": [
@@ -193,9 +193,9 @@
           "prompt": "Sebuah bola dijatuhkan dari ketinggian 8 m dan memantul $\\frac{1}{2}$ kali tinggi sebelumnya. Panjang lintasan seluruhnya sampai berhenti adalah ...",
           "options": [
             "$24$ m",
-            "$16$ m",
             "$8$ m",
-            "$32$ m"
+            "$32$ m",
+            "$16$ m"
           ],
           "answerIndex": 0,
           "solution": "Lintasan turun pertama: $8$ m.\n\nSetelah itu bola naik lalu turun berulang, masing-masing membentuk deret geometri dengan $a = 4$ dan $r = \\frac{1}{2}$:\n$$S_\\infty = \\frac{4}{1 - \\frac{1}{2}} = 8$$\n\nKarena naik dan turun sama panjang, keduanya memberi $8 + 8 = 16$.\n\nTotal seluruh lintasan:\n$$8 + 16 = 24 \\text{ m}$$\n\nKesalahan umum: lupa bahwa setiap pantulan dihitung dua kali — sekali naik, sekali turun.",
@@ -224,12 +224,12 @@
           "format": "pilihan-ganda",
           "prompt": "Barisan $2, 6, 12, 20, 30, \\ldots$ adalah barisan ...",
           "options": [
-            "bukan aritmatika maupun geometri",
             "aritmatika dengan $b = 4$",
+            "bukan aritmatika maupun geometri",
             "geometri dengan $r = 3$",
             "aritmatika dengan $b = 6$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Periksa selisihnya:\n$6-2 = 4$, $12-6 = 6$, $20-12 = 8$, $30-20 = 10$\nSelisihnya berubah, jadi bukan aritmatika.\n\nPeriksa hasil baginya:\n$6 \\div 2 = 3$, $12 \\div 6 = 2$\nHasil baginya juga berubah, jadi bukan geometri.\n\nBarisan ini sebenarnya $n(n+1)$, tapi bukan keduanya. Memeriksa lebih dari satu pasang suku adalah yang menyelamatkan di sini.",
           "hint": "Periksa selisih DAN hasil bagi, masing-masing beberapa pasang.",
           "tags": [
@@ -242,12 +242,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada deret aritmatika, $S_5 = 45$ dan $S_4 = 32$. Suku kelimanya adalah ...",
           "options": [
-            "$13$",
-            "$45$",
             "$77$",
-            "$9$"
+            "$13$",
+            "$9$",
+            "$45$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai hubungan $U_n = S_n - S_{n-1}$:\n$$U_5 = S_5 - S_4 = 45 - 32 = 13$$\n\nMasuk akal: $S_5$ adalah jumlah lima suku dan $S_4$ jumlah empat suku, jadi selisihnya persis suku kelima.\n\nPilihan $45$ adalah $S_5$, bukan $U_5$.",
           "hint": "Apa selisih antara jumlah 5 suku dan jumlah 4 suku?",
           "tags": [

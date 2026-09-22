@@ -23,12 +23,12 @@
           "format": "pilihan-ganda",
           "prompt": "Luas segitiga dengan alas 12 cm dan tinggi 5 cm adalah ...",
           "options": [
-            "$60$ cm$^2$",
             "$30$ cm$^2$",
-            "$17$ cm$^2$",
-            "$34$ cm$^2$"
+            "$34$ cm$^2$",
+            "$60$ cm$^2$",
+            "$17$ cm$^2$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Pakai rumus segitiga:\n$$L = \\tfrac{1}{2} \\times a \\times t = \\tfrac{1}{2} \\times 12 \\times 5 = 30$$\n\nJawabannya $30$ cm$^2$.\n\nPilihan $60$ adalah luas persegi panjang dengan ukuran sama — segitiga hanya separuhnya.",
           "hint": "Segitiga adalah separuh persegi panjang.",
           "tags": [
@@ -41,12 +41,12 @@
           "format": "pilihan-ganda",
           "prompt": "Trapesium punya sisi sejajar 8 cm dan 14 cm, dengan tinggi 6 cm. Luasnya adalah ...",
           "options": [
-            "$66$ cm$^2$",
-            "$132$ cm$^2$",
             "$84$ cm$^2$",
-            "$48$ cm$^2$"
+            "$48$ cm$^2$",
+            "$66$ cm$^2$",
+            "$132$ cm$^2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus trapesium:\n$$L = \\frac{a+b}{2} \\times t = \\frac{8+14}{2} \\times 6$$\n$$= \\frac{22}{2} \\times 6 = 11 \\times 6 = 66$$\n\nJawabannya $66$ cm$^2$.\n\nPilihan $132$ muncul dari lupa membagi dua.",
           "hint": "Rata-ratakan kedua sisi sejajar dulu.",
           "tags": [
@@ -73,12 +73,12 @@
           "format": "pilihan-ganda",
           "prompt": "Luas lingkaran berjari-jari 7 cm, dengan $\\pi = \\frac{22}{7}$, adalah ...",
           "options": [
-            "$154$ cm$^2$",
             "$44$ cm$^2$",
             "$22$ cm$^2$",
-            "$308$ cm$^2$"
+            "$308$ cm$^2$",
+            "$154$ cm$^2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai $L = \\pi r^2$:\n$$L = \\frac{22}{7} \\times 7^2 = \\frac{22}{7} \\times 49$$\n\nSederhanakan: $49 \\div 7 = 7$.\n$$= 22 \\times 7 = 154$$\n\nJawabannya $154$ cm$^2$.\n\nPilihan $44$ adalah kelilingnya, bukan luasnya.",
           "hint": "Jangan tertukar dengan rumus keliling.",
           "tags": [
@@ -92,9 +92,9 @@
           "prompt": "Sebuah lingkaran berdiameter 20 cm. Kelilingnya dengan $\\pi = 3{,}14$ adalah ...",
           "options": [
             "$62{,}8$ cm",
-            "$31{,}4$ cm",
             "$314$ cm",
-            "$125{,}6$ cm"
+            "$125{,}6$ cm",
+            "$31{,}4$ cm"
           ],
           "answerIndex": 0,
           "solution": "Yang diketahui diameter, jadi bisa langsung pakai $K = \\pi d$:\n$$K = 3{,}14 \\times 20 = 62{,}8$$\n\nAtau lewat jari-jari: $r = 10$, lalu $K = 2 \\times 3{,}14 \\times 10 = 62{,}8$. Sama saja.\n\nPilihan $31{,}4$ muncul dari memakai $\\pi r$ tanpa faktor 2.",
@@ -141,12 +141,12 @@
           "format": "pilihan-ganda",
           "prompt": "Keliling persegi dengan luas 64 cm$^2$ adalah ...",
           "options": [
-            "$32$ cm",
-            "$16$ cm",
             "$64$ cm",
+            "$16$ cm",
+            "$32$ cm",
             "$8$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Cari sisinya dulu dari luasnya:\n$$s^2 = 64 \\Rightarrow s = 8 \\text{ cm}$$\n\nKeliling persegi adalah empat kali sisinya:\n$$K = 4 \\times 8 = 32 \\text{ cm}$$\n\nPilihan $8$ adalah panjang sisinya, bukan kelilingnya — soal bertanya keliling.",
           "hint": "Cari panjang sisinya lebih dulu.",
           "tags": [
@@ -173,12 +173,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dua sudut segitiga berukuran $55^\\circ$ dan $65^\\circ$. Sudut ketiganya adalah ...",
           "options": [
-            "$60^\\circ$",
-            "$70^\\circ$",
             "$50^\\circ$",
+            "$70^\\circ$",
+            "$60^\\circ$",
             "$120^\\circ$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Jumlah sudut segitiga adalah $180^\\circ$.\n\n$$180^\\circ - 55^\\circ - 65^\\circ = 60^\\circ$$\n\nPeriksa: $55 + 65 + 60 = 180$. Cocok.",
           "hint": "Ketiganya berjumlah 180 derajat.",
           "tags": [
@@ -191,12 +191,12 @@
           "format": "pilihan-ganda",
           "prompt": "Besar satu sudut dalam segi enam beraturan adalah ...",
           "options": [
+            "$60^\\circ$",
             "$120^\\circ$",
             "$720^\\circ$",
-            "$60^\\circ$",
             "$108^\\circ$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Jumlah seluruh sudut dalam segi enam:\n$$(n-2) \\times 180^\\circ = (6-2) \\times 180^\\circ = 720^\\circ$$\n\nKarena beraturan, keenam sudutnya sama besar:\n$$720^\\circ \\div 6 = 120^\\circ$$\n\nPilihan $720^\\circ$ adalah jumlah seluruhnya, bukan satu sudut.",
           "hint": "Hitung jumlahnya dulu, baru bagi dengan banyak sudutnya.",
           "tags": [
@@ -241,9 +241,9 @@
           "prompt": "Sebuah persegi panjang berukuran 2 m × 50 cm. Luasnya adalah ...",
           "options": [
             "$1$ m$^2$",
-            "$100$ m$^2$",
             "$2{,}5$ m$^2$",
-            "$100$ cm$^2$"
+            "$100$ cm$^2$",
+            "$100$ m$^2$"
           ],
           "answerIndex": 0,
           "solution": "Satuannya berbeda, jadi samakan dulu. Ubah 50 cm menjadi meter:\n$$50 \\text{ cm} = 0{,}5 \\text{ m}$$\n\nSekarang hitung:\n$$L = 2 \\times 0{,}5 = 1 \\text{ m}^2$$\n\nMengalikan $2 \\times 50$ langsung memberi 100 dengan satuan campur yang tidak bermakna.",

@@ -26,13 +26,13 @@
           "format": "pilihan-ganda",
           "prompt": "Modal Rp2.000.000 dibungakan dengan bunga tunggal $6\\%$ per tahun selama 4 tahun. Besar bunga yang diperoleh adalah ...",
           "options": [
-            "Rp480.000",
             "Rp120.000",
             "Rp524.954",
+            "Rp480.000",
             "Rp2.480.000"
           ],
-          "answerIndex": 0,
-          "solution": "Bunga tunggal selalu dihitung dari modal awal:\n\n$$B = M_0 \\times i \\times n = 2.000.000 \\times 0{,}06 \\times 4 = 480.000$$\n\nPerhatikan soalnya menanyakan **bunganya**, bukan saldo akhirnya. Saldo akhir adalah $2.000.000 + 480.000 = \\text{Rp}2.480.000$, yaitu pilihan terakhir.\n\nMembaca dengan teliti apakah yang diminta bunga atau saldo akhir adalah setengah dari pekerjaan pada soal keuangan.",
+          "answerIndex": 2,
+          "solution": "Bunga tunggal selalu dihitung dari modal awal:\n\n$$B = M_0 \\times i \\times n = 2.000.000 \\times 0{,}06 \\times 4 = 480.000$$\n\nPerhatikan soalnya menanyakan **bunganya**, bukan saldo akhirnya. Saldo akhirnya adalah $2.000.000 + 480.000 = \\text{Rp}2.480.000$, yang juga tersedia sebagai salah satu pilihan.\n\nMembaca dengan teliti apakah yang diminta bunga atau saldo akhir adalah setengah dari pekerjaan pada soal keuangan.",
           "hint": "Bunga tunggal: modal dikali persentase dikali lamanya.",
           "tags": [
             "un"
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Modal Rp5.000.000 dibungakan majemuk $10\\%$ per tahun. Setelah 3 tahun saldonya menjadi ...",
           "options": [
-            "Rp6.655.000",
             "Rp6.500.000",
+            "Rp6.655.000",
             "Rp5.500.000",
             "Rp6.050.000"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai rumus bunga majemuk:\n\n$$M_3 = 5.000.000(1 + 0{,}1)^3 = 5.000.000 \\times 1{,}331 = 6.655.000$$\n\nBisa juga dikerjakan tahun demi tahun untuk melihat prosesnya:\n\nTahun 1: $5.000.000 \\times 1{,}1 = 5.500.000$\n\nTahun 2: $5.500.000 \\times 1{,}1 = 6.050.000$\n\nTahun 3: $6.050.000 \\times 1{,}1 = 6.655.000$\n\nPilihan Rp6.500.000 adalah hasil bunga tunggal, yang lebih kecil karena bunganya tidak ikut berbunga.",
           "hint": "Kalikan berulang dengan $1{,}1$ sebanyak tahunnya.",
           "tags": [
@@ -78,9 +78,9 @@
           "prompt": "Modal Rp1.000.000 dibungakan $12\\%$ per tahun yang dimajemukkan setiap bulan. Bentuk perhitungan saldo setelah 1 tahun yang benar adalah ...",
           "options": [
             "$1.000.000(1{,}01)^{12}$",
+            "$1.000.000(1{,}12)^{1}$",
             "$1.000.000(1{,}12)^{12}$",
-            "$1.000.000(1{,}01)^1$",
-            "$1.000.000(1{,}12)^{1}$"
+            "$1.000.000(1{,}01)^1$"
           ],
           "answerIndex": 0,
           "solution": "Ada dua penyesuaian yang harus dikerjakan bersamaan.\n\n**Bunga per periode:** $\\frac{12\\%}{12} = 1\\%$ per bulan, jadi pengalinya $1{,}01$.\n\n**Banyaknya periode:** $12$ bulan dalam setahun, jadi pangkatnya $12$.\n\n$$M = 1.000.000(1{,}01)^{12} \\approx 1.126.825$$\n\nPilihan $(1{,}12)^{12}$ membagi bunganya tapi tidak — hasilnya akan melonjak jauh karena bunga tahunan penuh dikenakan dua belas kali. Pilihan $(1{,}01)^1$ sebaliknya: bunganya dibagi tapi periodenya tidak dikalikan.",
@@ -126,9 +126,9 @@
           "prompt": "Sebuah mesin seharga Rp20.000.000 diperkirakan bernilai sisa Rp4.000.000 setelah 8 tahun. Dengan metode garis lurus, penyusutan per tahunnya adalah ...",
           "options": [
             "Rp2.000.000",
-            "Rp2.500.000",
+            "Rp500.000",
             "Rp1.600.000",
-            "Rp500.000"
+            "Rp2.500.000"
           ],
           "answerIndex": 0,
           "solution": "Yang disusutkan adalah selisih antara nilai awal dan nilai sisa:\n\n$$20.000.000 - 4.000.000 = 16.000.000$$\n\nBagi rata selama umurnya:\n\n$$D = \\frac{16.000.000}{8} = 2.000.000 \\text{ per tahun}$$\n\nPilihan Rp2.500.000 muncul kalau nilai sisanya dilupakan, yaitu $\\frac{20.000.000}{8}$. Nilai sisa tidak ikut disusutkan karena barangnya memang masih bernilai segitu di akhir umurnya.",
@@ -176,13 +176,13 @@
           "format": "pilihan-ganda",
           "prompt": "Pada pinjaman dengan sistem anuitas, pernyataan yang benar tentang angsuran pertama adalah ...",
           "options": [
-            "bagian bunganya paling besar dibanding angsuran berikutnya",
+            "besarnya lebih kecil dari angsuran terakhir",
             "bagian pokoknya paling besar dibanding angsuran berikutnya",
             "seluruhnya berupa pokok pinjaman",
-            "besarnya lebih kecil dari angsuran terakhir"
+            "bagian bunganya paling besar dibanding angsuran berikutnya"
           ],
-          "answerIndex": 0,
-          "solution": "Bunga setiap periode dihitung dari **sisa pinjaman** saat itu. Di awal, sisa pinjaman masih utuh, sehingga bunganya paling besar.\n\nKarena total angsuran tetap, bagian bunga yang besar berarti bagian pokoknya kecil. Seiring pokok berkurang, bunganya ikut mengecil dan bagian pokoknya membesar.\n\nPilihan terakhir keliru karena pada anuitas seluruh angsuran besarnya sama persis — itulah definisinya.\n\nAkibat praktisnya: melunasi pinjaman lebih awal menghemat banyak bunga, karena bunga yang belum jatuh tempo tidak jadi dibayarkan.",
+          "answerIndex": 3,
+          "solution": "Bunga setiap periode dihitung dari **sisa pinjaman** saat itu. Di awal, sisa pinjaman masih utuh, sehingga bunganya paling besar.\n\nKarena total angsuran tetap, bagian bunga yang besar berarti bagian pokoknya kecil. Seiring pokok berkurang, bunganya ikut mengecil dan bagian pokoknya membesar.\n\nPilihan \"besarnya lebih kecil dari angsuran terakhir\" keliru karena pada anuitas seluruh angsuran besarnya sama persis — itulah definisinya.\n\nAkibat praktisnya: melunasi pinjaman lebih awal menghemat banyak bunga, karena bunga yang belum jatuh tempo tidak jadi dibayarkan.",
           "hint": "Bunga dihitung dari sisa pinjaman. Kapan sisanya paling besar?",
           "tags": [
             "utbk"
@@ -195,9 +195,9 @@
           "prompt": "Pinjaman Rp10.000.000 diangsur selama 12 bulan dengan bunga $12\\%$ per tahun. Nilai $i$ yang dipakai dalam rumus anuitas adalah ...",
           "options": [
             "$0{,}01$",
+            "$0{,}12 \\times 12$",
             "$0{,}12$",
-            "$1{,}2$",
-            "$0{,}12 \\times 12$"
+            "$1{,}2$"
           ],
           "answerIndex": 0,
           "solution": "Rumus anuitas memakai bunga **per periode angsuran**, bukan per tahun.\n\nKarena angsurannya bulanan dan bunganya $12\\%$ per tahun:\n\n$$i = \\frac{12\\%}{12} = 1\\% = 0{,}01$$\n\nDengan nilai ini, angsurannya menjadi:\n$$A = \\frac{10.000.000 \\times 0{,}01}{1 - (1{,}01)^{-12}} \\approx 888.488 \\text{ per bulan}$$\n\nKalau kamu memakai $0{,}12$, hasilnya akan jauh lebih besar dan tidak masuk akal — total pembayarannya bahkan melampaui dua kali pinjamannya.",
@@ -226,12 +226,12 @@
           "format": "pilihan-ganda",
           "prompt": "Perbedaan mendasar antara bunga tunggal dan bunga majemuk adalah ...",
           "options": [
+            "bunga majemuk tidak memakai persentase",
             "pada bunga majemuk, bunga yang sudah diterima ikut berbunga",
-            "bunga majemuk selalu memakai persentase yang lebih besar",
             "bunga tunggal hanya berlaku untuk jangka pendek",
-            "bunga majemuk tidak memakai persentase"
+            "bunga majemuk selalu memakai persentase yang lebih besar"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Bunga tunggal selalu dihitung dari **modal awal** saja. Berapa pun bunga yang sudah terkumpul, ia tidak ikut menghasilkan bunga.\n\nBunga majemuk dihitung dari **saldo terakhir**, sehingga bunga yang sudah diterima ikut berbunga di periode berikutnya.\n\nDari perbedaan satu kalimat inilah lahir perbedaan bentuk rumusnya: $(1+in)$ yang linear versus $(1+i)^n$ yang eksponen.\n\nPersentasenya sendiri bisa sama besar — yang berbeda adalah apa yang dikenai persentase itu.",
           "hint": "Dari mana masing-masing menghitung bunganya?",
           "tags": [
@@ -245,9 +245,9 @@
           "prompt": "Modal Rp2.000.000 dibungakan $6\\%$ per tahun selama 4 tahun. Selisih saldo akhir antara bunga majemuk dan bunga tunggal paling dekat dengan ...",
           "options": [
             "Rp45.000",
-            "Rp480.000",
+            "Rp5.000",
             "Rp525.000",
-            "Rp5.000"
+            "Rp480.000"
           ],
           "answerIndex": 0,
           "solution": "Hitung keduanya.\n\n**Bunga tunggal:**\n$$M = 2.000.000(1 + 0{,}06 \\times 4) = 2.000.000 \\times 1{,}24 = 2.480.000$$\n\n**Bunga majemuk:**\n$$M = 2.000.000(1{,}06)^4 = 2.000.000 \\times 1{,}26248 \\approx 2.524.954$$\n\n**Selisih:**\n$$2.524.954 - 2.480.000 = 44.954 \\approx \\text{Rp}45.000$$\n\nSelisihnya tampak kecil untuk empat tahun. Tapi karena bunga majemuk tumbuh eksponen, selisih yang sama pada jangka tiga puluh tahun akan berkembang menjadi jutaan rupiah.",

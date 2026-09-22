@@ -23,12 +23,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $(-4) \\times (-3)$ adalah ...",
           "options": [
-            "$-12$",
-            "$12$",
             "$-7$",
-            "$7$"
+            "$7$",
+            "$-12$",
+            "$12$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Kedua bilangan bertanda negatif, jadi tandanya sama — hasilnya positif.\n\n$4 \\times 3 = 12$, jadi $(-4)\\times(-3) = 12$.",
           "hint": "Tanda yang sama menghasilkan positif.",
           "tags": [
@@ -42,9 +42,9 @@
           "prompt": "Hasil dari $(-6) + (-5) - (-3)$ adalah ...",
           "options": [
             "$-8$",
-            "$-14$",
+            "$8$",
             "$-2$",
-            "$8$"
+            "$-14$"
           ],
           "answerIndex": 0,
           "solution": "Kerjakan dari kiri.\n\n$(-6) + (-5) = -11$ — ini penjumlahan, bukan perkalian, jadi hasilnya makin negatif.\n\n$-11 - (-3) = -11 + 3 = -8$ — mengurangi bilangan negatif berarti menambah.\n\nHasilnya $-8$.",
@@ -91,12 +91,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\frac{3}{4} + \\frac{1}{6}$ adalah ...",
           "options": [
-            "$\\frac{4}{10}$",
-            "$\\frac{11}{12}$",
             "$\\frac{1}{2}$",
-            "$\\frac{4}{24}$"
+            "$\\frac{4}{24}$",
+            "$\\frac{4}{10}$",
+            "$\\frac{11}{12}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Penjumlahan pecahan butuh penyebut yang sama. KPK dari 4 dan 6 adalah 12.\n\n$$\\frac{3}{4} = \\frac{9}{12}, \\qquad \\frac{1}{6} = \\frac{2}{12}$$\n\nJumlahkan pembilangnya saja:\n$$\\frac{9}{12} + \\frac{2}{12} = \\frac{11}{12}$$\n\nPilihan $\\frac{4}{10}$ muncul dari menjumlahkan pembilang dan penyebut langsung — itu keliru.",
           "hint": "Samakan penyebutnya dulu dengan KPK.",
           "tags": [
@@ -123,12 +123,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $12 \\div 3 \\times 2$ adalah ...",
           "options": [
-            "$2$",
             "$8$",
-            "$18$",
-            "$72$"
+            "$2$",
+            "$72$",
+            "$18$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Bagi dan kali sederajat, jadi dikerjakan dari kiri ke kanan.\n\n$12 \\div 3 = 4$\n$4 \\times 2 = 8$\n\nMengerjakan $3 \\times 2$ lebih dulu memberi $12 \\div 6 = 2$, dan itu keliru — perkalian tidak didahulukan atas pembagian.",
           "hint": "Keduanya sederajat — kerjakan sesuai urutan dari kiri.",
           "tags": [
@@ -141,12 +141,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $20 - 4 \\times (3+2)^2 \\div 10$ adalah ...",
           "options": [
-            "$0$",
-            "$10$",
+            "$16$",
             "$-10$",
-            "$16$"
+            "$10$",
+            "$0$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Kerjakan menurut urutan operasi.\n\nKurung dulu: $3+2 = 5$\nPangkat: $5^2 = 25$\nKali dan bagi dari kiri: $4 \\times 25 = 100$, lalu $100 \\div 10 = 10$\nTerakhir kurang: $20 - 10 = 10$",
           "hint": "Kurung dulu, lalu pangkat, baru kali/bagi.",
           "tags": [
@@ -174,11 +174,11 @@
           "prompt": "Bentuk persen dari $\\frac{3}{8}$ adalah ...",
           "options": [
             "$3{,}75\\%$",
-            "$37{,}5\\%$",
             "$38\\%$",
+            "$37{,}5\\%$",
             "$0{,}375\\%$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Ubah ke desimal dulu:\n$$\\frac{3}{8} = 3 \\div 8 = 0{,}375$$\n\nLalu kalikan 100 untuk jadi persen:\n$$0{,}375 \\times 100 = 37{,}5\\%$$\n\nPeriksa masuk akal: $\\frac{3}{8}$ sedikit kurang dari setengah, dan $37{,}5\\%$ memang kurang dari $50\\%$.",
           "hint": "Bagi dulu jadi desimal, baru kalikan 100.",
           "tags": [
@@ -192,9 +192,9 @@
           "prompt": "Nilai dari $25\\%$ dari $\\frac{4}{5}$ adalah ...",
           "options": [
             "$\\frac{1}{5}$",
-            "$\\frac{1}{4}$",
             "$\\frac{4}{20}$",
-            "$\\frac{5}{4}$"
+            "$\\frac{5}{4}$",
+            "$\\frac{1}{4}$"
           ],
           "answerIndex": 0,
           "solution": "$25\\% = \\frac{1}{4}$.\n\nKata \"dari\" berarti dikalikan:\n$$\\frac{1}{4} \\times \\frac{4}{5} = \\frac{4}{20} = \\frac{1}{5}$$\n\nPilihan $\\frac{4}{20}$ bernilai sama, tapi belum disederhanakan — soal meminta bentuk paling sederhana.",
@@ -239,12 +239,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bentuk paling sederhana dari $\\frac{18}{24}$ adalah ...",
           "options": [
-            "$\\frac{9}{12}$",
             "$\\frac{3}{4}$",
+            "$\\frac{2}{3}$",
             "$\\frac{6}{8}$",
-            "$\\frac{2}{3}$"
+            "$\\frac{9}{12}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "solution": "Cari FPB dari 18 dan 24.\n\n$18 = 2 \\times 3^2$\n$24 = 2^3 \\times 3$\nFPB-nya $2 \\times 3 = 6$.\n\nBagi keduanya dengan 6:\n$$\\frac{18 \\div 6}{24 \\div 6} = \\frac{3}{4}$$\n\nPilihan $\\frac{9}{12}$ dan $\\frac{6}{8}$ bernilai sama tapi belum paling sederhana.",
           "hint": "Bagi dengan FPB pembilang dan penyebutnya.",
           "tags": [

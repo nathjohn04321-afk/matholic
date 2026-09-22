@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x+y) = f(x) + f(y)$ untuk setiap $x, y$ real, maka nilai $f(0)$ adalah ...",
           "options": [
-            "$0$",
-            "$1$",
             "tidak dapat ditentukan",
-            "bergantung pada $f$"
+            "$0$",
+            "bergantung pada $f$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusikan $x = y = 0$:\n\n$$f(0+0) = f(0) + f(0)$$\n$$f(0) = 2f(0)$$\n\nKurangkan $f(0)$ dari kedua ruas:\n\n$$0 = f(0)$$\n\nJadi $f(0) = 0$, berlaku untuk **setiap** fungsi yang memenuhi persamaan itu — tanpa perlu tahu bentuknya sama sekali.\n\nInilah pola khas persamaan fungsional: substitusi yang tepat memberi informasi pasti tentang fungsi yang belum kamu kenali.",
           "hint": "Substitusikan nilai yang paling sederhana.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x) + f(1-x) = 1$ untuk setiap $x$ real, maka nilai $f\\left(\\frac{1}{2}\\right)$ adalah ...",
           "options": [
+            "$2$",
             "$\\frac{1}{2}$",
-            "$1$",
             "$0$",
-            "$2$"
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pilih nilai $x$ yang membuat kedua sukunya menjadi sama. Itu terjadi ketika $x = 1-x$, yaitu $x = \\frac{1}{2}$.\n\nSubstitusikan:\n\n$$f\\left(\\frac{1}{2}\\right) + f\\left(1 - \\frac{1}{2}\\right) = 1$$\n$$f\\left(\\frac{1}{2}\\right) + f\\left(\\frac{1}{2}\\right) = 1$$\n$$2f\\left(\\frac{1}{2}\\right) = 1 \\Rightarrow f\\left(\\frac{1}{2}\\right) = \\frac{1}{2}$$\n\nPerhatikan strateginya: mencari **titik tetap** dari transformasi $x \\mapsto 1-x$. Titik itulah yang meruntuhkan dua suku berbeda menjadi satu, dan teknik ini berulang di banyak soal.",
           "hint": "Cari nilai $x$ yang membuat kedua sukunya sama.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $2f(x) + f\\left(\\frac{1}{x}\\right) = 3x$ untuk setiap $x \\neq 0$, maka $f(x)$ sama dengan ...",
           "options": [
-            "$2x - \\frac{1}{x}$",
             "$x + \\frac{1}{x}$",
             "$3x - \\frac{1}{x}$",
+            "$2x - \\frac{1}{x}$",
             "$x - \\frac{2}{x}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Tulis persamaan aslinya sebagai (I). Lalu ganti $x$ dengan $\\frac{1}{x}$ untuk mendapat (II):\n\n$$2f(x) + f\\left(\\tfrac{1}{x}\\right) = 3x \\qquad (\\text{I})$$\n$$2f\\left(\\tfrac{1}{x}\\right) + f(x) = \\frac{3}{x} \\qquad (\\text{II})$$\n\nKalikan (I) dengan $2$, lalu kurangi (II):\n\n$$3f(x) = 6x - \\frac{3}{x}$$\n$$f(x) = 2x - \\frac{1}{x}$$\n\nCek dengan mensubstitusikan kembali ke (I): $2\\left(2x - \\frac{1}{x}\\right) + \\left(\\frac{2}{x} - x\\right) = 4x - \\frac{2}{x} + \\frac{2}{x} - x = 3x$ ✓",
           "hint": "Ganti $x$ dengan $\\frac{1}{x}$ untuk membentuk persamaan kedua.",
           "tags": [
@@ -123,12 +123,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x+y) = f(x)+f(y)$ untuk setiap bilangan bulat $x,y$ dan $f(1) = 3$, maka $f(5)$ adalah ...",
           "options": [
+            "$243$",
             "$15$",
-            "$8$",
             "$3$",
-            "$243$"
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Dari persamaannya, tambahkan satu demi satu:\n\n$$f(2) = f(1+1) = f(1)+f(1) = 6$$\n$$f(3) = f(2+1) = 6 + 3 = 9$$\n$$f(4) = 9 + 3 = 12$$\n$$f(5) = 12 + 3 = 15$$\n\nPola umumnya $f(n) = 3n$, jadi $f(5) = 15$.\n\nPilihan $8$ muncul kalau kamu menghitung $f(5) = f(1)+5$, dan $243$ kalau kamu mengira persamaannya bersifat perkalian. Perhatikan bahwa persamaan ini mengubah **penjumlahan masukan** menjadi **penjumlahan keluaran**, bukan perkalian.",
           "hint": "Bangun dari $f(1)$ dengan menambahkan satu demi satu.",
           "tags": [
@@ -141,12 +141,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(xy) = f(x) \\cdot f(y)$ untuk setiap $x,y$ real dan $f(2) = 4$, maka $f(4)$ adalah ...",
           "options": [
+            "$2$",
             "$16$",
-            "$8$",
             "$4$",
-            "$2$"
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusikan $x = y = 2$:\n\n$$f(4) = f(2 \\times 2) = f(2) \\cdot f(2) = 4 \\times 4 = 16$$\n\nPerhatikan bahwa kamu tidak perlu tahu bentuk $f$ sama sekali — persamaannya sendiri sudah cukup.\n\nKalau penasaran, salah satu fungsi yang memenuhi adalah $f(x) = x^2$, dan memang $(xy)^2 = x^2 y^2$ serta $f(2) = 4$ ✓. Dengan fungsi itu, $f(4) = 16$ ✓\n\nTapi $f(x)=x^2$ bukan satu-satunya kemungkinan, dan itulah kenapa mengerjakannya lewat persamaan lebih aman daripada menebak bentuknya.",
           "hint": "Substitusikan $x = y = 2$.",
           "tags": [
@@ -189,12 +189,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(f(x)) = x$ untuk setiap $x$ real, maka pernyataan yang pasti benar tentang $f$ adalah ...",
           "options": [
-            "$f$ injektif",
             "$f(x) = x$ untuk setiap $x$",
+            "$f(0) = 0$",
             "$f$ fungsi tetap",
-            "$f(0) = 0$"
+            "$f$ injektif"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Buktikan injektifnya. Andaikan $f(a) = f(b)$.\n\nTerapkan $f$ pada kedua ruas:\n$$f(f(a)) = f(f(b))$$\n\nMenurut persamaan yang diberikan, ruas kiri sama dengan $a$ dan ruas kanan sama dengan $b$:\n$$a = b$$\n\nJadi $f$ injektif.\n\nPilihan lainnya tidak dijamin. Fungsi $f(x) = -x$ memenuhi $f(f(x)) = x$ padahal ia bukan $f(x)=x$. Fungsi tetap jelas gagal karena $f(f(x))$ akan tetap bernilai tetap. Dan $f(x) = 1-x$ memenuhi persamaannya tapi $f(0) = 1 \\neq 0$.",
           "hint": "Terapkan $f$ pada kedua ruas dari $f(a) = f(b)$.",
           "tags": [
@@ -221,12 +221,12 @@
           "format": "pilihan-ganda",
           "prompt": "Fungsi yang memenuhi $f(xy) = f(x)f(y)$ untuk setiap $x,y$ real adalah ...",
           "options": [
-            "$f(x) = x^2$",
             "$f(x) = x + 1$",
-            "$f(x) = 2x$",
-            "$f(x) = x - 1$"
+            "$f(x) = x^2$",
+            "$f(x) = x - 1$",
+            "$f(x) = 2x$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Periksa $f(x) = x^2$:\n\n$$f(xy) = (xy)^2 = x^2 y^2 = f(x) \\cdot f(y)$$\n\nKedua ruas cocok, jadi $f(x)=x^2$ memenuhi.\n\nPeriksa yang lain dengan $x = y = 2$:\n\n$f(x)=x+1$: $f(4) = 5$ tapi $f(2)f(2) = 9$ ✗\n\n$f(x)=2x$: $f(4) = 8$ tapi $f(2)f(2) = 16$ ✗\n\n$f(x)=x-1$: $f(4) = 3$ tapi $f(2)f(2) = 1$ ✗\n\nCara memeriksa yang paling cepat memang begitu: ambil satu pasangan angka sederhana, lalu bandingkan kedua ruas.",
           "hint": "Uji tiap pilihan dengan $x = y = 2$.",
           "tags": [
@@ -239,12 +239,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada soal yang meminta \"cari semua fungsi yang memenuhi ...\", menunjukkan bahwa $f(x)=2x$ memenuhi persamaannya berarti ...",
           "options": [
-            "baru menyelesaikan separuh soal",
             "sudah menyelesaikan seluruh soal",
-            "membuktikan tidak ada fungsi lain",
-            "membuktikan $f$ injektif"
+            "membuktikan $f$ injektif",
+            "baru menyelesaikan separuh soal",
+            "membuktikan tidak ada fungsi lain"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Soal \"cari semua\" menuntut dua pekerjaan yang terpisah.\n\n**Sudah dikerjakan:** menunjukkan $f(x)=2x$ memang memenuhi persamaannya. Ini membuktikan sedikitnya ada satu jawaban.\n\n**Belum dikerjakan:** membuktikan tidak ada fungsi lain yang juga memenuhi. Tanpa bagian ini, kamu belum menjawab kata \"semua\".\n\nKedua arah itu memerlukan cara berbeda. Yang pertama cukup dengan substitusi; yang kedua menuntut penyimpulan dari persamaannya sampai bentuk $f$ terpaksa seperti itu.\n\nDi olimpiade, bagian kedua inilah yang biasanya memuat sebagian besar nilainya — dan bagian yang paling sering dilewatkan.",
           "hint": "Ada berapa hal yang dituntut oleh kata \"semua\"?",
           "tags": [

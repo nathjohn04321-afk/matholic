@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Di antara berapa orang minimal kita bisa memastikan ada dua orang yang lahir pada bulan yang sama?",
           "options": [
-            "$13$",
             "$12$",
+            "$13$",
             "$24$",
             "$7$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ada $12$ bulan, yang berperan sebagai sarang.\n\nDengan $12$ orang, masih **mungkin** semuanya lahir di bulan berbeda — satu orang per bulan. Jadi $12$ belum cukup.\n\nDengan $13$ orang, sarangnya kehabisan tempat. Berapa pun susunannya, pasti ada bulan yang menampung dua orang.\n\nPerhatikan kata \"minimal\" dan \"memastikan\" pada soalnya. Yang dicari bukan kemungkinan, melainkan jaminan — dan jaminan baru muncul di $n+1 = 13$.",
           "hint": "Berapa banyak bulan dalam setahun?",
           "tags": [
@@ -44,8 +44,8 @@
           "prompt": "Dari bilangan $1$ sampai $100$, berapa banyak bilangan minimal yang harus dipilih agar pasti ada dua di antaranya yang selisihnya kelipatan $9$?",
           "options": [
             "$10$",
-            "$9$",
             "$12$",
+            "$9$",
             "$11$"
           ],
           "answerIndex": 0,
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Lima titik ditempatkan di dalam persegi berukuran $2 \\times 2$. Pernyataan yang pasti benar adalah ...",
           "options": [
-            "ada dua titik yang berjarak paling jauh $\\sqrt{2}$",
             "ada dua titik yang berjarak paling jauh $1$",
-            "kelima titik membentuk segi lima",
-            "ada tiga titik yang segaris"
+            "ada dua titik yang berjarak paling jauh $\\sqrt{2}$",
+            "ada tiga titik yang segaris",
+            "kelima titik membentuk segi lima"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Bagi persegi $2 \\times 2$ menjadi empat persegi kecil berukuran $1 \\times 1$. Itulah sarangnya.\n\nAda $5$ titik dan $4$ daerah, jadi menurut prinsip sarang merpati pasti ada satu persegi kecil yang memuat dua titik.\n\nDua titik dalam persegi $1 \\times 1$ paling jauh berjarak sepanjang diagonalnya:\n\n$$\\sqrt{1^2 + 1^2} = \\sqrt{2}$$\n\nJadi ada dua titik berjarak paling jauh $\\sqrt{2}$.\n\nPilihan dengan batas $1$ terlalu kuat — dua titik di sudut berlawanan persegi kecil berjarak $\\sqrt{2} \\approx 1{,}41$, yang melebihi $1$.",
           "hint": "Bagi perseginya menjadi beberapa daerah lebih dulu.",
           "tags": [
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Di papan tertulis bilangan $1$ sampai $10$. Setiap langkah, dua bilangan dihapus dan diganti dengan selisihnya. Bilangan terakhir yang tersisa ...",
           "options": [
-            "pasti ganjil",
-            "pasti genap",
             "bisa ganjil atau genap",
-            "pasti nol"
+            "pasti ganjil",
+            "pasti nol",
+            "pasti genap"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Perhatikan paritas jumlah seluruh bilangan di papan.\n\nAwalnya: $1+2+\\cdots+10 = \\frac{10 \\times 11}{2} = 55$, yaitu **ganjil**.\n\nSaat $a$ dan $b$ diganti dengan $a-b$, jumlahnya berubah sebesar:\n\n$$(a-b) - (a+b) = -2b$$\n\nPerubahan itu selalu genap, jadi paritas jumlahnya tidak pernah berubah.\n\nSetelah sembilan langkah tersisa satu bilangan, dan bilangan itu adalah jumlah seluruh isi papan saat itu — yang masih ganjil.\n\nJadi hasil akhirnya pasti ganjil, dan $0$ mustahil.",
           "hint": "Periksa paritas jumlah seluruh bilangannya.",
           "tags": [
@@ -171,9 +171,9 @@
           "prompt": "Sebuah bidak berada di titik $(0,0)$ dan setiap langkah bergerak diagonal sejauh satu satuan, yaitu mengubah kedua koordinatnya masing-masing sebesar $+1$ atau $-1$. Bidak itu tidak akan pernah mencapai titik ...",
           "options": [
             "$(1,0)$",
+            "$(0,4)$",
             "$(2,0)$",
-            "$(3,3)$",
-            "$(0,4)$"
+            "$(3,3)$"
           ],
           "answerIndex": 0,
           "solution": "Perhatikan besaran $x + y$.\n\nAwalnya $0 + 0 = 0$, yaitu genap. Setiap langkah mengubah $x$ sebesar $\\pm 1$ dan $y$ sebesar $\\pm 1$, jadi $x+y$ berubah sebesar $-2$, $0$, atau $+2$ — selalu genap.\n\nMaka $x+y$ selalu tetap genap, di langkah ke berapa pun.\n\nPeriksa keempat pilihan:\n\n$(1,0)$: $x+y = 1$, **ganjil** — mustahil\n\n$(2,0)$: $x+y = 2$, genap ✓\n\n$(3,3)$: $x+y = 6$, genap ✓\n\n$(0,4)$: $x+y = 4$, genap ✓\n\nJadi hanya $(1,0)$ yang tak terjangkau.",
@@ -218,12 +218,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dari $11$ bilangan bulat yang dipilih sembarang, pasti ada dua di antaranya yang ...",
           "options": [
-            "digit satuannya sama",
             "jumlahnya genap",
+            "digit satuannya sama",
             "selisihnya $1$",
             "hasil kalinya ganjil"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Digit satuan sebuah bilangan bulat hanya punya $10$ kemungkinan: $0$ sampai $9$. Itulah sarangnya.\n\nDengan $11$ bilangan dan hanya $10$ kemungkinan digit satuan, pasti ada dua bilangan yang digit satuannya sama.\n\n$$11 > 10$$\n\nPilihan lainnya tidak dijamin. Selisih $1$ misalnya jelas gagal untuk bilangan $10, 20, 30, \\ldots, 110$ — sebelas bilangan yang tak satu pun berselisih $1$.",
           "hint": "Ada berapa kemungkinan digit satuan?",
           "tags": [
@@ -236,12 +236,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah kotak berisi bola merah, biru, dan hijau. Berapa banyak bola minimal yang harus diambil agar pasti mendapat $4$ bola berwarna sama?",
           "options": [
+            "$7$",
             "$10$",
-            "$12$",
             "$4$",
-            "$7$"
+            "$12$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pikirkan keadaan terburuk: ambil sebanyak mungkin tanpa pernah mencapai empat warna sama.\n\nPaling banyak $3$ bola dari masing-masing warna:\n\n$$3 \\times 3 = 9 \\text{ bola}$$\n\nDengan $9$ bola, masih mungkin tiap warna baru mencapai tiga. Tapi bola ke-$10$ harus masuk salah satu dari tiga warna itu, dan warna itu langsung mencapai empat.\n\n$$9 + 1 = 10$$\n\nRumus umumnya $k(r-1)+1$ dengan $k$ banyaknya warna dan $r$ banyaknya bola sewarna yang diminta. Di sini $3(4-1)+1 = 10$.",
           "hint": "Berapa banyak bola bisa diambil tanpa pernah mencapai empat warna sama?",
           "tags": [

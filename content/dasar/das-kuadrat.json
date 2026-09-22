@@ -33,12 +33,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya akar real dari $x^2 - 4x + 7 = 0$ adalah ...",
           "options": [
-            "$0$",
+            "Tak hingga",
             "$1$",
             "$2$",
-            "Tak hingga"
+            "$0$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung diskriminannya dengan $a=1$, $b=-4$, $c=7$:\n$D = (-4)^2 - 4(1)(7) = 16 - 28 = -12$\n\nKarena $D < 0$, tidak ada akar real. Jawabannya $0$.",
           "hint": "Hitung $D$ saja, tidak perlu mencari akarnya.",
           "tags": [
@@ -51,10 +51,10 @@
           "format": "pilihan-ganda",
           "prompt": "Agar $x^2 + px + 9 = 0$ punya akar kembar, nilai $p$ yang memenuhi adalah ...",
           "options": [
-            "$p = 3$ saja",
+            "$p = \\pm 3$",
             "$p = \\pm 6$",
-            "$p = 6$ saja",
-            "$p = \\pm 3$"
+            "$p = 3$ saja",
+            "$p = 6$ saja"
           ],
           "answerIndex": 1,
           "solution": "Akar kembar berarti $D = 0$.\n\n$D = p^2 - 4(1)(9) = p^2 - 36$\n\nSet $D = 0$:\n$p^2 = 36$\n$p = 6$ atau $p = -6$\n\nKeduanya memenuhi, jadi $p = \\pm 6$. Banyak orang lupa akar negatifnya.",
@@ -83,12 +83,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $x_1$ dan $x_2$ akar dari $2x^2 - 6x + 4 = 0$, maka $x_1 + x_2$ adalah ...",
           "options": [
-            "$-3$",
-            "$3$",
             "$2$",
-            "$-2$"
+            "$-2$",
+            "$3$",
+            "$-3$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Dengan $a=2$, $b=-6$:\n$$x_1 + x_2 = -\\frac{b}{a} = -\\frac{-6}{2} = 3$$\n\nDua tanda minus saling meniadakan, hasilnya positif 3.",
           "hint": "Perhatikan $b$ sendiri sudah negatif.",
           "tags": [
@@ -131,12 +131,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bentuk faktor dari $x^2 - 7x + 12$ adalah ...",
           "options": [
-            "$(x-3)(x-4)$",
-            "$(x+3)(x+4)$",
+            "$(x-1)(x-12)$",
             "$(x-2)(x-6)$",
-            "$(x-1)(x-12)$"
+            "$(x+3)(x+4)$",
+            "$(x-3)(x-4)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Cari dua bilangan yang dikali jadi 12 dan dijumlah jadi $-7$.\n\nKarena hasil kali positif dan jumlah negatif, keduanya negatif.\nPasangan: $-3$ dan $-4$, karena $(-3)(-4)=12$ dan $-3-4=-7$.\n\nJadi $(x-3)(x-4)$.\n\nPilihan $(x-2)(x-6)$ memberi jumlah $-8$, bukan $-7$.",
           "hint": "Hasil kalinya 12 — daftarkan pasangannya, lalu cek jumlahnya.",
           "tags": [
@@ -149,8 +149,8 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $x^2 + 2x - 15 = 0$ adalah ...",
           "options": [
-            "$\\{3, 5\\}$",
             "$\\{-3, 5\\}$",
+            "$\\{3, 5\\}$",
             "$\\{3, -5\\}$",
             "$\\{-3, -5\\}$"
           ],
@@ -182,11 +182,11 @@
           "prompt": "Nilai minimum dari $f(x) = x^2 - 6x + 5$ adalah ...",
           "options": [
             "$3$",
-            "$-4$",
             "$5$",
-            "$-3$"
+            "$-3$",
+            "$-4$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Karena $a = 1 > 0$, parabola membuka ke atas dan punya nilai minimum.\n\nLetak minimumnya:\n$$x = -\\frac{b}{2a} = -\\frac{-6}{2} = 3$$\n\nSubstitusikan ke fungsinya:\n$f(3) = 9 - 18 + 5 = -4$\n\nJadi nilai minimumnya $-4$, terjadi di $x = 3$. Pilihan $3$ adalah letaknya, bukan nilainya.",
           "hint": "Cari dulu letak $x$-nya, lalu substitusikan.",
           "tags": [
@@ -200,12 +200,12 @@
           "format": "pilihan-ganda",
           "prompt": "Grafik $y = -2x^2 + 4x + 1$ memotong sumbu-$y$ di titik ...",
           "options": [
-            "$(0, 1)$",
             "$(1, 0)$",
             "$(0, -2)$",
+            "$(0, 1)$",
             "$(0, 4)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Titik potong sumbu-$y$ terjadi saat $x = 0$.\n\nSubstitusikan:\n$y = -2(0)^2 + 4(0) + 1 = 1$\n\nJadi titiknya $(0, 1)$ — yaitu nilai $c$.",
           "hint": "Sumbu-$y$ berarti $x = 0$.",
           "tags": [
@@ -232,12 +232,12 @@
           "format": "pilihan-ganda",
           "prompt": "Himpunan penyelesaian $x^2 = 5x$ adalah ...",
           "options": [
-            "$\\{5\\}$",
-            "$\\{0, 5\\}$",
+            "$\\{-5, 5\\}$",
             "$\\{0\\}$",
-            "$\\{-5, 5\\}$"
+            "$\\{0, 5\\}$",
+            "$\\{5\\}$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "solution": "Jangan bagi dengan $x$ — itu membuang akar.\n\nPindahkan semua ke satu ruas:\n$x^2 - 5x = 0$\n\nFaktorkan:\n$x(x - 5) = 0$\n\nHasil kali nol berarti salah satu faktornya nol:\n$x = 0$ atau $x = 5$\n\nKeduanya benar. Membagi dengan $x$ akan menghilangkan $x=0$.",
           "hint": "Pindahkan semuanya ke satu ruas dulu, jangan dibagi.",
           "tags": [

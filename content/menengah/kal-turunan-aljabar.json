@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Turunan dari $f(x) = 3x^4$ adalah ...",
           "options": [
-            "$12x^3$",
-            "$3x^3$",
+            "$4x^3$",
             "$12x^4$",
-            "$4x^3$"
+            "$12x^3$",
+            "$3x^3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai aturan pangkat: turunkan pangkatnya menjadi pengali, lalu kurangi pangkatnya satu.\n$$\\frac{d}{dx}(ax^n) = anx^{n-1}$$\n\nDengan $a=3$ dan $n=4$:\n$$3 \\times 4 \\times x^3 = 12x^3$$",
           "hint": "Pangkatnya turun jadi pengali di depan.",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $f(x) = x^3 - 4x^2 + 2x - 7$, maka $f'(2)$ adalah ...",
           "options": [
-            "$-2$",
             "$2$",
             "$6$",
-            "$-7$"
+            "$-7$",
+            "$-2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Turunkan suku demi suku:\n$$f'(x) = 3x^2 - 8x + 2$$\n\nSuku tetap $-7$ turunannya nol, karena bilangan tetap tidak punya kecuraman.\n\nSubstitusikan $x = 2$:\n$$f'(2) = 3(4) - 8(2) + 2 = 12 - 16 + 2 = -2$$\n\nNilai negatif berarti kurvanya sedang turun di titik itu.",
           "hint": "Turunkan dulu, baru substitusikan.",
           "tags": [
@@ -77,12 +77,12 @@
           "format": "pilihan-ganda",
           "prompt": "Turunan dari $y = (x^2+1)^3$ di $x = 1$ adalah ...",
           "options": [
-            "$24$",
-            "$12$",
             "$3$",
+            "$12$",
+            "$24$",
             "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai aturan rantai. Lapisan luar pangkat tiga, lapisan dalam $x^2+1$:\n$$y' = 3(x^2+1)^2 \\cdot 2x$$\n\nJangan lupa faktor $2x$ — itu turunan bagian dalamnya.\n\nSubstitusikan $x=1$:\n$$3(2)^2 \\cdot 2 = 3(4)(2) = 24$$\n\nTanpa faktor $2x$, hasilnya 12 — persis separuhnya, dan itu kesalahan tersering.",
           "hint": "Jangan lupa mengalikan turunan bagian dalam.",
           "tags": [
@@ -96,9 +96,9 @@
           "prompt": "Turunan dari $y = \\frac{2x+1}{x-3}$ adalah ...",
           "options": [
             "$\\frac{-7}{(x-3)^2}$",
-            "$\\frac{7}{(x-3)^2}$",
             "$\\frac{2}{1}$",
-            "$\\frac{5}{(x-3)^2}$"
+            "$\\frac{5}{(x-3)^2}$",
+            "$\\frac{7}{(x-3)^2}$"
           ],
           "answerIndex": 0,
           "solution": "Pakai aturan hasil bagi dengan $u = 2x+1$ dan $v = x-3$:\n$$u' = 2, \\qquad v' = 1$$\n\n$$y' = \\frac{u'v - uv'}{v^2} = \\frac{2(x-3) - (2x+1)(1)}{(x-3)^2}$$\n\nJabarkan pembilangnya:\n$$= \\frac{2x - 6 - 2x - 1}{(x-3)^2} = \\frac{-7}{(x-3)^2}$$\n\nMenukar urutan di pembilang memberi $+7$, yang keliru tandanya.",
@@ -127,12 +127,12 @@
           "format": "pilihan-ganda",
           "prompt": "Gradien garis singgung kurva $y = x^2 - 3x$ di titik berabsis 2 adalah ...",
           "options": [
-            "$1$",
-            "$-2$",
+            "$-3$",
             "$4$",
-            "$-3$"
+            "$-2$",
+            "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Turunkan dulu:\n$$y' = 2x - 3$$\n\nSubstitusikan $x = 2$:\n$$y'(2) = 4 - 3 = 1$$\n\nGradiennya $1$.\n\nPerhatikan $y(2) = 4-6 = -2$ adalah koordinat $y$ titik singgungnya, bukan gradiennya. Keduanya sering tertukar.",
           "hint": "Gradien berasal dari turunannya, bukan dari fungsinya.",
           "tags": [
@@ -178,8 +178,8 @@
           "options": [
             "$4$",
             "$1$",
-            "$0$",
-            "$3$"
+            "$3$",
+            "$0$"
           ],
           "answerIndex": 0,
           "solution": "Cari titik stasionernya:\n$$f'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3) = 0$$\n$$x = 1 \\quad \\text{atau} \\quad x = 3$$\n\nTentukan jenisnya lewat turunan kedua:\n$$f''(x) = 6x - 12$$\n$$f''(1) = -6 < 0 \\Rightarrow \\text{maksimum}$$\n\nHitung **nilainya** dengan $f$:\n$$f(1) = 1 - 6 + 9 = 4$$\n\nJadi nilai maksimumnya $4$, terjadi di $x=1$. Menjawab 1 berarti memberi letaknya, bukan nilainya.",
@@ -195,9 +195,9 @@
           "prompt": "Jika $f'(a) = 0$ dan $f''(a) > 0$, maka di $x = a$ fungsi mencapai ...",
           "options": [
             "minimum lokal",
-            "maksimum lokal",
+            "tidak dapat ditentukan",
             "titik belok",
-            "tidak dapat ditentukan"
+            "maksimum lokal"
           ],
           "answerIndex": 0,
           "solution": "Turunan pertama nol berarti garis singgungnya mendatar — titik stasioner.\n\nTurunan kedua positif berarti kurvanya membuka ke atas di titik itu, seperti dasar mangkuk.\n\nDasar mangkuk adalah titik terendah, jadi ini **minimum lokal**.\n\nCara mengingatnya: $f''>0$ berarti gradiennya sedang naik — dari negatif, lewat nol, ke positif. Itu pola lembah, bukan puncak.",
@@ -227,9 +227,9 @@
           "prompt": "Turunan dari $y = (2x+1)^3$ adalah ...",
           "options": [
             "$6(2x+1)^2$",
-            "$3(2x+1)^2$",
+            "$6(2x+1)^3$",
             "$2(2x+1)^2$",
-            "$6(2x+1)^3$"
+            "$3(2x+1)^2$"
           ],
           "answerIndex": 0,
           "solution": "Pakai aturan rantai. Lapisan luar pangkat tiga, lapisan dalam $2x+1$:\n$$y' = 3(2x+1)^2 \\cdot \\frac{d}{dx}(2x+1) = 3(2x+1)^2 \\cdot 2$$\n$$= 6(2x+1)^2$$\n\nPilihan $3(2x+1)^2$ adalah jawaban tanpa mengalikan turunan bagian dalam — separuh dari yang benar.\n\nPeriksa di $x=0$: jabaran $(2x+1)^3 = 8x^3+12x^2+6x+1$ punya turunan $24x^2+24x+6$, yang di $x=0$ bernilai 6. Dan $6(1)^2 = 6$. Cocok.",
@@ -245,12 +245,12 @@
           "format": "pilihan-ganda",
           "prompt": "Turunan dari $f(x) = 5$ adalah ...",
           "options": [
-            "$0$",
             "$5$",
             "$5x$",
+            "$0$",
             "$1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Fungsi $f(x) = 5$ adalah garis mendatar — nilainya sama untuk setiap $x$.\n\nGaris mendatar punya gradien nol, dan turunan adalah gradien.\n\n$$f'(x) = 0$$\n\nInilah kenapa suku tetap selalu lenyap saat sebuah polinomial diturunkan.",
           "hint": "Seberapa curam garis mendatar?",
           "tags": [

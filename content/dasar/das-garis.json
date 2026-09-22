@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Gradien garis melalui $(1,2)$ dan $(4,11)$ adalah ...",
           "options": [
-            "$3$",
-            "$\\frac{1}{3}$",
             "$-3$",
+            "$\\frac{1}{3}$",
+            "$3$",
             "$9$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus gradien:\n$$m = \\frac{11 - 2}{4 - 1} = \\frac{9}{3} = 3$$\n\nUrutan titiknya boleh dibalik asal konsisten di pembilang dan penyebut:\n$$\\frac{2-11}{1-4} = \\frac{-9}{-3} = 3$$\n\nHasilnya sama.",
           "hint": "Selisih $y$ dibagi selisih $x$, dengan urutan yang konsisten.",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Gradien garis $2x + 4y = 8$ adalah ...",
           "options": [
-            "$-\\frac{1}{2}$",
+            "$2$",
             "$\\frac{1}{2}$",
-            "$-2$",
-            "$2$"
+            "$-\\frac{1}{2}$",
+            "$-2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Ubah ke bentuk $y = mx + c$ supaya gradiennya terbaca langsung.\n\n$4y = -2x + 8$\n$y = -\\frac{1}{2}x + 2$\n\nGradiennya $-\\frac{1}{2}$.\n\nCara cepat untuk $ax+by=c$: $m = -\\frac{a}{b} = -\\frac{2}{4} = -\\frac{1}{2}$.",
           "hint": "Ubah dulu ke bentuk $y = mx + c$.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan garis bergradien 2 yang melalui $(3,1)$ adalah ...",
           "options": [
-            "$y = 2x - 5$",
+            "$y = 2x + 7$",
             "$y = 2x + 5$",
-            "$y = 2x - 1$",
-            "$y = 2x + 7$"
+            "$y = 2x - 5$",
+            "$y = 2x - 1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai $y - y_1 = m(x - x_1)$:\n$$y - 1 = 2(x - 3)$$\n$$y - 1 = 2x - 6$$\n$$y = 2x - 5$$\n\nPeriksa dengan titik $(3,1)$:\n$2(3) - 5 = 1$. Cocok.",
           "hint": "Masukkan ke rumus titik-gradien lalu rapikan.",
           "tags": [
@@ -125,9 +125,9 @@
           "prompt": "Gradien garis yang tegak lurus dengan $y = 3x - 4$ adalah ...",
           "options": [
             "$-\\frac{1}{3}$",
-            "$-3$",
             "$\\frac{1}{3}$",
-            "$3$"
+            "$3$",
+            "$-3$"
           ],
           "answerIndex": 0,
           "solution": "Gradien garis yang diketahui adalah $3$.\n\nSyarat tegak lurus:\n$$m_1 \\times m_2 = -1$$\n$$3 \\times m_2 = -1$$\n$$m_2 = -\\frac{1}{3}$$\n\nCara praktis: balik $3$ menjadi $\\frac{1}{3}$, lalu ganti tandanya.\n\nPilihan $-3$ salah — hasil kalinya $-9$, bukan $-1$.",
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Garis $y = 2x + 1$ dan $y = 2x - 7$ adalah dua garis yang ...",
           "options": [
-            "sejajar",
-            "tegak lurus",
             "berpotongan di satu titik",
+            "tegak lurus",
+            "sejajar",
             "berimpit"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kedua garis punya gradien sama, yaitu $2$.\n\nGradien sama berarti kecurannya sama, jadi keduanya **sejajar**.\n\nKeduanya tidak berimpit karena titik potong sumbu-$y$-nya berbeda ($1$ dan $-7$). Garis sejajar yang berbeda tidak pernah berpotongan.",
           "hint": "Bandingkan gradien keduanya.",
           "tags": [
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jarak antara titik $(1,2)$ dan $(4,6)$ adalah ...",
           "options": [
+            "$\\sqrt{7}$",
             "$5$",
             "$7$",
-            "$\\sqrt{7}$",
             "$25$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Hitung kedua selisihnya:\n$\\Delta x = 4 - 1 = 3$\n$\\Delta y = 6 - 2 = 4$\n\nPakai rumus jarak:\n$$d = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$$\n\nIni tripel $(3,4,5)$ lagi.",
           "hint": "Selisihnya membentuk segitiga siku-siku.",
           "tags": [
@@ -195,8 +195,8 @@
           "options": [
             "$(2,3)$",
             "$(4,6)$",
-            "$(-4,2)$",
-            "$(2,2)$"
+            "$(2,2)$",
+            "$(-4,2)$"
           ],
           "answerIndex": 0,
           "solution": "Rata-ratakan tiap koordinat.\n\n$$x = \\frac{-2+6}{2} = \\frac{4}{2} = 2$$\n$$y = \\frac{5+1}{2} = \\frac{6}{2} = 3$$\n\nTitik tengahnya $(2,3)$.\n\nPeriksa kewajaran: $2$ memang di antara $-2$ dan $6$, dan $3$ di antara $5$ dan $1$. Masuk akal.",
@@ -225,12 +225,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan garis tegak lurus dengan $2x + y = 5$ yang melalui $(4,-1)$ adalah ...",
           "options": [
-            "$y = \\frac{1}{2}x - 3$",
             "$y = -2x + 7$",
+            "$y = \\frac{1}{2}x - 3$",
             "$y = \\frac{1}{2}x + 1$",
             "$y = 2x - 9$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Gradien garis yang diketahui: dari $y = -2x + 5$, yaitu $-2$.\n\nGradien tegak lurusnya:\n$$-2 \\times m_2 = -1 \\Rightarrow m_2 = \\tfrac{1}{2}$$\n\nSusun lewat titik $(4,-1)$:\n$$y + 1 = \\tfrac{1}{2}(x - 4)$$\n$$y + 1 = \\tfrac{1}{2}x - 2$$\n$$y = \\tfrac{1}{2}x - 3$$\n\nPeriksa: $\\tfrac{1}{2}(4) - 3 = -1$. Cocok.",
           "hint": "Cari gradien tegak lurusnya dulu, baru susun lewat titiknya.",
           "tags": [
@@ -243,12 +243,12 @@
           "format": "pilihan-ganda",
           "prompt": "Garis melalui $(0,-2)$ dan sejajar $y = 3x + 7$. Persamaannya adalah ...",
           "options": [
-            "$y = 3x - 2$",
-            "$y = 3x + 2$",
+            "$y = -3x - 2$",
             "$y = -\\frac{1}{3}x - 2$",
-            "$y = -3x - 2$"
+            "$y = 3x - 2$",
+            "$y = 3x + 2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Sejajar berarti gradiennya sama, yaitu $3$.\n\nTitik $(0,-2)$ berada di sumbu-$y$, jadi $c = -2$ terbaca langsung.\n\n$$y = 3x - 2$$\n\nPeriksa: saat $x = 0$, $y = -2$. Cocok.",
           "hint": "Sejajar berarti gradien sama — dan titiknya ada di sumbu-$y$.",
           "tags": [

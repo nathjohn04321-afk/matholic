@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Peluang muncul mata dadu genap pada pelemparan satu dadu adalah ...",
           "options": [
-            "$\\frac{1}{2}$",
-            "$\\frac{1}{3}$",
             "$\\frac{1}{6}$",
-            "$\\frac{2}{3}$"
+            "$\\frac{2}{3}$",
+            "$\\frac{1}{3}$",
+            "$\\frac{1}{2}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Seluruh hasil yang mungkin: $1,2,3,4,5,6$ — ada 6.\n\nHasil yang genap: $2,4,6$ — ada 3.\n\n$$P(\\text{genap}) = \\frac{3}{6} = \\frac{1}{2}$$",
           "hint": "Ada berapa mata dadu yang genap?",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dua dadu dilempar bersamaan. Peluang jumlah mata dadunya 7 adalah ...",
           "options": [
-            "$\\frac{1}{6}$",
             "$\\frac{1}{12}$",
             "$\\frac{7}{36}$",
+            "$\\frac{1}{6}$",
             "$\\frac{1}{36}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Seluruh hasil yang mungkin: $6 \\times 6 = 36$ pasangan.\n\nPasangan yang berjumlah 7:\n$(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ — ada 6.\n\n$$P = \\frac{6}{36} = \\frac{1}{6}$$\n\nPerhatikan $(1,6)$ dan $(6,1)$ dihitung terpisah, karena kedua dadu itu berbeda benda.",
           "hint": "Daftarkan pasangannya, dan bedakan dadu pertama dari kedua.",
           "tags": [
@@ -77,12 +77,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $P(A) = 0{,}4$, $P(B) = 0{,}5$, dan $P(A \\cap B) = 0{,}2$. Nilai $P(A \\cup B)$ adalah ...",
           "options": [
-            "$0{,}7$",
             "$0{,}9$",
             "$1{,}1$",
+            "$0{,}7$",
             "$0{,}2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus gabungan:\n$$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$$\n$$= 0{,}4 + 0{,}5 - 0{,}2 = 0{,}7$$\n\nSuku pengurangan itu penting. Tanpanya hasilnya $0{,}9$ — terlalu besar, karena bagian irisannya terhitung dua kali.",
           "hint": "Jangan lupa mengurangi bagian yang terhitung dua kali.",
           "tags": [
@@ -144,9 +144,9 @@
           "prompt": "Jika peluang hujan besok $0{,}3$, maka peluang tidak hujan adalah ...",
           "options": [
             "$0{,}7$",
+            "$1{,}3$",
             "$0{,}3$",
-            "$-0{,}3$",
-            "$1{,}3$"
+            "$-0{,}3$"
           ],
           "answerIndex": 0,
           "solution": "Hujan dan tidak hujan adalah dua kejadian yang saling melengkapi — salah satunya pasti terjadi, dan tidak mungkin keduanya bersamaan.\n\n$$P(\\text{tidak hujan}) = 1 - 0{,}3 = 0{,}7$$\n\nJumlah keduanya selalu 1. Itulah arti komplemen.",
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Mengambil dua kartu berurutan dari satu set kartu **tanpa pengembalian** adalah contoh kejadian yang ...",
           "options": [
-            "tidak saling bebas",
             "saling bebas",
+            "mustahil",
             "saling lepas",
-            "mustahil"
+            "tidak saling bebas"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Setelah kartu pertama diambil, jumlah kartu tersisa berubah dari 52 menjadi 51 — dan komposisinya juga berubah.\n\nPeluang pengambilan kedua bergantung pada apa yang terambil pertama. Jadi kedua kejadian **tidak saling bebas**.\n\nKalau kartunya dikembalikan dan dikocok ulang, barulah keduanya saling bebas.",
           "hint": "Apakah pengambilan pertama mengubah isi setnya?",
           "tags": [
@@ -193,12 +193,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah kartu diambil dari 52 kartu. Peluang terambil kartu hati adalah ...",
           "options": [
-            "$\\frac{1}{4}$",
-            "$\\frac{1}{13}$",
             "$\\frac{1}{52}$",
-            "$\\frac{13}{4}$"
+            "$\\frac{1}{4}$",
+            "$\\frac{13}{4}$",
+            "$\\frac{1}{13}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Satu set kartu berisi 52 kartu, terbagi rata dalam 4 jenis: hati, wajik, keriting, sekop.\n\nKartu hati ada 13:\n$$P = \\frac{13}{52} = \\frac{1}{4}$$\n\nMasuk akal — keempat jenisnya sama banyak, jadi peluang tiap jenis seperempat.\n\nPilihan $\\frac{1}{13}$ adalah peluang terambil satu angka tertentu, misalnya As.",
           "hint": "Ada berapa jenis kartu, dan sama banyakkah?",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $P(A) = 0{,}6$ dan $P(B) = 0{,}7$ untuk dua kejadian yang saling bebas, maka $P(A \\cap B)$ adalah ...",
           "options": [
-            "$0{,}42$",
-            "$1{,}3$",
+            "$0{,}3$",
             "$0{,}1$",
-            "$0{,}3$"
+            "$1{,}3$",
+            "$0{,}42$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Untuk kejadian saling bebas, peluang keduanya terjadi adalah hasil kali keduanya:\n$$P(A \\cap B) = 0{,}6 \\times 0{,}7 = 0{,}42$$\n\nPilihan $1{,}3$ muncul dari menjumlahkan — dan nilainya melebihi 1, yang langsung menandakan kekeliruan.\n\nPerhatikan irisan selalu lebih kecil dari masing-masing peluangnya, dan $0{,}42$ memang kurang dari $0{,}6$ maupun $0{,}7$.",
           "hint": "Kejadian bebas yang terjadi bersamaan berarti dikalikan.",
           "tags": [

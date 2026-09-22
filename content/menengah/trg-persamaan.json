@@ -26,9 +26,9 @@
           "prompt": "Penyelesaian $\\sin x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
           "options": [
             "$x = 30^\\circ$ atau $x = 150^\\circ$",
-            "$x = 30^\\circ$ saja",
             "$x = 30^\\circ$ atau $x = 330^\\circ$",
-            "$x = 60^\\circ$ atau $x = 120^\\circ$"
+            "$x = 60^\\circ$ atau $x = 120^\\circ$",
+            "$x = 30^\\circ$ saja"
           ],
           "answerIndex": 0,
           "solution": "Sudut acuannya adalah $30^\\circ$, karena $\\sin 30^\\circ = \\frac{1}{2}$.\n\nSinus bernilai positif di kuadran I dan II. Jadi ada dua penyelesaian:\nKuadran I: $x = 30^\\circ$\nKuadran II: $x = 180^\\circ - 30^\\circ = 150^\\circ$\n\nPeriksa: $\\sin 150^\\circ = \\frac{1}{2}$. Benar.\n\nPilihan $330^\\circ$ salah — di sana sinusnya negatif.",
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Penyelesaian $\\cos x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
           "options": [
-            "$x = 60^\\circ$ atau $x = 300^\\circ$",
             "$x = 60^\\circ$ atau $x = 120^\\circ$",
+            "$x = 60^\\circ$ atau $x = 300^\\circ$",
             "$x = 30^\\circ$ atau $x = 330^\\circ$",
             "$x = 60^\\circ$ saja"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Sudut acuannya $60^\\circ$, karena $\\cos 60^\\circ = \\frac{1}{2}$.\n\nKosinus bernilai positif di kuadran I dan IV:\nKuadran I: $x = 60^\\circ$\nKuadran IV: $x = 360^\\circ - 60^\\circ = 300^\\circ$\n\nPerhatikan bedanya dengan sinus. Sinus positif di kuadran I dan II, sedangkan kosinus di kuadran I dan IV — jadi pasangan penyelesaiannya berbeda pola.",
           "hint": "Kosinus positif di kuadran I dan IV, bukan I dan II.",
           "tags": [
@@ -127,8 +127,8 @@
           "options": [
             "$-\\frac{1}{2}$ dan $1$",
             "$\\frac{1}{2}$ dan $-1$",
-            "$2$ dan $-1$",
-            "$1$ saja"
+            "$1$ saja",
+            "$2$ dan $-1$"
           ],
           "answerIndex": 0,
           "solution": "Misalkan $u = \\sin x$:\n$$2u^2 - u - 1 = 0$$\n\nFaktorkan:\n$$(2u+1)(u-1) = 0$$\n$$u = -\\frac{1}{2} \\quad \\text{atau} \\quad u = 1$$\n\nKeduanya berada dalam jangkauan $[-1,1]$, jadi keduanya sah.\n\nPeriksa: $2\\left(\\frac{1}{4}\\right) + \\frac{1}{2} - 1 = 0$. Benar untuk $u = -\\frac{1}{2}$.",
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Penyelesaian $\\tan x = 1$ untuk $0^\\circ \\le x \\le 360^\\circ$ adalah ...",
           "options": [
-            "$45^\\circ$ dan $225^\\circ$",
             "$45^\\circ$ dan $135^\\circ$",
+            "$45^\\circ$ dan $315^\\circ$",
             "$45^\\circ$ saja",
-            "$45^\\circ$ dan $315^\\circ$"
+            "$45^\\circ$ dan $225^\\circ$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Sudut acuannya $45^\\circ$, karena $\\tan 45^\\circ = 1$.\n\nTangen bernilai positif di kuadran I dan III:\nKuadran I: $x = 45^\\circ$\nKuadran III: $x = 180^\\circ + 45^\\circ = 225^\\circ$\n\nPerhatikan periode tangen adalah $180^\\circ$, bukan $360^\\circ$ — itu sebabnya kedua penyelesaiannya berjarak tepat $180^\\circ$.",
           "hint": "Tangen positif di kuadran I dan III, dengan periode $180^\\circ$.",
           "tags": [
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bentuk $1 - 2\\sin^2 x$ sama dengan ...",
           "options": [
+            "$2\\cos x$",
             "$\\cos 2x$",
-            "$\\sin 2x$",
             "$\\cos^2 x$",
-            "$2\\cos x$"
+            "$\\sin 2x$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ini salah satu dari tiga bentuk setara rumus sudut rangkap kosinus:\n$$\\cos 2x = 1 - 2\\sin^2 x$$\n\nPeriksa dengan $x = 30^\\circ$:\nRuas kanan: $1 - 2\\left(\\frac{1}{2}\\right)^2 = 1 - \\frac{1}{2} = \\frac{1}{2}$\nRuas kiri: $\\cos 60^\\circ = \\frac{1}{2}$\n\nCocok.",
           "hint": "Ini salah satu bentuk rumus sudut rangkap.",
           "tags": [
@@ -224,12 +224,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk menyelesaikan $\\sin x \\cos x = \\sin x$, langkah yang benar adalah ...",
           "options": [
-            "pindahkan semua ke satu ruas lalu faktorkan",
-            "bagi kedua ruas dengan $\\sin x$",
             "bagi kedua ruas dengan $\\cos x$",
-            "kuadratkan kedua ruas"
+            "kuadratkan kedua ruas",
+            "bagi kedua ruas dengan $\\sin x$",
+            "pindahkan semua ke satu ruas lalu faktorkan"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Membagi dengan $\\sin x$ membuang semua penyelesaian yang membuat $\\sin x = 0$.\n\nYang benar, pindahkan semua ke satu ruas:\n$$\\sin x\\cos x - \\sin x = 0$$\n$$\\sin x(\\cos x - 1) = 0$$\n\nHasil kali nol berarti salah satu faktornya nol:\n$$\\sin x = 0 \\quad \\text{atau} \\quad \\cos x = 1$$\n\nDengan membagi, cabang pertama hilang seluruhnya.",
           "hint": "Apa yang terjadi pada penyelesaian dengan $\\sin x = 0$ kalau dibagi?",
           "tags": [
@@ -242,12 +242,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya penyelesaian $\\sin x = \\frac{1}{2}$ untuk $0^\\circ \\le x \\le 720^\\circ$ adalah ...",
           "options": [
-            "$4$",
+            "$6$",
             "$2$",
             "$3$",
-            "$6$"
+            "$4$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Dalam satu putaran $0^\\circ$ sampai $360^\\circ$ ada dua penyelesaian: $30^\\circ$ dan $150^\\circ$.\n\nSelang yang diminta mencakup **dua** putaran penuh. Polanya berulang setiap $360^\\circ$, jadi putaran kedua memberi:\n$$30^\\circ + 360^\\circ = 390^\\circ$$\n$$150^\\circ + 360^\\circ = 510^\\circ$$\n\nSeluruhnya ada $4$ penyelesaian.",
           "hint": "Berapa putaran penuh yang tercakup selang itu?",
           "tags": [

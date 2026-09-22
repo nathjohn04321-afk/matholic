@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pusat dan jari-jari lingkaran $(x-3)^2 + (y+2)^2 = 25$ adalah ...",
           "options": [
-            "$(3,-2)$ dan $r=5$",
             "$(-3,2)$ dan $r=5$",
-            "$(3,-2)$ dan $r=25$",
-            "$(3,2)$ dan $r=5$"
+            "$(3,2)$ dan $r=5$",
+            "$(3,-2)$ dan $r=5$",
+            "$(3,-2)$ dan $r=25$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Bandingkan dengan bentuk baku $(x-a)^2 + (y-b)^2 = r^2$.\n\n$(x-3)^2$ memberi $a = 3$.\n$(y+2)^2$ bisa ditulis $(y-(-2))^2$, jadi $b = -2$.\n\nPusatnya $(3,-2)$.\n\nRuas kanan adalah $r^2 = 25$, jadi:\n$$r = \\sqrt{25} = 5$$\n\nMenjawab $r = 25$ berarti lupa mengakarkan.",
           "hint": "Tanda di dalam kurung berlawanan dengan koordinat pusat.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan lingkaran berpusat di $(-1,4)$ dengan jari-jari 3 adalah ...",
           "options": [
-            "$(x+1)^2 + (y-4)^2 = 9$",
             "$(x-1)^2 + (y+4)^2 = 9$",
-            "$(x+1)^2 + (y-4)^2 = 3$",
-            "$(x-1)^2 + (y-4)^2 = 9$"
+            "$(x+1)^2 + (y-4)^2 = 9$",
+            "$(x-1)^2 + (y-4)^2 = 9$",
+            "$(x+1)^2 + (y-4)^2 = 3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Masukkan ke bentuk baku dengan $a = -1$, $b = 4$, $r = 3$:\n$$(x-(-1))^2 + (y-4)^2 = 3^2$$\n$$(x+1)^2 + (y-4)^2 = 9$$\n\nDua hal yang sering salah: tanda $a$ negatif menjadi tambah di dalam kurung, dan ruas kanan harus dikuadratkan menjadi 9, bukan 3.",
           "hint": "Jari-jarinya dikuadratkan di ruas kanan.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pusat lingkaran $x^2 + y^2 - 6x + 4y - 12 = 0$ adalah ...",
           "options": [
-            "$(3,-2)$",
             "$(-3,2)$",
             "$(6,-4)$",
-            "$(-6,4)$"
+            "$(-6,4)$",
+            "$(3,-2)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai jalan pintas dengan $A = -6$ dan $B = 4$:\n$$\\text{pusat} = \\left(-\\frac{-6}{2}, -\\frac{4}{2}\\right) = (3, -2)$$\n\nAtau lengkapkan kuadrat:\n$$(x^2-6x+9) + (y^2+4y+4) = 12+9+4$$\n$$(x-3)^2 + (y+2)^2 = 25$$\n\nPusatnya $(3,-2)$ dan jari-jarinya 5.",
           "hint": "Pusatnya adalah setengah koefisien, dengan tanda dibalik.",
           "tags": [
@@ -123,12 +123,12 @@
           "format": "pilihan-ganda",
           "prompt": "Titik $(7,1)$ terhadap lingkaran $(x-3)^2+(y+2)^2=25$ berada ...",
           "options": [
-            "pada lingkaran",
             "di dalam lingkaran",
+            "pada lingkaran",
             "di luar lingkaran",
             "tidak dapat ditentukan"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusikan ke ruas kiri:\n$$(7-3)^2 + (1+2)^2 = 16 + 9 = 25$$\n\nBandingkan dengan $r^2 = 25$:\n$$25 = 25$$\n\nJaraknya tepat sama dengan jari-jari, jadi titiknya berada **pada** lingkaran.\n\nPeriksa langsung: jarak $(7,1)$ ke pusat $(3,-2)$ adalah $\\sqrt{16+9} = 5 = r$. Cocok.",
           "hint": "Substitusikan ke ruas kiri dan bandingkan dengan 25.",
           "tags": [
@@ -141,12 +141,12 @@
           "format": "pilihan-ganda",
           "prompt": "Titik $(0,0)$ terhadap lingkaran $(x-3)^2+(y+2)^2=25$ berada ...",
           "options": [
-            "di dalam lingkaran",
             "pada lingkaran",
-            "di luar lingkaran",
-            "di pusat lingkaran"
+            "di dalam lingkaran",
+            "di pusat lingkaran",
+            "di luar lingkaran"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusikan ke ruas kiri:\n$$(0-3)^2 + (0+2)^2 = 9 + 4 = 13$$\n\nBandingkan dengan $r^2 = 25$:\n$$13 < 25$$\n\nJaraknya lebih kecil dari jari-jari, jadi titiknya berada **di dalam** lingkaran.\n\nJarak sebenarnya $\\sqrt{13} \\approx 3{,}6$, memang kurang dari 5.",
           "hint": "Hasil substitusi lebih besar atau lebih kecil dari 25?",
           "tags": [
@@ -173,12 +173,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan garis singgung lingkaran $x^2+y^2=25$ di titik $(3,4)$ adalah ...",
           "options": [
-            "$3x + 4y = 25$",
-            "$3x - 4y = 25$",
             "$4x + 3y = 25$",
-            "$x + y = 25$"
+            "$x + y = 25$",
+            "$3x + 4y = 25$",
+            "$3x - 4y = 25$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai pola $x_1x + y_1y = r^2$ dengan $(x_1,y_1) = (3,4)$:\n$$3x + 4y = 25$$\n\nPeriksa titiknya memang ada di lingkaran: $3^2+4^2 = 25$. Benar.\n\nPeriksa garisnya melewati titik itu: $3(3)+4(4) = 9+16 = 25$. Cocok.",
           "hint": "Ganti satu $x$ dengan 3 dan satu $y$ dengan 4.",
           "tags": [
@@ -191,12 +191,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya garis singgung lingkaran $x^2+y^2=9$ yang bergradien 2 adalah ...",
           "options": [
-            "$2$",
             "$1$",
             "$0$",
+            "$2$",
             "tak hingga"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus garis singgung bergradien:\n$$y = mx \\pm r\\sqrt{m^2+1}$$\n\nTanda $\\pm$ menghasilkan dua garis berbeda — keduanya bergradien 2, tapi menyinggung di sisi lingkaran yang berlawanan.\n\nSecara gambar ini masuk akal: bayangkan menggeser garis bergradien 2 melintasi lingkaran. Ia menyinggung sekali saat mendekat dari satu sisi, dan sekali lagi di sisi seberangnya.\n\nJadi ada $2$ garis singgung.",
           "hint": "Perhatikan tanda $\\pm$ pada rumusnya.",
           "tags": [
@@ -223,12 +223,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jari-jari lingkaran $x^2 + y^2 = 49$ adalah ...",
           "options": [
-            "$7$",
-            "$49$",
             "$24{,}5$",
-            "$\\sqrt{7}$"
+            "$\\sqrt{7}$",
+            "$7$",
+            "$49$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Bentuk bakunya $x^2+y^2 = r^2$, jadi:\n$$r^2 = 49$$\n$$r = \\sqrt{49} = 7$$\n\nRuas kanan selalu berupa kuadrat jari-jari, bukan jari-jarinya langsung. Menjawab 49 adalah kesalahan yang paling sering terjadi di soal semudah ini.",
           "hint": "Ruas kanan adalah $r^2$.",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pusat lingkaran $(x+5)^2 + (y-1)^2 = 16$ adalah ...",
           "options": [
-            "$(-5,1)$",
-            "$(5,-1)$",
             "$(5,1)$",
+            "$(5,-1)$",
+            "$(-5,1)$",
             "$(-5,-1)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Bandingkan dengan bentuk baku $(x-a)^2+(y-b)^2=r^2$.\n\n$(x+5)^2$ ditulis ulang sebagai $(x-(-5))^2$, jadi $a = -5$.\n$(y-1)^2$ memberi $b = 1$.\n\nPusatnya $(-5,1)$.\n\nTandanya selalu berlawanan dengan yang tertulis di dalam kurung — ini yang paling sering tertukar.",
           "hint": "Tulis ulang $(x+5)$ sebagai $(x-(-5))$.",
           "tags": [

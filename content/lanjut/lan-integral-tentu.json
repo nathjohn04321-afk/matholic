@@ -49,8 +49,8 @@
           "options": [
             "$0$",
             "$\\frac{1}{2}$",
-            "$2$",
-            "$\\frac{1}{4}$"
+            "$\\frac{1}{4}$",
+            "$2$"
           ],
           "answerIndex": 0,
           "solution": "Antiturunan dari $x^3$ adalah $\\frac{x^4}{4}$.\n\n$$\\left[\\frac{x^4}{4}\\right]_{-1}^{1} = \\frac{1}{4} - \\frac{1}{4} = 0$$\n\nHasilnya nol karena $x^3$ fungsi ganjil: bagian di bawah sumbu-$x$ (dari $-1$ ke $0$) tepat meniadakan bagian di atasnya.\n\nPerhatikan luas daerahnya sendiri **tidak** nol — yang nol adalah luas bertandanya.",
@@ -96,12 +96,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $\\int_0^2 f(x)\\,dx = 5$ dan $\\int_2^5 f(x)\\,dx = 3$, maka $\\int_0^5 f(x)\\,dx$ adalah ...",
           "options": [
+            "$-2$",
             "$8$",
             "$2$",
-            "$15$",
-            "$-2$"
+            "$15$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai sifat pemecahan batas:\n$$\\int_0^5 f = \\int_0^2 f + \\int_2^5 f$$\n\nSubstitusikan:\n$$= 5 + 3 = 8$$\n\nBatas $2$ menjadi titik sambung, jadi kedua potongan tinggal dijumlahkan.",
           "hint": "Batas tengahnya sama — potongannya bisa disambung.",
           "tags": [
@@ -146,12 +146,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk menghitung luas antara $y = f(x)$ dan $y = g(x)$ pada $[a,b]$ dengan $f(x) \\ge g(x)$, rumus yang benar adalah ...",
           "options": [
-            "$\\int_a^b [g(x) - f(x)]\\,dx$",
-            "$\\int_a^b [f(x) - g(x)]\\,dx$",
+            "$\\int_a^b [f(x) + g(x)]\\,dx$",
             "$\\int_a^b f(x)g(x)\\,dx$",
-            "$\\int_a^b [f(x) + g(x)]\\,dx$"
+            "$\\int_a^b [g(x) - f(x)]\\,dx$",
+            "$\\int_a^b [f(x) - g(x)]\\,dx$"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "solution": "Luas diukur sebagai tinggi dikali lebar, dijumlahkan.\n\nTingginya adalah jarak vertikal antara kedua kurva, yaitu kurva atas dikurangi kurva bawah.\n\nKarena $f(x) \\ge g(x)$, kurva atasnya $f$:\n$$L = \\int_a^b [f(x) - g(x)]\\,dx$$\n\nMembalik urutannya menghasilkan nilai negatif, yang tidak mungkin untuk luas.",
           "hint": "Tinggi daerah = kurva atas dikurangi kurva bawah.",
           "tags": [
@@ -179,9 +179,9 @@
           "prompt": "Volume benda putar dari $y = x$ pada $0 \\le x \\le 1$ diputar mengelilingi sumbu-$x$ adalah ...",
           "options": [
             "$\\frac{\\pi}{3}$",
+            "$\\frac{2\\pi}{3}$",
             "$\\frac{\\pi}{2}$",
-            "$\\pi$",
-            "$\\frac{2\\pi}{3}$"
+            "$\\pi$"
           ],
           "answerIndex": 0,
           "solution": "Pakai rumus cakram:\n$$V = \\pi\\int_0^1 [f(x)]^2\\,dx = \\pi\\int_0^1 x^2\\,dx$$\n\nHitung:\n$$= \\pi\\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{\\pi}{3}$$\n\nPeriksa: bendanya kerucut dengan $r=1$, $t=1$. Rumus kerucut memberi $\\frac{1}{3}\\pi(1)^2(1) = \\frac{\\pi}{3}$. Cocok.",
@@ -227,12 +227,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai $\\int_{0}^{2} (x^2 - 4)\\,dx$ adalah ...",
           "options": [
-            "$-\\frac{16}{3}$",
+            "$0$",
             "$\\frac{16}{3}$",
             "$\\frac{8}{3}$",
-            "$0$"
+            "$-\\frac{16}{3}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Antiturunannya:\n$$\\int (x^2-4)\\,dx = \\frac{x^3}{3} - 4x + C$$\n\nTerapkan batasnya:\n$$\\left[\\frac{x^3}{3} - 4x\\right]_0^2 = \\left(\\frac{8}{3} - 8\\right) - 0$$\n$$= \\frac{8}{3} - \\frac{24}{3} = -\\frac{16}{3}$$\n\nHasilnya negatif karena pada $0 \\le x \\le 2$ kurva $y = x^2-4$ seluruhnya berada di bawah sumbu-$x$. Ini nilai integral, bukan luas.",
           "hint": "Periksa posisi kurva terhadap sumbu-$x$ pada selang itu.",
           "tags": [

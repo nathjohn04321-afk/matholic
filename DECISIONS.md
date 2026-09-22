@@ -131,6 +131,28 @@ Perkakas yang dipakai dan tetap tersedia untuk menambah topik:
 - indeks pencarian ikut terbangun ulang
 - CI menolak perubahan yang lupa menjalankan generatornya
 
+### Letak kunci jawaban diacak, dan validator menjaganya
+
+Saat kurikulum selesai, 89% kunci jawaban ternyata berada di pilihan pertama.
+Penyebabnya cara penulisannya: jawaban benar ditulis lebih dulu, pengecohnya
+menyusul. Akibatnya nyata — siapa pun yang menyadarinya bisa menjawab benar
+tanpa memahami materinya sama sekali, dan aplikasinya berhenti mengajar.
+
+Urutan pilihan diacak ulang dengan kunci yang dibangkitkan dari id soal, jadi
+hasilnya tetap sama setiap kali dijalankan. Sebarannya kini 27/22/27/24.
+
+Sebelum diacak, sembilan pembahasan yang merujuk pilihan lewat posisinya
+("pilihan terakhir keliru karena...") ditulis ulang supaya merujuk isinya.
+Rujukan posisional akan menjadi salah begitu urutannya berubah — dan menyebut
+isi pilihannya memang lebih jelas dibaca.
+
+Validator sekarang menolak berkas konten yang salah satu posisinya melewati
+40%, dan memperingatkan di atas 33%. Pemeriksaannya baru berlaku mulai 40 soal
+pilihan ganda, supaya kumpulan konten kecil tidak gagal karena kebetulan.
+
+Pemeriksaan ini diuji dengan menjalankannya pada konten sebelum diacak; ia
+memang menolaknya.
+
 ### `order` wajib unik per jalur
 
 Urutan topik pada layar Belajar diambil dari `topic.order`. Dua topik yang

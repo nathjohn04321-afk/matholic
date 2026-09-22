@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya cara memilih ketua dan wakil ketua dari 5 orang adalah ...",
           "options": [
-            "$20$",
             "$10$",
             "$25$",
-            "$120$"
+            "$120$",
+            "$20$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Urutan berpengaruh di sini — menjadi ketua berbeda dari menjadi wakil. Jadi ini permutasi.\n\n$$P(5,2) = \\frac{5!}{3!} = 5 \\times 4 = 20$$\n\nCara lain: ada 5 pilihan untuk ketua, lalu 4 sisa untuk wakil, jadi $5 \\times 4 = 20$.\n\nPilihan $10$ adalah $C(5,2)$ — jawaban kalau kedua jabatan itu setara.",
           "hint": "Apakah ketua dan wakil bisa ditukar tanpa mengubah hasilnya?",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya cara memilih 3 orang dari 5 untuk sebuah tim adalah ...",
           "options": [
-            "$10$",
-            "$60$",
             "$20$",
-            "$15$"
+            "$10$",
+            "$15$",
+            "$60$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Anggota tim tidak dibedakan perannya, jadi urutan tidak berpengaruh. Ini kombinasi.\n\n$$C(5,3) = \\frac{5!}{3!\\,2!} = \\frac{120}{6 \\times 2} = 10$$\n\nPilihan $60$ adalah $P(5,3)$ — itu jawaban kalau ketiga orang mendapat peran berbeda.",
           "hint": "Apakah menukar posisi anggota mengubah timnya?",
           "tags": [
@@ -77,9 +77,9 @@
           "prompt": "Tersedia 4 jenis roti dan 3 jenis minuman. Banyaknya pasangan roti dan minuman adalah ...",
           "options": [
             "$12$",
-            "$7$",
             "$64$",
-            "$81$"
+            "$81$",
+            "$7$"
           ],
           "answerIndex": 0,
           "solution": "Kedua pilihan dilakukan berurutan — kamu memilih roti **dan** minuman. Jadi dikalikan.\n\n$$4 \\times 3 = 12$$\n\nPilihan $7$ muncul dari menjumlahkan, yang berlaku kalau kamu hanya memilih salah satu di antara keduanya.",
@@ -125,12 +125,12 @@
           "format": "pilihan-ganda",
           "prompt": "Lima orang duduk berjajar. Banyaknya susunan dengan A dan B selalu berdampingan adalah ...",
           "options": [
-            "$48$",
             "$24$",
+            "$96$",
             "$120$",
-            "$96$"
+            "$48$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Anggap A dan B sebagai satu blok. Sekarang ada 4 benda yang disusun: blok AB, dan tiga orang lainnya.\n\n$$4! = 24$$\n\nDi dalam bloknya sendiri, A dan B bisa bertukar tempat:\n$$2! = 2$$\n\nSeluruhnya:\n$$24 \\times 2 = 48$$\n\nMenjawab 24 berarti lupa bahwa AB dan BA adalah susunan berbeda.",
           "hint": "Gabungkan A dan B jadi satu, lalu jangan lupa mereka bisa bertukar.",
           "tags": [
@@ -143,12 +143,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dari 10 orang akan dipilih 2 sebagai perwakilan. Banyaknya cara memilih adalah ...",
           "options": [
-            "$45$",
-            "$90$",
+            "$100$",
             "$20$",
-            "$100$"
+            "$90$",
+            "$45$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Kedua perwakilan tidak dibedakan perannya, jadi urutan tidak berpengaruh — ini kombinasi.\n\n$$C(10,2) = \\frac{10 \\times 9}{2} = 45$$\n\nPilihan $90$ adalah $P(10,2)$, yang berlaku kalau kedua posisi itu berbeda jabatan.",
           "hint": "Apakah kedua perwakilan punya peran berbeda?",
           "tags": [
@@ -191,12 +191,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $C(8,8)$ adalah ...",
           "options": [
-            "$1$",
-            "$8$",
             "$0$",
-            "$40320$"
+            "$40320$",
+            "$1$",
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus kombinasi:\n$$C(8,8) = \\frac{8!}{8!\\,0!} = \\frac{8!}{8! \\times 1} = 1$$\n\nMasuk akal tanpa rumus sekalipun: memilih seluruh 8 orang dari 8 orang hanya bisa dilakukan dengan satu cara — ambil semuanya.\n\nDi sinilah kesepakatan $0! = 1$ terbukti berguna; kalau $0!$ bernilai nol, rumusnya akan pecah.",
           "hint": "Ada berapa cara memilih semuanya dari semuanya?",
           "tags": [
@@ -223,12 +223,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk memilih juara 1, 2, dan 3 dari 6 peserta, rumus yang tepat adalah ...",
           "options": [
-            "$P(6,3)$",
-            "$C(6,3)$",
+            "$3!$",
             "$6!$",
-            "$3!$"
+            "$P(6,3)$",
+            "$C(6,3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Juara 1, 2, dan 3 adalah posisi yang **berbeda**. Menukar dua orang mengubah hasilnya sama sekali.\n\nKarena urutan berpengaruh, yang dipakai permutasi:\n$$P(6,3) = 6 \\times 5 \\times 4 = 120$$\n\nMemakai $C(6,3) = 20$ berarti menganggap ketiga juara setara — keliru untuk soal ini.",
           "hint": "Apakah juara 1 dan juara 2 bisa ditukar tanpa mengubah apa pun?",
           "tags": [
@@ -241,12 +241,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dari 5 pria dan 4 wanita akan dipilih 3 orang. Banyaknya cara agar terpilih paling sedikit satu wanita adalah ...",
           "options": [
-            "$74$",
-            "$84$",
             "$10$",
-            "$64$"
+            "$84$",
+            "$64$",
+            "$74$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai teknik komplemen — jauh lebih singkat daripada menjumlahkan kasus satu, dua, dan tiga wanita.\n\nTotal cara memilih 3 dari 9 orang:\n$$C(9,3) = 84$$\n\nCara yang **tidak** memuat wanita sama sekali, yaitu memilih 3 dari 5 pria:\n$$C(5,3) = 10$$\n\nKurangkan:\n$$84 - 10 = 74$$",
           "hint": "Lebih mudah menghitung yang tidak memenuhi, lalu dikurangkan.",
           "tags": [

@@ -26,9 +26,9 @@
           "prompt": "Pada segiempat siklik $ABCD$, jika $\\angle A = 70°$, maka $\\angle C$ adalah ...",
           "options": [
             "$110°$",
-            "$70°$",
             "$20°$",
-            "$290°$"
+            "$290°$",
+            "$70°$"
           ],
           "answerIndex": 0,
           "solution": "Pada segiempat siklik, sudut yang berhadapan selalu berjumlah $180°$:\n\n$$\\angle A + \\angle C = 180°$$\n$$70° + \\angle C = 180° \\Rightarrow \\angle C = 110°$$\n\nAlasannya: kedua sudut itu menghadap dua busur yang bersama-sama melingkupi seluruh lingkaran, yaitu $360°$. Karena sudut keliling adalah setengah sudut pusatnya, jumlah keduanya menjadi $180°$.\n\nPerhatikan bahwa yang berjumlah $180°$ adalah sudut **berhadapan**, bukan sudut bersebelahan.",
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah sudut pusat menghadap busur tertentu berukuran $120°$. Sudut keliling yang menghadap busur yang sama berukuran ...",
           "options": [
-            "$60°$",
-            "$120°$",
             "$240°$",
-            "$30°$"
+            "$120°$",
+            "$30°$",
+            "$60°$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Sudut keliling selalu setengah dari sudut pusat yang menghadap busur yang sama:\n\n$$\\angle\\text{keliling} = \\frac{1}{2} \\times 120° = 60°$$\n\nPerhatikan bahwa hasilnya tidak bergantung pada **di mana** titik sudut kelilingnya ditempatkan pada lingkaran. Semua sudut keliling yang menghadap busur itu besarnya sama, $60°$.\n\nSifat \"tidak bergantung letak\" inilah yang membuat hubungan ini begitu berguna — ia mengubah titik yang bergerak menjadi sudut yang tetap.",
           "hint": "Sudut keliling adalah setengah sudut pusatnya.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $\\angle ACB = \\angle ADB = 90°$, maka titik $A$, $B$, $C$, dan $D$ ...",
           "options": [
-            "terletak pada satu lingkaran berdiameter $AB$",
             "membentuk persegi panjang",
             "tidak dapat ditentukan hubungannya",
-            "terletak pada satu garis"
+            "terletak pada satu garis",
+            "terletak pada satu lingkaran berdiameter $AB$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Sudut yang menghadap diameter selalu $90°$, dan kebalikannya juga berlaku.\n\nKarena $\\angle ACB = 90°$, titik $C$ berada pada lingkaran berdiameter $AB$. Dengan alasan yang sama persis, $\\angle ADB = 90°$ menempatkan $D$ pada lingkaran yang sama.\n\nJadi keempat titiknya konsiklis, pada lingkaran berdiameter $AB$.\n\nPilihan persegi panjang terlalu kuat — $C$ dan $D$ boleh berada di mana saja pada lingkaran itu, termasuk di sisi yang sama, dan bentuknya tidak harus persegi panjang.\n\nPola ini sangat produktif pada soal yang melibatkan kaki garis tinggi segitiga.",
           "hint": "Sudut siku-siku menghadap apa pada sebuah lingkaran?",
           "tags": [
@@ -127,8 +127,8 @@
           "options": [
             "$9$",
             "$8$",
-            "$12$",
-            "$6$"
+            "$6$",
+            "$12$"
           ],
           "answerIndex": 0,
           "solution": "Pakai kuasa titik untuk garis singgung dan garis potong:\n\n$$PT^2 = PA \\cdot PB$$\n$$6^2 = 4 \\cdot PB$$\n$$36 = 4 \\cdot PB \\Rightarrow PB = 9$$\n\nCek kewajarannya: $PB = 9$ lebih besar dari $PA = 4$, yang memang seharusnya karena $B$ adalah titik potong yang lebih jauh dari $P$.\n\nPerhatikan bahwa $PT$ dikuadratkan. Kalau kamu menulis $6 = 4 \\cdot PB$, satuannya tidak cocok — ruas kanan adalah hasil kali dua panjang.",
@@ -158,12 +158,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah titik $P$ berjarak $10$ dari pusat lingkaran berjari-jari $6$. Panjang garis singgung dari $P$ ke lingkaran adalah ...",
           "options": [
+            "$\\sqrt{136}$",
             "$8$",
-            "$4$",
             "$16$",
-            "$\\sqrt{136}$"
+            "$4$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Jari-jari selalu tegak lurus terhadap garis singgung di titik singgungnya, jadi segitiga yang terbentuk siku-siku dengan sisi miring $OP$.\n\n$$PT^2 = OP^2 - r^2 = 10^2 - 6^2 = 100 - 36 = 64$$\n$$PT = 8$$\n\nPerhatikan bahwa $PT^2 = 64$ persis sama dengan kuasa titik $P$. Ini bukan kebetulan — panjang garis singgung memang akar dari kuasanya, dan itu berlaku untuk setiap titik di luar lingkaran.\n\nPilihan $\\sqrt{136}$ muncul kalau kamu menjumlahkan alih-alih mengurangkan.",
           "hint": "Jari-jari tegak lurus garis singgung; pakai Pythagoras.",
           "tags": [
@@ -191,9 +191,9 @@
           "prompt": "Pada segiempat siklik $ABCD$, diketahui $\\angle B = 85°$. Besar $\\angle D$ adalah ...",
           "options": [
             "$95°$",
-            "$85°$",
+            "$175°$",
             "$105°$",
-            "$175°$"
+            "$85°$"
           ],
           "answerIndex": 0,
           "solution": "Sudut $B$ dan $D$ saling berhadapan pada segiempat siklik, jadi jumlahnya $180°$:\n\n$$\\angle B + \\angle D = 180°$$\n$$85° + \\angle D = 180° \\Rightarrow \\angle D = 95°$$\n\nPerhatikan bahwa sifat ini **tidak** berlaku untuk segiempat sembarang — hanya untuk yang keempat titiknya terletak pada satu lingkaran.\n\nJustru karena itu, menemukan bahwa jumlahnya $180°$ pada sebuah soal sering menjadi cara untuk membuktikan bahwa lingkarannya memang ada.",
@@ -238,12 +238,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dari titik $P$ di luar lingkaran ditarik dua garis potong. Garis pertama memotong lingkaran di $A$ dan $B$ dengan $PA = 3$ dan $PB = 8$. Garis kedua memotong di $C$ dan $D$ dengan $PC = 4$. Panjang $PD$ adalah ...",
           "options": [
-            "$6$",
             "$5$",
-            "$12$",
-            "$24$"
+            "$24$",
+            "$6$",
+            "$12$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kuasa titik $P$ bernilai sama untuk setiap garis yang ditarik lewatnya:\n\n$$PA \\cdot PB = PC \\cdot PD$$\n$$3 \\times 8 = 4 \\times PD$$\n$$24 = 4 \\cdot PD \\Rightarrow PD = 6$$\n\nPerhatikan bahwa kuasanya adalah $24$ untuk kedua garis — itulah inti sifatnya. Berapa pun arah garis yang kamu tarik dari $P$, hasil kali kedua jaraknya tetap $24$.\n\nCek kewajarannya: $PD = 6$ lebih besar dari $PC = 4$, sesuai dengan $D$ sebagai titik potong yang lebih jauh.",
           "hint": "Hasil kalinya sama untuk kedua garis.",
           "tags": [
@@ -256,12 +256,12 @@
           "format": "pilihan-ganda",
           "prompt": "Kesalahan yang paling merusak saat menggambar sketsa soal geometri olimpiade adalah ...",
           "options": [
-            "menggambar bangun terlalu istimewa, misalnya hampir sama sisi",
-            "menggambar terlalu besar",
             "memberi tanda pada sudut yang sama",
-            "memakai penggaris"
+            "memakai penggaris",
+            "menggambar terlalu besar",
+            "menggambar bangun terlalu istimewa, misalnya hampir sama sisi"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Gambar yang terlalu istimewa memunculkan hubungan yang sebenarnya **kebetulan**, bukan akibat dari syarat soalnya.\n\nMisalnya, kalau kamu menggambar segitiga sembarang menjadi hampir sama sisi, ketiga garis tingginya akan terlihat hampir sama panjang. Kalau buktimu diam-diam bersandar pada kesamaan itu, ia akan runtuh pada segitiga yang benar-benar sembarang.\n\nJustru kebalikannya yang disarankan: **gambar sengaja tidak simetris**. Segitiga yang sudutnya jelas berbeda-beda akan memperlihatkan hubungan mana yang benar-benar dipaksa oleh syarat soalnya.\n\nMenggambar besar, memberi tanda, dan memakai penggaris semuanya justru membantu.",
           "hint": "Hubungan mana yang muncul karena syarat soal, dan mana yang kebetulan?",
           "tags": [

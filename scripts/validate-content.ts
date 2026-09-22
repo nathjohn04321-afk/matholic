@@ -115,6 +115,8 @@ const totals: Totals = {
 };
 
 const seenTopicIds = new Set<string>();
+/** Letak kunci jawaban, untuk memastikan ia tidak menumpuk di satu posisi. */
+const answerPositions = new Map<number, number>();
 /** order harus unik per jalur, karena urutan topik diurutkan dengan nilai itu. */
 const ordersByTrack = new Map<string, Map<number, string>>();
 const seenCardIds = new Set<string>();
@@ -213,6 +215,14 @@ function validateQuestion(q: unknown, where: string, cardId: string): void {
     }
     if ('answer' in question) {
       warn(where, 'format berpilihan seharusnya tidak punya field answer');
+    }
+    if (
+      format === 'pilihan-ganda' &&
+      typeof answerIndex === 'number' &&
+      Number.isInteger(answerIndex) &&
+      answerIndex >= 0
+    ) {
+      answerPositions.set(answerIndex, (answerPositions.get(answerIndex) ?? 0) + 1);
     }
   } else {
     // isian
@@ -438,6 +448,22 @@ for (const file of files) {
 for (const { topic, needs } of allPrerequisites) {
   if (!seenTopicIds.has(needs)) {
     warn(topic, `prasyarat "${needs}" belum ada sebagai topik`);
+  }
+}
+
+// Kunci jawaban yang menumpuk di satu posisi membuat soal bisa dijawab tanpa
+// memahami materinya. Diperiksa hanya kalau soalnya sudah cukup banyak, supaya
+// kumpulan konten yang masih kecil tidak gagal karena kebetulan.
+const mcTotal = [...answerPositions.values()].reduce((a, b) => a + b, 0);
+if (mcTotal >= 40) {
+  for (const [posisi, jumlah] of [...answerPositions].sort((a, b) => a[0] - b[0])) {
+    const bagian = jumlah / mcTotal;
+    const teks = `kunci jawaban di posisi ${posisi} sebanyak ${Math.round(bagian * 100)}% dari ${mcTotal} soal pilihan ganda`;
+    if (bagian > 0.4) {
+      problems.push(`sebaran kunci jawaban: ${teks} — acak ulang urutan pilihannya`);
+    } else if (bagian > 0.33) {
+      warnings.push(`sebaran kunci jawaban: ${teks}`);
+    }
   }
 }
 

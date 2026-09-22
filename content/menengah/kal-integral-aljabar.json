@@ -26,13 +26,13 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int (3x^2 - 4x + 5)\\,dx$ adalah ...",
           "options": [
-            "$x^3 - 2x^2 + 5x + C$",
             "$3x^3 - 4x^2 + 5x + C$",
             "$x^3 - 4x^2 + 5x + C$",
-            "$6x - 4 + C$"
+            "$6x - 4 + C$",
+            "$x^3 - 2x^2 + 5x + C$"
           ],
-          "answerIndex": 0,
-          "solution": "Kerjakan suku demi suku dengan $\\int x^n dx = \\frac{x^{n+1}}{n+1}$.\n\n$\\int 3x^2\\,dx = 3 \\cdot \\frac{x^3}{3} = x^3$\n\n$\\int -4x\\,dx = -4 \\cdot \\frac{x^2}{2} = -2x^2$\n\n$\\int 5\\,dx = 5x$\n\nJadi hasilnya $x^3 - 2x^2 + 5x + C$.\n\nSelalu cek dengan menurunkan kembali: turunan $x^3 - 2x^2 + 5x$ adalah $3x^2 - 4x + 5$, sama dengan soalnya. Pilihan terakhir adalah jebakan — itu turunan, bukan integral.",
+          "answerIndex": 3,
+          "solution": "Kerjakan suku demi suku dengan $\\int x^n dx = \\frac{x^{n+1}}{n+1}$.\n\n$\\int 3x^2\\,dx = 3 \\cdot \\frac{x^3}{3} = x^3$\n\n$\\int -4x\\,dx = -4 \\cdot \\frac{x^2}{2} = -2x^2$\n\n$\\int 5\\,dx = 5x$\n\nJadi hasilnya $x^3 - 2x^2 + 5x + C$.\n\nSelalu cek dengan menurunkan kembali: turunan $x^3 - 2x^2 + 5x$ adalah $3x^2 - 4x + 5$, sama dengan soalnya. Pilihan $6x - 4 + C$ adalah jebakan — itu turunan dari soalnya, bukan integralnya.",
           "hint": "Naikkan pangkatnya satu, lalu bagi dengan pangkat yang baru.",
           "tags": [
             "un"
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $f'(x) = 6x - 2$ dan $f(1) = 5$. Nilai $f(3)$ adalah ...",
           "options": [
-            "$25$",
             "$21$",
-            "$27$",
-            "$24$"
+            "$25$",
+            "$24$",
+            "$27$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Integralkan untuk mendapatkan $f$:\n$$f(x) = \\int (6x-2)\\,dx = 3x^2 - 2x + C$$\n\nPakai syarat $f(1) = 5$ untuk mengunci $C$:\n$$3(1)^2 - 2(1) + C = 5 \\Rightarrow 1 + C = 5 \\Rightarrow C = 4$$\n\nJadi $f(x) = 3x^2 - 2x + 4$, sehingga\n$$f(3) = 27 - 6 + 4 = 25$$\n\nTanpa syarat $f(1) = 5$ soal ini tidak punya jawaban tunggal — itulah gunanya titik yang diberikan.",
           "hint": "Cari $C$ dulu dari $f(1) = 5$, baru substitusikan $x = 3$.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int (2x+3)^4\\,dx$ adalah ...",
           "options": [
-            "$\\frac{(2x+3)^5}{10} + C$",
-            "$\\frac{(2x+3)^5}{5} + C$",
             "$\\frac{(2x+3)^5}{2} + C$",
+            "$\\frac{(2x+3)^5}{5} + C$",
+            "$\\frac{(2x+3)^5}{10} + C$",
             "$8(2x+3)^3 + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai $\\int (ax+b)^n dx = \\frac{(ax+b)^{n+1}}{a(n+1)} + C$ dengan $a = 2$ dan $n = 4$.\n\n$$\\int (2x+3)^4 dx = \\frac{(2x+3)^5}{2 \\cdot 5} + C = \\frac{(2x+3)^5}{10} + C$$\n\nCek dengan menurunkan:\n$$\\frac{d}{dx}\\frac{(2x+3)^5}{10} = \\frac{5(2x+3)^4 \\cdot 2}{10} = (2x+3)^4$$\n\nKalau kamu memilih $\\frac{(2x+3)^5}{5}$, turunannya menjadi $2(2x+3)^4$ — dua kali lipat yang diminta.",
           "hint": "Bagi tambahan dengan koefisien $x$ yang ada di dalam kurung.",
           "tags": [
@@ -126,8 +126,8 @@
           "options": [
             "$\\frac{14}{3}$",
             "$\\frac{8}{3}$",
-            "$\\frac{11}{3}$",
-            "$6$"
+            "$6$",
+            "$\\frac{11}{3}$"
           ],
           "answerIndex": 0,
           "solution": "Antiturunannya $F(x) = \\frac{x^3}{3} + x$.\n\n$$F(2) = \\frac{8}{3} + 2 = \\frac{8}{3} + \\frac{6}{3} = \\frac{14}{3}$$\n$$F(0) = 0 + 0 = 0$$\n\n$$\\int_0^2 (x^2+1)\\,dx = \\frac{14}{3} - 0 = \\frac{14}{3}$$\n\nPilihan $\\frac{8}{3}$ muncul kalau kamu lupa mengintegralkan suku $+1$.",
@@ -143,9 +143,9 @@
           "prompt": "Jika $\\int_1^k (2x-1)\\,dx = 12$ dengan $k > 1$, maka nilai $k$ adalah ...",
           "options": [
             "$4$",
+            "$6$",
             "$3$",
-            "$5$",
-            "$6$"
+            "$5$"
           ],
           "answerIndex": 0,
           "solution": "Antiturunannya $F(x) = x^2 - x$.\n\n$$\\int_1^k (2x-1)\\,dx = (k^2 - k) - (1 - 1) = k^2 - k$$\n\nSamakan dengan 12:\n$$k^2 - k - 12 = 0$$\n$$(k-4)(k+3) = 0$$\n\nDiperoleh $k = 4$ atau $k = -3$. Karena disyaratkan $k > 1$, jawabannya $k = 4$.\n\nCek: $\\int_1^4 (2x-1)dx = (16-4) - 0 = 12$. Benar.",
@@ -160,12 +160,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $\\int_1^5 f(x)\\,dx = 12$ dan $\\int_1^3 f(x)\\,dx = 5$. Nilai $\\int_5^3 f(x)\\,dx$ adalah ...",
           "options": [
+            "$17$",
             "$-7$",
             "$7$",
-            "$17$",
             "$-17$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pecah dulu intervalnya di $x = 3$:\n$$\\int_1^5 = \\int_1^3 + \\int_3^5$$\n$$12 = 5 + \\int_3^5 \\Rightarrow \\int_3^5 f(x)\\,dx = 7$$\n\nYang diminta batasnya terbalik, dan menukar batas membalik tanda:\n$$\\int_5^3 f(x)\\,dx = -\\int_3^5 f(x)\\,dx = -7$$\n\nKalau kamu menjawab $7$, kamu sudah benar sampai langkah kedua tapi melewatkan pembalikan tanda di langkah terakhir.",
           "hint": "Pecah $[1,5]$ di $x = 3$, lalu perhatikan urutan batas yang diminta.",
           "tags": [
@@ -192,12 +192,12 @@
           "format": "pilihan-ganda",
           "prompt": "Luas daerah yang dibatasi kurva $y = 4 - x^2$ dan sumbu $x$ adalah ...",
           "options": [
-            "$\\frac{32}{3}$",
+            "$\\frac{64}{3}$",
             "$\\frac{16}{3}$",
-            "$8$",
-            "$\\frac{64}{3}$"
+            "$\\frac{32}{3}$",
+            "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Cari batasnya dari $4 - x^2 = 0$, diperoleh $x = -2$ dan $x = 2$.\n\nPada interval itu $4 - x^2 \\geq 0$, jadi grafiknya di atas sumbu $x$ dan integralnya langsung memberi luas.\n\n$$L = \\int_{-2}^{2} (4-x^2)\\,dx = \\left[4x - \\frac{x^3}{3}\\right]_{-2}^{2}$$\n\nDi $x = 2$: $8 - \\frac{8}{3} = \\frac{16}{3}$\n\nDi $x = -2$: $-8 + \\frac{8}{3} = -\\frac{16}{3}$\n\n$$L = \\frac{16}{3} - \\left(-\\frac{16}{3}\\right) = \\frac{32}{3}$$",
           "hint": "Batasnya adalah titik potong kurva dengan sumbu $x$.",
           "tags": [

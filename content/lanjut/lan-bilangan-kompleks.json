@@ -26,12 +26,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $(2+i) + (3-4i)$ adalah ...",
           "options": [
+            "$6 - 3i$",
             "$5 - 3i$",
-            "$5 + 5i$",
             "$5 - 5i$",
-            "$6 - 3i$"
+            "$5 + 5i$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Jumlahkan bagian real dengan bagian real, dan bagian imajiner dengan bagian imajiner:\n\n$$(2+3) + (1-4)i = 5 - 3i$$\n\nPenjumlahan bilangan kompleks bekerja persis seperti penjumlahan vektor di bidang: komponen demi komponen, tanpa interaksi antar bagian.",
           "hint": "Jumlahkan bagian real dan imajiner secara terpisah.",
           "tags": [
@@ -44,12 +44,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $i^{2023}$ adalah ...",
           "options": [
-            "$-i$",
-            "$i$",
             "$-1$",
-            "$1$"
+            "$-i$",
+            "$1$",
+            "$i$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pangkat $i$ berulang setiap empat langkah, jadi yang menentukan hanyalah sisa bagi pangkatnya oleh 4.\n\n$$2023 = 4 \\times 505 + 3$$\n\nSisanya $3$, jadi $i^{2023} = i^3 = -i$.\n\nCara cepat mencari sisa bagi 4: lihat dua digit terakhir saja. Dari $23$, sisanya $23 - 20 = 3$.",
           "hint": "Bagi pangkatnya dengan 4 dan lihat sisanya.",
           "tags": [
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $(3+2i)(1-4i)$ adalah ...",
           "options": [
-            "$11 - 10i$",
-            "$3 - 10i$",
+            "$-5 - 10i$",
             "$11 + 10i$",
-            "$-5 - 10i$"
+            "$3 - 10i$",
+            "$11 - 10i$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Kalikan seperti bentuk aljabar biasa:\n\n$$(3+2i)(1-4i) = 3 - 12i + 2i - 8i^2$$\n\nGanti $i^2 = -1$, sehingga $-8i^2 = +8$:\n\n$$= 3 + 8 - 10i = 11 - 10i$$\n\nPilihan $3 - 10i$ muncul kalau suku $-8i^2$ dilupakan seluruhnya. Suku itu justru yang mengubah bagian realnya.",
           "hint": "Jangan lupa suku $i^2$ berubah menjadi bilangan real.",
           "tags": [
@@ -94,12 +94,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bentuk $\\frac{2+3i}{1-i}$ sama dengan ...",
           "options": [
+            "$\\frac{5}{2} - \\frac{1}{2}i$",
             "$-\\frac{1}{2} + \\frac{5}{2}i$",
             "$\\frac{1}{2} + \\frac{5}{2}i$",
-            "$-\\frac{1}{2} - \\frac{5}{2}i$",
-            "$\\frac{5}{2} - \\frac{1}{2}i$"
+            "$-\\frac{1}{2} - \\frac{5}{2}i$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Kalikan pembilang dan penyebut dengan konjugat penyebut, yaitu $1+i$:\n\n$$\\frac{(2+3i)(1+i)}{(1-i)(1+i)}$$\n\nPenyebut: $(1-i)(1+i) = 1 - i^2 = 1 + 1 = 2$\n\nPembilang: $2 + 2i + 3i + 3i^2 = 2 + 5i - 3 = -1 + 5i$\n\n$$= \\frac{-1+5i}{2} = -\\frac{1}{2} + \\frac{5}{2}i$$\n\nPerhatikan bahwa penyebutnya menjadi bilangan real murni — itulah seluruh gunanya konjugat.",
           "hint": "Kalikan dengan konjugat penyebutnya.",
           "tags": [
@@ -160,12 +160,12 @@
           "format": "pilihan-ganda",
           "prompt": "Mengalikan sebuah bilangan kompleks dengan $i$ pada bidang kompleks berarti ...",
           "options": [
-            "memutarnya $90°$ berlawanan arah jarum jam",
-            "memutarnya $180°$",
+            "mencerminkannya terhadap sumbu real",
             "melipatduakan modulusnya",
-            "mencerminkannya terhadap sumbu real"
+            "memutarnya $180°$",
+            "memutarnya $90°$ berlawanan arah jarum jam"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Bilangan $i$ punya modulus $1$ dan sudut $90°$.\n\nAturan perkalian pada bentuk kutub mengatakan modulus dikalikan dan sudut dijumlahkan. Karena modulus $i$ adalah $1$, ukuran bilangannya tidak berubah sama sekali. Yang berubah hanya sudutnya, bertambah $90°$.\n\nUji dengan contoh: $i \\cdot 1 = i$, artinya titik $(1,0)$ pindah ke $(0,1)$ — tepat seperempat putaran berlawanan arah jarum jam. Sekali lagi: $i \\cdot i = -1$, dan titik $(0,1)$ pindah ke $(-1,0)$.\n\nInilah hubungan antara perkalian dan perputaran yang membuat bilangan kompleks dipakai luas di fisika dan teknik.",
           "hint": "Berapa modulus dan sudut dari $i$ sendiri?",
           "tags": [
@@ -192,12 +192,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $(\\cos 30° + i\\sin 30°)^6$ adalah ...",
           "options": [
-            "$-1$",
-            "$1$",
+            "$-i$",
             "$i$",
-            "$-i$"
+            "$1$",
+            "$-1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai De Moivre dengan $r = 1$ dan $\\theta = 30°$:\n\n$$(\\cos 30° + i\\sin 30°)^6 = \\cos(6 \\times 30°) + i\\sin(6 \\times 30°) = \\cos 180° + i\\sin 180°$$\n\n$$= -1 + i(0) = -1$$\n\nSecara gambar: setiap perkalian memutar $30°$, dan enam kali berarti setengah putaran penuh — mendarat tepat di $-1$.",
           "hint": "Kalikan sudutnya dengan pangkatnya.",
           "tags": [
@@ -210,12 +210,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $(1+i)^8$ adalah ...",
           "options": [
-            "$16$",
             "$16i$",
             "$-16$",
+            "$16$",
             "$8$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Ubah ke bentuk kutub lebih dulu:\n$$r = \\sqrt{1+1} = \\sqrt{2}, \\qquad \\theta = 45°$$\n\nPakai De Moivre:\n$$(1+i)^8 = (\\sqrt{2})^8\\big(\\cos(8 \\times 45°) + i\\sin(8 \\times 45°)\\big)$$\n\n$$(\\sqrt{2})^8 = 2^4 = 16, \\qquad 8 \\times 45° = 360°$$\n\n$$= 16(\\cos 360° + i\\sin 360°) = 16(1 + 0) = 16$$\n\nCek lewat jalan lain: $(1+i)^2 = 2i$, jadi $(1+i)^8 = (2i)^4 = 16i^4 = 16$. Cocok.",
           "hint": "Ubah ke bentuk kutub, lalu pakai De Moivre.",
           "tags": [
@@ -242,12 +242,12 @@
           "format": "pilihan-ganda",
           "prompt": "Akar-akar persamaan $x^2 - 4x + 13 = 0$ adalah ...",
           "options": [
-            "$2 \\pm 3i$",
-            "$4 \\pm 3i$",
             "$2 \\pm 9i$",
+            "$4 \\pm 3i$",
+            "$2 \\pm 3i$",
             "$-2 \\pm 3i$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus abc dengan $a=1$, $b=-4$, $c=13$:\n\n$$D = b^2 - 4ac = 16 - 52 = -36$$\n\nDiskriminannya negatif, jadi akarnya kompleks. Karena $\\sqrt{-36} = 6i$:\n\n$$x = \\frac{4 \\pm 6i}{2} = 2 \\pm 3i$$\n\nPerhatikan bahwa kedua akarnya saling konjugat. Ini selalu terjadi pada persamaan berkoefisien real: akar kompleksnya muncul berpasangan.",
           "hint": "Diskriminan negatif menghasilkan akar kompleks; jangan lupa membagi dengan $2a$.",
           "tags": [

@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int x(x^2+1)^3\\,dx$ adalah ...",
           "options": [
+            "$\\frac{(x^2+1)^4}{2} + C$",
             "$\\frac{(x^2+1)^4}{8} + C$",
             "$\\frac{(x^2+1)^4}{4} + C$",
-            "$\\frac{x^2(x^2+1)^4}{8} + C$",
-            "$\\frac{(x^2+1)^4}{2} + C$"
+            "$\\frac{x^2(x^2+1)^4}{8} + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ambil $u = x^2 + 1$, maka $du = 2x\\,dx$, sehingga $x\\,dx = \\frac{1}{2}du$.\n\n$$\\int x(x^2+1)^3 dx = \\int u^3 \\cdot \\frac{1}{2}du = \\frac{1}{2}\\cdot\\frac{u^4}{4} = \\frac{u^4}{8}$$\n\nKembalikan ke $x$: $\\frac{(x^2+1)^4}{8} + C$.\n\nCek: $\\frac{d}{dx}\\frac{(x^2+1)^4}{8} = \\frac{4(x^2+1)^3 \\cdot 2x}{8} = x(x^2+1)^3$. Benar.",
           "hint": "Ambil $u$ = isi kurung, lalu lihat apakah $du$ sudah tersedia.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int 2x\\sqrt{x^2+5}\\,dx$ adalah ...",
           "options": [
-            "$\\frac{2}{3}(x^2+5)^{3/2} + C$",
-            "$\\frac{2}{3}(x^2+5)^{1/2} + C$",
+            "$(x^2+5)^{3/2} + C$",
             "$\\frac{3}{2}(x^2+5)^{3/2} + C$",
-            "$(x^2+5)^{3/2} + C$"
+            "$\\frac{2}{3}(x^2+5)^{3/2} + C$",
+            "$\\frac{2}{3}(x^2+5)^{1/2} + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Ambil $u = x^2 + 5$, maka $du = 2x\\,dx$ — persis faktor yang tersedia di soal.\n\n$$\\int 2x\\sqrt{x^2+5}\\,dx = \\int \\sqrt{u}\\,du = \\int u^{1/2}du = \\frac{u^{3/2}}{3/2} = \\frac{2}{3}u^{3/2}$$\n\nJadi hasilnya $\\frac{2}{3}(x^2+5)^{3/2} + C$.\n\nCek: $\\frac{d}{dx}\\frac{2}{3}(x^2+5)^{3/2} = \\frac{2}{3}\\cdot\\frac{3}{2}(x^2+5)^{1/2}\\cdot 2x = 2x\\sqrt{x^2+5}$. Benar.",
           "hint": "Tulis akarnya sebagai pangkat $\\frac{1}{2}$ lebih dulu.",
           "tags": [
@@ -91,12 +91,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\int_0^2 x\\sqrt{x^2+1}\\,dx$ adalah ...",
           "options": [
+            "$\\frac{5\\sqrt{5}+1}{3}$",
             "$\\frac{5\\sqrt{5}-1}{3}$",
-            "$\\frac{5\\sqrt{5}}{3}$",
             "$\\frac{\\sqrt{5}-1}{3}$",
-            "$\\frac{5\\sqrt{5}+1}{3}$"
+            "$\\frac{5\\sqrt{5}}{3}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ambil $u = x^2+1$, maka $x\\,dx = \\frac{1}{2}du$. Batasnya: $x=0 \\Rightarrow u=1$, dan $x=2 \\Rightarrow u=5$.\n\n$$\\int_0^2 x\\sqrt{x^2+1}\\,dx = \\frac{1}{2}\\int_1^5 u^{1/2}du = \\frac{1}{2}\\left[\\frac{2}{3}u^{3/2}\\right]_1^5 = \\frac{1}{3}\\left[u^{3/2}\\right]_1^5$$\n\n$$= \\frac{1}{3}\\left(5^{3/2} - 1\\right) = \\frac{5\\sqrt{5}-1}{3}$$\n\nPerhatikan $5^{3/2} = 5\\sqrt{5} \\approx 11{,}18$, jadi hasilnya sekitar $3{,}39$.",
           "hint": "Setelah batas diganti, suku $-1$ berasal dari batas bawah $u=1$.",
           "tags": [
@@ -123,12 +123,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int x\\sin x\\,dx$ adalah ...",
           "options": [
-            "$-x\\cos x + \\sin x + C$",
-            "$x\\cos x - \\sin x + C$",
+            "$\\frac{x^2}{2}\\cos x + C$",
             "$-x\\cos x - \\sin x + C$",
-            "$\\frac{x^2}{2}\\cos x + C$"
+            "$-x\\cos x + \\sin x + C$",
+            "$x\\cos x - \\sin x + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai integral parsial dengan $u = x$ (karena menurunkannya menyederhanakan) dan $dv = \\sin x\\,dx$.\n\n$$du = dx, \\qquad v = \\int \\sin x\\,dx = -\\cos x$$\n\n$$\\int x\\sin x\\,dx = uv - \\int v\\,du = -x\\cos x - \\int(-\\cos x)\\,dx$$\n$$= -x\\cos x + \\int \\cos x\\,dx = -x\\cos x + \\sin x + C$$\n\nCek: $\\frac{d}{dx}(-x\\cos x + \\sin x) = -\\cos x + x\\sin x + \\cos x = x\\sin x$. Benar.\n\nDua tanda minus yang saling bertemu di langkah ketiga adalah tempat kesalahan paling sering terjadi.",
           "hint": "Ambil $u = x$, dan hati-hati dengan dua tanda minus yang bertemu.",
           "tags": [
@@ -174,9 +174,9 @@
           "prompt": "Teknik paling tepat untuk $\\int x\\cos(x^2)\\,dx$ adalah ...",
           "options": [
             "substitusi $u = x^2$",
-            "integral parsial dengan $u = x$",
+            "substitusi $u = \\cos(x^2)$",
             "rumus dasar $\\int \\cos$",
-            "substitusi $u = \\cos(x^2)$"
+            "integral parsial dengan $u = x$"
           ],
           "answerIndex": 0,
           "solution": "Perhatikan strukturnya: ada fungsi di dalam fungsi, yaitu $\\cos$ dari $x^2$. Turunan bagian dalamnya adalah $2x$, dan faktor $x$ memang hadir di luar.\n\nAmbil $u = x^2$, maka $du = 2x\\,dx$ sehingga $x\\,dx = \\frac{1}{2}du$:\n\n$$\\int x\\cos(x^2)dx = \\frac{1}{2}\\int \\cos u\\,du = \\frac{1}{2}\\sin(x^2) + C$$\n\nParsial dengan $u = x$ akan memberi $v = \\int\\cos(x^2)dx$, yang justru tidak bisa dinyatakan dengan fungsi dasar sama sekali. Perbedaannya tajam: di sini kedua faktor berhubungan, jadi substitusilah alatnya.",
@@ -221,12 +221,12 @@
           "format": "pilihan-ganda",
           "prompt": "Hasil dari $\\int x\\cos 2x\\,dx$ adalah ...",
           "options": [
-            "$\\frac{x}{2}\\sin 2x + \\frac{1}{4}\\cos 2x + C$",
             "$\\frac{x}{2}\\sin 2x - \\frac{1}{4}\\cos 2x + C$",
             "$x\\sin 2x + \\cos 2x + C$",
-            "$\\frac{x^2}{2}\\sin 2x + C$"
+            "$\\frac{x^2}{2}\\sin 2x + C$",
+            "$\\frac{x}{2}\\sin 2x + \\frac{1}{4}\\cos 2x + C$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Ambil $u = x$ dan $dv = \\cos 2x\\,dx$, sehingga $du = dx$ dan $v = \\frac{1}{2}\\sin 2x$.\n\n$$\\int x\\cos 2x\\,dx = \\frac{x}{2}\\sin 2x - \\int \\frac{1}{2}\\sin 2x\\,dx$$\n\n$$= \\frac{x}{2}\\sin 2x - \\frac{1}{2}\\left(-\\frac{1}{2}\\cos 2x\\right) = \\frac{x}{2}\\sin 2x + \\frac{1}{4}\\cos 2x + C$$\n\nTandanya menjadi plus karena antiturunan $\\sin 2x$ sendiri bertanda minus. Cek dengan menurunkan:\n$$\\frac{1}{2}\\sin 2x + x\\cos 2x - \\frac{1}{2}\\sin 2x = x\\cos 2x$$\n\nBenar.",
           "hint": "Perhatikan tanda minus dari antiturunan sinus bertemu minus dari rumus parsial.",
           "tags": [
@@ -239,12 +239,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai dari $\\int_0^{\\pi} x\\sin x\\,dx$ adalah ...",
           "options": [
-            "$\\pi$",
-            "$2\\pi$",
             "$0$",
-            "$\\frac{\\pi}{2}$"
+            "$\\frac{\\pi}{2}$",
+            "$\\pi$",
+            "$2\\pi$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Dari integral parsial, antiturunannya $F(x) = -x\\cos x + \\sin x$.\n\nDi $x = \\pi$:\n$$F(\\pi) = -\\pi\\cos\\pi + \\sin\\pi = -\\pi(-1) + 0 = \\pi$$\n\nDi $x = 0$:\n$$F(0) = -0\\cdot\\cos 0 + \\sin 0 = 0$$\n\n$$\\int_0^{\\pi} x\\sin x\\,dx = \\pi - 0 = \\pi$$\n\nPerhatikan bahwa suku $\\sin x$ hilang di kedua batas, dan seluruh hasilnya datang dari suku $-x\\cos x$ di batas atas.",
           "hint": "Cari antiturunannya lebih dulu dengan parsial, baru pasang batasnya.",
           "tags": [

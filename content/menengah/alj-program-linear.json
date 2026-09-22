@@ -27,8 +27,8 @@
           "prompt": "Nilai maksimum $z = 3x + 4y$ pada daerah $x+y \\le 10$, $x \\le 6$, $y \\le 8$, $x,y \\ge 0$ adalah ...",
           "options": [
             "$38$",
-            "$40$",
             "$34$",
+            "$40$",
             "$42$"
           ],
           "answerIndex": 0,
@@ -76,8 +76,8 @@
           "options": [
             "$10000x + 20000y \\le 600000$",
             "$10000x + 20000y \\ge 600000$",
-            "$x + y \\le 600000$",
-            "$10000x + 20000y = 600000$"
+            "$10000x + 20000y = 600000$",
+            "$x + y \\le 600000$"
           ],
           "answerIndex": 0,
           "solution": "Modal yang dipakai adalah harga dikali banyaknya:\n$$10000x + 20000y$$\n\nModalnya terbatas Rp600.000, artinya pengeluaran **tidak boleh melebihi** itu — jadi memakai $\\le$:\n$$10000x + 20000y \\le 600000$$\n\nMemakai tanda sama dengan berarti modal harus habis persis, padahal pedagang boleh menyisakan uang.",
@@ -140,12 +140,12 @@
           "format": "pilihan-ganda",
           "prompt": "Untuk pertidaksamaan $y \\ge 2x$, titik uji yang TIDAK boleh dipakai adalah ...",
           "options": [
-            "$(0,0)$",
             "$(1,0)$",
+            "$(2,1)$",
             "$(0,1)$",
-            "$(2,1)$"
+            "$(0,0)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Garis $y = 2x$ melewati titik asal, karena $0 = 2(0)$ benar.\n\nTitik uji harus berada **di luar** garis supaya hasilnya memberi kesimpulan. Menguji $(0,0)$ memberi $0 \\ge 0$ yang benar, tapi itu hanya memberitahu bahwa titik itu ada di garisnya — bukan di sisi mana daerahnya.\n\nTiga titik lainnya tidak berada di garis, jadi semuanya sah dipakai.",
           "hint": "Periksa titik mana yang terletak persis di garis.",
           "tags": [
@@ -172,12 +172,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada soal penjahit di atas, keuntungan di titik $(30,0)$ adalah ...",
           "options": [
+            "Rp1.500.000",
             "Rp1.200.000",
-            "Rp900.000",
             "Rp600.000",
-            "Rp1.500.000"
+            "Rp900.000"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Substitusikan $x = 30$ dan $y = 0$ ke fungsi objektif:\n$$z = 40000(30) + 30000(0)$$\n$$= 1200000$$\n\nPeriksa titik itu memenuhi pembatas:\nKatun: $2(30) + 0 = 60 \\le 60$. Pas.\nSutra: $30 + 0 = 30 \\le 40$. Memenuhi.",
           "hint": "Masukkan koordinatnya ke fungsi keuntungan.",
           "tags": [
@@ -190,12 +190,12 @@
           "format": "pilihan-ganda",
           "prompt": "Titik potong garis $2x+y=60$ dan $x+2y=40$ adalah ...",
           "options": [
-            "$\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$",
-            "$(20,10)$",
+            "$\\left(\\frac{20}{3}, \\frac{80}{3}\\right)$",
             "$(30,20)$",
-            "$\\left(\\frac{20}{3}, \\frac{80}{3}\\right)$"
+            "$\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$",
+            "$(20,10)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Selesaikan sistemnya. Kalikan persamaan kedua dengan 2:\n$$2x + 4y = 80$$\n\nKurangkan persamaan pertama:\n$$(2x+4y) - (2x+y) = 80 - 60$$\n$$3y = 20 \\Rightarrow y = \\frac{20}{3}$$\n\nSubstitusikan ke $x + 2y = 40$:\n$$x = 40 - \\frac{40}{3} = \\frac{80}{3}$$\n\nTitik potongnya $\\left(\\frac{80}{3}, \\frac{20}{3}\\right)$.",
           "hint": "Eliminasi salah satu variabel dulu.",
           "tags": [
@@ -222,12 +222,12 @@
           "format": "pilihan-ganda",
           "prompt": "Kalimat \"banyaknya barang tidak lebih dari 50\" diterjemahkan menjadi ...",
           "options": [
-            "$x \\le 50$",
-            "$x \\ge 50$",
             "$x < 50$",
-            "$x = 50$"
+            "$x = 50$",
+            "$x \\ge 50$",
+            "$x \\le 50$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "\"Tidak lebih dari 50\" berarti nilainya boleh 50, tapi tidak boleh melebihi.\n\nJadi batas atasnya termasuk:\n$$x \\le 50$$\n\nMemakai $<$ akan mengeluarkan nilai 50 itu sendiri, padahal kalimatnya masih mengizinkannya.",
           "hint": "Apakah nilai 50 sendiri masih diperbolehkan?",
           "tags": [
@@ -240,12 +240,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada soal program linear yang meminta \"nilai maksimum\", jawaban yang diharapkan adalah ...",
           "options": [
+            "luas daerah penyelesaian",
             "nilai fungsi objektifnya",
             "koordinat titik pojoknya",
-            "banyaknya titik pojok",
-            "luas daerah penyelesaian"
+            "banyaknya titik pojok"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Soal yang meminta nilai maksimum menanyakan **nilai fungsi objektif** $z$, bukan di titik mana nilai itu tercapai.\n\nKeduanya memang dihitung bersamaan — kamu harus menemukan titiknya untuk mendapat nilainya. Tapi yang ditulis sebagai jawaban adalah nilainya.\n\nKalau soal menanyakan \"pada titik mana\", barulah koordinatnya yang dijawab. Membaca pertanyaannya sampai selesai mencegah kesalahan ini.",
           "hint": "Perhatikan kata 'nilai' dalam pertanyaannya.",
           "tags": [

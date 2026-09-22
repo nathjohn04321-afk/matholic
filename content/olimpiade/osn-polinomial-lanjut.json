@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jumlah dan hasil kali akar-akar persamaan $x^2 - 5x + 6 = 0$ berturut-turut adalah ...",
           "options": [
-            "$5$ dan $6$",
-            "$-5$ dan $6$",
             "$5$ dan $-6$",
-            "$-5$ dan $-6$"
+            "$-5$ dan $-6$",
+            "$5$ dan $6$",
+            "$-5$ dan $6$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus Vieta dengan $a=1$, $b=-5$, $c=6$:\n\n$$r_1+r_2 = -\\frac{b}{a} = -\\frac{-5}{1} = 5$$\n$$r_1 r_2 = \\frac{c}{a} = \\frac{6}{1} = 6$$\n\nCek dengan mencari akarnya: $x^2-5x+6 = (x-2)(x-3)$, jadi akarnya $2$ dan $3$. Memang $2+3=5$ dan $2 \\times 3 = 6$ ✓\n\nPerhatikan dua tanda minus pada rumus jumlah yang saling meniadakan. Inilah tempat kesalahan tanda paling sering terjadi.",
           "hint": "Jumlahnya adalah $-b/a$, perhatikan tanda $b$.",
           "tags": [
@@ -74,8 +74,8 @@
           "options": [
             "$3$",
             "$1$",
-            "$-1$",
-            "$8$"
+            "$8$",
+            "$-1$"
           ],
           "answerIndex": 0,
           "solution": "Pakai teorema sisa: sisanya adalah $P(2)$.\n\n$$P(2) = 2^3 - 3(2) + 1 = 8 - 6 + 1 = 3$$\n\nJauh lebih cepat daripada pembagian panjang, dan tidak ada langkah yang bisa tergelincir.\n\nPilihan $8$ adalah jebakan untuk yang hanya menghitung suku pertamanya. Seluruh suku harus disubstitusikan.",
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Calon akar rasional dari $x^3 - 4x^2 + x + 6$ adalah ...",
           "options": [
-            "$\\pm 1, \\pm 2, \\pm 3, \\pm 6$",
             "$\\pm 1, \\pm 2, \\pm 4$",
-            "$\\pm 1, \\pm 3$",
-            "$\\pm 1, \\pm 2, \\pm 3, \\pm 4, \\pm 6$"
+            "$\\pm 1, \\pm 2, \\pm 3, \\pm 4, \\pm 6$",
+            "$\\pm 1, \\pm 2, \\pm 3, \\pm 6$",
+            "$\\pm 1, \\pm 3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Koefisien utamanya $1$, jadi $q$ hanya bisa $\\pm 1$ dan setiap akar rasionalnya pasti bilangan bulat.\n\nSuku tetapnya $6$, jadi $p$ harus membagi $6$:\n\n$$p \\in \\{\\pm 1, \\pm 2, \\pm 3, \\pm 6\\}$$\n\nHanya delapan nilai yang perlu diuji. Uji beberapa:\n\n$P(-1) = -1 - 4 - 1 + 6 = 0$ — akar ✓\n\n$P(2) = 8 - 16 + 2 + 6 = 0$ — akar ✓\n\n$P(3) = 27 - 36 + 3 + 6 = 0$ — akar ✓\n\nJadi $P(x) = (x+1)(x-2)(x-3)$. Pilihan dengan $\\pm 4$ keliru karena $4$ tidak membagi $6$.",
           "hint": "Pembagi dari suku tetapnya saja, karena koefisien utamanya $1$.",
           "tags": [
@@ -171,9 +171,9 @@
           "prompt": "Polinomial $P(x)$ berderajat $3$ memenuhi $P(1)=P(2)=P(3)=0$ dan $P(0)=6$. Nilai $P(4)$ adalah ...",
           "options": [
             "$-6$",
-            "$6$",
+            "$-24$",
             "$24$",
-            "$-24$"
+            "$6$"
           ],
           "answerIndex": 0,
           "solution": "Ketiga akarnya diketahui dan derajatnya tepat $3$, jadi bentuk faktornya lengkap:\n\n$$P(x) = a(x-1)(x-2)(x-3)$$\n\nPakai $P(0)=6$ untuk menemukan $a$:\n\n$$a(0-1)(0-2)(0-3) = a(-1)(-2)(-3) = -6a = 6 \\Rightarrow a = -1$$\n\nSekarang hitung $P(4)$:\n\n$$P(4) = -1(4-1)(4-2)(4-3) = -1(3)(2)(1) = -6$$\n\nPilihan $6$ adalah jawaban kalau kamu lupa faktor $a = -1$. Pemeriksaan tanda pada perkalian tiga bilangan negatif adalah tempat kesalahan paling sering.",
@@ -188,12 +188,12 @@
           "format": "pilihan-ganda",
           "prompt": "Polinomial $P(x)$ berderajat $3$ memenuhi $P(1)=P(2)=P(3)=5$. Langkah pertama yang paling membantu adalah ...",
           "options": [
-            "meninjau $Q(x) = P(x) - 5$",
             "meninjau $Q(x) = P(x) + 5$",
-            "membagi $P(x)$ dengan $5$",
-            "memakai rumus Vieta langsung"
+            "meninjau $Q(x) = P(x) - 5$",
+            "memakai rumus Vieta langsung",
+            "membagi $P(x)$ dengan $5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Bentuk faktor hanya bisa dipakai kalau kamu punya **akar**, yaitu titik yang nilainya nol. Di sini nilainya $5$, bukan nol.\n\nGeser seluruh polinomialnya ke bawah sebesar $5$:\n\n$$Q(x) = P(x) - 5$$\n\nSekarang $Q(1) = Q(2) = Q(3) = 0$, jadi $Q$ punya tiga akar yang diketahui. Karena $Q$ juga berderajat $3$:\n\n$$Q(x) = a(x-1)(x-2)(x-3)$$\n\nDari situ $P(x) = a(x-1)(x-2)(x-3) + 5$, dan satu syarat tambahan akan mengunci $a$.\n\nPola \"geser sampai nilainya menjadi nol\" ini sering menjadi satu-satunya langkah yang dibutuhkan.",
           "hint": "Bentuk faktor butuh akar; bagaimana membuat nilainya menjadi nol?",
           "tags": [
@@ -220,12 +220,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jumlah akar-akar persamaan $2x^2 - 6x + 4 = 0$ adalah ...",
           "options": [
+            "$2$",
             "$3$",
-            "$6$",
             "$-3$",
-            "$2$"
+            "$6$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai rumus Vieta dengan $a=2$ dan $b=-6$:\n\n$$r_1+r_2 = -\\frac{b}{a} = -\\frac{-6}{2} = 3$$\n\nCek dengan mencari akarnya. Bagi seluruh persamaan dengan $2$: $x^2-3x+2 = 0$, yang berfaktor $(x-1)(x-2)$. Akarnya $1$ dan $2$, dan memang $1+2 = 3$ ✓\n\nPilihan $6$ adalah jebakan untuk yang lupa membagi dengan koefisien utama. Kesalahan ini tidak muncul pada soal yang koefisien utamanya $1$, sehingga mudah terlewat ketika soal mengubahnya.",
           "hint": "Jangan lupa membagi dengan koefisien utamanya.",
           "tags": [
@@ -238,12 +238,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jika $x^3 - 6x^2 + 11x - 6 = 0$ memiliki akar-akar $r_1, r_2, r_3$, maka nilai $r_1 r_2 r_3$ adalah ...",
           "options": [
+            "$1$",
             "$6$",
             "$-6$",
-            "$11$",
-            "$1$"
+            "$11$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai rumus Vieta untuk polinomial kubik $ax^3+bx^2+cx+d$:\n\n$$r_1r_2r_3 = -\\frac{d}{a} = -\\frac{-6}{1} = 6$$\n\nCek dengan mencari akarnya. Calon akar rasionalnya adalah pembagi dari $6$, dan pengujian memberi $P(1)=0$, $P(2)=0$, $P(3)=0$.\n\nJadi akarnya $1$, $2$, dan $3$, sehingga hasil kalinya $1 \\times 2 \\times 3 = 6$ ✓\n\nPerhatikan tanda minus pada rumusnya. Untuk polinomial kubik, hasil kali akar adalah $-\\frac{d}{a}$, berbeda dari kuadrat yang hasil kalinya $+\\frac{c}{a}$ — tandanya berselang-seling menurut derajatnya.",
           "hint": "Untuk kubik, hasil kali akar adalah $-d/a$.",
           "tags": [

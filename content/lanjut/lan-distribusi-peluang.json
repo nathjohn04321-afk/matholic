@@ -27,8 +27,8 @@
           "prompt": "Contoh peubah acak kontinu adalah ...",
           "options": [
             "waktu tunggu bus dalam menit",
-            "banyaknya siswa yang hadir",
             "jumlah mata dadu yang muncul",
+            "banyaknya siswa yang hadir",
             "banyaknya gol dalam pertandingan"
           ],
           "answerIndex": 0,
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah koin seimbang dilempar 5 kali. Peluang muncul tepat 3 angka adalah ...",
           "options": [
-            "$\\frac{5}{16}$",
+            "$\\frac{1}{8}$",
             "$\\frac{3}{5}$",
             "$\\frac{1}{32}$",
-            "$\\frac{1}{8}$"
+            "$\\frac{5}{16}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai rumus binomial dengan $n=5$, $k=3$, $p=\\frac{1}{2}$:\n\n$$P(X=3) = \\binom{5}{3}\\left(\\frac{1}{2}\\right)^3\\left(\\frac{1}{2}\\right)^2 = 10 \\cdot \\frac{1}{32} = \\frac{10}{32} = \\frac{5}{16}$$\n\nAngka $\\binom{5}{3} = 10$ berarti ada 10 susunan berbeda yang memberi tepat 3 angka dari 5 lemparan.\n\nTanpa faktor itu kamu hanya mendapat $\\frac{1}{32}$, yaitu peluang satu urutan tertentu saja seperti AAAGG.",
           "hint": "Jangan lupa menghitung ada berapa susunan yang mungkin.",
           "tags": [
@@ -111,9 +111,9 @@
           "prompt": "Sebuah koin seimbang dilempar 5 kali. Peluang muncul paling sedikit satu angka adalah ...",
           "options": [
             "$\\frac{31}{32}$",
-            "$\\frac{5}{32}$",
             "$\\frac{1}{32}$",
-            "$\\frac{16}{32}$"
+            "$\\frac{16}{32}$",
+            "$\\frac{5}{32}$"
           ],
           "answerIndex": 0,
           "solution": "Menghitung \"paling sedikit satu\" secara langsung berarti menjumlahkan lima kasus: $k=1$ sampai $k=5$. Terlalu panjang.\n\nPakai komplemennya. Lawan dari \"paling sedikit satu angka\" adalah \"tidak ada angka sama sekali\":\n\n$$P(X=0) = \\binom{5}{0}\\left(\\frac{1}{2}\\right)^0\\left(\\frac{1}{2}\\right)^5 = \\frac{1}{32}$$\n\n$$P(X \\geq 1) = 1 - \\frac{1}{32} = \\frac{31}{32}$$\n\nSetiap kali soal berkata \"paling sedikit satu\", komplemen hampir selalu jalan terpendek.",
@@ -143,9 +143,9 @@
           "prompt": "Nilai ujian menyebar normal dengan $\\mu = 70$ dan $\\sigma = 5$. Skor baku untuk nilai $80$ adalah ...",
           "options": [
             "$2$",
-            "$10$",
+            "$0{,}5$",
             "$1{,}6$",
-            "$0{,}5$"
+            "$10$"
           ],
           "answerIndex": 0,
           "solution": "Pakai rumus skor baku:\n\n$$z = \\frac{x - \\mu}{\\sigma} = \\frac{80 - 70}{5} = \\frac{10}{5} = 2$$\n\nArtinya nilai $80$ berada dua simpangan baku di atas rata-rata.\n\nDari aturan $95\\%$, kamu bisa langsung menyimpulkan bahwa nilai ini termasuk sekitar $2{,}5\\%$ tertinggi — karena $95\\%$ data berada di antara $z = -2$ dan $z = 2$, dan sisanya terbagi dua ujung.",
@@ -161,12 +161,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada distribusi normal, persentase data yang berada dalam jangkauan $\\mu \\pm 2\\sigma$ adalah sekitar ...",
           "options": [
-            "$95\\%$",
-            "$68\\%$",
             "$99{,}7\\%$",
-            "$50\\%$"
+            "$50\\%$",
+            "$68\\%$",
+            "$95\\%$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Aturan yang berlaku untuk semua distribusi normal:\n\n- $\\mu \\pm \\sigma$ memuat sekitar $68\\%$ data\n- $\\mu \\pm 2\\sigma$ memuat sekitar $95\\%$ data\n- $\\mu \\pm 3\\sigma$ memuat sekitar $99{,}7\\%$ data\n\nAngka $95\\%$ inilah yang paling sering dipakai di luar kelas — ia menjadi dasar \"selang kepercayaan $95\\%$\" yang muncul di laporan survei dan berita hasil penelitian.\n\nPerhatikan bahwa aturan ini tidak bergantung pada nilai $\\mu$ dan $\\sigma$ sama sekali, karena semua kurva normal sebangun.",
           "hint": "Ini aturan yang berlaku sama untuk semua kurva normal.",
           "tags": [
@@ -193,12 +193,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui $P(Z < 1) = 0{,}8413$. Nilai $P(Z > 1)$ adalah ...",
           "options": [
-            "$0{,}1587$",
             "$0{,}8413$",
-            "$0{,}3413$",
-            "$0{,}6827$"
+            "$0{,}6827$",
+            "$0{,}1587$",
+            "$0{,}3413$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Seluruh luas di bawah kurva normal sama dengan $1$, jadi daerah kanan adalah sisa dari daerah kiri:\n\n$$P(Z > 1) = 1 - P(Z < 1) = 1 - 0{,}8413 = 0{,}1587$$\n\nMasuk akal secara gambar: $z=1$ berada di sebelah kanan puncak, jadi daerah di kanannya pasti kurang dari setengah.\n\nPilihan $0{,}3413$ adalah luas antara $z=0$ dan $z=1$, yaitu $0{,}8413 - 0{,}5$. Angka itu benar untuk pertanyaan lain, bukan untuk yang ini.",
           "hint": "Seluruh luas kurva sama dengan 1.",
           "tags": [
@@ -211,12 +211,12 @@
           "format": "pilihan-ganda",
           "prompt": "Tinggi badan siswa menyebar normal dengan $\\mu = 160$ cm dan $\\sigma = 8$ cm. Peluang seorang siswa lebih tinggi dari $176$ cm paling dekat dengan ...",
           "options": [
-            "$2{,}5\\%$",
+            "$32\\%$",
             "$5\\%$",
-            "$16\\%$",
-            "$32\\%$"
+            "$2{,}5\\%$",
+            "$16\\%$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Hitung skor bakunya:\n$$z = \\frac{176 - 160}{8} = \\frac{16}{8} = 2$$\n\nDari aturan $95\\%$, sebanyak $95\\%$ data berada di antara $z = -2$ dan $z = 2$. Sisanya $5\\%$ terbagi rata di kedua ujung karena kurvanya simetris.\n\n$$P(Z > 2) \\approx \\frac{5\\%}{2} = 2{,}5\\%$$\n\nPilihan $5\\%$ adalah jebakan untuk yang lupa membagi dua — angka itu mencakup kedua ujung, termasuk siswa yang sangat pendek.",
           "hint": "Sisa $5\\%$ terbagi ke dua ujung.",
           "tags": [
@@ -243,12 +243,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah percobaan tidak dapat dimodelkan dengan distribusi binomial jika ...",
           "options": [
-            "peluang berhasil berubah di setiap percobaan",
             "hanya ada dua hasil yang mungkin",
-            "banyaknya percobaan sudah ditentukan",
-            "antar percobaan saling bebas"
+            "antar percobaan saling bebas",
+            "peluang berhasil berubah di setiap percobaan",
+            "banyaknya percobaan sudah ditentukan"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Binomial menuntut empat syarat: banyaknya percobaan tetap, hanya dua hasil, peluang berhasil tetap, dan antar percobaan saling bebas.\n\nTiga pilihan lainnya justru menyebutkan syarat yang **terpenuhi**. Hanya \"peluang berhasil berubah\" yang melanggarnya.\n\nContoh nyatanya: mengambil 3 kartu dari setumpuk tanpa mengembalikannya. Peluang mendapat kartu As berubah setiap kali satu kartu keluar, sehingga binomial tidak berlaku.",
           "hint": "Cari pilihan yang melanggar syarat, bukan yang memenuhi.",
           "tags": [

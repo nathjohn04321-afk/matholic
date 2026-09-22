@@ -26,9 +26,9 @@
           "prompt": "Bilangan bulat positif terkecil yang bersisa $2$ jika dibagi $3$ dan bersisa $3$ jika dibagi $5$ adalah ...",
           "options": [
             "$8$",
-            "$13$",
             "$23$",
-            "$11$"
+            "$11$",
+            "$13$"
           ],
           "answerIndex": 0,
           "solution": "Daftar bilangan yang bersisa $2$ modulo $3$:\n$$2, 5, 8, 11, 14, 17, 20, 23, \\ldots$$\n\nPeriksa satu per satu mana yang bersisa $3$ modulo $5$:\n\n$2 \\bmod 5 = 2$ — bukan\n\n$5 \\bmod 5 = 0$ — bukan\n\n$8 \\bmod 5 = 3$ — **ya**\n\nJadi jawabannya $8$. Penyelesaian berikutnya adalah $8 + 15 = 23$, karena modulusnya saling prima sehingga putarannya $3 \\times 5 = 15$.",
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bilangan bulat positif terkecil yang bersisa $3$ jika dibagi $5$ dan bersisa $4$ jika dibagi $7$ adalah ...",
           "options": [
-            "$18$",
-            "$25$",
+            "$11$",
             "$32$",
-            "$11$"
+            "$18$",
+            "$25$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Tulis syarat pertama sebagai bentuk umum:\n$$x = 5k + 3$$\n\nSubstitusikan ke syarat kedua:\n$$5k + 3 \\equiv 4 \\pmod 7 \\Rightarrow 5k \\equiv 1 \\pmod 7$$\n\nCari $k$ dengan mencoba: $5 \\times 3 = 15 \\equiv 1 \\pmod 7$. Jadi $k \\equiv 3 \\pmod 7$.\n\nAmbil $k = 3$:\n$$x = 5(3) + 3 = 18$$\n\nCek: $18 = 5(3)+3$ ✓ dan $18 = 7(2)+4$ ✓.\n\nPenyelesaian berikutnya berselisih $35$, yaitu $53$, $88$, dan seterusnya.",
           "hint": "Tulis satu syarat sebagai bentuk umum, lalu masukkan ke syarat lainnya.",
           "tags": [
@@ -90,12 +90,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sistem $x \\equiv 2 \\pmod 3$, $x \\equiv 3 \\pmod 4$, $x \\equiv 2 \\pmod 5$ memiliki penyelesaian yang berulang setiap ...",
           "options": [
-            "$60$",
+            "$30$",
             "$12$",
-            "$47$",
-            "$30$"
+            "$60$",
+            "$47$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Ketiga modulusnya — $3$, $4$, dan $5$ — saling prima berpasangan.\n\nTeorema Sisa Cina menjamin penyelesaiannya tunggal modulo hasil kali seluruh modulusnya:\n\n$$M = 3 \\times 4 \\times 5 = 60$$\n\nJadi kalau $47$ adalah satu penyelesaian, penyelesaian lainnya adalah $107$, $167$, dan seterusnya — juga $-13$ ke arah negatif.\n\nPilihan $47$ adalah penyelesaian terkecilnya, bukan periodenya. Keduanya sering tertukar.",
           "hint": "Berapa hasil kali seluruh modulusnya?",
           "tags": [
@@ -122,12 +122,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan $6x + 9y = 5$ dengan $x, y$ bilangan bulat ...",
           "options": [
-            "tidak punya penyelesaian",
             "punya tepat satu penyelesaian",
             "punya tepat dua penyelesaian",
-            "punya tak hingga banyak penyelesaian"
+            "punya tak hingga banyak penyelesaian",
+            "tidak punya penyelesaian"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Hitung $\\gcd(6,9) = 3$.\n\nSyarat adanya penyelesaian bulat adalah $\\gcd(a,b) \\mid c$. Di sini $3 \\nmid 5$, jadi tidak ada penyelesaian.\n\nTerlihat juga secara langsung: $6x + 9y = 3(2x + 3y)$ selalu kelipatan $3$, berapa pun nilai $x$ dan $y$. Bilangan $5$ bukan kelipatan $3$, jadi ruas kiri tidak akan pernah mencapainya.\n\nPemeriksaan $\\gcd$ ini selalu langkah pertama — ia bisa menyelesaikan soal dalam satu baris.",
           "hint": "Periksa $\\gcd$ kedua koefisiennya lebih dulu.",
           "tags": [
@@ -140,12 +140,12 @@
           "format": "pilihan-ganda",
           "prompt": "Banyaknya pasangan bilangan bulat **positif** $(x,y)$ yang memenuhi $5x + 3y = 52$ adalah ...",
           "options": [
-            "$3$",
+            "$5$",
             "$2$",
             "$4$",
-            "$5$"
+            "$3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Karena $\\gcd(5,3) = 1$ membagi $52$, penyelesaiannya ada.\n\nSelesaikan untuk $y$: $y = \\frac{52 - 5x}{3}$. Agar $y$ bulat, $52 - 5x$ harus habis dibagi $3$.\n\nModulo $3$: $52 \\equiv 1$ dan $5 \\equiv 2$, jadi $1 - 2x \\equiv 0 \\pmod 3$, yang memberi $x \\equiv 2 \\pmod 3$.\n\nCalon nilai $x$: $2, 5, 8, 11, \\ldots$ Syarat $y > 0$ menuntut $5x < 52$, jadi $x \\leq 10$.\n\n$x=2 \\Rightarrow y=14$ ✓\n\n$x=5 \\Rightarrow y=9$ ✓\n\n$x=8 \\Rightarrow y=4$ ✓\n\n$x=11$ sudah melebihi batas. Jadi ada $3$ pasangan.",
           "hint": "Cari syarat keterbagiannya dulu, baru terapkan batas positifnya.",
           "tags": [
@@ -220,12 +220,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sistem $x \\equiv 1 \\pmod 4$ dan $x \\equiv 2 \\pmod 6$ ...",
           "options": [
-            "tidak punya penyelesaian",
-            "punya penyelesaian tunggal modulo $24$",
             "punya penyelesaian tunggal modulo $12$",
-            "punya tepat dua penyelesaian"
+            "tidak punya penyelesaian",
+            "punya tepat dua penyelesaian",
+            "punya penyelesaian tunggal modulo $24$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Perhatikan bahwa $\\gcd(4,6) = 2 \\neq 1$, jadi Teorema Sisa Cina tidak menjamin apa pun. Periksa langsung.\n\nSyarat pertama, $x \\equiv 1 \\pmod 4$, menuntut $x$ **ganjil**.\n\nSyarat kedua, $x \\equiv 2 \\pmod 6$, menuntut $x$ **genap**.\n\nTidak ada bilangan yang sekaligus ganjil dan genap, jadi sistemnya tidak punya penyelesaian.\n\nInilah tepatnya yang bisa terjadi kalau syarat saling prima dilanggar — dan alasan kenapa syarat itu ada.",
           "hint": "Periksa paritas yang dituntut masing-masing syarat.",
           "tags": [
@@ -238,12 +238,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bilangan bulat positif terkecil yang bersisa $1$ jika dibagi $4$, bersisa $2$ jika dibagi $5$, dan bersisa $3$ jika dibagi $7$ adalah ...",
           "options": [
+            "$117$",
             "$17$",
             "$37$",
-            "$57$",
-            "$117$"
+            "$57$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Modulus $4$, $5$, dan $7$ saling prima berpasangan, jadi penyelesaiannya tunggal modulo $140$.\n\nDari syarat pertama: $x = 4a + 1$.\n\nMasukkan ke syarat kedua: $4a + 1 \\equiv 2 \\pmod 5$, jadi $4a \\equiv 1 \\pmod 5$. Karena $4 \\times 4 = 16 \\equiv 1$, maka $a \\equiv 4 \\pmod 5$.\n\nTulis $a = 5b + 4$, sehingga $x = 20b + 17$.\n\nMasukkan ke syarat ketiga: $20b + 17 \\equiv 3 \\pmod 7$. Karena $20 \\equiv 6$ dan $17 \\equiv 3$, ini menjadi $6b \\equiv 0 \\pmod 7$, sehingga $b \\equiv 0 \\pmod 7$.\n\nAmbil $b = 0$: $x = 17$.\n\nCek: $17 = 4(4)+1$ ✓, $17 = 5(3)+2$ ✓, $17 = 7(2)+3$ ✓.",
           "hint": "Substitusi berantai; syarat terakhir bisa saja langsung terpenuhi.",
           "tags": [

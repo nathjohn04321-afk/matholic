@@ -26,8 +26,8 @@
           "prompt": "Sebuah elips memiliki persamaan $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$. Jumlah jarak sebuah titik pada elips ke kedua fokusnya adalah ...",
           "options": [
             "$10$",
-            "$6$",
             "$8$",
+            "$6$",
             "$5$"
           ],
           "answerIndex": 0,
@@ -73,12 +73,12 @@
           "format": "pilihan-ganda",
           "prompt": "Koordinat fokus elips $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ adalah ...",
           "options": [
-            "$(\\pm 4, 0)$",
-            "$(\\pm 5, 0)$",
+            "$(\\pm \\sqrt{34}, 0)$",
             "$(0, \\pm 4)$",
-            "$(\\pm \\sqrt{34}, 0)$"
+            "$(\\pm 5, 0)$",
+            "$(\\pm 4, 0)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Karena penyebut di bawah $x^2$ lebih besar, sumbu mayornya mendatar dan fokusnya di sumbu $x$.\n\n$$a^2 = 25, \\quad b^2 = 9$$\n$$c^2 = a^2 - b^2 = 25 - 9 = 16 \\Rightarrow c = 4$$\n\nJadi fokusnya $(4,0)$ dan $(-4,0)$.\n\nPilihan $(\\pm\\sqrt{34},0)$ adalah jebakan untuk yang memakai rumus hiperbola $c^2 = a^2+b^2$. Pada elips tandanya minus, karena fokus harus berada di dalam kurva.",
           "hint": "Pada elips tandanya minus, sehingga $c$ lebih kecil dari $a$.",
           "tags": [
@@ -91,12 +91,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan asimtot hiperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ adalah ...",
           "options": [
-            "$y = \\pm\\frac{3}{4}x$",
+            "$y = \\pm\\frac{5}{4}x$",
             "$y = \\pm\\frac{4}{3}x$",
-            "$y = \\pm\\frac{9}{16}x$",
-            "$y = \\pm\\frac{5}{4}x$"
+            "$y = \\pm\\frac{3}{4}x$",
+            "$y = \\pm\\frac{9}{16}x$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Untuk hiperbola bentuk $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$, asimtotnya $y = \\pm\\frac{b}{a}x$.\n\n$$a^2 = 16 \\Rightarrow a = 4, \\qquad b^2 = 9 \\Rightarrow b = 3$$\n\n$$y = \\pm\\frac{3}{4}x$$\n\nCara cepat mengingat arah pecahannya: ganti angka $1$ di ruas kanan dengan $0$. Persamaan $\\frac{x^2}{16} - \\frac{y^2}{9} = 0$ memberi $\\frac{y^2}{9} = \\frac{x^2}{16}$, jadi $y = \\pm\\frac{3}{4}x$ — tepat asimtotnya. Cara ini juga bekerja untuk hiperbola yang bergeser pusatnya.",
           "hint": "Ganti ruas kanan dengan nol, lalu selesaikan untuk $y$.",
           "tags": [
@@ -138,12 +138,12 @@
           "format": "pilihan-ganda",
           "prompt": "Koordinat fokus parabola $y^2 = 12x$ adalah ...",
           "options": [
-            "$(3, 0)$",
-            "$(12, 0)$",
             "$(6, 0)$",
+            "$(12, 0)$",
+            "$(3, 0)$",
             "$(0, 3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Bandingkan dengan bentuk baku $y^2 = 4px$:\n\n$$4p = 12 \\Rightarrow p = 3$$\n\nFokusnya berada di $(p, 0) = (3, 0)$, dan direktriksnya $x = -3$.\n\nKarena $y$ yang dikuadratkan dan $p > 0$, parabolanya terbuka ke kanan — sesuai dengan letak fokusnya di sebelah kanan puncak.\n\nKesalahan umum: membaca $12$ sebagai $p$ langsung. Angka di sebelah $x$ adalah $4p$, bukan $p$.",
           "hint": "Koefisien $x$ adalah $4p$, bukan $p$.",
           "tags": [
@@ -186,12 +186,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah elips berpusat di $(2,-1)$ dengan $a = 5$ (mendatar) dan $b = 3$. Koordinat fokusnya adalah ...",
           "options": [
-            "$(6,-1)$ dan $(-2,-1)$",
-            "$(7,-1)$ dan $(-3,-1)$",
+            "$(6,1)$ dan $(-2,1)$",
             "$(2,3)$ dan $(2,-5)$",
-            "$(6,1)$ dan $(-2,1)$"
+            "$(6,-1)$ dan $(-2,-1)$",
+            "$(7,-1)$ dan $(-3,-1)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Hitung $c$ lebih dulu:\n$$c^2 = a^2 - b^2 = 25 - 9 = 16 \\Rightarrow c = 4$$\n\nKarena sumbu mayornya mendatar, fokus bergeser ke kiri dan kanan dari pusat:\n$$(h \\pm c,\\ k) = (2 \\pm 4,\\ -1)$$\n\nJadi fokusnya $(6,-1)$ dan $(-2,-1)$.\n\nPerhatikan bahwa koordinat $y$ kedua fokus tetap $-1$, sama dengan pusatnya. Pilihan $(7,-1)$ dan $(-3,-1)$ adalah jebakan untuk yang memakai $a = 5$ alih-alih $c = 4$.",
           "hint": "Cari $c$ dulu, lalu geser dari pusatnya — bukan dari titik asal.",
           "tags": [
@@ -204,12 +204,12 @@
           "format": "pilihan-ganda",
           "prompt": "Persamaan $x^2 + y^2 - 6x + 4y - 12 = 0$ menyatakan lingkaran dengan pusat dan jari-jari ...",
           "options": [
-            "pusat $(3,-2)$, $r = 5$",
-            "pusat $(-3,2)$, $r = 5$",
+            "pusat $(6,-4)$, $r = 5$",
             "pusat $(3,-2)$, $r = 25$",
-            "pusat $(6,-4)$, $r = 5$"
+            "pusat $(3,-2)$, $r = 5$",
+            "pusat $(-3,2)$, $r = 5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Lengkapkan kuadrat untuk masing-masing variabel:\n\n$$(x^2 - 6x) + (y^2 + 4y) = 12$$\n$$(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$$\n$$(x-3)^2 + (y+2)^2 = 25$$\n\nJadi pusatnya $(3,-2)$ dan $r = \\sqrt{25} = 5$.\n\nDua hal yang sering keliru: tanda pusat berlawanan dengan isi kurung, dan ruas kanan adalah $r^2$, bukan $r$. Angka yang ditambahkan ke kiri wajib ditambahkan juga ke kanan.",
           "hint": "Lengkapkan kuadrat, dan ingat ruas kanan adalah $r^2$.",
           "tags": [
@@ -237,12 +237,12 @@
           "format": "pilihan-ganda",
           "prompt": "Sebuah titik pada elips $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ memiliki absis $x = 3$. Nilai $y$ yang mungkin adalah ...",
           "options": [
-            "$\\pm\\frac{12}{5}$",
             "$\\pm\\frac{9}{5}$",
             "$\\pm 3$",
+            "$\\pm\\frac{12}{5}$",
             "$\\pm\\frac{16}{5}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Substitusikan $x = 3$ ke persamaan elipsnya:\n\n$$\\frac{9}{25} + \\frac{y^2}{9} = 1$$\n$$\\frac{y^2}{9} = 1 - \\frac{9}{25} = \\frac{16}{25}$$\n$$y^2 = 9 \\cdot \\frac{16}{25} = \\frac{144}{25}$$\n$$y = \\pm\\frac{12}{5}$$\n\nAda dua nilai karena elips simetris terhadap sumbu $x$ — setiap absis yang sah memberi dua titik pada kurva.",
           "hint": "Substitusikan, lalu jangan lupa dua akar.",
           "tags": [
@@ -255,12 +255,12 @@
           "format": "pilihan-ganda",
           "prompt": "Selisih jarak sebuah titik pada hiperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ ke kedua fokusnya adalah ...",
           "options": [
-            "$8$",
-            "$10$",
+            "$5$",
             "$6$",
-            "$5$"
+            "$8$",
+            "$10$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Dari definisi hiperbola, selisih jarak ke dua fokus selalu sama dengan $2a$.\n\nSuku yang bertanda positif adalah $\\frac{x^2}{16}$, jadi $a^2 = 16$ dan $a = 4$.\n\n$$\\text{selisih jarak} = 2a = 8$$\n\nJebakan di sini adalah memakai $c = 5$ sehingga menjawab $10$. Nilai $c$ menentukan letak fokus, bukan selisih jaraknya. Baik pada elips maupun hiperbola, besaran yang dijaga tetap selalu $2a$ — hanya operasinya yang berbeda: jumlah pada elips, selisih pada hiperbola.",
           "hint": "Yang dijaga tetap selalu $2a$, bukan $2c$.",
           "tags": [

@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Panjang diagonal ruang kubus berusuk 4 cm adalah ...",
           "options": [
-            "$4\\sqrt{3}$ cm",
             "$4\\sqrt{2}$ cm",
-            "$12$ cm",
-            "$8$ cm"
+            "$8$ cm",
+            "$4\\sqrt{3}$ cm",
+            "$12$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai rumus diagonal ruang kubus:\n$$d = s\\sqrt{3} = 4\\sqrt{3} \\text{ cm}$$\n\nNilainya sekitar $6{,}93$ cm.\n\nPilihan $4\\sqrt{2}$ adalah diagonal **sisi**, yaitu diagonal pada satu permukaan — lebih pendek karena hanya melintasi dua arah, bukan tiga.",
           "hint": "Diagonal ruang melintasi tiga arah sekaligus.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Panjang diagonal ruang balok berukuran $3 \\times 4 \\times 12$ cm adalah ...",
           "options": [
-            "$13$ cm",
             "$19$ cm",
+            "$12$ cm",
             "$\\sqrt{19}$ cm",
-            "$12$ cm"
+            "$13$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Untuk balok, diagonal ruangnya:\n$$d = \\sqrt{p^2+l^2+t^2}$$\n$$= \\sqrt{9 + 16 + 144} = \\sqrt{169} = 13$$\n\nRumus ini adalah Pythagoras yang dipakai dua kali, sama seperti pada kubus — hanya saja ketiga rusuknya berbeda panjang.\n\nPilihan $19$ muncul dari menjumlahkan ketiga rusuk langsung.",
           "hint": "Kuadratkan ketiganya, jumlahkan, lalu akarkan.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada kubus berusuk 6 cm, jarak antara dua titik sudut yang berseberangan pada satu sisi adalah ...",
           "options": [
+            "$12$ cm",
             "$6\\sqrt{2}$ cm",
             "$6\\sqrt{3}$ cm",
-            "$12$ cm",
             "$6$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Dua titik sudut berseberangan **pada satu sisi** dihubungkan oleh diagonal sisi, bukan diagonal ruang.\n\nPada persegi berusuk 6:\n$$d = \\sqrt{6^2+6^2} = \\sqrt{72} = 6\\sqrt{2}$$\n\nNilainya sekitar $8{,}49$ cm.\n\nKalau titiknya berseberangan di dalam ruang (bukan satu sisi), barulah jawabannya $6\\sqrt{3}$.",
           "hint": "Kedua titik berada di permukaan yang sama atau tidak?",
           "tags": [
@@ -123,12 +123,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada kubus berusuk $a$, sudut antara diagonal ruang dan bidang alas memenuhi ...",
           "options": [
+            "$\\tan\\theta = \\sqrt{3}$",
             "$\\tan\\theta = \\frac{1}{\\sqrt{2}}$",
             "$\\tan\\theta = \\sqrt{2}$",
-            "$\\tan\\theta = 1$",
-            "$\\tan\\theta = \\sqrt{3}$"
+            "$\\tan\\theta = 1$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Proyeksi diagonal ruang pada bidang alas adalah diagonal sisi alas, yang panjangnya $a\\sqrt{2}$.\n\nSisi tegaknya adalah rusuk vertikal, panjangnya $a$.\n\nSegitiga siku-sikunya punya sisi depan $a$ dan sisi samping $a\\sqrt{2}$:\n$$\\tan\\theta = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}}$$\n\nSudutnya sekitar $35{,}3^\\circ$ — masuk akal, karena diagonal ruang memang condong dan tidak curam.",
           "hint": "Apa proyeksi diagonal ruang pada alasnya?",
           "tags": [
@@ -171,12 +171,12 @@
           "format": "pilihan-ganda",
           "prompt": "Segitiga siku-siku bersisi 6 dan 8 dengan sisi miring 10. Jarak titik sudut siku-siku ke sisi miring adalah ...",
           "options": [
-            "$4{,}8$",
             "$5$",
+            "$4{,}8$",
             "$7$",
             "$3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Hitung luasnya dua cara.\n\nCara pertama, memakai kedua sisi tegak:\n$$L = \\tfrac{1}{2}(6)(8) = 24$$\n\nCara kedua, memakai sisi miring sebagai alas dan jarak yang dicari sebagai tinggi:\n$$L = \\tfrac{1}{2}(10)(t)$$\n\nSamakan keduanya:\n$$\\tfrac{1}{2}(10)(t) = 24$$\n$$5t = 24 \\Rightarrow t = 4{,}8$$",
           "hint": "Hitung luasnya dengan dua pasang alas-tinggi yang berbeda.",
           "tags": [
@@ -189,12 +189,12 @@
           "format": "pilihan-ganda",
           "prompt": "Volume kubus dengan diagonal ruang $6\\sqrt{3}$ cm adalah ...",
           "options": [
-            "$216$ cm$^3$",
-            "$108$ cm$^3$",
+            "$648$ cm$^3$",
             "$36$ cm$^3$",
-            "$648$ cm$^3$"
+            "$108$ cm$^3$",
+            "$216$ cm$^3$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Diagonal ruang kubus adalah $s\\sqrt{3}$, jadi:\n$$s\\sqrt{3} = 6\\sqrt{3} \\Rightarrow s = 6$$\n\nVolumenya:\n$$V = s^3 = 6^3 = 216 \\text{ cm}^3$$\n\nMengambil $6\\sqrt{3}$ sendiri sebagai rusuk adalah kesalahan umum — itu panjang diagonalnya, bukan rusuknya.",
           "hint": "Cari panjang rusuknya lebih dulu.",
           "tags": [
@@ -221,12 +221,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pada kubus berusuk 8 cm, panjang diagonal sisinya adalah ...",
           "options": [
-            "$8\\sqrt{2}$ cm",
-            "$8\\sqrt{3}$ cm",
             "$16$ cm",
-            "$64$ cm"
+            "$8\\sqrt{3}$ cm",
+            "$64$ cm",
+            "$8\\sqrt{2}$ cm"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Diagonal sisi berada pada satu permukaan, yaitu diagonal sebuah persegi berusuk 8.\n\n$$d = \\sqrt{8^2+8^2} = \\sqrt{128} = 8\\sqrt{2} \\text{ cm}$$\n\nNilainya sekitar $11{,}3$ cm.\n\nDiagonal ruangnya lebih panjang, yaitu $8\\sqrt{3} \\approx 13{,}9$ cm — karena melintasi tiga arah.",
           "hint": "Diagonal sisi hanya melintasi dua arah.",
           "tags": [
@@ -239,12 +239,12 @@
           "format": "pilihan-ganda",
           "prompt": "Jarak terpendek dari sebuah titik ke suatu bidang selalu diukur ...",
           "options": [
-            "tegak lurus terhadap bidang",
+            "melalui titik pusat bidang",
             "sepanjang rusuk terdekat",
-            "sejajar bidang",
-            "melalui titik pusat bidang"
+            "tegak lurus terhadap bidang",
+            "sejajar bidang"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Jarak selalu berarti yang terpendek, dan lintasan terpendek dari titik ke bidang selalu tegak lurus terhadap bidang itu.\n\nLintasan mana pun yang miring akan lebih panjang — karena ia menjadi sisi miring dari segitiga siku-siku yang salah satu sisi tegaknya adalah jarak tegak lurus itu sendiri.\n\nJadi jawabannya tegak lurus terhadap bidang.",
           "hint": "Pada segitiga siku-siku, sisi mana yang terpendek?",
           "tags": [

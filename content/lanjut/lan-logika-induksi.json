@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Pernyataan yang selalu senilai dengan \"jika $p$ maka $q$\" adalah ...",
           "options": [
+            "$p \\Rightarrow \\sim q$",
             "$\\sim q \\Rightarrow \\sim p$",
-            "$q \\Rightarrow p$",
             "$\\sim p \\Rightarrow \\sim q$",
-            "$p \\Rightarrow \\sim q$"
+            "$q \\Rightarrow p$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Yang selalu senilai dengan implikasi adalah **kontraposisinya**, yaitu $\\sim q \\Rightarrow \\sim p$.\n\nPilihan $q \\Rightarrow p$ adalah konvers, dan $\\sim p \\Rightarrow \\sim q$ adalah invers. Keduanya tidak selalu senilai.\n\nAlasan kontraposisi selalu senilai: keduanya melarang pola yang sama persis, yaitu $p$ benar bersamaan dengan $q$ salah.",
           "hint": "Yang senilai membalik urutan **sekaligus** mengingkari keduanya.",
           "tags": [
@@ -45,12 +45,12 @@
           "prompt": "Kontraposisi dari \"Jika Ani rajin belajar, maka Ani lulus ujian\" adalah ...",
           "options": [
             "Jika Ani tidak lulus ujian, maka Ani tidak rajin belajar",
-            "Jika Ani lulus ujian, maka Ani rajin belajar",
             "Jika Ani tidak rajin belajar, maka Ani tidak lulus ujian",
-            "Ani rajin belajar dan Ani tidak lulus ujian"
+            "Ani rajin belajar dan Ani tidak lulus ujian",
+            "Jika Ani lulus ujian, maka Ani rajin belajar"
           ],
           "answerIndex": 0,
-          "solution": "Kontraposisi dibentuk dengan dua langkah: **tukar posisinya**, lalu **ingkari keduanya**.\n\nDari $p$ = \"Ani rajin belajar\" dan $q$ = \"Ani lulus ujian\", kontraposisinya $\\sim q \\Rightarrow \\sim p$:\n\n\"Jika Ani tidak lulus ujian, maka Ani tidak rajin belajar.\"\n\nPilihan kedua hanya menukar posisi tanpa mengingkari — itu konvers. Pilihan ketiga hanya mengingkari tanpa menukar — itu invers. Keduanya tidak senilai dengan pernyataan aslinya.",
+          "solution": "Kontraposisi dibentuk dengan dua langkah: **tukar posisinya**, lalu **ingkari keduanya**.\n\nDari $p$ = \"Ani rajin belajar\" dan $q$ = \"Ani lulus ujian\", kontraposisinya $\\sim q \\Rightarrow \\sim p$:\n\n\"Jika Ani tidak lulus ujian, maka Ani tidak rajin belajar.\"\n\n\"Jika Ani lulus ujian, maka Ani rajin belajar\" hanya menukar posisi tanpa mengingkari — itu konvers. \"Jika Ani tidak rajin belajar, maka Ani tidak lulus ujian\" hanya mengingkari tanpa menukar — itu invers. Keduanya tidak senilai dengan pernyataan aslinya.",
           "hint": "Tukar posisi, lalu ingkari keduanya — kedua langkah harus dilakukan.",
           "tags": [
             "un"
@@ -76,12 +76,12 @@
           "format": "pilihan-ganda",
           "prompt": "Ingkaran dari \"Hari ini panas dan cerah\" adalah ...",
           "options": [
-            "Hari ini tidak panas atau tidak cerah",
             "Hari ini tidak panas dan tidak cerah",
-            "Hari ini panas atau cerah",
-            "Hari ini tidak panas"
+            "Hari ini tidak panas",
+            "Hari ini tidak panas atau tidak cerah",
+            "Hari ini panas atau cerah"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pakai hukum De Morgan: $\\sim(p \\wedge q) \\equiv \\sim p \\vee \\sim q$.\n\nKata \"dan\" berubah menjadi \"atau\", dan kedua bagiannya diingkari:\n\n\"Hari ini tidak panas **atau** tidak cerah.\"\n\nAlasannya masuk akal: pernyataan \"panas dan cerah\" menuntut **keduanya** terjadi. Untuk membantahnya, cukup satu saja yang tidak terpenuhi — tidak perlu keduanya gagal.\n\nPilihan \"tidak panas dan tidak cerah\" terlalu kuat: ia menuntut keduanya gagal, padahal satu saja sudah cukup.",
           "hint": "Untuk membantah \"dan\", berapa banyak bagian yang perlu gagal?",
           "tags": [
@@ -95,12 +95,12 @@
           "format": "pilihan-ganda",
           "prompt": "Diketahui \"Jika hujan maka jalan basah\" dan \"jalan tidak basah\". Kesimpulan yang sah adalah ...",
           "options": [
+            "Tidak dapat disimpulkan",
             "Tidak hujan",
-            "Hujan",
             "Jalan kering karena tidak hujan",
-            "Tidak dapat disimpulkan"
+            "Hujan"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Ini pola modus tollens: dari $p \\Rightarrow q$ dan $\\sim q$, kesimpulannya $\\sim p$.\n\n$p$ = hujan, $q$ = jalan basah. Karena jalan tidak basah, maka tidak hujan.\n\nAlasannya: seandainya hujan, implikasinya memaksa jalan basah. Kenyataannya jalan tidak basah, jadi pengandaian itu mustahil.\n\nPerhatikan bahwa arah sebaliknya tidak sah. Dari \"jalan basah\" kamu **tidak** boleh menyimpulkan \"hujan\", karena jalan bisa basah oleh sebab lain.",
           "hint": "Ingkaran bagian belakang membatalkan bagian depannya.",
           "tags": [
@@ -128,12 +128,12 @@
           "prompt": "Dua langkah wajib dalam pembuktian dengan induksi matematika adalah ...",
           "options": [
             "membuktikan kasus awal, lalu membuktikan $n=k \\Rightarrow n=k+1$",
+            "membuktikan kasus awal, lalu kasus terakhir",
             "membuktikan kasus awal, lalu memeriksa beberapa kasus lain",
-            "membuktikan $n=k$ benar, lalu membuktikan $n=k+1$ benar",
-            "membuktikan kasus awal, lalu kasus terakhir"
+            "membuktikan $n=k$ benar, lalu membuktikan $n=k+1$ benar"
           ],
           "answerIndex": 0,
-          "solution": "Induksi selalu terdiri dari dua langkah:\n\n**Langkah dasar:** tunjukkan pernyataannya benar untuk kasus awal, biasanya $n=1$.\n\n**Langkah induksi:** tunjukkan bahwa kebenaran pada $n=k$ **memaksa** kebenaran pada $n=k+1$.\n\nPilihan ketiga keliru karena kamu tidak pernah membuktikan $n=k$ benar — kamu hanya mengandaikannya, lalu menunjukkan akibatnya. Bilangan asli juga tidak punya kasus terakhir, sehingga pilihan keempat mustahil dikerjakan.",
+          "solution": "Induksi selalu terdiri dari dua langkah:\n\n**Langkah dasar:** tunjukkan pernyataannya benar untuk kasus awal, biasanya $n=1$.\n\n**Langkah induksi:** tunjukkan bahwa kebenaran pada $n=k$ **memaksa** kebenaran pada $n=k+1$.\n\nPilihan yang berbunyi \"membuktikan $n=k$ benar\" keliru karena kamu tidak pernah membuktikan hal itu — kamu hanya mengandaikannya, lalu menunjukkan akibatnya. Bilangan asli juga tidak punya kasus terakhir, sehingga pilihan yang menyebut \"kasus terakhir\" mustahil dikerjakan.",
           "hint": "Langkah kedua membuktikan hubungan, bukan kebenaran satu kasus.",
           "tags": [
             "utbk"
@@ -174,12 +174,12 @@
           "format": "pilihan-ganda",
           "prompt": "Dalam membuktikan $1+2+\\cdots+n = \\frac{n(n+1)}{2}$, bentuk yang harus dicapai pada langkah $n = k+1$ adalah ...",
           "options": [
-            "$\\frac{(k+1)(k+2)}{2}$",
+            "$\\frac{k(k+2)}{2}$",
             "$\\frac{k(k+1)}{2} + 1$",
-            "$\\frac{(k+1)(k+1)}{2}$",
-            "$\\frac{k(k+2)}{2}$"
+            "$\\frac{(k+1)(k+2)}{2}$",
+            "$\\frac{(k+1)(k+1)}{2}$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Ganti setiap $n$ pada rumusnya dengan $k+1$:\n\n$$\\frac{n(n+1)}{2} \\longrightarrow \\frac{(k+1)\\big((k+1)+1\\big)}{2} = \\frac{(k+1)(k+2)}{2}$$\n\nMenuliskan target ini di awal sangat membantu, karena kamu jadi tahu persis ke mana arah penyederhanaanmu.\n\nKesalahan umum adalah hanya mengganti sebagian $n$ — misalnya menjadi $\\frac{(k+1)(k+1)}{2}$. Setiap $n$ harus diganti, termasuk yang ada di dalam kurung.",
           "hint": "Ganti setiap $n$, termasuk yang di dalam kurung.",
           "tags": [
@@ -193,8 +193,8 @@
           "prompt": "Jumlah $1+3+5+\\cdots+(2n-1)$ sama dengan ...",
           "options": [
             "$n^2$",
-            "$n(n+1)$",
             "$\\frac{n(n+1)}{2}$",
+            "$n(n+1)$",
             "$2n^2 - n$"
           ],
           "answerIndex": 0,
@@ -224,12 +224,12 @@
           "format": "pilihan-ganda",
           "prompt": "Ingkaran dari \"Semua siswa mengerjakan PR\" adalah ...",
           "options": [
-            "Ada siswa yang tidak mengerjakan PR",
             "Semua siswa tidak mengerjakan PR",
             "Tidak ada siswa yang mengerjakan PR",
+            "Ada siswa yang tidak mengerjakan PR",
             "Ada siswa yang mengerjakan PR"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Pernyataan \"semua\" menuntut tidak ada satu pun pengecualian. Untuk membantahnya, kamu cukup menunjukkan **satu** pengecualian:\n\n\"Ada siswa yang tidak mengerjakan PR.\"\n\nPilihan \"semua siswa tidak mengerjakan PR\" jauh lebih kuat dari yang diperlukan. Kalau dari 30 siswa ada 29 yang mengerjakan dan 1 tidak, pernyataan asli sudah salah — tapi \"semua tidak mengerjakan\" juga salah. Dua pernyataan yang sama-sama salah tentu bukan pasangan ingkaran.",
           "hint": "Berapa banyak pengecualian yang diperlukan untuk membantah \"semua\"?",
           "tags": [

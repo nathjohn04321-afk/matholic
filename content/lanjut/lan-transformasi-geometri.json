@@ -25,12 +25,12 @@
           "format": "pilihan-ganda",
           "prompt": "Transformasi yang mengubah ukuran bangun adalah ...",
           "options": [
-            "dilatasi",
             "translasi",
             "refleksi",
+            "dilatasi",
             "rotasi"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Translasi, refleksi, dan rotasi semuanya menjaga jarak antar titik, jadi ukuran bangunnya tidak berubah sama sekali — bangun hasilnya kongruen dengan aslinya.\n\nDilatasi dengan faktor $k$ mengalikan setiap jarak dari pusat dengan $k$. Untuk $k = 3$, bangunnya menjadi tiga kali lebih besar. Hasilnya sebangun dengan aslinya, tapi tidak kongruen kecuali kalau $|k| = 1$.",
           "hint": "Cari yang tidak menjaga jarak.",
           "tags": [
@@ -43,12 +43,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $A(3,2)$ oleh translasi $\\binom{4}{-5}$ adalah ...",
           "options": [
-            "$(7,-3)$",
-            "$(-1,7)$",
+            "$(12,-10)$",
             "$(7,3)$",
-            "$(12,-10)$"
+            "$(7,-3)$",
+            "$(-1,7)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Translasi menambahkan komponennya ke masing-masing koordinat:\n\n$$(x,y) \\to (x + a,\\ y + b)$$\n\n$$A(3,2) \\to (3+4,\\ 2+(-5)) = (7,-3)$$\n\nPerhatikan bahwa translasi adalah penjumlahan, bukan perkalian. Pilihan $(12,-10)$ muncul kalau koordinatnya dikalikan.",
           "hint": "Translasi berarti menambahkan, bukan mengalikan.",
           "tags": [
@@ -75,12 +75,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $P(3,2)$ oleh rotasi $90°$ berlawanan arah jarum jam dengan pusat $O$ adalah ...",
           "options": [
-            "$(-2,3)$",
             "$(2,-3)$",
+            "$(-2,3)$",
             "$(2,3)$",
             "$(-3,-2)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "solution": "Pakai matriks rotasi $90°$:\n\n$$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 0(3) + (-1)(2) \\\\ 1(3) + 0(2) \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 3 \\end{pmatrix}$$\n\nAturan cepatnya: $(x,y) \\to (-y, x)$ untuk rotasi $90°$ berlawanan jarum jam.\n\nCek masuk akal: titik $(3,2)$ ada di kuadran I, dan setelah diputar seperempat putaran berlawanan jarum jam ia harus mendarat di kuadran II. Titik $(-2,3)$ memang di kuadran II.",
           "hint": "Rotasi $90°$ berlawanan jarum jam: $(x,y) \\to (-y,x)$.",
           "tags": [
@@ -93,12 +93,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $Q(3,2)$ oleh refleksi terhadap garis $y = x$ adalah ...",
           "options": [
-            "$(2,3)$",
             "$(-3,-2)$",
+            "$(-2,-3)$",
             "$(3,-2)$",
-            "$(-2,-3)$"
+            "$(2,3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Refleksi terhadap $y = x$ hanya menukar kedua koordinat:\n\n$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$$\n\nAturan cepat: $(x,y) \\to (y,x)$.\n\nAlasannya terlihat dari geometri: garis $y=x$ membagi sudut antara sumbu $x$ dan sumbu $y$ sama besar, jadi mencerminkannya berarti menukar peran kedua sumbu itu.",
           "hint": "Refleksi terhadap $y=x$ menukar koordinatnya.",
           "tags": [
@@ -112,12 +112,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $R(2,-1)$ oleh dilatasi berpusat di $O$ dengan faktor $k = 3$ adalah ...",
           "options": [
-            "$(6,-3)$",
+            "$(2,-3)$",
             "$(5,2)$",
             "$(6,-1)$",
-            "$(2,-3)$"
+            "$(6,-3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Dilatasi berpusat di titik asal mengalikan kedua koordinat dengan $k$:\n\n$$(x,y) \\to (kx,\\ ky)$$\n\n$$R(2,-1) \\to (3 \\cdot 2,\\ 3 \\cdot (-1)) = (6,-3)$$\n\nPilihan $(5,2)$ muncul kalau kamu menambahkan 3 alih-alih mengalikan — itu translasi, bukan dilatasi.",
           "hint": "Dilatasi mengalikan kedua koordinat dengan faktor yang sama.",
           "tags": [
@@ -144,12 +144,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $A(4,3)$ oleh dilatasi berpusat $(1,2)$ dengan faktor $k = 2$ adalah ...",
           "options": [
-            "$(7,4)$",
-            "$(8,6)$",
+            "$(5,4)$",
             "$(9,8)$",
-            "$(5,4)$"
+            "$(8,6)$",
+            "$(7,4)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Pakai tiga langkah.\n\n**Geser ke titik asal:** $(4-1,\\ 3-2) = (3,1)$\n\n**Kalikan dengan $k = 2$:** $(6,2)$\n\n**Geser kembali:** $(6+1,\\ 2+2) = (7,4)$\n\nPilihan $(8,6)$ adalah hasil kalau pusatnya dianggap $O$ — yaitu $2 \\times (4,3)$. Selisihnya persis pergeseran yang terlewat, dan inilah kesalahan paling sering pada soal berpusat bukan di titik asal.",
           "hint": "Geser ke titik asal dulu, baru kalikan.",
           "tags": [
@@ -192,12 +192,12 @@
           "format": "pilihan-ganda",
           "prompt": "Titik $B(2,5)$ ditranslasi oleh $\\binom{3}{-2}$, lalu dicerminkan terhadap sumbu $y$. Bayangan akhirnya adalah ...",
           "options": [
-            "$(-5,3)$",
             "$(5,3)$",
-            "$(-5,-3)$",
-            "$(-1,3)$"
+            "$(-1,3)$",
+            "$(-5,3)$",
+            "$(-5,-3)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Kerjakan berurutan.\n\n**Translasi:** $(2+3,\\ 5-2) = (5,3)$\n\n**Refleksi sumbu $y$:** tanda absisnya dibalik, ordinatnya tetap. $(5,3) \\to (-5,3)$\n\nJadi bayangan akhirnya $(-5,3)$.\n\nPerhatikan kalau urutannya dibalik — cermin dulu baru geser — hasilnya $(-2+3, 5-2) = (1,3)$, berbeda sama sekali. Urutan memang menentukan.",
           "hint": "Kerjakan satu per satu sesuai urutan yang disebut soal.",
           "tags": [
@@ -240,12 +240,12 @@
           "format": "pilihan-ganda",
           "prompt": "Bayangan titik $C(3,2)$ oleh rotasi $180°$ dengan pusat $O$ adalah ...",
           "options": [
-            "$(-3,-2)$",
-            "$(-2,-3)$",
             "$(2,3)$",
+            "$(-2,-3)$",
+            "$(-3,-2)$",
             "$(3,-2)$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Rotasi $180°$ membalik tanda kedua koordinat:\n\n$$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ -2 \\end{pmatrix}$$\n\nAturan cepat: $(x,y) \\to (-x,-y)$.\n\nPerhatikan bahwa rotasi $180°$ tidak menukar koordinat — hanya membalik tandanya. Pilihan $(-2,-3)$ adalah jebakan untuk yang mencampurnya dengan rotasi $90°$ dua kali secara keliru.",
           "hint": "Setengah putaran membalik tanda, tidak menukar posisi.",
           "tags": [
@@ -259,9 +259,9 @@
           "prompt": "Bayangan garis $y = 2x + 3$ oleh rotasi $90°$ berlawanan arah jarum jam dengan pusat $O$ adalah ...",
           "options": [
             "$x + 2y + 3 = 0$",
-            "$2x + y + 3 = 0$",
             "$x - 2y + 3 = 0$",
-            "$y = 2x - 3$"
+            "$y = 2x - 3$",
+            "$2x + y + 3 = 0$"
           ],
           "answerIndex": 0,
           "solution": "Rotasi $90°$ memetakan $(x,y) \\to (-y, x)$. Jadi kalau $(x', y')$ adalah bayangannya:\n\n$$x' = -y, \\qquad y' = x$$\n\nBalik hubungan itu untuk mendapat titik asalnya:\n$$x = y', \\qquad y = -x'$$\n\nSubstitusikan ke persamaan garis aslinya $y = 2x + 3$:\n$$-x' = 2y' + 3$$\n$$x' + 2y' + 3 = 0$$\n\nJadi bayangannya $x + 2y + 3 = 0$, atau $y = -\\frac{1}{2}x - \\frac{3}{2}$.\n\nCek masuk akal: rotasi $90°$ membuat garis tegak lurus terhadap aslinya. Gradien asli $2$, gradien bayangan $-\\frac{1}{2}$, dan hasil kalinya $-1$. Cocok.",

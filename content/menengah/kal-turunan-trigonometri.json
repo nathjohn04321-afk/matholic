@@ -27,9 +27,9 @@
           "prompt": "Turunan dari $y = \\cos x$ adalah ...",
           "options": [
             "$-\\sin x$",
-            "$\\sin x$",
             "$-\\cos x$",
-            "$\\tan x$"
+            "$\\tan x$",
+            "$\\sin x$"
           ],
           "answerIndex": 0,
           "solution": "Turunan kosinus adalah negatif sinus:\n$$\\frac{d}{dx}\\cos x = -\\sin x$$\n\nPeriksa lewat grafik di $x = 0$. Kosinus berada di puncak nilainya, lalu mulai menurun. Gradien sesaat setelah puncak harus negatif.\n\nDan memang $-\\sin x$ bernilai negatif untuk $x$ sedikit di atas nol.",
@@ -46,8 +46,8 @@
           "options": [
             "$3\\cos 3x$",
             "$\\cos 3x$",
-            "$3\\cos x$",
-            "$-3\\cos 3x$"
+            "$-3\\cos 3x$",
+            "$3\\cos x$"
           ],
           "answerIndex": 0,
           "solution": "Pakai aturan rantai. Lapisan luar sinus, lapisan dalam $3x$:\n$$y' = \\cos(3x) \\cdot \\frac{d}{dx}(3x) = \\cos(3x) \\cdot 3$$\n$$= 3\\cos 3x$$\n\nFaktor 3 berasal dari turunan bagian dalamnya. Melupakannya memberi $\\cos 3x$ saja, yang keliru.",
@@ -94,9 +94,9 @@
           "prompt": "Turunan dari $y = \\cos 2x$ di $x = 0$ bernilai ...",
           "options": [
             "$0$",
+            "$-1$",
             "$-2$",
-            "$2$",
-            "$-1$"
+            "$2$"
           ],
           "answerIndex": 0,
           "solution": "Turunkan dengan aturan rantai:\n$$y' = -\\sin(2x) \\cdot 2 = -2\\sin 2x$$\n\nSubstitusikan $x = 0$:\n$$-2\\sin 0 = -2(0) = 0$$\n\nMasuk akal lewat grafik: di $x=0$ kosinus berada di puncaknya, dan puncak selalu mendatar — gradiennya nol.",
@@ -125,12 +125,12 @@
           "format": "pilihan-ganda",
           "prompt": "Turunan dari $y = \\sin^2 x$ adalah ...",
           "options": [
-            "$2\\sin x\\cos x$",
+            "$2\\cos x$",
             "$2\\sin x$",
-            "$\\cos^2 x$",
-            "$2\\cos x$"
+            "$2\\sin x\\cos x$",
+            "$\\cos^2 x$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "solution": "Bentuk $\\sin^2 x$ berarti $(\\sin x)^2$, jadi pakai aturan rantai dengan lapisan luar pangkat dua:\n$$y' = 2(\\sin x)^1 \\cdot \\frac{d}{dx}\\sin x$$\n$$= 2\\sin x\\cos x$$\n\nLewat identitas sudut rangkap, hasilnya bisa ditulis $\\sin 2x$.\n\nMenjawab $2\\sin x$ berarti lupa mengalikan turunan lapisan dalamnya.",
           "hint": "Lapisan luarnya pangkat dua, lapisan dalamnya sinus.",
           "tags": [
@@ -143,13 +143,13 @@
           "format": "pilihan-ganda",
           "prompt": "Turunan dari $y = x^2\\cos x$ adalah ...",
           "options": [
-            "$2x\\cos x - x^2\\sin x$",
-            "$2x\\sin x$",
             "$-2x\\sin x$",
-            "$2x\\cos x + x^2\\sin x$"
+            "$2x\\cos x + x^2\\sin x$",
+            "$2x\\sin x$",
+            "$2x\\cos x - x^2\\sin x$"
           ],
-          "answerIndex": 0,
-          "solution": "Pakai aturan hasil kali dengan $u = x^2$ dan $v = \\cos x$:\n$$u' = 2x, \\qquad v' = -\\sin x$$\n\n$$y' = u'v + uv' = 2x\\cos x + x^2(-\\sin x)$$\n$$= 2x\\cos x - x^2\\sin x$$\n\nTanda minus muncul dari turunan kosinus, bukan dari aturan hasil kali. Pilihan terakhir keliru karena tanda itu hilang.",
+          "answerIndex": 3,
+          "solution": "Pakai aturan hasil kali dengan $u = x^2$ dan $v = \\cos x$:\n$$u' = 2x, \\qquad v' = -\\sin x$$\n\n$$y' = u'v + uv' = 2x\\cos x + x^2(-\\sin x)$$\n$$= 2x\\cos x - x^2\\sin x$$\n\nTanda minus muncul dari turunan kosinus, bukan dari aturan hasil kali. Pilihan $2x\\cos x + x^2\\sin x$ keliru karena tanda minus itu hilang.",
           "hint": "Turunan kosinus membawa tanda minusnya sendiri.",
           "tags": [
             "utbk"
@@ -175,12 +175,12 @@
           "format": "pilihan-ganda",
           "prompt": "Nilai maksimum dari $f(x) = 3\\sin x + 2$ adalah ...",
           "options": [
-            "$5$",
             "$3$",
+            "$1$",
             "$2$",
-            "$1$"
+            "$5$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Tidak perlu menurunkan. Nilai $\\sin x$ selalu berkisar antara $-1$ dan $1$.\n\nNilai terbesar tercapai saat $\\sin x = 1$:\n$$f = 3(1) + 2 = 5$$\n\nNilai terkecilnya saat $\\sin x = -1$, yaitu $3(-1)+2 = -1$.\n\nPola umumnya: $a\\sin x + b$ berkisar antara $b-|a|$ dan $b+|a|$.",
           "hint": "Berapa nilai terbesar yang bisa dicapai sinus?",
           "tags": [
@@ -194,9 +194,9 @@
           "prompt": "Fungsi $f(x) = \\sin x$ pada selang $0 \\le x \\le \\frac{\\pi}{2}$ mencapai nilai maksimum di ...",
           "options": [
             "$x = \\frac{\\pi}{2}$, di ujung selang",
+            "tidak ada maksimum",
             "$x = 0$",
-            "$x = \\frac{\\pi}{4}$",
-            "tidak ada maksimum"
+            "$x = \\frac{\\pi}{4}$"
           ],
           "answerIndex": 0,
           "solution": "Turunkan:\n$$f'(x) = \\cos x$$\n\nSelesaikan $\\cos x = 0$: penyelesaiannya $x = \\frac{\\pi}{2}$, yang justru berada tepat di ujung selang.\n\nPada selang ini $\\cos x \\ge 0$, jadi fungsinya naik terus dari awal sampai akhir. Nilai terbesarnya tercapai di ujung kanan:\n$$f\\left(\\tfrac{\\pi}{2}\\right) = 1$$\n\nInilah kenapa ujung selang wajib diperiksa — kalau fungsinya monoton, di situlah ekstremnya.",
@@ -226,8 +226,8 @@
           "prompt": "Turunan dari $y = \\sin 4x$ adalah ...",
           "options": [
             "$4\\cos 4x$",
-            "$\\cos 4x$",
             "$4\\cos x$",
+            "$\\cos 4x$",
             "$-4\\cos 4x$"
           ],
           "answerIndex": 0,
@@ -243,12 +243,12 @@
           "format": "pilihan-ganda",
           "prompt": "Manakah pernyataan yang benar?",
           "options": [
-            "$\\sin^2 x$ berarti $(\\sin x)^2$",
             "$\\sin^2 x$ berarti $\\sin(x^2)$",
             "$\\sin^2 x$ berarti $2\\sin x$",
-            "$\\sin^2 x$ berarti $\\sin x \\cdot 2$"
+            "$\\sin^2 x$ berarti $\\sin x \\cdot 2$",
+            "$\\sin^2 x$ berarti $(\\sin x)^2$"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "solution": "Notasi $\\sin^2 x$ adalah penulisan singkat untuk $(\\sin x)^2$ — hitung sinusnya dulu, lalu kuadratkan hasilnya.\n\nBandingkan dengan $\\sin(x^2)$, yang mengkuadratkan sudutnya lebih dulu baru mengambil sinusnya. Keduanya memberi hasil berbeda.\n\nPeriksa di $x = 2$ radian: $\\sin^2 2 \\approx 0{,}827$ sedangkan $\\sin(4) \\approx -0{,}757$. Jelas berbeda.\n\nTurunannya pun berbeda: yang pertama $2\\sin x\\cos x$, yang kedua $2x\\cos(x^2)$.",
           "hint": "Mana yang dikuadratkan — sudutnya atau hasil sinusnya?",
           "tags": [
