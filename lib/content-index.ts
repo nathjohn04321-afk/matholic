@@ -40,8 +40,10 @@ import topik29 from "@/content/menengah/trg-perbandingan.json";
 import topik30 from "@/content/menengah/trg-persamaan.json";
 import topik31 from "@/content/lanjut/lan-integral-tentu.json";
 import topik32 from "@/content/lanjut/lan-integral-trigonometri.json";
-import topik33 from "@/content/lanjut/lan-teknik-integrasi.json";
-import topik34 from "@/content/olimpiade/osn-keterbagian.json";
+import topik33 from "@/content/lanjut/lan-irisan-kerucut.json";
+import topik34 from "@/content/lanjut/lan-teknik-integrasi.json";
+import topik35 from "@/content/lanjut/lan-transformasi-geometri.json";
+import topik36 from "@/content/olimpiade/osn-keterbagian.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -79,4 +81,6 @@ export const RAW_TOPICS: Topic[] = [
   topik32 as unknown as Topic,
   topik33 as unknown as Topic,
   topik34 as unknown as Topic,
+  topik35 as unknown as Topic,
+  topik36 as unknown as Topic,
 ];

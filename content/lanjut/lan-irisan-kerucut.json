@@ -1,0 +1,279 @@
+{
+  "id": "lan-irisan-kerucut",
+  "track": "lanjut",
+  "title": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+  "order": 4,
+  "prerequisites": [
+    "geo-lingkaran"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Tiga kurva dari satu kerucut, disatukan oleh satu ide: jarak yang dijaga tetap.",
+  "tags": [
+    "geometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-irisan-kerucut-c1",
+      "type": "konsep",
+      "title": "Satu kerucut, empat kurva",
+      "body": "Lingkaran, elips, parabola, dan hiperbola terlihat seperti empat topik terpisah. Sebenarnya keempatnya muncul dari satu benda: sebuah kerucut ganda yang diiris bidang datar pada sudut berbeda-beda.\n\nIris mendatar, kamu dapat lingkaran. Miringkan sedikit, lingkaran itu memanjang menjadi elips. Miringkan sampai sejajar dengan sisi kerucut, kurvanya tidak lagi menutup — itu parabola. Miringkan lebih jauh sampai bidangnya memotong kedua bagian kerucut, dan kamu mendapat hiperbola dengan dua cabang.\n\nYang lebih berguna daripada gambaran kerucut itu adalah definisi berbasis **jarak**, karena dari sinilah semua rumusnya lahir:\n\n- **Lingkaran**: jarak ke satu titik tetap selalu sama\n- **Elips**: **jumlah** jarak ke dua titik tetap selalu sama\n- **Hiperbola**: **selisih** jarak ke dua titik tetap selalu sama\n- **Parabola**: jarak ke satu titik sama dengan jarak ke satu garis\n\nKedua titik tetap itu disebut fokus. Perhatikan bahwa elips dan hiperbola hanya berbeda satu kata — jumlah versus selisih — dan perbedaan sekecil itu sudah menghasilkan bentuk yang sama sekali berlainan.",
+      "questions": [
+        {
+          "id": "lan-irisan-kerucut-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah elips memiliki persamaan $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$. Jumlah jarak sebuah titik pada elips ke kedua fokusnya adalah ...",
+          "options": [
+            "$10$",
+            "$6$",
+            "$8$",
+            "$5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dari definisi, jumlah jarak ke dua fokus pada elips selalu sama dengan $2a$.\n\nDari persamaannya, $a^2 = 25$ (penyebut terbesar), jadi $a = 5$.\n\n$$\\text{jumlah jarak} = 2a = 10$$\n\nNilai ini berlaku untuk **setiap** titik pada elips, bukan hanya titik tertentu. Itulah yang membuatnya jadi definisi: sifat yang dijaga tetap di sepanjang kurva.",
+          "hint": "Jumlah jarak ke dua fokus sama dengan panjang sumbu mayor.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q1b",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Elips dan hiperbola sama-sama didefinisikan lewat jarak ke dua titik tetap, dan keduanya memakai operasi yang sama atas kedua jarak itu.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Keduanya memang memakai dua fokus, tapi operasinya berbeda — dan justru di situlah letak seluruh perbedaannya.\n\nPada **elips**, yang dijaga tetap adalah **jumlah** kedua jarak. Karena jumlah itu terbatas, kurvanya pun menutup dan tidak bisa menjauh tanpa batas.\n\nPada **hiperbola**, yang dijaga tetap adalah **selisihnya**. Selisih yang tetap masih memungkinkan kedua jarak tumbuh bersama tanpa batas, sehingga kurvanya terbuka dan punya dua cabang.\n\nPerbedaan satu kata pada definisi inilah yang muncul sebagai perbedaan tanda pada persamaan bakunya.",
+          "hint": "Perhatikan apakah yang tetap itu jumlah atau selisihnya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Keempat kurva adalah irisan kerucut yang sama pada sudut berbeda",
+        "Elips: jumlah jarak ke dua fokus tetap",
+        "Hiperbola: selisih jarak ke dua fokus tetap"
+      ],
+      "pitfall": "Menghafal rumus elips dan hiperbola sebagai dua hal yang tak berhubungan. Keduanya hanya berbeda tanda pada $b^2$ — dan tanda itu berasal langsung dari jumlah versus selisih pada definisinya."
+    },
+    {
+      "id": "lan-irisan-kerucut-c2",
+      "type": "rumus",
+      "title": "Elips dan hiperbola: satu tanda yang membedakan",
+      "body": "Kedua kurva ini punya bentuk baku yang nyaris identik. Bedanya cuma tanda di tengah.\n\n**Elips** (pusat di $O$, sumbu mayor mendatar), dengan $a > b$:\n$$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1, \\qquad c^2 = a^2 - b^2$$\n\n**Hiperbola** (terbuka ke kiri-kanan):\n$$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1, \\qquad c^2 = a^2 + b^2$$\n\nPerhatikan hubungan $c$ itu. Pada elips, fokus berada **di dalam** kurva, jadi $c < a$ dan tandanya minus. Pada hiperbola fokus berada di luar kedua cabang, jadi $c > a$ dan tandanya plus. Tanda pada rumus $c$ mengikuti tanda pada persamaannya.\n\nHiperbola punya sesuatu yang tidak dimiliki elips: **asimtot**, yaitu dua garis yang didekati cabang-cabangnya tanpa pernah disentuh:\n$$y = \\pm\\frac{b}{a}x$$\n\nUntuk elips, $a$ selalu penyebut terbesar. Untuk hiperbola, $a$ adalah penyebut suku yang **bertanda positif** — bukan yang terbesar. Perbedaan aturan ini sumber banyak kesalahan.",
+      "questions": [
+        {
+          "id": "lan-irisan-kerucut-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Koordinat fokus elips $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ adalah ...",
+          "options": [
+            "$(\\pm 4, 0)$",
+            "$(\\pm 5, 0)$",
+            "$(0, \\pm 4)$",
+            "$(\\pm \\sqrt{34}, 0)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Karena penyebut di bawah $x^2$ lebih besar, sumbu mayornya mendatar dan fokusnya di sumbu $x$.\n\n$$a^2 = 25, \\quad b^2 = 9$$\n$$c^2 = a^2 - b^2 = 25 - 9 = 16 \\Rightarrow c = 4$$\n\nJadi fokusnya $(4,0)$ dan $(-4,0)$.\n\nPilihan $(\\pm\\sqrt{34},0)$ adalah jebakan untuk yang memakai rumus hiperbola $c^2 = a^2+b^2$. Pada elips tandanya minus, karena fokus harus berada di dalam kurva.",
+          "hint": "Pada elips tandanya minus, sehingga $c$ lebih kecil dari $a$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Persamaan asimtot hiperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ adalah ...",
+          "options": [
+            "$y = \\pm\\frac{3}{4}x$",
+            "$y = \\pm\\frac{4}{3}x$",
+            "$y = \\pm\\frac{9}{16}x$",
+            "$y = \\pm\\frac{5}{4}x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Untuk hiperbola bentuk $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$, asimtotnya $y = \\pm\\frac{b}{a}x$.\n\n$$a^2 = 16 \\Rightarrow a = 4, \\qquad b^2 = 9 \\Rightarrow b = 3$$\n\n$$y = \\pm\\frac{3}{4}x$$\n\nCara cepat mengingat arah pecahannya: ganti angka $1$ di ruas kanan dengan $0$. Persamaan $\\frac{x^2}{16} - \\frac{y^2}{9} = 0$ memberi $\\frac{y^2}{9} = \\frac{x^2}{16}$, jadi $y = \\pm\\frac{3}{4}x$ — tepat asimtotnya. Cara ini juga bekerja untuk hiperbola yang bergeser pusatnya.",
+          "hint": "Ganti ruas kanan dengan nol, lalu selesaikan untuk $y$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Hiperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ memiliki fokus $(\\pm c, 0)$. Berapa nilai $c$? (bilangan bulat)",
+          "answer": "5",
+          "acceptedAnswers": [
+            "5"
+          ],
+          "solution": "Untuk hiperbola, hubungannya bertanda **plus**:\n\n$$c^2 = a^2 + b^2 = 16 + 9 = 25 \\Rightarrow c = 5$$\n\nPerhatikan bahwa $c = 5$ lebih besar dari $a = 4$. Ini memang seharusnya: pada hiperbola fokus berada di luar kedua puncak cabangnya, berbeda dari elips yang fokusnya di dalam.\n\nKalau kamu memakai $16 - 9 = 7$, kamu tertukar dengan rumus elips.",
+          "hint": "Tanda pada rumus $c$ mengikuti tanda pada persamaannya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Elips $c^2 = a^2 - b^2$; hiperbola $c^2 = a^2 + b^2$",
+        "Asimtot hiperbola $y = \\pm\\frac{b}{a}x$",
+        "Pada hiperbola, $a$ dari suku positif — belum tentu yang terbesar"
+      ],
+      "pitfall": "Mengambil $a^2$ sebagai penyebut terbesar pada hiperbola, seperti kebiasaan pada elips. Pada $\\frac{y^2}{9} - \\frac{x^2}{16} = 1$, nilai $a^2$ adalah $9$ karena sukunya positif, dan kurvanya terbuka ke atas-bawah."
+    },
+    {
+      "id": "lan-irisan-kerucut-c3",
+      "type": "rumus",
+      "title": "Parabola: satu fokus dan satu garis",
+      "body": "Parabola berbeda dari elips dan hiperbola karena hanya punya **satu** fokus. Sebagai gantinya ia punya sebuah garis, disebut direktriks.\n\nDefinisinya: parabola adalah himpunan titik yang jaraknya ke fokus sama dengan jaraknya ke direktriks. Kedua jarak itu selalu seimbang, di titik mana pun pada kurva.\n\nBentuk baku dengan puncak di $O$ dan terbuka ke kanan:\n$$y^2 = 4px$$\n\ndengan fokus di $(p, 0)$ dan direktriks $x = -p$. Nilai $p$ adalah jarak dari puncak ke fokus, dan puncaknya selalu berada persis di tengah antara fokus dan direktriks.\n\nArah bukaannya ditentukan oleh variabel mana yang dikuadratkan dan tanda $p$:\n- $y^2 = 4px$ dengan $p>0$ terbuka ke kanan, $p<0$ ke kiri\n- $x^2 = 4py$ dengan $p>0$ terbuka ke atas, $p<0$ ke bawah\n\nAturan sederhananya: parabola selalu membuka ke arah fokusnya, menjauhi direktriks. Kalau kamu sudah tahu letak fokus, arah bukaan tidak perlu dihafal lagi.",
+      "questions": [
+        {
+          "id": "lan-irisan-kerucut-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Koordinat fokus parabola $y^2 = 12x$ adalah ...",
+          "options": [
+            "$(3, 0)$",
+            "$(12, 0)$",
+            "$(6, 0)$",
+            "$(0, 3)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bandingkan dengan bentuk baku $y^2 = 4px$:\n\n$$4p = 12 \\Rightarrow p = 3$$\n\nFokusnya berada di $(p, 0) = (3, 0)$, dan direktriksnya $x = -3$.\n\nKarena $y$ yang dikuadratkan dan $p > 0$, parabolanya terbuka ke kanan — sesuai dengan letak fokusnya di sebelah kanan puncak.\n\nKesalahan umum: membaca $12$ sebagai $p$ langsung. Angka di sebelah $x$ adalah $4p$, bukan $p$.",
+          "hint": "Koefisien $x$ adalah $4p$, bukan $p$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q6",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Pada parabola, puncaknya selalu berjarak sama ke fokus dan ke direktriks.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 0,
+          "solution": "Benar. Puncak adalah titik pada parabola, jadi ia tunduk pada definisi yang sama: jarak ke fokus sama dengan jarak ke direktriks.\n\nPada $y^2 = 4px$, puncaknya $(0,0)$, fokusnya $(p,0)$, dan direktriksnya $x = -p$. Jarak puncak ke fokus adalah $p$, dan jarak puncak ke direktriks juga $p$. Keduanya sama.\n\nAkibat praktisnya: puncak selalu berada tepat di tengah antara fokus dan direktriks. Kalau soal memberi fokus dan direktriks, kamu bisa langsung menemukan puncaknya dengan mencari titik tengahnya.",
+          "hint": "Puncak juga sebuah titik pada parabola.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Parabola: jarak ke fokus = jarak ke direktriks",
+        "$y^2 = 4px$ punya fokus $(p,0)$ dan direktriks $x = -p$",
+        "Parabola selalu membuka ke arah fokusnya"
+      ],
+      "pitfall": "Membaca koefisien $x$ pada $y^2 = 12x$ langsung sebagai $p = 12$. Koefisien itu adalah $4p$, jadi $p = 3$ — fokusnya di $(3,0)$, bukan $(12,0)$."
+    },
+    {
+      "id": "lan-irisan-kerucut-c4",
+      "type": "prosedur",
+      "title": "Kurva yang bergeser pusatnya",
+      "body": "Sampai di sini semua kurva berpusat di titik asal. Kalau pusatnya pindah ke $(h,k)$, aturannya seragam untuk semua irisan kerucut: **ganti $x$ dengan $x-h$ dan $y$ dengan $y-k$.**\n\n$$\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$$\n\nBentuk, ukuran, dan semua hubungan antara $a$, $b$, dan $c$ tidak berubah sedikit pun. Yang berubah hanya letaknya. Fokus yang tadinya $(\\pm c, 0)$ kini menjadi $(h \\pm c, k)$.\n\nPerhatikan tanda minus di dalam kurung. Pusat di $(2,-1)$ menghasilkan $(x-2)^2$ dan $(y+1)^2$ — tandanya berlawanan dengan tanda koordinatnya. Ini logis: nilai di dalam kurung menjadi nol tepat ketika $x = h$, yaitu di pusatnya.\n\nKalau soal memberi bentuk terurai seperti $x^2 + 4y^2 - 4x + 8y - 8 = 0$, kembalikan ke bentuk baku dengan melengkapkan kuadrat pada masing-masing variabel. Teknik ini sama persis dengan yang kamu pakai untuk mencari pusat lingkaran.",
+      "questions": [
+        {
+          "id": "lan-irisan-kerucut-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah elips berpusat di $(2,-1)$ dengan $a = 5$ (mendatar) dan $b = 3$. Koordinat fokusnya adalah ...",
+          "options": [
+            "$(6,-1)$ dan $(-2,-1)$",
+            "$(7,-1)$ dan $(-3,-1)$",
+            "$(2,3)$ dan $(2,-5)$",
+            "$(6,1)$ dan $(-2,1)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung $c$ lebih dulu:\n$$c^2 = a^2 - b^2 = 25 - 9 = 16 \\Rightarrow c = 4$$\n\nKarena sumbu mayornya mendatar, fokus bergeser ke kiri dan kanan dari pusat:\n$$(h \\pm c,\\ k) = (2 \\pm 4,\\ -1)$$\n\nJadi fokusnya $(6,-1)$ dan $(-2,-1)$.\n\nPerhatikan bahwa koordinat $y$ kedua fokus tetap $-1$, sama dengan pusatnya. Pilihan $(7,-1)$ dan $(-3,-1)$ adalah jebakan untuk yang memakai $a = 5$ alih-alih $c = 4$.",
+          "hint": "Cari $c$ dulu, lalu geser dari pusatnya — bukan dari titik asal.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Persamaan $x^2 + y^2 - 6x + 4y - 12 = 0$ menyatakan lingkaran dengan pusat dan jari-jari ...",
+          "options": [
+            "pusat $(3,-2)$, $r = 5$",
+            "pusat $(-3,2)$, $r = 5$",
+            "pusat $(3,-2)$, $r = 25$",
+            "pusat $(6,-4)$, $r = 5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Lengkapkan kuadrat untuk masing-masing variabel:\n\n$$(x^2 - 6x) + (y^2 + 4y) = 12$$\n$$(x^2 - 6x + 9) + (y^2 + 4y + 4) = 12 + 9 + 4$$\n$$(x-3)^2 + (y+2)^2 = 25$$\n\nJadi pusatnya $(3,-2)$ dan $r = \\sqrt{25} = 5$.\n\nDua hal yang sering keliru: tanda pusat berlawanan dengan isi kurung, dan ruas kanan adalah $r^2$, bukan $r$. Angka yang ditambahkan ke kiri wajib ditambahkan juga ke kanan.",
+          "hint": "Lengkapkan kuadrat, dan ingat ruas kanan adalah $r^2$.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pusat di $(h,k)$: ganti $x \\to x-h$ dan $y \\to y-k$",
+        "Bentuk dan ukuran kurva tidak berubah, hanya letaknya",
+        "Bentuk terurai dikembalikan dengan melengkapkan kuadrat"
+      ],
+      "pitfall": "Menulis $(x+2)^2$ untuk pusat di $x = 2$. Tanda di dalam kurung selalu berlawanan dengan koordinat pusatnya, karena isi kurung harus bernilai nol tepat di pusat."
+    },
+    {
+      "id": "lan-irisan-kerucut-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan irisan kerucut",
+      "body": "**1. Menukar rumus $c$ antara elips dan hiperbola.** Elips memakai $c^2 = a^2 - b^2$, hiperbola $c^2 = a^2 + b^2$. Cara mengingat tanpa hafalan: pada elips fokus ada di dalam kurva sehingga $c$ harus lebih kecil dari $a$; pada hiperbola fokus ada di luar sehingga $c$ lebih besar.\n\n**2. Mengira $a$ selalu penyebut terbesar.** Aturan itu hanya berlaku untuk elips. Pada hiperbola, $a$ diambil dari suku yang **bertanda positif**, dan suku itulah yang menentukan arah bukaannya.\n\n**3. Membaca $4p$ sebagai $p$ pada parabola.** Pada $y^2 = 12x$ nilai $p$ adalah $3$. Fokus di $(3,0)$, bukan $(12,0)$.\n\n**4. Salah tanda pada pergeseran pusat.** Pusat $(h,k)$ memberi $(x-h)^2$, sehingga pusat $(2,-1)$ menghasilkan $(x-2)^2 + (y+1)^2$. Tanda di dalam kurung selalu berlawanan dengan koordinatnya.\n\nSatu pemeriksaan menangkap sebagian besar kesalahan ini: gambar sketsa kasarnya. Fokus yang jatuh di luar elips atau di dalam hiperbola langsung terlihat salah.",
+      "questions": [
+        {
+          "id": "lan-irisan-kerucut-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah titik pada elips $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ memiliki absis $x = 3$. Nilai $y$ yang mungkin adalah ...",
+          "options": [
+            "$\\pm\\frac{12}{5}$",
+            "$\\pm\\frac{9}{5}$",
+            "$\\pm 3$",
+            "$\\pm\\frac{16}{5}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Substitusikan $x = 3$ ke persamaan elipsnya:\n\n$$\\frac{9}{25} + \\frac{y^2}{9} = 1$$\n$$\\frac{y^2}{9} = 1 - \\frac{9}{25} = \\frac{16}{25}$$\n$$y^2 = 9 \\cdot \\frac{16}{25} = \\frac{144}{25}$$\n$$y = \\pm\\frac{12}{5}$$\n\nAda dua nilai karena elips simetris terhadap sumbu $x$ — setiap absis yang sah memberi dua titik pada kurva.",
+          "hint": "Substitusikan, lalu jangan lupa dua akar.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-irisan-kerucut-q10",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Selisih jarak sebuah titik pada hiperbola $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ ke kedua fokusnya adalah ...",
+          "options": [
+            "$8$",
+            "$10$",
+            "$6$",
+            "$5$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dari definisi hiperbola, selisih jarak ke dua fokus selalu sama dengan $2a$.\n\nSuku yang bertanda positif adalah $\\frac{x^2}{16}$, jadi $a^2 = 16$ dan $a = 4$.\n\n$$\\text{selisih jarak} = 2a = 8$$\n\nJebakan di sini adalah memakai $c = 5$ sehingga menjawab $10$. Nilai $c$ menentukan letak fokus, bukan selisih jaraknya. Baik pada elips maupun hiperbola, besaran yang dijaga tetap selalu $2a$ — hanya operasinya yang berbeda: jumlah pada elips, selisih pada hiperbola.",
+          "hint": "Yang dijaga tetap selalu $2a$, bukan $2c$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Elips: $c < a$. Hiperbola: $c > a$",
+        "$a$ hiperbola diambil dari suku positif, bukan terbesar",
+        "Sketsa kasar menangkap sebagian besar kesalahan tanda"
+      ],
+      "pitfall": "Melewatkan sketsa karena merasa rumusnya sudah dihafal. Justru sketsa itulah yang menangkap fokus yang salah letak — kesalahan yang tidak akan terlihat dari deretan angka."
+    }
+  ]
+}

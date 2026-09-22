@@ -602,6 +602,56 @@
       "snippet": "1. Menyalin tanda dari tabel turunan. [rumus] , bukan [rumus] . Tanda minus berpindah tempat saat arah operasinya dibalik. 2. Mengalikan koefisien sudut, buk..."
     },
     {
+      "cardId": "lan-irisan-kerucut-c1",
+      "topicId": "lan-irisan-kerucut",
+      "topicTitle": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Satu kerucut, empat kurva",
+      "haystack": "satu kerucut, empat kurva lingkaran, elips, parabola, dan hiperbola terlihat seperti empat topik terpisah. sebenarnya keempatnya muncul dari satu benda: sebuah kerucut ganda yang diiris bidang datar pada sudut berbeda-beda. iris mendatar, kamu dapat lingkaran. miringkan sedikit, lingkaran itu memanjang menjadi elips. miringkan sampai sejajar dengan sisi kerucut, kurvanya tidak lagi menutup — itu parabola. miringkan lebih jauh sampai bidangnya memotong kedua bagian kerucut, dan kamu mendapat hiperbola dengan dua cabang. yang lebih berguna daripada gambaran kerucut itu adalah definisi berbasis jarak , karena dari sinilah semua rumusnya lahir: - lingkaran : jarak ke satu titik tetap selalu sama - elips : jumlah jarak ke dua titik tetap selalu sama - hiperbola : selisih jarak ke dua titik tetap selalu sama - parabola : jarak ke satu titik sama dengan jarak ke satu garis kedua titik tetap itu disebut fokus. perhatikan bahwa elips dan hiperbola hanya berbeda satu kata — jumlah versus selisih — dan perbedaan sekecil itu sudah menghasilkan bentuk yang sama sekali berlainan. keempat kurva adalah irisan kerucut yang sama pada sudut berbeda elips: jumlah jarak ke dua fokus tetap hiperbola: selisih jarak ke dua fokus tetap menghafal rumus elips dan hiperbola sebagai dua hal yang tak berhubungan. keduanya hanya berbeda tanda pada — dan tanda itu berasal langsung dari jumlah versus selisih pada definisinya. irisan kerucut: elips, hiperbola, parabola",
+      "snippet": "Lingkaran, elips, parabola, dan hiperbola terlihat seperti empat topik terpisah. Sebenarnya keempatnya muncul dari satu benda: sebuah kerucut ganda yang diir..."
+    },
+    {
+      "cardId": "lan-irisan-kerucut-c2",
+      "topicId": "lan-irisan-kerucut",
+      "topicTitle": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Elips dan hiperbola: satu tanda yang membedakan",
+      "haystack": "elips dan hiperbola: satu tanda yang membedakan kedua kurva ini punya bentuk baku yang nyaris identik. bedanya cuma tanda di tengah. elips (pusat di , sumbu mayor mendatar), dengan : hiperbola (terbuka ke kiri-kanan): perhatikan hubungan itu. pada elips, fokus berada di dalam kurva, jadi dan tandanya minus. pada hiperbola fokus berada di luar kedua cabang, jadi dan tandanya plus. tanda pada rumus mengikuti tanda pada persamaannya. hiperbola punya sesuatu yang tidak dimiliki elips: asimtot , yaitu dua garis yang didekati cabang-cabangnya tanpa pernah disentuh: untuk elips, selalu penyebut terbesar. untuk hiperbola, adalah penyebut suku yang bertanda positif — bukan yang terbesar. perbedaan aturan ini sumber banyak kesalahan. elips ; hiperbola asimtot hiperbola pada hiperbola, dari suku positif — belum tentu yang terbesar mengambil sebagai penyebut terbesar pada hiperbola, seperti kebiasaan pada elips. pada , nilai adalah karena sukunya positif, dan kurvanya terbuka ke atas-bawah. irisan kerucut: elips, hiperbola, parabola",
+      "snippet": "Kedua kurva ini punya bentuk baku yang nyaris identik. Bedanya cuma tanda di tengah. Elips (pusat di [rumus] , sumbu mayor mendatar), dengan [rumus] : [rumus..."
+    },
+    {
+      "cardId": "lan-irisan-kerucut-c3",
+      "topicId": "lan-irisan-kerucut",
+      "topicTitle": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Parabola: satu fokus dan satu garis",
+      "haystack": "parabola: satu fokus dan satu garis parabola berbeda dari elips dan hiperbola karena hanya punya satu fokus. sebagai gantinya ia punya sebuah garis, disebut direktriks. definisinya: parabola adalah himpunan titik yang jaraknya ke fokus sama dengan jaraknya ke direktriks. kedua jarak itu selalu seimbang, di titik mana pun pada kurva. bentuk baku dengan puncak di dan terbuka ke kanan: dengan fokus di dan direktriks . nilai adalah jarak dari puncak ke fokus, dan puncaknya selalu berada persis di tengah antara fokus dan direktriks. arah bukaannya ditentukan oleh variabel mana yang dikuadratkan dan tanda : - dengan terbuka ke kanan, ke kiri - dengan terbuka ke atas, ke bawah aturan sederhananya: parabola selalu membuka ke arah fokusnya, menjauhi direktriks. kalau kamu sudah tahu letak fokus, arah bukaan tidak perlu dihafal lagi. parabola: jarak ke fokus = jarak ke direktriks punya fokus dan direktriks parabola selalu membuka ke arah fokusnya membaca koefisien pada langsung sebagai . koefisien itu adalah , jadi — fokusnya di , bukan . irisan kerucut: elips, hiperbola, parabola",
+      "snippet": "Parabola berbeda dari elips dan hiperbola karena hanya punya satu fokus. Sebagai gantinya ia punya sebuah garis, disebut direktriks. Definisinya: parabola ad..."
+    },
+    {
+      "cardId": "lan-irisan-kerucut-c4",
+      "topicId": "lan-irisan-kerucut",
+      "topicTitle": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Kurva yang bergeser pusatnya",
+      "haystack": "kurva yang bergeser pusatnya sampai di sini semua kurva berpusat di titik asal. kalau pusatnya pindah ke , aturannya seragam untuk semua irisan kerucut: ganti dengan dan dengan . bentuk, ukuran, dan semua hubungan antara , , dan tidak berubah sedikit pun. yang berubah hanya letaknya. fokus yang tadinya kini menjadi . perhatikan tanda minus di dalam kurung. pusat di menghasilkan dan — tandanya berlawanan dengan tanda koordinatnya. ini logis: nilai di dalam kurung menjadi nol tepat ketika , yaitu di pusatnya. kalau soal memberi bentuk terurai seperti , kembalikan ke bentuk baku dengan melengkapkan kuadrat pada masing-masing variabel. teknik ini sama persis dengan yang kamu pakai untuk mencari pusat lingkaran. pusat di : ganti dan bentuk dan ukuran kurva tidak berubah, hanya letaknya bentuk terurai dikembalikan dengan melengkapkan kuadrat menulis untuk pusat di . tanda di dalam kurung selalu berlawanan dengan koordinat pusatnya, karena isi kurung harus bernilai nol tepat di pusat. irisan kerucut: elips, hiperbola, parabola",
+      "snippet": "Sampai di sini semua kurva berpusat di titik asal. Kalau pusatnya pindah ke [rumus] , aturannya seragam untuk semua irisan kerucut: ganti [rumus] dengan [rum..."
+    },
+    {
+      "cardId": "lan-irisan-kerucut-c5",
+      "topicId": "lan-irisan-kerucut",
+      "topicTitle": "Irisan Kerucut: Elips, Hiperbola, Parabola",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan irisan kerucut",
+      "haystack": "empat jebakan irisan kerucut 1. menukar rumus antara elips dan hiperbola. elips memakai , hiperbola . cara mengingat tanpa hafalan: pada elips fokus ada di dalam kurva sehingga harus lebih kecil dari ; pada hiperbola fokus ada di luar sehingga lebih besar. 2. mengira selalu penyebut terbesar. aturan itu hanya berlaku untuk elips. pada hiperbola, diambil dari suku yang bertanda positif , dan suku itulah yang menentukan arah bukaannya. 3. membaca sebagai pada parabola. pada nilai adalah . fokus di , bukan . 4. salah tanda pada pergeseran pusat. pusat memberi , sehingga pusat menghasilkan . tanda di dalam kurung selalu berlawanan dengan koordinatnya. satu pemeriksaan menangkap sebagian besar kesalahan ini: gambar sketsa kasarnya. fokus yang jatuh di luar elips atau di dalam hiperbola langsung terlihat salah. elips: . hiperbola: hiperbola diambil dari suku positif, bukan terbesar sketsa kasar menangkap sebagian besar kesalahan tanda melewatkan sketsa karena merasa rumusnya sudah dihafal. justru sketsa itulah yang menangkap fokus yang salah letak — kesalahan yang tidak akan terlihat dari deretan angka. irisan kerucut: elips, hiperbola, parabola",
+      "snippet": "1. Menukar rumus [rumus] antara elips dan hiperbola. Elips memakai [rumus] , hiperbola [rumus] . Cara mengingat tanpa hafalan: pada elips fokus ada di dalam ..."
+    },
+    {
       "cardId": "lan-teknik-integrasi-c1",
       "topicId": "lan-teknik-integrasi",
       "topicTitle": "Teknik Integrasi: Substitusi dan Parsial",
@@ -650,6 +700,56 @@
       "title": "Empat kesalahan teknik integrasi",
       "haystack": "empat kesalahan teknik integrasi 1. menyisakan setelah substitusi. bentuk seperti tidak punya arti. setelah mengganti variabel, seluruh integral wajib bersih dari — kalau ada yang tersisa, pilihan -mu belum cocok. 2. lupa mengganti batas pada integral tentu. menulis padahal variabelnya sudah akan memberi jawaban yang salah tanpa gejala apa pun. kalau ragu, kerjakan sebagai integral tak tentu dulu lalu kembali ke . 3. tanda minus ganda pada parsial. pada , nilai bertemu tanda minus dari rumus . dua minus menjadi plus, dan langkah inilah yang paling sering keliru. 4. memilih yang justru memperumit. kalau setelah satu putaran parsial integralmu terlihat lebih sulit, jangan diteruskan — balik pilihanmu dan ulangi dari awal. seperti semua integral, satu pemeriksaan menutup keempatnya: turunkan kembali jawaban akhirmu dan bandingkan dengan soalnya. setelah substitusi, tidak boleh ada tersisa ganti variabel berarti ganti batas kalau parsial memperumit, balik pilihan dan menganggap satu putaran parsial yang gagal berarti soalnya tidak bisa dikerjakan. yang gagal biasanya pilihan -nya, bukan tekniknya — tukar peran kedua faktor dan coba sekali lagi. teknik integrasi: substitusi dan parsial",
       "snippet": "1. Menyisakan [rumus] setelah substitusi. Bentuk seperti [rumus] tidak punya arti. Setelah mengganti variabel, seluruh integral wajib bersih dari [rumus] — k..."
+    },
+    {
+      "cardId": "lan-transformasi-geometri-c1",
+      "topicId": "lan-transformasi-geometri",
+      "topicTitle": "Transformasi Geometri",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Empat cara memindahkan bangun",
+      "haystack": "empat cara memindahkan bangun transformasi geometri memindahkan setiap titik pada bidang menurut satu aturan tetap. ada empat jenis yang perlu kamu kuasai, dan pembedanya sederhana: apa yang berubah dan apa yang tetap. translasi (pergeseran). semua titik digeser sejauh dan searah yang sama. bentuk, ukuran, dan arah hadap semuanya tetap. refleksi (pencerminan). setiap titik dipantulkan terhadap sebuah garis. bentuk dan ukuran tetap, tapi arah putarnya terbalik — seperti tulisan yang dibaca di cermin. rotasi (perputaran). semua titik diputar mengelilingi satu titik pusat sejauh sudut tertentu. bentuk, ukuran, dan arah putar semuanya tetap. dilatasi (perkalian). semua titik ditarik menjauh atau mendekat ke satu pusat dengan faktor . bentuknya tetap sebangun, tapi ukurannya berubah. tiga yang pertama disebut isometri karena menjaga jarak — bangun hasilnya kongruen dengan aslinya. hanya dilatasi yang mengubah ukuran, dan itulah satu-satunya yang menghasilkan bangun sebangun tapi tidak kongruen. translasi, refleksi, dan rotasi menjaga ukuran (isometri) hanya dilatasi yang mengubah ukuran refleksi satu-satunya yang membalik arah putar mengira refleksi dan rotasi menghasilkan bangun yang sama karena keduanya menjaga ukuran. refleksi membalik arah putar bangunnya, rotasi tidak — dan tidak ada rotasi yang bisa menggantikan satu refleksi. transformasi geometri",
+      "snippet": "Transformasi geometri memindahkan setiap titik pada bidang menurut satu aturan tetap. Ada empat jenis yang perlu kamu kuasai, dan pembedanya sederhana: apa y..."
+    },
+    {
+      "cardId": "lan-transformasi-geometri-c2",
+      "topicId": "lan-transformasi-geometri",
+      "topicTitle": "Transformasi Geometri",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Matriks transformasi yang perlu dihafal",
+      "haystack": "matriks transformasi yang perlu dihafal refleksi, rotasi, dan dilatasi berpusat di titik asal semuanya bisa ditulis sebagai perkalian matriks: daftar matriksnya: - refleksi sumbu : - refleksi sumbu : - refleksi garis : - rotasi berlawanan jarum jam: - rotasi : - dilatasi faktor : untuk rotasi sudut sembarang: semua matriks di atas adalah kasus khusus dari rumus ini atau kerabatnya. kalau kamu lupa matriks rotasi , masukkan saja ke rumus umum: dan langsung memberikan bentuk yang benar. rotasi umum: translasi tidak punya matriks — ia penjumlahan, bukan perkalian mencoba menulis translasi sebagai matriks . translasi menambahkan sesuatu yang tidak bergantung pada dan , dan perkalian matriks tidak bisa melakukan itu — titik asal selalu tetap di tempatnya. transformasi geometri",
+      "snippet": "Refleksi, rotasi, dan dilatasi berpusat di titik asal semuanya bisa ditulis sebagai perkalian matriks: [rumus] Daftar matriksnya: - Refleksi sumbu [rumus] : ..."
+    },
+    {
+      "cardId": "lan-transformasi-geometri-c3",
+      "topicId": "lan-transformasi-geometri",
+      "topicTitle": "Transformasi Geometri",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Pusat yang bukan titik asal",
+      "haystack": "pusat yang bukan titik asal matriks transformasi hanya bekerja untuk pusat di titik asal. kalau pusatnya di , pakai tiga langkah: 1. geser pusat ke titik asal. kurangi koordinat titiknya dengan koordinat pusat. 2. kerjakan transformasinya dengan matriks. 3. geser kembali. tambahkan koordinat pusat. dalam satu baris: untuk dilatasi berpusat dengan faktor , rumus itu menjadi sangat sederhana: contoh: dilatasi pusat faktor pada titik memberi . gagasan \"geser, kerjakan, geser kembali\" ini berlaku untuk semua transformasi, bukan hanya dilatasi — termasuk rotasi berpusat di titik sembarang. geser ke titik asal, transformasikan, lalu geser kembali dilatasi faktor : pola ini berlaku untuk rotasi berpusat sembarang juga langsung mengalikan matriks pada koordinat asli padahal pusatnya bukan titik asal. hasilnya benar hanya kalau kebetulan pusatnya — untuk pusat lain jawabannya akan meleset sejauh pergeseran yang terlewat. transformasi geometri",
+      "snippet": "Matriks transformasi hanya bekerja untuk pusat di titik asal. Kalau pusatnya di [rumus] , pakai tiga langkah: 1. Geser pusat ke titik asal. Kurangi koordinat..."
+    },
+    {
+      "cardId": "lan-transformasi-geometri-c4",
+      "topicId": "lan-transformasi-geometri",
+      "topicTitle": "Transformasi Geometri",
+      "track": "lanjut",
+      "type": "teknik",
+      "title": "Menggabungkan transformasi: urutan itu penting",
+      "haystack": "menggabungkan transformasi: urutan itu penting dua transformasi berturut-turut digabung dengan mengalikan matriksnya. tapi hati-hati dengan urutannya. kalau titik dikenai dulu, baru , maka matriks gabungannya adalah: matriks yang dikerjakan lebih dulu ditulis di sebelah kanan . urutan ini terbalik dari cara membacanya, dan penyebabnya terlihat dari bentuk perkaliannya: — matriks yang paling dekat dengan titik . perkalian matriks tidak komutatif, jadi urutan yang tertukar memberi hasil berbeda. contohnya, refleksi sumbu lalu rotasi menghasilkan: hasilnya refleksi terhadap . tapi kalau urutannya dibalik, hasilnya — refleksi terhadap , garis yang berbeda. dikerjakan lebih dulu ditulis lebih kanan: perkalian matriks tidak komutatif — urutan mengubah hasil dua refleksi bisa menghasilkan rotasi, dan sebaliknya menulis karena mengikuti urutan bacaan kiri ke kanan. urutannya justru terbalik, dan untuk transformasi yang tidak komutatif ini menghasilkan bangun bayangan yang benar-benar berbeda. transformasi geometri",
+      "snippet": "Dua transformasi berturut-turut digabung dengan mengalikan matriksnya. Tapi hati-hati dengan urutannya. Kalau titik dikenai [rumus] dulu, baru [rumus] , maka..."
+    },
+    {
+      "cardId": "lan-transformasi-geometri-c5",
+      "topicId": "lan-transformasi-geometri",
+      "topicTitle": "Transformasi Geometri",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan transformasi",
+      "haystack": "empat jebakan transformasi 1. urutan perkalian matriks terbalik. transformasi yang dikerjakan lebih dulu ditulis di sebelah kanan. kalau ragu, kerjakan saja satu per satu pada sebuah titik uji — lebih lambat, tapi tidak pernah salah. 2. melupakan pusat yang bukan titik asal. matriks hanya berlaku untuk pusat . untuk pusat lain, geser dulu, kerjakan, lalu geser kembali. 3. mengalikan luas dengan alih-alih . dilatasi mengalikan panjang dengan , tapi luas melibatkan dua panjang sehingga terkali , dan volume terkali . 4. salah arah putar. sudut positif berarti berlawanan arah jarum jam. rotasi atau adalah arah sebaliknya, dan keduanya memberi matriks yang berbeda dari . cara pemeriksaan tercepat untuk semuanya: ambil satu titik sederhana seperti , kerjakan transformasinya secara gambar, dan bandingkan dengan hasil hitunganmu. kesalahan tanda dan arah langsung terlihat. uji dengan titik sederhana seperti kalau ragu luas terkali , volume terkali sudut positif berarti berlawanan arah jarum jam memeriksa jawaban hanya dengan membandingkan bentuk matriksnya. dua matriks yang mirip bisa menghasilkan bayangan yang berbeda jauh — hanya pengujian pada titik nyata yang membuktikannya. transformasi geometri",
+      "snippet": "1. Urutan perkalian matriks terbalik. Transformasi yang dikerjakan lebih dulu ditulis di sebelah kanan. Kalau ragu, kerjakan saja satu per satu pada sebuah t..."
     },
     {
       "cardId": "alj-barisan-c1",

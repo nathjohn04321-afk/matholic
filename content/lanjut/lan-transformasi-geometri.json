@@ -1,0 +1,282 @@
+{
+  "id": "lan-transformasi-geometri",
+  "track": "lanjut",
+  "title": "Transformasi Geometri",
+  "order": 5,
+  "prerequisites": [
+    "alj-matriks"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Menggeser, mencerminkan, memutar, dan mengubah ukuran — semuanya lewat satu bahasa matriks.",
+  "tags": [
+    "geometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-transformasi-geometri-c1",
+      "type": "konsep",
+      "title": "Empat cara memindahkan bangun",
+      "body": "Transformasi geometri memindahkan setiap titik pada bidang menurut satu aturan tetap. Ada empat jenis yang perlu kamu kuasai, dan pembedanya sederhana: apa yang berubah dan apa yang tetap.\n\n**Translasi (pergeseran).** Semua titik digeser sejauh dan searah yang sama. Bentuk, ukuran, dan arah hadap semuanya tetap.\n\n**Refleksi (pencerminan).** Setiap titik dipantulkan terhadap sebuah garis. Bentuk dan ukuran tetap, tapi arah putarnya terbalik — seperti tulisan yang dibaca di cermin.\n\n**Rotasi (perputaran).** Semua titik diputar mengelilingi satu titik pusat sejauh sudut tertentu. Bentuk, ukuran, dan arah putar semuanya tetap.\n\n**Dilatasi (perkalian).** Semua titik ditarik menjauh atau mendekat ke satu pusat dengan faktor $k$. Bentuknya tetap sebangun, tapi ukurannya berubah.\n\nTiga yang pertama disebut isometri karena menjaga jarak — bangun hasilnya kongruen dengan aslinya. Hanya dilatasi yang mengubah ukuran, dan itulah satu-satunya yang menghasilkan bangun sebangun tapi tidak kongruen.",
+      "questions": [
+        {
+          "id": "lan-transformasi-geometri-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Transformasi yang mengubah ukuran bangun adalah ...",
+          "options": [
+            "dilatasi",
+            "translasi",
+            "refleksi",
+            "rotasi"
+          ],
+          "answerIndex": 0,
+          "solution": "Translasi, refleksi, dan rotasi semuanya menjaga jarak antar titik, jadi ukuran bangunnya tidak berubah sama sekali — bangun hasilnya kongruen dengan aslinya.\n\nDilatasi dengan faktor $k$ mengalikan setiap jarak dari pusat dengan $k$. Untuk $k = 3$, bangunnya menjadi tiga kali lebih besar. Hasilnya sebangun dengan aslinya, tapi tidak kongruen kecuali kalau $|k| = 1$.",
+          "hint": "Cari yang tidak menjaga jarak.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q2",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $A(3,2)$ oleh translasi $\\binom{4}{-5}$ adalah ...",
+          "options": [
+            "$(7,-3)$",
+            "$(-1,7)$",
+            "$(7,3)$",
+            "$(12,-10)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Translasi menambahkan komponennya ke masing-masing koordinat:\n\n$$(x,y) \\to (x + a,\\ y + b)$$\n\n$$A(3,2) \\to (3+4,\\ 2+(-5)) = (7,-3)$$\n\nPerhatikan bahwa translasi adalah penjumlahan, bukan perkalian. Pilihan $(12,-10)$ muncul kalau koordinatnya dikalikan.",
+          "hint": "Translasi berarti menambahkan, bukan mengalikan.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Translasi, refleksi, dan rotasi menjaga ukuran (isometri)",
+        "Hanya dilatasi yang mengubah ukuran",
+        "Refleksi satu-satunya yang membalik arah putar"
+      ],
+      "pitfall": "Mengira refleksi dan rotasi menghasilkan bangun yang sama karena keduanya menjaga ukuran. Refleksi membalik arah putar bangunnya, rotasi tidak — dan tidak ada rotasi yang bisa menggantikan satu refleksi."
+    },
+    {
+      "id": "lan-transformasi-geometri-c2",
+      "type": "rumus",
+      "title": "Matriks transformasi yang perlu dihafal",
+      "body": "Refleksi, rotasi, dan dilatasi berpusat di titik asal semuanya bisa ditulis sebagai perkalian matriks:\n\n$$\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} = M \\begin{pmatrix} x \\\\ y \\end{pmatrix}$$\n\nDaftar matriksnya:\n\n- Refleksi sumbu $x$: $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$\n- Refleksi sumbu $y$: $\\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$\n- Refleksi garis $y=x$: $\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$\n- Rotasi $90°$ berlawanan jarum jam: $\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$\n- Rotasi $180°$: $\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$\n- Dilatasi faktor $k$: $\\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix}$\n\nUntuk rotasi sudut $\\theta$ sembarang:\n$$\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$$\n\nSemua matriks di atas adalah kasus khusus dari rumus ini atau kerabatnya. Kalau kamu lupa matriks rotasi $90°$, masukkan saja $\\theta = 90°$ ke rumus umum: $\\cos 90° = 0$ dan $\\sin 90° = 1$ langsung memberikan bentuk yang benar.",
+      "questions": [
+        {
+          "id": "lan-transformasi-geometri-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $P(3,2)$ oleh rotasi $90°$ berlawanan arah jarum jam dengan pusat $O$ adalah ...",
+          "options": [
+            "$(-2,3)$",
+            "$(2,-3)$",
+            "$(2,3)$",
+            "$(-3,-2)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai matriks rotasi $90°$:\n\n$$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 0(3) + (-1)(2) \\\\ 1(3) + 0(2) \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 3 \\end{pmatrix}$$\n\nAturan cepatnya: $(x,y) \\to (-y, x)$ untuk rotasi $90°$ berlawanan jarum jam.\n\nCek masuk akal: titik $(3,2)$ ada di kuadran I, dan setelah diputar seperempat putaran berlawanan jarum jam ia harus mendarat di kuadran II. Titik $(-2,3)$ memang di kuadran II.",
+          "hint": "Rotasi $90°$ berlawanan jarum jam: $(x,y) \\to (-y,x)$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q4",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $Q(3,2)$ oleh refleksi terhadap garis $y = x$ adalah ...",
+          "options": [
+            "$(2,3)$",
+            "$(-3,-2)$",
+            "$(3,-2)$",
+            "$(-2,-3)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Refleksi terhadap $y = x$ hanya menukar kedua koordinat:\n\n$$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix}$$\n\nAturan cepat: $(x,y) \\to (y,x)$.\n\nAlasannya terlihat dari geometri: garis $y=x$ membagi sudut antara sumbu $x$ dan sumbu $y$ sama besar, jadi mencerminkannya berarti menukar peran kedua sumbu itu.",
+          "hint": "Refleksi terhadap $y=x$ menukar koordinatnya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q5",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $R(2,-1)$ oleh dilatasi berpusat di $O$ dengan faktor $k = 3$ adalah ...",
+          "options": [
+            "$(6,-3)$",
+            "$(5,2)$",
+            "$(6,-1)$",
+            "$(2,-3)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Dilatasi berpusat di titik asal mengalikan kedua koordinat dengan $k$:\n\n$$(x,y) \\to (kx,\\ ky)$$\n\n$$R(2,-1) \\to (3 \\cdot 2,\\ 3 \\cdot (-1)) = (6,-3)$$\n\nPilihan $(5,2)$ muncul kalau kamu menambahkan 3 alih-alih mengalikan — itu translasi, bukan dilatasi.",
+          "hint": "Dilatasi mengalikan kedua koordinat dengan faktor yang sama.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} = M\\begin{pmatrix} x \\\\ y \\end{pmatrix}$",
+        "Rotasi umum: $\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$",
+        "Translasi tidak punya matriks $2\\times 2$ — ia penjumlahan, bukan perkalian"
+      ],
+      "pitfall": "Mencoba menulis translasi sebagai matriks $2\\times 2$. Translasi menambahkan sesuatu yang tidak bergantung pada $x$ dan $y$, dan perkalian matriks $2\\times 2$ tidak bisa melakukan itu — titik asal selalu tetap di tempatnya."
+    },
+    {
+      "id": "lan-transformasi-geometri-c3",
+      "type": "prosedur",
+      "title": "Pusat yang bukan titik asal",
+      "body": "Matriks transformasi hanya bekerja untuk pusat di titik asal. Kalau pusatnya di $(a,b)$, pakai tiga langkah:\n\n**1. Geser pusat ke titik asal.** Kurangi koordinat titiknya dengan koordinat pusat.\n\n**2. Kerjakan transformasinya dengan matriks.**\n\n**3. Geser kembali.** Tambahkan koordinat pusat.\n\nDalam satu baris:\n$$\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} = M\\begin{pmatrix} x - a \\\\ y - b \\end{pmatrix} + \\begin{pmatrix} a \\\\ b \\end{pmatrix}$$\n\nUntuk dilatasi berpusat $(a,b)$ dengan faktor $k$, rumus itu menjadi sangat sederhana:\n$$(x', y') = \\big(a + k(x-a),\\ b + k(y-b)\\big)$$\n\nContoh: dilatasi pusat $(1,2)$ faktor $2$ pada titik $(4,3)$ memberi $\\big(1 + 2(3),\\ 2 + 2(1)\\big) = (7,4)$.\n\nGagasan \"geser, kerjakan, geser kembali\" ini berlaku untuk semua transformasi, bukan hanya dilatasi — termasuk rotasi berpusat di titik sembarang.",
+      "questions": [
+        {
+          "id": "lan-transformasi-geometri-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $A(4,3)$ oleh dilatasi berpusat $(1,2)$ dengan faktor $k = 2$ adalah ...",
+          "options": [
+            "$(7,4)$",
+            "$(8,6)$",
+            "$(9,8)$",
+            "$(5,4)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai tiga langkah.\n\n**Geser ke titik asal:** $(4-1,\\ 3-2) = (3,1)$\n\n**Kalikan dengan $k = 2$:** $(6,2)$\n\n**Geser kembali:** $(6+1,\\ 2+2) = (7,4)$\n\nPilihan $(8,6)$ adalah hasil kalau pusatnya dianggap $O$ — yaitu $2 \\times (4,3)$. Selisihnya persis pergeseran yang terlewat, dan inilah kesalahan paling sering pada soal berpusat bukan di titik asal.",
+          "hint": "Geser ke titik asal dulu, baru kalikan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q7",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Sebuah segitiga memiliki luas $6\\text{ cm}^2$. Setelah dilatasi dengan faktor $k = 3$, luas bayangannya menjadi ... cm$^2$ (bilangan bulat)",
+          "answer": "54",
+          "acceptedAnswers": [
+            "54"
+          ],
+          "solution": "Dilatasi mengalikan setiap **panjang** dengan $k$. Luas adalah hasil kali dua panjang, jadi luasnya terkali $k^2$.\n\n$$L' = k^2 \\cdot L = 3^2 \\times 6 = 9 \\times 6 = 54$$\n\nKesalahan umum adalah menjawab $18$, yaitu mengalikan luas dengan $k$ saja. Perhatikan bahwa alas dan tinggi sama-sama menjadi tiga kali lipat, sehingga luasnya menjadi sembilan kali.\n\nPola yang sama berlaku untuk volume, tapi dengan pangkat tiga: $V' = k^3 V$.",
+          "hint": "Luas melibatkan dua ukuran panjang.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Geser ke titik asal, transformasikan, lalu geser kembali",
+        "Dilatasi $(a,b)$ faktor $k$: $(a + k(x-a),\\ b + k(y-b))$",
+        "Pola ini berlaku untuk rotasi berpusat sembarang juga"
+      ],
+      "pitfall": "Langsung mengalikan matriks pada koordinat asli padahal pusatnya bukan titik asal. Hasilnya benar hanya kalau kebetulan pusatnya $(0,0)$ — untuk pusat lain jawabannya akan meleset sejauh pergeseran yang terlewat."
+    },
+    {
+      "id": "lan-transformasi-geometri-c4",
+      "type": "teknik",
+      "title": "Menggabungkan transformasi: urutan itu penting",
+      "body": "Dua transformasi berturut-turut digabung dengan mengalikan matriksnya. Tapi hati-hati dengan urutannya.\n\nKalau titik dikenai $T_1$ dulu, baru $T_2$, maka matriks gabungannya adalah:\n$$M = M_2 \\cdot M_1$$\n\nMatriks yang dikerjakan **lebih dulu** ditulis di sebelah **kanan**. Urutan ini terbalik dari cara membacanya, dan penyebabnya terlihat dari bentuk perkaliannya: $M_2(M_1 v)$ — matriks $M_1$ yang paling dekat dengan titik $v$.\n\nPerkalian matriks tidak komutatif, jadi urutan yang tertukar memberi hasil berbeda. Contohnya, refleksi sumbu $x$ lalu rotasi $90°$ menghasilkan:\n$$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$\n\nHasilnya refleksi terhadap $y = x$. Tapi kalau urutannya dibalik, hasilnya $\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$ — refleksi terhadap $y = -x$, garis yang berbeda.",
+      "questions": [
+        {
+          "id": "lan-transformasi-geometri-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Titik $B(2,5)$ ditranslasi oleh $\\binom{3}{-2}$, lalu dicerminkan terhadap sumbu $y$. Bayangan akhirnya adalah ...",
+          "options": [
+            "$(-5,3)$",
+            "$(5,3)$",
+            "$(-5,-3)$",
+            "$(-1,3)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kerjakan berurutan.\n\n**Translasi:** $(2+3,\\ 5-2) = (5,3)$\n\n**Refleksi sumbu $y$:** tanda absisnya dibalik, ordinatnya tetap. $(5,3) \\to (-5,3)$\n\nJadi bayangan akhirnya $(-5,3)$.\n\nPerhatikan kalau urutannya dibalik — cermin dulu baru geser — hasilnya $(-2+3, 5-2) = (1,3)$, berbeda sama sekali. Urutan memang menentukan.",
+          "hint": "Kerjakan satu per satu sesuai urutan yang disebut soal.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q9",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Mencerminkan sebuah titik terhadap sumbu $x$ lalu memutarnya $90°$ memberi hasil yang sama dengan memutarnya $90°$ lalu mencerminkannya terhadap sumbu $x$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Perkalian matriks tidak komutatif, dan di sini perbedaannya nyata.\n\n**Cermin dulu, baru putar:**\n$$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$$\nHasilnya refleksi terhadap $y = x$.\n\n**Putar dulu, baru cermin:**\n$$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$$\nHasilnya refleksi terhadap $y = -x$.\n\nUji dengan titik $(1,0)$: cara pertama memberi $(0,1)$, cara kedua memberi $(0,-1)$.",
+          "hint": "Coba kerjakan keduanya pada satu titik sederhana, misalnya $(1,0)$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Dikerjakan lebih dulu ditulis lebih kanan: $M = M_2 M_1$",
+        "Perkalian matriks tidak komutatif — urutan mengubah hasil",
+        "Dua refleksi bisa menghasilkan rotasi, dan sebaliknya"
+      ],
+      "pitfall": "Menulis $M_1 M_2$ karena mengikuti urutan bacaan kiri ke kanan. Urutannya justru terbalik, dan untuk transformasi yang tidak komutatif ini menghasilkan bangun bayangan yang benar-benar berbeda."
+    },
+    {
+      "id": "lan-transformasi-geometri-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan transformasi",
+      "body": "**1. Urutan perkalian matriks terbalik.** Transformasi yang dikerjakan lebih dulu ditulis di sebelah kanan. Kalau ragu, kerjakan saja satu per satu pada sebuah titik uji — lebih lambat, tapi tidak pernah salah.\n\n**2. Melupakan pusat yang bukan titik asal.** Matriks hanya berlaku untuk pusat $(0,0)$. Untuk pusat lain, geser dulu, kerjakan, lalu geser kembali.\n\n**3. Mengalikan luas dengan $k$ alih-alih $k^2$.** Dilatasi mengalikan panjang dengan $k$, tapi luas melibatkan dua panjang sehingga terkali $k^2$, dan volume terkali $k^3$.\n\n**4. Salah arah putar.** Sudut positif berarti berlawanan arah jarum jam. Rotasi $-90°$ atau $270°$ adalah arah sebaliknya, dan keduanya memberi matriks yang berbeda dari $90°$.\n\nCara pemeriksaan tercepat untuk semuanya: ambil satu titik sederhana seperti $(1,0)$, kerjakan transformasinya secara gambar, dan bandingkan dengan hasil hitunganmu. Kesalahan tanda dan arah langsung terlihat.",
+      "questions": [
+        {
+          "id": "lan-transformasi-geometri-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan titik $C(3,2)$ oleh rotasi $180°$ dengan pusat $O$ adalah ...",
+          "options": [
+            "$(-3,-2)$",
+            "$(-2,-3)$",
+            "$(2,3)$",
+            "$(3,-2)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Rotasi $180°$ membalik tanda kedua koordinat:\n\n$$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}\\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ -2 \\end{pmatrix}$$\n\nAturan cepat: $(x,y) \\to (-x,-y)$.\n\nPerhatikan bahwa rotasi $180°$ tidak menukar koordinat — hanya membalik tandanya. Pilihan $(-2,-3)$ adalah jebakan untuk yang mencampurnya dengan rotasi $90°$ dua kali secara keliru.",
+          "hint": "Setengah putaran membalik tanda, tidak menukar posisi.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "lan-transformasi-geometri-q11",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Bayangan garis $y = 2x + 3$ oleh rotasi $90°$ berlawanan arah jarum jam dengan pusat $O$ adalah ...",
+          "options": [
+            "$x + 2y + 3 = 0$",
+            "$2x + y + 3 = 0$",
+            "$x - 2y + 3 = 0$",
+            "$y = 2x - 3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Rotasi $90°$ memetakan $(x,y) \\to (-y, x)$. Jadi kalau $(x', y')$ adalah bayangannya:\n\n$$x' = -y, \\qquad y' = x$$\n\nBalik hubungan itu untuk mendapat titik asalnya:\n$$x = y', \\qquad y = -x'$$\n\nSubstitusikan ke persamaan garis aslinya $y = 2x + 3$:\n$$-x' = 2y' + 3$$\n$$x' + 2y' + 3 = 0$$\n\nJadi bayangannya $x + 2y + 3 = 0$, atau $y = -\\frac{1}{2}x - \\frac{3}{2}$.\n\nCek masuk akal: rotasi $90°$ membuat garis tegak lurus terhadap aslinya. Gradien asli $2$, gradien bayangan $-\\frac{1}{2}$, dan hasil kalinya $-1$. Cocok.",
+          "hint": "Nyatakan $x$ dan $y$ dalam $x'$ dan $y'$, lalu substitusikan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Uji dengan titik sederhana seperti $(1,0)$ kalau ragu",
+        "Luas terkali $k^2$, volume terkali $k^3$",
+        "Sudut positif berarti berlawanan arah jarum jam"
+      ],
+      "pitfall": "Memeriksa jawaban hanya dengan membandingkan bentuk matriksnya. Dua matriks yang mirip bisa menghasilkan bayangan yang berbeda jauh — hanya pengujian pada titik nyata yang membuktikannya."
+    }
+  ]
+}
