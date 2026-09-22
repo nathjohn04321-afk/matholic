@@ -1,0 +1,265 @@
+{
+  "id": "kal-limit-trigonometri",
+  "track": "menengah",
+  "title": "Limit Fungsi Trigonometri",
+  "order": 18,
+  "prerequisites": [
+    "kal-limit-aljabar",
+    "trg-perbandingan"
+  ],
+  "estimatedMinutes": 24,
+  "summary": "Satu limit istimewa yang menurunkan hampir semua soal limit trigonometri.",
+  "tags": [
+    "kalkulus",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "kal-limit-trigonometri-c1",
+      "type": "konsep",
+      "title": "Kenapa sin x per x menuju satu",
+      "body": "Limit istimewa $\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1$ adalah dasar seluruh bab ini. Dan alasannya bisa dilihat, bukan cuma dihafal.\n\nUntuk sudut yang sangat kecil, busur lingkaran dan tali busurnya hampir tidak bisa dibedakan. Pada lingkaran satuan, panjang busur untuk sudut $x$ radian adalah $x$, sedangkan tinggi tegaknya adalah $\\sin x$. Saat $x$ mengecil, keduanya makin mendekati sama panjang — jadi perbandingannya menuju 1.\n\nPeriksa dengan angka: untuk $x = 0{,}1$ radian, $\\sin x \\approx 0{,}0998$. Perbandingannya $0{,}998$, sudah sangat dekat ke 1.\n\nSyarat pentingnya: sudutnya harus dalam **radian**. Dalam derajat limitnya bukan 1, karena satuannya berbeda skala.",
+      "questions": [
+        {
+          "id": "kal-limit-trigonometri-q1",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Hitung $\\lim_{x\\to 0} \\frac{\\sin 3x}{x}$.",
+          "answer": "3",
+          "acceptedAnswers": [
+            "tiga",
+            "= 3"
+          ],
+          "solution": "Sesuaikan bentuknya supaya cocok dengan limit istimewa. Kalikan dan bagi dengan 3:\n$$\\frac{\\sin 3x}{x} = 3 \\cdot \\frac{\\sin 3x}{3x}$$\n\nSaat $x \\to 0$, juga $3x \\to 0$, jadi $\\frac{\\sin 3x}{3x} \\to 1$.\n\n$$\\lim = 3 \\times 1 = 3$$\n\nPola umumnya: $\\lim_{x\\to 0}\\frac{\\sin ax}{bx} = \\frac{a}{b}$.",
+          "hint": "Buat penyebutnya sama dengan isi sinusnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-trigonometri-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\sin 2x}{5x}$ adalah ...",
+          "options": [
+            "$\\frac{2}{5}$",
+            "$\\frac{5}{2}$",
+            "$1$",
+            "$0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai pola $\\lim_{x\\to 0}\\frac{\\sin ax}{bx} = \\frac{a}{b}$ dengan $a=2$ dan $b=5$:\n$$\\frac{2}{5}$$\n\nCara panjangnya:\n$$\\frac{\\sin 2x}{5x} = \\frac{2}{5} \\cdot \\frac{\\sin 2x}{2x} \\to \\frac{2}{5} \\times 1 = \\frac{2}{5}$$",
+          "hint": "Perbandingan koefisien di dalam sinus dan di penyebut.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1$",
+        "$\\lim_{x\\to 0}\\frac{\\tan x}{x} = 1$",
+        "Hanya berlaku untuk sudut dalam radian"
+      ],
+      "pitfall": "Memakai limit istimewa untuk $x$ yang tidak menuju nol. Kalau $x \\to 2$, substitusi langsung sudah cukup dan limit istimewa tidak berlaku."
+    },
+    {
+      "id": "kal-limit-trigonometri-c2",
+      "type": "rumus",
+      "title": "Pola yang diturunkan dari limit istimewa",
+      "body": "Dari satu limit istimewa, seluruh pola berikut bisa diturunkan tanpa hafalan tambahan.\n\n$$\\lim_{x\\to 0}\\frac{\\sin ax}{bx} = \\frac{a}{b}, \\qquad \\lim_{x\\to 0}\\frac{\\tan ax}{bx} = \\frac{a}{b}$$\n\n$$\\lim_{x\\to 0}\\frac{ax}{\\sin bx} = \\frac{a}{b}, \\qquad \\lim_{x\\to 0}\\frac{\\sin ax}{\\sin bx} = \\frac{a}{b}$$\n\nPolanya seragam: yang tersisa hanyalah perbandingan koefisien di dalam sinus atau tangen. Fungsi trigonometrinya sendiri lenyap.\n\nSatu pola yang berbeda dan pantas dihafal terpisah:\n$$\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2} = \\frac{1}{2}$$\n\nBentuk kosinus tidak mengikuti pola yang sama, dan alasannya penting. Saat $x \\to 0$, nilai $\\sin x$ menuju nol sedangkan $\\cos x$ menuju satu. Karena itu yang ditulis adalah $1 - \\cos x$, supaya pembilangnya ikut menuju nol dan bentuknya benar-benar tak tentu. Penyebutnya pun berpangkat dua, bukan satu, karena $1-\\cos x$ mengecil jauh lebih cepat daripada $\\sin x$. Mencampuradukkan kedua pola ini adalah kesalahan tersering di bab ini.",
+      "questions": [
+        {
+          "id": "kal-limit-trigonometri-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\tan 4x}{3x}$ adalah ...",
+          "options": [
+            "$\\frac{4}{3}$",
+            "$\\frac{3}{4}$",
+            "$1$",
+            "$12$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tangen mengikuti pola yang sama dengan sinus:\n$$\\lim_{x\\to 0}\\frac{\\tan ax}{bx} = \\frac{a}{b}$$\n\nDengan $a=4$ dan $b=3$:\n$$\\frac{4}{3}$$\n\nAlasannya: $\\tan x = \\frac{\\sin x}{\\cos x}$, dan saat $x \\to 0$ penyebutnya menuju $\\cos 0 = 1$ — jadi tangen berperilaku sama seperti sinus.",
+          "hint": "Tangen mengikuti pola yang sama dengan sinus.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-trigonometri-q4",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{1-\\cos x}{x^2}$ adalah ...",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$1$",
+            "$0$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ini pola khusus untuk bentuk kosinus:\n$$\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2} = \\frac{1}{2}$$\n\nBisa diturunkan dengan mengalikan sekawan $1+\\cos x$:\n$$\\frac{1-\\cos^2 x}{x^2(1+\\cos x)} = \\frac{\\sin^2 x}{x^2(1+\\cos x)}$$\n$$= \\left(\\frac{\\sin x}{x}\\right)^2 \\cdot \\frac{1}{1+\\cos x} \\to 1 \\times \\frac{1}{2} = \\frac{1}{2}$$\n\nPenyebutnya berpangkat dua justru karena hal ini.",
+          "hint": "Kalikan dengan sekawan $1+\\cos x$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\frac{\\sin ax}{bx} \\to \\frac{a}{b}$",
+        "$\\frac{\\tan ax}{bx} \\to \\frac{a}{b}$",
+        "$\\frac{1-\\cos x}{x^2} \\to \\frac{1}{2}$"
+      ],
+      "pitfall": "Menerapkan pola $\\frac{a}{b}$ pada bentuk kosinus. Kosinus punya perilaku berbeda karena nilainya di nol adalah 1, bukan 0."
+    },
+    {
+      "id": "kal-limit-trigonometri-c3",
+      "type": "prosedur",
+      "title": "Menyesuaikan bentuk agar cocok",
+      "body": "Limit istimewa hanya berlaku kalau bentuknya persis cocok. Sebagian besar pekerjaan di bab ini adalah menyesuaikan bentuk, bukan menghitung.\n\n1. Substitusi dulu. Kalau hasilnya bukan $\\frac{0}{0}$, kamu sudah selesai.\n2. Kalau $\\frac{0}{0}$, cari bentuk sinus atau tangen yang bisa dipasangkan.\n3. Kalikan dan bagi dengan bilangan yang diperlukan agar penyebutnya sama dengan isi fungsi trigonometrinya.\n4. Pisahkan menjadi hasil kali beberapa faktor, masing-masing berbentuk limit istimewa.\n5. Ganti tiap faktor dengan nilainya, lalu kalikan.\n\nLangkah 3 adalah intinya. Bentuk $\\frac{\\sin 3x}{x}$ tidak langsung cocok; ia harus ditulis sebagai $3 \\cdot \\frac{\\sin 3x}{3x}$ supaya isi sinus dan penyebutnya sama.\n\nSelalu periksa dulu apakah soalnya benar-benar bentuk tak tentu — beberapa soal hanya butuh substitusi biasa.",
+      "questions": [
+        {
+          "id": "kal-limit-trigonometri-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{x}{\\sin 2x}$ adalah ...",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$2$",
+            "$1$",
+            "$0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bentuk terbalik tetap mengikuti pola yang sama:\n$$\\lim_{x\\to 0}\\frac{ax}{\\sin bx} = \\frac{a}{b}$$\n\nDengan $a=1$ dan $b=2$:\n$$\\frac{1}{2}$$\n\nCara panjangnya: tulis sebagai $\\frac{1}{2} \\cdot \\frac{2x}{\\sin 2x}$, dan faktor kedua menuju 1.",
+          "hint": "Pola yang sama berlaku untuk bentuk terbalik.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-trigonometri-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 2} \\frac{\\sin x}{x}$ adalah ...",
+          "options": [
+            "$\\frac{\\sin 2}{2}$",
+            "$1$",
+            "$0$",
+            "tidak ada"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan $x \\to 2$, bukan $x \\to 0$. Limit istimewa tidak berlaku di sini.\n\nSubstitusikan langsung:\n$$\\frac{\\sin 2}{2}$$\n\nPenyebutnya tidak nol, jadi tidak ada bentuk tak tentu sama sekali — tidak perlu diolah.\n\nMenjawab 1 adalah kesalahan menerapkan limit istimewa di luar syaratnya.",
+          "hint": "Perhatikan $x$ menuju berapa.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Substitusi dulu, periksa apakah $\\frac{0}{0}$",
+        "Samakan penyebut dengan isi fungsi trigonometrinya",
+        "Pisahkan jadi hasil kali beberapa limit istimewa"
+      ],
+      "pitfall": "Langsung memakai limit istimewa tanpa memeriksa apakah bentuknya tak tentu. Untuk $x$ yang tidak menuju nol, substitusi biasa sudah menjawab."
+    },
+    {
+      "id": "kal-limit-trigonometri-c4",
+      "type": "teknik",
+      "title": "Bentuk yang perlu identitas dulu",
+      "body": "Beberapa soal tidak langsung berbentuk limit istimewa, dan butuh identitas trigonometri untuk membukanya.\n\nYang paling sering dipakai:\n$$1 - \\cos 2x = 2\\sin^2 x$$\n$$\\sin 2x = 2\\sin x\\cos x$$\n$$\\sin^2 x = 1 - \\cos^2 x$$\n\nContoh $\\lim_{x\\to 0}\\frac{1-\\cos 2x}{x^2}$. Pakai identitas pertama:\n$$\\frac{2\\sin^2 x}{x^2} = 2\\left(\\frac{\\sin x}{x}\\right)^2 \\to 2 \\times 1 = 2$$\n\nTanpa identitas itu, bentuknya buntu di $\\frac{0}{0}$.\n\nAturan praktisnya begini. Kalau muncul bentuk $1 - \\cos(\\ldots)$, hampir selalu identitas sudut rangkap yang membukanya menjadi bentuk sinus kuadrat. Kalau muncul hasil kali sinus dan kosinus dengan sudut yang sama, biasanya itu $\\sin 2x$ yang sedang menyamar. Dan kalau muncul $\\sin^2$ atau $\\cos^2$ sendirian, identitas pokok $\\sin^2 x + \\cos^2 x = 1$ biasanya menyederhanakannya. Tiga pola itu menutup hampir semua soal yang tidak langsung berbentuk limit istimewa.",
+      "questions": [
+        {
+          "id": "kal-limit-trigonometri-q7",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Hitung $\\lim_{x\\to 0} \\frac{1-\\cos 2x}{x^2}$.",
+          "answer": "2",
+          "acceptedAnswers": [
+            "dua",
+            "= 2"
+          ],
+          "solution": "Pakai identitas $1-\\cos 2x = 2\\sin^2 x$:\n$$\\frac{2\\sin^2 x}{x^2} = 2\\left(\\frac{\\sin x}{x}\\right)^2$$\n\nFaktor $\\frac{\\sin x}{x}$ menuju 1, jadi kuadratnya juga 1:\n$$\\to 2 \\times 1 = 2$$\n\nPeriksa lewat pola $\\frac{1-\\cos ax}{x^2} = \\frac{a^2}{2}$: dengan $a=2$ memberi $\\frac{4}{2} = 2$. Cocok.",
+          "hint": "Buka $1-\\cos 2x$ dengan identitas sudut rangkap.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-trigonometri-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\sin 2x}{\\sin 3x}$ adalah ...",
+          "options": [
+            "$\\frac{2}{3}$",
+            "$\\frac{3}{2}$",
+            "$1$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai pola untuk sinus dibagi sinus:\n$$\\lim_{x\\to 0}\\frac{\\sin ax}{\\sin bx} = \\frac{a}{b}$$\n\nDengan $a=2$ dan $b=3$:\n$$\\frac{2}{3}$$\n\nCara panjangnya, bagi keduanya dengan $x$:\n$$\\frac{\\sin 2x / x}{\\sin 3x / x} \\to \\frac{2}{3}$$",
+          "hint": "Perbandingan koefisien di dalam kedua sinus.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$1-\\cos 2x = 2\\sin^2 x$",
+        "$\\sin 2x = 2\\sin x\\cos x$",
+        "Bentuk $1-\\cos$ hampir selalu dibuka identitas sudut rangkap"
+      ],
+      "pitfall": "Memaksakan pola $\\frac{a}{b}$ pada bentuk $1-\\cos 2x$ tanpa mengubahnya dulu, sehingga hasilnya keliru."
+    },
+    {
+      "id": "kal-limit-trigonometri-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada limit trigonometri",
+      "body": "**Memakai limit istimewa saat $x$ tidak menuju nol.** Syaratnya $x \\to 0$. Untuk nilai lain, substitusi biasa yang berlaku.\n\n**Lupa menyamakan koefisien.** Bentuk $\\frac{\\sin 3x}{x}$ bukan 1; ia harus diubah menjadi $3 \\cdot \\frac{\\sin 3x}{3x}$ lebih dulu.\n\n**Menerapkan pola sinus pada kosinus.** Bentuk $\\frac{1-\\cos x}{x^2}$ bernilai $\\frac{1}{2}$, bukan mengikuti pola $\\frac{a}{b}$.\n\n**Memakai derajat.** Limit istimewa hanya berlaku dalam radian.\n\n**Lupa memeriksa bentuk tak tentu.** Beberapa soal terlihat rumit padahal penyebutnya tidak nol, sehingga cukup disubstitusikan dan selesai dalam satu baris.\n\nKebiasaan yang menyelamatkan: sebelum memakai pola apa pun, tuliskan dulu ke mana $x$ menuju dan berapa hasil substitusi langsungnya. Dua detik itu memisahkan soal yang butuh limit istimewa dari soal yang sebenarnya sudah selesai.",
+      "questions": [
+        {
+          "id": "kal-limit-trigonometri-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to 0} \\frac{\\sin 5x}{x}$ adalah ...",
+          "options": [
+            "$5$",
+            "$1$",
+            "$\\frac{1}{5}$",
+            "$0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bentuknya belum cocok — isi sinus adalah $5x$ sedangkan penyebutnya $x$.\n\nSamakan dulu:\n$$\\frac{\\sin 5x}{x} = 5 \\cdot \\frac{\\sin 5x}{5x}$$\n\nFaktor kedua menuju 1, jadi:\n$$\\to 5 \\times 1 = 5$$\n\nMenjawab 1 berarti memakai limit istimewa tanpa menyesuaikan koefisiennya.",
+          "hint": "Isi sinus dan penyebutnya harus sama dulu.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-trigonometri-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Syarat berlakunya $\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1$ adalah sudutnya dinyatakan dalam ...",
+          "options": [
+            "radian",
+            "derajat",
+            "putaran",
+            "gradian"
+          ],
+          "answerIndex": 0,
+          "solution": "Limit istimewa ini diturunkan dari perbandingan panjang busur dan tinggi tegak pada lingkaran satuan.\n\nPanjang busur sama dengan besar sudut **hanya jika** sudutnya diukur dalam radian — itulah definisi radian.\n\nDalam derajat, perbandingannya menjadi $\\frac{\\pi}{180}$, bukan 1.\n\nKarena itu semua soal limit trigonometri di kalkulus memakai radian.",
+          "hint": "Satuan apa yang membuat panjang busur sama dengan besar sudut?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Limit istimewa butuh $x \\to 0$",
+        "Samakan koefisien lebih dulu",
+        "Bentuk kosinus punya pola sendiri",
+        "Sudutnya harus radian"
+      ],
+      "pitfall": "Menjawab $\\lim_{x\\to 0}\\frac{\\sin 5x}{x}$ dengan 1, padahal jawabannya 5 — koefisien di dalam sinus belum disamakan dengan penyebutnya."
+    }
+  ]
+}

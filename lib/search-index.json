@@ -1132,6 +1132,106 @@
       "snippet": "Menuliskan [rumus] sebagai jawaban. Bentuk itu bukan bilangan. Ia hanya memberitahu bahwa kamu belum selesai bekerja. Mencoret suku, bukan faktor. Dari [rumu..."
     },
     {
+      "cardId": "kal-limit-tak-hingga-c1",
+      "topicId": "kal-limit-tak-hingga",
+      "topicTitle": "Limit Tak Hingga",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Pangkat tertinggi yang menentukan",
+      "haystack": "pangkat tertinggi yang menentukan saat membesar tanpa batas, tidak semua suku sama pentingnya. suku berpangkat tertinggi tumbuh jauh lebih cepat sehingga suku lain menjadi tidak berarti. bandingkan dan saat : yang pertama sejuta, yang kedua tiga ribu. suku praktis tidak berpengaruh pada perbandingannya. karena itu untuk dengan keduanya polinomial, cukup bandingkan pangkat tertingginya: - pangkat atas sama dengan bawah: hasilnya perbandingan koefisien pangkat tertingginya - pangkat atas lebih kecil : hasilnya nol - pangkat atas lebih besar : menuju tak hingga, limitnya tidak ada sebagai bilangan aturan ini bukan hafalan terpisah — ia akibat langsung dari membagi seluruh suku dengan pangkat tertinggi penyebutnya. pangkat sama: bandingkan koefisien tertingginya pangkat atas lebih kecil: hasilnya nol pangkat atas lebih besar: menuju tak hingga mensubstitusikan tak hingga langsung dan menuliskan sebagai jawaban. bentuk itu tak tentu, bukan bilangan. limit tak hingga",
+      "snippet": "Saat [rumus] membesar tanpa batas, tidak semua suku sama pentingnya. Suku berpangkat tertinggi tumbuh jauh lebih cepat sehingga suku lain menjadi tidak berar..."
+    },
+    {
+      "cardId": "kal-limit-tak-hingga-c2",
+      "topicId": "kal-limit-tak-hingga",
+      "topicTitle": "Limit Tak Hingga",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Bentuk akar butuh sekawan",
+      "haystack": "bentuk akar butuh sekawan bentuk saat menghasilkan , yang tak tentu. keduanya membesar, tapi selisihnya bisa berapa saja. alatnya sama seperti pada limit biasa: kalikan dengan akar sekawan, atas dan bawah. contoh : kalikan dengan : sekarang bentuknya pecahan biasa. bagi dengan : untuk bentuk dengan koefisien yang sama pada keduanya, ada jalan pintas yang sering menghemat setengah halaman: hasilnya . syaratnya ketat — koefisien harus benar-benar sama. kalau berbeda, kembalilah ke cara sekawan, karena jalan pintas itu tidak berlaku dan memberi jawaban yang keliru tanpa tanda peringatan apa pun. adalah bentuk tak tentu kalikan dengan akar sekawan jalan pintas: bila koefisien sama menyimpulkan bernilai nol karena keduanya sama-sama menuju tak hingga. selisih dua besaran yang membesar tidak harus nol. limit tak hingga",
+      "snippet": "Bentuk [rumus] saat [rumus] menghasilkan [rumus] , yang tak tentu. Keduanya membesar, tapi selisihnya bisa berapa saja. Alatnya sama seperti pada limit biasa..."
+    },
+    {
+      "cardId": "kal-limit-tak-hingga-c3",
+      "topicId": "kal-limit-tak-hingga",
+      "topicTitle": "Limit Tak Hingga",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Membagi dengan pangkat tertinggi",
+      "haystack": "membagi dengan pangkat tertinggi kalau kamu lupa aturan pangkat, cara ini selalu bekerja dan tidak butuh hafalan sama sekali. 1. temukan pangkat tertinggi di seluruh pecahan, biasanya dari penyebutnya. 2. bagi setiap suku, di atas maupun di bawah, dengan pangkat itu. 3. ingat bahwa saat untuk sembarang tetapan dan positif. 4. coret semua suku yang menuju nol. 5. hitung sisanya. contoh pada : bagi semuanya dengan , menjadi suku dan menuju nol, tersisa . kunci langkah 2: setiap suku harus dibagi, bukan hanya sebagian. melewatkan satu suku mengubah nilainya. bagi setiap suku dengan pangkat tertinggi saat coret yang menuju nol, hitung sisanya membagi hanya suku berpangkat tinggi dan membiarkan suku tetapnya, sehingga pecahannya berubah menjadi pecahan yang berbeda. limit tak hingga",
+      "snippet": "Kalau kamu lupa aturan pangkat, cara ini selalu bekerja dan tidak butuh hafalan sama sekali. 1. Temukan pangkat tertinggi di seluruh pecahan, biasanya dari p..."
+    },
+    {
+      "cardId": "kal-limit-tak-hingga-c4",
+      "topicId": "kal-limit-tak-hingga",
+      "topicTitle": "Limit Tak Hingga",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Asimtot dari limit tak hingga",
+      "haystack": "asimtot dari limit tak hingga limit tak hingga punya arti gambar yang langsung terlihat: ia memberitahu asimtot datar sebuah grafik. kalau dengan berupa bilangan, maka garis adalah asimtot datar — grafiknya makin mendekat ke garis itu tanpa pernah menyentuhnya, atau setidaknya tidak lagi menjauh. untuk fungsi pecahan, asimtot datarnya langsung terbaca dari perbandingan pangkat: - pangkat atas bawah: asimtot di perbandingan koefisiennya - pangkat atas bawah: asimtot di - pangkat atas bawah: tidak ada asimtot datar asimtot tegak berbeda asalnya: ia muncul di nilai yang membuat penyebut nol sedangkan pembilang tidak nol. di situ nilai fungsinya melonjak tanpa batas. berarti asimtot datar pangkat sama: asimtot di perbandingan koefisien asimtot tegak: penyebut nol, pembilang tidak mengira grafik tidak boleh memotong asimtot datarnya. grafik boleh memotongnya di bagian tengah; yang dijanjikan hanya perilakunya di ujung jauh. limit tak hingga",
+      "snippet": "Limit tak hingga punya arti gambar yang langsung terlihat: ia memberitahu asimtot datar sebuah grafik. Kalau [rumus] dengan [rumus] berupa bilangan, maka gar..."
+    },
+    {
+      "cardId": "kal-limit-tak-hingga-c5",
+      "topicId": "kal-limit-tak-hingga",
+      "topicTitle": "Limit Tak Hingga",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada limit tak hingga",
+      "haystack": "kesalahan khas pada limit tak hingga menuliskan sebagai jawaban. itu bentuk tak tentu, bukan bilangan. ia hanya memberitahu bahwa pekerjaanmu belum selesai. mengira . selisih dua besaran yang sama-sama membesar bisa bernilai apa saja, termasuk bilangan berhingga seperti pada soal akar sekawan. membagi sebagian suku saja. setiap suku harus dibagi dengan pangkat tertinggi, termasuk suku tetapnya. tertukar asimtot datar dan tegak. yang datar berasal dari perilaku di ujung jauh; yang tegak dari penyebut yang nol. memakai jalan pintas akar saat koefisien berbeda. rumus hanya berlaku kalau koefisien pada kedua akar sama. dan adalah bentuk tak tentu bagi setiap suku, tanpa kecuali asimtot datar dari ujung, tegak dari penyebut nol memakai jalan pintas pada bentuk yang koefisien -nya berbeda, padahal syarat rumus itu koefisiennya harus sama. limit tak hingga",
+      "snippet": "Menuliskan [rumus] sebagai jawaban. Itu bentuk tak tentu, bukan bilangan. Ia hanya memberitahu bahwa pekerjaanmu belum selesai. Mengira [rumus] . Selisih dua..."
+    },
+    {
+      "cardId": "kal-limit-trigonometri-c1",
+      "topicId": "kal-limit-trigonometri",
+      "topicTitle": "Limit Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kenapa sin x per x menuju satu",
+      "haystack": "kenapa sin x per x menuju satu limit istimewa adalah dasar seluruh bab ini. dan alasannya bisa dilihat, bukan cuma dihafal. untuk sudut yang sangat kecil, busur lingkaran dan tali busurnya hampir tidak bisa dibedakan. pada lingkaran satuan, panjang busur untuk sudut radian adalah , sedangkan tinggi tegaknya adalah . saat mengecil, keduanya makin mendekati sama panjang — jadi perbandingannya menuju 1. periksa dengan angka: untuk radian, . perbandingannya , sudah sangat dekat ke 1. syarat pentingnya: sudutnya harus dalam radian . dalam derajat limitnya bukan 1, karena satuannya berbeda skala. hanya berlaku untuk sudut dalam radian memakai limit istimewa untuk yang tidak menuju nol. kalau , substitusi langsung sudah cukup dan limit istimewa tidak berlaku. limit fungsi trigonometri",
+      "snippet": "Limit istimewa [rumus] adalah dasar seluruh bab ini. Dan alasannya bisa dilihat, bukan cuma dihafal. Untuk sudut yang sangat kecil, busur lingkaran dan tali ..."
+    },
+    {
+      "cardId": "kal-limit-trigonometri-c2",
+      "topicId": "kal-limit-trigonometri",
+      "topicTitle": "Limit Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Pola yang diturunkan dari limit istimewa",
+      "haystack": "pola yang diturunkan dari limit istimewa dari satu limit istimewa, seluruh pola berikut bisa diturunkan tanpa hafalan tambahan. polanya seragam: yang tersisa hanyalah perbandingan koefisien di dalam sinus atau tangen. fungsi trigonometrinya sendiri lenyap. satu pola yang berbeda dan pantas dihafal terpisah: bentuk kosinus tidak mengikuti pola yang sama, dan alasannya penting. saat , nilai menuju nol sedangkan menuju satu. karena itu yang ditulis adalah , supaya pembilangnya ikut menuju nol dan bentuknya benar-benar tak tentu. penyebutnya pun berpangkat dua, bukan satu, karena mengecil jauh lebih cepat daripada . mencampuradukkan kedua pola ini adalah kesalahan tersering di bab ini. menerapkan pola pada bentuk kosinus. kosinus punya perilaku berbeda karena nilainya di nol adalah 1, bukan 0. limit fungsi trigonometri",
+      "snippet": "Dari satu limit istimewa, seluruh pola berikut bisa diturunkan tanpa hafalan tambahan. [rumus] [rumus] Polanya seragam: yang tersisa hanyalah perbandingan ko..."
+    },
+    {
+      "cardId": "kal-limit-trigonometri-c3",
+      "topicId": "kal-limit-trigonometri",
+      "topicTitle": "Limit Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Menyesuaikan bentuk agar cocok",
+      "haystack": "menyesuaikan bentuk agar cocok limit istimewa hanya berlaku kalau bentuknya persis cocok. sebagian besar pekerjaan di bab ini adalah menyesuaikan bentuk, bukan menghitung. 1. substitusi dulu. kalau hasilnya bukan , kamu sudah selesai. 2. kalau , cari bentuk sinus atau tangen yang bisa dipasangkan. 3. kalikan dan bagi dengan bilangan yang diperlukan agar penyebutnya sama dengan isi fungsi trigonometrinya. 4. pisahkan menjadi hasil kali beberapa faktor, masing-masing berbentuk limit istimewa. 5. ganti tiap faktor dengan nilainya, lalu kalikan. langkah 3 adalah intinya. bentuk tidak langsung cocok; ia harus ditulis sebagai supaya isi sinus dan penyebutnya sama. selalu periksa dulu apakah soalnya benar-benar bentuk tak tentu — beberapa soal hanya butuh substitusi biasa. substitusi dulu, periksa apakah samakan penyebut dengan isi fungsi trigonometrinya pisahkan jadi hasil kali beberapa limit istimewa langsung memakai limit istimewa tanpa memeriksa apakah bentuknya tak tentu. untuk yang tidak menuju nol, substitusi biasa sudah menjawab. limit fungsi trigonometri",
+      "snippet": "Limit istimewa hanya berlaku kalau bentuknya persis cocok. Sebagian besar pekerjaan di bab ini adalah menyesuaikan bentuk, bukan menghitung. 1. Substitusi du..."
+    },
+    {
+      "cardId": "kal-limit-trigonometri-c4",
+      "topicId": "kal-limit-trigonometri",
+      "topicTitle": "Limit Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Bentuk yang perlu identitas dulu",
+      "haystack": "bentuk yang perlu identitas dulu beberapa soal tidak langsung berbentuk limit istimewa, dan butuh identitas trigonometri untuk membukanya. yang paling sering dipakai: contoh . pakai identitas pertama: tanpa identitas itu, bentuknya buntu di . aturan praktisnya begini. kalau muncul bentuk , hampir selalu identitas sudut rangkap yang membukanya menjadi bentuk sinus kuadrat. kalau muncul hasil kali sinus dan kosinus dengan sudut yang sama, biasanya itu yang sedang menyamar. dan kalau muncul atau sendirian, identitas pokok biasanya menyederhanakannya. tiga pola itu menutup hampir semua soal yang tidak langsung berbentuk limit istimewa. bentuk hampir selalu dibuka identitas sudut rangkap memaksakan pola pada bentuk tanpa mengubahnya dulu, sehingga hasilnya keliru. limit fungsi trigonometri",
+      "snippet": "Beberapa soal tidak langsung berbentuk limit istimewa, dan butuh identitas trigonometri untuk membukanya. Yang paling sering dipakai: [rumus] [rumus] [rumus]..."
+    },
+    {
+      "cardId": "kal-limit-trigonometri-c5",
+      "topicId": "kal-limit-trigonometri",
+      "topicTitle": "Limit Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada limit trigonometri",
+      "haystack": "kesalahan khas pada limit trigonometri memakai limit istimewa saat tidak menuju nol. syaratnya . untuk nilai lain, substitusi biasa yang berlaku. lupa menyamakan koefisien. bentuk bukan 1; ia harus diubah menjadi lebih dulu. menerapkan pola sinus pada kosinus. bentuk bernilai , bukan mengikuti pola . memakai derajat. limit istimewa hanya berlaku dalam radian. lupa memeriksa bentuk tak tentu. beberapa soal terlihat rumit padahal penyebutnya tidak nol, sehingga cukup disubstitusikan dan selesai dalam satu baris. kebiasaan yang menyelamatkan: sebelum memakai pola apa pun, tuliskan dulu ke mana menuju dan berapa hasil substitusi langsungnya. dua detik itu memisahkan soal yang butuh limit istimewa dari soal yang sebenarnya sudah selesai. limit istimewa butuh samakan koefisien lebih dulu bentuk kosinus punya pola sendiri sudutnya harus radian menjawab dengan 1, padahal jawabannya 5 — koefisien di dalam sinus belum disamakan dengan penyebutnya. limit fungsi trigonometri",
+      "snippet": "Memakai limit istimewa saat [rumus] tidak menuju nol. Syaratnya [rumus] . Untuk nilai lain, substitusi biasa yang berlaku. Lupa menyamakan koefisien. Bentuk ..."
+    },
+    {
       "cardId": "pel-peluang-c1",
       "topicId": "pel-peluang",
       "topicTitle": "Peluang",

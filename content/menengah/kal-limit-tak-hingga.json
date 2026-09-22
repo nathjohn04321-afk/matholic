@@ -1,0 +1,263 @@
+{
+  "id": "kal-limit-tak-hingga",
+  "track": "menengah",
+  "title": "Limit Tak Hingga",
+  "order": 17,
+  "prerequisites": [
+    "kal-limit-aljabar"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Yang menentukan hasil adalah suku berpangkat tertinggi, dan kenapa bentuk akar butuh sekawan.",
+  "tags": [
+    "kalkulus",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "kal-limit-tak-hingga-c1",
+      "type": "konsep",
+      "title": "Pangkat tertinggi yang menentukan",
+      "body": "Saat $x$ membesar tanpa batas, tidak semua suku sama pentingnya. Suku berpangkat tertinggi tumbuh jauh lebih cepat sehingga suku lain menjadi tidak berarti.\n\nBandingkan $x^2$ dan $3x$ saat $x = 1000$: yang pertama sejuta, yang kedua tiga ribu. Suku $3x$ praktis tidak berpengaruh pada perbandingannya.\n\nKarena itu untuk $\\lim_{x\\to\\infty} \\frac{f(x)}{g(x)}$ dengan keduanya polinomial, cukup bandingkan pangkat tertingginya:\n- Pangkat atas **sama** dengan bawah: hasilnya perbandingan koefisien pangkat tertingginya\n- Pangkat atas **lebih kecil**: hasilnya nol\n- Pangkat atas **lebih besar**: menuju tak hingga, limitnya tidak ada sebagai bilangan\n\nAturan ini bukan hafalan terpisah — ia akibat langsung dari membagi seluruh suku dengan pangkat tertinggi penyebutnya.",
+      "questions": [
+        {
+          "id": "kal-limit-tak-hingga-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{2x^2+3x-1}{x^2-5}$ adalah ...",
+          "options": [
+            "$2$",
+            "$0$",
+            "$\\infty$",
+            "$-\\frac{1}{5}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pangkat tertinggi di atas dan di bawah sama, yaitu $x^2$.\n\nJadi hasilnya perbandingan koefisiennya:\n$$\\frac{2}{1} = 2$$\n\nCara panjangnya: bagi setiap suku dengan $x^2$.\n$$\\frac{2 + \\frac{3}{x} - \\frac{1}{x^2}}{1 - \\frac{5}{x^2}}$$\nSaat $x \\to \\infty$, semua pecahan menuju nol, tersisa $\\frac{2}{1} = 2$.",
+          "hint": "Bandingkan koefisien pangkat tertingginya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-tak-hingga-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{3x+2}{x^2+1}$ adalah ...",
+          "options": [
+            "$0$",
+            "$3$",
+            "$\\infty$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pangkat tertinggi pembilang adalah 1, penyebut adalah 2. Penyebut tumbuh jauh lebih cepat.\n\nBagi semuanya dengan $x^2$:\n$$\\frac{\\frac{3}{x} + \\frac{2}{x^2}}{1 + \\frac{1}{x^2}}$$\n\nSaat $x \\to \\infty$, pembilangnya menuju nol sedangkan penyebutnya menuju 1:\n$$\\frac{0}{1} = 0$$\n\nMasuk akal: penyebut yang membesar jauh lebih cepat membuat pecahannya mengecil menuju nol.",
+          "hint": "Mana yang tumbuh lebih cepat, pembilang atau penyebutnya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pangkat sama: bandingkan koefisien tertingginya",
+        "Pangkat atas lebih kecil: hasilnya nol",
+        "Pangkat atas lebih besar: menuju tak hingga"
+      ],
+      "pitfall": "Mensubstitusikan tak hingga langsung dan menuliskan $\\frac{\\infty}{\\infty}$ sebagai jawaban. Bentuk itu tak tentu, bukan bilangan."
+    },
+    {
+      "id": "kal-limit-tak-hingga-c2",
+      "type": "teknik",
+      "title": "Bentuk akar butuh sekawan",
+      "body": "Bentuk $\\sqrt{\\ldots} - \\sqrt{\\ldots}$ saat $x \\to \\infty$ menghasilkan $\\infty - \\infty$, yang tak tentu. Keduanya membesar, tapi selisihnya bisa berapa saja.\n\nAlatnya sama seperti pada limit biasa: kalikan dengan akar sekawan, atas dan bawah.\n\nContoh $\\lim_{x\\to\\infty} \\left(\\sqrt{x^2+6x} - x\\right)$:\nKalikan dengan $\\frac{\\sqrt{x^2+6x}+x}{\\sqrt{x^2+6x}+x}$:\n$$\\frac{(x^2+6x) - x^2}{\\sqrt{x^2+6x}+x} = \\frac{6x}{\\sqrt{x^2+6x}+x}$$\n\nSekarang bentuknya pecahan biasa. Bagi dengan $x$:\n$$\\frac{6}{\\sqrt{1+\\frac{6}{x}}+1} \\to \\frac{6}{2} = 3$$\n\nUntuk bentuk $\\sqrt{ax^2+bx+c} - \\sqrt{ax^2+px+q}$ dengan koefisien $x^2$ yang sama pada keduanya, ada jalan pintas yang sering menghemat setengah halaman: hasilnya $\\frac{b-p}{2\\sqrt{a}}$. Syaratnya ketat — koefisien $x^2$ harus benar-benar sama. Kalau berbeda, kembalilah ke cara sekawan, karena jalan pintas itu tidak berlaku dan memberi jawaban yang keliru tanpa tanda peringatan apa pun.",
+      "questions": [
+        {
+          "id": "kal-limit-tak-hingga-q3",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Hitung $\\lim_{x\\to\\infty} \\left(\\sqrt{x^2+6x} - x\\right)$.",
+          "answer": "3",
+          "acceptedAnswers": [
+            "tiga",
+            "= 3"
+          ],
+          "solution": "Bentuknya $\\infty - \\infty$, jadi kalikan dengan sekawan:\n$$\\left(\\sqrt{x^2+6x}-x\\right) \\cdot \\frac{\\sqrt{x^2+6x}+x}{\\sqrt{x^2+6x}+x}$$\n\nPembilangnya menjadi selisih kuadrat:\n$$\\frac{(x^2+6x)-x^2}{\\sqrt{x^2+6x}+x} = \\frac{6x}{\\sqrt{x^2+6x}+x}$$\n\nBagi atas dan bawah dengan $x$:\n$$\\frac{6}{\\sqrt{1+\\frac{6}{x}}+1} \\to \\frac{6}{1+1} = 3$$\n\nPakai jalan pintas: $\\frac{b-p}{2\\sqrt{a}} = \\frac{6-0}{2} = 3$. Cocok.",
+          "hint": "Kalikan dengan akar sekawannya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-tak-hingga-q4",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+4x} - \\sqrt{x^2+2x}\\right)$ adalah ...",
+          "options": [
+            "$1$",
+            "$2$",
+            "$0$",
+            "$\\infty$"
+          ],
+          "answerIndex": 0,
+          "solution": "Koefisien $x^2$ pada keduanya sama, yaitu $a = 1$. Pakai jalan pintas:\n$$\\frac{b-p}{2\\sqrt{a}} = \\frac{4-2}{2\\sqrt{1}} = \\frac{2}{2} = 1$$\n\nCara panjangnya lewat sekawan memberi hasil sama:\n$$\\frac{(x^2+4x)-(x^2+2x)}{\\sqrt{x^2+4x}+\\sqrt{x^2+2x}} = \\frac{2x}{\\ldots} \\to \\frac{2}{2} = 1$$\n\nMenjawab nol adalah kesalahan umum — kedua akar memang sama-sama membesar, tapi selisihnya tetap menuju 1.",
+          "hint": "Koefisien $x^2$-nya sama — ada jalan pintas.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\infty - \\infty$ adalah bentuk tak tentu",
+        "Kalikan dengan akar sekawan",
+        "Jalan pintas: $\\frac{b-p}{2\\sqrt{a}}$ bila koefisien $x^2$ sama"
+      ],
+      "pitfall": "Menyimpulkan $\\sqrt{x^2+6x} - x$ bernilai nol karena keduanya sama-sama menuju tak hingga. Selisih dua besaran yang membesar tidak harus nol."
+    },
+    {
+      "id": "kal-limit-tak-hingga-c3",
+      "type": "prosedur",
+      "title": "Membagi dengan pangkat tertinggi",
+      "body": "Kalau kamu lupa aturan pangkat, cara ini selalu bekerja dan tidak butuh hafalan sama sekali.\n\n1. Temukan pangkat tertinggi di seluruh pecahan, biasanya dari penyebutnya.\n2. Bagi **setiap** suku, di atas maupun di bawah, dengan pangkat itu.\n3. Ingat bahwa $\\frac{c}{x^n} \\to 0$ saat $x \\to \\infty$ untuk sembarang tetapan $c$ dan $n$ positif.\n4. Coret semua suku yang menuju nol.\n5. Hitung sisanya.\n\nContoh pada $\\frac{2x^2+3x}{x^2-5}$: bagi semuanya dengan $x^2$, menjadi\n$$\\frac{2+\\frac{3}{x}}{1-\\frac{5}{x^2}}$$\nSuku $\\frac{3}{x}$ dan $\\frac{5}{x^2}$ menuju nol, tersisa $\\frac{2}{1} = 2$.\n\nKunci langkah 2: **setiap** suku harus dibagi, bukan hanya sebagian. Melewatkan satu suku mengubah nilainya.",
+      "questions": [
+        {
+          "id": "kal-limit-tak-hingga-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Saat $x \\to \\infty$, nilai $\\frac{7}{x^3}$ menuju ...",
+          "options": [
+            "$0$",
+            "$7$",
+            "$\\infty$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Penyebutnya membesar tanpa batas sedangkan pembilangnya tetap 7.\n\nMembagi bilangan tetap dengan bilangan yang makin besar menghasilkan pecahan yang makin kecil.\n\n$$\\frac{7}{x^3} \\to 0$$\n\nPeriksa dengan angka: $x = 10$ memberi $0{,}007$; $x = 100$ memberi $0{,}000007$. Jelas menuju nol.",
+          "hint": "Apa yang terjadi kalau penyebutnya terus membesar?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-tak-hingga-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{x^2+1}{2x+3}$ adalah ...",
+          "options": [
+            "tidak ada, menuju tak hingga",
+            "$\\frac{1}{2}$",
+            "$0$",
+            "$2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pangkat tertinggi pembilang adalah 2, penyebut hanya 1. Pembilang tumbuh jauh lebih cepat.\n\nBagi semuanya dengan $x$:\n$$\\frac{x + \\frac{1}{x}}{2 + \\frac{3}{x}}$$\n\nSaat $x \\to \\infty$, penyebutnya menuju 2 sedangkan pembilangnya terus membesar.\n\nJadi nilainya membesar tanpa batas — limitnya tidak ada sebagai bilangan.",
+          "hint": "Pangkat mana yang lebih tinggi, atas atau bawah?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Bagi setiap suku dengan pangkat tertinggi",
+        "$\\frac{c}{x^n} \\to 0$ saat $x \\to \\infty$",
+        "Coret yang menuju nol, hitung sisanya"
+      ],
+      "pitfall": "Membagi hanya suku berpangkat tinggi dan membiarkan suku tetapnya, sehingga pecahannya berubah menjadi pecahan yang berbeda."
+    },
+    {
+      "id": "kal-limit-tak-hingga-c4",
+      "type": "konsep",
+      "title": "Asimtot dari limit tak hingga",
+      "body": "Limit tak hingga punya arti gambar yang langsung terlihat: ia memberitahu **asimtot datar** sebuah grafik.\n\nKalau $\\lim_{x\\to\\infty} f(x) = L$ dengan $L$ berupa bilangan, maka garis $y = L$ adalah asimtot datar — grafiknya makin mendekat ke garis itu tanpa pernah menyentuhnya, atau setidaknya tidak lagi menjauh.\n\nUntuk fungsi pecahan, asimtot datarnya langsung terbaca dari perbandingan pangkat:\n- Pangkat atas $=$ bawah: asimtot di perbandingan koefisiennya\n- Pangkat atas $<$ bawah: asimtot di $y = 0$\n- Pangkat atas $>$ bawah: tidak ada asimtot datar\n\nAsimtot tegak berbeda asalnya: ia muncul di nilai $x$ yang membuat penyebut nol sedangkan pembilang tidak nol. Di situ nilai fungsinya melonjak tanpa batas.",
+      "questions": [
+        {
+          "id": "kal-limit-tak-hingga-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Asimtot datar dari $f(x) = \\frac{3x+1}{x-2}$ adalah ...",
+          "options": [
+            "$y = 3$",
+            "$y = 0$",
+            "$x = 2$",
+            "tidak ada"
+          ],
+          "answerIndex": 0,
+          "solution": "Pangkat tertinggi pembilang dan penyebut sama, yaitu 1.\n\nAsimtot datarnya adalah perbandingan koefisien pangkat tertingginya:\n$$y = \\frac{3}{1} = 3$$\n\nPerhatikan $x = 2$ adalah asimtot **tegak**, bukan datar — di situ penyebutnya nol.",
+          "hint": "Bandingkan koefisien pangkat tertingginya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-tak-hingga-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Asimtot tegak dari $f(x) = \\frac{x+1}{x-4}$ adalah ...",
+          "options": [
+            "$x = 4$",
+            "$x = -1$",
+            "$y = 1$",
+            "$x = 0$"
+          ],
+          "answerIndex": 0,
+          "solution": "Asimtot tegak muncul di nilai $x$ yang membuat penyebut nol sedangkan pembilangnya tidak nol.\n\n$$x - 4 = 0 \\Rightarrow x = 4$$\n\nPeriksa pembilangnya di situ: $4+1 = 5 \\neq 0$. Jadi memang asimtot tegak.\n\nKalau pembilangnya juga nol di titik itu, yang terjadi bukan asimtot melainkan lubang pada grafik.",
+          "hint": "Nilai $x$ berapa yang membuat penyebutnya nol?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\lim_{x\\to\\infty} f(x) = L$ berarti asimtot datar $y = L$",
+        "Pangkat sama: asimtot di perbandingan koefisien",
+        "Asimtot tegak: penyebut nol, pembilang tidak"
+      ],
+      "pitfall": "Mengira grafik tidak boleh memotong asimtot datarnya. Grafik boleh memotongnya di bagian tengah; yang dijanjikan hanya perilakunya di ujung jauh."
+    },
+    {
+      "id": "kal-limit-tak-hingga-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada limit tak hingga",
+      "body": "**Menuliskan $\\frac{\\infty}{\\infty}$ sebagai jawaban.** Itu bentuk tak tentu, bukan bilangan. Ia hanya memberitahu bahwa pekerjaanmu belum selesai.\n\n**Mengira $\\infty - \\infty = 0$.** Selisih dua besaran yang sama-sama membesar bisa bernilai apa saja, termasuk bilangan berhingga seperti pada soal akar sekawan.\n\n**Membagi sebagian suku saja.** Setiap suku harus dibagi dengan pangkat tertinggi, termasuk suku tetapnya.\n\n**Tertukar asimtot datar dan tegak.** Yang datar berasal dari perilaku di ujung jauh; yang tegak dari penyebut yang nol.\n\n**Memakai jalan pintas akar saat koefisien $x^2$ berbeda.** Rumus $\\frac{b-p}{2\\sqrt{a}}$ hanya berlaku kalau koefisien $x^2$ pada kedua akar sama.",
+      "questions": [
+        {
+          "id": "kal-limit-tak-hingga-q9",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Karena $\\sqrt{x^2+6x}$ dan $x$ sama-sama menuju tak hingga, maka selisihnya menuju nol.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Dua besaran yang sama-sama membesar tidak menjamin selisihnya mengecil.\n\nPerhitungan lewat akar sekawan memberi:\n$$\\lim_{x\\to\\infty}\\left(\\sqrt{x^2+6x}-x\\right) = 3$$\n\nSelisihnya justru mendekati bilangan tetap 3, bukan nol.\n\nInilah kenapa $\\infty - \\infty$ disebut bentuk **tak tentu** — hasilnya bergantung pada bentuk soalnya, dan bisa nol, bisa berhingga, bisa juga tak hingga.",
+          "hint": "Hitung saja limitnya dengan akar sekawan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-limit-tak-hingga-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai $\\lim_{x\\to\\infty} \\frac{5}{x^2+1}$ adalah ...",
+          "options": [
+            "$0$",
+            "$5$",
+            "$\\infty$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pembilangnya tetap 5, sedangkan penyebutnya membesar tanpa batas.\n\nPangkat pembilang adalah 0, penyebut adalah 2 — pembilang jauh lebih kecil.\n\n$$\\lim_{x\\to\\infty} \\frac{5}{x^2+1} = 0$$\n\nPeriksa dengan angka: $x = 100$ memberi sekitar $0{,}0005$. Jelas menuju nol.",
+          "hint": "Pangkat pembilang lebih kecil dari penyebut.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\frac{\\infty}{\\infty}$ dan $\\infty-\\infty$ adalah bentuk tak tentu",
+        "Bagi setiap suku, tanpa kecuali",
+        "Asimtot datar dari ujung, tegak dari penyebut nol"
+      ],
+      "pitfall": "Memakai jalan pintas $\\frac{b-p}{2\\sqrt{a}}$ pada bentuk yang koefisien $x^2$-nya berbeda, padahal syarat rumus itu koefisiennya harus sama."
+    }
+  ]
+}
