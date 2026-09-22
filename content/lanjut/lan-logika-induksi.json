@@ -1,0 +1,265 @@
+{
+  "id": "lan-logika-induksi",
+  "track": "lanjut",
+  "title": "Logika Matematika dan Induksi",
+  "order": 7,
+  "prerequisites": [
+    "das-sigma"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Membaca pernyataan bersyarat dengan tepat, dan membuktikan tak hingga banyak kasus sekaligus.",
+  "tags": [
+    "logika",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-logika-induksi-c1",
+      "type": "konsep",
+      "title": "Implikasi dan tiga kerabatnya",
+      "body": "Pernyataan berbentuk \"jika $p$ maka $q$\" disebut implikasi, ditulis $p \\Rightarrow q$. Ia bernilai salah **hanya** dalam satu keadaan: ketika $p$ benar tapi $q$ salah. Di semua keadaan lain ia benar.\n\nIni sering terasa aneh. \"Jika bulan terbuat dari keju, maka $2+2=4$\" bernilai benar, karena tidak ada kasus di mana bagian depannya benar sementara belakangnya salah. Implikasi tidak menuntut hubungan sebab-akibat — ia hanya melarang satu pola.\n\nSetiap implikasi punya tiga kerabat:\n\n- **Konvers**: $q \\Rightarrow p$\n- **Invers**: $\\sim p \\Rightarrow \\sim q$\n- **Kontraposisi**: $\\sim q \\Rightarrow \\sim p$\n\nHanya **kontraposisi** yang selalu senilai dengan implikasi aslinya. Konvers dan invers tidak. \"Jika hujan maka jalan basah\" itu benar, tapi konversnya — \"jika jalan basah maka hujan\" — jelas tidak, karena jalan bisa basah oleh sebab lain.\n\nFakta bahwa kontraposisi selalu senilai adalah alat pembuktian yang nyata: kalau $p \\Rightarrow q$ sulit dibuktikan langsung, buktikan $\\sim q \\Rightarrow \\sim p$ sebagai gantinya.",
+      "questions": [
+        {
+          "id": "lan-logika-induksi-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Pernyataan yang selalu senilai dengan \"jika $p$ maka $q$\" adalah ...",
+          "options": [
+            "$\\sim q \\Rightarrow \\sim p$",
+            "$q \\Rightarrow p$",
+            "$\\sim p \\Rightarrow \\sim q$",
+            "$p \\Rightarrow \\sim q$"
+          ],
+          "answerIndex": 0,
+          "solution": "Yang selalu senilai dengan implikasi adalah **kontraposisinya**, yaitu $\\sim q \\Rightarrow \\sim p$.\n\nPilihan $q \\Rightarrow p$ adalah konvers, dan $\\sim p \\Rightarrow \\sim q$ adalah invers. Keduanya tidak selalu senilai.\n\nAlasan kontraposisi selalu senilai: keduanya melarang pola yang sama persis, yaitu $p$ benar bersamaan dengan $q$ salah.",
+          "hint": "Yang senilai membalik urutan **sekaligus** mengingkari keduanya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-logika-induksi-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Kontraposisi dari \"Jika Ani rajin belajar, maka Ani lulus ujian\" adalah ...",
+          "options": [
+            "Jika Ani tidak lulus ujian, maka Ani tidak rajin belajar",
+            "Jika Ani lulus ujian, maka Ani rajin belajar",
+            "Jika Ani tidak rajin belajar, maka Ani tidak lulus ujian",
+            "Ani rajin belajar dan Ani tidak lulus ujian"
+          ],
+          "answerIndex": 0,
+          "solution": "Kontraposisi dibentuk dengan dua langkah: **tukar posisinya**, lalu **ingkari keduanya**.\n\nDari $p$ = \"Ani rajin belajar\" dan $q$ = \"Ani lulus ujian\", kontraposisinya $\\sim q \\Rightarrow \\sim p$:\n\n\"Jika Ani tidak lulus ujian, maka Ani tidak rajin belajar.\"\n\nPilihan kedua hanya menukar posisi tanpa mengingkari — itu konvers. Pilihan ketiga hanya mengingkari tanpa menukar — itu invers. Keduanya tidak senilai dengan pernyataan aslinya.",
+          "hint": "Tukar posisi, lalu ingkari keduanya — kedua langkah harus dilakukan.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$p \\Rightarrow q$ salah hanya saat $p$ benar dan $q$ salah",
+        "Hanya kontraposisi yang senilai dengan implikasi aslinya",
+        "Konvers dan invers bukan pengganti yang sah"
+      ],
+      "pitfall": "Menganggap konvers pasti benar kalau implikasinya benar. Contoh tandingannya mudah: \"jika bilangan itu 4 maka ia genap\" benar, tapi konversnya menuntut setiap bilangan genap sama dengan 4."
+    },
+    {
+      "id": "lan-logika-induksi-c2",
+      "type": "rumus",
+      "title": "Ingkaran dan penarikan kesimpulan",
+      "body": "Mengingkari pernyataan majemuk mengikuti aturan tetap yang dikenal sebagai hukum De Morgan:\n\n$$\\sim(p \\wedge q) \\equiv \\sim p \\vee \\sim q$$\n$$\\sim(p \\vee q) \\equiv \\sim p \\wedge \\sim q$$\n\nPerhatikan bahwa \"dan\" berubah menjadi \"atau\", dan sebaliknya. Ingkaran dari \"hari ini panas dan cerah\" bukan \"tidak panas dan tidak cerah\", melainkan \"tidak panas **atau** tidak cerah\" — cukup satu yang meleset untuk membatalkan gabungannya.\n\nUntuk implikasi:\n$$\\sim(p \\Rightarrow q) \\equiv p \\wedge \\sim q$$\n\nIngkaran implikasi bukan implikasi lagi, melainkan pernyataan \"dan\" — karena satu-satunya cara membantah implikasi adalah menunjukkan kasus di mana $p$ terjadi tapi $q$ tidak.\n\nTiga pola penarikan kesimpulan yang sah:\n\n- **Modus ponens**: dari $p \\Rightarrow q$ dan $p$, simpulkan $q$\n- **Modus tollens**: dari $p \\Rightarrow q$ dan $\\sim q$, simpulkan $\\sim p$\n- **Silogisme**: dari $p \\Rightarrow q$ dan $q \\Rightarrow r$, simpulkan $p \\Rightarrow r$\n\nYang **tidak** sah: dari $p \\Rightarrow q$ dan $q$, menyimpulkan $p$.",
+      "questions": [
+        {
+          "id": "lan-logika-induksi-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Ingkaran dari \"Hari ini panas dan cerah\" adalah ...",
+          "options": [
+            "Hari ini tidak panas atau tidak cerah",
+            "Hari ini tidak panas dan tidak cerah",
+            "Hari ini panas atau cerah",
+            "Hari ini tidak panas"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai hukum De Morgan: $\\sim(p \\wedge q) \\equiv \\sim p \\vee \\sim q$.\n\nKata \"dan\" berubah menjadi \"atau\", dan kedua bagiannya diingkari:\n\n\"Hari ini tidak panas **atau** tidak cerah.\"\n\nAlasannya masuk akal: pernyataan \"panas dan cerah\" menuntut **keduanya** terjadi. Untuk membantahnya, cukup satu saja yang tidak terpenuhi — tidak perlu keduanya gagal.\n\nPilihan \"tidak panas dan tidak cerah\" terlalu kuat: ia menuntut keduanya gagal, padahal satu saja sudah cukup.",
+          "hint": "Untuk membantah \"dan\", berapa banyak bagian yang perlu gagal?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-logika-induksi-q4",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui \"Jika hujan maka jalan basah\" dan \"jalan tidak basah\". Kesimpulan yang sah adalah ...",
+          "options": [
+            "Tidak hujan",
+            "Hujan",
+            "Jalan kering karena tidak hujan",
+            "Tidak dapat disimpulkan"
+          ],
+          "answerIndex": 0,
+          "solution": "Ini pola modus tollens: dari $p \\Rightarrow q$ dan $\\sim q$, kesimpulannya $\\sim p$.\n\n$p$ = hujan, $q$ = jalan basah. Karena jalan tidak basah, maka tidak hujan.\n\nAlasannya: seandainya hujan, implikasinya memaksa jalan basah. Kenyataannya jalan tidak basah, jadi pengandaian itu mustahil.\n\nPerhatikan bahwa arah sebaliknya tidak sah. Dari \"jalan basah\" kamu **tidak** boleh menyimpulkan \"hujan\", karena jalan bisa basah oleh sebab lain.",
+          "hint": "Ingkaran bagian belakang membatalkan bagian depannya.",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "De Morgan menukar \"dan\" dengan \"atau\"",
+        "$\\sim(p \\Rightarrow q) \\equiv p \\wedge \\sim q$",
+        "Dari $p \\Rightarrow q$ dan $q$, tidak boleh disimpulkan $p$"
+      ],
+      "pitfall": "Mengingkari \"semua siswa hadir\" menjadi \"semua siswa tidak hadir\". Ingkaran yang benar adalah \"ada siswa yang tidak hadir\" — satu contoh sudah cukup membantah pernyataan yang berlaku untuk semua."
+    },
+    {
+      "id": "lan-logika-induksi-c3",
+      "type": "konsep",
+      "title": "Induksi: efek domino",
+      "body": "Bagaimana membuktikan sesuatu berlaku untuk **semua** bilangan asli, padahal jumlahnya tak hingga? Memeriksa satu per satu jelas mustahil.\n\nInduksi matematika menyelesaikannya dengan dua langkah saja:\n\n**1. Langkah dasar.** Buktikan pernyataannya benar untuk kasus pertama, biasanya $n = 1$.\n\n**2. Langkah induksi.** Buktikan bahwa *jika* benar untuk $n = k$, *maka* pasti benar untuk $n = k+1$.\n\nBayangkan barisan domino tak hingga panjang. Langkah pertama menjatuhkan domino pertama. Langkah kedua memastikan setiap domino yang jatuh pasti menjatuhkan tetangganya. Kedua langkah itu bersama-sama menjamin semuanya roboh.\n\nKedua langkah wajib ada, dan tidak ada yang bisa menggantikan yang lain. Tanpa langkah dasar, kamu punya rantai yang tidak pernah dimulai — pernyataan $n = n+1$ lolos langkah induksi tapi tidak pernah benar. Tanpa langkah induksi, kamu hanya memeriksa beberapa kasus, dan berapa pun banyaknya itu bukan bukti.\n\nPada langkah kedua, asumsi \"benar untuk $n=k$\" disebut hipotesis induksi. Ia bukan hal yang kamu buktikan, melainkan bahan yang kamu pakai.",
+      "questions": [
+        {
+          "id": "lan-logika-induksi-q5",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Dua langkah wajib dalam pembuktian dengan induksi matematika adalah ...",
+          "options": [
+            "membuktikan kasus awal, lalu membuktikan $n=k \\Rightarrow n=k+1$",
+            "membuktikan kasus awal, lalu memeriksa beberapa kasus lain",
+            "membuktikan $n=k$ benar, lalu membuktikan $n=k+1$ benar",
+            "membuktikan kasus awal, lalu kasus terakhir"
+          ],
+          "answerIndex": 0,
+          "solution": "Induksi selalu terdiri dari dua langkah:\n\n**Langkah dasar:** tunjukkan pernyataannya benar untuk kasus awal, biasanya $n=1$.\n\n**Langkah induksi:** tunjukkan bahwa kebenaran pada $n=k$ **memaksa** kebenaran pada $n=k+1$.\n\nPilihan ketiga keliru karena kamu tidak pernah membuktikan $n=k$ benar — kamu hanya mengandaikannya, lalu menunjukkan akibatnya. Bilangan asli juga tidak punya kasus terakhir, sehingga pilihan keempat mustahil dikerjakan.",
+          "hint": "Langkah kedua membuktikan hubungan, bukan kebenaran satu kasus.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-logika-induksi-q6",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Dalam membuktikan $1+2+3+\\cdots+n = \\frac{n(n+1)}{2}$ dengan induksi, berapa nilai ruas kanan saat langkah dasar $n=1$? (bilangan bulat)",
+          "answer": "1",
+          "acceptedAnswers": [
+            "1"
+          ],
+          "solution": "Substitusikan $n = 1$ ke ruas kanan:\n\n$$\\frac{1(1+1)}{2} = \\frac{2}{2} = 1$$\n\nRuas kirinya juga bernilai $1$, karena jumlahnya hanya terdiri dari satu suku saja.\n\nKedua ruas cocok, sehingga langkah dasar terpenuhi. Sesudah ini barulah langkah induksi dikerjakan.",
+          "hint": "Substitusikan $n=1$ ke rumusnya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Dua langkah: dasar dan induksi — keduanya wajib",
+        "Tanpa langkah dasar, rantainya tidak pernah dimulai",
+        "Hipotesis induksi adalah bahan, bukan yang dibuktikan"
+      ],
+      "pitfall": "Menganggap langkah induksi sudah membuktikan pernyataannya untuk $n=k$. Ia hanya membuktikan hubungan antara dua kasus berurutan — kebenaran nyatanya baru masuk lewat langkah dasar."
+    },
+    {
+      "id": "lan-logika-induksi-c4",
+      "type": "prosedur",
+      "title": "Menjalankan langkah induksi",
+      "body": "Bagian tersulit induksi adalah langkah kedua. Polanya selalu sama, dan berikut urutannya untuk membuktikan $1+2+\\cdots+n = \\frac{n(n+1)}{2}$.\n\n**Tulis hipotesisnya.** Andaikan benar untuk $n=k$:\n$$1+2+\\cdots+k = \\frac{k(k+1)}{2}$$\n\n**Tulis targetnya.** Yang ingin dicapai untuk $n=k+1$:\n$$1+2+\\cdots+k+(k+1) = \\frac{(k+1)(k+2)}{2}$$\n\n**Mulai dari ruas kiri target, lalu sisipkan hipotesisnya.** Bagian $1+2+\\cdots+k$ bisa langsung diganti:\n$$\\frac{k(k+1)}{2} + (k+1)$$\n\n**Rapikan sampai berbentuk target:**\n$$= \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$$\n\nSelesai. Kunci seluruh proses ada pada langkah ketiga: kamu harus benar-benar **memakai** hipotesis induksi. Kalau sampai akhir hipotesis itu tidak pernah kamu sentuh, hampir pasti buktinya tidak sah.",
+      "questions": [
+        {
+          "id": "lan-logika-induksi-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Dalam membuktikan $1+2+\\cdots+n = \\frac{n(n+1)}{2}$, bentuk yang harus dicapai pada langkah $n = k+1$ adalah ...",
+          "options": [
+            "$\\frac{(k+1)(k+2)}{2}$",
+            "$\\frac{k(k+1)}{2} + 1$",
+            "$\\frac{(k+1)(k+1)}{2}$",
+            "$\\frac{k(k+2)}{2}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ganti setiap $n$ pada rumusnya dengan $k+1$:\n\n$$\\frac{n(n+1)}{2} \\longrightarrow \\frac{(k+1)\\big((k+1)+1\\big)}{2} = \\frac{(k+1)(k+2)}{2}$$\n\nMenuliskan target ini di awal sangat membantu, karena kamu jadi tahu persis ke mana arah penyederhanaanmu.\n\nKesalahan umum adalah hanya mengganti sebagian $n$ — misalnya menjadi $\\frac{(k+1)(k+1)}{2}$. Setiap $n$ harus diganti, termasuk yang ada di dalam kurung.",
+          "hint": "Ganti setiap $n$, termasuk yang di dalam kurung.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-logika-induksi-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jumlah $1+3+5+\\cdots+(2n-1)$ sama dengan ...",
+          "options": [
+            "$n^2$",
+            "$n(n+1)$",
+            "$\\frac{n(n+1)}{2}$",
+            "$2n^2 - n$"
+          ],
+          "answerIndex": 0,
+          "solution": "Uji dengan beberapa nilai kecil:\n\n$n=1$: $1 = 1$\n\n$n=2$: $1+3 = 4$\n\n$n=3$: $1+3+5 = 9$\n\n$n=4$: $1+3+5+7 = 16$\n\nPolanya jelas: $1, 4, 9, 16$ adalah bilangan kuadrat, jadi jumlahnya $n^2$.\n\nBukti induksinya singkat. Andaikan $1+3+\\cdots+(2k-1) = k^2$. Tambahkan suku berikutnya, yaitu $2(k+1)-1 = 2k+1$:\n$$k^2 + 2k + 1 = (k+1)^2$$\n\nPersis bentuk yang ditargetkan.",
+          "hint": "Hitung beberapa kasus kecil dan cari polanya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tulis hipotesis dan target lebih dulu, baru kerjakan",
+        "Sisipkan hipotesis ke ruas kiri target",
+        "Bukti yang tidak memakai hipotesis induksi hampir pasti cacat"
+      ],
+      "pitfall": "Mengerjakan kedua ruas secara terpisah sampai bertemu di tengah tanpa pernah menyebut hipotesis induksi. Cara itu membuktikan kesamaan aljabar biasa, bukan hubungan antara kasus ke-$k$ dan ke-$(k+1)$."
+    },
+    {
+      "id": "lan-logika-induksi-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan logika dan induksi",
+      "body": "**1. Menganggap konvers senilai dengan implikasi.** Dari \"jika $p$ maka $q$\" dan kenyataan $q$, kamu **tidak** boleh menyimpulkan $p$. Hanya kontraposisi yang aman.\n\n**2. Mengingkari \"semua\" menjadi \"semua tidak\".** Ingkaran dari \"semua siswa hadir\" adalah \"ada siswa yang tidak hadir\" — satu contoh sudah cukup. Begitu pula ingkaran \"ada\" adalah \"semua tidak\".\n\n**3. Melewatkan langkah dasar.** Pernyataan $n = n+1$ lolos langkah induksi dengan mulus, karena dari $k = k+1$ memang mengikuti $k+1 = k+2$. Yang menggagalkannya justru langkah dasar, yang tidak pernah terpenuhi.\n\n**4. Mengira langkah dasar selalu $n=1$.** Pernyataan $2^n > n^2$ salah untuk $n = 2, 3, 4$ tapi benar mulai $n = 5$. Untuk soal seperti ini langkah dasarnya $n = 5$, dan kesimpulannya hanya berlaku untuk $n \\geq 5$.\n\nPemeriksaan tercepat sebelum mulai membuktikan: hitung dua atau tiga kasus kecil. Kalau salah satunya meleset, rumusnya memang salah — dan kamu tidak perlu membuang waktu membuktikannya.",
+      "questions": [
+        {
+          "id": "lan-logika-induksi-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Ingkaran dari \"Semua siswa mengerjakan PR\" adalah ...",
+          "options": [
+            "Ada siswa yang tidak mengerjakan PR",
+            "Semua siswa tidak mengerjakan PR",
+            "Tidak ada siswa yang mengerjakan PR",
+            "Ada siswa yang mengerjakan PR"
+          ],
+          "answerIndex": 0,
+          "solution": "Pernyataan \"semua\" menuntut tidak ada satu pun pengecualian. Untuk membantahnya, kamu cukup menunjukkan **satu** pengecualian:\n\n\"Ada siswa yang tidak mengerjakan PR.\"\n\nPilihan \"semua siswa tidak mengerjakan PR\" jauh lebih kuat dari yang diperlukan. Kalau dari 30 siswa ada 29 yang mengerjakan dan 1 tidak, pernyataan asli sudah salah — tapi \"semua tidak mengerjakan\" juga salah. Dua pernyataan yang sama-sama salah tentu bukan pasangan ingkaran.",
+          "hint": "Berapa banyak pengecualian yang diperlukan untuk membantah \"semua\"?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-logika-induksi-q10",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Dalam pembuktian induksi, langkah dasar selalu harus dimulai dari $n = 1$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Langkah dasar dimulai dari bilangan terkecil yang menjadi klaim pernyataannya, dan itu tidak selalu $1$.\n\nContoh nyata: $2^n > n^2$. Periksa satu per satu:\n\n$n=2$: $4 > 4$ — salah\n\n$n=3$: $8 > 9$ — salah\n\n$n=4$: $16 > 16$ — salah\n\n$n=5$: $32 > 25$ — benar\n\nUntuk pernyataan ini langkah dasarnya $n = 5$, dan kesimpulan akhirnya hanya berlaku untuk $n \\geq 5$. Menyatakannya berlaku untuk semua $n$ justru keliru.",
+          "hint": "Coba $2^n > n^2$ untuk $n = 3$ dan $n = 4$.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Hanya kontraposisi yang senilai dengan implikasi",
+        "Ingkaran \"semua\" adalah \"ada yang tidak\"",
+        "Langkah dasar tidak selalu $n=1$"
+      ],
+      "pitfall": "Langsung menyusun bukti induksi tanpa menguji satu pun kasus kecil. Beberapa rumus yang tampak masuk akal ternyata salah sejak $n=2$, dan pengujian sepuluh detik menghemat satu halaman kerja sia-sia."
+    }
+  ]
+}

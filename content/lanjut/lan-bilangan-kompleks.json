@@ -1,0 +1,282 @@
+{
+  "id": "lan-bilangan-kompleks",
+  "track": "lanjut",
+  "title": "Bilangan Kompleks dan Teorema De Moivre",
+  "order": 6,
+  "prerequisites": [
+    "alj-polinomial",
+    "trg-perbandingan"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Bilangan yang melengkapi sistem, dan kenapa memutar di bidang sama dengan mengalikan.",
+  "tags": [
+    "aljabar",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "lan-bilangan-kompleks-c1",
+      "type": "konsep",
+      "title": "Kenapa $i$ harus ada",
+      "body": "Persamaan $x^2 + 1 = 0$ tidak punya penyelesaian real. Tidak ada bilangan real yang kuadratnya negatif, karena mengkuadratkan selalu menghasilkan nilai tak negatif.\n\nAlih-alih menerima kebuntuan itu, matematikawan mendefinisikan sebuah bilangan baru:\n$$i^2 = -1$$\n\nIni bukan trik. Pola yang sama sudah berulang sepanjang sejarah bilangan: $3 - 5$ menuntut bilangan negatif, $1 \\div 3$ menuntut pecahan, dan $\\sqrt{2}$ menuntut bilangan irasional. Setiap kali sebuah operasi keluar dari himpunan yang ada, himpunannya diperluas.\n\nBilangan kompleks berbentuk $z = a + bi$ dengan $a$ bagian real dan $b$ bagian imajiner. Hasilnya adalah sistem bilangan yang **tertutup**: setiap persamaan polinomial berderajat $n$ punya tepat $n$ akar di dalamnya, tanpa kecuali. Pernyataan ini disebut Teorema Dasar Aljabar, dan ia tidak berlaku untuk bilangan real.\n\nPangkat $i$ berputar dengan periode empat: $i^1 = i$, $i^2 = -1$, $i^3 = -i$, $i^4 = 1$, lalu mengulang. Untuk pangkat besar, cukup lihat sisa baginya oleh 4.",
+      "questions": [
+        {
+          "id": "lan-bilangan-kompleks-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(2+i) + (3-4i)$ adalah ...",
+          "options": [
+            "$5 - 3i$",
+            "$5 + 5i$",
+            "$5 - 5i$",
+            "$6 - 3i$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jumlahkan bagian real dengan bagian real, dan bagian imajiner dengan bagian imajiner:\n\n$$(2+3) + (1-4)i = 5 - 3i$$\n\nPenjumlahan bilangan kompleks bekerja persis seperti penjumlahan vektor di bidang: komponen demi komponen, tanpa interaksi antar bagian.",
+          "hint": "Jumlahkan bagian real dan imajiner secara terpisah.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $i^{2023}$ adalah ...",
+          "options": [
+            "$-i$",
+            "$i$",
+            "$-1$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pangkat $i$ berulang setiap empat langkah, jadi yang menentukan hanyalah sisa bagi pangkatnya oleh 4.\n\n$$2023 = 4 \\times 505 + 3$$\n\nSisanya $3$, jadi $i^{2023} = i^3 = -i$.\n\nCara cepat mencari sisa bagi 4: lihat dua digit terakhir saja. Dari $23$, sisanya $23 - 20 = 3$.",
+          "hint": "Bagi pangkatnya dengan 4 dan lihat sisanya.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$i^2 = -1$ memperluas sistem bilangan, seperti negatif dan pecahan dulu",
+        "Setiap polinomial derajat $n$ punya tepat $n$ akar kompleks",
+        "Pangkat $i$ berulang tiap empat langkah"
+      ],
+      "pitfall": "Menulis $\\sqrt{-4}\\cdot\\sqrt{-9} = \\sqrt{36} = 6$. Aturan $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$ hanya berlaku untuk bilangan tak negatif. Yang benar: $(2i)(3i) = 6i^2 = -6$."
+    },
+    {
+      "id": "lan-bilangan-kompleks-c2",
+      "type": "prosedur",
+      "title": "Kalikan, bagi, dan kuadratkan",
+      "body": "**Perkalian** dikerjakan seperti mengalikan dua bentuk aljabar biasa, dengan satu langkah tambahan: setiap $i^2$ yang muncul diganti dengan $-1$.\n\n$$(3+2i)(1-4i) = 3 - 12i + 2i - 8i^2 = 3 - 10i + 8 = 11 - 10i$$\n\n**Konjugat** dari $z = a+bi$ adalah $\\bar{z} = a - bi$ — tanda bagian imajinernya dibalik. Sifat pentingnya:\n$$z\\bar{z} = a^2 + b^2$$\n\nHasilnya selalu bilangan **real**. Inilah yang membuat pembagian bisa dikerjakan.\n\n**Pembagian** dilakukan dengan mengalikan pembilang dan penyebut dengan konjugat penyebutnya:\n$$\\frac{2+3i}{1-i} = \\frac{(2+3i)(1+i)}{(1-i)(1+i)} = \\frac{2+2i+3i-3}{2} = \\frac{-1+5i}{2}$$\n\nTeknik ini persis sejajar dengan merasionalkan penyebut berbentuk akar — tujuannya sama, yaitu membersihkan penyebut dari bentuk yang menyulitkan. Yang membuatnya bekerja adalah sifat tadi: hasil kali sebuah bilangan dengan konjugatnya tidak pernah menyisakan bagian imajiner, berapa pun nilainya. Setelah penyebutnya menjadi bilangan real, membaginya tinggal membagi kedua bagian pembilang satu per satu.",
+      "questions": [
+        {
+          "id": "lan-bilangan-kompleks-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Hasil dari $(3+2i)(1-4i)$ adalah ...",
+          "options": [
+            "$11 - 10i$",
+            "$3 - 10i$",
+            "$11 + 10i$",
+            "$-5 - 10i$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kalikan seperti bentuk aljabar biasa:\n\n$$(3+2i)(1-4i) = 3 - 12i + 2i - 8i^2$$\n\nGanti $i^2 = -1$, sehingga $-8i^2 = +8$:\n\n$$= 3 + 8 - 10i = 11 - 10i$$\n\nPilihan $3 - 10i$ muncul kalau suku $-8i^2$ dilupakan seluruhnya. Suku itu justru yang mengubah bagian realnya.",
+          "hint": "Jangan lupa suku $i^2$ berubah menjadi bilangan real.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk $\\frac{2+3i}{1-i}$ sama dengan ...",
+          "options": [
+            "$-\\frac{1}{2} + \\frac{5}{2}i$",
+            "$\\frac{1}{2} + \\frac{5}{2}i$",
+            "$-\\frac{1}{2} - \\frac{5}{2}i$",
+            "$\\frac{5}{2} - \\frac{1}{2}i$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kalikan pembilang dan penyebut dengan konjugat penyebut, yaitu $1+i$:\n\n$$\\frac{(2+3i)(1+i)}{(1-i)(1+i)}$$\n\nPenyebut: $(1-i)(1+i) = 1 - i^2 = 1 + 1 = 2$\n\nPembilang: $2 + 2i + 3i + 3i^2 = 2 + 5i - 3 = -1 + 5i$\n\n$$= \\frac{-1+5i}{2} = -\\frac{1}{2} + \\frac{5}{2}i$$\n\nPerhatikan bahwa penyebutnya menjadi bilangan real murni — itulah seluruh gunanya konjugat.",
+          "hint": "Kalikan dengan konjugat penyebutnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q5",
+          "difficulty": 2,
+          "format": "isian",
+          "prompt": "Nilai $|3+4i|$ adalah ... (bilangan bulat)",
+          "answer": "5",
+          "acceptedAnswers": [
+            "5"
+          ],
+          "solution": "Modulus adalah jarak titik $(3,4)$ dari titik asal pada bidang kompleks:\n\n$$|a+bi| = \\sqrt{a^2+b^2}$$\n$$|3+4i| = \\sqrt{9+16} = \\sqrt{25} = 5$$\n\nRumusnya persis teorema Pythagoras, dan memang itulah asalnya: bagian real dan bagian imajiner adalah dua sisi siku-siku, dan modulusnya sisi miring.",
+          "hint": "Ini teorema Pythagoras pada bidang kompleks.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Ganti $i^2$ dengan $-1$ setelah mengalikan",
+        "$z\\bar{z} = a^2+b^2$ selalu real",
+        "Membagi: kalikan atas dan bawah dengan konjugat penyebut"
+      ],
+      "pitfall": "Mengalikan pembilang dan penyebut dengan penyebut itu sendiri, bukan konjugatnya. $(1-i)(1-i) = -2i$ masih mengandung $i$, jadi penyebutnya tidak jadi bersih."
+    },
+    {
+      "id": "lan-bilangan-kompleks-c3",
+      "type": "konsep",
+      "title": "Bidang kompleks: bentuk kutub",
+      "body": "Bilangan kompleks $a+bi$ bisa digambar sebagai titik $(a,b)$ pada bidang. Dari gambaran itu muncul cara kedua menuliskannya, yang jauh lebih berguna untuk perpangkatan.\n\nSebuah titik bisa ditentukan oleh **jaraknya dari titik asal** dan **sudutnya terhadap sumbu real**:\n$$r = |z| = \\sqrt{a^2+b^2}, \\qquad \\tan\\theta = \\frac{b}{a}$$\n\nBentuk kutubnya:\n$$z = r(\\cos\\theta + i\\sin\\theta)$$\n\nDi sinilah bentuk kutub menunjukkan kekuatannya. Saat dua bilangan kompleks dikalikan, **modulusnya dikalikan dan sudutnya dijumlahkan**:\n$$z_1 z_2 = r_1 r_2\\big(\\cos(\\theta_1+\\theta_2) + i\\sin(\\theta_1+\\theta_2)\\big)$$\n\nArtinya mengalikan dengan bilangan kompleks sama dengan **memutar sekaligus mengubah skala**. Mengalikan dengan $i$ — yang modulusnya 1 dan sudutnya $90°$ — berarti memutar seperempat putaran tanpa mengubah ukuran. Hubungan antara perkalian dan perputaran inilah alasan bilangan kompleks begitu berguna di fisika dan teknik.\n\nSaat menentukan $\\theta$, selalu perhatikan kuadrannya. Rumus $\\tan\\theta = \\frac{b}{a}$ sendiri tidak membedakan kuadran I dari kuadran III.",
+      "questions": [
+        {
+          "id": "lan-bilangan-kompleks-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Bentuk kutub dari $z = 1 + i\\sqrt{3}$ adalah ...",
+          "options": [
+            "$2(\\cos 60° + i\\sin 60°)$",
+            "$2(\\cos 30° + i\\sin 30°)$",
+            "$4(\\cos 60° + i\\sin 60°)$",
+            "$\\sqrt{3}(\\cos 60° + i\\sin 60°)$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung modulusnya:\n$$r = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1+3} = \\sqrt{4} = 2$$\n\nHitung sudutnya:\n$$\\tan\\theta = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\Rightarrow \\theta = 60°$$\n\nTitik $(1, \\sqrt{3})$ berada di kuadran I karena kedua komponennya positif, jadi $60°$ memang sudut yang benar.\n\n$$z = 2(\\cos 60° + i\\sin 60°)$$\n\nPilihan dengan $r = 4$ muncul kalau kamu lupa menarik akarnya.",
+          "hint": "Hitung $r$ dan $\\theta$ terpisah, lalu periksa kuadrannya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q6b",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Mengalikan sebuah bilangan kompleks dengan $i$ pada bidang kompleks berarti ...",
+          "options": [
+            "memutarnya $90°$ berlawanan arah jarum jam",
+            "memutarnya $180°$",
+            "melipatduakan modulusnya",
+            "mencerminkannya terhadap sumbu real"
+          ],
+          "answerIndex": 0,
+          "solution": "Bilangan $i$ punya modulus $1$ dan sudut $90°$.\n\nAturan perkalian pada bentuk kutub mengatakan modulus dikalikan dan sudut dijumlahkan. Karena modulus $i$ adalah $1$, ukuran bilangannya tidak berubah sama sekali. Yang berubah hanya sudutnya, bertambah $90°$.\n\nUji dengan contoh: $i \\cdot 1 = i$, artinya titik $(1,0)$ pindah ke $(0,1)$ — tepat seperempat putaran berlawanan arah jarum jam. Sekali lagi: $i \\cdot i = -1$, dan titik $(0,1)$ pindah ke $(-1,0)$.\n\nInilah hubungan antara perkalian dan perputaran yang membuat bilangan kompleks dipakai luas di fisika dan teknik.",
+          "hint": "Berapa modulus dan sudut dari $i$ sendiri?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$z = r(\\cos\\theta + i\\sin\\theta)$",
+        "Mengalikan: modulus dikali, sudut dijumlah",
+        "Mengalikan dengan $i$ berarti memutar $90°$"
+      ],
+      "pitfall": "Menghitung $\\theta$ langsung dari $\\arctan\\frac{b}{a}$ tanpa melihat kuadran. Untuk $z = -1-i$ kalkulator memberi $45°$, padahal titiknya di kuadran III sehingga sudut yang benar $225°$."
+    },
+    {
+      "id": "lan-bilangan-kompleks-c4",
+      "type": "rumus",
+      "title": "Teorema De Moivre",
+      "body": "Kalau mengalikan berarti menjumlahkan sudut, maka memangkatkan berarti mengalikan sudut. Itulah isi teorema De Moivre:\n\n$$\\big[r(\\cos\\theta + i\\sin\\theta)\\big]^n = r^n\\big(\\cos n\\theta + i\\sin n\\theta\\big)$$\n\nBandingkan dua jalan untuk menghitung $(1+i)^8$. Dengan penjabaran langsung kamu perlu mengalikan delapan kali dan mengurus puluhan suku. Dengan De Moivre: modulusnya $\\sqrt{2}$, sudutnya $45°$, sehingga\n$$(1+i)^8 = (\\sqrt{2})^8(\\cos 360° + i\\sin 360°) = 16(1 + 0) = 16$$\n\nSatu baris, tanpa satu pun perkalian panjang.\n\nTeorema ini juga memberi **akar** bilangan kompleks. Akar ke-$n$ dari $z$ ada sebanyak $n$ buah, dengan modulus $\\sqrt[n]{r}$ dan sudut $\\frac{\\theta + k \\cdot 360°}{n}$ untuk $k = 0, 1, \\ldots, n-1$. Semua akar itu tersebar merata pada satu lingkaran — sudutnya berselisih tetap $\\frac{360°}{n}$.\n\nFakta terakhir itu punya akibat yang rapi: akar-akar ke-$n$ dari 1 membentuk segi-$n$ beraturan pada lingkaran satuan.",
+      "questions": [
+        {
+          "id": "lan-bilangan-kompleks-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $(\\cos 30° + i\\sin 30°)^6$ adalah ...",
+          "options": [
+            "$-1$",
+            "$1$",
+            "$i$",
+            "$-i$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai De Moivre dengan $r = 1$ dan $\\theta = 30°$:\n\n$$(\\cos 30° + i\\sin 30°)^6 = \\cos(6 \\times 30°) + i\\sin(6 \\times 30°) = \\cos 180° + i\\sin 180°$$\n\n$$= -1 + i(0) = -1$$\n\nSecara gambar: setiap perkalian memutar $30°$, dan enam kali berarti setengah putaran penuh — mendarat tepat di $-1$.",
+          "hint": "Kalikan sudutnya dengan pangkatnya.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai dari $(1+i)^8$ adalah ...",
+          "options": [
+            "$16$",
+            "$16i$",
+            "$-16$",
+            "$8$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ubah ke bentuk kutub lebih dulu:\n$$r = \\sqrt{1+1} = \\sqrt{2}, \\qquad \\theta = 45°$$\n\nPakai De Moivre:\n$$(1+i)^8 = (\\sqrt{2})^8\\big(\\cos(8 \\times 45°) + i\\sin(8 \\times 45°)\\big)$$\n\n$$(\\sqrt{2})^8 = 2^4 = 16, \\qquad 8 \\times 45° = 360°$$\n\n$$= 16(\\cos 360° + i\\sin 360°) = 16(1 + 0) = 16$$\n\nCek lewat jalan lain: $(1+i)^2 = 2i$, jadi $(1+i)^8 = (2i)^4 = 16i^4 = 16$. Cocok.",
+          "hint": "Ubah ke bentuk kutub, lalu pakai De Moivre.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$[r(\\cos\\theta+i\\sin\\theta)]^n = r^n(\\cos n\\theta + i\\sin n\\theta)$",
+        "Pangkat besar jadi mudah lewat bentuk kutub",
+        "Akar ke-$n$ ada $n$ buah, tersebar merata pada lingkaran"
+      ],
+      "pitfall": "Memangkatkan modulus tapi lupa mengalikan sudutnya, atau sebaliknya. Keduanya harus berubah: $r$ dipangkatkan $n$, sementara $\\theta$ dikalikan $n$ — bukan sama-sama dipangkatkan."
+    },
+    {
+      "id": "lan-bilangan-kompleks-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan bilangan kompleks",
+      "body": "**1. Memakai $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$ pada bilangan negatif.** Aturan itu hanya berlaku untuk bilangan tak negatif. Ubah dulu ke bentuk $i$: $\\sqrt{-4}\\cdot\\sqrt{-9} = (2i)(3i) = -6$, bukan $6$.\n\n**2. Salah kuadran saat mencari $\\theta$.** Kalkulator memberi $\\arctan$ hanya dalam jangkauan $-90°$ sampai $90°$. Untuk titik di kuadran II atau III kamu harus menambahkan $180°$ sendiri. Gambar titiknya dulu sebelum menghitung.\n\n**3. Membagi tanpa konjugat.** Bentuk $\\frac{a+bi}{c+di}$ belum selesai selama penyebutnya masih memuat $i$. Kalikan atas dan bawah dengan $c-di$.\n\n**4. Mencampur perlakuan $r$ dan $\\theta$ pada De Moivre.** Modulus dipangkatkan, sudut dikalikan. Menukar keduanya memberi jawaban yang ukurannya jauh meleset.\n\nPemeriksaan yang paling cepat: gambar hasilnya pada bidang kompleks. Modulus yang terlalu besar atau kuadran yang salah langsung terlihat.",
+      "questions": [
+        {
+          "id": "lan-bilangan-kompleks-q9",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Akar-akar persamaan $x^2 - 4x + 13 = 0$ adalah ...",
+          "options": [
+            "$2 \\pm 3i$",
+            "$4 \\pm 3i$",
+            "$2 \\pm 9i$",
+            "$-2 \\pm 3i$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus abc dengan $a=1$, $b=-4$, $c=13$:\n\n$$D = b^2 - 4ac = 16 - 52 = -36$$\n\nDiskriminannya negatif, jadi akarnya kompleks. Karena $\\sqrt{-36} = 6i$:\n\n$$x = \\frac{4 \\pm 6i}{2} = 2 \\pm 3i$$\n\nPerhatikan bahwa kedua akarnya saling konjugat. Ini selalu terjadi pada persamaan berkoefisien real: akar kompleksnya muncul berpasangan.",
+          "hint": "Diskriminan negatif menghasilkan akar kompleks; jangan lupa membagi dengan $2a$.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "lan-bilangan-kompleks-q10",
+          "difficulty": 2,
+          "format": "benar-salah",
+          "prompt": "Karena $\\sqrt{-4} \\cdot \\sqrt{-9} = \\sqrt{(-4)(-9)} = \\sqrt{36} = 6$, maka hasil perkalian dua akar negatif itu adalah $6$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Aturan $\\sqrt{a}\\cdot\\sqrt{b} = \\sqrt{ab}$ hanya berlaku kalau $a$ dan $b$ tak negatif.\n\nCara yang benar adalah mengubah masing-masing ke bentuk $i$ lebih dulu:\n\n$$\\sqrt{-4} = 2i, \\qquad \\sqrt{-9} = 3i$$\n$$(2i)(3i) = 6i^2 = -6$$\n\nJawabannya $-6$, bukan $6$ — bahkan tandanya pun berbeda. Ini salah satu alasan bilangan kompleks harus ditulis dalam bentuk $a+bi$ sebelum dioperasikan, bukan dibiarkan sebagai akar negatif.",
+          "hint": "Ubah ke bentuk $i$ lebih dulu, baru kalikan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\sqrt{a}\\sqrt{b}=\\sqrt{ab}$ gugur untuk bilangan negatif",
+        "Selalu periksa kuadran sebelum menetapkan $\\theta$",
+        "Modulus dipangkatkan, sudut dikalikan"
+      ],
+      "pitfall": "Percaya hasil $\\arctan$ dari kalkulator apa adanya. Fungsi itu tidak bisa membedakan $(1,1)$ dari $(-1,-1)$ karena keduanya memberi $\\tan\\theta = 1$ — hanya letak titiknya yang menentukan."
+    }
+  ]
+}

@@ -502,6 +502,56 @@
       "snippet": "Menjawab setengah pertanyaan. Soal sering meminta [rumus] atau [rumus] , bukan [rumus] saja. Baca lagi pertanyaannya setelah selesai menghitung. Mengalikan t..."
     },
     {
+      "cardId": "lan-bilangan-kompleks-c1",
+      "topicId": "lan-bilangan-kompleks",
+      "topicTitle": "Bilangan Kompleks dan Teorema De Moivre",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Kenapa $i$ harus ada",
+      "haystack": "kenapa harus ada persamaan tidak punya penyelesaian real. tidak ada bilangan real yang kuadratnya negatif, karena mengkuadratkan selalu menghasilkan nilai tak negatif. alih-alih menerima kebuntuan itu, matematikawan mendefinisikan sebuah bilangan baru: ini bukan trik. pola yang sama sudah berulang sepanjang sejarah bilangan: menuntut bilangan negatif, menuntut pecahan, dan menuntut bilangan irasional. setiap kali sebuah operasi keluar dari himpunan yang ada, himpunannya diperluas. bilangan kompleks berbentuk dengan bagian real dan bagian imajiner. hasilnya adalah sistem bilangan yang tertutup : setiap persamaan polinomial berderajat punya tepat akar di dalamnya, tanpa kecuali. pernyataan ini disebut teorema dasar aljabar, dan ia tidak berlaku untuk bilangan real. pangkat berputar dengan periode empat: , , , , lalu mengulang. untuk pangkat besar, cukup lihat sisa baginya oleh 4. memperluas sistem bilangan, seperti negatif dan pecahan dulu setiap polinomial derajat punya tepat akar kompleks pangkat berulang tiap empat langkah menulis . aturan hanya berlaku untuk bilangan tak negatif. yang benar: . bilangan kompleks dan teorema de moivre",
+      "snippet": "Persamaan [rumus] tidak punya penyelesaian real. Tidak ada bilangan real yang kuadratnya negatif, karena mengkuadratkan selalu menghasilkan nilai tak negatif..."
+    },
+    {
+      "cardId": "lan-bilangan-kompleks-c2",
+      "topicId": "lan-bilangan-kompleks",
+      "topicTitle": "Bilangan Kompleks dan Teorema De Moivre",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Kalikan, bagi, dan kuadratkan",
+      "haystack": "kalikan, bagi, dan kuadratkan perkalian dikerjakan seperti mengalikan dua bentuk aljabar biasa, dengan satu langkah tambahan: setiap yang muncul diganti dengan . konjugat dari adalah — tanda bagian imajinernya dibalik. sifat pentingnya: hasilnya selalu bilangan real . inilah yang membuat pembagian bisa dikerjakan. pembagian dilakukan dengan mengalikan pembilang dan penyebut dengan konjugat penyebutnya: teknik ini persis sejajar dengan merasionalkan penyebut berbentuk akar — tujuannya sama, yaitu membersihkan penyebut dari bentuk yang menyulitkan. yang membuatnya bekerja adalah sifat tadi: hasil kali sebuah bilangan dengan konjugatnya tidak pernah menyisakan bagian imajiner, berapa pun nilainya. setelah penyebutnya menjadi bilangan real, membaginya tinggal membagi kedua bagian pembilang satu per satu. ganti dengan setelah mengalikan selalu real membagi: kalikan atas dan bawah dengan konjugat penyebut mengalikan pembilang dan penyebut dengan penyebut itu sendiri, bukan konjugatnya. masih mengandung , jadi penyebutnya tidak jadi bersih. bilangan kompleks dan teorema de moivre",
+      "snippet": "Perkalian dikerjakan seperti mengalikan dua bentuk aljabar biasa, dengan satu langkah tambahan: setiap [rumus] yang muncul diganti dengan [rumus] . [rumus] K..."
+    },
+    {
+      "cardId": "lan-bilangan-kompleks-c3",
+      "topicId": "lan-bilangan-kompleks",
+      "topicTitle": "Bilangan Kompleks dan Teorema De Moivre",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Bidang kompleks: bentuk kutub",
+      "haystack": "bidang kompleks: bentuk kutub bilangan kompleks bisa digambar sebagai titik pada bidang. dari gambaran itu muncul cara kedua menuliskannya, yang jauh lebih berguna untuk perpangkatan. sebuah titik bisa ditentukan oleh jaraknya dari titik asal dan sudutnya terhadap sumbu real : bentuk kutubnya: di sinilah bentuk kutub menunjukkan kekuatannya. saat dua bilangan kompleks dikalikan, modulusnya dikalikan dan sudutnya dijumlahkan : artinya mengalikan dengan bilangan kompleks sama dengan memutar sekaligus mengubah skala . mengalikan dengan — yang modulusnya 1 dan sudutnya — berarti memutar seperempat putaran tanpa mengubah ukuran. hubungan antara perkalian dan perputaran inilah alasan bilangan kompleks begitu berguna di fisika dan teknik. saat menentukan , selalu perhatikan kuadrannya. rumus sendiri tidak membedakan kuadran i dari kuadran iii. mengalikan: modulus dikali, sudut dijumlah mengalikan dengan berarti memutar menghitung langsung dari tanpa melihat kuadran. untuk kalkulator memberi , padahal titiknya di kuadran iii sehingga sudut yang benar . bilangan kompleks dan teorema de moivre",
+      "snippet": "Bilangan kompleks [rumus] bisa digambar sebagai titik [rumus] pada bidang. Dari gambaran itu muncul cara kedua menuliskannya, yang jauh lebih berguna untuk p..."
+    },
+    {
+      "cardId": "lan-bilangan-kompleks-c4",
+      "topicId": "lan-bilangan-kompleks",
+      "topicTitle": "Bilangan Kompleks dan Teorema De Moivre",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Teorema De Moivre",
+      "haystack": "teorema de moivre kalau mengalikan berarti menjumlahkan sudut, maka memangkatkan berarti mengalikan sudut. itulah isi teorema de moivre: bandingkan dua jalan untuk menghitung . dengan penjabaran langsung kamu perlu mengalikan delapan kali dan mengurus puluhan suku. dengan de moivre: modulusnya , sudutnya , sehingga satu baris, tanpa satu pun perkalian panjang. teorema ini juga memberi akar bilangan kompleks. akar ke- dari ada sebanyak buah, dengan modulus dan sudut untuk . semua akar itu tersebar merata pada satu lingkaran — sudutnya berselisih tetap . fakta terakhir itu punya akibat yang rapi: akar-akar ke- dari 1 membentuk segi- beraturan pada lingkaran satuan. pangkat besar jadi mudah lewat bentuk kutub akar ke- ada buah, tersebar merata pada lingkaran memangkatkan modulus tapi lupa mengalikan sudutnya, atau sebaliknya. keduanya harus berubah: dipangkatkan , sementara dikalikan — bukan sama-sama dipangkatkan. bilangan kompleks dan teorema de moivre",
+      "snippet": "Kalau mengalikan berarti menjumlahkan sudut, maka memangkatkan berarti mengalikan sudut. Itulah isi teorema De Moivre: [rumus] Bandingkan dua jalan untuk men..."
+    },
+    {
+      "cardId": "lan-bilangan-kompleks-c5",
+      "topicId": "lan-bilangan-kompleks",
+      "topicTitle": "Bilangan Kompleks dan Teorema De Moivre",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan bilangan kompleks",
+      "haystack": "empat jebakan bilangan kompleks 1. memakai pada bilangan negatif. aturan itu hanya berlaku untuk bilangan tak negatif. ubah dulu ke bentuk : , bukan . 2. salah kuadran saat mencari . kalkulator memberi hanya dalam jangkauan sampai . untuk titik di kuadran ii atau iii kamu harus menambahkan sendiri. gambar titiknya dulu sebelum menghitung. 3. membagi tanpa konjugat. bentuk belum selesai selama penyebutnya masih memuat . kalikan atas dan bawah dengan . 4. mencampur perlakuan dan pada de moivre. modulus dipangkatkan, sudut dikalikan. menukar keduanya memberi jawaban yang ukurannya jauh meleset. pemeriksaan yang paling cepat: gambar hasilnya pada bidang kompleks. modulus yang terlalu besar atau kuadran yang salah langsung terlihat. gugur untuk bilangan negatif selalu periksa kuadran sebelum menetapkan modulus dipangkatkan, sudut dikalikan percaya hasil dari kalkulator apa adanya. fungsi itu tidak bisa membedakan dari karena keduanya memberi — hanya letak titiknya yang menentukan. bilangan kompleks dan teorema de moivre",
+      "snippet": "1. Memakai [rumus] pada bilangan negatif. Aturan itu hanya berlaku untuk bilangan tak negatif. Ubah dulu ke bentuk [rumus] : [rumus] , bukan [rumus] . 2. Sal..."
+    },
+    {
       "cardId": "lan-integral-tentu-c1",
       "topicId": "lan-integral-tentu",
       "topicTitle": "Integral Tentu & Aplikasinya",
@@ -650,6 +700,56 @@
       "title": "Empat jebakan irisan kerucut",
       "haystack": "empat jebakan irisan kerucut 1. menukar rumus antara elips dan hiperbola. elips memakai , hiperbola . cara mengingat tanpa hafalan: pada elips fokus ada di dalam kurva sehingga harus lebih kecil dari ; pada hiperbola fokus ada di luar sehingga lebih besar. 2. mengira selalu penyebut terbesar. aturan itu hanya berlaku untuk elips. pada hiperbola, diambil dari suku yang bertanda positif , dan suku itulah yang menentukan arah bukaannya. 3. membaca sebagai pada parabola. pada nilai adalah . fokus di , bukan . 4. salah tanda pada pergeseran pusat. pusat memberi , sehingga pusat menghasilkan . tanda di dalam kurung selalu berlawanan dengan koordinatnya. satu pemeriksaan menangkap sebagian besar kesalahan ini: gambar sketsa kasarnya. fokus yang jatuh di luar elips atau di dalam hiperbola langsung terlihat salah. elips: . hiperbola: hiperbola diambil dari suku positif, bukan terbesar sketsa kasar menangkap sebagian besar kesalahan tanda melewatkan sketsa karena merasa rumusnya sudah dihafal. justru sketsa itulah yang menangkap fokus yang salah letak — kesalahan yang tidak akan terlihat dari deretan angka. irisan kerucut: elips, hiperbola, parabola",
       "snippet": "1. Menukar rumus [rumus] antara elips dan hiperbola. Elips memakai [rumus] , hiperbola [rumus] . Cara mengingat tanpa hafalan: pada elips fokus ada di dalam ..."
+    },
+    {
+      "cardId": "lan-logika-induksi-c1",
+      "topicId": "lan-logika-induksi",
+      "topicTitle": "Logika Matematika dan Induksi",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Implikasi dan tiga kerabatnya",
+      "haystack": "implikasi dan tiga kerabatnya pernyataan berbentuk \"jika maka \" disebut implikasi, ditulis . ia bernilai salah hanya dalam satu keadaan: ketika benar tapi salah. di semua keadaan lain ia benar. ini sering terasa aneh. \"jika bulan terbuat dari keju, maka \" bernilai benar, karena tidak ada kasus di mana bagian depannya benar sementara belakangnya salah. implikasi tidak menuntut hubungan sebab-akibat — ia hanya melarang satu pola. setiap implikasi punya tiga kerabat: - konvers : - invers : - kontraposisi : hanya kontraposisi yang selalu senilai dengan implikasi aslinya. konvers dan invers tidak. \"jika hujan maka jalan basah\" itu benar, tapi konversnya — \"jika jalan basah maka hujan\" — jelas tidak, karena jalan bisa basah oleh sebab lain. fakta bahwa kontraposisi selalu senilai adalah alat pembuktian yang nyata: kalau sulit dibuktikan langsung, buktikan sebagai gantinya. salah hanya saat benar dan salah hanya kontraposisi yang senilai dengan implikasi aslinya konvers dan invers bukan pengganti yang sah menganggap konvers pasti benar kalau implikasinya benar. contoh tandingannya mudah: \"jika bilangan itu 4 maka ia genap\" benar, tapi konversnya menuntut setiap bilangan genap sama dengan 4. logika matematika dan induksi",
+      "snippet": "Pernyataan berbentuk \"jika [rumus] maka [rumus] \" disebut implikasi, ditulis [rumus] . Ia bernilai salah hanya dalam satu keadaan: ketika [rumus] benar tapi ..."
+    },
+    {
+      "cardId": "lan-logika-induksi-c2",
+      "topicId": "lan-logika-induksi",
+      "topicTitle": "Logika Matematika dan Induksi",
+      "track": "lanjut",
+      "type": "rumus",
+      "title": "Ingkaran dan penarikan kesimpulan",
+      "haystack": "ingkaran dan penarikan kesimpulan mengingkari pernyataan majemuk mengikuti aturan tetap yang dikenal sebagai hukum de morgan: perhatikan bahwa \"dan\" berubah menjadi \"atau\", dan sebaliknya. ingkaran dari \"hari ini panas dan cerah\" bukan \"tidak panas dan tidak cerah\", melainkan \"tidak panas atau tidak cerah\" — cukup satu yang meleset untuk membatalkan gabungannya. untuk implikasi: ingkaran implikasi bukan implikasi lagi, melainkan pernyataan \"dan\" — karena satu-satunya cara membantah implikasi adalah menunjukkan kasus di mana terjadi tapi tidak. tiga pola penarikan kesimpulan yang sah: - modus ponens : dari dan , simpulkan - modus tollens : dari dan , simpulkan - silogisme : dari dan , simpulkan yang tidak sah: dari dan , menyimpulkan . de morgan menukar \"dan\" dengan \"atau\" dari dan , tidak boleh disimpulkan mengingkari \"semua siswa hadir\" menjadi \"semua siswa tidak hadir\". ingkaran yang benar adalah \"ada siswa yang tidak hadir\" — satu contoh sudah cukup membantah pernyataan yang berlaku untuk semua. logika matematika dan induksi",
+      "snippet": "Mengingkari pernyataan majemuk mengikuti aturan tetap yang dikenal sebagai hukum De Morgan: [rumus] [rumus] Perhatikan bahwa \"dan\" berubah menjadi \"atau\", da..."
+    },
+    {
+      "cardId": "lan-logika-induksi-c3",
+      "topicId": "lan-logika-induksi",
+      "topicTitle": "Logika Matematika dan Induksi",
+      "track": "lanjut",
+      "type": "konsep",
+      "title": "Induksi: efek domino",
+      "haystack": "induksi: efek domino bagaimana membuktikan sesuatu berlaku untuk semua bilangan asli, padahal jumlahnya tak hingga? memeriksa satu per satu jelas mustahil. induksi matematika menyelesaikannya dengan dua langkah saja: 1. langkah dasar. buktikan pernyataannya benar untuk kasus pertama, biasanya . 2. langkah induksi. buktikan bahwa jika benar untuk , maka pasti benar untuk . bayangkan barisan domino tak hingga panjang. langkah pertama menjatuhkan domino pertama. langkah kedua memastikan setiap domino yang jatuh pasti menjatuhkan tetangganya. kedua langkah itu bersama-sama menjamin semuanya roboh. kedua langkah wajib ada, dan tidak ada yang bisa menggantikan yang lain. tanpa langkah dasar, kamu punya rantai yang tidak pernah dimulai — pernyataan lolos langkah induksi tapi tidak pernah benar. tanpa langkah induksi, kamu hanya memeriksa beberapa kasus, dan berapa pun banyaknya itu bukan bukti. pada langkah kedua, asumsi \"benar untuk \" disebut hipotesis induksi. ia bukan hal yang kamu buktikan, melainkan bahan yang kamu pakai. dua langkah: dasar dan induksi — keduanya wajib tanpa langkah dasar, rantainya tidak pernah dimulai hipotesis induksi adalah bahan, bukan yang dibuktikan menganggap langkah induksi sudah membuktikan pernyataannya untuk . ia hanya membuktikan hubungan antara dua kasus berurutan — kebenaran nyatanya baru masuk lewat langkah dasar. logika matematika dan induksi",
+      "snippet": "Bagaimana membuktikan sesuatu berlaku untuk semua bilangan asli, padahal jumlahnya tak hingga? Memeriksa satu per satu jelas mustahil. Induksi matematika men..."
+    },
+    {
+      "cardId": "lan-logika-induksi-c4",
+      "topicId": "lan-logika-induksi",
+      "topicTitle": "Logika Matematika dan Induksi",
+      "track": "lanjut",
+      "type": "prosedur",
+      "title": "Menjalankan langkah induksi",
+      "haystack": "menjalankan langkah induksi bagian tersulit induksi adalah langkah kedua. polanya selalu sama, dan berikut urutannya untuk membuktikan . tulis hipotesisnya. andaikan benar untuk : tulis targetnya. yang ingin dicapai untuk : mulai dari ruas kiri target, lalu sisipkan hipotesisnya. bagian bisa langsung diganti: rapikan sampai berbentuk target: selesai. kunci seluruh proses ada pada langkah ketiga: kamu harus benar-benar memakai hipotesis induksi. kalau sampai akhir hipotesis itu tidak pernah kamu sentuh, hampir pasti buktinya tidak sah. tulis hipotesis dan target lebih dulu, baru kerjakan sisipkan hipotesis ke ruas kiri target bukti yang tidak memakai hipotesis induksi hampir pasti cacat mengerjakan kedua ruas secara terpisah sampai bertemu di tengah tanpa pernah menyebut hipotesis induksi. cara itu membuktikan kesamaan aljabar biasa, bukan hubungan antara kasus ke- dan ke- . logika matematika dan induksi",
+      "snippet": "Bagian tersulit induksi adalah langkah kedua. Polanya selalu sama, dan berikut urutannya untuk membuktikan [rumus] . Tulis hipotesisnya. Andaikan benar untuk..."
+    },
+    {
+      "cardId": "lan-logika-induksi-c5",
+      "topicId": "lan-logika-induksi",
+      "topicTitle": "Logika Matematika dan Induksi",
+      "track": "lanjut",
+      "type": "jebakan",
+      "title": "Empat jebakan logika dan induksi",
+      "haystack": "empat jebakan logika dan induksi 1. menganggap konvers senilai dengan implikasi. dari \"jika maka \" dan kenyataan , kamu tidak boleh menyimpulkan . hanya kontraposisi yang aman. 2. mengingkari \"semua\" menjadi \"semua tidak\". ingkaran dari \"semua siswa hadir\" adalah \"ada siswa yang tidak hadir\" — satu contoh sudah cukup. begitu pula ingkaran \"ada\" adalah \"semua tidak\". 3. melewatkan langkah dasar. pernyataan lolos langkah induksi dengan mulus, karena dari memang mengikuti . yang menggagalkannya justru langkah dasar, yang tidak pernah terpenuhi. 4. mengira langkah dasar selalu . pernyataan salah untuk tapi benar mulai . untuk soal seperti ini langkah dasarnya , dan kesimpulannya hanya berlaku untuk . pemeriksaan tercepat sebelum mulai membuktikan: hitung dua atau tiga kasus kecil. kalau salah satunya meleset, rumusnya memang salah — dan kamu tidak perlu membuang waktu membuktikannya. hanya kontraposisi yang senilai dengan implikasi ingkaran \"semua\" adalah \"ada yang tidak\" langkah dasar tidak selalu langsung menyusun bukti induksi tanpa menguji satu pun kasus kecil. beberapa rumus yang tampak masuk akal ternyata salah sejak , dan pengujian sepuluh detik menghemat satu halaman kerja sia-sia. logika matematika dan induksi",
+      "snippet": "1. Menganggap konvers senilai dengan implikasi. Dari \"jika [rumus] maka [rumus] \" dan kenyataan [rumus] , kamu tidak boleh menyimpulkan [rumus] . Hanya kontr..."
     },
     {
       "cardId": "lan-teknik-integrasi-c1",
