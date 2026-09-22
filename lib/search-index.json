@@ -1232,6 +1232,106 @@
       "snippet": "Memakai limit istimewa saat [rumus] tidak menuju nol. Syaratnya [rumus] . Untuk nilai lain, substitusi biasa yang berlaku. Lupa menyamakan koefisien. Bentuk ..."
     },
     {
+      "cardId": "kal-turunan-aljabar-c1",
+      "topicId": "kal-turunan-aljabar",
+      "topicTitle": "Turunan Fungsi Aljabar",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Turunan adalah gradien garis singgung",
+      "haystack": "turunan adalah gradien garis singgung gradien garis lurus mudah dihitung: selisih dibagi selisih . tapi kurva punya kecuraman yang berbeda-beda di tiap titik. bagaimana mengukurnya? caranya dengan mengambil dua titik yang sangat berdekatan pada kurva, lalu menghitung gradien garis yang menghubungkannya. makin dekat kedua titik itu, makin mendekati kecuraman sebenarnya di satu titik. itulah definisi turunan — dan ia benar-benar sebuah limit, bukan rumus terpisah. akibatnya adalah gradien garis singgung kurva di titik . dari situ semua kegunaan turunan mengalir: kurva naik kalau , turun kalau negatif, dan mendatar kalau nol — dan titik mendatar itulah calon maksimum atau minimum. adalah gradien garis singgung di naik, turun menandai titik stasioner mengira adalah nilai fungsi di titik itu. memberi ketinggian, memberi kecuraman — dua hal yang sama sekali berbeda. turunan fungsi aljabar",
+      "snippet": "Gradien garis lurus mudah dihitung: selisih [rumus] dibagi selisih [rumus] . Tapi kurva punya kecuraman yang berbeda-beda di tiap titik. Bagaimana mengukurny..."
+    },
+    {
+      "cardId": "kal-turunan-aljabar-c2",
+      "topicId": "kal-turunan-aljabar",
+      "topicTitle": "Turunan Fungsi Aljabar",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Aturan hasil kali, hasil bagi, dan rantai",
+      "haystack": "aturan hasil kali, hasil bagi, dan rantai tiga aturan ini menutup hampir semua bentuk turunan di tingkat sma. hasil kali: perhatikan ia bukan . turunan hasil kali bukan hasil kali turunan — kesalahan ini mudah diuji sendiri dengan . hasil bagi: tandanya minus , dan urutannya penting. menukar kedua suku di pembilang membalik tanda jawabannya. rantai: turunkan lapisan luar, lalu kalikan dengan turunan lapisan dalam. faktor terakhir inilah yang paling sering terlupa. ketiganya sering dipakai bertingkat dalam satu soal. pada bentuk seperti kamu memakai aturan hasil kali di lapisan luar, lalu aturan rantai untuk menurunkan di dalamnya. urutannya: kenali dulu operasi terluar yang menyatukan seluruh ekspresi, baru turun ke bagian dalam. salah menentukan lapisan terluar membuat seluruh perhitungan meleset sejak langkah pertama. rantai: kalikan dengan turunan bagian dalam lupa mengalikan turunan bagian dalam pada aturan rantai. turunan adalah , bukan . turunan fungsi aljabar",
+      "snippet": "Tiga aturan ini menutup hampir semua bentuk turunan di tingkat SMA. Hasil kali: [rumus] Perhatikan ia bukan [rumus] . Turunan hasil kali bukan hasil kali tur..."
+    },
+    {
+      "cardId": "kal-turunan-aljabar-c3",
+      "topicId": "kal-turunan-aljabar",
+      "topicTitle": "Turunan Fungsi Aljabar",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Garis singgung dan garis normal",
+      "haystack": "garis singgung dan garis normal karena adalah gradien garis singgung di , menyusun persamaan garis singgung menjadi soal garis biasa. 1. hitung untuk mendapat titik singgungnya, yaitu . 2. hitung untuk mendapat gradiennya. 3. susun dengan rumus titik-gradien: . garis normal adalah garis yang tegak lurus garis singgung di titik yang sama. karena tegak lurus, gradiennya: langkah 1 sering dilewati. kalau soal hanya memberi nilai , kamu tetap perlu menghitung -nya sendiri — dan itu memakai , bukan . dua fungsi berbeda dipakai di satu soal, dan tertukarnya keduanya adalah kesalahan paling sering di sini. gradien singgung titik singgung gradien normal memakai sebagai koordinat titik singgungnya. koordinatnya berasal dari , sedangkan hanya memberi kecuraman. turunan fungsi aljabar",
+      "snippet": "Karena [rumus] adalah gradien garis singgung di [rumus] , menyusun persamaan garis singgung menjadi soal garis biasa. 1. Hitung [rumus] untuk mendapat titik ..."
+    },
+    {
+      "cardId": "kal-turunan-aljabar-c4",
+      "topicId": "kal-turunan-aljabar",
+      "topicTitle": "Turunan Fungsi Aljabar",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Titik stasioner dan nilai ekstrem",
+      "haystack": "titik stasioner dan nilai ekstrem di puncak dan lembah sebuah kurva, garis singgungnya mendatar — gradiennya nol. inilah dasar seluruh soal maksimum dan minimum. 1. cari turunannya, lalu selesaikan . akar-akarnya adalah titik stasioner. 2. tentukan jenisnya. cara termudah dengan turunan kedua: berarti minimum (kurva membuka ke atas) berarti maksimum 3. hitung nilai fungsinya di titik-titik itu dengan , bukan . untuk soal terapan yang mencari ukuran optimum, tambahkan satu langkah: periksa apakah hasilnya masuk akal secara fisik. panjang negatif bukan jawaban. langkah 3 adalah jebakan tersering. setelah bersusah payah mencari , banyak yang lupa bahwa yang ditanya biasanya nilai maksimumnya, bukan letaknya. titik stasioner: minimum, maksimum nilai ekstremnya dihitung dengan , bukan menjawab dengan nilai padahal soal meminta nilai maksimum atau minimum fungsinya. yang satu letak, yang lain nilai. turunan fungsi aljabar",
+      "snippet": "Di puncak dan lembah sebuah kurva, garis singgungnya mendatar — gradiennya nol. Inilah dasar seluruh soal maksimum dan minimum. 1. Cari turunannya, lalu sele..."
+    },
+    {
+      "cardId": "kal-turunan-aljabar-c5",
+      "topicId": "kal-turunan-aljabar",
+      "topicTitle": "Turunan Fungsi Aljabar",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada turunan",
+      "haystack": "kesalahan khas pada turunan lupa aturan rantai. turunan adalah . faktor terakhir itu hilang pada sebagian besar kesalahan, dan hasilnya tepat separuh dari seharusnya. mengira . uji dengan : ruas kiri memberi , ruas kanan memberi 1. jelas berbeda. salah tanda pada aturan hasil bagi. pembilangnya , dan urutannya tidak boleh ditukar. menjawab letak alih-alih nilai. kalau soal meminta nilai maksimum, jawabannya , bukan . lupa turunan konstanta nol. suku tetap tidak punya kecuraman, jadi lenyap saat diturunkan. rantai: kalikan turunan bagian dalam hasil bagi: , jangan ditukar nilai ekstrem dihitung dengan menurunkan menjadi tanpa mengalikan 2, sehingga jawabannya tepat setengah dari yang benar. turunan fungsi aljabar",
+      "snippet": "Lupa aturan rantai. Turunan [rumus] adalah [rumus] . Faktor terakhir itu hilang pada sebagian besar kesalahan, dan hasilnya tepat separuh dari seharusnya. Me..."
+    },
+    {
+      "cardId": "kal-turunan-trigonometri-c1",
+      "topicId": "kal-turunan-trigonometri",
+      "topicTitle": "Turunan Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Kenapa turunan kosinus bertanda minus",
+      "haystack": "kenapa turunan kosinus bertanda minus dua turunan dasar ini sering dihafal berpasangan, dan tanda minusnya sering tertukar. padahal alasannya bisa dilihat dari grafiknya. perhatikan grafik sinus di dekat . ia sedang naik dengan curam, dan memang — gradien positif terbesar. di grafiknya mencapai puncak dan mendatar, dan . cocok. sekarang kosinus. di grafiknya berada di puncak, jadi gradiennya nol — dan . tepat setelah itu kosinus turun , jadi gradiennya negatif. itulah asal tanda minusnya. jadi minus muncul pada kosinus karena kosinus mulai dari puncak lalu menurun, sedangkan sinus mulai dari nol lalu menanjak. minus pada kosinus karena ia mulai dari puncak lalu turun menulis turunan kosinus sebagai tanpa tanda minus. tanda itu satu-satunya pembeda kedua rumus, dan paling sering hilang. turunan fungsi trigonometri",
+      "snippet": "Dua turunan dasar ini sering dihafal berpasangan, dan tanda minusnya sering tertukar. Padahal alasannya bisa dilihat dari grafiknya. [rumus] Perhatikan grafi..."
+    },
+    {
+      "cardId": "kal-turunan-trigonometri-c2",
+      "topicId": "kal-turunan-trigonometri",
+      "topicTitle": "Turunan Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Daftar turunan trigonometri",
+      "haystack": "daftar turunan trigonometri keenam turunan ini menutup seluruh soal di tingkat sma. tiga yang bertanda minus semuanya berawalan \"ko\" — kosinus, kosekan, kotangen. pola itu memudahkan mengingatnya. digabung dengan aturan rantai, bentuk dengan sudut berkoefisien menjadi: faktor di depan itu adalah turunan bagian dalam, dan ia yang paling sering terlupa. saat kamu memakai aturan rantai, bagian dalam tidak harus berbentuk linear. untuk turunannya menjadi , bukan : turunan bagian dalam dikalikan di depan, bukan dimasukkan ke dalam fungsi. uji cepat kebenarannya dengan mengganti dengan angka kecil dan membandingkan kemiringan grafik di titik itu. yang berawalan \"ko\" bertanda minus lupa faktor pada turunan . untuk turunannya , bukan . turunan fungsi trigonometri",
+      "snippet": "Keenam turunan ini menutup seluruh soal di tingkat SMA. Tiga yang bertanda minus semuanya berawalan \"ko\" — kosinus, kosekan, kotangen. Pola itu memudahkan me..."
+    },
+    {
+      "cardId": "kal-turunan-trigonometri-c3",
+      "topicId": "kal-turunan-trigonometri",
+      "topicTitle": "Turunan Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Menggabung dengan aturan lain",
+      "haystack": "menggabung dengan aturan lain sebagian besar soal turunan trigonometri sebenarnya menguji apakah kamu bisa menggabungkan beberapa aturan sekaligus. rantai di dalam hasil kali: untuk , pakai aturan hasil kali dulu, lalu aturan rantai saat menurunkan : pangkat fungsi trigonometri: bentuk berarti , jadi aturan rantai berlaku dengan lapisan luar pangkat dua: hasilnya kebetulan sama dengan , lewat identitas sudut rangkap. kuncinya: kerjakan lapisan demi lapisan dari luar ke dalam, dan tuliskan tiap lapisan sebelum menyederhanakan. menggabungkan langkah dalam kepala adalah sumber kesalahan tersering. kerjakan lapisan demi lapisan dari luar ke dalam berarti membaca sebagai . keduanya berbeda sama sekali, dan turunannya pun berbeda. turunan fungsi trigonometri",
+      "snippet": "Sebagian besar soal turunan trigonometri sebenarnya menguji apakah kamu bisa menggabungkan beberapa aturan sekaligus. Rantai di dalam hasil kali: untuk [rumu..."
+    },
+    {
+      "cardId": "kal-turunan-trigonometri-c4",
+      "topicId": "kal-turunan-trigonometri",
+      "topicTitle": "Turunan Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Nilai ekstrem fungsi trigonometri",
+      "haystack": "nilai ekstrem fungsi trigonometri mencari maksimum dan minimum fungsi trigonometri memakai langkah yang sama seperti fungsi aljabar, dengan satu perbedaan penting. 1. turunkan, lalu selesaikan . 2. karena persamaan trigonometri punya banyak penyelesaian, batasi pada selang yang diminta soal. 3. periksa jenisnya dengan turunan kedua, atau dengan mengamati tanda turunan di sekitarnya. 4. hitung nilai fungsinya di tiap titik stasioner dan di kedua ujung selang. langkah 4 sering terlupa. pada selang tertutup, nilai terbesar atau terkecil bisa terjadi di ujung selang, bukan di titik stasioner — terutama kalau fungsinya monoton di selang itu. untuk bentuk sederhana seperti , kamu bahkan tidak perlu menurunkan: karena berkisar antara dan 1, nilai ekstremnya langsung terbaca. batasi penyelesaian pada selang yang diminta periksa juga nilai di ujung selang berkisar antara dan hanya memeriksa titik stasioner dan melupakan ujung selang, padahal pada selang tertutup nilai ekstrem sering justru berada di ujungnya. turunan fungsi trigonometri",
+      "snippet": "Mencari maksimum dan minimum fungsi trigonometri memakai langkah yang sama seperti fungsi aljabar, dengan satu perbedaan penting. 1. Turunkan, lalu selesaika..."
+    },
+    {
+      "cardId": "kal-turunan-trigonometri-c5",
+      "topicId": "kal-turunan-trigonometri",
+      "topicTitle": "Turunan Fungsi Trigonometri",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada turunan trigonometri",
+      "haystack": "kesalahan khas pada turunan trigonometri menghilangkan tanda minus pada kosinus. ini kesalahan nomor satu, dan satu-satunya pembeda antara dua rumus dasar. lupa faktor dari aturan rantai. turunan adalah . tanpa faktor 4, jawabanmu meleset sebesar kelipatan itu. membaca sebagai . keduanya berbeda sama sekali. yang pertama pangkat dua dari sinus; yang kedua sinus dari kuadrat. memakai derajat. rumus turunan trigonometri hanya berlaku dalam radian, alasan yang sama seperti pada limit istimewa. melupakan ujung selang saat mencari nilai ekstrem pada selang tertutup. turunan kosinus bertanda minus rantai: jangan lupa faktornya rumusnya berlaku dalam radian menulis turunan sebagai tanpa faktor 4, sehingga jawabannya seperempat dari yang benar. turunan fungsi trigonometri",
+      "snippet": "Menghilangkan tanda minus pada kosinus. Ini kesalahan nomor satu, dan satu-satunya pembeda antara dua rumus dasar. Lupa faktor dari aturan rantai. Turunan [r..."
+    },
+    {
       "cardId": "pel-peluang-c1",
       "topicId": "pel-peluang",
       "topicTitle": "Peluang",

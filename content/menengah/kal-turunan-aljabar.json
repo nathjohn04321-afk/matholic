@@ -1,0 +1,270 @@
+{
+  "id": "kal-turunan-aljabar",
+  "track": "menengah",
+  "title": "Turunan Fungsi Aljabar",
+  "order": 19,
+  "prerequisites": [
+    "kal-limit-aljabar"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Turunan sebagai gradien garis singgung, dan kenapa aturan rantai sering terlupa.",
+  "tags": [
+    "kalkulus",
+    "un",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "kal-turunan-aljabar-c1",
+      "type": "konsep",
+      "title": "Turunan adalah gradien garis singgung",
+      "body": "Gradien garis lurus mudah dihitung: selisih $y$ dibagi selisih $x$. Tapi kurva punya kecuraman yang berbeda-beda di tiap titik. Bagaimana mengukurnya?\n\nCaranya dengan mengambil dua titik yang sangat berdekatan pada kurva, lalu menghitung gradien garis yang menghubungkannya. Makin dekat kedua titik itu, makin mendekati kecuraman sebenarnya di satu titik.\n\n$$f'(x) = \\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}$$\n\nItulah definisi turunan — dan ia benar-benar sebuah limit, bukan rumus terpisah.\n\nAkibatnya $f'(a)$ adalah gradien garis singgung kurva di titik $x = a$. Dari situ semua kegunaan turunan mengalir: kurva naik kalau $f'(x) > 0$, turun kalau negatif, dan mendatar kalau nol — dan titik mendatar itulah calon maksimum atau minimum.",
+      "questions": [
+        {
+          "id": "kal-turunan-aljabar-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $f(x) = 3x^4$ adalah ...",
+          "options": [
+            "$12x^3$",
+            "$3x^3$",
+            "$12x^4$",
+            "$4x^3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan pangkat: turunkan pangkatnya menjadi pengali, lalu kurangi pangkatnya satu.\n$$\\frac{d}{dx}(ax^n) = anx^{n-1}$$\n\nDengan $a=3$ dan $n=4$:\n$$3 \\times 4 \\times x^3 = 12x^3$$",
+          "hint": "Pangkatnya turun jadi pengali di depan.",
+          "tags": [
+            "un"
+          ]
+        },
+        {
+          "id": "kal-turunan-aljabar-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f(x) = x^3 - 4x^2 + 2x - 7$, maka $f'(2)$ adalah ...",
+          "options": [
+            "$-2$",
+            "$2$",
+            "$6$",
+            "$-7$"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunkan suku demi suku:\n$$f'(x) = 3x^2 - 8x + 2$$\n\nSuku tetap $-7$ turunannya nol, karena bilangan tetap tidak punya kecuraman.\n\nSubstitusikan $x = 2$:\n$$f'(2) = 3(4) - 8(2) + 2 = 12 - 16 + 2 = -2$$\n\nNilai negatif berarti kurvanya sedang turun di titik itu.",
+          "hint": "Turunkan dulu, baru substitusikan.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$f'(a)$ adalah gradien garis singgung di $x=a$",
+        "$f'(x) > 0$ naik, $f'(x) < 0$ turun",
+        "$f'(x) = 0$ menandai titik stasioner"
+      ],
+      "pitfall": "Mengira $f'(a)$ adalah nilai fungsi di titik itu. $f(a)$ memberi ketinggian, $f'(a)$ memberi kecuraman — dua hal yang sama sekali berbeda."
+    },
+    {
+      "id": "kal-turunan-aljabar-c2",
+      "type": "rumus",
+      "title": "Aturan hasil kali, hasil bagi, dan rantai",
+      "body": "Tiga aturan ini menutup hampir semua bentuk turunan di tingkat SMA.\n\n**Hasil kali:**\n$$(uv)' = u'v + uv'$$\nPerhatikan ia **bukan** $u'v'$. Turunan hasil kali bukan hasil kali turunan — kesalahan ini mudah diuji sendiri dengan $u = v = x$.\n\n**Hasil bagi:**\n$$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$$\nTandanya **minus**, dan urutannya penting. Menukar kedua suku di pembilang membalik tanda jawabannya.\n\n**Rantai:**\n$$\\frac{d}{dx}f(g(x)) = f'(g(x)) \\cdot g'(x)$$\nTurunkan lapisan luar, lalu kalikan dengan turunan lapisan dalam. Faktor terakhir inilah yang paling sering terlupa.\n\nKetiganya sering dipakai bertingkat dalam satu soal. Pada bentuk seperti $x^2\\sin(3x)$ kamu memakai aturan hasil kali di lapisan luar, lalu aturan rantai untuk menurunkan $\\sin(3x)$ di dalamnya. Urutannya: kenali dulu operasi terluar yang menyatukan seluruh ekspresi, baru turun ke bagian dalam. Salah menentukan lapisan terluar membuat seluruh perhitungan meleset sejak langkah pertama.",
+      "questions": [
+        {
+          "id": "kal-turunan-aljabar-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = (x^2+1)^3$ di $x = 1$ adalah ...",
+          "options": [
+            "$24$",
+            "$12$",
+            "$3$",
+            "$8$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan rantai. Lapisan luar pangkat tiga, lapisan dalam $x^2+1$:\n$$y' = 3(x^2+1)^2 \\cdot 2x$$\n\nJangan lupa faktor $2x$ — itu turunan bagian dalamnya.\n\nSubstitusikan $x=1$:\n$$3(2)^2 \\cdot 2 = 3(4)(2) = 24$$\n\nTanpa faktor $2x$, hasilnya 12 — persis separuhnya, dan itu kesalahan tersering.",
+          "hint": "Jangan lupa mengalikan turunan bagian dalam.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-aljabar-q4",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\frac{2x+1}{x-3}$ adalah ...",
+          "options": [
+            "$\\frac{-7}{(x-3)^2}$",
+            "$\\frac{7}{(x-3)^2}$",
+            "$\\frac{2}{1}$",
+            "$\\frac{5}{(x-3)^2}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan hasil bagi dengan $u = 2x+1$ dan $v = x-3$:\n$$u' = 2, \\qquad v' = 1$$\n\n$$y' = \\frac{u'v - uv'}{v^2} = \\frac{2(x-3) - (2x+1)(1)}{(x-3)^2}$$\n\nJabarkan pembilangnya:\n$$= \\frac{2x - 6 - 2x - 1}{(x-3)^2} = \\frac{-7}{(x-3)^2}$$\n\nMenukar urutan di pembilang memberi $+7$, yang keliru tandanya.",
+          "hint": "Perhatikan urutan pengurangan di pembilang.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$(uv)' = u'v + uv'$",
+        "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v-uv'}{v^2}$",
+        "Rantai: kalikan dengan turunan bagian dalam"
+      ],
+      "pitfall": "Lupa mengalikan turunan bagian dalam pada aturan rantai. Turunan $(2x+1)^3$ adalah $3(2x+1)^2 \\cdot 2$, bukan $3(2x+1)^2$."
+    },
+    {
+      "id": "kal-turunan-aljabar-c3",
+      "type": "teknik",
+      "title": "Garis singgung dan garis normal",
+      "body": "Karena $f'(a)$ adalah gradien garis singgung di $x=a$, menyusun persamaan garis singgung menjadi soal garis biasa.\n\n1. Hitung $f(a)$ untuk mendapat titik singgungnya, yaitu $(a, f(a))$.\n2. Hitung $f'(a)$ untuk mendapat gradiennya.\n3. Susun dengan rumus titik-gradien: $y - f(a) = f'(a)(x-a)$.\n\nGaris **normal** adalah garis yang tegak lurus garis singgung di titik yang sama. Karena tegak lurus, gradiennya:\n$$m_{\\text{normal}} = -\\frac{1}{f'(a)}$$\n\nLangkah 1 sering dilewati. Kalau soal hanya memberi nilai $x$, kamu tetap perlu menghitung $y$-nya sendiri — dan itu memakai $f$, bukan $f'$.\n\nDua fungsi berbeda dipakai di satu soal, dan tertukarnya keduanya adalah kesalahan paling sering di sini.",
+      "questions": [
+        {
+          "id": "kal-turunan-aljabar-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Gradien garis singgung kurva $y = x^2 - 3x$ di titik berabsis 2 adalah ...",
+          "options": [
+            "$1$",
+            "$-2$",
+            "$4$",
+            "$-3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunkan dulu:\n$$y' = 2x - 3$$\n\nSubstitusikan $x = 2$:\n$$y'(2) = 4 - 3 = 1$$\n\nGradiennya $1$.\n\nPerhatikan $y(2) = 4-6 = -2$ adalah koordinat $y$ titik singgungnya, bukan gradiennya. Keduanya sering tertukar.",
+          "hint": "Gradien berasal dari turunannya, bukan dari fungsinya.",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-aljabar-q6",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Tentukan persamaan garis singgung kurva $y = x^2$ di titik $(3, 9)$.",
+          "answer": "y = 6x - 9",
+          "acceptedAnswers": [
+            "y=6x-9",
+            "6x-9"
+          ],
+          "solution": "Hitung gradiennya lewat turunan:\n$$y' = 2x, \\qquad y'(3) = 6$$\n\nSusun dengan rumus titik-gradien memakai titik $(3,9)$:\n$$y - 9 = 6(x - 3)$$\n$$y - 9 = 6x - 18$$\n$$y = 6x - 9$$\n\nPeriksa: di $x = 3$, garisnya memberi $18-9 = 9$. Cocok dengan titik singgungnya.",
+          "hint": "Cari gradiennya dulu, lalu pakai rumus titik-gradien.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Gradien singgung $= f'(a)$",
+        "Titik singgung $= (a, f(a))$",
+        "Gradien normal $= -\\frac{1}{f'(a)}$"
+      ],
+      "pitfall": "Memakai $f'(a)$ sebagai koordinat $y$ titik singgungnya. Koordinatnya berasal dari $f(a)$, sedangkan $f'(a)$ hanya memberi kecuraman."
+    },
+    {
+      "id": "kal-turunan-aljabar-c4",
+      "type": "teknik",
+      "title": "Titik stasioner dan nilai ekstrem",
+      "body": "Di puncak dan lembah sebuah kurva, garis singgungnya mendatar — gradiennya nol. Inilah dasar seluruh soal maksimum dan minimum.\n\n1. Cari turunannya, lalu selesaikan $f'(x) = 0$. Akar-akarnya adalah titik stasioner.\n2. Tentukan jenisnya. Cara termudah dengan turunan kedua:\n   $f''(x) > 0$ berarti minimum (kurva membuka ke atas)\n   $f''(x) < 0$ berarti maksimum\n3. Hitung nilai fungsinya di titik-titik itu dengan $f$, bukan $f'$.\n\nUntuk soal terapan yang mencari ukuran optimum, tambahkan satu langkah: periksa apakah hasilnya masuk akal secara fisik. Panjang negatif bukan jawaban.\n\nLangkah 3 adalah jebakan tersering. Setelah bersusah payah mencari $x$, banyak yang lupa bahwa yang ditanya biasanya nilai maksimumnya, bukan letaknya.",
+      "questions": [
+        {
+          "id": "kal-turunan-aljabar-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Fungsi $f(x) = x^3 - 6x^2 + 9x$ mencapai nilai maksimum lokal sebesar ...",
+          "options": [
+            "$4$",
+            "$1$",
+            "$0$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Cari titik stasionernya:\n$$f'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3) = 0$$\n$$x = 1 \\quad \\text{atau} \\quad x = 3$$\n\nTentukan jenisnya lewat turunan kedua:\n$$f''(x) = 6x - 12$$\n$$f''(1) = -6 < 0 \\Rightarrow \\text{maksimum}$$\n\nHitung **nilainya** dengan $f$:\n$$f(1) = 1 - 6 + 9 = 4$$\n\nJadi nilai maksimumnya $4$, terjadi di $x=1$. Menjawab 1 berarti memberi letaknya, bukan nilainya.",
+          "hint": "Cari $x$-nya dulu, lalu hitung nilai fungsinya di situ.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-aljabar-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $f'(a) = 0$ dan $f''(a) > 0$, maka di $x = a$ fungsi mencapai ...",
+          "options": [
+            "minimum lokal",
+            "maksimum lokal",
+            "titik belok",
+            "tidak dapat ditentukan"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunan pertama nol berarti garis singgungnya mendatar — titik stasioner.\n\nTurunan kedua positif berarti kurvanya membuka ke atas di titik itu, seperti dasar mangkuk.\n\nDasar mangkuk adalah titik terendah, jadi ini **minimum lokal**.\n\nCara mengingatnya: $f''>0$ berarti gradiennya sedang naik — dari negatif, lewat nol, ke positif. Itu pola lembah, bukan puncak.",
+          "hint": "Turunan kedua positif berarti kurvanya membuka ke arah mana?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Titik stasioner: $f'(x) = 0$",
+        "$f''>0$ minimum, $f''<0$ maksimum",
+        "Nilai ekstremnya dihitung dengan $f$, bukan $f'$"
+      ],
+      "pitfall": "Menjawab dengan nilai $x$ padahal soal meminta nilai maksimum atau minimum fungsinya. Yang satu letak, yang lain nilai."
+    },
+    {
+      "id": "kal-turunan-aljabar-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada turunan",
+      "body": "**Lupa aturan rantai.** Turunan $(2x+1)^3$ adalah $3(2x+1)^2 \\cdot 2$. Faktor terakhir itu hilang pada sebagian besar kesalahan, dan hasilnya tepat separuh dari seharusnya.\n\n**Mengira $(uv)' = u'v'$.** Uji dengan $u = v = x$: ruas kiri memberi $2x$, ruas kanan memberi 1. Jelas berbeda.\n\n**Salah tanda pada aturan hasil bagi.** Pembilangnya $u'v - uv'$, dan urutannya tidak boleh ditukar.\n\n**Menjawab letak alih-alih nilai.** Kalau soal meminta nilai maksimum, jawabannya $f(a)$, bukan $a$.\n\n**Lupa turunan konstanta nol.** Suku tetap tidak punya kecuraman, jadi lenyap saat diturunkan.",
+      "questions": [
+        {
+          "id": "kal-turunan-aljabar-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = (2x+1)^3$ adalah ...",
+          "options": [
+            "$6(2x+1)^2$",
+            "$3(2x+1)^2$",
+            "$2(2x+1)^2$",
+            "$6(2x+1)^3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan rantai. Lapisan luar pangkat tiga, lapisan dalam $2x+1$:\n$$y' = 3(2x+1)^2 \\cdot \\frac{d}{dx}(2x+1) = 3(2x+1)^2 \\cdot 2$$\n$$= 6(2x+1)^2$$\n\nPilihan $3(2x+1)^2$ adalah jawaban tanpa mengalikan turunan bagian dalam — separuh dari yang benar.\n\nPeriksa di $x=0$: jabaran $(2x+1)^3 = 8x^3+12x^2+6x+1$ punya turunan $24x^2+24x+6$, yang di $x=0$ bernilai 6. Dan $6(1)^2 = 6$. Cocok.",
+          "hint": "Turunan bagian dalamnya berapa?",
+          "tags": [
+            "un",
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-aljabar-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $f(x) = 5$ adalah ...",
+          "options": [
+            "$0$",
+            "$5$",
+            "$5x$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Fungsi $f(x) = 5$ adalah garis mendatar — nilainya sama untuk setiap $x$.\n\nGaris mendatar punya gradien nol, dan turunan adalah gradien.\n\n$$f'(x) = 0$$\n\nInilah kenapa suku tetap selalu lenyap saat sebuah polinomial diturunkan.",
+          "hint": "Seberapa curam garis mendatar?",
+          "tags": [
+            "un"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Rantai: kalikan turunan bagian dalam",
+        "$(uv)' \\neq u'v'$",
+        "Hasil bagi: $u'v - uv'$, jangan ditukar",
+        "Nilai ekstrem dihitung dengan $f$"
+      ],
+      "pitfall": "Menurunkan $(2x+1)^3$ menjadi $3(2x+1)^2$ tanpa mengalikan 2, sehingga jawabannya tepat setengah dari yang benar."
+    }
+  ]
+}

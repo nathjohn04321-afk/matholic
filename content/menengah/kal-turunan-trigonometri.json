@@ -1,0 +1,268 @@
+{
+  "id": "kal-turunan-trigonometri",
+  "track": "menengah",
+  "title": "Turunan Fungsi Trigonometri",
+  "order": 20,
+  "prerequisites": [
+    "kal-turunan-aljabar",
+    "trg-perbandingan"
+  ],
+  "estimatedMinutes": 26,
+  "summary": "Turunan sinus dan kosinus, serta kenapa tanda minus hanya muncul pada satu di antaranya.",
+  "tags": [
+    "kalkulus",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "kal-turunan-trigonometri-c1",
+      "type": "konsep",
+      "title": "Kenapa turunan kosinus bertanda minus",
+      "body": "Dua turunan dasar ini sering dihafal berpasangan, dan tanda minusnya sering tertukar. Padahal alasannya bisa dilihat dari grafiknya.\n\n$$\\frac{d}{dx}\\sin x = \\cos x, \\qquad \\frac{d}{dx}\\cos x = -\\sin x$$\n\nPerhatikan grafik sinus di dekat $x=0$. Ia sedang naik dengan curam, dan memang $\\cos 0 = 1$ — gradien positif terbesar. Di $x = \\frac{\\pi}{2}$ grafiknya mencapai puncak dan mendatar, dan $\\cos\\frac{\\pi}{2} = 0$. Cocok.\n\nSekarang kosinus. Di $x = 0$ grafiknya berada di puncak, jadi gradiennya nol — dan $-\\sin 0 = 0$. Tepat setelah itu kosinus **turun**, jadi gradiennya negatif. Itulah asal tanda minusnya.\n\nJadi minus muncul pada kosinus karena kosinus mulai dari puncak lalu menurun, sedangkan sinus mulai dari nol lalu menanjak.",
+      "questions": [
+        {
+          "id": "kal-turunan-trigonometri-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\cos x$ adalah ...",
+          "options": [
+            "$-\\sin x$",
+            "$\\sin x$",
+            "$-\\cos x$",
+            "$\\tan x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunan kosinus adalah negatif sinus:\n$$\\frac{d}{dx}\\cos x = -\\sin x$$\n\nPeriksa lewat grafik di $x = 0$. Kosinus berada di puncak nilainya, lalu mulai menurun. Gradien sesaat setelah puncak harus negatif.\n\nDan memang $-\\sin x$ bernilai negatif untuk $x$ sedikit di atas nol.",
+          "hint": "Kosinus sedang naik atau turun tepat setelah $x=0$?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-trigonometri-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\sin 3x$ adalah ...",
+          "options": [
+            "$3\\cos 3x$",
+            "$\\cos 3x$",
+            "$3\\cos x$",
+            "$-3\\cos 3x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan rantai. Lapisan luar sinus, lapisan dalam $3x$:\n$$y' = \\cos(3x) \\cdot \\frac{d}{dx}(3x) = \\cos(3x) \\cdot 3$$\n$$= 3\\cos 3x$$\n\nFaktor 3 berasal dari turunan bagian dalamnya. Melupakannya memberi $\\cos 3x$ saja, yang keliru.",
+          "hint": "Turunan bagian dalam $3x$ adalah berapa?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\frac{d}{dx}\\sin x = \\cos x$",
+        "$\\frac{d}{dx}\\cos x = -\\sin x$",
+        "Minus pada kosinus karena ia mulai dari puncak lalu turun"
+      ],
+      "pitfall": "Menulis turunan kosinus sebagai $\\sin x$ tanpa tanda minus. Tanda itu satu-satunya pembeda kedua rumus, dan paling sering hilang."
+    },
+    {
+      "id": "kal-turunan-trigonometri-c2",
+      "type": "rumus",
+      "title": "Daftar turunan trigonometri",
+      "body": "Keenam turunan ini menutup seluruh soal di tingkat SMA. Tiga yang bertanda minus semuanya berawalan \"ko\" — kosinus, kosekan, kotangen. Pola itu memudahkan mengingatnya.\n\n$$\\frac{d}{dx}\\sin x = \\cos x$$\n$$\\frac{d}{dx}\\cos x = -\\sin x$$\n$$\\frac{d}{dx}\\tan x = \\sec^2 x$$\n$$\\frac{d}{dx}\\cot x = -\\csc^2 x$$\n$$\\frac{d}{dx}\\sec x = \\sec x\\tan x$$\n$$\\frac{d}{dx}\\csc x = -\\csc x\\cot x$$\n\nDigabung dengan aturan rantai, bentuk dengan sudut berkoefisien menjadi:\n$$\\frac{d}{dx}\\sin(ax+b) = a\\cos(ax+b)$$\n\nFaktor $a$ di depan itu adalah turunan bagian dalam, dan ia yang paling sering terlupa.\n\nSaat kamu memakai aturan rantai, bagian dalam tidak harus berbentuk linear. Untuk $\\sin(x^2)$ turunannya menjadi $2x\\cos(x^2)$, bukan $\\cos(2x)$: turunan bagian dalam dikalikan di depan, bukan dimasukkan ke dalam fungsi. Uji cepat kebenarannya dengan mengganti $x$ dengan angka kecil dan membandingkan kemiringan grafik di titik itu.",
+      "questions": [
+        {
+          "id": "kal-turunan-trigonometri-q3",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Tentukan turunan dari $y = x\\sin x$.",
+          "answer": "sin x + x cos x",
+          "acceptedAnswers": [
+            "x cos x + sin x",
+            "sin(x) + x cos(x)",
+            "xcosx+sinx"
+          ],
+          "solution": "Ini hasil kali dua fungsi, jadi pakai aturan hasil kali dengan $u = x$ dan $v = \\sin x$:\n$$u' = 1, \\qquad v' = \\cos x$$\n\n$$y' = u'v + uv' = (1)(\\sin x) + (x)(\\cos x)$$\n$$= \\sin x + x\\cos x$$\n\nMenulis $\\cos x$ saja berarti memperlakukan turunan hasil kali sebagai hasil kali turunan — keliru.",
+          "hint": "Ada dua fungsi yang dikalikan.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-trigonometri-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\cos 2x$ di $x = 0$ bernilai ...",
+          "options": [
+            "$0$",
+            "$-2$",
+            "$2$",
+            "$-1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunkan dengan aturan rantai:\n$$y' = -\\sin(2x) \\cdot 2 = -2\\sin 2x$$\n\nSubstitusikan $x = 0$:\n$$-2\\sin 0 = -2(0) = 0$$\n\nMasuk akal lewat grafik: di $x=0$ kosinus berada di puncaknya, dan puncak selalu mendatar — gradiennya nol.",
+          "hint": "Di $x=0$ kosinus sedang di puncak atau sedang naik?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Yang berawalan \"ko\" bertanda minus",
+        "$\\frac{d}{dx}\\tan x = \\sec^2 x$",
+        "$\\frac{d}{dx}\\sin(ax+b) = a\\cos(ax+b)$"
+      ],
+      "pitfall": "Lupa faktor $a$ pada turunan $\\sin(ax)$. Untuk $\\sin 5x$ turunannya $5\\cos 5x$, bukan $\\cos 5x$."
+    },
+    {
+      "id": "kal-turunan-trigonometri-c3",
+      "type": "teknik",
+      "title": "Menggabung dengan aturan lain",
+      "body": "Sebagian besar soal turunan trigonometri sebenarnya menguji apakah kamu bisa menggabungkan beberapa aturan sekaligus.\n\n**Rantai di dalam hasil kali:** untuk $y = x^2\\sin 3x$, pakai aturan hasil kali dulu, lalu aturan rantai saat menurunkan $\\sin 3x$:\n$$y' = 2x\\sin 3x + x^2 \\cdot 3\\cos 3x$$\n\n**Pangkat fungsi trigonometri:** bentuk $\\sin^2 x$ berarti $(\\sin x)^2$, jadi aturan rantai berlaku dengan lapisan luar pangkat dua:\n$$\\frac{d}{dx}\\sin^2 x = 2\\sin x \\cdot \\cos x$$\n\nHasilnya kebetulan sama dengan $\\sin 2x$, lewat identitas sudut rangkap.\n\nKuncinya: kerjakan lapisan demi lapisan dari luar ke dalam, dan tuliskan tiap lapisan sebelum menyederhanakan. Menggabungkan langkah dalam kepala adalah sumber kesalahan tersering.",
+      "questions": [
+        {
+          "id": "kal-turunan-trigonometri-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\sin^2 x$ adalah ...",
+          "options": [
+            "$2\\sin x\\cos x$",
+            "$2\\sin x$",
+            "$\\cos^2 x$",
+            "$2\\cos x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Bentuk $\\sin^2 x$ berarti $(\\sin x)^2$, jadi pakai aturan rantai dengan lapisan luar pangkat dua:\n$$y' = 2(\\sin x)^1 \\cdot \\frac{d}{dx}\\sin x$$\n$$= 2\\sin x\\cos x$$\n\nLewat identitas sudut rangkap, hasilnya bisa ditulis $\\sin 2x$.\n\nMenjawab $2\\sin x$ berarti lupa mengalikan turunan lapisan dalamnya.",
+          "hint": "Lapisan luarnya pangkat dua, lapisan dalamnya sinus.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-trigonometri-q6",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = x^2\\cos x$ adalah ...",
+          "options": [
+            "$2x\\cos x - x^2\\sin x$",
+            "$2x\\sin x$",
+            "$-2x\\sin x$",
+            "$2x\\cos x + x^2\\sin x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan hasil kali dengan $u = x^2$ dan $v = \\cos x$:\n$$u' = 2x, \\qquad v' = -\\sin x$$\n\n$$y' = u'v + uv' = 2x\\cos x + x^2(-\\sin x)$$\n$$= 2x\\cos x - x^2\\sin x$$\n\nTanda minus muncul dari turunan kosinus, bukan dari aturan hasil kali. Pilihan terakhir keliru karena tanda itu hilang.",
+          "hint": "Turunan kosinus membawa tanda minusnya sendiri.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Kerjakan lapisan demi lapisan dari luar ke dalam",
+        "$\\sin^2 x$ berarti $(\\sin x)^2$",
+        "$\\frac{d}{dx}\\sin^2 x = 2\\sin x\\cos x$"
+      ],
+      "pitfall": "Membaca $\\sin^2 x$ sebagai $\\sin(x^2)$. Keduanya berbeda sama sekali, dan turunannya pun berbeda."
+    },
+    {
+      "id": "kal-turunan-trigonometri-c4",
+      "type": "teknik",
+      "title": "Nilai ekstrem fungsi trigonometri",
+      "body": "Mencari maksimum dan minimum fungsi trigonometri memakai langkah yang sama seperti fungsi aljabar, dengan satu perbedaan penting.\n\n1. Turunkan, lalu selesaikan $f'(x) = 0$.\n2. Karena persamaan trigonometri punya banyak penyelesaian, batasi pada selang yang diminta soal.\n3. Periksa jenisnya dengan turunan kedua, atau dengan mengamati tanda turunan di sekitarnya.\n4. Hitung nilai fungsinya di tiap titik stasioner **dan** di kedua ujung selang.\n\nLangkah 4 sering terlupa. Pada selang tertutup, nilai terbesar atau terkecil bisa terjadi di ujung selang, bukan di titik stasioner — terutama kalau fungsinya monoton di selang itu.\n\nUntuk bentuk sederhana seperti $a\\sin x + b$, kamu bahkan tidak perlu menurunkan: karena $\\sin x$ berkisar antara $-1$ dan 1, nilai ekstremnya langsung terbaca.",
+      "questions": [
+        {
+          "id": "kal-turunan-trigonometri-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Nilai maksimum dari $f(x) = 3\\sin x + 2$ adalah ...",
+          "options": [
+            "$5$",
+            "$3$",
+            "$2$",
+            "$1$"
+          ],
+          "answerIndex": 0,
+          "solution": "Tidak perlu menurunkan. Nilai $\\sin x$ selalu berkisar antara $-1$ dan $1$.\n\nNilai terbesar tercapai saat $\\sin x = 1$:\n$$f = 3(1) + 2 = 5$$\n\nNilai terkecilnya saat $\\sin x = -1$, yaitu $3(-1)+2 = -1$.\n\nPola umumnya: $a\\sin x + b$ berkisar antara $b-|a|$ dan $b+|a|$.",
+          "hint": "Berapa nilai terbesar yang bisa dicapai sinus?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-trigonometri-q8",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Fungsi $f(x) = \\sin x$ pada selang $0 \\le x \\le \\frac{\\pi}{2}$ mencapai nilai maksimum di ...",
+          "options": [
+            "$x = \\frac{\\pi}{2}$, di ujung selang",
+            "$x = 0$",
+            "$x = \\frac{\\pi}{4}$",
+            "tidak ada maksimum"
+          ],
+          "answerIndex": 0,
+          "solution": "Turunkan:\n$$f'(x) = \\cos x$$\n\nSelesaikan $\\cos x = 0$: penyelesaiannya $x = \\frac{\\pi}{2}$, yang justru berada tepat di ujung selang.\n\nPada selang ini $\\cos x \\ge 0$, jadi fungsinya naik terus dari awal sampai akhir. Nilai terbesarnya tercapai di ujung kanan:\n$$f\\left(\\tfrac{\\pi}{2}\\right) = 1$$\n\nInilah kenapa ujung selang wajib diperiksa — kalau fungsinya monoton, di situlah ekstremnya.",
+          "hint": "Apakah fungsinya naik atau turun di sepanjang selang itu?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Batasi penyelesaian pada selang yang diminta",
+        "Periksa juga nilai di ujung selang",
+        "$a\\sin x + b$ berkisar antara $b-|a|$ dan $b+|a|$"
+      ],
+      "pitfall": "Hanya memeriksa titik stasioner dan melupakan ujung selang, padahal pada selang tertutup nilai ekstrem sering justru berada di ujungnya."
+    },
+    {
+      "id": "kal-turunan-trigonometri-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada turunan trigonometri",
+      "body": "**Menghilangkan tanda minus pada kosinus.** Ini kesalahan nomor satu, dan satu-satunya pembeda antara dua rumus dasar.\n\n**Lupa faktor dari aturan rantai.** Turunan $\\sin 4x$ adalah $4\\cos 4x$. Tanpa faktor 4, jawabanmu meleset sebesar kelipatan itu.\n\n**Membaca $\\sin^2 x$ sebagai $\\sin(x^2)$.** Keduanya berbeda sama sekali. Yang pertama pangkat dua dari sinus; yang kedua sinus dari $x$ kuadrat.\n\n**Memakai derajat.** Rumus turunan trigonometri hanya berlaku dalam radian, alasan yang sama seperti pada limit istimewa.\n\n**Melupakan ujung selang** saat mencari nilai ekstrem pada selang tertutup.",
+      "questions": [
+        {
+          "id": "kal-turunan-trigonometri-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Turunan dari $y = \\sin 4x$ adalah ...",
+          "options": [
+            "$4\\cos 4x$",
+            "$\\cos 4x$",
+            "$4\\cos x$",
+            "$-4\\cos 4x$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai aturan rantai:\n$$y' = \\cos(4x) \\cdot \\frac{d}{dx}(4x) = 4\\cos 4x$$\n\nFaktor 4 berasal dari turunan bagian dalam.\n\nMenjawab $\\cos 4x$ berarti melupakannya, dan jawabannya menjadi seperempat dari yang benar — kesalahan yang tidak terlihat dari bentuk jawabannya.",
+          "hint": "Apa turunan dari $4x$?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "kal-turunan-trigonometri-q10",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Manakah pernyataan yang benar?",
+          "options": [
+            "$\\sin^2 x$ berarti $(\\sin x)^2$",
+            "$\\sin^2 x$ berarti $\\sin(x^2)$",
+            "$\\sin^2 x$ berarti $2\\sin x$",
+            "$\\sin^2 x$ berarti $\\sin x \\cdot 2$"
+          ],
+          "answerIndex": 0,
+          "solution": "Notasi $\\sin^2 x$ adalah penulisan singkat untuk $(\\sin x)^2$ — hitung sinusnya dulu, lalu kuadratkan hasilnya.\n\nBandingkan dengan $\\sin(x^2)$, yang mengkuadratkan sudutnya lebih dulu baru mengambil sinusnya. Keduanya memberi hasil berbeda.\n\nPeriksa di $x = 2$ radian: $\\sin^2 2 \\approx 0{,}827$ sedangkan $\\sin(4) \\approx -0{,}757$. Jelas berbeda.\n\nTurunannya pun berbeda: yang pertama $2\\sin x\\cos x$, yang kedua $2x\\cos(x^2)$.",
+          "hint": "Mana yang dikuadratkan — sudutnya atau hasil sinusnya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Turunan kosinus bertanda minus",
+        "Rantai: jangan lupa faktornya",
+        "$\\sin^2 x \\neq \\sin(x^2)$",
+        "Rumusnya berlaku dalam radian"
+      ],
+      "pitfall": "Menulis turunan $\\sin 4x$ sebagai $\\cos 4x$ tanpa faktor 4, sehingga jawabannya seperempat dari yang benar."
+    }
+  ]
+}
