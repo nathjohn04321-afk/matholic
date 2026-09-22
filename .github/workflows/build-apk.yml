@@ -68,6 +68,8 @@ jobs:
     needs: periksa
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
@@ -107,12 +109,49 @@ jobs:
             echo "- \`$(basename "$f")\` — $size" >> "$GITHUB_STEP_SUMMARY"
           done
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Unduh dari bagian **Artifacts** di bawah." >> "$GITHUB_STEP_SUMMARY"
+          echo "Unduh dari bagian **Artifacts** di bawah, atau lewat Release \`apk-terbaru\`." >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Unggah APK
+      - name: Unggah APK sebagai artifact
         uses: actions/upload-artifact@v4
         with:
           name: mathdeck-apk
           path: android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
           retention-days: 30
+
+      # Artifact hanya bisa diunduh sebagai zip dan menuntut login GitHub.
+      # Release memberi tautan .apk langsung yang bisa dibuka di HP tanpa login,
+      # jadi APK yang sama diterbitkan juga ke sana. Tag-nya tetap, isinya
+      # ditimpa tiap build, sehingga tautannya tidak pernah berubah.
+      - name: Terbitkan APK ke Release
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/claude/milestone-1-w8yh53'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          apk=$(ls android/app/build/outputs/apk/release/*.apk | head -1)
+          cp "$apk" mathdeck.apk
+
+          tag=apk-terbaru
+          catatan="APK MathDeck, dirakit otomatis dari commit ${GITHUB_SHA}.
+
+          Unduh \`mathdeck.apk\` di bawah, lalu pasang di HP Android.
+          Perlu mengizinkan \"Instal aplikasi tidak dikenal\" untuk peramban
+          atau pengelola berkas yang kamu pakai.
+
+          Ditandatangani dengan kunci debug, jadi bisa langsung dipasang tanpa
+          menyiapkan keystore. Untuk rilis ke Play Store, keystore sendiri
+          wajib dibuat (caranya ada di README)."
+
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release edit "$tag" --notes "$catatan"
+            gh release upload "$tag" mathdeck.apk --clobber
+          else
+            gh release create "$tag" mathdeck.apk \
+              --title "MathDeck — APK terbaru" \
+              --notes "$catatan" \
+              --prerelease
+          fi
+
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "APK juga terbit di Release: <https://github.com/${GITHUB_REPOSITORY}/releases/tag/${tag}>" >> "$GITHUB_STEP_SUMMARY"
