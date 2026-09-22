@@ -1,0 +1,280 @@
+{
+  "id": "osn-segiempat-siklik",
+  "track": "olimpiade",
+  "title": "Segiempat Siklik dan Kuasa Titik",
+  "order": 11,
+  "prerequisites": [
+    "geo-lingkaran"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Empat titik pada satu lingkaran memaksa hubungan sudut yang menyelesaikan banyak soal sekaligus.",
+  "tags": [
+    "geometri",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-segiempat-siklik-c1",
+      "type": "konsep",
+      "title": "Sudut keliling dan akibatnya",
+      "body": "Seluruh geometri lingkaran bersandar pada satu fakta:\n\n**Sudut keliling yang menghadap busur yang sama besarnya sama, dan besarnya setengah sudut pusat yang menghadap busur itu.**\n\nDari sini mengalir hampir semua yang kamu perlukan:\n\n**Sudut menghadap diameter selalu $90°$.** Sudut pusatnya $180°$, jadi sudut kelilingnya $90°$. Akibat praktisnya besar: setiap kali kamu melihat sudut siku-siku, tanyakan apakah ada lingkaran berdiameter sisi miringnya.\n\n**Segiempat siklik punya sudut berhadapan berjumlah $180°$.** Kedua sudut itu menghadap dua busur yang bersama-sama membentuk lingkaran penuh, yaitu $360°$. Setengahnya adalah $180°$.\n\n**Kebalikannya juga berlaku**, dan inilah yang paling sering dipakai di olimpiade: kalau sudut berhadapan sebuah segiempat berjumlah $180°$, keempat titiknya pasti terletak pada satu lingkaran.\n\nMembuktikan empat titik konsiklis sering menjadi langkah kunci yang membuka seluruh soal — karena begitu lingkarannya ada, semua hubungan sudut di atas ikut tersedia.",
+      "questions": [
+        {
+          "id": "osn-segiempat-siklik-q1",
+          "difficulty": 1,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segiempat siklik $ABCD$, jika $\\angle A = 70°$, maka $\\angle C$ adalah ...",
+          "options": [
+            "$110°$",
+            "$70°$",
+            "$20°$",
+            "$290°$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pada segiempat siklik, sudut yang berhadapan selalu berjumlah $180°$:\n\n$$\\angle A + \\angle C = 180°$$\n$$70° + \\angle C = 180° \\Rightarrow \\angle C = 110°$$\n\nAlasannya: kedua sudut itu menghadap dua busur yang bersama-sama melingkupi seluruh lingkaran, yaitu $360°$. Karena sudut keliling adalah setengah sudut pusatnya, jumlah keduanya menjadi $180°$.\n\nPerhatikan bahwa yang berjumlah $180°$ adalah sudut **berhadapan**, bukan sudut bersebelahan.",
+          "hint": "Sudut berhadapan pada segiempat siklik berjumlah berapa?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q2",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah sudut pusat menghadap busur tertentu berukuran $120°$. Sudut keliling yang menghadap busur yang sama berukuran ...",
+          "options": [
+            "$60°$",
+            "$120°$",
+            "$240°$",
+            "$30°$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut keliling selalu setengah dari sudut pusat yang menghadap busur yang sama:\n\n$$\\angle\\text{keliling} = \\frac{1}{2} \\times 120° = 60°$$\n\nPerhatikan bahwa hasilnya tidak bergantung pada **di mana** titik sudut kelilingnya ditempatkan pada lingkaran. Semua sudut keliling yang menghadap busur itu besarnya sama, $60°$.\n\nSifat \"tidak bergantung letak\" inilah yang membuat hubungan ini begitu berguna — ia mengubah titik yang bergerak menjadi sudut yang tetap.",
+          "hint": "Sudut keliling adalah setengah sudut pusatnya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sudut keliling pada busur sama besarnya sama",
+        "Sudut menghadap diameter selalu $90°$",
+        "Sudut berhadapan berjumlah $180°$ ⟺ keempat titiknya konsiklis"
+      ],
+      "pitfall": "Memakai kesamaan sudut keliling untuk titik-titik yang belum terbukti konsiklis. Hubungan itu hanya berlaku setelah keempat titiknya dipastikan berada pada satu lingkaran — bukan sebelumnya."
+    },
+    {
+      "id": "osn-segiempat-siklik-c2",
+      "type": "teknik",
+      "title": "Membuktikan empat titik konsiklis",
+      "body": "Banyak soal olimpiade sebenarnya berbunyi \"buktikan keempat titik ini konsiklis\", meski tidak dikatakan begitu. Ada empat cara membuktikannya.\n\n**1. Sudut berhadapan berjumlah $180°$.** Cara paling langsung untuk segiempat cembung.\n\n**2. Sudut pada sisi yang sama sama besar.** Kalau $\\angle ACB = \\angle ADB$ dengan $C$ dan $D$ berada di sisi yang sama terhadap garis $AB$, maka $A$, $B$, $C$, $D$ konsiklis. Keduanya menghadap $AB$ dengan sudut sama, jadi keduanya berada pada busur yang sama.\n\n**3. Kuasa titik.** Kalau dua garis berpotongan di $P$ dan $PA \\cdot PB = PC \\cdot PD$, maka $A$, $B$, $C$, $D$ konsiklis.\n\n**4. Dua sudut siku-siku pada ruas yang sama.** Kalau $\\angle ACB = \\angle ADB = 90°$, maka $C$ dan $D$ keduanya berada pada lingkaran berdiameter $AB$.\n\nCara keempat itu sangat sering muncul pada soal yang melibatkan kaki garis tinggi segitiga — dua kaki garis tinggi bersama dua titik sudut hampir selalu membentuk segiempat siklik.\n\nBegitu konsiklisnya terbukti, seluruh hubungan sudut lingkaran langsung tersedia, dan soal yang tadinya buntu biasanya terbuka.",
+      "questions": [
+        {
+          "id": "osn-segiempat-siklik-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Jika $\\angle ACB = \\angle ADB = 90°$, maka titik $A$, $B$, $C$, dan $D$ ...",
+          "options": [
+            "terletak pada satu lingkaran berdiameter $AB$",
+            "membentuk persegi panjang",
+            "tidak dapat ditentukan hubungannya",
+            "terletak pada satu garis"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut yang menghadap diameter selalu $90°$, dan kebalikannya juga berlaku.\n\nKarena $\\angle ACB = 90°$, titik $C$ berada pada lingkaran berdiameter $AB$. Dengan alasan yang sama persis, $\\angle ADB = 90°$ menempatkan $D$ pada lingkaran yang sama.\n\nJadi keempat titiknya konsiklis, pada lingkaran berdiameter $AB$.\n\nPilihan persegi panjang terlalu kuat — $C$ dan $D$ boleh berada di mana saja pada lingkaran itu, termasuk di sisi yang sama, dan bentuknya tidak harus persegi panjang.\n\nPola ini sangat produktif pada soal yang melibatkan kaki garis tinggi segitiga.",
+          "hint": "Sudut siku-siku menghadap apa pada sebuah lingkaran?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q3b",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Diketahui $\\angle ACB = \\angle ADB$ dengan $C$ dan $D$ berada di sisi yang **berlawanan** terhadap garis $AB$. Kesimpulan yang tepat adalah ...",
+          "options": [
+            "belum tentu konsiklis; syarat untuk sisi berlawanan adalah jumlah $180°$",
+            "keempat titik pasti konsiklis",
+            "$C$ dan $D$ pasti berimpit",
+            "$ACBD$ pasti jajar genjang"
+          ],
+          "answerIndex": 0,
+          "solution": "Syarat konsiklis lewat kesamaan sudut menuntut kedua titik berada di sisi **sama** terhadap garis penghubungnya. Keduanya lalu menghadap busur yang sama.\n\nKalau $C$ dan $D$ berada di sisi berlawanan, keduanya menghadap dua busur berbeda yang bersama-sama membentuk lingkaran penuh. Syarat konsiklisnya berubah menjadi:\n\n$$\\angle ACB + \\angle ADB = 180°$$\n\nJadi kesamaan sudut untuk titik di sisi berlawanan justru **bukan** tanda konsiklis — kecuali kebetulan keduanya bernilai $90°$.\n\nMemeriksa posisi relatif sebelum menyimpulkan adalah langkah yang sering terlewat, dan kesalahannya tidak terlihat sampai gambarnya digambar ulang.",
+          "hint": "Kedua titik menghadap busur yang sama atau busur yang berbeda?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Empat cara: sudut berhadapan, sudut sehadap, kuasa titik, dua sudut siku-siku",
+        "Dua sudut siku-siku pada ruas sama memberi lingkaran berdiameter ruas itu",
+        "Kaki garis tinggi hampir selalu menghasilkan segiempat siklik"
+      ],
+      "pitfall": "Menyimpulkan konsiklis dari kesamaan sudut tanpa memeriksa kedua titik berada di sisi yang sama terhadap garis penghubungnya. Kalau keduanya di sisi berlawanan, syarat yang berlaku justru jumlah $180°$, bukan kesamaan."
+    },
+    {
+      "id": "osn-segiempat-siklik-c3",
+      "type": "rumus",
+      "title": "Kuasa titik terhadap lingkaran",
+      "body": "Untuk sebuah titik $P$ dan lingkaran berpusat $O$ berjari-jari $r$, **kuasa** titik itu adalah:\n$$\\text{pow}(P) = OP^2 - r^2$$\n\nTandanya memberi tahu letaknya: positif kalau $P$ di luar lingkaran, nol kalau di lingkaran, negatif kalau di dalam.\n\nYang membuatnya berguna adalah sifat berikut. Tarik garis mana pun lewat $P$ yang memotong lingkaran di $A$ dan $B$. Maka hasil kali $PA \\cdot PB$ **sama untuk setiap garis yang dipilih**, dan besarnya adalah nilai mutlak kuasanya.\n\nDari sini lahir tiga bentuk yang sering dipakai:\n\n**Dua tali busur berpotongan di dalam:** $PA \\cdot PB = PC \\cdot PD$\n\n**Dua garis potong dari titik luar:** $PA \\cdot PB = PC \\cdot PD$\n\n**Garis singgung dan garis potong:** $PT^2 = PA \\cdot PB$, dengan $T$ titik singgungnya\n\nBentuk ketiga itu adalah kasus khusus dari yang kedua, ketika kedua titik potongnya berimpit menjadi satu titik singgung.\n\nKegunaan terbesarnya: mengubah soal tentang **sudut** menjadi soal tentang **panjang**, atau sebaliknya.",
+      "questions": [
+        {
+          "id": "osn-segiempat-siklik-q4",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Dari titik $P$ di luar lingkaran ditarik garis singgung $PT$ dengan $PT = 6$, dan sebuah garis potong yang memotong lingkaran di $A$ dan $B$ dengan $PA = 4$. Panjang $PB$ adalah ...",
+          "options": [
+            "$9$",
+            "$8$",
+            "$12$",
+            "$6$"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai kuasa titik untuk garis singgung dan garis potong:\n\n$$PT^2 = PA \\cdot PB$$\n$$6^2 = 4 \\cdot PB$$\n$$36 = 4 \\cdot PB \\Rightarrow PB = 9$$\n\nCek kewajarannya: $PB = 9$ lebih besar dari $PA = 4$, yang memang seharusnya karena $B$ adalah titik potong yang lebih jauh dari $P$.\n\nPerhatikan bahwa $PT$ dikuadratkan. Kalau kamu menulis $6 = 4 \\cdot PB$, satuannya tidak cocok — ruas kanan adalah hasil kali dua panjang.",
+          "hint": "$PT$ dikuadratkan pada rumus kuasa titik.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q5",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Dua tali busur berpotongan di dalam lingkaran. Tali busur pertama terbagi menjadi $2$ dan $6$, tali busur kedua terbagi menjadi $3$ dan $x$. Berapa nilai $x$? (bilangan bulat)",
+          "answer": "4",
+          "acceptedAnswers": [
+            "4"
+          ],
+          "solution": "Pakai kuasa titik untuk dua tali busur yang berpotongan:\n\n$$PA \\cdot PB = PC \\cdot PD$$\n$$2 \\times 6 = 3 \\times x$$\n$$12 = 3x \\Rightarrow x = 4$$\n\nPerhatikan bahwa hasil kalinya sama, yaitu $12$, untuk kedua tali busur. Nilai itulah kuasa titik potongnya — sama untuk setiap tali busur yang lewat titik itu, berapa pun arahnya.\n\nKarena titiknya berada di dalam lingkaran, kuasanya sebenarnya bernilai $-12$; yang dipakai pada rumus panjang adalah nilai mutlaknya.",
+          "hint": "Hasil kali kedua potongan sama untuk semua tali busur lewat titik itu.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q6",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah titik $P$ berjarak $10$ dari pusat lingkaran berjari-jari $6$. Panjang garis singgung dari $P$ ke lingkaran adalah ...",
+          "options": [
+            "$8$",
+            "$4$",
+            "$16$",
+            "$\\sqrt{136}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Jari-jari selalu tegak lurus terhadap garis singgung di titik singgungnya, jadi segitiga yang terbentuk siku-siku dengan sisi miring $OP$.\n\n$$PT^2 = OP^2 - r^2 = 10^2 - 6^2 = 100 - 36 = 64$$\n$$PT = 8$$\n\nPerhatikan bahwa $PT^2 = 64$ persis sama dengan kuasa titik $P$. Ini bukan kebetulan — panjang garis singgung memang akar dari kuasanya, dan itu berlaku untuk setiap titik di luar lingkaran.\n\nPilihan $\\sqrt{136}$ muncul kalau kamu menjumlahkan alih-alih mengurangkan.",
+          "hint": "Jari-jari tegak lurus garis singgung; pakai Pythagoras.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "$\\text{pow}(P) = OP^2 - r^2$; tandanya menunjukkan letak $P$",
+        "$PA \\cdot PB$ sama untuk setiap garis lewat $P$",
+        "Garis singgung: $PT^2 = PA \\cdot PB$"
+      ],
+      "pitfall": "Menukar urutan ruas pada garis singgung, misalnya menulis $PT = PA \\cdot PB$ tanpa kuadrat. Perhatikan satuannya: ruas kanan adalah hasil kali dua panjang, jadi ruas kirinya juga harus berupa kuadrat panjang."
+    },
+    {
+      "id": "osn-segiempat-siklik-c4",
+      "type": "teknik",
+      "title": "Mengejar sudut",
+      "body": "Teknik paling dasar sekaligus paling sering berhasil dalam geometri olimpiade adalah **mengejar sudut**: beri nama satu sudut, lalu nyatakan semua sudut lain lewat nama itu sampai sesuatu terhubung.\n\nUrutan kerjanya:\n\n**1. Gambar besar dan rapi.** Gambar kecil menyembunyikan hubungan. Pakai penggaris kalau ada.\n\n**2. Tandai yang diketahui** — sudut sama diberi tanda sama, ruas sama diberi tanda sama.\n\n**3. Beri nama satu sudut $x$**, lalu telusuri akibatnya ke seluruh gambar.\n\n**4. Cari segiempat siklik.** Setiap kali kamu menemukan dua sudut sama menghadap ruas yang sama, atau dua sudut berhadapan berjumlah $180°$, kamu mendapat lingkaran baru — dan lingkaran itu memberi hubungan sudut tambahan.\n\nAlat pendukung yang sering diperlukan: jumlah sudut segitiga $180°$, sudut luar sama dengan jumlah dua sudut dalam yang tak bersebelahan, segitiga sama kaki punya dua sudut alas sama, dan sudut antara tali busur dengan garis singgung sama dengan sudut keliling di seberangnya.\n\nKalau pengejaran sudut buntu, itu biasanya tanda bahwa ada lingkaran tersembunyi yang belum kamu temukan — cari empat titik yang mungkin konsiklis.",
+      "questions": [
+        {
+          "id": "osn-segiempat-siklik-q7",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segiempat siklik $ABCD$, diketahui $\\angle B = 85°$. Besar $\\angle D$ adalah ...",
+          "options": [
+            "$95°$",
+            "$85°$",
+            "$105°$",
+            "$175°$"
+          ],
+          "answerIndex": 0,
+          "solution": "Sudut $B$ dan $D$ saling berhadapan pada segiempat siklik, jadi jumlahnya $180°$:\n\n$$\\angle B + \\angle D = 180°$$\n$$85° + \\angle D = 180° \\Rightarrow \\angle D = 95°$$\n\nPerhatikan bahwa sifat ini **tidak** berlaku untuk segiempat sembarang — hanya untuk yang keempat titiknya terletak pada satu lingkaran.\n\nJustru karena itu, menemukan bahwa jumlahnya $180°$ pada sebuah soal sering menjadi cara untuk membuktikan bahwa lingkarannya memang ada.",
+          "hint": "Sudut $B$ dan $D$ berhadapan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q8",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Pada setiap segiempat, sudut-sudut yang berhadapan berjumlah $180°$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Sifat itu hanya berlaku untuk segiempat **siklik**, yaitu yang keempat titiknya terletak pada satu lingkaran.\n\nContoh tandingan: jajar genjang dengan sudut $60°$ dan $120°$. Sudut yang berhadapan pada jajar genjang justru **sama besar**, jadi jumlahnya $120°$ atau $240°$ — bukan $180°$.\n\nYang benar untuk segiempat sembarang adalah jumlah **keempat** sudutnya sama dengan $360°$.\n\nKebetulan menarik: jajar genjang menjadi siklik tepat ketika ia berbentuk persegi panjang, karena di situlah sudut yang sama besar itu masing-masing bernilai $90°$ sehingga jumlahnya tepat $180°$.",
+          "hint": "Coba jajar genjang dengan sudut $60°$ dan $120°$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Beri nama satu sudut, lalu telusuri akibatnya ke seluruh gambar",
+        "Gambar besar dan rapi; gambar kecil menyembunyikan hubungan",
+        "Buntu biasanya berarti ada lingkaran tersembunyi"
+      ],
+      "pitfall": "Menggambar terlalu istimewa, misalnya membuat segitiga sembarang menjadi hampir sama sisi. Gambar semacam itu memunculkan kesamaan yang sebenarnya kebetulan, dan kamu bisa membuktikan sesuatu yang tidak berlaku umum."
+    },
+    {
+      "id": "osn-segiempat-siklik-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan geometri lingkaran",
+      "body": "**1. Memakai sifat siklik sebelum membuktikannya.** Sudut berhadapan berjumlah $180°$ hanya berlaku setelah keempat titiknya terbukti konsiklis. Memakainya untuk membuktikan konsiklis itu sendiri adalah penalaran berputar.\n\n**2. Melupakan posisi relatif pada kesamaan sudut.** Dua sudut sama besar memberi konsiklis hanya kalau kedua titiknya di sisi **sama** terhadap garis penghubung. Di sisi berlawanan, yang berlaku justru jumlah $180°$.\n\n**3. Salah bentuk pada kuasa titik garis singgung.** Rumusnya $PT^2 = PA \\cdot PB$, bukan $PT = PA \\cdot PB$. Periksa satuannya kalau ragu.\n\n**4. Menggambar terlalu istimewa.** Segitiga yang kamu gambar hampir sama sisi akan memunculkan kesamaan yang tidak berlaku umum. Gambarlah sengaja tidak simetris.\n\nKebiasaan yang menutup sebagian besarnya: gambar ulang soalnya dengan konfigurasi berbeda. Kalau kesimpulanmu bertahan di dua gambar yang cukup berbeda, kemungkinan besar ia memang berlaku umum — dan kalau tidak, kamu langsung tahu sebelum menulis satu baris bukti.",
+      "questions": [
+        {
+          "id": "osn-segiempat-siklik-q9",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Dari titik $P$ di luar lingkaran ditarik dua garis potong. Garis pertama memotong lingkaran di $A$ dan $B$ dengan $PA = 3$ dan $PB = 8$. Garis kedua memotong di $C$ dan $D$ dengan $PC = 4$. Panjang $PD$ adalah ...",
+          "options": [
+            "$6$",
+            "$5$",
+            "$12$",
+            "$24$"
+          ],
+          "answerIndex": 0,
+          "solution": "Kuasa titik $P$ bernilai sama untuk setiap garis yang ditarik lewatnya:\n\n$$PA \\cdot PB = PC \\cdot PD$$\n$$3 \\times 8 = 4 \\times PD$$\n$$24 = 4 \\cdot PD \\Rightarrow PD = 6$$\n\nPerhatikan bahwa kuasanya adalah $24$ untuk kedua garis — itulah inti sifatnya. Berapa pun arah garis yang kamu tarik dari $P$, hasil kali kedua jaraknya tetap $24$.\n\nCek kewajarannya: $PD = 6$ lebih besar dari $PC = 4$, sesuai dengan $D$ sebagai titik potong yang lebih jauh.",
+          "hint": "Hasil kalinya sama untuk kedua garis.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-segiempat-siklik-q9b",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Kesalahan yang paling merusak saat menggambar sketsa soal geometri olimpiade adalah ...",
+          "options": [
+            "menggambar bangun terlalu istimewa, misalnya hampir sama sisi",
+            "menggambar terlalu besar",
+            "memberi tanda pada sudut yang sama",
+            "memakai penggaris"
+          ],
+          "answerIndex": 0,
+          "solution": "Gambar yang terlalu istimewa memunculkan hubungan yang sebenarnya **kebetulan**, bukan akibat dari syarat soalnya.\n\nMisalnya, kalau kamu menggambar segitiga sembarang menjadi hampir sama sisi, ketiga garis tingginya akan terlihat hampir sama panjang. Kalau buktimu diam-diam bersandar pada kesamaan itu, ia akan runtuh pada segitiga yang benar-benar sembarang.\n\nJustru kebalikannya yang disarankan: **gambar sengaja tidak simetris**. Segitiga yang sudutnya jelas berbeda-beda akan memperlihatkan hubungan mana yang benar-benar dipaksa oleh syarat soalnya.\n\nMenggambar besar, memberi tanda, dan memakai penggaris semuanya justru membantu.",
+          "hint": "Hubungan mana yang muncul karena syarat soal, dan mana yang kebetulan?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Buktikan konsiklis dulu, baru pakai sifatnya",
+        "Kesamaan sudut butuh kedua titik di sisi yang sama",
+        "Gambar ulang dengan konfigurasi berbeda untuk mengujinya"
+      ],
+      "pitfall": "Membuktikan sesuatu yang hanya berlaku pada gambar yang kamu buat. Gambar yang kebetulan simetris memunculkan hubungan semu, dan bukti yang bersandar padanya akan runtuh pada konfigurasi lain."
+    }
+  ]
+}

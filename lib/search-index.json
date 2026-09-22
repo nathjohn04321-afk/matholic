@@ -2032,6 +2032,56 @@
       "snippet": "Menjawab hanya satu penyelesaian. Hampir semua persamaan trigonometri punya lebih dari satu jawaban dalam satu putaran. Setengah jawaban tetap dihitung salah..."
     },
     {
+      "cardId": "osn-ceva-menelaus-c1",
+      "topicId": "osn-ceva-menelaus",
+      "topicTitle": "Teorema Ceva dan Menelaus",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Teorema Ceva: tiga garis satu titik",
+      "haystack": "teorema ceva: tiga garis satu titik tiga garis yang masing-masing melalui satu titik sudut segitiga dan memotong sisi seberangnya disebut cevian . pertanyaannya: kapan ketiganya berpotongan di satu titik? teorema ceva menjawabnya. untuk segitiga dengan titik pada , pada , dan pada , ketiga cevian , , dan berpotongan di satu titik tepat ketika: perhatikan susunan hurufnya. ia berjalan mengelilingi segitiga secara berurutan: , lalu , lalu . setiap titik sudut muncul tepat dua kali, sekali di pembilang dan sekali di penyebut. susunan melingkar itu bukan hafalan buta — ia yang membuat seluruh panjang \"saling menghapus\" ketika hasil kalinya bernilai . teorema ini berlaku dua arah, dan keduanya berguna. kalau kamu tahu ketiganya berpotongan di satu titik, kamu dapat sebuah persamaan tentang panjang. sebaliknya, kalau kamu bisa menunjukkan hasil kalinya , kamu membuktikan ketiganya berpotongan di satu titik. contoh pemakaian: ketiga garis berat berpotongan di satu titik, karena setiap perbandingannya bernilai sehingga hasil kalinya juga . ceva memutuskan apakah tiga cevian berpotongan di satu titik susunannya melingkar: berlaku dua arah — bisa dipakai untuk membuktikan maupun menghitung menyusun perbandingannya tidak melingkar, misalnya menulis . satu pecahan yang terbalik membuat hasil kalinya menjadi kebalikan dari yang benar, dan kesimpulannya ikut terbalik. teorema ceva dan menelaus",
+      "snippet": "Tiga garis yang masing-masing melalui satu titik sudut segitiga dan memotong sisi seberangnya disebut cevian. Pertanyaannya: kapan ketiganya berpotongan di s..."
+    },
+    {
+      "cardId": "osn-ceva-menelaus-c2",
+      "topicId": "osn-ceva-menelaus",
+      "topicTitle": "Teorema Ceva dan Menelaus",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Teorema Menelaus: tiga titik segaris",
+      "haystack": "teorema menelaus: tiga titik segaris menelaus adalah kembaran ceva, dengan satu perbedaan yang menentukan. untuk segitiga yang dipotong oleh sebuah garis lurus di titik pada garis , pada garis , dan pada garis , ketiga titik itu segaris tepat ketika: bentuknya sama persis dengan ceva kalau panjangnya dibaca tanpa arah. perbedaannya muncul saat memakai panjang berarah: ceva memberi , sementara menelaus memberi . perbedaan tanda itu punya arti geometris yang jelas. pada ceva ketiga titiknya berada di dalam ruas sisinya, sehingga ketiga perbandingannya positif. pada menelaus, sebuah garis lurus yang memotong ketiga sisi selalu memotong tepat satu di luar ruasnya — dan perbandingan yang satu itulah yang bertanda negatif. cara mengingat perbedaan keduanya tanpa hafalan: - ceva tentang konkuren — tiga garis, satu titik - menelaus tentang kolinear — tiga titik, satu garis keduanya berlaku dua arah, jadi masing-masing bisa dipakai untuk membuktikan maupun menghitung. menelaus memutuskan apakah tiga titik segaris bentuknya sama dengan ceva; tandanya yang berbeda pada panjang berarah ceva: konkuren. menelaus: kolinear memakai menelaus untuk soal yang meminta pembuktian konkuren, atau sebaliknya. kedua rumus itu terlihat sama, jadi yang menentukan bukan bentuknya melainkan pertanyaannya — apakah tentang tiga garis atau tiga titik. teorema ceva dan menelaus",
+      "snippet": "Menelaus adalah kembaran Ceva, dengan satu perbedaan yang menentukan. Untuk segitiga [rumus] yang dipotong oleh sebuah garis lurus di titik [rumus] pada gari..."
+    },
+    {
+      "cardId": "osn-ceva-menelaus-c3",
+      "topicId": "osn-ceva-menelaus",
+      "topicTitle": "Teorema Ceva dan Menelaus",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Memilih di antara Ceva dan Menelaus",
+      "haystack": "memilih di antara ceva dan menelaus karena kedua rumus hampir identik, keliru memilih adalah kesalahan yang paling sering terjadi. pertanyaan pemandunya cuma satu: apa yang diminta soal? - membuktikan tiga garis bertemu di satu titik → ceva - membuktikan tiga titik berada di satu garis → menelaus petunjuk tambahan dari gambar: pada ceva, ketiga titiknya berada di dalam ruas sisi segitiga. pada menelaus, tepat satu titiknya berada di perpanjangan sisi, di luar ruasnya. kalau gambarmu memperlihatkan sebuah titik di luar segitiga, hampir pasti menelaus yang dipakai. teknik gabungan yang sangat berguna: pakai keduanya dalam satu soal. contohnya, untuk membuktikan tiga titik segaris, sering kamu perlu mencari perbandingan panjangnya lebih dulu dengan ceva, lalu memasukkannya ke menelaus. untuk soal yang berat, koordinat kadang lebih pendek. tapi ceva dan menelaus hampir selalu memberi bukti yang lebih singkat dan lebih rapi — dan di olimpiade, kerapian itu bernilai. tiga garis satu titik → ceva. tiga titik satu garis → menelaus titik di luar ruas sisi adalah tanda menelaus soal berat sering memakai keduanya bergantian memilih teorema berdasarkan bentuk rumusnya alih-alih pertanyaan soalnya. kedua rumus itu terlihat identik pada panjang tak berarah, jadi bentuknya sama sekali tidak membedakan mana yang berlaku. teorema ceva dan menelaus",
+      "snippet": "Karena kedua rumus hampir identik, keliru memilih adalah kesalahan yang paling sering terjadi. Pertanyaan pemandunya cuma satu: Apa yang diminta soal? - Memb..."
+    },
+    {
+      "cardId": "osn-ceva-menelaus-c4",
+      "topicId": "osn-ceva-menelaus",
+      "topicTitle": "Teorema Ceva dan Menelaus",
+      "track": "olimpiade",
+      "type": "contoh",
+      "title": "Memakai Menelaus untuk mencari perbandingan",
+      "haystack": "memakai menelaus untuk mencari perbandingan kegunaan menelaus yang paling sering di olimpiade bukan membuktikan kolinearitas, melainkan mencari perbandingan panjang dari kolinearitas yang sudah diketahui. contoh. pada segitiga , titik pada dengan , dan titik adalah titik tengah . garis diperpanjang memotong perpanjangan di . cari perbandingan . ketiga titik , , dan segaris menurut soalnya, jadi menelaus berlaku pada segitiga dengan garis pemotong : masukkan yang diketahui. karena titik tengah , maka : perhatikan bagaimana satu penerapan rumus menyelesaikan soal yang lewat koordinat akan memerlukan beberapa persamaan garis. kunci pemakaiannya: tentukan dulu segitiga mana dan garis pemotong mana . satu gambar sering memuat beberapa pilihan, dan pilihan yang tepat menentukan panjang pengerjaannya. menelaus paling sering dipakai untuk mencari perbandingan, bukan membuktikan tentukan dulu segitiga dan garis pemotongnya satu gambar bisa memuat beberapa pilihan segitiga menerapkan rumusnya sebelum menentukan segitiga mana yang dipakai. satu gambar sering memuat beberapa segitiga, dan susunan hurufnya berubah untuk masing-masing — menyalin susunan dari segitiga lain memberi persamaan yang salah. teorema ceva dan menelaus",
+      "snippet": "Kegunaan Menelaus yang paling sering di olimpiade bukan membuktikan kolinearitas, melainkan mencari perbandingan panjang dari kolinearitas yang sudah diketah..."
+    },
+    {
+      "cardId": "osn-ceva-menelaus-c5",
+      "topicId": "osn-ceva-menelaus",
+      "topicTitle": "Teorema Ceva dan Menelaus",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan Ceva dan Menelaus",
+      "haystack": "empat jebakan ceva dan menelaus 1. memilih teorema dari bentuk rumusnya. keduanya terlihat identik pada panjang tak berarah. yang menentukan adalah pertanyaan soalnya: tiga garis bertemu, atau tiga titik segaris. 2. susunan huruf yang tidak melingkar. perbandingannya harus berjalan mengelilingi segitiga: , , . satu pecahan yang terbalik membalikkan seluruh hasilnya. 3. salah memilih segitiga acuan. satu gambar sering memuat beberapa segitiga yang bisa dipakai. tentukan dulu segitiga dan garis pemotongnya, baru susun rumusnya. 4. melupakan tanda pada panjang berarah. untuk soal yang menuntut ketelitian arah, ceva memberi dan menelaus memberi . pada soal perbandingan biasa, panjang tak berarah sudah cukup. pemeriksaan penutup yang murah: substitusikan jawabanmu kembali ke rumusnya dan pastikan hasil kalinya benar-benar . kesalahan susunan huruf akan langsung terlihat karena hasilnya menjadi kebalikannya. pilih teorema dari pertanyaan soalnya, bukan dari bentuk rumusnya susunan hurufnya harus melingkar mengelilingi segitiga substitusikan jawabanmu kembali dan pastikan hasil kalinya menyalin susunan huruf dari contoh di buku tanpa menyesuaikan dengan penamaan titik pada soalmu. nama titik yang berbeda mengubah susunannya, dan rumus yang disalin apa adanya akan memberi persamaan yang sama sekali lain. teorema ceva dan menelaus",
+      "snippet": "1. Memilih teorema dari bentuk rumusnya. Keduanya terlihat identik pada panjang tak berarah. Yang menentukan adalah pertanyaan soalnya: tiga garis bertemu, a..."
+    },
+    {
       "cardId": "osn-crt-diophantine-c1",
       "topicId": "osn-crt-diophantine",
       "topicTitle": "Teorema Sisa Cina dan Persamaan Diophantine",
@@ -2530,6 +2580,56 @@
       "title": "Empat jebakan sarang merpati dan invarian",
       "haystack": "empat jebakan sarang merpati dan invarian 1. sarang sebanyak atau lebih banyak daripada merpati. prinsip ini tidak menyimpulkan apa pun kalau jumlah sarangnya tidak kurang dari jumlah merpatinya. kalau perbandinganmu tidak ketat, pemilihan sarangmu perlu diperbaiki. 2. salah membaca \"minimal untuk memastikan\". yang dicari adalah keadaan terburuk plus satu, bukan keadaan yang kebetulan berhasil. untuk tiga bola sewarna dari empat warna, jawabannya , bukan . 3. menyimpulkan kemustahilan dari percobaan yang gagal. berapa pun banyaknya percobaan gagal, itu bukan bukti. bukti datang dari besaran yang terbukti kekal. 4. tidak memeriksa kekekalan invarian untuk semua operasi. kalau soal mengizinkan dua jenis langkah, keduanya harus diperiksa. satu operasi yang merusak invarian membatalkan seluruh argumennya. pemeriksaan penutup untuk keduanya: nyatakan dengan jelas apa merpatinya, apa sarangnya, atau besaran apa yang kekal. argumen yang tidak bisa dinyatakan sejelas itu biasanya memang belum utuh. jumlah merpati harus benar-benar melebihi jumlah sarang \"minimal untuk memastikan\" berarti keadaan terburuk ditambah satu periksa kekekalan invarian untuk setiap operasi yang diizinkan menganggap contoh yang berhasil sudah menjawab soal \"minimal untuk memastikan\". mengambil bola memang bisa memberi tiga warna sama, tapi soalnya menuntut jaminan — dan jaminan baru datang di bola ke- . prinsip sarang merpati dan invarian",
       "snippet": "1. Sarang sebanyak atau lebih banyak daripada merpati. Prinsip ini tidak menyimpulkan apa pun kalau jumlah sarangnya tidak kurang dari jumlah merpatinya. Kal..."
+    },
+    {
+      "cardId": "osn-segiempat-siklik-c1",
+      "topicId": "osn-segiempat-siklik",
+      "topicTitle": "Segiempat Siklik dan Kuasa Titik",
+      "track": "olimpiade",
+      "type": "konsep",
+      "title": "Sudut keliling dan akibatnya",
+      "haystack": "sudut keliling dan akibatnya seluruh geometri lingkaran bersandar pada satu fakta: sudut keliling yang menghadap busur yang sama besarnya sama, dan besarnya setengah sudut pusat yang menghadap busur itu. dari sini mengalir hampir semua yang kamu perlukan: sudut menghadap diameter selalu . sudut pusatnya , jadi sudut kelilingnya . akibat praktisnya besar: setiap kali kamu melihat sudut siku-siku, tanyakan apakah ada lingkaran berdiameter sisi miringnya. segiempat siklik punya sudut berhadapan berjumlah . kedua sudut itu menghadap dua busur yang bersama-sama membentuk lingkaran penuh, yaitu . setengahnya adalah . kebalikannya juga berlaku , dan inilah yang paling sering dipakai di olimpiade: kalau sudut berhadapan sebuah segiempat berjumlah , keempat titiknya pasti terletak pada satu lingkaran. membuktikan empat titik konsiklis sering menjadi langkah kunci yang membuka seluruh soal — karena begitu lingkarannya ada, semua hubungan sudut di atas ikut tersedia. sudut keliling pada busur sama besarnya sama sudut menghadap diameter selalu sudut berhadapan berjumlah ⟺ keempat titiknya konsiklis memakai kesamaan sudut keliling untuk titik-titik yang belum terbukti konsiklis. hubungan itu hanya berlaku setelah keempat titiknya dipastikan berada pada satu lingkaran — bukan sebelumnya. segiempat siklik dan kuasa titik",
+      "snippet": "Seluruh geometri lingkaran bersandar pada satu fakta: Sudut keliling yang menghadap busur yang sama besarnya sama, dan besarnya setengah sudut pusat yang men..."
+    },
+    {
+      "cardId": "osn-segiempat-siklik-c2",
+      "topicId": "osn-segiempat-siklik",
+      "topicTitle": "Segiempat Siklik dan Kuasa Titik",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Membuktikan empat titik konsiklis",
+      "haystack": "membuktikan empat titik konsiklis banyak soal olimpiade sebenarnya berbunyi \"buktikan keempat titik ini konsiklis\", meski tidak dikatakan begitu. ada empat cara membuktikannya. 1. sudut berhadapan berjumlah . cara paling langsung untuk segiempat cembung. 2. sudut pada sisi yang sama sama besar. kalau dengan dan berada di sisi yang sama terhadap garis , maka , , , konsiklis. keduanya menghadap dengan sudut sama, jadi keduanya berada pada busur yang sama. 3. kuasa titik. kalau dua garis berpotongan di dan , maka , , , konsiklis. 4. dua sudut siku-siku pada ruas yang sama. kalau , maka dan keduanya berada pada lingkaran berdiameter . cara keempat itu sangat sering muncul pada soal yang melibatkan kaki garis tinggi segitiga — dua kaki garis tinggi bersama dua titik sudut hampir selalu membentuk segiempat siklik. begitu konsiklisnya terbukti, seluruh hubungan sudut lingkaran langsung tersedia, dan soal yang tadinya buntu biasanya terbuka. empat cara: sudut berhadapan, sudut sehadap, kuasa titik, dua sudut siku-siku dua sudut siku-siku pada ruas sama memberi lingkaran berdiameter ruas itu kaki garis tinggi hampir selalu menghasilkan segiempat siklik menyimpulkan konsiklis dari kesamaan sudut tanpa memeriksa kedua titik berada di sisi yang sama terhadap garis penghubungnya. kalau keduanya di sisi berlawanan, syarat yang berlaku justru jumlah , bukan kesamaan. segiempat siklik dan kuasa titik",
+      "snippet": "Banyak soal olimpiade sebenarnya berbunyi \"buktikan keempat titik ini konsiklis\", meski tidak dikatakan begitu. Ada empat cara membuktikannya. 1. Sudut berha..."
+    },
+    {
+      "cardId": "osn-segiempat-siklik-c3",
+      "topicId": "osn-segiempat-siklik",
+      "topicTitle": "Segiempat Siklik dan Kuasa Titik",
+      "track": "olimpiade",
+      "type": "rumus",
+      "title": "Kuasa titik terhadap lingkaran",
+      "haystack": "kuasa titik terhadap lingkaran untuk sebuah titik dan lingkaran berpusat berjari-jari , kuasa titik itu adalah: tandanya memberi tahu letaknya: positif kalau di luar lingkaran, nol kalau di lingkaran, negatif kalau di dalam. yang membuatnya berguna adalah sifat berikut. tarik garis mana pun lewat yang memotong lingkaran di dan . maka hasil kali sama untuk setiap garis yang dipilih , dan besarnya adalah nilai mutlak kuasanya. dari sini lahir tiga bentuk yang sering dipakai: dua tali busur berpotongan di dalam: dua garis potong dari titik luar: garis singgung dan garis potong: , dengan titik singgungnya bentuk ketiga itu adalah kasus khusus dari yang kedua, ketika kedua titik potongnya berimpit menjadi satu titik singgung. kegunaan terbesarnya: mengubah soal tentang sudut menjadi soal tentang panjang , atau sebaliknya. ; tandanya menunjukkan letak sama untuk setiap garis lewat garis singgung: menukar urutan ruas pada garis singgung, misalnya menulis tanpa kuadrat. perhatikan satuannya: ruas kanan adalah hasil kali dua panjang, jadi ruas kirinya juga harus berupa kuadrat panjang. segiempat siklik dan kuasa titik",
+      "snippet": "Untuk sebuah titik [rumus] dan lingkaran berpusat [rumus] berjari-jari [rumus] , kuasa titik itu adalah: [rumus] Tandanya memberi tahu letaknya: positif kala..."
+    },
+    {
+      "cardId": "osn-segiempat-siklik-c4",
+      "topicId": "osn-segiempat-siklik",
+      "topicTitle": "Segiempat Siklik dan Kuasa Titik",
+      "track": "olimpiade",
+      "type": "teknik",
+      "title": "Mengejar sudut",
+      "haystack": "mengejar sudut teknik paling dasar sekaligus paling sering berhasil dalam geometri olimpiade adalah mengejar sudut : beri nama satu sudut, lalu nyatakan semua sudut lain lewat nama itu sampai sesuatu terhubung. urutan kerjanya: 1. gambar besar dan rapi. gambar kecil menyembunyikan hubungan. pakai penggaris kalau ada. 2. tandai yang diketahui — sudut sama diberi tanda sama, ruas sama diberi tanda sama. 3. beri nama satu sudut , lalu telusuri akibatnya ke seluruh gambar. 4. cari segiempat siklik. setiap kali kamu menemukan dua sudut sama menghadap ruas yang sama, atau dua sudut berhadapan berjumlah , kamu mendapat lingkaran baru — dan lingkaran itu memberi hubungan sudut tambahan. alat pendukung yang sering diperlukan: jumlah sudut segitiga , sudut luar sama dengan jumlah dua sudut dalam yang tak bersebelahan, segitiga sama kaki punya dua sudut alas sama, dan sudut antara tali busur dengan garis singgung sama dengan sudut keliling di seberangnya. kalau pengejaran sudut buntu, itu biasanya tanda bahwa ada lingkaran tersembunyi yang belum kamu temukan — cari empat titik yang mungkin konsiklis. beri nama satu sudut, lalu telusuri akibatnya ke seluruh gambar gambar besar dan rapi; gambar kecil menyembunyikan hubungan buntu biasanya berarti ada lingkaran tersembunyi menggambar terlalu istimewa, misalnya membuat segitiga sembarang menjadi hampir sama sisi. gambar semacam itu memunculkan kesamaan yang sebenarnya kebetulan, dan kamu bisa membuktikan sesuatu yang tidak berlaku umum. segiempat siklik dan kuasa titik",
+      "snippet": "Teknik paling dasar sekaligus paling sering berhasil dalam geometri olimpiade adalah mengejar sudut: beri nama satu sudut, lalu nyatakan semua sudut lain lew..."
+    },
+    {
+      "cardId": "osn-segiempat-siklik-c5",
+      "topicId": "osn-segiempat-siklik",
+      "topicTitle": "Segiempat Siklik dan Kuasa Titik",
+      "track": "olimpiade",
+      "type": "jebakan",
+      "title": "Empat jebakan geometri lingkaran",
+      "haystack": "empat jebakan geometri lingkaran 1. memakai sifat siklik sebelum membuktikannya. sudut berhadapan berjumlah hanya berlaku setelah keempat titiknya terbukti konsiklis. memakainya untuk membuktikan konsiklis itu sendiri adalah penalaran berputar. 2. melupakan posisi relatif pada kesamaan sudut. dua sudut sama besar memberi konsiklis hanya kalau kedua titiknya di sisi sama terhadap garis penghubung. di sisi berlawanan, yang berlaku justru jumlah . 3. salah bentuk pada kuasa titik garis singgung. rumusnya , bukan . periksa satuannya kalau ragu. 4. menggambar terlalu istimewa. segitiga yang kamu gambar hampir sama sisi akan memunculkan kesamaan yang tidak berlaku umum. gambarlah sengaja tidak simetris. kebiasaan yang menutup sebagian besarnya: gambar ulang soalnya dengan konfigurasi berbeda. kalau kesimpulanmu bertahan di dua gambar yang cukup berbeda, kemungkinan besar ia memang berlaku umum — dan kalau tidak, kamu langsung tahu sebelum menulis satu baris bukti. buktikan konsiklis dulu, baru pakai sifatnya kesamaan sudut butuh kedua titik di sisi yang sama gambar ulang dengan konfigurasi berbeda untuk mengujinya membuktikan sesuatu yang hanya berlaku pada gambar yang kamu buat. gambar yang kebetulan simetris memunculkan hubungan semu, dan bukti yang bersandar padanya akan runtuh pada konfigurasi lain. segiempat siklik dan kuasa titik",
+      "snippet": "1. Memakai sifat siklik sebelum membuktikannya. Sudut berhadapan berjumlah [rumus] hanya berlaku setelah keempat titiknya terbukti konsiklis. Memakainya untu..."
     }
   ]
 }

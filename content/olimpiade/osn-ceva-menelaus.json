@@ -1,0 +1,262 @@
+{
+  "id": "osn-ceva-menelaus",
+  "track": "olimpiade",
+  "title": "Teorema Ceva dan Menelaus",
+  "order": 12,
+  "prerequisites": [
+    "osn-segiempat-siklik"
+  ],
+  "estimatedMinutes": 30,
+  "summary": "Dua rumus kembar yang memutuskan apakah tiga garis berpotongan di satu titik, atau tiga titik segaris.",
+  "tags": [
+    "geometri",
+    "osn"
+  ],
+  "cards": [
+    {
+      "id": "osn-ceva-menelaus-c1",
+      "type": "rumus",
+      "title": "Teorema Ceva: tiga garis satu titik",
+      "body": "Tiga garis yang masing-masing melalui satu titik sudut segitiga dan memotong sisi seberangnya disebut **cevian**. Pertanyaannya: kapan ketiganya berpotongan di satu titik?\n\nTeorema Ceva menjawabnya. Untuk segitiga $ABC$ dengan titik $D$ pada $BC$, $E$ pada $CA$, dan $F$ pada $AB$, ketiga cevian $AD$, $BE$, dan $CF$ berpotongan di satu titik tepat ketika:\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$$\n\nPerhatikan susunan hurufnya. Ia berjalan mengelilingi segitiga secara berurutan: $B \\to C$, lalu $C \\to A$, lalu $A \\to B$. Setiap titik sudut muncul tepat dua kali, sekali di pembilang dan sekali di penyebut.\n\nSusunan melingkar itu bukan hafalan buta — ia yang membuat seluruh panjang \"saling menghapus\" ketika hasil kalinya bernilai $1$.\n\nTeorema ini berlaku dua arah, dan keduanya berguna. Kalau kamu tahu ketiganya berpotongan di satu titik, kamu dapat sebuah persamaan tentang panjang. Sebaliknya, kalau kamu bisa menunjukkan hasil kalinya $1$, kamu membuktikan ketiganya berpotongan di satu titik.\n\nContoh pemakaian: ketiga garis berat berpotongan di satu titik, karena setiap perbandingannya bernilai $1$ sehingga hasil kalinya juga $1$.",
+      "questions": [
+        {
+          "id": "osn-ceva-menelaus-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segitiga $ABC$, ketiga garis beratnya berpotongan di satu titik karena setiap perbandingan pada teorema Ceva bernilai ...",
+          "options": [
+            "$1$",
+            "$2$",
+            "$\\frac{1}{2}$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Garis berat adalah cevian yang menuju **titik tengah** sisi seberangnya.\n\nKarena $D$ titik tengah $BC$, maka $BD = DC$ sehingga $\\frac{BD}{DC} = 1$. Hal yang sama berlaku untuk kedua sisi lainnya.\n\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1 \\times 1 \\times 1 = 1$$\n\nHasil kalinya $1$, jadi menurut teorema Ceva ketiga garis berat memang berpotongan di satu titik — yaitu titik berat segitiga.\n\nPerhatikan bahwa perbandingan $2:1$ yang terkenal itu adalah letak titik beratnya **pada** garis berat, bukan perbandingan pada rumus Ceva.",
+          "hint": "Garis berat menuju titik tengah, jadi kedua potongannya sama panjang.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ceva-menelaus-q2",
+          "difficulty": 3,
+          "format": "isian",
+          "prompt": "Pada segitiga $ABC$, diketahui $\\frac{BD}{DC} = \\frac{2}{3}$ dan $\\frac{CE}{EA} = \\frac{3}{4}$. Agar ketiga cevian berpotongan di satu titik, berapa nilai $\\frac{AF}{FB}$? (bilangan bulat)",
+          "answer": "2",
+          "acceptedAnswers": [
+            "2"
+          ],
+          "solution": "Menurut teorema Ceva, hasil kali ketiga perbandingannya harus $1$:\n\n$$\\frac{2}{3} \\cdot \\frac{3}{4} \\cdot \\frac{AF}{FB} = 1$$\n\nSederhanakan dua faktor pertama:\n\n$$\\frac{2}{3} \\cdot \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$$\n\n$$\\frac{1}{2} \\cdot \\frac{AF}{FB} = 1 \\Rightarrow \\frac{AF}{FB} = 2$$\n\nCek: $\\frac{2}{3} \\times \\frac{3}{4} \\times 2 = \\frac{12}{12} = 1$ ✓",
+          "hint": "Hasil kali ketiganya harus bernilai $1$.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Ceva memutuskan apakah tiga cevian berpotongan di satu titik",
+        "Susunannya melingkar: $B \\to C \\to A \\to B$",
+        "Berlaku dua arah — bisa dipakai untuk membuktikan maupun menghitung"
+      ],
+      "pitfall": "Menyusun perbandingannya tidak melingkar, misalnya menulis $\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB}$. Satu pecahan yang terbalik membuat hasil kalinya menjadi kebalikan dari yang benar, dan kesimpulannya ikut terbalik."
+    },
+    {
+      "id": "osn-ceva-menelaus-c2",
+      "type": "rumus",
+      "title": "Teorema Menelaus: tiga titik segaris",
+      "body": "Menelaus adalah kembaran Ceva, dengan satu perbedaan yang menentukan.\n\nUntuk segitiga $ABC$ yang dipotong oleh sebuah **garis lurus** di titik $D$ pada garis $BC$, $E$ pada garis $CA$, dan $F$ pada garis $AB$, ketiga titik itu segaris tepat ketika:\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB} = 1$$\n\nBentuknya **sama persis** dengan Ceva kalau panjangnya dibaca tanpa arah. Perbedaannya muncul saat memakai panjang berarah: Ceva memberi $+1$, sementara Menelaus memberi $-1$.\n\nPerbedaan tanda itu punya arti geometris yang jelas. Pada Ceva ketiga titiknya berada **di dalam** ruas sisinya, sehingga ketiga perbandingannya positif. Pada Menelaus, sebuah garis lurus yang memotong ketiga sisi selalu memotong **tepat satu** di luar ruasnya — dan perbandingan yang satu itulah yang bertanda negatif.\n\nCara mengingat perbedaan keduanya tanpa hafalan:\n\n- **Ceva** tentang **konkuren** — tiga garis, satu titik\n- **Menelaus** tentang **kolinear** — tiga titik, satu garis\n\nKeduanya berlaku dua arah, jadi masing-masing bisa dipakai untuk membuktikan maupun menghitung.",
+      "questions": [
+        {
+          "id": "osn-ceva-menelaus-q3",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Teorema Menelaus dipakai untuk membuktikan bahwa ...",
+          "options": [
+            "tiga titik terletak pada satu garis",
+            "tiga garis berpotongan di satu titik",
+            "sebuah segitiga sama kaki",
+            "empat titik terletak pada satu lingkaran"
+          ],
+          "answerIndex": 0,
+          "solution": "Menelaus adalah teorema tentang **kolinearitas**, yaitu apakah tiga titik terletak pada satu garis.\n\nBandingkan dengan kembarannya:\n\n- **Ceva** → konkurensi, yaitu tiga garis berpotongan di satu titik\n- **Menelaus** → kolinearitas, yaitu tiga titik segaris\n\nBentuk rumusnya hampir identik, jadi yang menentukan pilihan bukan bentuknya melainkan pertanyaan soalnya.\n\nCara mengingat: **M**enelaus untuk **garis** yang me**M**otong, Ceva untuk **C**evian yang berpotongan.",
+          "hint": "Apakah soal bertanya tentang tiga garis atau tiga titik?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ceva-menelaus-q4",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah garis memotong segitiga $ABC$ sehingga $\\frac{AF}{FB} = \\frac{3}{2}$ dan $\\frac{BD}{DC} = \\frac{4}{5}$. Agar ketiga titiknya segaris, nilai $\\frac{CE}{EA}$ adalah ...",
+          "options": [
+            "$\\frac{5}{6}$",
+            "$\\frac{6}{5}$",
+            "$\\frac{5}{12}$",
+            "$\\frac{12}{5}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Menurut Menelaus (dengan panjang tak berarah), hasil kali ketiganya harus $1$:\n\n$$\\frac{AF}{FB} \\cdot \\frac{BD}{DC} \\cdot \\frac{CE}{EA} = 1$$\n\n$$\\frac{3}{2} \\cdot \\frac{4}{5} \\cdot \\frac{CE}{EA} = 1$$\n\nSederhanakan dua faktor pertama:\n$$\\frac{3}{2} \\cdot \\frac{4}{5} = \\frac{12}{10} = \\frac{6}{5}$$\n\n$$\\frac{6}{5} \\cdot \\frac{CE}{EA} = 1 \\Rightarrow \\frac{CE}{EA} = \\frac{5}{6}$$\n\nCek: $\\frac{3}{2} \\times \\frac{4}{5} \\times \\frac{5}{6} = \\frac{60}{60} = 1$ ✓",
+          "hint": "Hasil kali ketiganya bernilai $1$; cari faktor yang melengkapinya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Menelaus memutuskan apakah tiga titik segaris",
+        "Bentuknya sama dengan Ceva; tandanya yang berbeda pada panjang berarah",
+        "Ceva: konkuren. Menelaus: kolinear"
+      ],
+      "pitfall": "Memakai Menelaus untuk soal yang meminta pembuktian konkuren, atau sebaliknya. Kedua rumus itu terlihat sama, jadi yang menentukan bukan bentuknya melainkan pertanyaannya — apakah tentang tiga garis atau tiga titik."
+    },
+    {
+      "id": "osn-ceva-menelaus-c3",
+      "type": "teknik",
+      "title": "Memilih di antara Ceva dan Menelaus",
+      "body": "Karena kedua rumus hampir identik, keliru memilih adalah kesalahan yang paling sering terjadi. Pertanyaan pemandunya cuma satu:\n\n**Apa yang diminta soal?**\n\n- Membuktikan tiga **garis** bertemu di satu titik → **Ceva**\n- Membuktikan tiga **titik** berada di satu garis → **Menelaus**\n\nPetunjuk tambahan dari gambar: pada Ceva, ketiga titiknya berada **di dalam** ruas sisi segitiga. Pada Menelaus, tepat satu titiknya berada di **perpanjangan** sisi, di luar ruasnya.\n\nKalau gambarmu memperlihatkan sebuah titik di luar segitiga, hampir pasti Menelaus yang dipakai.\n\nTeknik gabungan yang sangat berguna: pakai keduanya dalam satu soal. Contohnya, untuk membuktikan tiga titik segaris, sering kamu perlu mencari perbandingan panjangnya lebih dulu dengan Ceva, lalu memasukkannya ke Menelaus.\n\nUntuk soal yang berat, koordinat kadang lebih pendek. Tapi Ceva dan Menelaus hampir selalu memberi bukti yang lebih singkat dan lebih rapi — dan di olimpiade, kerapian itu bernilai.",
+      "questions": [
+        {
+          "id": "osn-ceva-menelaus-q5",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Sebuah soal meminta pembuktian bahwa ketiga garis tinggi segitiga berpotongan di satu titik. Teorema yang tepat adalah ...",
+          "options": [
+            "Ceva",
+            "Menelaus",
+            "kuasa titik",
+            "teorema sisa"
+          ],
+          "answerIndex": 0,
+          "solution": "Garis tinggi adalah cevian: masing-masing melalui satu titik sudut dan memotong sisi seberangnya.\n\nYang ditanyakan adalah apakah ketiganya bertemu di satu titik — yaitu **konkurensi**. Itu persis yang diputuskan teorema Ceva.\n\nMenelaus tidak cocok karena ia tentang tiga titik yang segaris, bukan tiga garis yang bertemu.\n\nTitik potong ketiga garis tinggi disebut titik tinggi segitiga. Bersama titik berat dan pusat lingkaran luar, ketiganya selalu terletak pada satu garis — yang disebut garis Euler.",
+          "hint": "Garis tinggi adalah cevian; apa yang ditanyakan tentang ketiganya?",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ceva-menelaus-q6",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Teorema Ceva dan Menelaus memiliki bentuk rumus yang sama persis jika panjangnya dibaca tanpa arah, sehingga keduanya bisa saling menggantikan.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Bentuknya memang sama, tapi **yang disimpulkan** berbeda sepenuhnya.\n\nPada susunan yang sama, hasil kali bernilai $1$ berarti:\n\n- Menurut **Ceva**: ketiga ceviannya berpotongan di satu titik\n- Menurut **Menelaus**: ketiga titiknya terletak pada satu garis\n\nKedua kesimpulan itu tidak bisa saling menggantikan sama sekali — yang satu tentang garis yang bertemu, yang lain tentang titik yang berjajar.\n\nPerbedaannya menjadi jelas kalau panjangnya dibaca **berarah**: Ceva memberi $+1$, sementara Menelaus memberi $-1$. Tanda negatif itu muncul karena garis pemotong selalu melewati tepat satu titik di luar ruas sisinya.\n\nYang menentukan pilihan bukan bentuk rumusnya, melainkan pertanyaan soalnya.",
+          "hint": "Apa yang disimpulkan masing-masing dari hasil kali bernilai $1$?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Tiga garis satu titik → Ceva. Tiga titik satu garis → Menelaus",
+        "Titik di luar ruas sisi adalah tanda Menelaus",
+        "Soal berat sering memakai keduanya bergantian"
+      ],
+      "pitfall": "Memilih teorema berdasarkan bentuk rumusnya alih-alih pertanyaan soalnya. Kedua rumus itu terlihat identik pada panjang tak berarah, jadi bentuknya sama sekali tidak membedakan mana yang berlaku."
+    },
+    {
+      "id": "osn-ceva-menelaus-c4",
+      "type": "contoh",
+      "title": "Memakai Menelaus untuk mencari perbandingan",
+      "body": "Kegunaan Menelaus yang paling sering di olimpiade bukan membuktikan kolinearitas, melainkan **mencari perbandingan panjang** dari kolinearitas yang sudah diketahui.\n\n**Contoh.** Pada segitiga $ABC$, titik $D$ pada $BC$ dengan $BD:DC = 1:2$, dan titik $E$ adalah titik tengah $AB$. Garis $DE$ diperpanjang memotong perpanjangan $AC$ di $F$. Cari perbandingan $CF:FA$.\n\nKetiga titik $D$, $E$, dan $F$ segaris menurut soalnya, jadi Menelaus berlaku pada segitiga $ABC$ dengan garis pemotong $DEF$:\n$$\\frac{BD}{DC} \\cdot \\frac{CF}{FA} \\cdot \\frac{AE}{EB} = 1$$\n\nMasukkan yang diketahui. Karena $E$ titik tengah $AB$, maka $\\frac{AE}{EB} = 1$:\n$$\\frac{1}{2} \\cdot \\frac{CF}{FA} \\cdot 1 = 1 \\Rightarrow \\frac{CF}{FA} = 2$$\n\nPerhatikan bagaimana satu penerapan rumus menyelesaikan soal yang lewat koordinat akan memerlukan beberapa persamaan garis.\n\nKunci pemakaiannya: **tentukan dulu segitiga mana dan garis pemotong mana**. Satu gambar sering memuat beberapa pilihan, dan pilihan yang tepat menentukan panjang pengerjaannya.",
+      "questions": [
+        {
+          "id": "osn-ceva-menelaus-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segitiga $ABC$, titik $D$ pada $BC$ dengan $\\frac{BD}{DC} = \\frac{1}{2}$, dan $E$ titik tengah $AB$. Garis $DE$ memotong perpanjangan $AC$ di $F$. Nilai $\\frac{CF}{FA}$ adalah ...",
+          "options": [
+            "$2$",
+            "$\\frac{1}{2}$",
+            "$1$",
+            "$\\frac{2}{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Ketiga titik $D$, $E$, dan $F$ segaris, jadi pakai Menelaus pada segitiga $ABC$ dengan garis pemotong $DEF$:\n\n$$\\frac{BD}{DC} \\cdot \\frac{CF}{FA} \\cdot \\frac{AE}{EB} = 1$$\n\nKarena $E$ titik tengah $AB$, maka $AE = EB$ sehingga $\\frac{AE}{EB} = 1$.\n\n$$\\frac{1}{2} \\cdot \\frac{CF}{FA} \\cdot 1 = 1$$\n\n$$\\frac{CF}{FA} = 2$$\n\nCek: $\\frac{1}{2} \\times 2 \\times 1 = 1$ ✓\n\nPerhatikan bahwa $F$ berada di **perpanjangan** $AC$, di luar ruasnya — ciri khas konfigurasi Menelaus.",
+          "hint": "Susun Menelaus pada segitiga $ABC$ dengan garis $DEF$.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ceva-menelaus-q7b",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada sebuah gambar, salah satu dari ketiga titik berada di perpanjangan sisi segitiga, di luar ruasnya. Ini merupakan petunjuk bahwa soalnya memakai ...",
+          "options": [
+            "Menelaus",
+            "Ceva",
+            "kuasa titik",
+            "teorema Pythagoras"
+          ],
+          "answerIndex": 0,
+          "solution": "Perhatikan perbedaan konfigurasi keduanya.\n\nPada **Ceva**, ketiga cevian berangkat dari titik sudut menuju sisi seberangnya, sehingga ketiga titiknya berada **di dalam** ruas sisi segitiga.\n\nPada **Menelaus**, sebuah garis lurus memotong ketiga sisi segitiga. Garis lurus tidak mungkin memotong ketiga sisi di dalam ruasnya sekaligus — ia selalu melewati tepat satu titik di **perpanjangan** sisi.\n\nJadi titik yang berada di luar ruas adalah ciri khas konfigurasi Menelaus, dan sering menjadi petunjuk tercepat saat kamu ragu memilih.\n\nPada panjang berarah, titik luar itulah yang menyumbang tanda negatif sehingga hasil kalinya $-1$.",
+          "hint": "Bisakah sebuah garis lurus memotong ketiga sisi segitiga di dalam ruasnya sekaligus?",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Menelaus paling sering dipakai untuk mencari perbandingan, bukan membuktikan",
+        "Tentukan dulu segitiga dan garis pemotongnya",
+        "Satu gambar bisa memuat beberapa pilihan segitiga"
+      ],
+      "pitfall": "Menerapkan rumusnya sebelum menentukan segitiga mana yang dipakai. Satu gambar sering memuat beberapa segitiga, dan susunan hurufnya berubah untuk masing-masing — menyalin susunan dari segitiga lain memberi persamaan yang salah."
+    },
+    {
+      "id": "osn-ceva-menelaus-c5",
+      "type": "jebakan",
+      "title": "Empat jebakan Ceva dan Menelaus",
+      "body": "**1. Memilih teorema dari bentuk rumusnya.** Keduanya terlihat identik pada panjang tak berarah. Yang menentukan adalah pertanyaan soalnya: tiga garis bertemu, atau tiga titik segaris.\n\n**2. Susunan huruf yang tidak melingkar.** Perbandingannya harus berjalan mengelilingi segitiga: $B \\to C$, $C \\to A$, $A \\to B$. Satu pecahan yang terbalik membalikkan seluruh hasilnya.\n\n**3. Salah memilih segitiga acuan.** Satu gambar sering memuat beberapa segitiga yang bisa dipakai. Tentukan dulu segitiga dan garis pemotongnya, baru susun rumusnya.\n\n**4. Melupakan tanda pada panjang berarah.** Untuk soal yang menuntut ketelitian arah, Ceva memberi $+1$ dan Menelaus memberi $-1$. Pada soal perbandingan biasa, panjang tak berarah sudah cukup.\n\nPemeriksaan penutup yang murah: substitusikan jawabanmu kembali ke rumusnya dan pastikan hasil kalinya benar-benar $1$. Kesalahan susunan huruf akan langsung terlihat karena hasilnya menjadi kebalikannya.",
+      "questions": [
+        {
+          "id": "osn-ceva-menelaus-q8",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Pada teorema Ceva untuk segitiga $ABC$, susunan perbandingan yang benar adalah ...",
+          "options": [
+            "$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$",
+            "$\\frac{BD}{DC} \\cdot \\frac{EA}{CE} \\cdot \\frac{AF}{FB}$",
+            "$\\frac{DC}{BD} \\cdot \\frac{CE}{EA} \\cdot \\frac{FB}{AF}$",
+            "$\\frac{BD}{CE} \\cdot \\frac{CE}{AF} \\cdot \\frac{AF}{BD}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Susunannya harus berjalan melingkar mengelilingi segitiga:\n\n$$B \\to C, \\qquad C \\to A, \\qquad A \\to B$$\n\n$$\\frac{BD}{DC} \\cdot \\frac{CE}{EA} \\cdot \\frac{AF}{FB}$$\n\nPerhatikan bahwa setiap titik sudut muncul tepat dua kali — sekali di pembilang dan sekali di penyebut. Susunan itulah yang membuat seluruhnya saling menghapus saat hasil kalinya $1$.\n\nPilihan kedua membalik satu pecahan, sehingga hasilnya menjadi kebalikan dari yang benar. Pilihan terakhir tidak melibatkan titik $D$, $E$, $F$ sama sekali sehingga hasilnya selalu $1$ tanpa arti apa pun.",
+          "hint": "Telusuri titik sudutnya mengelilingi segitiga secara berurutan.",
+          "tags": [
+            "osn"
+          ]
+        },
+        {
+          "id": "osn-ceva-menelaus-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada segitiga $ABC$, tiga cevian memenuhi $\\frac{BD}{DC} = 2$, $\\frac{CE}{EA} = 3$, dan $\\frac{AF}{FB} = \\frac{1}{6}$. Ketiga cevian tersebut ...",
+          "options": [
+            "berpotongan di satu titik",
+            "tidak berpotongan di satu titik",
+            "sejajar satu sama lain",
+            "berpotongan di tiga titik berbeda"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung hasil kali ketiganya menurut teorema Ceva:\n\n$$2 \\times 3 \\times \\frac{1}{6} = \\frac{6}{6} = 1$$\n\nHasilnya $1$, jadi menurut arah sebaliknya teorema Ceva, ketiga cevian itu memang berpotongan di satu titik.\n\nPerhatikan bahwa kita tidak menggambar apa pun dan tidak mencari titik potongnya. Perhitungan perbandingan saja sudah cukup memutuskan.\n\nInilah kegunaan arah sebaliknya: ia mengubah pertanyaan geometri menjadi satu perkalian pecahan.",
+          "hint": "Hitung hasil kali ketiga perbandingannya.",
+          "tags": [
+            "osn"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Pilih teorema dari pertanyaan soalnya, bukan dari bentuk rumusnya",
+        "Susunan hurufnya harus melingkar mengelilingi segitiga",
+        "Substitusikan jawabanmu kembali dan pastikan hasil kalinya $1$"
+      ],
+      "pitfall": "Menyalin susunan huruf dari contoh di buku tanpa menyesuaikan dengan penamaan titik pada soalmu. Nama titik yang berbeda mengubah susunannya, dan rumus yang disalin apa adanya akan memberi persamaan yang sama sekali lain."
+    }
+  ]
+}

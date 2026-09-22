@@ -47,16 +47,18 @@ import topik36 from "@/content/lanjut/lan-logika-induksi.json";
 import topik37 from "@/content/lanjut/lan-matematika-keuangan.json";
 import topik38 from "@/content/lanjut/lan-teknik-integrasi.json";
 import topik39 from "@/content/lanjut/lan-transformasi-geometri.json";
-import topik40 from "@/content/olimpiade/osn-crt-diophantine.json";
-import topik41 from "@/content/olimpiade/osn-fermat-euler.json";
-import topik42 from "@/content/olimpiade/osn-fungsi-lantai.json";
-import topik43 from "@/content/olimpiade/osn-graf-ekstremal.json";
-import topik44 from "@/content/olimpiade/osn-hitung-dua-cara.json";
-import topik45 from "@/content/olimpiade/osn-ketaksamaan.json";
-import topik46 from "@/content/olimpiade/osn-keterbagian.json";
-import topik47 from "@/content/olimpiade/osn-persamaan-fungsional.json";
-import topik48 from "@/content/olimpiade/osn-polinomial-lanjut.json";
-import topik49 from "@/content/olimpiade/osn-sarang-merpati.json";
+import topik40 from "@/content/olimpiade/osn-ceva-menelaus.json";
+import topik41 from "@/content/olimpiade/osn-crt-diophantine.json";
+import topik42 from "@/content/olimpiade/osn-fermat-euler.json";
+import topik43 from "@/content/olimpiade/osn-fungsi-lantai.json";
+import topik44 from "@/content/olimpiade/osn-graf-ekstremal.json";
+import topik45 from "@/content/olimpiade/osn-hitung-dua-cara.json";
+import topik46 from "@/content/olimpiade/osn-ketaksamaan.json";
+import topik47 from "@/content/olimpiade/osn-keterbagian.json";
+import topik48 from "@/content/olimpiade/osn-persamaan-fungsional.json";
+import topik49 from "@/content/olimpiade/osn-polinomial-lanjut.json";
+import topik50 from "@/content/olimpiade/osn-sarang-merpati.json";
+import topik51 from "@/content/olimpiade/osn-segiempat-siklik.json";
 
 export const RAW_TOPICS: Topic[] = [
   topik0 as unknown as Topic,
@@ -109,4 +111,6 @@ export const RAW_TOPICS: Topic[] = [
   topik47 as unknown as Topic,
   topik48 as unknown as Topic,
   topik49 as unknown as Topic,
+  topik50 as unknown as Topic,
+  topik51 as unknown as Topic,
 ];
