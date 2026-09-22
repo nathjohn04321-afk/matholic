@@ -972,6 +972,56 @@
       "snippet": "Membalik urutan [rumus] . Vektor dari [rumus] ke [rumus] adalah [rumus] . Membaliknya memberi vektor yang arahnya berlawanan, dan soal biasanya menyediakan k..."
     },
     {
+      "cardId": "geo-dimensi-tiga-c1",
+      "topicId": "geo-dimensi-tiga",
+      "topicTitle": "Dimensi Tiga",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Soal ruang diselesaikan di bidang",
+      "haystack": "soal ruang diselesaikan di bidang geometri ruang terasa sulit karena kamu diminta membayangkan tiga dimensi di atas kertas yang datar. padahal hampir semua soalnya diselesaikan dengan cara yang sama: temukan segitiga siku-siku yang tepat, lalu kerjakan sebagai soal bidang biasa . diagonal ruang kubus adalah contoh terbaiknya. kenapa panjangnya ? pythagoras dipakai dua kali. pertama pada alasnya: diagonal sisi bernilai . kedua pada segitiga tegak yang dibentuk diagonal sisi itu bersama rusuk tegaknya: akar tiga itu bukan hafalan — ia muncul dari menjumlahkan tiga arah yang saling tegak lurus. kebiasaan yang menolong: gambar ulang segitiga yang kamu pakai secara terpisah, lengkap dengan ukurannya. diagonal sisi kubus diagonal ruang kubus gambar ulang segitiganya secara terpisah memakai rusuk sebagai sisi miring saat mencari jarak. sisi miring adalah ruas yang dicari, bukan rusuk yang sudah diketahui. dimensi tiga",
+      "snippet": "Geometri ruang terasa sulit karena kamu diminta membayangkan tiga dimensi di atas kertas yang datar. Padahal hampir semua soalnya diselesaikan dengan cara ya..."
+    },
+    {
+      "cardId": "geo-dimensi-tiga-c2",
+      "topicId": "geo-dimensi-tiga",
+      "topicTitle": "Dimensi Tiga",
+      "track": "menengah",
+      "type": "prosedur",
+      "title": "Mencari jarak titik ke garis dan bidang",
+      "haystack": "mencari jarak titik ke garis dan bidang jarak dalam ruang selalu berarti jarak terpendek , dan jarak terpendek selalu diukur tegak lurus. ini satu-satunya aturan yang perlu kamu pegang. titik ke garis: tarik garis dari titik itu tegak lurus ke garisnya. panjang ruas tegak lurus itulah jaraknya. titik ke bidang: tarik garis tegak lurus dari titik ke bidangnya. kaki tegak lurus itu disebut proyeksi titik pada bidang. langkah praktisnya: 1. temukan segitiga yang memuat ruas jarak yang dicari. 2. gambar ulang segitiga itu secara terpisah, di atas kertas datar. 3. isi ukuran yang diketahui, cari yang belum diketahui dengan pythagoras. 4. kalau segitiganya bukan siku-siku, pakai aturan kosinus atau rumus luas. trik yang sering menghemat langkah: hitung luas segitiga dengan dua cara berbeda, lalu samakan untuk mendapat tingginya. jarak selalu diukur tegak lurus gambar ulang segitiganya secara terpisah luas dua cara sering memberi tinggi dengan cepat mengukur jarak titik ke bidang sepanjang rusuk miring, padahal jarak harus tegak lurus terhadap bidang itu. dimensi tiga",
+      "snippet": "Jarak dalam ruang selalu berarti jarak terpendek, dan jarak terpendek selalu diukur tegak lurus. Ini satu-satunya aturan yang perlu kamu pegang. Titik ke gar..."
+    },
+    {
+      "cardId": "geo-dimensi-tiga-c3",
+      "topicId": "geo-dimensi-tiga",
+      "topicTitle": "Dimensi Tiga",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Sudut antara garis dan bidang",
+      "haystack": "sudut antara garis dan bidang sudut antara garis dan bidang bukan sudut sembarang. ia didefinisikan sebagai sudut antara garis itu dengan proyeksinya pada bidang tersebut. cara mencarinya: 1. jatuhkan garis tegak lurus dari ujung garis ke bidangnya. 2. hubungkan kaki tegak lurus itu dengan pangkal garis — inilah proyeksinya. 3. sudut antara garis asli dan proyeksinya adalah yang dicari. ketiga ruas itu selalu membentuk segitiga siku-siku, dengan garis aslinya sebagai sisi miring. jadi sudutnya bisa dicari dengan perbandingan trigonometri biasa. untuk sudut antara dua bidang , prinsipnya mirip: cari garis potong kedua bidang, lalu tarik garis tegak lurus terhadapnya pada masing-masing bidang. sudut antara kedua garis itu adalah sudut antar bidangnya. sudut garis-bidang = sudut garis dengan proyeksinya ketiganya membentuk segitiga siku-siku garis aslinya selalu sisi miring memakai sudut antara garis dengan sembarang garis di bidang. yang dipakai khusus proyeksinya, yaitu bayangan tegak lurusnya. dimensi tiga",
+      "snippet": "Sudut antara garis dan bidang bukan sudut sembarang. Ia didefinisikan sebagai sudut antara garis itu dengan proyeksinya pada bidang tersebut. Cara mencarinya..."
+    },
+    {
+      "cardId": "geo-dimensi-tiga-c4",
+      "topicId": "geo-dimensi-tiga",
+      "topicTitle": "Dimensi Tiga",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Luas dua cara untuk mencari jarak",
+      "haystack": "luas dua cara untuk mencari jarak teknik ini memangkas banyak soal jarak yang kalau dikerjakan langsung akan bertele-tele. idenya: luas sebuah segitiga bisa dihitung dengan memakai alas mana pun. kalau kamu bisa menghitung luasnya lewat satu pasang alas-tinggi yang mudah, lalu menuliskannya lagi dengan pasangan yang memuat jarak yang dicari, kamu bisa menyamakan keduanya. contoh: mencari jarak titik ke sebuah garis dalam kubus. bentuk segitiga yang memuat titik dan garis itu. hitung luasnya lewat sisi yang ukurannya sudah diketahui. lalu tulis lagi luasnya dengan garis tadi sebagai alas — tingginya adalah jarak yang dicari. teknik ini menghindari perhitungan sudut sama sekali, dan sering menyelesaikan soal dalam dua baris. luas segitiga boleh dihitung dengan alas mana pun samakan dua bentuk luasnya untuk mendapat tinggi menghindari perhitungan sudut memasangkan alas dengan tinggi yang bukan pasangannya. tinggi harus tegak lurus terhadap alas yang dipilih, bukan terhadap sisi lain. dimensi tiga",
+      "snippet": "Teknik ini memangkas banyak soal jarak yang kalau dikerjakan langsung akan bertele-tele. Idenya: luas sebuah segitiga bisa dihitung dengan memakai alas mana ..."
+    },
+    {
+      "cardId": "geo-dimensi-tiga-c5",
+      "topicId": "geo-dimensi-tiga",
+      "topicTitle": "Dimensi Tiga",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada dimensi tiga",
+      "haystack": "kesalahan khas pada dimensi tiga tertukar diagonal sisi dan diagonal ruang. yang satu memakai , yang lain . periksa apakah kedua titiknya berada di permukaan yang sama. memakai sisi penuh alih-alih setengahnya. pada limas, kaki tegak lurus sering jatuh di tengah rusuk, jadi yang dipakai setengah sisinya. mengukur jarak tidak tegak lurus. jarak selalu berarti yang terpendek, dan yang terpendek selalu tegak lurus. lupa bahwa diagonal bukan rusuk. kalau soal memberi diagonal, cari rusuknya lebih dulu sebelum menghitung volume atau luas. mencoba membayangkan semuanya sekaligus. gambar ulang satu segitiga secara terpisah — itu mengubah soal ruang menjadi soal bidang yang sudah kamu kuasai. diagonal sisi , diagonal ruang jarak selalu diukur tegak lurus gambar ulang segitiganya terpisah menghitung volume langsung dari panjang diagonal, tanpa mencari panjang rusuknya lebih dulu. dimensi tiga",
+      "snippet": "Tertukar diagonal sisi dan diagonal ruang. Yang satu memakai [rumus] , yang lain [rumus] . Periksa apakah kedua titiknya berada di permukaan yang sama. Memak..."
+    },
+    {
       "cardId": "geo-lingkaran-c1",
       "topicId": "geo-lingkaran",
       "topicTitle": "Lingkaran",
@@ -1080,6 +1130,56 @@
       "title": "Kesalahan khas pada soal limit",
       "haystack": "kesalahan khas pada soal limit menuliskan sebagai jawaban. bentuk itu bukan bilangan. ia hanya memberitahu bahwa kamu belum selesai bekerja. mencoret suku, bukan faktor. dari sebagian orang mencoret dengan . pencoretan hanya sah untuk faktor utuh setelah difaktorkan, bukan untuk suku yang sedang dijumlahkan. menganggap limit selalu sama dengan nilai fungsi. itu hanya berlaku untuk fungsi yang kontinu di titik tersebut. untuk fungsi bercabang, periksa limit kiri dan kanan secara terpisah — kalau keduanya berbeda, limitnya tidak ada. lupa bahwa berbeda dari . kalau pembilangnya bukan nol sedangkan penyebutnya nol, tidak ada yang bisa dicoret; nilainya membesar tanpa batas. bukan jawaban, hanya tanda perlu diolah coret faktor, jangan coret suku limit kiri limit kanan limit tidak ada dengan menuju tak hingga mencoret pada seolah-olah suku bisa dicoret seperti faktor. limit fungsi aljabar",
       "snippet": "Menuliskan [rumus] sebagai jawaban. Bentuk itu bukan bilangan. Ia hanya memberitahu bahwa kamu belum selesai bekerja. Mencoret suku, bukan faktor. Dari [rumu..."
+    },
+    {
+      "cardId": "pel-peluang-c1",
+      "topicId": "pel-peluang",
+      "topicTitle": "Peluang",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Peluang adalah perbandingan, bukan ramalan",
+      "haystack": "peluang adalah perbandingan, bukan ramalan peluang sering disalahpahami sebagai ramalan apa yang akan terjadi. sebenarnya ia perbandingan sederhana: syaratnya satu: seluruh hasil harus punya kemungkinan sama. melempar dadu setimbang memenuhi syarat ini; menebak cuaca tidak. dari bentuk pecahan itu, dua hal langsung mengikuti. peluang selalu berada antara 0 dan 1, karena pembilangnya tidak pernah melebihi penyebutnya. dan peluang tidak menjamin apa pun tentang satu percobaan — ia menggambarkan kecenderungan jangka panjang. kalau jawabanmu lebih dari 1 atau negatif, itu selalu tanda kesalahan hitung, bukan hasil yang sah. syaratnya seluruh hasil berkemungkinan sama menuliskan peluang lebih dari 1. karena pembilangnya bagian dari penyebutnya, hasil seperti itu selalu menandakan ruang sampel yang salah dihitung. peluang",
+      "snippet": "Peluang sering disalahpahami sebagai ramalan apa yang akan terjadi. Sebenarnya ia perbandingan sederhana: [rumus] Syaratnya satu: seluruh hasil harus punya k..."
+    },
+    {
+      "cardId": "pel-peluang-c2",
+      "topicId": "pel-peluang",
+      "topicTitle": "Peluang",
+      "track": "menengah",
+      "type": "rumus",
+      "title": "Kapan dijumlah, kapan dikali",
+      "haystack": "kapan dijumlah, kapan dikali dua aturan ini menutup sebagian besar soal peluang, dan memilih yang salah adalah kesalahan tersering di bab ini. dijumlahkan untuk kejadian yang saling menggantikan — kata kuncinya \"atau\": suku terakhir mengoreksi bagian yang terhitung dua kali. kalau kedua kejadian tidak mungkin terjadi bersamaan, suku itu nol dan rumusnya menyederhana. dikalikan untuk kejadian yang terjadi berurutan — kata kuncinya \"dan\": bentuk ini hanya berlaku kalau kedua kejadian saling bebas, artinya yang satu tidak memengaruhi peluang yang lain. kalau tidak bebas — misalnya mengambil bola tanpa pengembalian — peluang kedua harus disesuaikan dengan keadaan setelah pengambilan pertama. \"atau\" dijumlah, kurangi irisannya \"dan\" dikali, bila saling bebas tanpa pengembalian berarti tidak bebas mengalikan peluang dengan angka yang sama pada pengambilan tanpa pengembalian, padahal jumlah bendanya sudah berkurang. peluang",
+      "snippet": "Dua aturan ini menutup sebagian besar soal peluang, dan memilih yang salah adalah kesalahan tersering di bab ini. Dijumlahkan untuk kejadian yang saling meng..."
+    },
+    {
+      "cardId": "pel-peluang-c3",
+      "topicId": "pel-peluang",
+      "topicTitle": "Peluang",
+      "track": "menengah",
+      "type": "teknik",
+      "title": "Komplemen memangkas pekerjaan",
+      "haystack": "komplemen memangkas pekerjaan kalau soal memuat kata \"sedikitnya satu\", menghitungnya langsung berarti menjumlahkan banyak kasus: tepat satu, tepat dua, tepat tiga, dan seterusnya. melelahkan dan rawan terlewat. komplemen membalik soalnya: lawan dari \"sedikitnya satu\" adalah \"tidak satu pun\" — dan itu biasanya hanya satu kasus yang mudah dihitung. contoh: peluang muncul sedikitnya satu angka pada dua lemparan koin. menghitung langsung berarti memeriksa kasus satu angka dan dua angka. lewat komplemen, cukup hitung peluang tidak ada angka sama sekali, yaitu , lalu: aturan praktisnya: begitu melihat \"sedikitnya\", pikirkan komplemen lebih dulu. lawan \"sedikitnya satu\" adalah \"tidak satu pun\" komplemen mengubah banyak kasus menjadi satu menghitung komplemen dari \"sedikitnya satu\" sebagai \"tepat satu\". lawannya adalah nol, bukan satu. peluang",
+      "snippet": "Kalau soal memuat kata \"sedikitnya satu\", menghitungnya langsung berarti menjumlahkan banyak kasus: tepat satu, tepat dua, tepat tiga, dan seterusnya. Melela..."
+    },
+    {
+      "cardId": "pel-peluang-c4",
+      "topicId": "pel-peluang",
+      "topicTitle": "Peluang",
+      "track": "menengah",
+      "type": "konsep",
+      "title": "Peluang bersyarat dan kebebasan",
+      "haystack": "peluang bersyarat dan kebebasan dua kejadian disebut saling bebas kalau terjadinya yang satu tidak mengubah peluang yang lain. melempar dua koin saling bebas; mengambil dua kartu tanpa pengembalian tidak. untuk kejadian yang tidak bebas, peluang kejadian kedua dihitung dengan memperhitungkan keadaan setelah yang pertama terjadi. inilah peluang bersyarat: dibaca \"peluang diberikan sudah terjadi\". cara paling aman mengerjakannya tanpa rumus: bayangkan keadaan setelah kejadian pertama. kalau satu bola merah sudah diambil dari 3 merah dan 5 biru, sekarang tersisa 2 merah dari 7 bola. hitung peluang berikutnya dari keadaan baru itu. menuliskan ulang isi kantong setelah tiap pengambilan mencegah hampir semua kesalahan di bagian ini. bebas: yang satu tidak mengubah peluang yang lain tuliskan ulang keadaan setelah tiap kejadian menganggap pengambilan tanpa pengembalian sebagai kejadian bebas, sehingga penyebutnya tidak pernah berkurang. peluang",
+      "snippet": "Dua kejadian disebut saling bebas kalau terjadinya yang satu tidak mengubah peluang yang lain. Melempar dua koin saling bebas; mengambil dua kartu tanpa peng..."
+    },
+    {
+      "cardId": "pel-peluang-c5",
+      "topicId": "pel-peluang",
+      "topicTitle": "Peluang",
+      "track": "menengah",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada peluang",
+      "haystack": "kesalahan khas pada peluang lupa mengurangi irisan. pada , bagian yang termasuk keduanya terhitung dua kali kalau tidak dikoreksi. memakai penyebut yang sama pada pengambilan tanpa pengembalian. jumlah bendanya berkurang setiap kali. salah membaca komplemen. lawan \"sedikitnya satu\" adalah \"tidak satu pun\", bukan \"tepat satu\". menganggap hasil masa lalu memengaruhi yang berikutnya. koin yang sudah muncul angka lima kali berturut-turut tetap punya peluang pada lemparan keenam. koin tidak punya ingatan. menjawab dengan peluang lebih dari 1. selalu tanda kesalahan, biasanya karena ruang sampelnya salah dihitung atau kejadiannya dijumlahkan padahal beririsan. kurangi irisan pada penyebut berkurang tanpa pengembalian hasil sebelumnya tidak memengaruhi kejadian bebas tidak pernah melebihi 1 mengira koin yang sudah lima kali muncul angka \"sudah waktunya\" memunculkan gambar. tiap lemparan saling bebas, peluangnya tetap setengah. peluang",
+      "snippet": "Lupa mengurangi irisan. Pada [rumus] , bagian yang termasuk keduanya terhitung dua kali kalau tidak dikoreksi. Memakai penyebut yang sama pada pengambilan ta..."
     },
     {
       "cardId": "pel-pencacahan-c1",

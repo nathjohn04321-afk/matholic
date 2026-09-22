@@ -1,0 +1,263 @@
+{
+  "id": "geo-dimensi-tiga",
+  "track": "menengah",
+  "title": "Dimensi Tiga",
+  "order": 12,
+  "prerequisites": [
+    "das-pythagoras"
+  ],
+  "estimatedMinutes": 28,
+  "summary": "Mengubah soal ruang menjadi soal bidang, dan kenapa diagonal ruang memakai akar tiga.",
+  "tags": [
+    "geometri",
+    "utbk"
+  ],
+  "cards": [
+    {
+      "id": "geo-dimensi-tiga-c1",
+      "type": "konsep",
+      "title": "Soal ruang diselesaikan di bidang",
+      "body": "Geometri ruang terasa sulit karena kamu diminta membayangkan tiga dimensi di atas kertas yang datar. Padahal hampir semua soalnya diselesaikan dengan cara yang sama: **temukan segitiga siku-siku yang tepat, lalu kerjakan sebagai soal bidang biasa**.\n\nDiagonal ruang kubus adalah contoh terbaiknya. Kenapa panjangnya $s\\sqrt{3}$?\n\nPythagoras dipakai dua kali. Pertama pada alasnya: diagonal sisi bernilai $\\sqrt{s^2+s^2} = s\\sqrt{2}$. Kedua pada segitiga tegak yang dibentuk diagonal sisi itu bersama rusuk tegaknya:\n$$\\sqrt{(s\\sqrt{2})^2 + s^2} = \\sqrt{2s^2 + s^2} = s\\sqrt{3}$$\n\nAkar tiga itu bukan hafalan — ia muncul dari menjumlahkan tiga arah yang saling tegak lurus.\n\nKebiasaan yang menolong: gambar ulang segitiga yang kamu pakai secara terpisah, lengkap dengan ukurannya.",
+      "questions": [
+        {
+          "id": "geo-dimensi-tiga-q1",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Panjang diagonal ruang kubus berusuk 4 cm adalah ...",
+          "options": [
+            "$4\\sqrt{3}$ cm",
+            "$4\\sqrt{2}$ cm",
+            "$12$ cm",
+            "$8$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Pakai rumus diagonal ruang kubus:\n$$d = s\\sqrt{3} = 4\\sqrt{3} \\text{ cm}$$\n\nNilainya sekitar $6{,}93$ cm.\n\nPilihan $4\\sqrt{2}$ adalah diagonal **sisi**, yaitu diagonal pada satu permukaan — lebih pendek karena hanya melintasi dua arah, bukan tiga.",
+          "hint": "Diagonal ruang melintasi tiga arah sekaligus.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-dimensi-tiga-q2",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Panjang diagonal ruang balok berukuran $3 \\times 4 \\times 12$ cm adalah ...",
+          "options": [
+            "$13$ cm",
+            "$19$ cm",
+            "$\\sqrt{19}$ cm",
+            "$12$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Untuk balok, diagonal ruangnya:\n$$d = \\sqrt{p^2+l^2+t^2}$$\n$$= \\sqrt{9 + 16 + 144} = \\sqrt{169} = 13$$\n\nRumus ini adalah Pythagoras yang dipakai dua kali, sama seperti pada kubus — hanya saja ketiga rusuknya berbeda panjang.\n\nPilihan $19$ muncul dari menjumlahkan ketiga rusuk langsung.",
+          "hint": "Kuadratkan ketiganya, jumlahkan, lalu akarkan.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Diagonal sisi kubus $= s\\sqrt{2}$",
+        "Diagonal ruang kubus $= s\\sqrt{3}$",
+        "Gambar ulang segitiganya secara terpisah"
+      ],
+      "pitfall": "Memakai rusuk sebagai sisi miring saat mencari jarak. Sisi miring adalah ruas yang dicari, bukan rusuk yang sudah diketahui."
+    },
+    {
+      "id": "geo-dimensi-tiga-c2",
+      "type": "prosedur",
+      "title": "Mencari jarak titik ke garis dan bidang",
+      "body": "Jarak dalam ruang selalu berarti **jarak terpendek**, dan jarak terpendek selalu diukur tegak lurus. Ini satu-satunya aturan yang perlu kamu pegang.\n\n**Titik ke garis:** tarik garis dari titik itu tegak lurus ke garisnya. Panjang ruas tegak lurus itulah jaraknya.\n\n**Titik ke bidang:** tarik garis tegak lurus dari titik ke bidangnya. Kaki tegak lurus itu disebut proyeksi titik pada bidang.\n\nLangkah praktisnya:\n1. Temukan segitiga yang memuat ruas jarak yang dicari.\n2. Gambar ulang segitiga itu secara terpisah, di atas kertas datar.\n3. Isi ukuran yang diketahui, cari yang belum diketahui dengan Pythagoras.\n4. Kalau segitiganya bukan siku-siku, pakai aturan kosinus atau rumus luas.\n\nTrik yang sering menghemat langkah: hitung luas segitiga dengan dua cara berbeda, lalu samakan untuk mendapat tingginya.",
+      "questions": [
+        {
+          "id": "geo-dimensi-tiga-q3",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada kubus berusuk 6 cm, jarak antara dua titik sudut yang berseberangan pada satu sisi adalah ...",
+          "options": [
+            "$6\\sqrt{2}$ cm",
+            "$6\\sqrt{3}$ cm",
+            "$12$ cm",
+            "$6$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Dua titik sudut berseberangan **pada satu sisi** dihubungkan oleh diagonal sisi, bukan diagonal ruang.\n\nPada persegi berusuk 6:\n$$d = \\sqrt{6^2+6^2} = \\sqrt{72} = 6\\sqrt{2}$$\n\nNilainya sekitar $8{,}49$ cm.\n\nKalau titiknya berseberangan di dalam ruang (bukan satu sisi), barulah jawabannya $6\\sqrt{3}$.",
+          "hint": "Kedua titik berada di permukaan yang sama atau tidak?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-dimensi-tiga-q4",
+          "difficulty": 4,
+          "format": "isian",
+          "prompt": "Limas dengan alas persegi bersisi 6 cm punya tinggi 4 cm. Berapa tinggi segitiga sisi tegaknya?",
+          "answer": "5",
+          "acceptedAnswers": [
+            "5 cm",
+            "lima"
+          ],
+          "solution": "Tinggi sisi tegak adalah jarak dari puncak ke tengah salah satu rusuk alas.\n\nBentuk segitiga siku-siku dengan:\n- sisi tegak = tinggi limas = 4\n- sisi datar = setengah sisi alas = 3\n\nPythagoras:\n$$\\sqrt{3^2+4^2} = \\sqrt{25} = 5 \\text{ cm}$$\n\nPerhatikan yang dipakai **setengah** sisi alas, bukan sisi penuh — karena titik kaki tegak lurusnya di tengah rusuk.",
+          "hint": "Berapa jarak dari pusat alas ke tengah rusuknya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Jarak selalu diukur tegak lurus",
+        "Gambar ulang segitiganya secara terpisah",
+        "Luas dua cara sering memberi tinggi dengan cepat"
+      ],
+      "pitfall": "Mengukur jarak titik ke bidang sepanjang rusuk miring, padahal jarak harus tegak lurus terhadap bidang itu."
+    },
+    {
+      "id": "geo-dimensi-tiga-c3",
+      "type": "konsep",
+      "title": "Sudut antara garis dan bidang",
+      "body": "Sudut antara garis dan bidang bukan sudut sembarang. Ia didefinisikan sebagai sudut antara garis itu dengan **proyeksinya** pada bidang tersebut.\n\nCara mencarinya:\n1. Jatuhkan garis tegak lurus dari ujung garis ke bidangnya.\n2. Hubungkan kaki tegak lurus itu dengan pangkal garis — inilah proyeksinya.\n3. Sudut antara garis asli dan proyeksinya adalah yang dicari.\n\nKetiga ruas itu selalu membentuk segitiga siku-siku, dengan garis aslinya sebagai sisi miring. Jadi sudutnya bisa dicari dengan perbandingan trigonometri biasa.\n\nUntuk sudut antara **dua bidang**, prinsipnya mirip: cari garis potong kedua bidang, lalu tarik garis tegak lurus terhadapnya pada masing-masing bidang. Sudut antara kedua garis itu adalah sudut antar bidangnya.",
+      "questions": [
+        {
+          "id": "geo-dimensi-tiga-q5",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Pada kubus berusuk $a$, sudut antara diagonal ruang dan bidang alas memenuhi ...",
+          "options": [
+            "$\\tan\\theta = \\frac{1}{\\sqrt{2}}$",
+            "$\\tan\\theta = \\sqrt{2}$",
+            "$\\tan\\theta = 1$",
+            "$\\tan\\theta = \\sqrt{3}$"
+          ],
+          "answerIndex": 0,
+          "solution": "Proyeksi diagonal ruang pada bidang alas adalah diagonal sisi alas, yang panjangnya $a\\sqrt{2}$.\n\nSisi tegaknya adalah rusuk vertikal, panjangnya $a$.\n\nSegitiga siku-sikunya punya sisi depan $a$ dan sisi samping $a\\sqrt{2}$:\n$$\\tan\\theta = \\frac{a}{a\\sqrt{2}} = \\frac{1}{\\sqrt{2}}$$\n\nSudutnya sekitar $35{,}3^\\circ$ — masuk akal, karena diagonal ruang memang condong dan tidak curam.",
+          "hint": "Apa proyeksi diagonal ruang pada alasnya?",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-dimensi-tiga-q6",
+          "difficulty": 3,
+          "format": "benar-salah",
+          "prompt": "Sudut antara sebuah garis dan bidang dapat bernilai lebih dari $90^\\circ$.",
+          "options": [
+            "Benar",
+            "Salah"
+          ],
+          "answerIndex": 1,
+          "solution": "Salah. Sudut antara garis dan bidang diukur terhadap proyeksinya, dan proyeksi selalu berada di bidang itu sendiri.\n\nSegitiga yang terbentuk selalu siku-siku, dengan garis aslinya sebagai sisi miring. Sudut yang dicari adalah salah satu sudut lancipnya.\n\nAkibatnya sudutnya selalu berada antara $0^\\circ$ dan $90^\\circ$. Nilai $0^\\circ$ berarti garisnya sejajar bidang, dan $90^\\circ$ berarti tegak lurus bidang.",
+          "hint": "Segitiga apa yang terbentuk oleh garis dan proyeksinya?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Sudut garis-bidang = sudut garis dengan proyeksinya",
+        "Ketiganya membentuk segitiga siku-siku",
+        "Garis aslinya selalu sisi miring"
+      ],
+      "pitfall": "Memakai sudut antara garis dengan sembarang garis di bidang. Yang dipakai khusus proyeksinya, yaitu bayangan tegak lurusnya."
+    },
+    {
+      "id": "geo-dimensi-tiga-c4",
+      "type": "teknik",
+      "title": "Luas dua cara untuk mencari jarak",
+      "body": "Teknik ini memangkas banyak soal jarak yang kalau dikerjakan langsung akan bertele-tele.\n\nIdenya: luas sebuah segitiga bisa dihitung dengan memakai alas mana pun. Kalau kamu bisa menghitung luasnya lewat satu pasang alas-tinggi yang mudah, lalu menuliskannya lagi dengan pasangan yang memuat jarak yang dicari, kamu bisa menyamakan keduanya.\n\n$$\\tfrac{1}{2} \\times a_1 \\times t_1 = \\tfrac{1}{2} \\times a_2 \\times t_2$$\n\nContoh: mencari jarak titik ke sebuah garis dalam kubus. Bentuk segitiga yang memuat titik dan garis itu. Hitung luasnya lewat sisi yang ukurannya sudah diketahui. Lalu tulis lagi luasnya dengan garis tadi sebagai alas — tingginya adalah jarak yang dicari.\n\nTeknik ini menghindari perhitungan sudut sama sekali, dan sering menyelesaikan soal dalam dua baris.",
+      "questions": [
+        {
+          "id": "geo-dimensi-tiga-q7",
+          "difficulty": 4,
+          "format": "pilihan-ganda",
+          "prompt": "Segitiga siku-siku bersisi 6 dan 8 dengan sisi miring 10. Jarak titik sudut siku-siku ke sisi miring adalah ...",
+          "options": [
+            "$4{,}8$",
+            "$5$",
+            "$7$",
+            "$3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Hitung luasnya dua cara.\n\nCara pertama, memakai kedua sisi tegak:\n$$L = \\tfrac{1}{2}(6)(8) = 24$$\n\nCara kedua, memakai sisi miring sebagai alas dan jarak yang dicari sebagai tinggi:\n$$L = \\tfrac{1}{2}(10)(t)$$\n\nSamakan keduanya:\n$$\\tfrac{1}{2}(10)(t) = 24$$\n$$5t = 24 \\Rightarrow t = 4{,}8$$",
+          "hint": "Hitung luasnya dengan dua pasang alas-tinggi yang berbeda.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-dimensi-tiga-q8",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Volume kubus dengan diagonal ruang $6\\sqrt{3}$ cm adalah ...",
+          "options": [
+            "$216$ cm$^3$",
+            "$108$ cm$^3$",
+            "$36$ cm$^3$",
+            "$648$ cm$^3$"
+          ],
+          "answerIndex": 0,
+          "solution": "Diagonal ruang kubus adalah $s\\sqrt{3}$, jadi:\n$$s\\sqrt{3} = 6\\sqrt{3} \\Rightarrow s = 6$$\n\nVolumenya:\n$$V = s^3 = 6^3 = 216 \\text{ cm}^3$$\n\nMengambil $6\\sqrt{3}$ sendiri sebagai rusuk adalah kesalahan umum — itu panjang diagonalnya, bukan rusuknya.",
+          "hint": "Cari panjang rusuknya lebih dulu.",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Luas segitiga boleh dihitung dengan alas mana pun",
+        "Samakan dua bentuk luasnya untuk mendapat tinggi",
+        "Menghindari perhitungan sudut"
+      ],
+      "pitfall": "Memasangkan alas dengan tinggi yang bukan pasangannya. Tinggi harus tegak lurus terhadap alas yang dipilih, bukan terhadap sisi lain."
+    },
+    {
+      "id": "geo-dimensi-tiga-c5",
+      "type": "jebakan",
+      "title": "Kesalahan khas pada dimensi tiga",
+      "body": "**Tertukar diagonal sisi dan diagonal ruang.** Yang satu memakai $\\sqrt{2}$, yang lain $\\sqrt{3}$. Periksa apakah kedua titiknya berada di permukaan yang sama.\n\n**Memakai sisi penuh alih-alih setengahnya.** Pada limas, kaki tegak lurus sering jatuh di tengah rusuk, jadi yang dipakai setengah sisinya.\n\n**Mengukur jarak tidak tegak lurus.** Jarak selalu berarti yang terpendek, dan yang terpendek selalu tegak lurus.\n\n**Lupa bahwa diagonal bukan rusuk.** Kalau soal memberi diagonal, cari rusuknya lebih dulu sebelum menghitung volume atau luas.\n\n**Mencoba membayangkan semuanya sekaligus.** Gambar ulang satu segitiga secara terpisah — itu mengubah soal ruang menjadi soal bidang yang sudah kamu kuasai.",
+      "questions": [
+        {
+          "id": "geo-dimensi-tiga-q9",
+          "difficulty": 3,
+          "format": "pilihan-ganda",
+          "prompt": "Pada kubus berusuk 8 cm, panjang diagonal sisinya adalah ...",
+          "options": [
+            "$8\\sqrt{2}$ cm",
+            "$8\\sqrt{3}$ cm",
+            "$16$ cm",
+            "$64$ cm"
+          ],
+          "answerIndex": 0,
+          "solution": "Diagonal sisi berada pada satu permukaan, yaitu diagonal sebuah persegi berusuk 8.\n\n$$d = \\sqrt{8^2+8^2} = \\sqrt{128} = 8\\sqrt{2} \\text{ cm}$$\n\nNilainya sekitar $11{,}3$ cm.\n\nDiagonal ruangnya lebih panjang, yaitu $8\\sqrt{3} \\approx 13{,}9$ cm — karena melintasi tiga arah.",
+          "hint": "Diagonal sisi hanya melintasi dua arah.",
+          "tags": [
+            "utbk"
+          ]
+        },
+        {
+          "id": "geo-dimensi-tiga-q10",
+          "difficulty": 2,
+          "format": "pilihan-ganda",
+          "prompt": "Jarak terpendek dari sebuah titik ke suatu bidang selalu diukur ...",
+          "options": [
+            "tegak lurus terhadap bidang",
+            "sepanjang rusuk terdekat",
+            "sejajar bidang",
+            "melalui titik pusat bidang"
+          ],
+          "answerIndex": 0,
+          "solution": "Jarak selalu berarti yang terpendek, dan lintasan terpendek dari titik ke bidang selalu tegak lurus terhadap bidang itu.\n\nLintasan mana pun yang miring akan lebih panjang — karena ia menjadi sisi miring dari segitiga siku-siku yang salah satu sisi tegaknya adalah jarak tegak lurus itu sendiri.\n\nJadi jawabannya tegak lurus terhadap bidang.",
+          "hint": "Pada segitiga siku-siku, sisi mana yang terpendek?",
+          "tags": [
+            "utbk"
+          ]
+        }
+      ],
+      "keyPoints": [
+        "Diagonal sisi $\\sqrt{2}$, diagonal ruang $\\sqrt{3}$",
+        "Jarak selalu diukur tegak lurus",
+        "Gambar ulang segitiganya terpisah"
+      ],
+      "pitfall": "Menghitung volume langsung dari panjang diagonal, tanpa mencari panjang rusuknya lebih dulu."
+    }
+  ]
+}
