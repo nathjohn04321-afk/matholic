@@ -200,9 +200,39 @@ MATHDECK_UPLOAD_STORE_PASSWORD=<kata sandi>
 MATHDECK_UPLOAD_KEY_PASSWORD=<kata sandi>
 ```
 
-### Jalur C — lewat GitHub (paling mudah, tanpa memasang apa pun)
+### Jalur C — unduh langsung dari GitHub (paling mudah, tanpa memasang apa pun)
 
-Setiap kali perubahan dikirim ke GitHub, APK dibangun otomatis di sana.
+Setiap kali perubahan dikirim ke GitHub, APK dibangun otomatis di sana lalu
+diterbitkan ke halaman Releases.
+
+**Cara tercepat, bisa langsung dari HP:**
+
+<https://github.com/nathjohn04321-afk/matholic/releases/tag/apk-terbaru>
+
+Buka tautan itu, ketuk `mathdeck.apk` di bagian **Assets**. Tidak perlu login
+dan tidak perlu membuka zip. Tag-nya tetap, isinya ditimpa setiap build, jadi
+tautan ini selalu menunjuk APK terbaru.
+
+Ada dua berkas di sana:
+
+| Berkas | Untuk |
+|---|---|
+| `mathdeck.apk` | Hampir semua HP Android (arm64-v8a, sejak sekitar 2017) |
+| `mathdeck-armeabi-v7a.apk` | HP 32-bit yang lebih tua |
+
+Ambil yang pertama kecuali HP-mu memang sangat lama. Kalau salah pilih, Android
+akan menolak memasangnya dan kamu tinggal mengunduh yang satu lagi.
+
+APK dirakit terpisah per arsitektur dengan sengaja. APK gabungan memuat pustaka
+native untuk keempat arsitektur sekaligus — termasuk x86 dan x86_64 yang hanya
+dipakai emulator — dan ukurannya membengkak jadi 107 MB, melewati batas 60 MB
+pada SPEC.md bagian 13.
+
+Saat memasangnya, Android akan meminta izin **"Instal aplikasi tidak dikenal"**
+untuk peramban atau pengelola berkas yang kamu pakai — wajar untuk APK yang
+tidak lewat Play Store.
+
+**Alternatif lewat Actions** (butuh login GitHub, hasilnya berupa zip):
 
 1. Buka halaman **Actions** pada repositori ini
 2. Klik run paling atas, tunggu tanda centang hijau

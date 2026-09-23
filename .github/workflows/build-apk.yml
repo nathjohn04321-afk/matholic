@@ -97,17 +97,54 @@ jobs:
           key: gradle-${{ runner.os }}-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties', 'package-lock.json') }}
           restore-keys: gradle-${{ runner.os }}-
 
-      - name: Rakit APK rilis
+      # APK bawaan memuat pustaka native untuk keempat arsitektur CPU
+      # sekaligus, dan itu saja sudah 84 MB — dua di antaranya (x86 dan
+      # x86_64) hanya dipakai emulator, tidak pernah oleh HP sungguhan.
+      # Jadi dirakit per arsitektur. arm64-v8a mencakup hampir semua HP
+      # Android sejak 2017; armeabi-v7a untuk perangkat 32-bit yang lebih tua.
+      - name: Rakit APK arm64-v8a
         working-directory: android
-        run: ./gradlew assembleRelease --no-daemon --stacktrace
+        run: ./gradlew assembleRelease --no-daemon --stacktrace -PreactNativeArchitectures=arm64-v8a
 
-      - name: Laporkan ukuran APK
+      - name: Simpan APK arm64-v8a
         run: |
+          mkdir -p dist
+          cp android/app/build/outputs/apk/release/app-release.apk dist/mathdeck.apk
+
+      - name: Rakit APK armeabi-v7a
+        working-directory: android
+        run: ./gradlew assembleRelease --no-daemon --stacktrace -PreactNativeArchitectures=armeabi-v7a
+
+      - name: Simpan APK armeabi-v7a
+        run: cp android/app/build/outputs/apk/release/app-release.apk dist/mathdeck-armeabi-v7a.apk
+
+      # SPEC.md bagian 13 membatasi APK di bawah 60 MB. Batas ini pernah
+      # terlewat karena yang diperiksa adalah ukuran artifact zip, bukan
+      # APK-nya, jadi sekarang diperiksa otomatis dan membuat build gagal.
+      - name: Periksa batas ukuran APK
+        run: |
+          set -euo pipefail
+          batas=60000000
+          gagal=0
           echo "### APK MathDeck" >> "$GITHUB_STEP_SUMMARY"
-          for f in android/app/build/outputs/apk/release/*.apk; do
-            size=$(du -h "$f" | cut -f1)
-            echo "- \`$(basename "$f")\` — $size" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Berkas | Ukuran | Batas 60 MB |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|--:|---|" >> "$GITHUB_STEP_SUMMARY"
+          for f in dist/*.apk; do
+            bita=$(stat -c%s "$f")
+            mb=$(awk "BEGIN {printf \"%.1f\", $bita/1000000}")
+            if [ "$bita" -lt "$batas" ]; then
+              status="lulus"
+            else
+              status="**GAGAL**"
+              gagal=1
+            fi
+            echo "| \`$(basename "$f")\` | ${mb} MB | ${status} |" >> "$GITHUB_STEP_SUMMARY"
           done
+          if [ "$gagal" -ne 0 ]; then
+            echo "Ada APK yang melewati batas 60 MB dari SPEC.md bagian 13." >&2
+            exit 1
+          fi
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "Unduh dari bagian **Artifacts** di bawah, atau lewat Release \`apk-terbaru\`." >> "$GITHUB_STEP_SUMMARY"
 
@@ -115,7 +152,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mathdeck-apk
-          path: android/app/build/outputs/apk/release/*.apk
+          path: dist/*.apk
           if-no-files-found: error
           retention-days: 30
 
@@ -129,8 +166,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          apk=$(ls android/app/build/outputs/apk/release/*.apk | head -1)
-          cp "$apk" mathdeck.apk
 
           tag=apk-terbaru
           catatan="APK MathDeck, dirakit otomatis dari commit ${GITHUB_SHA}.
@@ -145,9 +180,9 @@ jobs:
 
           if gh release view "$tag" >/dev/null 2>&1; then
             gh release edit "$tag" --notes "$catatan"
-            gh release upload "$tag" mathdeck.apk --clobber
+            gh release upload "$tag" dist/mathdeck.apk dist/mathdeck-armeabi-v7a.apk --clobber
           else
-            gh release create "$tag" mathdeck.apk \
+            gh release create "$tag" dist/mathdeck.apk dist/mathdeck-armeabi-v7a.apk \
               --title "MathDeck — APK terbaru" \
               --notes "$catatan" \
               --prerelease
