@@ -190,6 +190,43 @@ Runner ubuntu GitHub sudah membawa Android SDK, jadi build dipindahkan ke sana.
 Berkas APK-nya sendiri juga tidak bisa diunduh dari lingkungan ini — penyimpanan
 artifact GitHub ada di blob Azure, yang diblokir oleh kebijakan yang sama.
 
+### APK dirakit per arsitektur, dan batasnya dijaga CI
+
+APK gabungan berukuran 107 MB, melewati batas 60 MB pada SPEC.md bagian 13.
+Penyebabnya terlihat begitu isinya dibongkar: pustaka native untuk keempat
+arsitektur CPU dibundel sekaligus, dan itu saja sudah 84 MB.
+
+| Bagian | Ukuran |
+|---|--:|
+| `lib/x86` | 23,3 MB |
+| `lib/x86_64` | 22,8 MB |
+| `lib/arm64-v8a` | 22,3 MB |
+| `lib/armeabi-v7a` | 15,3 MB |
+| `classes*.dex` | 40,8 MB |
+
+`x86` dan `x86_64` hanya dipakai emulator, tidak pernah oleh HP sungguhan.
+
+Sekarang dirakit dua kali lewat `-PreactNativeArchitectures`, menghasilkan
+`mathdeck.apk` (arm64-v8a, 45,5 MB) dan `mathdeck-armeabi-v7a.apk` (38,6 MB).
+
+Proguard/R8 sengaja tidak diaktifkan. Ia bisa memangkas sebagian besar 40 MB
+dex itu, tapi React Native memakai refleksi di beberapa tempat dan tidak ada
+perangkat Android di lingkungan ini untuk menguji hasilnya. Memisahkan
+arsitektur sudah cukup melewati batas tanpa risiko itu.
+
+Batasnya sempat dilaporkan lolos padahal tidak, karena yang diukur adalah
+ukuran artifact zip (49,4 MB) alih-alih APK di dalamnya. Ukuran terkompresi
+memang jauh lebih kecil, dan angkanya kebetulan masuk akal. Karena itu batas
+60 MB kini diperiksa otomatis di CI dan menggagalkan build kalau terlampaui —
+pemeriksaan dengan mata sudah terbukti tidak cukup.
+
+### APK diterbitkan ke Release, bukan hanya artifact
+
+Artifact Actions hanya bisa diunduh sebagai zip dan menuntut login GitHub.
+Untuk memasang APK dari HP, keduanya menyusahkan. APK yang sama diterbitkan
+juga ke Release dengan tag tetap `apk-terbaru`, sehingga tautannya permanen
+dan bisa dibuka siapa saja tanpa login (repositorinya publik).
+
 ### Penandatanganan memakai kunci debug
 
 Template Expo menyetel `buildTypes.release` memakai `signingConfigs.debug`,
